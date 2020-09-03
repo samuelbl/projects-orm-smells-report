@@ -1,5 +1,4 @@
-# Result of ORM code smells analysis in github projects
-
+## Result of ORM code smells analysis in github projects
 
 > Repositories:
 >><br>https://github.com/247292980/spring-boot
