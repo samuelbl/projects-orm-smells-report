@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114487000" analysisTimestamp="1597114488627" release="">
+  <Project projectName="repositorios/jdavid-araujo_shopping-online-api">
+    <Jar>repositorios/jdavid-araujo_shopping-online-api</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.david.shoppingcart.api.model.Address">
+      <SourceLine classname="com.david.shoppingcart.api.model.Address" start="19" end="127" sourcefile="Address.java" sourcepath="com/david/shoppingcart/api/model/Address.java"/>
+    </Class>
+    <Field classname="com.david.shoppingcart.api.model.Address" name="customer" signature="Lcom/david/shoppingcart/api/model/Customer;" isStatic="false">
+      <SourceLine classname="com.david.shoppingcart.api.model.Address" sourcefile="Address.java" sourcepath="com/david/shoppingcart/api/model/Address.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.david.shoppingcart.api.model.Item">
+      <SourceLine classname="com.david.shoppingcart.api.model.Item" start="17" end="86" sourcefile="Item.java" sourcepath="com/david/shoppingcart/api/model/Item.java"/>
+    </Class>
+    <Field classname="com.david.shoppingcart.api.model.Item" name="product" signature="Lcom/david/shoppingcart/api/model/Product;" isStatic="false">
+      <SourceLine classname="com.david.shoppingcart.api.model.Item" sourcefile="Item.java" sourcepath="com/david/shoppingcart/api/model/Item.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.david.shoppingcart.api.model.Order">
+      <SourceLine classname="com.david.shoppingcart.api.model.Order" start="33" end="156" sourcefile="Order.java" sourcepath="com/david/shoppingcart/api/model/Order.java"/>
+    </Class>
+    <Field classname="com.david.shoppingcart.api.model.Order" name="address" signature="Lcom/david/shoppingcart/api/model/Address;" isStatic="false">
+      <SourceLine classname="com.david.shoppingcart.api.model.Order" sourcefile="Order.java" sourcepath="com/david/shoppingcart/api/model/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.david.shoppingcart.api.model.Order">
+      <SourceLine classname="com.david.shoppingcart.api.model.Order" start="33" end="156" sourcefile="Order.java" sourcepath="com/david/shoppingcart/api/model/Order.java"/>
+    </Class>
+    <Field classname="com.david.shoppingcart.api.model.Order" name="customer" signature="Lcom/david/shoppingcart/api/model/Customer;" isStatic="false">
+      <SourceLine classname="com.david.shoppingcart.api.model.Order" sourcefile="Order.java" sourcepath="com/david/shoppingcart/api/model/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.david.shoppingcart.api.model.Product">
+      <SourceLine classname="com.david.shoppingcart.api.model.Product" start="20" end="109" sourcefile="Product.java" sourcepath="com/david/shoppingcart/api/model/Product.java"/>
+    </Class>
+    <Field classname="com.david.shoppingcart.api.model.Product" name="category" signature="Lcom/david/shoppingcart/api/model/Category;" isStatic="false">
+      <SourceLine classname="com.david.shoppingcart.api.model.Product" sourcefile="Product.java" sourcepath="com/david/shoppingcart/api/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>org.apache.commons.lang3.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.dao.EmptyResultDataAccessException</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.converter.HttpMessageNotReadableException</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:54:47 +0000" total_classes="70" referenced_classes="187" total_bugs="5" total_size="1730" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.26" clock_seconds="3.23" peak_mbytes="325.40" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="5">
+    <PackageStats package="com.david.shoppingcart.api" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.david.shoppingcart.api.ShoppingOnlineApiApplication" sourceFile="ShoppingOnlineApiApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.exceptionhandler" total_bugs="0" total_types="3" total_size="88">
+      <ClassStats class="com.david.shoppingcart.api.exceptionhandler.Error" sourceFile="Error.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.exceptionhandler.ErrorMessage" sourceFile="ErrorMessage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.exceptionhandler.ExceptionHandlerGeneral" sourceFile="ExceptionHandlerGeneral.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.model" total_bugs="5" total_types="6" total_size="346" priority_2="5">
+      <ClassStats class="com.david.shoppingcart.api.model.Address" sourceFile="Address.java" interface="false" size="65" bugs="1" priority_2="1"/>
+      <ClassStats class="com.david.shoppingcart.api.model.Category" sourceFile="Category.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.model.Customer" sourceFile="Customer.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.model.Item" sourceFile="Item.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.david.shoppingcart.api.model.Order" sourceFile="Order.java" interface="false" size="73" bugs="2" priority_2="2"/>
+      <ClassStats class="com.david.shoppingcart.api.model.Product" sourceFile="Product.java" interface="false" size="53" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.repository" total_bugs="0" total_types="6" total_size="6">
+      <ClassStats class="com.david.shoppingcart.api.repository.AddressRepository" sourceFile="AddressRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.repository.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.repository.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.repository.ItemRepository" sourceFile="ItemRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.repository.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.repository.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.resource" total_bugs="0" total_types="6" total_size="125">
+      <ClassStats class="com.david.shoppingcart.api.resource.AddressResource" sourceFile="AddressResource.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.resource.CategoryResource" sourceFile="CategoryResource.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.resource.CustomerResource" sourceFile="CustomerResource.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.resource.ItemResource" sourceFile="ItemResource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.resource.OrderResource" sourceFile="OrderResource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.resource.ProductResource" sourceFile="ProductResource.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.service" total_bugs="0" total_types="7" total_size="13">
+      <ClassStats class="com.david.shoppingcart.api.service.AddressService" sourceFile="AddressService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.BaseService" sourceFile="BaseService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.CategoryService" sourceFile="CategoryService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.CustomerService" sourceFile="CustomerService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.ItemService" sourceFile="ItemService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.OrderService" sourceFile="OrderService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.ProductService" sourceFile="ProductService.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.service.imp" total_bugs="0" total_types="6" total_size="161">
+      <ClassStats class="com.david.shoppingcart.api.service.imp.AddressServiceImpl" sourceFile="AddressServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.imp.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.imp.CustomerServiceImpl" sourceFile="CustomerServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.imp.ItemServiceImpl" sourceFile="ItemServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.imp.OrderServiceImpl" sourceFile="OrderServiceImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.david.shoppingcart.api.service.imp.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.david.shoppingcart.api.util.enumeration" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.david.shoppingcart.api.util.enumeration.OrderStatus" sourceFile="OrderStatus.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="287" invocations="1038" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="18560" standardDeviationMicrosecondsPerInvocation="824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="141" invocations="391" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="14424" standardDeviationMicrosecondsPerInvocation="1152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="126" invocations="187" avgMicrosecondsPerInvocation="675" maxMicrosecondsPerInvocation="9181" standardDeviationMicrosecondsPerInvocation="1277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="122" invocations="395" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="12272" standardDeviationMicrosecondsPerInvocation="969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="107" invocations="395" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="11325" standardDeviationMicrosecondsPerInvocation="952"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="107" invocations="368" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="8679" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="99" invocations="390" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="9624" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="98" invocations="187" avgMicrosecondsPerInvocation="527" maxMicrosecondsPerInvocation="5142" standardDeviationMicrosecondsPerInvocation="832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="862" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="1699" standardDeviationMicrosecondsPerInvocation="165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="81" invocations="1042" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="552" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="80" invocations="391" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="8493" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="63" invocations="271" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="5595" standardDeviationMicrosecondsPerInvocation="508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="55" invocations="252" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="15324" standardDeviationMicrosecondsPerInvocation="989"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="53" invocations="414" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="25293" standardDeviationMicrosecondsPerInvocation="1239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="49" invocations="187" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="3329" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="47" invocations="187" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="24338" standardDeviationMicrosecondsPerInvocation="1876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="928" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="1678" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="37" invocations="187" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="4183" standardDeviationMicrosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="34" invocations="51" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="8297" standardDeviationMicrosecondsPerInvocation="1554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="33" invocations="70" avgMicrosecondsPerInvocation="480" maxMicrosecondsPerInvocation="13371" standardDeviationMicrosecondsPerInvocation="1585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="70" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="6239" standardDeviationMicrosecondsPerInvocation="1397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="30" invocations="187" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="2098" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="187" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="2218" standardDeviationMicrosecondsPerInvocation="295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="187" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="7009" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="70" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="9409" standardDeviationMicrosecondsPerInvocation="1122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="25" invocations="391" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1730" standardDeviationMicrosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="5149" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="663" standardDeviationMicrosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="187" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="1353" standardDeviationMicrosecondsPerInvocation="253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="22" invocations="70" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="8326" standardDeviationMicrosecondsPerInvocation="998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="70" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="2392" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="19" invocations="187" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="1637" standardDeviationMicrosecondsPerInvocation="203"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

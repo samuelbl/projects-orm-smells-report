@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092339000" analysisTimestamp="1597092340428" release="">
+  <Project projectName="repositorios/RizkiMufrizal_Spring-OAuth2-Custom">
+    <Jar>repositorios/RizkiMufrizal_Spring-OAuth2-Custom</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.rizki.mufrizal.spring.oauth2.custom.repository.UserRepository">
+      <SourceLine classname="com.rizki.mufrizal.spring.oauth2.custom.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/rizki/mufrizal/spring/oauth2/custom/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.rizki.mufrizal.spring.oauth2.custom.repository.UserRepository" name="LoginUser" signature="(Ljava/lang/String;)Lcom/rizki/mufrizal/spring/oauth2/custom/domain/User;" isStatic="false">
+      <SourceLine classname="com.rizki.mufrizal.spring.oauth2.custom.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/rizki/mufrizal/spring/oauth2/custom/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="44">
+    <MissingClass>com.zaxxer.hikari.HikariConfig</MissingClass>
+    <MissingClass>com.zaxxer.hikari.HikariDataSource</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.redis.connection.RedisConnection</MissingClass>
+    <MissingClass>org.springframework.data.redis.connection.RedisConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.data.redis.connection.jedis.JedisConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.RedisTemplate</MissingClass>
+    <MissingClass>org.springframework.data.redis.serializer.GenericToStringSerializer</MissingClass>
+    <MissingClass>org.springframework.data.redis.serializer.StringRedisSerializer</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.authentication.TokenExtractor</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.TokenStore</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken</MissingClass>
+    <MissingClass>redis.clients.jedis.JedisPoolConfig</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:45:39 +0000" total_classes="40" referenced_classes="86" total_bugs="1" total_size="645" num_packages="7" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.47" clock_seconds="1.79" peak_mbytes="158.73" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="1">
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.SpringOAuth2CustomApplication" sourceFile="SpringOAuth2CustomApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.configuration" total_bugs="0" total_types="9" total_size="233">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.CorsConfiguration" sourceFile="CorsConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.DataSourceConfiguration" sourceFile="DataSourceConfiguration.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.OAuth2Configuration" sourceFile="OAuth2Configuration.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.OAuth2Configuration$AuthorizationServerConfiguration" sourceFile="OAuth2Configuration.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.OAuth2Configuration$ResourceServerConfiguration" sourceFile="OAuth2Configuration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.RedisSessionConfiguration" sourceFile="RedisSessionConfiguration.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.ScheduledTaskConfiguration" sourceFile="ScheduledTaskConfiguration.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.TokenExtractorConfiguration" sourceFile="TokenExtractorConfiguration.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.configuration.WebSecurityConfiguration" sourceFile="WebSecurityConfiguration.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.controller" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.controller.BukuController" sourceFile="BukuController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.controller.MahasiswaController" sourceFile="MahasiswaController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.controller.PeminjamanController" sourceFile="PeminjamanController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.domain" total_bugs="0" total_types="11" total_size="263">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.AuthorizedGrantTypes" sourceFile="AuthorizedGrantTypes.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.Buku" sourceFile="Buku.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.JenisKelamin" sourceFile="JenisKelamin.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.Mahasiswa" sourceFile="Mahasiswa.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.OAuth2ClientDetail" sourceFile="OAuth2ClientDetail.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.OAuth2CountAccess" sourceFile="OAuth2CountAccess.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.Peminjaman" sourceFile="Peminjaman.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.Role" sourceFile="Role.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.Scope" sourceFile="Scope.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.User" sourceFile="User.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.domain.UserRole" sourceFile="UserRole.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.repository" total_bugs="1" total_types="5" total_size="7" priority_2="1">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.repository.BukuRepository" sourceFile="BukuRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.repository.MahasiswaRepository" sourceFile="MahasiswaRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.repository.OAuth2CountAccessRepository" sourceFile="OAuth2CountAccessRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.repository.PeminjamanRepository" sourceFile="PeminjamanRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.service" total_bugs="0" total_types="5" total_size="24">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.BukuService" sourceFile="BukuService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.MahasiswaService" sourceFile="MahasiswaService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.OAuth2AccessTokenRedis" sourceFile="OAuth2AccessTokenRedis.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.OAuth2CountAccessService" sourceFile="OAuth2CountAccessService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.PeminjamanService" sourceFile="PeminjamanService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rizki.mufrizal.spring.oauth2.custom.service.impl" total_bugs="0" total_types="6" total_size="88">
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.BukuServiceImpl" sourceFile="BukuServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.MahasiswaServiceImpl" sourceFile="MahasiswaServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.OAuth2AccessTokenRedisImpl" sourceFile="OAuth2AccessTokenRedisImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.OAuth2CountAccessServiceImpl" sourceFile="OAuth2CountAccessServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.PeminjamanServiceImpl" sourceFile="PeminjamanServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.rizki.mufrizal.spring.oauth2.custom.service.impl.UserService" sourceFile="UserService.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="206" invocations="626" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="16971" standardDeviationMicrosecondsPerInvocation="989"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="73" invocations="86" avgMicrosecondsPerInvocation="852" maxMicrosecondsPerInvocation="10222" standardDeviationMicrosecondsPerInvocation="1698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="56" invocations="86" avgMicrosecondsPerInvocation="654" maxMicrosecondsPerInvocation="5637" standardDeviationMicrosecondsPerInvocation="1098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="634" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="2732" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="45" invocations="171" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="6610" standardDeviationMicrosecondsPerInvocation="732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="486" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="13687" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="42" invocations="276" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="3400" standardDeviationMicrosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="38" invocations="172" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="8156" standardDeviationMicrosecondsPerInvocation="695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="192" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="23525" standardDeviationMicrosecondsPerInvocation="1691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="36" invocations="171" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="4670" standardDeviationMicrosecondsPerInvocation="504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="35" invocations="172" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="9042" standardDeviationMicrosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="34" invocations="171" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="8942" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="166" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="11876" standardDeviationMicrosecondsPerInvocation="942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="31" invocations="171" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="3378" standardDeviationMicrosecondsPerInvocation="387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="27" invocations="86" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="3409" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="86" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="6174" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="86" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="2173" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="86" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="7800" standardDeviationMicrosecondsPerInvocation="861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="19" invocations="89" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="3201" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="86" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="4472" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="86" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="2574" standardDeviationMicrosecondsPerInvocation="347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="40" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="2609" standardDeviationMicrosecondsPerInvocation="552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="14" invocations="1286" avgMicrosecondsPerInvocation="11" maxMicrosecondsPerInvocation="1011" standardDeviationMicrosecondsPerInvocation="38"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="14" invocations="40" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="6553" standardDeviationMicrosecondsPerInvocation="1183"/>
+      <ClassProfile name="com.ufpe.badsmells.ProjectionDetector" totalMilliseconds="13" invocations="40" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="13039" standardDeviationMicrosecondsPerInvocation="2033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="11" invocations="40" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="4786" standardDeviationMicrosecondsPerInvocation="746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="40" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="1217" standardDeviationMicrosecondsPerInvocation="266"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

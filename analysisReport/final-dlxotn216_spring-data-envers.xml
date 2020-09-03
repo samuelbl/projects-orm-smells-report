@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092761000" analysisTimestamp="1597092762802" release="">
+  <Project projectName="repositorios/dlxotn216_spring-data-envers">
+    <Jar>repositorios/dlxotn216_spring-data-envers</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="me.strong.report.domain.Report">
+      <SourceLine classname="me.strong.report.domain.Report" start="27" end="65" sourcefile="Report.java" sourcepath="me/strong/report/domain/Report.java"/>
+    </Class>
+    <Field classname="me.strong.report.domain.Report" name="signer" signature="Lme/strong/member/domain/Member;" isStatic="false">
+      <SourceLine classname="me.strong.report.domain.Report" sourcefile="Report.java" sourcepath="me/strong/report/domain/Report.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl">
+      <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="27" end="145" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+    </Class>
+    <Method classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" name="findCustomReportHistoriesByReportKey" signature="(Ljava/lang/Long;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="97" end="105" startBytecode="0" endBytecode="149" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="97" end="97" startBytecode="9" endBytecode="9" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl">
+      <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="27" end="145" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+    </Class>
+    <Method classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" name="findCustomReportHistoriesByReportKeyAsNativeQuery" signature="(Ljava/lang/Long;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="110" end="128" startBytecode="0" endBytecode="139" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" start="110" end="110" startBytecode="9" endBytecode="9" sourcefile="CustomRevisionRepositoryImpl.java" sourcepath="me/strong/report/domain/impl/CustomRevisionRepositoryImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="27">
+    <MissingClass>com.querydsl.core.types.Path</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadata</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.BeanPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EntityPathBase</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.NumberPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathInits</MissingClass>
+    <MissingClass>com.querydsl.jpa.JPQLQuery</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>org.hibernate.envers.AuditReader</MissingClass>
+    <MissingClass>org.hibernate.envers.AuditReaderFactory</MissingClass>
+    <MissingClass>org.hibernate.envers.query.AuditEntity</MissingClass>
+    <MissingClass>org.hibernate.envers.query.AuditQuery</MissingClass>
+    <MissingClass>org.hibernate.envers.query.AuditQueryCreator</MissingClass>
+    <MissingClass>org.hibernate.envers.query.criteria.AuditId</MissingClass>
+    <MissingClass>org.hibernate.envers.query.criteria.AuditProperty</MissingClass>
+    <MissingClass>org.hibernate.envers.query.internal.property.EntityPropertyName</MissingClass>
+    <MissingClass>org.hibernate.envers.query.internal.property.ModifiedFlagPropertyName</MissingClass>
+    <MissingClass>org.qlrm.mapper.JpaResultMapper</MissingClass>
+    <MissingClass>org.springframework.boot.ApplicationRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.history.Revisions</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.QuerydslRepositorySupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:52:41 +0000" total_classes="54" referenced_classes="172" total_bugs="3" total_size="1506" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.91" clock_seconds="3.35" peak_mbytes="321.80" alloc_mbytes="3540.00" gc_seconds="0.20" priority_2="3">
+    <PackageStats package="me.strong" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="me.strong.AuditApplication" sourceFile="AuditApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.common.domain" total_bugs="0" total_types="4" total_size="90">
+      <ClassStats class="me.strong.common.domain.Address" sourceFile="Address.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="me.strong.common.domain.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="me.strong.common.domain.QAddress" sourceFile="QAddress.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="me.strong.common.domain.QBaseEntity" sourceFile="QBaseEntity.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.config" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="me.strong.config.JpaAuditConfiguration" sourceFile="JpaAuditConfiguration.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.member.domain" total_bugs="0" total_types="3" total_size="78">
+      <ClassStats class="me.strong.member.domain.Member" sourceFile="Member.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="me.strong.member.domain.MemberRepository" sourceFile="MemberRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.strong.member.domain.QMember" sourceFile="QMember.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.report.domain" total_bugs="1" total_types="8" total_size="245" priority_2="1">
+      <ClassStats class="me.strong.report.domain.CustomRevisionRepository" sourceFile="CustomRevisionRepository.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.QReport" sourceFile="QReport.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.QReportHistory" sourceFile="QReportHistory.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.Report" sourceFile="Report.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="me.strong.report.domain.ReportHistory" sourceFile="ReportHistory.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.ReportHistoryDto" sourceFile="ReportHistoryDto.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.ReportHistoryRepository" sourceFile="ReportHistoryRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.strong.report.domain.ReportRepository" sourceFile="ReportRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.report.domain.impl" total_bugs="2" total_types="2" total_size="62" priority_2="2">
+      <ClassStats class="me.strong.report.domain.impl.CustomRevisionRepositoryImpl" sourceFile="CustomRevisionRepositoryImpl.java" interface="false" size="54" bugs="2" priority_2="2"/>
+      <ClassStats class="me.strong.report.domain.impl.ReportHistoryRepositoryImpl" sourceFile="ReportHistoryRepositoryImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.strong.runner" total_bugs="0" total_types="1" total_size="51">
+      <ClassStats class="me.strong.runner.AuditAppRunner" sourceFile="AuditAppRunner.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="306" invocations="1063" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="20936" standardDeviationMicrosecondsPerInvocation="985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="184" invocations="172" avgMicrosecondsPerInvocation="1070" maxMicrosecondsPerInvocation="11776" standardDeviationMicrosecondsPerInvocation="1774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="149" invocations="172" avgMicrosecondsPerInvocation="871" maxMicrosecondsPerInvocation="6849" standardDeviationMicrosecondsPerInvocation="1313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="125" invocations="766" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="2972" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="109" invocations="308" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="5725" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="106" invocations="303" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="8059" standardDeviationMicrosecondsPerInvocation="747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="105" invocations="312" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="8960" standardDeviationMicrosecondsPerInvocation="859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="101" invocations="307" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="14932" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="92" invocations="312" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="9804" standardDeviationMicrosecondsPerInvocation="872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="88" invocations="1068" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="3025" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="75" invocations="308" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="10765" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="64" invocations="203" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="5947" standardDeviationMicrosecondsPerInvocation="693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="56" invocations="172" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="5883" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="51" invocations="246" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="13995" standardDeviationMicrosecondsPerInvocation="915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="332" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="26082" standardDeviationMicrosecondsPerInvocation="1427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="48" invocations="54" avgMicrosecondsPerInvocation="889" maxMicrosecondsPerInvocation="16483" standardDeviationMicrosecondsPerInvocation="2659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="47" invocations="172" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="5006" standardDeviationMicrosecondsPerInvocation="624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="942" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="998" standardDeviationMicrosecondsPerInvocation="79"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="37" invocations="172" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="2800" standardDeviationMicrosecondsPerInvocation="313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="36" invocations="172" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="8098" standardDeviationMicrosecondsPerInvocation="867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="36" invocations="172" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="2167" standardDeviationMicrosecondsPerInvocation="387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="35" invocations="172" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="2046" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="172" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="6095" standardDeviationMicrosecondsPerInvocation="526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="28" invocations="44" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="1801" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="308" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="1581" standardDeviationMicrosecondsPerInvocation="189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="5337" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1028" standardDeviationMicrosecondsPerInvocation="24"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="51" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="3108" standardDeviationMicrosecondsPerInvocation="722"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

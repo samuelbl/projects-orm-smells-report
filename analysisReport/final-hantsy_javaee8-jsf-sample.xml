@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597112979000" analysisTimestamp="1597112980958" release="">
+  <Project projectName="repositorios/hantsy_javaee8-jsf-sample">
+    <Jar>repositorios/hantsy_javaee8-jsf-sample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.hantsy.ee8sample.domain.LoginToken">
+      <SourceLine classname="com.github.hantsy.ee8sample.domain.LoginToken" start="22" end="82" sourcefile="LoginToken.java" sourcepath="com/github/hantsy/ee8sample/domain/LoginToken.java"/>
+    </Class>
+    <Field classname="com.github.hantsy.ee8sample.domain.LoginToken" name="user" signature="Lcom/github/hantsy/ee8sample/domain/User;" isStatic="false">
+      <SourceLine classname="com.github.hantsy.ee8sample.domain.LoginToken" sourcefile="LoginToken.java" sourcepath="com/github/hantsy/ee8sample/domain/LoginToken.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.CDI</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.InjectionPoint</MissingClass>
+    <MissingClass>javax.enterprise.util.AnnotationLiteral</MissingClass>
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.application.NavigationHandler</MissingClass>
+    <MissingClass>javax.faces.application.ViewExpiredException</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandler</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandlerFactory</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandlerWrapper</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.event.ExceptionQueuedEvent</MissingClass>
+    <MissingClass>javax.faces.event.ExceptionQueuedEventContext</MissingClass>
+    <MissingClass>javax.faces.event.PhaseEvent</MissingClass>
+    <MissingClass>javax.faces.event.PhaseId</MissingClass>
+    <MissingClass>javax.faces.event.PhaseListener</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.security.enterprise.AuthenticationStatus</MissingClass>
+    <MissingClass>javax.security.enterprise.CallerPrincipal</MissingClass>
+    <MissingClass>javax.security.enterprise.SecurityContext</MissingClass>
+    <MissingClass>javax.security.enterprise.authentication.mechanism.http.AuthenticationParameters</MissingClass>
+    <MissingClass>javax.security.enterprise.authentication.mechanism.http.HttpAuthenticationMechanism</MissingClass>
+    <MissingClass>javax.security.enterprise.authentication.mechanism.http.HttpMessageContext</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.CallerOnlyCredential</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.Credential</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.Password</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.RememberMeCredential</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.UsernamePasswordCredential</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.CredentialValidationResult</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.IdentityStore</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.PasswordHash</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.RememberMeIdentityStore</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.omnifaces.utils.security.MessageDigests</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:29:39 +0000" total_classes="45" referenced_classes="121" total_bugs="1" total_size="870" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.94" clock_seconds="2.21" peak_mbytes="206.00" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="com.github.hantsy.ee8sample" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="com.github.hantsy.ee8sample.Bootstrap" sourceFile="Bootstrap.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.Constants" sourceFile="Constants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.FacesConfigurationBean" sourceFile="FacesConfigurationBean.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.Resources" sourceFile="Resources.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.domain" total_bugs="1" total_types="11" total_size="213" priority_2="1">
+      <ClassStats class="com.github.hantsy.ee8sample.domain.LoginToken" sourceFile="LoginToken.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.LoginToken$LoginTokenBuilder" sourceFile="LoginToken.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.LoginToken$TokenType" sourceFile="LoginToken.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.LoginToken_" sourceFile="LoginToken_.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.Task" sourceFile="Task.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.Task$Status" sourceFile="Task.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.Task$TaskBuilder" sourceFile="Task.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.Task_" sourceFile="Task_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.User" sourceFile="User.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.User$UserBuilder" sourceFile="User.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.User_" sourceFile="User_.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.domain.support" total_bugs="0" total_types="6" total_size="108">
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AbstractAuditableEntity" sourceFile="AbstractAuditableEntity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AbstractAuditableEntity_" sourceFile="AbstractAuditableEntity_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AbstractEntity" sourceFile="AbstractEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AbstractEntity_" sourceFile="AbstractEntity_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AbstractRepository" sourceFile="AbstractRepository.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.domain.support.AuditEntityListener" sourceFile="AuditEntityListener.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.faces" total_bugs="0" total_types="4" total_size="111">
+      <ClassStats class="com.github.hantsy.ee8sample.faces.DefaultExceptionHandler" sourceFile="DefaultExceptionHandler.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.faces.DefaultExceptionHandlerFactory" sourceFile="DefaultExceptionHandlerFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.faces.MessageHandler" sourceFile="MessageHandler.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.faces.RequestLoggingPhaseListener" sourceFile="RequestLoggingPhaseListener.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.repository" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.github.hantsy.ee8sample.repository.LoginTokenRepository" sourceFile="LoginTokenRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.repository.TaskRepository" sourceFile="TaskRepository.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.repository.UserRepository" sourceFile="UserRepository.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.security" total_bugs="0" total_types="5" total_size="43">
+      <ClassStats class="com.github.hantsy.ee8sample.security.Authenticated" sourceFile="Authenticated.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.Authenticated$Literal" sourceFile="Authenticated.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.AuthenticatedUserProducer" sourceFile="AuthenticatedUserProducer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.UserInfo" sourceFile="UserInfo.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.UserInfo$UserInfoBuilder" sourceFile="UserInfo.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.security.auth" total_bugs="0" total_types="3" total_size="50">
+      <ClassStats class="com.github.hantsy.ee8sample.security.auth.CustomAuthenticationMechanism" sourceFile="CustomAuthenticationMechanism.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.auth.CustomIdentityStore" sourceFile="CustomIdentityStore.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.security.auth.CustomRememberMeIdentityStore" sourceFile="CustomRememberMeIdentityStore.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.service" total_bugs="0" total_types="4" total_size="59">
+      <ClassStats class="com.github.hantsy.ee8sample.service.InvalidUsernameException" sourceFile="InvalidUsernameException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.service.TaskNotFoundException" sourceFile="TaskNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.service.TaskService" sourceFile="TaskService.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.service.UserService" sourceFile="UserService.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.hantsy.ee8sample.web" total_bugs="0" total_types="5" total_size="216">
+      <ClassStats class="com.github.hantsy.ee8sample.web.EditTaskAction" sourceFile="EditTaskAction.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.web.LoginBean" sourceFile="LoginBean.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.web.TaskDetails" sourceFile="TaskDetails.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.web.TaskHome" sourceFile="TaskHome.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.github.hantsy.ee8sample.web.ViewTaskDetailsAction" sourceFile="ViewTaskDetailsAction.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="246" invocations="790" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="14432" standardDeviationMicrosecondsPerInvocation="808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="90" invocations="121" avgMicrosecondsPerInvocation="746" maxMicrosecondsPerInvocation="10125" standardDeviationMicrosecondsPerInvocation="1596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="82" invocations="121" avgMicrosecondsPerInvocation="683" maxMicrosecondsPerInvocation="8646" standardDeviationMicrosecondsPerInvocation="1365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="69" invocations="252" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="6579" standardDeviationMicrosecondsPerInvocation="589"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="796" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="522" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="252" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="8986" standardDeviationMicrosecondsPerInvocation="691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="57" invocations="252" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="2372" standardDeviationMicrosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="54" invocations="253" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="10047" standardDeviationMicrosecondsPerInvocation="690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="252" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="8635" standardDeviationMicrosecondsPerInvocation="563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="48" invocations="252" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="2269" standardDeviationMicrosecondsPerInvocation="329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="482" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1363" standardDeviationMicrosecondsPerInvocation="144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="41" invocations="191" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="15298" standardDeviationMicrosecondsPerInvocation="1130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="253" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="22369" standardDeviationMicrosecondsPerInvocation="1406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="651" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="1572" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="121" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="6324" standardDeviationMicrosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="31" invocations="121" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="4927" standardDeviationMicrosecondsPerInvocation="744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="29" invocations="154" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="1777" standardDeviationMicrosecondsPerInvocation="228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="27" invocations="121" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="3449" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="121" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="9384" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="121" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="1325" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="3129" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="905" standardDeviationMicrosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="45" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="4058" standardDeviationMicrosecondsPerInvocation="622"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="45" avgMicrosecondsPerInvocation="358" maxMicrosecondsPerInvocation="3183" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="121" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="2243" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="252" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="1301" standardDeviationMicrosecondsPerInvocation="126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="15" invocations="45" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="6452" standardDeviationMicrosecondsPerInvocation="989"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="13" invocations="45" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="6994" standardDeviationMicrosecondsPerInvocation="1017"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="13" invocations="45" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="3446" standardDeviationMicrosecondsPerInvocation="647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="13" invocations="45" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="1318" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="12" invocations="121" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="1866" standardDeviationMicrosecondsPerInvocation="236"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

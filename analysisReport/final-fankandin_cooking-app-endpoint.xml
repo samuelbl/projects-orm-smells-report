@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596952742000" analysisTimestamp="1596952743931" release="">
+  <Project projectName="repositorios/fankandin_cooking-app-endpoint">
+    <Jar>repositorios/fankandin_cooking-app-endpoint</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.AbstractDao">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.AbstractDao" start="18" end="86" sourcefile="AbstractDao.java" sourcepath="info/palamarchuk/api/cooking/dao/AbstractDao.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.AbstractDao" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.AbstractDao" start="42" end="42" startBytecode="0" endBytecode="99" sourcefile="AbstractDao.java" sourcepath="info/palamarchuk/api/cooking/dao/AbstractDao.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.AbstractDao" start="42" end="42" startBytecode="11" endBytecode="11" sourcefile="AbstractDao.java" sourcepath="info/palamarchuk/api/cooking/dao/AbstractDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="10" end="28" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" name="findByIngredientId" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="14" end="14" startBytecode="0" endBytecode="91" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="14" end="14" startBytecode="4" endBytecode="4" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="10" end="28" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" name="findByIngredientIdAndLanguageId" signature="(IS)Linfo/palamarchuk/api/cooking/entity/IngredientTranslation;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="22" end="28" startBytecode="0" endBytecode="172" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" start="22" end="22" startBytecode="4" endBytecode="4" sourcefile="IngredientTranslationRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/IngredientTranslationRepository.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="10" end="28" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" name="findByRecipeId" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="14" end="14" startBytecode="0" endBytecode="91" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="14" end="14" startBytecode="4" endBytecode="4" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    <String value="Method: findByRecipeId. Fields with EAGER without Join Fetch: ingredient, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="10" end="28" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" name="findByRecipeId" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="14" end="14" startBytecode="0" endBytecode="91" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="14" end="14" startBytecode="4" endBytecode="4" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="10" end="28" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Class>
+    <Method classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" name="findByRecipeIdAndIngredientId" signature="(JI)Linfo/palamarchuk/api/cooking/entity/RecipeIngredient;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="22" end="28" startBytecode="0" endBytecode="175" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+    </Method>
+    <SourceLine classname="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" start="22" end="22" startBytecode="4" endBytecode="4" sourcefile="RecipeIngredientRepository.java" sourcepath="info/palamarchuk/api/cooking/dao/RecipeIngredientRepository.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.entity.RecipeIngredient">
+      <SourceLine classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" start="13" end="144" sourcefile="RecipeIngredient.java" sourcepath="info/palamarchuk/api/cooking/entity/RecipeIngredient.java"/>
+    </Class>
+    <Field classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" name="ingredient" signature="Linfo/palamarchuk/api/cooking/entity/Ingredient;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" sourcefile="RecipeIngredient.java" sourcepath="info/palamarchuk/api/cooking/entity/RecipeIngredient.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="info.palamarchuk.api.cooking.entity.RecipeIngredient">
+      <SourceLine classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" start="13" end="144" sourcefile="RecipeIngredient.java" sourcepath="info/palamarchuk/api/cooking/entity/RecipeIngredient.java"/>
+    </Class>
+    <Field classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" name="recipe" signature="Linfo/palamarchuk/api/cooking/entity/Recipe;" isStatic="false">
+      <SourceLine classname="info.palamarchuk.api.cooking.entity.RecipeIngredient" sourcefile="RecipeIngredient.java" sourcepath="info/palamarchuk/api/cooking/entity/RecipeIngredient.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="1" missingClasses="35">
+    <Error>
+      <ErrorMessage>Exception analyzing info.palamarchuk.api.cooking.dao.AbstractDao using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder</MissingClass>
+    <MissingClass>org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.ServletUriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:59:02 +0000" total_classes="42" referenced_classes="78" total_bugs="8" total_size="862" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.15" clock_seconds="2.05" peak_mbytes="181.30" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="8">
+    <PackageStats package="info.palamarchuk.api.cooking" total_bugs="0" total_types="10" total_size="228">
+      <ClassStats class="info.palamarchuk.api.cooking.App" sourceFile="App.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.App$WebConfig" sourceFile="App.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.Error" sourceFile="Error.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.ErrorResponseData" sourceFile="ErrorResponseData.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.IngredientEndpoint" sourceFile="IngredientEndpoint.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.IngredientTranslationEndpoint" sourceFile="IngredientTranslationEndpoint.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.LanguageEndpoint" sourceFile="LanguageEndpoint.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.RecipeEndpoint" sourceFile="RecipeEndpoint.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.RecipeIngredientEndpoint" sourceFile="RecipeIngredientEndpoint.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.ResponseData" sourceFile="ResponseData.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.config" total_bugs="0" total_types="4" total_size="57">
+      <ClassStats class="info.palamarchuk.api.cooking.config.DevJpaConfig" sourceFile="DevJpaConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.config.JpaConfig" sourceFile="JpaConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.config.ProductionJpaConfig" sourceFile="ProductionJpaConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.dao" total_bugs="6" total_types="7" total_size="95" priority_2="6">
+      <ClassStats class="info.palamarchuk.api.cooking.dao.AbstractDao" sourceFile="AbstractDao.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.GenericDao" sourceFile="GenericDao.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.GenericRepository" sourceFile="GenericRepository.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.IngredientTranslationDao" sourceFile="IngredientTranslationDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.IngredientTranslationRepository" sourceFile="IngredientTranslationRepository.java" interface="false" size="15" bugs="2" priority_2="2"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.RecipeIngredientDao" sourceFile="RecipeIngredientDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.dao.RecipeIngredientRepository" sourceFile="RecipeIngredientRepository.java" interface="false" size="15" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.data" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="info.palamarchuk.api.cooking.data.RecipeIngredientPatch" sourceFile="RecipeIngredientPatch.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.entity" total_bugs="2" total_types="6" total_size="223" priority_2="2">
+      <ClassStats class="info.palamarchuk.api.cooking.entity.IdNumerableEntity" sourceFile="IdNumerableEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.entity.Ingredient" sourceFile="Ingredient.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.entity.IngredientTranslation" sourceFile="IngredientTranslation.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.entity.Language" sourceFile="Language.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.entity.Recipe" sourceFile="Recipe.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.entity.RecipeIngredient" sourceFile="RecipeIngredient.java" interface="false" size="71" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.service" total_bugs="0" total_types="6" total_size="124">
+      <ClassStats class="info.palamarchuk.api.cooking.service.IngredientService" sourceFile="IngredientService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.service.IngredientTranslationService" sourceFile="IngredientTranslationService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.service.LanguageService" sourceFile="LanguageService.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.service.RecipeIngredientService" sourceFile="RecipeIngredientService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.service.RecipeService" sourceFile="RecipeService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.service.ServiceDao" sourceFile="ServiceDao.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.util" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="info.palamarchuk.api.cooking.util.CurrentUrlService" sourceFile="CurrentUrlService.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="info.palamarchuk.api.cooking.validation" total_bugs="0" total_types="7" total_size="115">
+      <ClassStats class="info.palamarchuk.api.cooking.validation.IngredientAddValidator" sourceFile="IngredientAddValidator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.IngredientTranslationAddValidator" sourceFile="IngredientTranslationAddValidator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.IngredientTranslationUpdateValidator" sourceFile="IngredientTranslationUpdateValidator.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.IngredientUpdateValidator" sourceFile="IngredientUpdateValidator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.RecipeAddValidator" sourceFile="RecipeAddValidator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.RecipeIngredientAddValidator" sourceFile="RecipeIngredientAddValidator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="info.palamarchuk.api.cooking.validation.RecipeIngredientUpdateValidator" sourceFile="RecipeIngredientUpdateValidator.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="227" invocations="620" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="31754" standardDeviationMicrosecondsPerInvocation="1484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="103" invocations="78" avgMicrosecondsPerInvocation="1328" maxMicrosecondsPerInvocation="14519" standardDeviationMicrosecondsPerInvocation="2739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="78" avgMicrosecondsPerInvocation="913" maxMicrosecondsPerInvocation="18762" standardDeviationMicrosecondsPerInvocation="2274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="426" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="3696" standardDeviationMicrosecondsPerInvocation="305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="56" invocations="217" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="5332" standardDeviationMicrosecondsPerInvocation="485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="217" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="9350" standardDeviationMicrosecondsPerInvocation="687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="628" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="690" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="50" invocations="201" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="2640" standardDeviationMicrosecondsPerInvocation="366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="46" invocations="217" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="8876" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="44" invocations="217" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="9911" standardDeviationMicrosecondsPerInvocation="693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="40" invocations="209" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2609" standardDeviationMicrosecondsPerInvocation="295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="39" invocations="236" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="24477" standardDeviationMicrosecondsPerInvocation="1586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="144" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="14088" standardDeviationMicrosecondsPerInvocation="1220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="502" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="2558" standardDeviationMicrosecondsPerInvocation="167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="78" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="5930" standardDeviationMicrosecondsPerInvocation="1112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="78" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="4330" standardDeviationMicrosecondsPerInvocation="788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="31" invocations="78" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="15914" standardDeviationMicrosecondsPerInvocation="1853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="151" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="2039" standardDeviationMicrosecondsPerInvocation="242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="26" invocations="78" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="9799" standardDeviationMicrosecondsPerInvocation="1165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="78" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="2422" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="78" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="3332" standardDeviationMicrosecondsPerInvocation="511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="1901" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1102" standardDeviationMicrosecondsPerInvocation="40"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="15" invocations="42" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="3376" standardDeviationMicrosecondsPerInvocation="629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="2868" standardDeviationMicrosecondsPerInvocation="454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="3633" standardDeviationMicrosecondsPerInvocation="569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="13" invocations="42" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="8004" standardDeviationMicrosecondsPerInvocation="1206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="13" invocations="42" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="5712" standardDeviationMicrosecondsPerInvocation="866"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

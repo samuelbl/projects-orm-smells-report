@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597113129000" analysisTimestamp="1597113131307" release="">
+  <Project projectName="repositorios/leandrocgsi_semeru_jsf_maven">
+    <Jar>repositorios/leandrocgsi_semeru_jsf_maven</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="br.com.semeru.model.entities.Pessoa">
+      <SourceLine classname="br.com.semeru.model.entities.Pessoa" start="59" end="178" sourcefile="Pessoa.java" sourcepath="br/com/semeru/model/entities/Pessoa.java"/>
+    </Class>
+    <Field classname="br.com.semeru.model.entities.Pessoa" name="sexo" signature="Lbr/com/semeru/model/entities/Sexo;" isStatic="false">
+      <SourceLine classname="br.com.semeru.model.entities.Pessoa" sourcefile="Pessoa.java" sourcepath="br/com/semeru/model/entities/Pessoa.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="br.com.semeru.security.UserServiceImpl">
+      <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="21" end="72" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+    </Class>
+    <Method classname="br.com.semeru.security.UserServiceImpl" name="findUser" signature="(Ljava/lang/String;)Lbr/com/semeru/model/entities/Pessoa;" isStatic="false">
+      <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="62" end="67" startBytecode="0" endBytecode="137" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="62" end="62" startBytecode="7" endBytecode="7" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+    <String value="Method: findUser. Fields with EAGER without Join Fetch: sexo, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.semeru.security.UserServiceImpl">
+      <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="21" end="72" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+    </Class>
+    <Method classname="br.com.semeru.security.UserServiceImpl" name="findUser" signature="(Ljava/lang/String;)Lbr/com/semeru/model/entities/Pessoa;" isStatic="false">
+      <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="62" end="67" startBytecode="0" endBytecode="137" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="br.com.semeru.security.UserServiceImpl" start="62" end="62" startBytecode="7" endBytecode="7" sourcefile="UserServiceImpl.java" sourcepath="br/com/semeru/security/UserServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="br.com.semeru.suport.BbUsuarioLogado">
+      <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="21" end="37" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+    </Class>
+    <Method classname="br.com.semeru.suport.BbUsuarioLogado" name="procuraPessoa" signature="()Lbr/com/semeru/model/entities/Pessoa;" isStatic="false">
+      <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="28" end="37" startBytecode="0" endBytecode="186" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+    </Method>
+    <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="35" end="35" startBytecode="48" endBytecode="48" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+    <String value="Method: procuraPessoa. Fields with EAGER without Join Fetch: sexo, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.semeru.suport.BbUsuarioLogado">
+      <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="21" end="37" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+    </Class>
+    <Method classname="br.com.semeru.suport.BbUsuarioLogado" name="procuraPessoa" signature="()Lbr/com/semeru/model/entities/Pessoa;" isStatic="false">
+      <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="28" end="37" startBytecode="0" endBytecode="186" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+    </Method>
+    <SourceLine classname="br.com.semeru.suport.BbUsuarioLogado" start="35" end="35" startBytecode="48" endBytecode="48" sourcefile="BbUsuarioLogado.java" sourcepath="br/com/semeru/suport/BbUsuarioLogado.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="33">
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.application.NavigationHandler</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandler</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandlerFactory</MissingClass>
+    <MissingClass>javax.faces.context.ExceptionHandlerWrapper</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.faces.event.ExceptionQueuedEvent</MissingClass>
+    <MissingClass>javax.faces.event.ExceptionQueuedEventContext</MissingClass>
+    <MissingClass>javax.faces.event.PhaseEvent</MissingClass>
+    <MissingClass>javax.faces.event.PhaseId</MissingClass>
+    <MissingClass>javax.faces.event.PhaseListener</MissingClass>
+    <MissingClass>javax.faces.validator.Validator</MissingClass>
+    <MissingClass>javax.faces.validator.ValidatorException</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.criterion.DetachedCriteria</MissingClass>
+    <MissingClass>org.hibernate.service.ServiceRegistryBuilder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.GrantedAuthorityImpl</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:32:09 +0000" total_classes="29" referenced_classes="64" total_bugs="5" total_size="851" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.91" clock_seconds="1.92" peak_mbytes="193.88" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="5">
+    <PackageStats package="br.com.semeru.controller" total_bugs="0" total_types="2" total_size="122">
+      <ClassStats class="br.com.semeru.controller.MbCidade" sourceFile="MbCidade.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="br.com.semeru.controller.MbPessoa" sourceFile="MbPessoa.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.conversores" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="br.com.semeru.conversores.ConverterSHA1" sourceFile="ConverterSHA1.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.exceptions" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="br.com.semeru.exceptions.CustomExceptionHandler" sourceFile="CustomExceptionHandler.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="br.com.semeru.exceptions.CustomExceptionHandlerFactory" sourceFile="CustomExceptionHandlerFactory.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.model.dao" total_bugs="0" total_types="2" total_size="45">
+      <ClassStats class="br.com.semeru.model.dao.HibernateDAO" sourceFile="HibernateDAO.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.dao.InterfaceDAO" sourceFile="InterfaceDAO.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.model.entities" total_bugs="1" total_types="7" total_size="360" priority_2="1">
+      <ClassStats class="br.com.semeru.model.entities.Cidade" sourceFile="Cidade.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.entities.Endereco" sourceFile="Endereco.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.entities.Estado" sourceFile="Estado.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.entities.Pessoa" sourceFile="Pessoa.java" interface="false" size="91" bugs="1" priority_2="1"/>
+      <ClassStats class="br.com.semeru.model.entities.Sexo" sourceFile="Sexo.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.entities.TipoEndereco" sourceFile="TipoEndereco.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="br.com.semeru.model.entities.TipoLogradouro" sourceFile="TipoLogradouro.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.security" total_bugs="2" total_types="3" total_size="55" priority_2="2">
+      <ClassStats class="br.com.semeru.security.Assembler" sourceFile="Assembler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="br.com.semeru.security.CustomAuthenticationProvider" sourceFile="CustomAuthenticationProvider.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="br.com.semeru.security.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="28" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.suport" total_bugs="2" total_types="6" total_size="55" priority_2="2">
+      <ClassStats class="br.com.semeru.suport.BbCidade" sourceFile="BbCidade.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="br.com.semeru.suport.BbEstado" sourceFile="BbEstado.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="br.com.semeru.suport.BbSexo" sourceFile="BbSexo.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="br.com.semeru.suport.BbTipoEndereco" sourceFile="BbTipoEndereco.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="br.com.semeru.suport.BbTipoLogradouro" sourceFile="BbTipoLogradouro.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="br.com.semeru.suport.BbUsuarioLogado" sourceFile="BbUsuarioLogado.java" interface="false" size="17" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.util" total_bugs="0" total_types="3" total_size="51">
+      <ClassStats class="br.com.semeru.util.FacesContextUtil" sourceFile="FacesContextUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="br.com.semeru.util.HibernateUtil" sourceFile="HibernateUtil.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="br.com.semeru.util.PhaseListenerSemeru" sourceFile="PhaseListenerSemeru.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.semeru.validators" total_bugs="0" total_types="3" total_size="94">
+      <ClassStats class="br.com.semeru.validators.CPFValidator" sourceFile="CPFValidator.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="br.com.semeru.validators.EmailValidator" sourceFile="EmailValidator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="br.com.semeru.validators.PasswordValidator" sourceFile="PasswordValidator.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="213" invocations="588" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="19913" standardDeviationMicrosecondsPerInvocation="1118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="74" invocations="64" avgMicrosecondsPerInvocation="1167" maxMicrosecondsPerInvocation="12632" standardDeviationMicrosecondsPerInvocation="2102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="59" invocations="328" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="4327" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="56" invocations="593" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="2772" standardDeviationMicrosecondsPerInvocation="122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="53" invocations="64" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="5508" standardDeviationMicrosecondsPerInvocation="1165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="53" invocations="189" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="9755" standardDeviationMicrosecondsPerInvocation="874"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="52" invocations="188" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="8194" standardDeviationMicrosecondsPerInvocation="850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="49" invocations="190" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="9929" standardDeviationMicrosecondsPerInvocation="905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="197" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="27470" standardDeviationMicrosecondsPerInvocation="1951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="42" invocations="187" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="5528" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="41" invocations="188" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="9337" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="41" invocations="187" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="8153" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="496" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="1531" standardDeviationMicrosecondsPerInvocation="134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="132" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="13173" standardDeviationMicrosecondsPerInvocation="1173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="64" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="7174" standardDeviationMicrosecondsPerInvocation="951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="96" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="2169" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="64" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="4180" standardDeviationMicrosecondsPerInvocation="749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="64" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="8995" standardDeviationMicrosecondsPerInvocation="1130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="64" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="5661" standardDeviationMicrosecondsPerInvocation="775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="19" invocations="64" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="2096" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="64" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="2928" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="17" invocations="29" avgMicrosecondsPerInvocation="615" maxMicrosecondsPerInvocation="6418" standardDeviationMicrosecondsPerInvocation="1464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="17" invocations="1746" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="981" standardDeviationMicrosecondsPerInvocation="43"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="15" invocations="29" avgMicrosecondsPerInvocation="548" maxMicrosecondsPerInvocation="2299" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="15" invocations="29" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="4275" standardDeviationMicrosecondsPerInvocation="789"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="188" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="1754" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="12" invocations="29" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="5198" standardDeviationMicrosecondsPerInvocation="980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="11" invocations="29" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="4988" standardDeviationMicrosecondsPerInvocation="914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="29" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="1408" standardDeviationMicrosecondsPerInvocation="306"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

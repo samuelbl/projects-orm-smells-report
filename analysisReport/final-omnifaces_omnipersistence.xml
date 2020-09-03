@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597098580000" analysisTimestamp="1597098582057" release="">
+  <Project projectName="repositorios/omnifaces_omnipersistence">
+    <Jar>repositorios/omnifaces_omnipersistence</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.omnifaces.persistence.service.BaseEntityService">
+      <SourceLine classname="org.omnifaces.persistence.service.BaseEntityService" start="189" end="2217" sourcefile="BaseEntityService.java" sourcepath="org/omnifaces/persistence/service/BaseEntityService.java"/>
+    </Class>
+    <Method classname="org.omnifaces.persistence.service.BaseEntityService" name="select" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="org.omnifaces.persistence.service.BaseEntityService" start="886" end="890" startBytecode="0" endBytecode="150" sourcefile="BaseEntityService.java" sourcepath="org/omnifaces/persistence/service/BaseEntityService.java"/>
+    </Method>
+    <SourceLine classname="org.omnifaces.persistence.service.BaseEntityService" start="886" end="886" startBytecode="13" endBytecode="13" sourcefile="BaseEntityService.java" sourcepath="org/omnifaces/persistence/service/BaseEntityService.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="62">
+    <MissingClass>javax.ejb.SessionContext</MissingClass>
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeanManager</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.CDI</MissingClass>
+    <MissingClass>javax.persistence.CacheRetrieveMode</MissingClass>
+    <MissingClass>javax.persistence.CacheStoreMode</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityNotFoundException</MissingClass>
+    <MissingClass>javax.persistence.EnumType</MissingClass>
+    <MissingClass>javax.persistence.Enumerated</MissingClass>
+    <MissingClass>javax.persistence.NonUniqueResultException</MissingClass>
+    <MissingClass>javax.persistence.PersistenceException</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.Table</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.ValidationMode</MissingClass>
+    <MissingClass>javax.persistence.criteria.AbstractQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CollectionJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder$In</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Expression</MissingClass>
+    <MissingClass>javax.persistence.criteria.Fetch</MissingClass>
+    <MissingClass>javax.persistence.criteria.FetchParent</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.ListJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.MapJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Predicate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.persistence.criteria.Selection</MissingClass>
+    <MissingClass>javax.persistence.criteria.SetJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.Subquery</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute$PersistentAttributeType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Bindable</MissingClass>
+    <MissingClass>javax.persistence.metamodel.EntityType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.MapAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Metamodel</MissingClass>
+    <MissingClass>javax.persistence.metamodel.PluralAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.PluralAttribute$CollectionType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.SetAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Type</MissingClass>
+    <MissingClass>javax.transaction.UserTransaction</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>javax.validation.Path</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.metadata.ConstraintDescriptor</MissingClass>
+    <MissingClass>org.omnifaces.utils.Collections</MissingClass>
+    <MissingClass>org.omnifaces.utils.Lang</MissingClass>
+    <MissingClass>org.omnifaces.utils.annotation.Annotations</MissingClass>
+    <MissingClass>org.omnifaces.utils.collection.PartialResultList</MissingClass>
+    <MissingClass>org.omnifaces.utils.data.Range</MissingClass>
+    <MissingClass>org.omnifaces.utils.properties.PropertiesUtils</MissingClass>
+    <MissingClass>org.omnifaces.utils.reflect.Getter</MissingClass>
+    <MissingClass>org.omnifaces.utils.reflect.Reflections</MissingClass>
+    <MissingClass>org.omnifaces.utils.stream.Collectors</MissingClass>
+    <MissingClass>org.omnifaces.utils.stream.Streams</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:29:40 +0000" total_classes="76" referenced_classes="195" total_bugs="1" total_size="2981" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="15.61" clock_seconds="4.48" peak_mbytes="359.01" alloc_mbytes="3540.00" gc_seconds="0.21" priority_2="1">
+    <PackageStats package="org.omnifaces.persistence" total_bugs="0" total_types="6" total_size="286">
+      <ClassStats class="org.omnifaces.persistence.Database" sourceFile="Database.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.JPA" sourceFile="JPA.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.Provider" sourceFile="Provider.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.Provider$1" sourceFile="Provider.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.Provider$2" sourceFile="Provider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.Provider$3" sourceFile="Provider.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.audit" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="org.omnifaces.persistence.audit.Audit" sourceFile="Audit.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.audit.AuditListener" sourceFile="AuditListener.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.criteria" total_bugs="0" total_types="12" total_size="263">
+      <ClassStats class="org.omnifaces.persistence.criteria.Between" sourceFile="Between.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Bool" sourceFile="Bool.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Criteria" sourceFile="Criteria.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Criteria$ParameterBuilder" sourceFile="Criteria.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Enumerated" sourceFile="Enumerated.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.IgnoreCase" sourceFile="IgnoreCase.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Like" sourceFile="Like.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Like$Type" sourceFile="Like.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Not" sourceFile="Not.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Numeric" sourceFile="Numeric.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Order" sourceFile="Order.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.criteria.Order$Type" sourceFile="Order.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.datasource" total_bugs="0" total_types="4" total_size="216">
+      <ClassStats class="org.omnifaces.persistence.datasource.CommonDataSourceWrapper" sourceFile="CommonDataSourceWrapper.java" interface="false" size="155" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.datasource.PropertiesFileLoader" sourceFile="PropertiesFileLoader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.datasource.SwitchableCommonDataSource" sourceFile="SwitchableCommonDataSource.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.datasource.SwitchableXADataSource" sourceFile="SwitchableXADataSource.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.event" total_bugs="0" total_types="3" total_size="3">
+      <ClassStats class="org.omnifaces.persistence.event.Created" sourceFile="Created.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.event.Deleted" sourceFile="Deleted.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.event.Updated" sourceFile="Updated.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.exception" total_bugs="0" total_types="4" total_size="24">
+      <ClassStats class="org.omnifaces.persistence.exception.BaseEntityException" sourceFile="BaseEntityException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.exception.IllegalEntityStateException" sourceFile="IllegalEntityStateException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.exception.NonDeletableEntityException" sourceFile="NonDeletableEntityException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.exception.NonSoftDeletableEntityException" sourceFile="NonSoftDeletableEntityException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.listener" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="org.omnifaces.persistence.listener.BaseEntityListener" sourceFile="BaseEntityListener.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.model" total_bugs="0" total_types="22" total_size="209">
+      <ClassStats class="org.omnifaces.persistence.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.BaseEntity_" sourceFile="BaseEntity_.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.EnumMapping" sourceFile="EnumMapping.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.EnumMappingTable" sourceFile="EnumMappingTable.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.EnumMappingTable$DeleteAction" sourceFile="EnumMappingTable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.EnumMappingTable$MappingType" sourceFile="EnumMappingTable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.GeneratedIdEntity" sourceFile="GeneratedIdEntity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.GeneratedIdEntity_" sourceFile="GeneratedIdEntity_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.Identifiable" sourceFile="Identifiable.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.NonDeletable" sourceFile="NonDeletable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.SoftDeletable" sourceFile="SoftDeletable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.SoftDeletable$Type" sourceFile="SoftDeletable.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.Timestamped" sourceFile="Timestamped.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.TimestampedBaseEntity" sourceFile="TimestampedBaseEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.TimestampedBaseEntity_" sourceFile="TimestampedBaseEntity_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.TimestampedEntity" sourceFile="TimestampedEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.TimestampedEntity_" sourceFile="TimestampedEntity_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.Versioned" sourceFile="Versioned.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.VersionedBaseEntity" sourceFile="VersionedBaseEntity.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.VersionedBaseEntity_" sourceFile="VersionedBaseEntity_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.VersionedEntity" sourceFile="VersionedEntity.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.VersionedEntity_" sourceFile="VersionedEntity_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.model.dto" total_bugs="0" total_types="2" total_size="106">
+      <ClassStats class="org.omnifaces.persistence.model.dto.Page" sourceFile="Page.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.model.dto.Page$Builder" sourceFile="Page.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.omnifaces.persistence.service" total_bugs="1" total_types="20" total_size="1816" priority_2="1">
+      <ClassStats class="org.omnifaces.persistence.service.Alias" sourceFile="Alias.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.BaseEntityService" sourceFile="BaseEntityService.java" interface="false" size="721" bugs="1" priority_2="1"/>
+      <ClassStats class="org.omnifaces.persistence.service.BaseEntityService$CriteriaQueryBuilder" sourceFile="BaseEntityService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.BaseEntityService$MappedQueryBuilder" sourceFile="BaseEntityService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.BaseEntityService$QueryBuilder" sourceFile="BaseEntityService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.EclipseLinkRoot" sourceFile="EclipseLinkRoot.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.EnumMappingTableService" sourceFile="EnumMappingTableService.java" interface="false" size="560" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.EnumMappingTableService$EnumData" sourceFile="EnumMappingTableService.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.EnumMappingTableService$EnumData$EnumDataEntry" sourceFile="EnumMappingTableService.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.FetchWrapper" sourceFile="FetchWrapper.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.JoinFetchAdapter" sourceFile="JoinFetchAdapter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.MappedPathResolver" sourceFile="MappedPathResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.PageBuilder" sourceFile="PageBuilder.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.PathResolver" sourceFile="PathResolver.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.PostponedFetch" sourceFile="PostponedFetch.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.RootPathResolver" sourceFile="RootPathResolver.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.RootWrapper" sourceFile="RootWrapper.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.SoftDeleteData" sourceFile="SoftDeleteData.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.SubqueryRoot" sourceFile="SubqueryRoot.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.omnifaces.persistence.service.UncheckedParameterBuilder" sourceFile="UncheckedParameterBuilder.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="260" invocations="1013" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="14614" standardDeviationMicrosecondsPerInvocation="747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="255" invocations="675" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="117492" standardDeviationMicrosecondsPerInvocation="4528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="236" invocations="686" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="33221" standardDeviationMicrosecondsPerInvocation="1625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="224" invocations="677" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="45064" standardDeviationMicrosecondsPerInvocation="1811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="220" invocations="674" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="56940" standardDeviationMicrosecondsPerInvocation="2255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="187" invocations="700" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="57486" standardDeviationMicrosecondsPerInvocation="2222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="144" invocations="195" avgMicrosecondsPerInvocation="742" maxMicrosecondsPerInvocation="9740" standardDeviationMicrosecondsPerInvocation="1549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="134" invocations="677" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="9729" standardDeviationMicrosecondsPerInvocation="548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="114" invocations="615" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="24565" standardDeviationMicrosecondsPerInvocation="1015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="113" invocations="1071" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="9723" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="110" invocations="76" avgMicrosecondsPerInvocation="1451" maxMicrosecondsPerInvocation="41999" standardDeviationMicrosecondsPerInvocation="5777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="109" invocations="195" avgMicrosecondsPerInvocation="562" maxMicrosecondsPerInvocation="6111" standardDeviationMicrosecondsPerInvocation="1018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="87" invocations="706" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="27130" standardDeviationMicrosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="82" invocations="1021" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="2838" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="62" invocations="863" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="17077" standardDeviationMicrosecondsPerInvocation="587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="56" invocations="292" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="15059" standardDeviationMicrosecondsPerInvocation="916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="195" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="5650" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="47" invocations="677" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="12494" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="46" invocations="195" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="4558" standardDeviationMicrosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="41" invocations="195" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="3421" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="40" invocations="11915" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="1016" standardDeviationMicrosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="195" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="4340" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="36" invocations="706" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="19119" standardDeviationMicrosecondsPerInvocation="731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="35" invocations="76" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="8361" standardDeviationMicrosecondsPerInvocation="1309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="195" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="9177" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="33" invocations="76" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="9546" standardDeviationMicrosecondsPerInvocation="1113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="33" invocations="76" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="18739" standardDeviationMicrosecondsPerInvocation="2216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="32" invocations="76" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="4398" standardDeviationMicrosecondsPerInvocation="799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="31" invocations="76" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="7170" standardDeviationMicrosecondsPerInvocation="1169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="29" invocations="76" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="6860" standardDeviationMicrosecondsPerInvocation="970"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

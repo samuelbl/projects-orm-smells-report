@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597098823000" analysisTimestamp="1597098824548" release="">
+  <Project projectName="repositorios/volewu_Film">
+    <Jar>repositorios/volewu_Film</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vole.film.entity.WebSiteInfo">
+      <SourceLine classname="com.vole.film.entity.WebSiteInfo" start="23" end="96" sourcefile="WebSiteInfo.java" sourcepath="com/vole/film/entity/WebSiteInfo.java"/>
+    </Class>
+    <Field classname="com.vole.film.entity.WebSiteInfo" name="film" signature="Lcom/vole/film/entity/Film;" isStatic="false">
+      <SourceLine classname="com.vole.film.entity.WebSiteInfo" sourcefile="WebSiteInfo.java" sourcepath="com/vole/film/entity/WebSiteInfo.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vole.film.entity.WebSiteInfo">
+      <SourceLine classname="com.vole.film.entity.WebSiteInfo" start="23" end="96" sourcefile="WebSiteInfo.java" sourcepath="com/vole/film/entity/WebSiteInfo.java"/>
+    </Class>
+    <Field classname="com.vole.film.entity.WebSiteInfo" name="webSite" signature="Lcom/vole/film/entity/WebSite;" isStatic="false">
+      <SourceLine classname="com.vole.film.entity.WebSiteInfo" sourcefile="WebSiteInfo.java" sourcepath="com/vole/film/entity/WebSiteInfo.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="33">
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.Predicate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.springframework.boot.CommandLineRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CorsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:33:43 +0000" total_classes="33" referenced_classes="67" total_bugs="2" total_size="722" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.49" clock_seconds="2.11" peak_mbytes="196.41" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="2">
+    <PackageStats package="com.vole.film" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.vole.film.FilmApplication" sourceFile="FilmApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.conf" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.vole.film.conf.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.controller" total_bugs="0" total_types="4" total_size="106">
+      <ClassStats class="com.vole.film.controller.FilmController" sourceFile="FilmController.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.IndexController" sourceFile="IndexController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.WebSiteController" sourceFile="WebSiteController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.WebSiteInfoController" sourceFile="WebSiteInfoController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.controller.admin" total_bugs="0" total_types="4" total_size="155">
+      <ClassStats class="com.vole.film.controller.admin.FilmAdminController" sourceFile="FilmAdminController.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.admin.LinkAdminController" sourceFile="LinkAdminController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.admin.WebSiteAdminController" sourceFile="WebSiteAdminController.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.vole.film.controller.admin.WebSiteInfoAdminController" sourceFile="WebSiteInfoAdminController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.entity" total_bugs="2" total_types="5" total_size="161" priority_2="2">
+      <ClassStats class="com.vole.film.entity.Film" sourceFile="Film.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.vole.film.entity.Link" sourceFile="Link.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.vole.film.entity.Manager" sourceFile="Manager.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.vole.film.entity.WebSite" sourceFile="WebSite.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.vole.film.entity.WebSiteInfo" sourceFile="WebSiteInfo.java" interface="false" size="41" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.repository" total_bugs="0" total_types="4" total_size="9">
+      <ClassStats class="com.vole.film.repository.FilmRepository" sourceFile="FilmRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.vole.film.repository.LinkRepository" sourceFile="LinkRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.vole.film.repository.WebSiteInfoRepository" sourceFile="WebSiteInfoRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.vole.film.repository.WebSiteRepository" sourceFile="WebSiteRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.run" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.vole.film.run.StartupRunner" sourceFile="StartupRunner.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.service" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="com.vole.film.service.FilmService" sourceFile="FilmService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.vole.film.service.LinkService" sourceFile="LinkService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.vole.film.service.WebSiteInfoService" sourceFile="WebSiteInfoService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.vole.film.service.WebSiteService" sourceFile="WebSiteService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.service.impl" total_bugs="0" total_types="4" total_size="124">
+      <ClassStats class="com.vole.film.service.impl.FilmServiceImpl" sourceFile="FilmServiceImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.vole.film.service.impl.LinkServiceImpl" sourceFile="LinkServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.vole.film.service.impl.WebSiteInfoServiceImpl" sourceFile="WebSiteInfoServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.vole.film.service.impl.WebSiteServiceImpl" sourceFile="WebSiteServiceImpl.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vole.film.util" total_bugs="0" total_types="5" total_size="82">
+      <ClassStats class="com.vole.film.util.CustomDateSerializer" sourceFile="CustomDateSerializer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.vole.film.util.CustomDateTimeSerializer" sourceFile="CustomDateTimeSerializer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.vole.film.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.vole.film.util.PageUtil" sourceFile="PageUtil.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.vole.film.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="240" invocations="574" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="15837" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="84" invocations="67" avgMicrosecondsPerInvocation="1261" maxMicrosecondsPerInvocation="10911" standardDeviationMicrosecondsPerInvocation="2069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="67" avgMicrosecondsPerInvocation="1059" maxMicrosecondsPerInvocation="8465" standardDeviationMicrosecondsPerInvocation="1674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="63" invocations="288" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="3975" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="60" invocations="151" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="7007" standardDeviationMicrosecondsPerInvocation="784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="54" invocations="149" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="2533" standardDeviationMicrosecondsPerInvocation="528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="53" invocations="151" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="8653" standardDeviationMicrosecondsPerInvocation="820"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="53" invocations="582" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="569" standardDeviationMicrosecondsPerInvocation="54"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="49" invocations="151" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="4938" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="46" invocations="151" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="9333" standardDeviationMicrosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="44" invocations="151" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="9566" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="180" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="28624" standardDeviationMicrosecondsPerInvocation="2124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="470" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1889" standardDeviationMicrosecondsPerInvocation="167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="123" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="13195" standardDeviationMicrosecondsPerInvocation="1216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="30" invocations="67" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="6253" standardDeviationMicrosecondsPerInvocation="899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="102" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="2579" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="67" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="3558" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="22" invocations="33" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="15373" standardDeviationMicrosecondsPerInvocation="2606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="22" invocations="67" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="2874" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="4539" standardDeviationMicrosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="67" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="8513" standardDeviationMicrosecondsPerInvocation="1054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="19" invocations="67" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="2471" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="2426" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1195" standardDeviationMicrosecondsPerInvocation="35"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="15" invocations="67" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="3741" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="151" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="1882" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="33" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="2275" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="13" invocations="33" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="1826" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="11" invocations="67" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="2370" standardDeviationMicrosecondsPerInvocation="356"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

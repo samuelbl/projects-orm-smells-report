@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597107047000" analysisTimestamp="1597107048720" release="">
+  <Project projectName="repositorios/ActiveJpa_activejpa">
+    <Jar>repositorios/ActiveJpa_activejpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.entity.Model">
+      <SourceLine classname="org.activejpa.entity.Model" start="47" end="319" sourcefile="Model.java" sourcepath="org/activejpa/entity/Model.java"/>
+    </Class>
+    <Method classname="org.activejpa.entity.Model" name="all" signature="(Ljava/lang/Class;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.activejpa.entity.Model" start="232" end="232" startBytecode="0" endBytecode="96" sourcefile="Model.java" sourcepath="org/activejpa/entity/Model.java"/>
+    </Method>
+    <SourceLine classname="org.activejpa.entity.Model" start="232" end="232" startBytecode="10" endBytecode="10" sourcefile="Model.java" sourcepath="org/activejpa/entity/Model.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.examples.petclinic.model.Pet">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" start="48" end="111" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.activejpa.examples.petclinic.model.Pet" name="visits" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.examples.petclinic.model.Pet">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" start="48" end="111" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.activejpa.examples.petclinic.model.Pet" name="owner" signature="Lorg/activejpa/examples/petclinic/model/Owner;" isStatic="false">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.examples.petclinic.model.Pet">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" start="48" end="111" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.activejpa.examples.petclinic.model.Pet" name="type" signature="Lorg/activejpa/examples/petclinic/model/PetType;" isStatic="false">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/activejpa/examples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.examples.petclinic.model.Vet">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Vet" start="45" end="77" sourcefile="Vet.java" sourcepath="org/activejpa/examples/petclinic/model/Vet.java"/>
+    </Class>
+    <Field classname="org.activejpa.examples.petclinic.model.Vet" name="specialties" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Vet" sourcefile="Vet.java" sourcepath="org/activejpa/examples/petclinic/model/Vet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.activejpa.examples.petclinic.model.Visit">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Visit" start="64" end="121" sourcefile="Visit.java" sourcepath="org/activejpa/examples/petclinic/model/Visit.java"/>
+    </Class>
+    <Field classname="org.activejpa.examples.petclinic.model.Visit" name="pet" signature="Lorg/activejpa/examples/petclinic/model/Pet;" isStatic="false">
+      <SourceLine classname="org.activejpa.examples.petclinic.model.Visit" sourcefile="Visit.java" sourcepath="org/activejpa/examples/petclinic/model/Visit.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="76">
+    <MissingClass>com.google.common.reflect.TypeToken</MissingClass>
+    <MissingClass>com.rometools.rome.feed.atom.Content</MissingClass>
+    <MissingClass>com.rometools.rome.feed.atom.Entry</MissingClass>
+    <MissingClass>com.rometools.rome.feed.atom.Feed</MissingClass>
+    <MissingClass>com.sun.tools.attach.VirtualMachine</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaDelete</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Predicate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Metamodel</MissingClass>
+    <MissingClass>javax.persistence.metamodel.PluralAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Type</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceProvider</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceProviderResolver</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceProviderResolverHolder</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>net.bytebuddy.agent.ByteBuddyAgent</MissingClass>
+    <MissingClass>net.bytebuddy.agent.builder.AgentBuilder</MissingClass>
+    <MissingClass>net.bytebuddy.agent.builder.AgentBuilder$Default</MissingClass>
+    <MissingClass>net.bytebuddy.agent.builder.AgentBuilder$Identified$Narrowable</MissingClass>
+    <MissingClass>net.bytebuddy.agent.builder.AgentBuilder$PoolStrategy$Default</MissingClass>
+    <MissingClass>net.bytebuddy.agent.builder.AgentBuilder$Transformer</MissingClass>
+    <MissingClass>net.bytebuddy.description.modifier.Ownership</MissingClass>
+    <MissingClass>net.bytebuddy.description.modifier.Visibility</MissingClass>
+    <MissingClass>net.bytebuddy.description.type.TypeDefinition</MissingClass>
+    <MissingClass>net.bytebuddy.description.type.TypeDescription</MissingClass>
+    <MissingClass>net.bytebuddy.description.type.TypeDescription$ForLoadedType</MissingClass>
+    <MissingClass>net.bytebuddy.description.type.TypeDescription$Generic$OfParameterizedType$ForGenerifiedErasure</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.DynamicType$Builder</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.DynamicType$Builder$MethodDefinition$ExceptionDefinition</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.DynamicType$Builder$MethodDefinition$ParameterDefinition$Initial</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.DynamicType$Builder$MethodDefinition$ReceiverTypeDefinition</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.TargetType</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.loading.ByteArrayClassLoader$ChildFirst</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.loading.ByteArrayClassLoader$PersistenceHandler</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.loading.ClassLoadingStrategy</MissingClass>
+    <MissingClass>net.bytebuddy.dynamic.loading.PackageDefinitionStrategy$Trivial</MissingClass>
+    <MissingClass>net.bytebuddy.implementation.MethodDelegation</MissingClass>
+    <MissingClass>net.bytebuddy.matcher.ElementMatcher$Junction</MissingClass>
+    <MissingClass>net.bytebuddy.matcher.ElementMatchers</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.Converter</MissingClass>
+    <MissingClass>org.javalite.common.Inflector</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.support.MutableSortDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.support.PropertyComparator</MissingClass>
+    <MissingClass>org.springframework.core.style.ToStringCreator</MissingClass>
+    <MissingClass>org.springframework.format.Formatter</MissingClass>
+    <MissingClass>org.springframework.orm.ObjectRetrievalFailureException</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.bind.support.SessionStatus</MissingClass>
+    <MissingClass>org.springframework.web.context.ContextLoaderListener</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.feed.AbstractAtomFeedView</MissingClass>
+    <MissingClass>org.testng.IObjectFactory</MissingClass>
+    <MissingClass>org.testng.internal.ObjectFactoryImpl</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:50:47 +0000" total_classes="67" referenced_classes="178" total_bugs="6" total_size="1554" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.36" clock_seconds="3.13" peak_mbytes="306.66" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="4" priority_1="2">
+    <PackageStats package="org.activejpa" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="org.activejpa.ActiveJpaException" sourceFile="ActiveJpaException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.enhancer" total_bugs="0" total_types="5" total_size="116">
+      <ClassStats class="org.activejpa.enhancer.ActiveJpaAgent" sourceFile="ActiveJpaAgent.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.activejpa.enhancer.ActiveJpaAgentLoader" sourceFile="ActiveJpaAgentLoader.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.activejpa.enhancer.ActiveJpaAgentLoaderImpl" sourceFile="ActiveJpaAgentLoaderImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.activejpa.enhancer.ModelClassEnhancer" sourceFile="ModelClassEnhancer.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.activejpa.enhancer.ModelClassLoader" sourceFile="ModelClassLoader.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.entity" total_bugs="1" total_types="24" total_size="608" priority_2="1">
+      <ClassStats class="org.activejpa.entity.AbstractConstruct" sourceFile="AbstractConstruct.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.BaseObject" sourceFile="BaseObject.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition" sourceFile="Condition.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$1" sourceFile="Condition.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator" sourceFile="Condition.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$1" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$10" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$11" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$12" sourceFile="Condition.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$13" sourceFile="Condition.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$2" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$3" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$4" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$5" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$6" sourceFile="Condition.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$7" sourceFile="Condition.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$8" sourceFile="Condition.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Condition$Operator$9" sourceFile="Condition.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.EntityCollection" sourceFile="EntityCollection.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Filter" sourceFile="Filter.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.Model" sourceFile="Model.java" interface="false" size="116" bugs="1" priority_2="1"/>
+      <ClassStats class="org.activejpa.entity.Model$Executor" sourceFile="Model.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.ModelInterceptor" sourceFile="ModelInterceptor.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.SortField" sourceFile="SortField.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.entity.testng" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="org.activejpa.entity.testng.ActiveJpaAgentObjectFactory" sourceFile="ActiveJpaAgentObjectFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.entity.testng.BaseModelTest" sourceFile="BaseModelTest.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.examples.petclinic" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="org.activejpa.examples.petclinic.PetclinicApplication" sourceFile="PetclinicApplication.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.examples.petclinic.model" total_bugs="5" total_types="10" total_size="192" priority_2="3" priority_1="2">
+      <ClassStats class="org.activejpa.examples.petclinic.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.NamedEntity" sourceFile="NamedEntity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Owner" sourceFile="Owner.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Person" sourceFile="Person.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Pet" sourceFile="Pet.java" interface="false" size="37" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.PetType" sourceFile="PetType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Specialty" sourceFile="Specialty.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Vet" sourceFile="Vet.java" interface="false" size="20" bugs="1" priority_1="1"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Vets" sourceFile="Vets.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.model.Visit" sourceFile="Visit.java" interface="false" size="23" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.examples.petclinic.service" total_bugs="0" total_types="2" total_size="31">
+      <ClassStats class="org.activejpa.examples.petclinic.service.ClinicService" sourceFile="ClinicService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.service.ClinicServiceImpl" sourceFile="ClinicServiceImpl.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.examples.petclinic.util" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="org.activejpa.examples.petclinic.util.CustomContextListener" sourceFile="CustomContextListener.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.util.EntityUtils" sourceFile="EntityUtils.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.examples.petclinic.web" total_bugs="0" total_types="8" total_size="179">
+      <ClassStats class="org.activejpa.examples.petclinic.web.CrashController" sourceFile="CrashController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.OwnerController" sourceFile="OwnerController.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.PetController" sourceFile="PetController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.PetTypeFormatter" sourceFile="PetTypeFormatter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.PetValidator" sourceFile="PetValidator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.VetController" sourceFile="VetController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.VetsAtomView" sourceFile="VetsAtomView.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.activejpa.examples.petclinic.web.VisitController" sourceFile="VisitController.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.jpa" total_bugs="0" total_types="5" total_size="150">
+      <ClassStats class="org.activejpa.jpa.EntityManagerProvider" sourceFile="EntityManagerProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.activejpa.jpa.EntityManagerProviderImpl" sourceFile="EntityManagerProviderImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.activejpa.jpa.JPA" sourceFile="JPA.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.activejpa.jpa.JPAConfig" sourceFile="JPAConfig.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.activejpa.jpa.JPAContext" sourceFile="JPAContext.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.util" total_bugs="0" total_types="4" total_size="141">
+      <ClassStats class="org.activejpa.util.BeanUtil" sourceFile="BeanUtil.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.activejpa.util.ConvertUtil" sourceFile="ConvertUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.activejpa.util.EnumConverter" sourceFile="EnumConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.activejpa.util.PropertyUtil" sourceFile="PropertyUtil.java" interface="false" size="80" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.activejpa.utils" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="org.activejpa.utils.ActiveJpaThreadFactory" sourceFile="ActiveJpaThreadFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.activejpa.utils.ActiveJpaThreadFactory$1" sourceFile="ActiveJpaThreadFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.activejpa.utils.OpenSessionInViewFilter" sourceFile="OpenSessionInViewFilter.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="235" invocations="1006" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="9402" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="142" invocations="370" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="16993" standardDeviationMicrosecondsPerInvocation="1248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="130" invocations="361" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="7107" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="115" invocations="357" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="8328" standardDeviationMicrosecondsPerInvocation="787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="111" invocations="178" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="7463" standardDeviationMicrosecondsPerInvocation="1140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="106" invocations="360" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="8988" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="101" invocations="178" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="6118" standardDeviationMicrosecondsPerInvocation="948"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="80" invocations="361" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8321" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="79" invocations="374" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="9210" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="77" invocations="1017" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="2374" standardDeviationMicrosecondsPerInvocation="103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="76" invocations="712" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="4461" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="73" invocations="305" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="6603" standardDeviationMicrosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="374" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="24370" standardDeviationMicrosecondsPerInvocation="1585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="279" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="12832" standardDeviationMicrosecondsPerInvocation="796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="52" invocations="178" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="21570" standardDeviationMicrosecondsPerInvocation="1620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="817" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="1135" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="45" invocations="178" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="3912" standardDeviationMicrosecondsPerInvocation="523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="38" invocations="178" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="15705" standardDeviationMicrosecondsPerInvocation="1199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="33" invocations="67" avgMicrosecondsPerInvocation="496" maxMicrosecondsPerInvocation="12130" standardDeviationMicrosecondsPerInvocation="1534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="178" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="2322" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="4322" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1719" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="178" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="3836" standardDeviationMicrosecondsPerInvocation="408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="27" invocations="178" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="7852" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="24" invocations="361" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="1500" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="23" invocations="351" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="8485" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="23" invocations="67" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="8746" standardDeviationMicrosecondsPerInvocation="1101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="22" invocations="67" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="11546" standardDeviationMicrosecondsPerInvocation="1393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="67" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="3303" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="67" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="1843" standardDeviationMicrosecondsPerInvocation="359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="18" invocations="67" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="10823" standardDeviationMicrosecondsPerInvocation="1305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="18" invocations="67" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="2306" standardDeviationMicrosecondsPerInvocation="397"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597091544000" analysisTimestamp="1597091545750" release="">
+  <Project projectName="repositorios/origoni_spring-blog">
+    <Jar>repositorios/origoni_spring-blog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.millky.blog.domain.model.entity.PostTag">
+      <SourceLine classname="com.millky.blog.domain.model.entity.PostTag" start="16" end="44" sourcefile="PostTag.java" sourcepath="com/millky/blog/domain/model/entity/PostTag.java"/>
+    </Class>
+    <Field classname="com.millky.blog.domain.model.entity.PostTag" name="tag" signature="Lcom/millky/blog/domain/model/entity/Tag;" isStatic="false">
+      <SourceLine classname="com.millky.blog.domain.model.entity.PostTag" sourcefile="PostTag.java" sourcepath="com/millky/blog/domain/model/entity/PostTag.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="43">
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.ServiceLocatorFactoryBean</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.ResolvableType</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.client.registration.ClientRegistration</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.core.user.DefaultOAuth2User</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodArgumentResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.util.HtmlUtils</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:32:24 +0000" total_classes="48" referenced_classes="102" total_bugs="1" total_size="804" num_packages="17" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.70" clock_seconds="2.23" peak_mbytes="222.76" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="com.millky.blog" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.millky.blog.Booter" sourceFile="Booter.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.application.aop" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="com.millky.blog.application.aop.CategoryInterceptor" sourceFile="CategoryInterceptor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.millky.blog.application.aop.UserSessionArgumentResolver" sourceFile="UserSessionArgumentResolver.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.millky.blog.application.aop.UserSessionInterceptor" sourceFile="UserSessionInterceptor.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.application.configuration" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="com.millky.blog.application.configuration.BlogConfig" sourceFile="BlogConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.millky.blog.application.configuration.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.millky.blog.application.configuration.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.millky.blog.application.configuration.WebMvcConfig" sourceFile="WebMvcConfig.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.application.utility" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.millky.blog.application.utility.StringUtility" sourceFile="StringUtility.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.model" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.millky.blog.domain.model.UserSession" sourceFile="UserSession.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.model.command" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="com.millky.blog.domain.model.command.PostCommand" sourceFile="PostCommand.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.model.entity" total_bugs="1" total_types="5" total_size="188" priority_2="1">
+      <ClassStats class="com.millky.blog.domain.model.entity.Category" sourceFile="Category.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.model.entity.Comment" sourceFile="Comment.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.model.entity.Post" sourceFile="Post.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.model.entity.PostTag" sourceFile="PostTag.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.millky.blog.domain.model.entity.Tag" sourceFile="Tag.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.model.exception" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.millky.blog.domain.model.exception.IllegalUserException" sourceFile="IllegalUserException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.repository" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="com.millky.blog.domain.repository.CategoryRepository" sourceFile="CategoryRepository.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.repository.PostRepository" sourceFile="PostRepository.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.repository.PostSearchRepository" sourceFile="PostSearchRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.repository.PostTagRepository" sourceFile="PostTagRepository.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.repository.TagRepository" sourceFile="TagRepository.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.service" total_bugs="0" total_types="3" total_size="85">
+      <ClassStats class="com.millky.blog.domain.service.PostSearchService" sourceFile="PostSearchService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.service.PostService" sourceFile="PostService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.service.TagService" sourceFile="TagService.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.service.factory" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.millky.blog.domain.service.factory.SearchServiceFactory" sourceFile="SearchServiceFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.domain.service.impl" total_bugs="0" total_types="3" total_size="18">
+      <ClassStats class="com.millky.blog.domain.service.impl.PostContentSearchService" sourceFile="PostContentSearchService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.service.impl.PostTitleAndContentSearchService" sourceFile="PostTitleAndContentSearchService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.millky.blog.domain.service.impl.PostTitleSearchService" sourceFile="PostTitleSearchService.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.infrastructure.dao" total_bugs="0" total_types="5" total_size="14">
+      <ClassStats class="com.millky.blog.infrastructure.dao.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.millky.blog.infrastructure.dao.CommentDao" sourceFile="CommentDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.millky.blog.infrastructure.dao.PostDao" sourceFile="PostDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.millky.blog.infrastructure.dao.PostTagDao" sourceFile="PostTagDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.millky.blog.infrastructure.dao.TagDao" sourceFile="TagDao.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.presentation.controller.rest" total_bugs="0" total_types="4" total_size="66">
+      <ClassStats class="com.millky.blog.presentation.controller.rest.CommentRestController" sourceFile="CommentRestController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.rest.TagRestController" sourceFile="TagRestController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.rest.TagRestController$TagCloud" sourceFile="TagRestController.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.rest.TagRestController$TagCloudCommand" sourceFile="TagRestController.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.presentation.controller.web" total_bugs="0" total_types="3" total_size="37">
+      <ClassStats class="com.millky.blog.presentation.controller.web.CategoryController" sourceFile="CategoryController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.HelloController" sourceFile="HelloController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.UserController" sourceFile="UserController.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.presentation.controller.web.post" total_bugs="0" total_types="5" total_size="76">
+      <ClassStats class="com.millky.blog.presentation.controller.web.post.PostDeleteController" sourceFile="PostDeleteController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.post.PostEditController" sourceFile="PostEditController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.post.PostSearchController" sourceFile="PostSearchController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.post.PostViewController" sourceFile="PostViewController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.controller.web.post.PostWriteController" sourceFile="PostWriteController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.millky.blog.presentation.support" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="com.millky.blog.presentation.support.GlobalExceptionHandler" sourceFile="GlobalExceptionHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.millky.blog.presentation.support.JsonBuilder" sourceFile="JsonBuilder.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="234" invocations="731" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="15749" standardDeviationMicrosecondsPerInvocation="983"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="87" invocations="102" avgMicrosecondsPerInvocation="856" maxMicrosecondsPerInvocation="17325" standardDeviationMicrosecondsPerInvocation="2129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="80" invocations="102" avgMicrosecondsPerInvocation="792" maxMicrosecondsPerInvocation="11310" standardDeviationMicrosecondsPerInvocation="1684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="77" invocations="262" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4569" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="73" invocations="261" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="2709" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="65" invocations="262" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="3176" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="739" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="6983" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="64" invocations="262" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="6720" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="56" invocations="262" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="7172" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="54" invocations="262" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="7547" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="46" invocations="102" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="14098" standardDeviationMicrosecondsPerInvocation="1478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="46" invocations="173" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="11545" standardDeviationMicrosecondsPerInvocation="1044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="44" invocations="439" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="3169" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="273" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="22101" standardDeviationMicrosecondsPerInvocation="1338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="594" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="2551" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="36" invocations="152" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="1273" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="102" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="5998" standardDeviationMicrosecondsPerInvocation="670"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="102" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="6836" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="102" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="4599" standardDeviationMicrosecondsPerInvocation="584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="262" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="1321" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="102" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="1494" standardDeviationMicrosecondsPerInvocation="287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="18" invocations="102" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="12660" standardDeviationMicrosecondsPerInvocation="1264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="17" invocations="2716" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="456" standardDeviationMicrosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="48" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="2694" standardDeviationMicrosecondsPerInvocation="420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="16" invocations="48" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="3195" standardDeviationMicrosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="16" invocations="102" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="7604" standardDeviationMicrosecondsPerInvocation="754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="16" invocations="48" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="10097" standardDeviationMicrosecondsPerInvocation="1450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="48" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="4360" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="15" invocations="48" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="1744" standardDeviationMicrosecondsPerInvocation="412"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

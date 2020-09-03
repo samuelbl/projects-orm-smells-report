@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597103289000" analysisTimestamp="1597103291170" release="">
+  <Project projectName="repositorios/eclipse-ee4j_jakartaee-examples">
+    <Jar>repositorios/eclipse-ee4j_jakartaee-examples</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb">
+      <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="27" end="55" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" name="findAllCats" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="51" end="51" startBytecode="0" endBytecode="58" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="51" end="51" startBytecode="4" endBytecode="4" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb">
+      <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="27" end="55" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" name="findAllDogs" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="55" end="55" startBytecode="0" endBytecode="58" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" start="55" end="55" startBytecode="4" endBytecode="4" sourcefile="AnimalEjb.java" sourcepath="jakartaee/examples/jpa/joinedInheritance/AnimalEjb.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.onetomany.OneToManyB">
+      <SourceLine classname="jakartaee.examples.jpa.onetomany.OneToManyB" start="29" end="80" sourcefile="OneToManyB.java" sourcepath="jakartaee/examples/jpa/onetomany/OneToManyB.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.onetomany.OneToManyB" name="a" signature="Ljakartaee/examples/jpa/onetomany/OneToManyA;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.onetomany.OneToManyB" sourcefile="OneToManyB.java" sourcepath="jakartaee/examples/jpa/onetomany/OneToManyB.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.onetoone.OneToOneA">
+      <SourceLine classname="jakartaee.examples.jpa.onetoone.OneToOneA" start="29" end="77" sourcefile="OneToOneA.java" sourcepath="jakartaee/examples/jpa/onetoone/OneToOneA.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.onetoone.OneToOneA" name="b" signature="Ljakartaee/examples/jpa/onetoone/OneToOneB;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.onetoone.OneToOneA" sourcefile="OneToOneA.java" sourcepath="jakartaee/examples/jpa/onetoone/OneToOneA.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.optimisticLock.Department">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Department" start="70" end="107" sourcefile="Department.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Department.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.optimisticLock.Department" name="employees" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Department" sourcefile="Department.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Department.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.optimisticLock.Employee">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Employee" start="67" end="131" sourcefile="Employee.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Employee.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.optimisticLock.Employee" name="department" signature="Ljakartaee/examples/jpa/optimisticLock/Department;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Employee" sourcefile="Employee.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.optimisticLock.Uniform">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Uniform" start="49" end="78" sourcefile="Uniform.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Uniform.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.optimisticLock.Uniform" name="employee" signature="Ljakartaee/examples/jpa/optimisticLock/Employee;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.optimisticLock.Uniform" sourcefile="Uniform.java" sourcepath="jakartaee/examples/jpa/optimisticLock/Uniform.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb">
+      <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="27" end="55" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" name="findAllCircles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="51" end="51" startBytecode="0" endBytecode="58" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="51" end="51" startBytecode="4" endBytecode="4" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb">
+      <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="27" end="55" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" name="findAllRectangles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="55" end="55" startBytecode="0" endBytecode="58" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" start="55" end="55" startBytecode="4" endBytecode="4" sourcefile="ShapeEjb.java" sourcepath="jakartaee/examples/jpa/singleTableInheritance/ShapeEjb.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.CompanyEmployee">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.CompanyEmployee" start="24" end="44" sourcefile="CompanyEmployee.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/CompanyEmployee.java"/>
+    </Class>
+    <Field classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.CompanyEmployee" name="manager" signature="Ljakartaee/examples/jpa/tablePerConcreteClassInheritance/ContractEmployee;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.CompanyEmployee" sourcefile="CompanyEmployee.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/CompanyEmployee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="27" end="76" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" name="findAllContractEmployees" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="68" end="68" startBytecode="0" endBytecode="58" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="68" end="68" startBytecode="4" endBytecode="4" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="27" end="76" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" name="findAllFullTimeEmployees" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="72" end="72" startBytecode="0" endBytecode="58" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="72" end="72" startBytecode="4" endBytecode="4" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="27" end="76" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Class>
+    <Method classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" name="findAllPartTimeEmployees" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="76" end="76" startBytecode="0" endBytecode="58" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+    </Method>
+    <SourceLine classname="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" start="76" end="76" startBytecode="4" endBytecode="4" sourcefile="EmployeeEjb.java" sourcepath="jakartaee/examples/jpa/tablePerConcreteClassInheritance/EmployeeEjb.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="66">
+    <MissingClass>javax.ejb.CreateException</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.faces.event.AbortProcessingException</MissingClass>
+    <MissingClass>javax.faces.event.ActionListener</MissingClass>
+    <MissingClass>javax.faces.validator.Validator</MissingClass>
+    <MissingClass>javax.faces.validator.ValidatorException</MissingClass>
+    <MissingClass>javax.json.Json</MissingClass>
+    <MissingClass>javax.json.JsonArrayBuilder</MissingClass>
+    <MissingClass>javax.json.JsonObject</MissingClass>
+    <MissingClass>javax.json.JsonReader</MissingClass>
+    <MissingClass>javax.json.JsonWriter</MissingClass>
+    <MissingClass>javax.json.bind.Jsonb</MissingClass>
+    <MissingClass>javax.json.bind.JsonbBuilder</MissingClass>
+    <MissingClass>javax.json.bind.JsonbConfig</MissingClass>
+    <MissingClass>javax.json.stream.JsonGenerator</MissingClass>
+    <MissingClass>javax.json.stream.JsonParser</MissingClass>
+    <MissingClass>javax.json.stream.JsonParser$Event</MissingClass>
+    <MissingClass>javax.management.j2ee.ManagementHome</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.LockModeType</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.security.enterprise.AuthenticationStatus</MissingClass>
+    <MissingClass>javax.security.enterprise.SecurityContext</MissingClass>
+    <MissingClass>javax.security.enterprise.authentication.mechanism.http.AuthenticationParameters</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.Password</MissingClass>
+    <MissingClass>javax.security.enterprise.credential.UsernamePasswordCredential</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.CredentialValidationResult</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.IdentityStore</MissingClass>
+    <MissingClass>javax.security.enterprise.identitystore.Pbkdf2PasswordHash</MissingClass>
+    <MissingClass>javax.servlet.AsyncContext</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletRequestEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletRequestListener</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletMapping</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.MappingMatch</MissingClass>
+    <MissingClass>javax.servlet.http.PushBuilder</MissingClass>
+    <MissingClass>javax.websocket.Decoder$Text</MissingClass>
+    <MissingClass>javax.websocket.Encoder$Text</MissingClass>
+    <MissingClass>javax.websocket.RemoteEndpoint$Basic</MissingClass>
+    <MissingClass>javax.websocket.Session</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>org.apache.http.HttpResponse</MissingClass>
+    <MissingClass>org.apache.http.StatusLine</MissingClass>
+    <MissingClass>org.apache.http.client.ClientProtocolException</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpDelete</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPut</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpRequestBase</MissingClass>
+    <MissingClass>org.apache.http.entity.StringEntity</MissingClass>
+    <MissingClass>org.apache.http.impl.client.CloseableHttpClient</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClients</MissingClass>
+    <MissingClass>org.apache.http.util.EntityUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:48:09 +0000" total_classes="195" referenced_classes="267" total_bugs="13" total_size="2450" num_packages="93" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.54" clock_seconds="3.51" peak_mbytes="331.16" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="12" priority_1="1">
+    <PackageStats package="jakartaee.examples.beanvalidation.min" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.beanvalidation.min.MinBean" sourceFile="MinBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.beanvalidation.min.MinModel" sourceFile="MinModel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.beanvalidation.notnull" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.beanvalidation.notnull.NotNullBean" sourceFile="NotNullBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.beanvalidation.notnull.NotNullModel" sourceFile="NotNullModel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.beanvalidation.nullannotation" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.beanvalidation.nullannotation.NullBean" sourceFile="NullBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.beanvalidation.nullannotation.NullModel" sourceFile="NullModel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.beanvalidation.size" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.beanvalidation.size.SizeBean" sourceFile="SizeBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.beanvalidation.size.SizeModel" sourceFile="SizeModel.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eemanagement.simple" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="jakartaee.examples.eemanagement.simple.FacesConfigBean" sourceFile="FacesConfigBean.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eemanagement.simple.ManagementBean" sourceFile="ManagementBean.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.basicauthentication" total_bugs="0" total_types="4" total_size="71">
+      <ClassStats class="jakartaee.examples.eesecurity.basicauthentication.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.basicauthentication.Group" sourceFile="Group.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.basicauthentication.PopulateBean" sourceFile="PopulateBean.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.basicauthentication.User" sourceFile="User.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.customformwithjsf" total_bugs="0" total_types="5" total_size="104">
+      <ClassStats class="jakartaee.examples.eesecurity.customformwithjsf.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.customformwithjsf.Group" sourceFile="Group.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.customformwithjsf.LoginBean" sourceFile="LoginBean.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.customformwithjsf.PopulateBean" sourceFile="PopulateBean.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.customformwithjsf.User" sourceFile="User.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.filter" total_bugs="0" total_types="5" total_size="84">
+      <ClassStats class="jakartaee.examples.eesecurity.filter.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.filter.EESecurityFilter" sourceFile="EESecurityFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.filter.Group" sourceFile="Group.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.filter.PopulateBean" sourceFile="PopulateBean.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.filter.User" sourceFile="User.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.formauthentication" total_bugs="0" total_types="4" total_size="71">
+      <ClassStats class="jakartaee.examples.eesecurity.formauthentication.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.formauthentication.Group" sourceFile="Group.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.formauthentication.PopulateBean" sourceFile="PopulateBean.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.formauthentication.User" sourceFile="User.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.inmemorystore" total_bugs="0" total_types="3" total_size="39">
+      <ClassStats class="jakartaee.examples.eesecurity.inmemorystore.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.inmemorystore.InMemoryIdentityStore" sourceFile="InMemoryIdentityStore.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.inmemorystore.LoginBean" sourceFile="LoginBean.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.eesecurity.servlet" total_bugs="0" total_types="5" total_size="77">
+      <ClassStats class="jakartaee.examples.eesecurity.servlet.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.servlet.EESecurityServlet" sourceFile="EESecurityServlet.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.servlet.Group" sourceFile="Group.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.servlet.PopulateBean" sourceFile="PopulateBean.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jakartaee.examples.eesecurity.servlet.User" sourceFile="User.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.ejb.remoteejb" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="jakartaee.examples.ejb.remoteejb.RemoteEjb" sourceFile="RemoteEjb.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="jakartaee.examples.ejb.remoteejb.RemoteEjbBean" sourceFile="RemoteEjbBean.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.ejb.remoteejb.client" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="jakartaee.examples.ejb.remoteejb.client.Client" sourceFile="Client.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.ejb.securedremoteejb" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="jakartaee.examples.ejb.securedremoteejb.SecuredRemoteEjb" sourceFile="SecuredRemoteEjb.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="jakartaee.examples.ejb.securedremoteejb.SecuredRemoteEjbBean" sourceFile="SecuredRemoteEjbBean.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.ejb.securedremoteejb.appclient" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.ejb.securedremoteejb.appclient.Client" sourceFile="Client.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.consumes" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="jakartaee.examples.jaxrs.consumes.ConsumesApplication" sourceFile="ConsumesApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.consumes.ConsumesHelperBean" sourceFile="ConsumesHelperBean.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.consumes.ConsumesResource" sourceFile="ConsumesResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.defaultvalue" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.defaultvalue.DefaultValueApplication" sourceFile="DefaultValueApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.defaultvalue.DefaultValueResource" sourceFile="DefaultValueResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.delete" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="jakartaee.examples.jaxrs.delete.DeleteApplication" sourceFile="DeleteApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.delete.DeleteHelperBean" sourceFile="DeleteHelperBean.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.delete.DeleteResource" sourceFile="DeleteResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.formparam" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.formparam.FormParamApplication" sourceFile="FormParamApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.formparam.FormParamResource" sourceFile="FormParamResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.get" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.get.GetApplication" sourceFile="GetApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.get.GetResource" sourceFile="GetResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.getclient" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.getclient.GetClientApplication" sourceFile="GetClientApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.getclient.GetClientResource" sourceFile="GetClientResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.helloworld" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.helloworld.HelloWorldApplication" sourceFile="HelloWorldApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.helloworld.HelloWorldResource" sourceFile="HelloWorldResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.httpmethod" total_bugs="0" total_types="5" total_size="54">
+      <ClassStats class="jakartaee.examples.jaxrs.httpmethod.HttpMethodApplication" sourceFile="HttpMethodApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.httpmethod.HttpMethodHelperBean" sourceFile="HttpMethodHelperBean.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.httpmethod.HttpMethodResource" sourceFile="HttpMethodResource.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.httpmethod.HttpMyWay" sourceFile="HttpMyWay.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.httpmethod.MYWAY" sourceFile="MYWAY.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.pathparam" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.pathparam.PathParamApplication" sourceFile="PathParamApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.pathparam.PathParamResource" sourceFile="PathParamResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.post" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.post.PostApplication" sourceFile="PostApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.post.PostResource" sourceFile="PostResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.produces" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.produces.ProducesApplication" sourceFile="ProducesApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.produces.ProducesResource" sourceFile="ProducesResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.put" total_bugs="0" total_types="3" total_size="41">
+      <ClassStats class="jakartaee.examples.jaxrs.put.PutApplication" sourceFile="PutApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.put.PutHelperBean" sourceFile="PutHelperBean.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.put.PutResource" sourceFile="PutResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jaxrs.queryparam" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="jakartaee.examples.jaxrs.queryparam.QueryParamApplication" sourceFile="QueryParamApplication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jaxrs.queryparam.QueryParamResource" sourceFile="QueryParamResource.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.column" total_bugs="0" total_types="3" total_size="27">
+      <ClassStats class="jakartaee.examples.jpa.column.ColumnBean" sourceFile="ColumnBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.column.ColumnEjb" sourceFile="ColumnEjb.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.column.ColumnRow" sourceFile="ColumnRow.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.converter" total_bugs="0" total_types="5" total_size="60">
+      <ClassStats class="jakartaee.examples.jpa.converter.ConverterAttribute" sourceFile="ConverterAttribute.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.converter.ConverterBean" sourceFile="ConverterBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.converter.ConverterConverter" sourceFile="ConverterConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.converter.ConverterEjb" sourceFile="ConverterEjb.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.converter.ConverterExample" sourceFile="ConverterExample.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.createquery" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="jakartaee.examples.jpa.createquery.CreateQueryBean" sourceFile="CreateQueryBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.createquery.CreateQueryEjb" sourceFile="CreateQueryEjb.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.createquery.CreateQueryRow" sourceFile="CreateQueryRow.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.entity" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="jakartaee.examples.jpa.entity.EntityExample" sourceFile="EntityExample.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.entity.EntityExampleBean" sourceFile="EntityExampleBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.entity.EntityExampleEjb" sourceFile="EntityExampleEjb.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.id" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="jakartaee.examples.jpa.id.IdExample" sourceFile="IdExample.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.id.IdExampleBean" sourceFile="IdExampleBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.id.IdExampleEjb" sourceFile="IdExampleEjb.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.joinedInheritance" total_bugs="2" total_types="5" total_size="74" priority_2="2">
+      <ClassStats class="jakartaee.examples.jpa.joinedInheritance.Animal" sourceFile="Animal.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.joinedInheritance.AnimalBean" sourceFile="AnimalBean.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.joinedInheritance.AnimalEjb" sourceFile="AnimalEjb.java" interface="false" size="16" bugs="2" priority_2="2"/>
+      <ClassStats class="jakartaee.examples.jpa.joinedInheritance.Cat" sourceFile="Cat.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.joinedInheritance.Dog" sourceFile="Dog.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.onetomany" total_bugs="1" total_types="4" total_size="57" priority_2="1">
+      <ClassStats class="jakartaee.examples.jpa.onetomany.OneToManyA" sourceFile="OneToManyA.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.onetomany.OneToManyB" sourceFile="OneToManyB.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="jakartaee.examples.jpa.onetomany.OneToManyBean" sourceFile="OneToManyBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.onetomany.OneToManyEjb" sourceFile="OneToManyEjb.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.onetoone" total_bugs="1" total_types="4" total_size="48" priority_2="1">
+      <ClassStats class="jakartaee.examples.jpa.onetoone.OneToOneA" sourceFile="OneToOneA.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="jakartaee.examples.jpa.onetoone.OneToOneB" sourceFile="OneToOneB.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.onetoone.OneToOneBean" sourceFile="OneToOneBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.onetoone.OneToOneEjb" sourceFile="OneToOneEjb.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.optimisticLock" total_bugs="3" total_types="5" total_size="242" priority_2="2" priority_1="1">
+      <ClassStats class="jakartaee.examples.jpa.optimisticLock.Department" sourceFile="Department.java" interface="false" size="32" bugs="1" priority_1="1"/>
+      <ClassStats class="jakartaee.examples.jpa.optimisticLock.Employee" sourceFile="Employee.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="jakartaee.examples.jpa.optimisticLock.OptimisticLockBean" sourceFile="OptimisticLockBean.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.optimisticLock.OptimisticLockEjb" sourceFile="OptimisticLockEjb.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.optimisticLock.Uniform" sourceFile="Uniform.java" interface="false" size="26" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.persistenceContext" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="jakartaee.examples.jpa.persistenceContext.PersistenceContextBean" sourceFile="PersistenceContextBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.persistenceContext.PersistenceContextEjb" sourceFile="PersistenceContextEjb.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.persistenceContext.PersistenceContextRow" sourceFile="PersistenceContextRow.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.persistenceUnit" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="jakartaee.examples.jpa.persistenceUnit.PersistenceUnitBean" sourceFile="PersistenceUnitBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.persistenceUnit.PersistenceUnitEjb" sourceFile="PersistenceUnitEjb.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.persistenceUnit.PersistenceUnitRow" sourceFile="PersistenceUnitRow.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.resultstream" total_bugs="0" total_types="3" total_size="32">
+      <ClassStats class="jakartaee.examples.jpa.resultstream.ResultStreamBean" sourceFile="ResultStreamBean.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.resultstream.ResultStreamEjb" sourceFile="ResultStreamEjb.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.resultstream.ResultStreamRow" sourceFile="ResultStreamRow.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.singleTableInheritance" total_bugs="2" total_types="5" total_size="81" priority_2="2">
+      <ClassStats class="jakartaee.examples.jpa.singleTableInheritance.Circle" sourceFile="Circle.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.singleTableInheritance.Rectangle" sourceFile="Rectangle.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.singleTableInheritance.Shape" sourceFile="Shape.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.singleTableInheritance.ShapeBean" sourceFile="ShapeBean.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.singleTableInheritance.ShapeEjb" sourceFile="ShapeEjb.java" interface="false" size="16" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.table" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="jakartaee.examples.jpa.table.TableBean" sourceFile="TableBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.table.TableEjb" sourceFile="TableEjb.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.table.TableRow" sourceFile="TableRow.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jpa.tablePerConcreteClassInheritance" total_bugs="4" total_types="7" total_size="127" priority_2="4">
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.CompanyEmployee" sourceFile="CompanyEmployee.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.ContractEmployee" sourceFile="ContractEmployee.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.Employee" sourceFile="Employee.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeBean" sourceFile="EmployeeBean.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.EmployeeEjb" sourceFile="EmployeeEjb.java" interface="false" size="33" bugs="3" priority_2="3"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.FullTimeEmployee" sourceFile="FullTimeEmployee.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jpa.tablePerConcreteClassInheritance.PartTimeEmployee" sourceFile="PartTimeEmployee.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.actionlistener" total_bugs="0" total_types="2" total_size="18">
+      <ClassStats class="jakartaee.examples.jsf.actionlistener.ActionListenerBean" sourceFile="ActionListenerBean.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsf.actionlistener.ActionListenerExample" sourceFile="ActionListenerExample.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.ajax" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="jakartaee.examples.jsf.ajax.AjaxBean" sourceFile="AjaxBean.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.applicationmap" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.applicationmap.ApplicationMapBean" sourceFile="ApplicationMapBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.applicationscoped" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="jakartaee.examples.jsf.applicationscoped.ApplicationScopedBean" sourceFile="ApplicationScopedBean.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.commandscript" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="jakartaee.examples.jsf.commandscript.CommandScriptBean" sourceFile="CommandScriptBean.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.csrf" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="jakartaee.examples.jsf.csrf.CsrfBean" sourceFile="CsrfBean.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.externalcontext" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.externalcontext.ExternalContextBean" sourceFile="ExternalContextBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.facescontext" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.facescontext.FacesContextBean" sourceFile="FacesContextBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.form" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="jakartaee.examples.jsf.form.FormBean" sourceFile="FormBean.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.initparametermap" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.initparametermap.InitParameterMapBean" sourceFile="InitParameterMapBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.inputfile" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.jsf.inputfile.InputFileBean" sourceFile="InputFileBean.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.inputsecret" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.jsf.inputsecret.InputSecretBean" sourceFile="InputSecretBean.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.inputtext" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.jsf.inputtext.InputTextBean" sourceFile="InputTextBean.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.managedconverter" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="jakartaee.examples.jsf.managedconverter.ManagedConverter" sourceFile="ManagedConverter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsf.managedconverter.ManagedConverterBean" sourceFile="ManagedConverterBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.managedproperty" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.managedproperty.ManagedPropertyBean" sourceFile="ManagedPropertyBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.managedvalidator" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="jakartaee.examples.jsf.managedvalidator.ManagedValidator" sourceFile="ManagedValidator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsf.managedvalidator.ManagedValidatorBean" sourceFile="ManagedValidatorBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.outputlabel" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="jakartaee.examples.jsf.outputlabel.OutputLabelBean" sourceFile="OutputLabelBean.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.outputtext" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="jakartaee.examples.jsf.outputtext.OutputTextBean" sourceFile="OutputTextBean.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.requestcookiemap" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.requestcookiemap.RequestCookieMapBean" sourceFile="RequestCookieMapBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.requestscoped" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="jakartaee.examples.jsf.requestscoped.RequestScopedBean" sourceFile="RequestScopedBean.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.sessionmap" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.sessionmap.SessionMapBean" sourceFile="SessionMapBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.sessionscoped" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="jakartaee.examples.jsf.sessionscoped.SessionScopedBean" sourceFile="SessionScopedBean.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.viewmap" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jakartaee.examples.jsf.viewmap.ViewMapBean" sourceFile="ViewMapBean.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsf.viewscoped" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="jakartaee.examples.jsf.viewscoped.ViewScopedBean" sourceFile="ViewScopedBean.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.formatting" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="jakartaee.examples.jsonb.formatting.Formatting" sourceFile="Formatting.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.formatting.FormattingBean" sourceFile="FormattingBean.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.fromJsonToObject" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="jakartaee.examples.jsonb.fromJsonToObject.JsonToObjectBean" sourceFile="JsonToObjectBean.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.fromObjectToJson" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="jakartaee.examples.jsonb.fromObjectToJson.ObjectToJsonBean" sourceFile="ObjectToJsonBean.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.jsonbcreator" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="jakartaee.examples.jsonb.jsonbcreator.JsonbCreatorBean" sourceFile="JsonbCreatorBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.jsonbcreator.JsonbCreatorExample" sourceFile="JsonbCreatorExample.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.jsonbdateformat" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="jakartaee.examples.jsonb.jsonbdateformat.JsonbDateFormatBean" sourceFile="JsonbDateFormatBean.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.jsonbdateformat.JsonbDateFormatExample" sourceFile="JsonbDateFormatExample.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.jsonbproperty" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.jsonb.jsonbproperty.JsonbPropertyBean" sourceFile="JsonbPropertyBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.jsonbproperty.JsonbPropertyExample" sourceFile="JsonbPropertyExample.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.jsonbtransient" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jakartaee.examples.jsonb.jsonbtransient.JsonbTransientBean" sourceFile="JsonbTransientBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.jsonbtransient.JsonbTransientExample" sourceFile="JsonbTransientExample.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonb.nullvalues" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="jakartaee.examples.jsonb.nullvalues.NullValues" sourceFile="NullValues.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jakartaee.examples.jsonb.nullvalues.NullValuesBean" sourceFile="NullValuesBean.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonp.jsongenerator" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="jakartaee.examples.jsonp.jsongenerator.JsonGeneratorBean" sourceFile="JsonGeneratorBean.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonp.jsonparser" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="jakartaee.examples.jsonp.jsonparser.JsonParserBean" sourceFile="JsonParserBean.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonp.jsonreader" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="jakartaee.examples.jsonp.jsonreader.JsonReaderBean" sourceFile="JsonReaderBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.jsonp.jsonwriter" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="jakartaee.examples.jsonp.jsonwriter.JsonWriterBean" sourceFile="JsonWriterBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.asyncservlet" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="jakartaee.examples.servlet.asyncservlet.AsyncServlet" sourceFile="AsyncServlet.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.explainingHttpServlet" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="jakartaee.examples.servlet.explainingHttpServlet.ExplainingHttpServlet" sourceFile="ExplainingHttpServlet.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.httpservletmapping" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.servlet.httpservletmapping.HttpServletMappingServlet" sourceFile="HttpServletMappingServlet.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.pushbuilder" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="jakartaee.examples.servlet.pushbuilder.PushBuilderServlet" sourceFile="PushBuilderServlet.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.servletcontextlistener" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="jakartaee.examples.servlet.servletcontextlistener.ServletContextListenerExample" sourceFile="ServletContextListenerExample.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.servletrequestlistener" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="jakartaee.examples.servlet.servletrequestlistener.ServletRequestListenerExample" sourceFile="ServletRequestListenerExample.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.servlet.webservlet" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="jakartaee.examples.servlet.webservlet.WebServletServlet" sourceFile="WebServletServlet.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.utils" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="jakartaee.examples.utils.JakartaEEServer" sourceFile="JakartaEEServer.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.annotatedclientendpoint" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="jakartaee.examples.websocket.annotatedclientendpoint.AnnotatedClientEndpointServerEndpoint" sourceFile="AnnotatedClientEndpointServerEndpoint.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.annotatedserverendpoint" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="jakartaee.examples.websocket.annotatedserverendpoint.AnnotatedServerEndpoint" sourceFile="AnnotatedServerEndpoint.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.encoderdecoder" total_bugs="0" total_types="4" total_size="35">
+      <ClassStats class="jakartaee.examples.websocket.encoderdecoder.EncoderDecoder" sourceFile="EncoderDecoder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jakartaee.examples.websocket.encoderdecoder.EncoderDecoderDecoder" sourceFile="EncoderDecoderDecoder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jakartaee.examples.websocket.encoderdecoder.EncoderDecoderEncoder" sourceFile="EncoderDecoderEncoder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="jakartaee.examples.websocket.encoderdecoder.EncoderDecoderEndpoint" sourceFile="EncoderDecoderEndpoint.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.onclose" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="jakartaee.examples.websocket.onclose.OnCloseEndpoint" sourceFile="OnCloseEndpoint.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.onerror" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="jakartaee.examples.websocket.onerror.OnErrorEndpoint" sourceFile="OnErrorEndpoint.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jakartaee.examples.websocket.onopen" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="jakartaee.examples.websocket.onopen.OnOpenEndpoint" sourceFile="OnOpenEndpoint.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="245" invocations="1109" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="8981" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="160" invocations="267" avgMicrosecondsPerInvocation="602" maxMicrosecondsPerInvocation="42944" standardDeviationMicrosecondsPerInvocation="2850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="111" invocations="267" avgMicrosecondsPerInvocation="417" maxMicrosecondsPerInvocation="10737" standardDeviationMicrosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="103" invocations="662" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="6392" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="97" invocations="662" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="10966" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="93" invocations="670" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="9423" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="92" invocations="1116" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="10200" standardDeviationMicrosecondsPerInvocation="307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="91" invocations="658" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="4656" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="88" invocations="966" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="2979" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="87" invocations="662" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="9695" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="87" invocations="670" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="9825" standardDeviationMicrosecondsPerInvocation="433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="65" invocations="664" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="27782" standardDeviationMicrosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="54" invocations="431" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="14802" standardDeviationMicrosecondsPerInvocation="745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="49" invocations="348" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2391" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="48" invocations="267" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="3911" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="893" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1555" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="37" invocations="195" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="3668" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="37" invocations="267" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="3359" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="36" invocations="267" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="5821" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="35" invocations="195" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="2434" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="267" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="6257" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="33" invocations="267" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="2447" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="33" invocations="4078" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="1097" standardDeviationMicrosecondsPerInvocation="26"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="195" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="7711" standardDeviationMicrosecondsPerInvocation="748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="28" invocations="195" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="9235" standardDeviationMicrosecondsPerInvocation="659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="28" invocations="195" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="2341" standardDeviationMicrosecondsPerInvocation="204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="25" invocations="1087" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="16081" standardDeviationMicrosecondsPerInvocation="500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="25" invocations="662" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="1401" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="267" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="3484" standardDeviationMicrosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="25" invocations="267" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="10453" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="23" invocations="195" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="5900" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="22" invocations="24396" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="106" standardDeviationMicrosecondsPerInvocation="1"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Naming" totalMilliseconds="22" invocations="195" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="825" standardDeviationMicrosecondsPerInvocation="64"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="21" invocations="195" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="2028" standardDeviationMicrosecondsPerInvocation="154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="21" invocations="195" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="1476" standardDeviationMicrosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="19" invocations="195" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="3094" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="19" invocations="195" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="1526" standardDeviationMicrosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="195" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="1368" standardDeviationMicrosecondsPerInvocation="130"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597108064000" analysisTimestamp="1597108065642" release="">
+  <Project projectName="repositorios/oojorgeoo89_QuizZz">
+    <Jar>repositorios/oojorgeoo89_QuizZz</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.model.Answer">
+      <SourceLine classname="jorge.rv.quizzz.model.Answer" start="16" end="68" sourcefile="Answer.java" sourcepath="jorge/rv/quizzz/model/Answer.java"/>
+    </Class>
+    <Field classname="jorge.rv.quizzz.model.Answer" name="question" signature="Ljorge/rv/quizzz/model/Question;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.model.Answer" sourcefile="Answer.java" sourcepath="jorge/rv/quizzz/model/Answer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.model.Question">
+      <SourceLine classname="jorge.rv.quizzz.model.Question" start="21" end="104" sourcefile="Question.java" sourcepath="jorge/rv/quizzz/model/Question.java"/>
+    </Class>
+    <Field classname="jorge.rv.quizzz.model.Question" name="correctAnswer" signature="Ljorge/rv/quizzz/model/Answer;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.model.Question" sourcefile="Question.java" sourcepath="jorge/rv/quizzz/model/Question.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.model.Question">
+      <SourceLine classname="jorge.rv.quizzz.model.Question" start="21" end="104" sourcefile="Question.java" sourcepath="jorge/rv/quizzz/model/Question.java"/>
+    </Class>
+    <Field classname="jorge.rv.quizzz.model.Question" name="quiz" signature="Ljorge/rv/quizzz/model/Quiz;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.model.Question" sourcefile="Question.java" sourcepath="jorge/rv/quizzz/model/Question.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.model.Quiz">
+      <SourceLine classname="jorge.rv.quizzz.model.Quiz" start="20" end="91" sourcefile="Quiz.java" sourcepath="jorge/rv/quizzz/model/Quiz.java"/>
+    </Class>
+    <Field classname="jorge.rv.quizzz.model.Quiz" name="createdBy" signature="Ljorge/rv/quizzz/model/User;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.model.Quiz" sourcefile="Quiz.java" sourcepath="jorge/rv/quizzz/model/Quiz.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.model.TokenModel">
+      <SourceLine classname="jorge.rv.quizzz.model.TokenModel" start="10" end="46" sourcefile="TokenModel.java" sourcepath="jorge/rv/quizzz/model/TokenModel.java"/>
+    </Class>
+    <Field classname="jorge.rv.quizzz.model.TokenModel" name="user" signature="Ljorge/rv/quizzz/model/User;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.model.TokenModel" sourcefile="TokenModel.java" sourcepath="jorge/rv/quizzz/model/TokenModel.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.repository.ForgotPasswordTokenRepository">
+      <SourceLine classname="jorge.rv.quizzz.repository.ForgotPasswordTokenRepository" sourcefile="ForgotPasswordTokenRepository.java" sourcepath="jorge/rv/quizzz/repository/ForgotPasswordTokenRepository.java"/>
+    </Class>
+    <Method classname="jorge.rv.quizzz.repository.ForgotPasswordTokenRepository" name="deletePreviousTo" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.repository.ForgotPasswordTokenRepository" sourcefile="ForgotPasswordTokenRepository.java" sourcepath="jorge/rv/quizzz/repository/ForgotPasswordTokenRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.repository.QuizRepository">
+      <SourceLine classname="jorge.rv.quizzz.repository.QuizRepository" sourcefile="QuizRepository.java" sourcepath="jorge/rv/quizzz/repository/QuizRepository.java"/>
+    </Class>
+    <Method classname="jorge.rv.quizzz.repository.QuizRepository" name="searchByName" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.repository.QuizRepository" sourcefile="QuizRepository.java" sourcepath="jorge/rv/quizzz/repository/QuizRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="jorge.rv.quizzz.repository.RegistrationTokenRepository">
+      <SourceLine classname="jorge.rv.quizzz.repository.RegistrationTokenRepository" sourcefile="RegistrationTokenRepository.java" sourcepath="jorge/rv/quizzz/repository/RegistrationTokenRepository.java"/>
+    </Class>
+    <Method classname="jorge.rv.quizzz.repository.RegistrationTokenRepository" name="deletePreviousTo" signature="(Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="jorge.rv.quizzz.repository.RegistrationTokenRepository" sourcefile="RegistrationTokenRepository.java" sourcepath="jorge/rv/quizzz/repository/RegistrationTokenRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="42">
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.RememberMeConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:07:44 +0000" total_classes="121" referenced_classes="235" total_bugs="8" total_size="2470" num_packages="18" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.16" clock_seconds="3.73" peak_mbytes="340.69" alloc_mbytes="3540.00" gc_seconds="0.20" priority_2="8">
+    <PackageStats package="jorge.rv.quizzz" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="jorge.rv.quizzz.QuizZzApplication" sourceFile="QuizZzApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.config" total_bugs="0" total_types="8" total_size="98">
+      <ClassStats class="jorge.rv.quizzz.config.AopConfig" sourceFile="AopConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.AsyncConfig" sourceFile="AsyncConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.MailConfig" sourceFile="MailConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.SchedulingConfig" sourceFile="SchedulingConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.SecurityConfig$RestWebSecurityConfigurationAdapter" sourceFile="SecurityConfig.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.SecurityConfig$WebWebSecurityConfigurerAdapter" sourceFile="SecurityConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.config.WebMvcConfig" sourceFile="WebMvcConfig.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.controller.rest.v1" total_bugs="0" total_types="5" total_size="166">
+      <ClassStats class="jorge.rv.quizzz.controller.rest.v1.AnswerController" sourceFile="AnswerController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.rest.v1.QuestionController" sourceFile="QuestionController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.rest.v1.QuizController" sourceFile="QuizController.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.rest.v1.RestExceptionHandler" sourceFile="RestExceptionHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.rest.v1.UserController" sourceFile="UserController.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.controller.utils" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="jorge.rv.quizzz.controller.utils.ErrorInfo" sourceFile="ErrorInfo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.utils.RestVerifier" sourceFile="RestVerifier.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.controller.web" total_bugs="0" total_types="5" total_size="145">
+      <ClassStats class="jorge.rv.quizzz.controller.web.RegistrationController" sourceFile="RegistrationController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.web.UserManagementController" sourceFile="UserManagementController.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.web.WebExceptionHandler" sourceFile="WebExceptionHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.web.WebQuizController" sourceFile="WebQuizController.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.controller.web.WebUserController" sourceFile="WebUserController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.exceptions" total_bugs="0" total_types="8" total_size="64">
+      <ClassStats class="jorge.rv.quizzz.exceptions.ActionRefusedException" sourceFile="ActionRefusedException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.InvalidParametersException" sourceFile="InvalidParametersException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.InvalidTokenException" sourceFile="InvalidTokenException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.ModelVerificationException" sourceFile="ModelVerificationException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.QuizZzException" sourceFile="QuizZzException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.ResourceUnavailableException" sourceFile="ResourceUnavailableException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.UnauthorizedActionException" sourceFile="UnauthorizedActionException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.exceptions.UserAlreadyExistsException" sourceFile="UserAlreadyExistsException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.model" total_bugs="5" total_types="11" total_size="240" priority_2="5">
+      <ClassStats class="jorge.rv.quizzz.model.Answer" sourceFile="Answer.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.model.AuthenticatedUser" sourceFile="AuthenticatedUser.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.BaseModel" sourceFile="BaseModel.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.ForgotPasswordToken" sourceFile="ForgotPasswordToken.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.Question" sourceFile="Question.java" interface="false" size="46" bugs="2" priority_2="2"/>
+      <ClassStats class="jorge.rv.quizzz.model.Quiz" sourceFile="Quiz.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.model.RegistrationToken" sourceFile="RegistrationToken.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.TokenModel" sourceFile="TokenModel.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.model.TokenType" sourceFile="TokenType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.User" sourceFile="User.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.UserOwned" sourceFile="UserOwned.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.model.support" total_bugs="0" total_types="3" total_size="44">
+      <ClassStats class="jorge.rv.quizzz.model.support.PersistentLogins" sourceFile="PersistentLogins.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.support.Response" sourceFile="Response.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.model.support.Result" sourceFile="Result.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.repository" total_bugs="3" total_types="7" total_size="22" priority_2="3">
+      <ClassStats class="jorge.rv.quizzz.repository.AnswerRepository" sourceFile="AnswerRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.repository.ForgotPasswordTokenRepository" sourceFile="ForgotPasswordTokenRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.repository.QuestionRepository" sourceFile="QuestionRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.repository.QuizRepository" sourceFile="QuizRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.repository.RegistrationTokenRepository" sourceFile="RegistrationTokenRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="jorge.rv.quizzz.repository.TokenRepository" sourceFile="TokenRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service" total_bugs="0" total_types="8" total_size="277">
+      <ClassStats class="jorge.rv.quizzz.service.AnswerService" sourceFile="AnswerService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.AnswerServiceImpl" sourceFile="AnswerServiceImpl.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.QuestionService" sourceFile="QuestionService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.QuestionServiceImpl" sourceFile="QuestionServiceImpl.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.QuizService" sourceFile="QuizService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.QuizServiceImpl" sourceFile="QuizServiceImpl.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.UserService" sourceFile="UserService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service.accesscontrol" total_bugs="0" total_types="6" total_size="89">
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlService" sourceFile="AccessControlService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlServiceAnswer" sourceFile="AccessControlServiceAnswer.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlServiceQuestion" sourceFile="AccessControlServiceQuestion.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlServiceQuiz" sourceFile="AccessControlServiceQuiz.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlServiceUser" sourceFile="AccessControlServiceUser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.AccessControlServiceUserOwned" sourceFile="AccessControlServiceUserOwned.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service.accesscontrol.aspects" total_bugs="0" total_types="6" total_size="107">
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspects" sourceFile="AccessControlAspects.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspectsAbs" sourceFile="AccessControlAspectsAbs.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspectsAnswer" sourceFile="AccessControlAspectsAnswer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspectsQuestion" sourceFile="AccessControlAspectsQuestion.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspectsQuiz" sourceFile="AccessControlAspectsQuiz.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.accesscontrol.aspects.AccessControlAspectsUser" sourceFile="AccessControlAspectsUser.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service.usermanagement" total_bugs="0" total_types="5" total_size="67">
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.RegistrationService" sourceFile="RegistrationService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.RegistrationServiceMail" sourceFile="RegistrationServiceMail.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.RegistrationServiceSimple" sourceFile="RegistrationServiceSimple.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.UserManagementService" sourceFile="UserManagementService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.UserManagementServiceImpl" sourceFile="UserManagementServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service.usermanagement.token" total_bugs="0" total_types="7" total_size="125">
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenDeliverySystem" sourceFile="TokenDeliverySystem.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenDeliverySystemConsole" sourceFile="TokenDeliverySystemConsole.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenDeliverySystemEmail" sourceFile="TokenDeliverySystemEmail.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenService" sourceFile="TokenService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenServiceAbs" sourceFile="TokenServiceAbs.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenServiceForgotPassword" sourceFile="TokenServiceForgotPassword.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.token.TokenServiceRegistration" sourceFile="TokenServiceRegistration.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.service.usermanagement.utils" total_bugs="0" total_types="4" total_size="22">
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.utils.DateHelper" sourceFile="DateHelper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.utils.DateHelperImpl" sourceFile="DateHelperImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.utils.TokenGenerator" sourceFile="TokenGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="jorge.rv.quizzz.service.usermanagement.utils.TokenGeneratorUUID" sourceFile="TokenGeneratorUUID.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jorge.rv.quizzz.tasks" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="jorge.rv.quizzz.tasks.TokenTasks" sourceFile="TokenTasks.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="279" invocations="1145" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="15419" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="176" invocations="235" avgMicrosecondsPerInvocation="752" maxMicrosecondsPerInvocation="11250" standardDeviationMicrosecondsPerInvocation="1526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="139" invocations="235" avgMicrosecondsPerInvocation="595" maxMicrosecondsPerInvocation="6115" standardDeviationMicrosecondsPerInvocation="1058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="128" invocations="999" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="2404" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="126" invocations="539" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="7515" standardDeviationMicrosecondsPerInvocation="543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="115" invocations="528" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="4730" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="114" invocations="543" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="9140" standardDeviationMicrosecondsPerInvocation="620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="109" invocations="543" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="9678" standardDeviationMicrosecondsPerInvocation="731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="108" invocations="536" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="7053" standardDeviationMicrosecondsPerInvocation="515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="94" invocations="539" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="8588" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="83" invocations="1154" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="488" standardDeviationMicrosecondsPerInvocation="41"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="82" invocations="235" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="38321" standardDeviationMicrosecondsPerInvocation="2498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="67" invocations="416" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="3984" standardDeviationMicrosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="62" invocations="326" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="14009" standardDeviationMicrosecondsPerInvocation="815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="58" invocations="235" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="3009" standardDeviationMicrosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="639" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="25534" standardDeviationMicrosecondsPerInvocation="1009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="988" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="3806" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="41" invocations="235" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="4662" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="40" invocations="235" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="2214" standardDeviationMicrosecondsPerInvocation="285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="235" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="6147" standardDeviationMicrosecondsPerInvocation="460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="35" invocations="539" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="5831" standardDeviationMicrosecondsPerInvocation="277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="35" invocations="235" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="8316" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="35" invocations="235" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2277" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="33" invocations="7009" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1113" standardDeviationMicrosecondsPerInvocation="22"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="27" invocations="121" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="3601" standardDeviationMicrosecondsPerInvocation="363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="27" invocations="121" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="2523" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer" totalMilliseconds="25" invocations="121" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="17175" standardDeviationMicrosecondsPerInvocation="1551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="24" invocations="121" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="6677" standardDeviationMicrosecondsPerInvocation="893"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="24" invocations="235" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="1721" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="23" invocations="121" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="1456" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="23" invocations="121" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="5335" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="121" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="1624" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="21" invocations="235" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2383" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="20" invocations="51" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="3107" standardDeviationMicrosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="20" invocations="121" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="1702" standardDeviationMicrosecondsPerInvocation="316"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

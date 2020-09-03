@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595997921000" analysisTimestamp="1595997922821" release="">
+  <Project projectName="repositorios/woodship_luna">
+    <Jar>repositorios/woodship_luna</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.Organization">
+      <SourceLine classname="org.woodship.luna.core.person.Organization" start="22" end="109" sourcefile="Organization.java" sourcepath="org/woodship/luna/core/person/Organization.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.person.Organization" name="ancestors" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.Organization" sourcefile="Organization.java" sourcepath="org/woodship/luna/core/person/Organization.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.Organization">
+      <SourceLine classname="org.woodship.luna.core.person.Organization" start="22" end="109" sourcefile="Organization.java" sourcepath="org/woodship/luna/core/person/Organization.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.person.Organization" name="parent" signature="Lorg/woodship/luna/core/person/Organization;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.Organization" sourcefile="Organization.java" sourcepath="org/woodship/luna/core/person/Organization.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.Person">
+      <SourceLine classname="org.woodship.luna.core.person.Person" start="21" end="150" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.person.Person" name="company" signature="Lorg/woodship/luna/core/person/Organization;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.Person" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.Person">
+      <SourceLine classname="org.woodship.luna.core.person.Person" start="21" end="150" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.person.Person" name="org" signature="Lorg/woodship/luna/core/person/Organization;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.Person" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.Person">
+      <SourceLine classname="org.woodship.luna.core.person.Person" start="21" end="150" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.person.Person" name="topDepartment" signature="Lorg/woodship/luna/core/person/Organization;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.Person" sourcefile="Person.java" sourcepath="org/woodship/luna/core/person/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.person.PersonService">
+      <SourceLine classname="org.woodship.luna.core.person.PersonService" start="20" end="53" sourcefile="PersonService.java" sourcepath="org/woodship/luna/core/person/PersonService.java"/>
+    </Class>
+    <Method classname="org.woodship.luna.core.person.PersonService" name="findByWorkNum" signature="(Ljava/lang/String;)Lorg/woodship/luna/core/person/Person;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.person.PersonService" start="26" end="27" startBytecode="0" endBytecode="107" sourcefile="PersonService.java" sourcepath="org/woodship/luna/core/person/PersonService.java"/>
+    </Method>
+    <SourceLine classname="org.woodship.luna.core.person.PersonService" start="27" end="27" startBytecode="10" endBytecode="10" sourcefile="PersonService.java" sourcepath="org/woodship/luna/core/person/PersonService.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.Resource">
+      <SourceLine classname="org.woodship.luna.core.security.Resource" start="28" end="179" sourcefile="Resource.java" sourcepath="org/woodship/luna/core/security/Resource.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.Resource" name="roles" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.Resource" sourcefile="Resource.java" sourcepath="org/woodship/luna/core/security/Resource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.Resource">
+      <SourceLine classname="org.woodship.luna.core.security.Resource" start="28" end="179" sourcefile="Resource.java" sourcepath="org/woodship/luna/core/security/Resource.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.Resource" name="parent" signature="Lorg/woodship/luna/core/security/Resource;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.Resource" sourcefile="Resource.java" sourcepath="org/woodship/luna/core/security/Resource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.ResourceService">
+      <SourceLine classname="org.woodship.luna.core.security.ResourceService" start="20" end="103" sourcefile="ResourceService.java" sourcepath="org/woodship/luna/core/security/ResourceService.java"/>
+    </Class>
+    <Method classname="org.woodship.luna.core.security.ResourceService" name="getResByKey" signature="(Ljava/lang/String;)Lorg/woodship/luna/core/security/Resource;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.ResourceService" start="80" end="80" startBytecode="0" endBytecode="92" sourcefile="ResourceService.java" sourcepath="org/woodship/luna/core/security/ResourceService.java"/>
+    </Method>
+    <SourceLine classname="org.woodship.luna.core.security.ResourceService" start="80" end="80" startBytecode="4" endBytecode="4" sourcefile="ResourceService.java" sourcepath="org/woodship/luna/core/security/ResourceService.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.Role">
+      <SourceLine classname="org.woodship.luna.core.security.Role" start="47" end="167" sourcefile="Role.java" sourcepath="org/woodship/luna/core/security/Role.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.Role" name="resource" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.Role" sourcefile="Role.java" sourcepath="org/woodship/luna/core/security/Role.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.Role">
+      <SourceLine classname="org.woodship.luna.core.security.Role" start="47" end="167" sourcefile="Role.java" sourcepath="org/woodship/luna/core/security/Role.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.Role" name="users" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.Role" sourcefile="Role.java" sourcepath="org/woodship/luna/core/security/Role.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.User">
+      <SourceLine classname="org.woodship.luna.core.security.User" start="28" end="140" sourcefile="User.java" sourcepath="org/woodship/luna/core/security/User.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.User" name="roles" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.User" sourcefile="User.java" sourcepath="org/woodship/luna/core/security/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.User">
+      <SourceLine classname="org.woodship.luna.core.security.User" start="28" end="140" sourcefile="User.java" sourcepath="org/woodship/luna/core/security/User.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.core.security.User" name="person" signature="Lorg/woodship/luna/core/person/Person;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.User" sourcefile="User.java" sourcepath="org/woodship/luna/core/security/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.core.security.UserService">
+      <SourceLine classname="org.woodship.luna.core.security.UserService" start="31" end="227" sourcefile="UserService.java" sourcepath="org/woodship/luna/core/security/UserService.java"/>
+    </Class>
+    <Method classname="org.woodship.luna.core.security.UserService" name="findByUsername" signature="(Ljava/lang/String;)Lorg/woodship/luna/core/security/User;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.core.security.UserService" start="38" end="44" startBytecode="0" endBytecode="168" sourcefile="UserService.java" sourcepath="org/woodship/luna/core/security/UserService.java"/>
+    </Method>
+    <SourceLine classname="org.woodship.luna.core.security.UserService" start="39" end="39" startBytecode="10" endBytecode="10" sourcefile="UserService.java" sourcepath="org/woodship/luna/core/security/UserService.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.demo.subtable.Product">
+      <SourceLine classname="org.woodship.luna.demo.subtable.Product" start="27" end="61" sourcefile="Product.java" sourcepath="org/woodship/luna/demo/subtable/Product.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.demo.subtable.Product" name="ess" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.demo.subtable.Product" sourcefile="Product.java" sourcepath="org/woodship/luna/demo/subtable/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="org.woodship.luna.demo.subtable.Product">
+      <SourceLine classname="org.woodship.luna.demo.subtable.Product" start="27" end="61" sourcefile="Product.java" sourcepath="org/woodship/luna/demo/subtable/Product.java"/>
+    </Class>
+    <Field classname="org.woodship.luna.demo.subtable.Product" name="ess" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.woodship.luna.demo.subtable.Product" sourcefile="Product.java" sourcepath="org/woodship/luna/demo/subtable/Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="136">
+    <MissingClass>com.vaadin.addon.jpacontainer.EntityContainer</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.EntityItem</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.EntityItemProperty</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.EntityProvider</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.JPAContainer</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.JPAContainerItem</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.fieldfactory.SingleSelectConverter</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.provider.BatchableLocalEntityProvider</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.provider.MutableLocalEntityProvider</MissingClass>
+    <MissingClass>com.vaadin.addon.jpacontainer.util.DefaultQueryModifierDelegate</MissingClass>
+    <MissingClass>com.vaadin.data.Container</MissingClass>
+    <MissingClass>com.vaadin.data.Item</MissingClass>
+    <MissingClass>com.vaadin.data.Property</MissingClass>
+    <MissingClass>com.vaadin.data.Property$ValueChangeEvent</MissingClass>
+    <MissingClass>com.vaadin.data.Property$ValueChangeListener</MissingClass>
+    <MissingClass>com.vaadin.data.Validator$EmptyValueException</MissingClass>
+    <MissingClass>com.vaadin.data.Validator$InvalidValueException</MissingClass>
+    <MissingClass>com.vaadin.data.fieldgroup.Caption</MissingClass>
+    <MissingClass>com.vaadin.data.fieldgroup.DefaultFieldGroupFieldFactory</MissingClass>
+    <MissingClass>com.vaadin.data.fieldgroup.FieldGroup</MissingClass>
+    <MissingClass>com.vaadin.data.fieldgroup.FieldGroup$BindException</MissingClass>
+    <MissingClass>com.vaadin.data.fieldgroup.FieldGroup$CommitException</MissingClass>
+    <MissingClass>com.vaadin.data.util.BeanContainer</MissingClass>
+    <MissingClass>com.vaadin.data.util.BeanItem</MissingClass>
+    <MissingClass>com.vaadin.data.util.converter.Converter</MissingClass>
+    <MissingClass>com.vaadin.data.util.converter.Converter$ConversionException</MissingClass>
+    <MissingClass>com.vaadin.data.util.converter.DefaultConverterFactory</MissingClass>
+    <MissingClass>com.vaadin.data.util.filter.Compare$Equal</MissingClass>
+    <MissingClass>com.vaadin.data.util.filter.Like</MissingClass>
+    <MissingClass>com.vaadin.data.util.filter.Not</MissingClass>
+    <MissingClass>com.vaadin.data.util.filter.Or</MissingClass>
+    <MissingClass>com.vaadin.data.validator.BeanValidator</MissingClass>
+    <MissingClass>com.vaadin.data.validator.BeanValidator$SimpleContext</MissingClass>
+    <MissingClass>com.vaadin.event.Action$Handler</MissingClass>
+    <MissingClass>com.vaadin.event.FieldEvents$FocusListener</MissingClass>
+    <MissingClass>com.vaadin.event.FieldEvents$TextChangeEvent</MissingClass>
+    <MissingClass>com.vaadin.event.FieldEvents$TextChangeListener</MissingClass>
+    <MissingClass>com.vaadin.event.ItemClickEvent</MissingClass>
+    <MissingClass>com.vaadin.event.ItemClickEvent$ItemClickListener</MissingClass>
+    <MissingClass>com.vaadin.event.LayoutEvents$LayoutClickListener</MissingClass>
+    <MissingClass>com.vaadin.event.ShortcutAction</MissingClass>
+    <MissingClass>com.vaadin.event.ShortcutListener</MissingClass>
+    <MissingClass>com.vaadin.navigator.View</MissingClass>
+    <MissingClass>com.vaadin.server.DefaultErrorHandler</MissingClass>
+    <MissingClass>com.vaadin.server.DeploymentConfiguration</MissingClass>
+    <MissingClass>com.vaadin.server.ErrorEvent</MissingClass>
+    <MissingClass>com.vaadin.server.Page</MissingClass>
+    <MissingClass>com.vaadin.server.SessionInitEvent</MissingClass>
+    <MissingClass>com.vaadin.server.SessionInitListener</MissingClass>
+    <MissingClass>com.vaadin.server.Sizeable$Unit</MissingClass>
+    <MissingClass>com.vaadin.server.ThemeResource</MissingClass>
+    <MissingClass>com.vaadin.server.VaadinServlet</MissingClass>
+    <MissingClass>com.vaadin.server.VaadinServletService</MissingClass>
+    <MissingClass>com.vaadin.server.VaadinSession</MissingClass>
+    <MissingClass>com.vaadin.shared.ui.MarginInfo</MissingClass>
+    <MissingClass>com.vaadin.shared.ui.MultiSelectMode</MissingClass>
+    <MissingClass>com.vaadin.shared.ui.label.ContentMode</MissingClass>
+    <MissingClass>com.vaadin.ui.AbstractSelect$ItemCaptionMode</MissingClass>
+    <MissingClass>com.vaadin.ui.Alignment</MissingClass>
+    <MissingClass>com.vaadin.ui.Button</MissingClass>
+    <MissingClass>com.vaadin.ui.Button$ClickEvent</MissingClass>
+    <MissingClass>com.vaadin.ui.Button$ClickListener</MissingClass>
+    <MissingClass>com.vaadin.ui.CheckBox</MissingClass>
+    <MissingClass>com.vaadin.ui.ComboBox</MissingClass>
+    <MissingClass>com.vaadin.ui.Component</MissingClass>
+    <MissingClass>com.vaadin.ui.ComponentContainer</MissingClass>
+    <MissingClass>com.vaadin.ui.CssLayout</MissingClass>
+    <MissingClass>com.vaadin.ui.CustomField</MissingClass>
+    <MissingClass>com.vaadin.ui.DateField</MissingClass>
+    <MissingClass>com.vaadin.ui.Field</MissingClass>
+    <MissingClass>com.vaadin.ui.Form</MissingClass>
+    <MissingClass>com.vaadin.ui.FormLayout</MissingClass>
+    <MissingClass>com.vaadin.ui.HorizontalLayout</MissingClass>
+    <MissingClass>com.vaadin.ui.HorizontalSplitPanel</MissingClass>
+    <MissingClass>com.vaadin.ui.Image</MissingClass>
+    <MissingClass>com.vaadin.ui.Label</MissingClass>
+    <MissingClass>com.vaadin.ui.MenuBar</MissingClass>
+    <MissingClass>com.vaadin.ui.MenuBar$Command</MissingClass>
+    <MissingClass>com.vaadin.ui.MenuBar$MenuItem</MissingClass>
+    <MissingClass>com.vaadin.ui.NativeButton</MissingClass>
+    <MissingClass>com.vaadin.ui.Notification</MissingClass>
+    <MissingClass>com.vaadin.ui.Notification$Type</MissingClass>
+    <MissingClass>com.vaadin.ui.Panel</MissingClass>
+    <MissingClass>com.vaadin.ui.PasswordField</MissingClass>
+    <MissingClass>com.vaadin.ui.Table</MissingClass>
+    <MissingClass>com.vaadin.ui.Table$Align</MissingClass>
+    <MissingClass>com.vaadin.ui.Table$ColumnGenerator</MissingClass>
+    <MissingClass>com.vaadin.ui.Table$HeaderClickEvent</MissingClass>
+    <MissingClass>com.vaadin.ui.Table$HeaderClickListener</MissingClass>
+    <MissingClass>com.vaadin.ui.Table$RowHeaderMode</MissingClass>
+    <MissingClass>com.vaadin.ui.TextArea</MissingClass>
+    <MissingClass>com.vaadin.ui.TextField</MissingClass>
+    <MissingClass>com.vaadin.ui.Tree</MissingClass>
+    <MissingClass>com.vaadin.ui.TreeTable</MissingClass>
+    <MissingClass>com.vaadin.ui.UI</MissingClass>
+    <MissingClass>com.vaadin.ui.VerticalLayout</MissingClass>
+    <MissingClass>com.vaadin.ui.Window</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>javax.validation.MessageInterpolator</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.ValidatorFactory</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.shiro.SecurityUtils</MissingClass>
+    <MissingClass>org.apache.shiro.authc.AuthenticationInfo</MissingClass>
+    <MissingClass>org.apache.shiro.authc.AuthenticationToken</MissingClass>
+    <MissingClass>org.apache.shiro.authc.SimpleAuthenticationInfo</MissingClass>
+    <MissingClass>org.apache.shiro.authc.UsernamePasswordToken</MissingClass>
+    <MissingClass>org.apache.shiro.authc.credential.DefaultPasswordService</MissingClass>
+    <MissingClass>org.apache.shiro.authc.credential.HashedCredentialsMatcher</MissingClass>
+    <MissingClass>org.apache.shiro.authz.SimpleAuthorizationInfo</MissingClass>
+    <MissingClass>org.apache.shiro.cache.Cache</MissingClass>
+    <MissingClass>org.apache.shiro.realm.AuthorizingRealm</MissingClass>
+    <MissingClass>org.apache.shiro.realm.Realm</MissingClass>
+    <MissingClass>org.apache.shiro.subject.PrincipalCollection</MissingClass>
+    <MissingClass>org.apache.shiro.subject.SimplePrincipalCollection</MissingClass>
+    <MissingClass>org.apache.shiro.subject.Subject</MissingClass>
+    <MissingClass>org.h2.tools.Server</MissingClass>
+    <MissingClass>org.h2.util.StringUtils</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.jdbc.CannotGetJdbcConnectionException</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DataSourceUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.context.support.WebApplicationContextUtils</MissingClass>
+    <MissingClass>org.vaadin.dialogs.ConfirmDialog</MissingClass>
+    <MissingClass>org.vaadin.dialogs.ConfirmDialog$Listener</MissingClass>
+    <MissingClass>ru.xpoft.vaadin.DiscoveryNavigator</MissingClass>
+    <MissingClass>ru.xpoft.vaadin.SpringApplicationContext</MissingClass>
+    <MissingClass>ru.xpoft.vaadin.SpringUIProvider</MissingClass>
+    <MissingClass>ru.xpoft.vaadin.SpringVaadinSystemMessagesProvider</MissingClass>
+    <MissingClass>ru.xpoft.vaadin.VaadinMessageSource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 04:45:21 +0000" total_classes="462" referenced_classes="645" total_bugs="16" total_size="10376" num_packages="17" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="24.12" clock_seconds="7.16" peak_mbytes="577.42" alloc_mbytes="3540.00" gc_seconds="0.27" priority_2="9" priority_1="7">
+    <PackageStats package="javax.persistence" total_bugs="0" total_types="116" total_size="807">
+      <ClassStats class="javax.persistence.Access" sourceFile="Access.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.AccessType" sourceFile="AccessType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.AssociationOverride" sourceFile="AssociationOverride.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.AssociationOverrides" sourceFile="AssociationOverrides.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.AttributeOverride" sourceFile="AttributeOverride.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.AttributeOverrides" sourceFile="AttributeOverrides.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Basic" sourceFile="Basic.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.Cache" sourceFile="Cache.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.CacheRetrieveMode" sourceFile="CacheRetrieveMode.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.CacheStoreMode" sourceFile="CacheStoreMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.Cacheable" sourceFile="Cacheable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.CascadeType" sourceFile="CascadeType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="javax.persistence.CollectionTable" sourceFile="CollectionTable.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.Column" sourceFile="Column.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.ColumnResult" sourceFile="ColumnResult.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorColumn" sourceFile="DiscriminatorColumn.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorType" sourceFile="DiscriminatorType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorValue" sourceFile="DiscriminatorValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.ElementCollection" sourceFile="ElementCollection.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.Embeddable" sourceFile="Embeddable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Embedded" sourceFile="Embedded.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.EmbeddedId" sourceFile="EmbeddedId.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Entity" sourceFile="Entity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityExistsException" sourceFile="EntityExistsException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityListeners" sourceFile="EntityListeners.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityManager" sourceFile="EntityManager.java" interface="true" size="41" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityManagerFactory" sourceFile="EntityManagerFactory.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityNotFoundException" sourceFile="EntityNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityResult" sourceFile="EntityResult.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityTransaction" sourceFile="EntityTransaction.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.EnumType" sourceFile="EnumType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.Enumerated" sourceFile="Enumerated.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.ExcludeDefaultListeners" sourceFile="ExcludeDefaultListeners.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.ExcludeSuperclassListeners" sourceFile="ExcludeSuperclassListeners.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.FetchType" sourceFile="FetchType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.FieldResult" sourceFile="FieldResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.FlushModeType" sourceFile="FlushModeType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.GeneratedValue" sourceFile="GeneratedValue.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.GenerationType" sourceFile="GenerationType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.Id" sourceFile="Id.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.IdClass" sourceFile="IdClass.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Inheritance" sourceFile="Inheritance.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.InheritanceType" sourceFile="InheritanceType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinColumn" sourceFile="JoinColumn.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinColumns" sourceFile="JoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinTable" sourceFile="JoinTable.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.Lob" sourceFile="Lob.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.LockModeType" sourceFile="LockModeType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.persistence.LockTimeoutException" sourceFile="LockTimeoutException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.ManyToMany" sourceFile="ManyToMany.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.ManyToOne" sourceFile="ManyToOne.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKey" sourceFile="MapKey.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyClass" sourceFile="MapKeyClass.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyColumn" sourceFile="MapKeyColumn.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyEnumerated" sourceFile="MapKeyEnumerated.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyJoinColumn" sourceFile="MapKeyJoinColumn.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyJoinColumns" sourceFile="MapKeyJoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyTemporal" sourceFile="MapKeyTemporal.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MappedSuperclass" sourceFile="MappedSuperclass.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.MapsId" sourceFile="MapsId.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedNativeQueries" sourceFile="NamedNativeQueries.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedNativeQuery" sourceFile="NamedNativeQuery.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedQueries" sourceFile="NamedQueries.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedQuery" sourceFile="NamedQuery.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.NoResultException" sourceFile="NoResultException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.NonUniqueResultException" sourceFile="NonUniqueResultException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.OneToMany" sourceFile="OneToMany.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.OneToOne" sourceFile="OneToOne.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.OptimisticLockException" sourceFile="OptimisticLockException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.OrderBy" sourceFile="OrderBy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.OrderColumn" sourceFile="OrderColumn.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.Parameter" sourceFile="Parameter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.Persistence" sourceFile="Persistence.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="javax.persistence.Persistence$1" sourceFile="Persistence.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContext" sourceFile="PersistenceContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContextType" sourceFile="PersistenceContextType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContexts" sourceFile="PersistenceContexts.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceException" sourceFile="PersistenceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceProperty" sourceFile="PersistenceProperty.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnit" sourceFile="PersistenceUnit.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnitUtil" sourceFile="PersistenceUnitUtil.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnits" sourceFile="PersistenceUnits.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUtil" sourceFile="PersistenceUtil.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PessimisticLockException" sourceFile="PessimisticLockException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.PessimisticLockScope" sourceFile="PessimisticLockScope.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.PostLoad" sourceFile="PostLoad.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostPersist" sourceFile="PostPersist.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostRemove" sourceFile="PostRemove.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostUpdate" sourceFile="PostUpdate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PrePersist" sourceFile="PrePersist.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PreRemove" sourceFile="PreRemove.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PreUpdate" sourceFile="PreUpdate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PrimaryKeyJoinColumn" sourceFile="PrimaryKeyJoinColumn.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.PrimaryKeyJoinColumns" sourceFile="PrimaryKeyJoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Query" sourceFile="Query.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="javax.persistence.QueryHint" sourceFile="QueryHint.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.QueryTimeoutException" sourceFile="QueryTimeoutException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.RollbackException" sourceFile="RollbackException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.SecondaryTable" sourceFile="SecondaryTable.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.SecondaryTables" sourceFile="SecondaryTables.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.SequenceGenerator" sourceFile="SequenceGenerator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.SharedCacheMode" sourceFile="SharedCacheMode.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="javax.persistence.SqlResultSetMapping" sourceFile="SqlResultSetMapping.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.SqlResultSetMappings" sourceFile="SqlResultSetMappings.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Table" sourceFile="Table.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.TableGenerator" sourceFile="TableGenerator.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.Temporal" sourceFile="Temporal.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.TemporalType" sourceFile="TemporalType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.TransactionRequiredException" sourceFile="TransactionRequiredException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.Transient" sourceFile="Transient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Tuple" sourceFile="Tuple.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.TupleElement" sourceFile="TupleElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.TypedQuery" sourceFile="TypedQuery.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="javax.persistence.UniqueConstraint" sourceFile="UniqueConstraint.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.ValidationMode" sourceFile="ValidationMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.Version" sourceFile="Version.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.criteria" total_bugs="0" total_types="28" total_size="332">
+      <ClassStats class="javax.persistence.criteria.AbstractQuery" sourceFile="AbstractQuery.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CollectionJoin" sourceFile="CollectionJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CompoundSelection" sourceFile="CompoundSelection.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder" sourceFile="CriteriaBuilder.java" interface="true" size="139" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Case" sourceFile="CriteriaBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Coalesce" sourceFile="CriteriaBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$In" sourceFile="CriteriaBuilder.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$SimpleCase" sourceFile="CriteriaBuilder.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Trimspec" sourceFile="CriteriaBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaQuery" sourceFile="CriteriaQuery.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Expression" sourceFile="Expression.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Fetch" sourceFile="Fetch.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.FetchParent" sourceFile="FetchParent.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.From" sourceFile="From.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Join" sourceFile="Join.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.JoinType" sourceFile="JoinType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.ListJoin" sourceFile="ListJoin.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.MapJoin" sourceFile="MapJoin.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Order" sourceFile="Order.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.ParameterExpression" sourceFile="ParameterExpression.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Path" sourceFile="Path.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.PluralJoin" sourceFile="PluralJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Predicate" sourceFile="Predicate.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Predicate$BooleanOperator" sourceFile="Predicate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Root" sourceFile="Root.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Selection" sourceFile="Selection.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.SetJoin" sourceFile="SetJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Subquery" sourceFile="Subquery.java" interface="true" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.metamodel" total_bugs="0" total_types="21" total_size="145">
+      <ClassStats class="javax.persistence.metamodel.Attribute" sourceFile="Attribute.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Attribute$PersistentAttributeType" sourceFile="Attribute.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.BasicType" sourceFile="BasicType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Bindable" sourceFile="Bindable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Bindable$BindableType" sourceFile="Bindable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.CollectionAttribute" sourceFile="CollectionAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.EmbeddableType" sourceFile="EmbeddableType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.EntityType" sourceFile="EntityType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.IdentifiableType" sourceFile="IdentifiableType.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.ListAttribute" sourceFile="ListAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.ManagedType" sourceFile="ManagedType.java" interface="true" size="29" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.MapAttribute" sourceFile="MapAttribute.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.MappedSuperclassType" sourceFile="MappedSuperclassType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Metamodel" sourceFile="Metamodel.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.PluralAttribute" sourceFile="PluralAttribute.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.PluralAttribute$CollectionType" sourceFile="PluralAttribute.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.SetAttribute" sourceFile="SetAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.SingularAttribute" sourceFile="SingularAttribute.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.StaticMetamodel" sourceFile="StaticMetamodel.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Type" sourceFile="Type.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Type$PersistenceType" sourceFile="Type.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.spi" total_bugs="0" total_types="11" total_size="165">
+      <ClassStats class="javax.persistence.spi.ClassTransformer" sourceFile="ClassTransformer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.LoadState" sourceFile="LoadState.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProvider" sourceFile="PersistenceProvider.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolver" sourceFile="PersistenceProviderResolver.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$1" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$PersistenceProviderResolverPerClassLoader" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$PersistenceProviderResolverPerClassLoader$CachingPersistenceProviderResolver" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceUnitInfo" sourceFile="PersistenceUnitInfo.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceUnitTransactionType" sourceFile="PersistenceUnitTransactionType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.ProviderUtil" sourceFile="ProviderUtil.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen" total_bugs="0" total_types="8" total_size="479">
+      <ClassStats class="org.hibernate.jpamodelgen.ClassWriter" sourceFile="ClassWriter.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.ClassWriter$1" sourceFile="ClassWriter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.Context" sourceFile="Context.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.ImportContextImpl" sourceFile="ImportContextImpl.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" sourceFile="JPAMetaModelEntityProcessor.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor$ContainsAttributeTypeVisitor" sourceFile="JPAMetaModelEntityProcessor.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.MetaModelGenerationException" sourceFile="MetaModelGenerationException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.Version" sourceFile="Version.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen.annotation" total_bugs="0" total_types="8" total_size="293">
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationEmbeddable" sourceFile="AnnotationEmbeddable.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationMetaAttribute" sourceFile="AnnotationMetaAttribute.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationMetaCollection" sourceFile="AnnotationMetaCollection.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationMetaEntity" sourceFile="AnnotationMetaEntity.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationMetaMap" sourceFile="AnnotationMetaMap.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.AnnotationMetaSingleAttribute" sourceFile="AnnotationMetaSingleAttribute.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.BasicAttributeVisitor" sourceFile="MetaAttributeGenerationVisitor.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.annotation.MetaAttributeGenerationVisitor" sourceFile="MetaAttributeGenerationVisitor.java" interface="false" size="107" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen.model" total_bugs="0" total_types="5" total_size="22">
+      <ClassStats class="org.hibernate.jpamodelgen.model.ImportContext" sourceFile="ImportContext.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.model.MetaAttribute" sourceFile="MetaAttribute.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.model.MetaCollection" sourceFile="MetaCollection.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.model.MetaEntity" sourceFile="MetaEntity.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.model.MetaSingleAttribute" sourceFile="MetaSingleAttribute.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen.util" total_bugs="0" total_types="7" total_size="386">
+      <ClassStats class="org.hibernate.jpamodelgen.util.AccessType" sourceFile="AccessType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.AccessTypeInformation" sourceFile="AccessTypeInformation.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.Constants" sourceFile="Constants.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.FileTimeStampChecker" sourceFile="FileTimeStampChecker.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.TypeUtils" sourceFile="TypeUtils.java" interface="false" size="196" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.util.TypeUtils$EmbeddedAttributeVisitor" sourceFile="TypeUtils.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen.xml" total_bugs="0" total_types="9" total_size="654">
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaAttribute" sourceFile="XmlMetaAttribute.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaCollection" sourceFile="XmlMetaCollection.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaEmbeddable" sourceFile="XmlMetaEmbeddable.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaEntity" sourceFile="XmlMetaEntity.java" interface="false" size="312" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaEntity$1" sourceFile="XmlMetaEntity.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaMap" sourceFile="XmlMetaMap.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlMetaSingleAttribute" sourceFile="XmlMetaSingleAttribute.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlParser" sourceFile="XmlParser.java" interface="false" size="262" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.XmlParser$1" sourceFile="XmlParser.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.jpamodelgen.xml.jaxb" total_bugs="0" total_types="76" total_size="2701">
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.AccessType" sourceFile="AccessType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.AssociationOverride" sourceFile="AssociationOverride.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.AttributeOverride" sourceFile="AttributeOverride.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Attributes" sourceFile="Attributes.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Basic" sourceFile="Basic.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.CascadeType" sourceFile="CascadeType.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.CollectionTable" sourceFile="CollectionTable.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Column" sourceFile="Column.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.ColumnResult" sourceFile="ColumnResult.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.DiscriminatorColumn" sourceFile="DiscriminatorColumn.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.DiscriminatorType" sourceFile="DiscriminatorType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.ElementCollection" sourceFile="ElementCollection.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Embeddable" sourceFile="Embeddable.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EmbeddableAttributes" sourceFile="EmbeddableAttributes.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Embedded" sourceFile="Embedded.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EmbeddedId" sourceFile="EmbeddedId.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EmptyType" sourceFile="EmptyType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Entity" sourceFile="Entity.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EntityListener" sourceFile="EntityListener.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EntityListeners" sourceFile="EntityListeners.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EntityMappings" sourceFile="EntityMappings.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EntityResult" sourceFile="EntityResult.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.EnumType" sourceFile="EnumType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.FetchType" sourceFile="FetchType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.FieldResult" sourceFile="FieldResult.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.GeneratedValue" sourceFile="GeneratedValue.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.GenerationType" sourceFile="GenerationType.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Id" sourceFile="Id.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.IdClass" sourceFile="IdClass.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Inheritance" sourceFile="Inheritance.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.InheritanceType" sourceFile="InheritanceType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.JoinColumn" sourceFile="JoinColumn.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.JoinTable" sourceFile="JoinTable.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Lob" sourceFile="Lob.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.LockModeType" sourceFile="LockModeType.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.ManyToMany" sourceFile="ManyToMany.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.ManyToOne" sourceFile="ManyToOne.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.MapKey" sourceFile="MapKey.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.MapKeyClass" sourceFile="MapKeyClass.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.MapKeyColumn" sourceFile="MapKeyColumn.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.MapKeyJoinColumn" sourceFile="MapKeyJoinColumn.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.MappedSuperclass" sourceFile="MappedSuperclass.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.NamedNativeQuery" sourceFile="NamedNativeQuery.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.NamedQuery" sourceFile="NamedQuery.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="130" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.OneToMany" sourceFile="OneToMany.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.OneToOne" sourceFile="OneToOne.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.OrderColumn" sourceFile="OrderColumn.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Persistence" sourceFile="Persistence.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Persistence$PersistenceUnit" sourceFile="Persistence.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Persistence$PersistenceUnit$Properties" sourceFile="Persistence.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Persistence$PersistenceUnit$Properties$Property" sourceFile="Persistence.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PersistenceUnitCachingType" sourceFile="PersistenceUnitCachingType.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PersistenceUnitDefaults" sourceFile="PersistenceUnitDefaults.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PersistenceUnitMetadata" sourceFile="PersistenceUnitMetadata.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PersistenceUnitTransactionType" sourceFile="PersistenceUnitTransactionType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PersistenceUnitValidationModeType" sourceFile="PersistenceUnitValidationModeType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PostLoad" sourceFile="PostLoad.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PostPersist" sourceFile="PostPersist.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PostRemove" sourceFile="PostRemove.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PostUpdate" sourceFile="PostUpdate.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PrePersist" sourceFile="PrePersist.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PreRemove" sourceFile="PreRemove.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PreUpdate" sourceFile="PreUpdate.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.PrimaryKeyJoinColumn" sourceFile="PrimaryKeyJoinColumn.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.QueryHint" sourceFile="QueryHint.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.SecondaryTable" sourceFile="SecondaryTable.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.SequenceGenerator" sourceFile="SequenceGenerator.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.SqlResultSetMapping" sourceFile="SqlResultSetMapping.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Table" sourceFile="Table.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.TableGenerator" sourceFile="TableGenerator.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.TemporalType" sourceFile="TemporalType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Transient" sourceFile="Transient.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.UniqueConstraint" sourceFile="UniqueConstraint.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.Version" sourceFile="Version.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.hibernate.jpamodelgen.xml.jaxb.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna" total_bugs="0" total_types="27" total_size="613">
+      <ClassStats class="org.woodship.luna.BooleanConverter" sourceFile="LunaConverterFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.woodship.luna.DateConverter" sourceFile="LunaConverterFactory.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HelpManager" sourceFile="HelpManager.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HelpOverlay" sourceFile="HelpOverlay.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HomeView" sourceFile="HomeView.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HomeView$1" sourceFile="HomeView.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HomeView$1$1" sourceFile="HomeView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HomeView$2" sourceFile="HomeView.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.HomeView$3" sourceFile="HomeView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaConverterFactory" sourceFile="LunaConverterFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaErrorHandler" sourceFile="LunaErrorHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaException" sourceFile="LunaException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI" sourceFile="LunaUI.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$1" sourceFile="LunaUI.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$2" sourceFile="LunaUI.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$3" sourceFile="LunaUI.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4" sourceFile="LunaUI.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1" sourceFile="LunaUI.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1$1" sourceFile="LunaUI.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1$2" sourceFile="LunaUI.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1$2$1" sourceFile="LunaUI.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1$2$2" sourceFile="LunaUI.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$4$1$2$3" sourceFile="LunaUI.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.LunaUI$5" sourceFile="LunaUI.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.SpringVaadinServlet" sourceFile="SpringVaadinServlet.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.woodship.luna.SpringVaadinServlet$1" sourceFile="SpringVaadinServlet.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.VaadinMessageSource" sourceFile="VaadinMessageSource.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.core.person" total_bugs="6" total_types="34" total_size="686" priority_2="5" priority_1="1">
+      <ClassStats class="org.woodship.luna.core.person.OrgType" sourceFile="OrgType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.Organization" sourceFile="Organization.java" interface="false" size="49" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationEditor" sourceFile="OrganizationEditor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationEditor$1" sourceFile="OrganizationEditor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationEditor$2" sourceFile="OrganizationEditor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationEntityProvider" sourceFile="OrganizationEntityProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationEntityProvider$1" sourceFile="OrganizationEntityProvider.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView" sourceFile="OrganizationView.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$1" sourceFile="OrganizationView.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$2" sourceFile="OrganizationView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$3" sourceFile="OrganizationView.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$4" sourceFile="OrganizationView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$4$1" sourceFile="OrganizationView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$5" sourceFile="OrganizationView.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$6" sourceFile="OrganizationView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.OrganizationView$7" sourceFile="OrganizationView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.Organization_" sourceFile="Organization_.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.Person" sourceFile="Person.java" interface="false" size="75" bugs="3" priority_2="3"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonEditor" sourceFile="PersonEditor.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonEditor$1" sourceFile="PersonEditor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonEditor$2" sourceFile="PersonEditor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonEntityProvider" sourceFile="PersonEntityProvider.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonEntityProvider$1" sourceFile="PersonEntityProvider.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonService" sourceFile="PersonService.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView" sourceFile="PersonView.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$1" sourceFile="PersonView.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$2" sourceFile="PersonView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$3" sourceFile="PersonView.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$4" sourceFile="PersonView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$4$1" sourceFile="PersonView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$5" sourceFile="PersonView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$6" sourceFile="PersonView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.PersonView$7" sourceFile="PersonView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.person.Person_" sourceFile="Person_.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.core.security" total_bugs="8" total_types="58" total_size="1426" priority_2="4" priority_1="4">
+      <ClassStats class="org.woodship.luna.core.security.ApplicationView" sourceFile="ApplicationView.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ApplicationView$1" sourceFile="ApplicationView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.Resource" sourceFile="Resource.java" interface="false" size="91" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.woodship.luna.core.security.ResourceEntityProvider" sourceFile="ResourceEntityProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ResourceEntityProvider$1" sourceFile="ResourceEntityProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ResourceService" sourceFile="ResourceService.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="org.woodship.luna.core.security.ResourceType" sourceFile="ResourceType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.Resource_" sourceFile="Resource_.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.Role" sourceFile="Role.java" interface="false" size="88" bugs="2" priority_1="2"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleDataScope" sourceFile="RoleDataScope.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleEditor" sourceFile="RoleEditor.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleEditor$1" sourceFile="RoleEditor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleEditor$2" sourceFile="RoleEditor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleEntityProvider" sourceFile="RoleEntityProvider.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleResEditor" sourceFile="RoleResEditor.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleResEditor$1" sourceFile="RoleResEditor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleResEditor$2" sourceFile="RoleResEditor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleService" sourceFile="RoleService.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleUserEditor" sourceFile="RoleUserEditor.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleUserEditor$1" sourceFile="RoleUserEditor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView" sourceFile="RoleView.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$1" sourceFile="RoleView.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$2" sourceFile="RoleView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$3" sourceFile="RoleView.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$4" sourceFile="RoleView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$4$1" sourceFile="RoleView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$5" sourceFile="RoleView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$6" sourceFile="RoleView.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$7" sourceFile="RoleView.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.RoleView$8" sourceFile="RoleView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.Role_" sourceFile="Role_.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ShiroDbRealm" sourceFile="ShiroDbRealm.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ShiroDbRealm$1" sourceFile="ShiroDbRealm.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.ShiroDbRealm$ShiroUser" sourceFile="ShiroDbRealm.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.User" sourceFile="User.java" interface="false" size="65" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.woodship.luna.core.security.UserChangePWEditor" sourceFile="UserChangePWEditor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserChangePWEditor$1" sourceFile="UserChangePWEditor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserEditor" sourceFile="UserEditor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserEditor$1" sourceFile="UserEditor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserEditor$2" sourceFile="UserEditor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserEntityProvider" sourceFile="UserEntityProvider.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserPersonEditor" sourceFile="UserPersonEditor.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserPersonEditor$1" sourceFile="UserPersonEditor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserRoleEditor" sourceFile="UserRoleEditor.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserRoleEditor$1" sourceFile="UserRoleEditor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserService" sourceFile="UserService.java" interface="false" size="104" bugs="1" priority_2="1"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView" sourceFile="UserView.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$1" sourceFile="UserView.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$2" sourceFile="UserView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$3" sourceFile="UserView.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$4" sourceFile="UserView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$5" sourceFile="UserView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$5$1" sourceFile="UserView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$6" sourceFile="UserView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$7" sourceFile="UserView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$8" sourceFile="UserView.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.UserView$9" sourceFile="UserView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.core.security.User_" sourceFile="User_.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.db" total_bugs="0" total_types="7" total_size="330">
+      <ClassStats class="org.woodship.luna.db.BatchUpdateEntityProvider" sourceFile="BatchUpdateEntityProvider.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.HierarchialEntity" sourceFile="HierarchialEntity.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.HierarchialEntity_" sourceFile="HierarchialEntity_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.IdEntity" sourceFile="IdEntity.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.IdEntity_" sourceFile="IdEntity_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.InitData" sourceFile="InitData.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="org.woodship.luna.db.TransactionalEntityProvider" sourceFile="TransactionalEntityProvider.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.demo.simpleview" total_bugs="0" total_types="4" total_size="84">
+      <ClassStats class="org.woodship.luna.demo.simpleview.Vendor" sourceFile="Vendor.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.simpleview.VendorEntityProvider" sourceFile="VendorEntityProvider.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.simpleview.VendorView" sourceFile="VendorView.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.simpleview.Vendor_" sourceFile="Vendor_.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.demo.subtable" total_bugs="2" total_types="18" total_size="368" priority_1="2">
+      <ClassStats class="org.woodship.luna.demo.subtable.Element" sourceFile="Element.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ElementScope" sourceFile="ElementScope.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ElementScope_" sourceFile="ElementScope_.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.Product" sourceFile="Product.java" interface="false" size="32" bugs="2" priority_1="2"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductEditor" sourceFile="ProductEditor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductEditor$1" sourceFile="ProductEditor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductEditor$2" sourceFile="ProductEditor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductEntityProvider" sourceFile="ProductEntityProvider.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView" sourceFile="ProductView.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$1" sourceFile="ProductView.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$2" sourceFile="ProductView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$3" sourceFile="ProductView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$4" sourceFile="ProductView.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$5" sourceFile="ProductView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$5$1" sourceFile="ProductView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$6" sourceFile="ProductView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.ProductView$7" sourceFile="ProductView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.demo.subtable.Product_" sourceFile="Product_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.woodship.luna.util" total_bugs="0" total_types="25" total_size="885">
+      <ClassStats class="org.woodship.luna.util.EntityFieldGroupFieldFactory" sourceFile="EntityFieldGroupFieldFactory.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable" sourceFile="EntitySubTable.java" interface="false" size="154" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$1" sourceFile="EntitySubTable.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$1$1" sourceFile="EntitySubTable.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$1$2" sourceFile="EntitySubTable.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$2" sourceFile="EntitySubTable.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$2$1" sourceFile="EntitySubTable.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$3" sourceFile="EntitySubTable.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$ItemPropertyId" sourceFile="EntitySubTable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.EntitySubTable$KbdHandler" sourceFile="EntitySubTable.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.JPAContainerItemFieldGroup" sourceFile="JPAContainerItemFieldGroup.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.LunaBeanValidator" sourceFile="LunaBeanValidator.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityEditor" sourceFile="SimpleEntityEditor.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityEditor$1" sourceFile="SimpleEntityEditor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView" sourceFile="SimpleEntityView.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$1" sourceFile="SimpleEntityView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$2" sourceFile="SimpleEntityView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$3" sourceFile="SimpleEntityView.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$4" sourceFile="SimpleEntityView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$4$1" sourceFile="SimpleEntityView.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$5" sourceFile="SimpleEntityView.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.SimpleEntityView$6" sourceFile="SimpleEntityView.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.Utils" sourceFile="Utils.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.Utils$1" sourceFile="Utils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.woodship.luna.util.Utils$1HJPAContainer" sourceFile="Utils.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="383" invocations="1648" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="41639" standardDeviationMicrosecondsPerInvocation="1382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="316" invocations="2016" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="10368" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="316" invocations="1993" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="10796" standardDeviationMicrosecondsPerInvocation="452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="296" invocations="2042" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="25128" standardDeviationMicrosecondsPerInvocation="714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="291" invocations="2011" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="12714" standardDeviationMicrosecondsPerInvocation="542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="285" invocations="645" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="21346" standardDeviationMicrosecondsPerInvocation="1472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="273" invocations="645" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="9925" standardDeviationMicrosecondsPerInvocation="1029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="273" invocations="2029" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="8154" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="227" invocations="2523" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="8261" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="199" invocations="2016" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="8529" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="177" invocations="1137" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="7983" standardDeviationMicrosecondsPerInvocation="374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="102" invocations="1659" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="1700" standardDeviationMicrosecondsPerInvocation="61"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="100" invocations="834" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="13429" standardDeviationMicrosecondsPerInvocation="548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="86" invocations="2692" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="24937" standardDeviationMicrosecondsPerInvocation="481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="85" invocations="645" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="3370" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="76" invocations="462" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="2196" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="73" invocations="645" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="3881" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="71" invocations="2016" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="3432" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="71" invocations="27133" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1279" standardDeviationMicrosecondsPerInvocation="13"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="69" invocations="462" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="1604" standardDeviationMicrosecondsPerInvocation="186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="66" invocations="645" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="1679" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="62" invocations="645" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="10661" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="61" invocations="462" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="6346" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="57" invocations="462" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="2980" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="56" invocations="645" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="7015" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="55" invocations="645" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="4467" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="50" invocations="1362" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="1935" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="47" invocations="462" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="12916" standardDeviationMicrosecondsPerInvocation="605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="45" invocations="1993" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="902" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="45" invocations="462" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="7148" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="42" invocations="462" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="3706" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="40" invocations="1922" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="1784" standardDeviationMicrosecondsPerInvocation="59"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="40" invocations="462" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1649" standardDeviationMicrosecondsPerInvocation="133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="40" invocations="462" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1747" standardDeviationMicrosecondsPerInvocation="180"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="40" invocations="462" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="5350" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="39" invocations="57837" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="440" standardDeviationMicrosecondsPerInvocation="3"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="37" invocations="645" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="10974" standardDeviationMicrosecondsPerInvocation="514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="36" invocations="462" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="2272" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="35" invocations="462" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="2020" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="35" invocations="462" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="2030" standardDeviationMicrosecondsPerInvocation="156"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

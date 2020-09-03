@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596945283000" analysisTimestamp="1596945284333" release="">
+  <Project projectName="repositorios/Nike-Inc_bluegreen-manager">
+    <Jar>repositorios/Nike-Inc_bluegreen-manager</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.dao.EnvironmentDAO">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="12" end="101" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Class>
+    <Method classname="bluegreen.manager.model.dao.EnvironmentDAO" name="findNamedEnvs" signature="([Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="62" end="72" startBytecode="0" endBytecode="162" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Method>
+    <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="70" end="70" startBytecode="26" endBytecode="26" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    <String value="Method: findNamedEnvs. Fields with EAGER without Join Fetch: datacenter, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.dao.EnvironmentDAO">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="12" end="101" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Class>
+    <Method classname="bluegreen.manager.model.dao.EnvironmentDAO" name="findNamedEnvQuery" signature="(Ljava/lang/String;)Ljavax/persistence/Query;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="50" end="54" startBytecode="0" endBytecode="135" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Method>
+    <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="50" end="50" startBytecode="7" endBytecode="7" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.dao.EnvironmentDAO">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="12" end="101" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Class>
+    <Method classname="bluegreen.manager.model.dao.EnvironmentDAO" name="findNamedEnvs" signature="([Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="62" end="72" startBytecode="0" endBytecode="162" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+    </Method>
+    <SourceLine classname="bluegreen.manager.model.dao.EnvironmentDAO" start="70" end="70" startBytecode="26" endBytecode="26" sourcefile="EnvironmentDAO.java" sourcepath="bluegreen/manager/model/dao/EnvironmentDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.dao.JobHistoryDAO">
+      <SourceLine classname="bluegreen.manager.model.dao.JobHistoryDAO" start="17" end="69" sourcefile="JobHistoryDAO.java" sourcepath="bluegreen/manager/model/dao/JobHistoryDAO.java"/>
+    </Class>
+    <Method classname="bluegreen.manager.model.dao.JobHistoryDAO" name="findLastRelevantJobHistory" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)Lbluegreen/manager/model/domain/JobHistory;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.dao.JobHistoryDAO" start="28" end="44" startBytecode="0" endBytecode="300" sourcefile="JobHistoryDAO.java" sourcepath="bluegreen/manager/model/dao/JobHistoryDAO.java"/>
+    </Method>
+    <SourceLine classname="bluegreen.manager.model.dao.JobHistoryDAO" start="28" end="28" startBytecode="7" endBytecode="7" sourcefile="JobHistoryDAO.java" sourcepath="bluegreen/manager/model/dao/JobHistoryDAO.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.Application">
+      <SourceLine classname="bluegreen.manager.model.domain.Application" start="22" end="213" sourcefile="Application.java" sourcepath="bluegreen/manager/model/domain/Application.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.Application" name="applicationVm" signature="Lbluegreen/manager/model/domain/ApplicationVm;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.Application" sourcefile="Application.java" sourcepath="bluegreen/manager/model/domain/Application.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.ApplicationVm">
+      <SourceLine classname="bluegreen.manager.model.domain.ApplicationVm" start="22" end="147" sourcefile="ApplicationVm.java" sourcepath="bluegreen/manager/model/domain/ApplicationVm.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.ApplicationVm" name="environment" signature="Lbluegreen/manager/model/domain/Environment;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.ApplicationVm" sourcefile="ApplicationVm.java" sourcepath="bluegreen/manager/model/domain/ApplicationVm.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.Environment">
+      <SourceLine classname="bluegreen.manager.model.domain.Environment" start="22" end="170" sourcefile="Environment.java" sourcepath="bluegreen/manager/model/domain/Environment.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.Environment" name="datacenter" signature="Lbluegreen/manager/model/domain/Datacenter;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.Environment" sourcefile="Environment.java" sourcepath="bluegreen/manager/model/domain/Environment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.LogicalDatabase">
+      <SourceLine classname="bluegreen.manager.model.domain.LogicalDatabase" start="31" end="130" sourcefile="LogicalDatabase.java" sourcepath="bluegreen/manager/model/domain/LogicalDatabase.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.LogicalDatabase" name="environment" signature="Lbluegreen/manager/model/domain/Environment;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.LogicalDatabase" sourcefile="LogicalDatabase.java" sourcepath="bluegreen/manager/model/domain/LogicalDatabase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.LogicalDatabase">
+      <SourceLine classname="bluegreen.manager.model.domain.LogicalDatabase" start="31" end="130" sourcefile="LogicalDatabase.java" sourcepath="bluegreen/manager/model/domain/LogicalDatabase.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.LogicalDatabase" name="physicalDatabase" signature="Lbluegreen/manager/model/domain/PhysicalDatabase;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.LogicalDatabase" sourcefile="LogicalDatabase.java" sourcepath="bluegreen/manager/model/domain/LogicalDatabase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.PhysicalDatabase">
+      <SourceLine classname="bluegreen.manager.model.domain.PhysicalDatabase" start="26" end="211" sourcefile="PhysicalDatabase.java" sourcepath="bluegreen/manager/model/domain/PhysicalDatabase.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.PhysicalDatabase" name="logicalDatabase" signature="Lbluegreen/manager/model/domain/LogicalDatabase;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.PhysicalDatabase" sourcefile="PhysicalDatabase.java" sourcepath="bluegreen/manager/model/domain/PhysicalDatabase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="bluegreen.manager.model.domain.TaskHistory">
+      <SourceLine classname="bluegreen.manager.model.domain.TaskHistory" start="25" end="179" sourcefile="TaskHistory.java" sourcepath="bluegreen/manager/model/domain/TaskHistory.java"/>
+    </Class>
+    <Field classname="bluegreen.manager.model.domain.TaskHistory" name="jobHistory" signature="Lbluegreen/manager/model/domain/JobHistory;" isStatic="false">
+      <SourceLine classname="bluegreen.manager.model.domain.TaskHistory" sourcefile="TaskHistory.java" sourcepath="bluegreen/manager/model/domain/TaskHistory.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="75">
+    <MissingClass>ch.ethz.ssh2.Connection</MissingClass>
+    <MissingClass>ch.ethz.ssh2.Session</MissingClass>
+    <MissingClass>com.amazonaws.auth.BasicAWSCredentials</MissingClass>
+    <MissingClass>com.amazonaws.regions.Region</MissingClass>
+    <MissingClass>com.amazonaws.regions.Regions</MissingClass>
+    <MissingClass>com.amazonaws.services.ec2.AmazonEC2Client</MissingClass>
+    <MissingClass>com.amazonaws.services.ec2.model.DescribeInstancesRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.ec2.model.DescribeInstancesResult</MissingClass>
+    <MissingClass>com.amazonaws.services.ec2.model.Filter</MissingClass>
+    <MissingClass>com.amazonaws.services.ec2.model.Reservation</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.AmazonElasticLoadBalancingClient</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.DeregisterInstancesFromLoadBalancerRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.DescribeInstanceHealthRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.DescribeInstanceHealthResult</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.DescribeLoadBalancersRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.DescribeLoadBalancersResult</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.Instance</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.InstanceState</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.LoadBalancerDescription</MissingClass>
+    <MissingClass>com.amazonaws.services.elasticloadbalancing.model.RegisterInstancesWithLoadBalancerRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.AmazonRDSClient</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.CopyDBParameterGroupRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.CreateDBSnapshotRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBInstance</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBInstanceNotFoundException</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBParameterGroup</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBParameterGroupStatus</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBSnapshot</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBSnapshotNotFoundException</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DBSubnetGroup</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DeleteDBInstanceRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DeleteDBParameterGroupRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DeleteDBSnapshotRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DescribeDBInstancesRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DescribeDBInstancesResult</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DescribeDBSnapshotsRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.DescribeDBSnapshotsResult</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.Endpoint</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.ModifyDBInstanceRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.RebootDBInstanceRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.RestoreDBInstanceFromDBSnapshotRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.rds.model.VpcSecurityGroupMembership</MissingClass>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.google.gson.GsonBuilder</MissingClass>
+    <MissingClass>com.google.gson.JsonDeserializer</MissingClass>
+    <MissingClass>com.google.gson.JsonElement</MissingClass>
+    <MissingClass>com.google.gson.JsonObject</MissingClass>
+    <MissingClass>com.google.gson.JsonParseException</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.apache.commons.collections4.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections4.MapUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.StopWatch</MissingClass>
+    <MissingClass>org.apache.http.Header</MissingClass>
+    <MissingClass>org.apache.http.HttpResponse</MissingClass>
+    <MissingClass>org.apache.http.StatusLine</MissingClass>
+    <MissingClass>org.apache.http.client.fluent.Content</MissingClass>
+    <MissingClass>org.apache.http.client.fluent.Executor</MissingClass>
+    <MissingClass>org.apache.http.client.fluent.Request</MissingClass>
+    <MissingClass>org.apache.http.client.fluent.Response</MissingClass>
+    <MissingClass>org.apache.http.config.RegistryBuilder</MissingClass>
+    <MissingClass>org.apache.http.conn.socket.PlainConnectionSocketFactory</MissingClass>
+    <MissingClass>org.apache.http.conn.ssl.SSLConnectionSocketFactory</MissingClass>
+    <MissingClass>org.apache.http.impl.client.BasicCookieStore</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClientBuilder</MissingClass>
+    <MissingClass>org.apache.http.impl.conn.PoolingHttpClientConnectionManager</MissingClass>
+    <MissingClass>org.apache.http.message.BasicNameValuePair</MissingClass>
+    <MissingClass>org.apache.http.util.EntityUtils</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.support.ClassPathXmlApplicationContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:54:43 +0000" total_classes="126" referenced_classes="203" total_bugs="11" total_size="4583" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="16.08" clock_seconds="4.43" peak_mbytes="340.16" alloc_mbytes="3540.00" gc_seconds="0.17" priority_2="11">
+    <PackageStats package="bluegreen.manager.client.app" total_bugs="0" total_types="14" total_size="355">
+      <ClassStats class="bluegreen.manager.client.app.ApplicationClient" sourceFile="ApplicationClient.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.ApplicationClient$1" sourceFile="ApplicationClient.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.ApplicationClientFactory" sourceFile="ApplicationClientFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.ApplicationSession" sourceFile="ApplicationSession.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DbFreezeMode" sourceFile="DbFreezeMode.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DbFreezeMode$1" sourceFile="DbFreezeMode.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DbFreezeModeJsonDeserializer" sourceFile="DbFreezeModeJsonDeserializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DbFreezeProgress" sourceFile="DbFreezeProgress.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DbFreezeRest" sourceFile="DbFreezeRest.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.DiscoveryResult" sourceFile="DiscoveryResult.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.GsonFactory" sourceFile="GsonFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.Lockable" sourceFile="Lockable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.LoginResult" sourceFile="LoginResult.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.app.PhysicalDatabase" sourceFile="PhysicalDatabase.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.client.aws" total_bugs="0" total_types="14" total_size="461">
+      <ClassStats class="bluegreen.manager.client.aws.AwsClientFactory" sourceFile="AwsClientFactory.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.Ec2Client" sourceFile="Ec2Client.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.Ec2ClientFactory" sourceFile="Ec2ClientFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.Ec2InstanceFilter" sourceFile="Ec2InstanceFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.ElbClient" sourceFile="ElbClient.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.ElbClientFactory" sourceFile="ElbClientFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.ElbInstanceState" sourceFile="ElbInstanceState.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsAnalyzer" sourceFile="RdsAnalyzer.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsClient" sourceFile="RdsClient.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsClientFactory" sourceFile="RdsClientFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsInstanceStatus" sourceFile="RdsInstanceStatus.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsParameterApplyStatus" sourceFile="RdsParameterApplyStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsSnapshotBluegreenId" sourceFile="RdsSnapshotBluegreenId.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.aws.RdsSnapshotStatus" sourceFile="RdsSnapshotStatus.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.client.http" total_bugs="0" total_types="5" total_size="95">
+      <ClassStats class="bluegreen.manager.client.http.ExecutorFactory" sourceFile="ExecutorFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.http.HttpClientSSLFactory" sourceFile="HttpClientSSLFactory.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.http.HttpClientSSLFactory$1" sourceFile="HttpClientSSLFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.http.HttpHelper" sourceFile="HttpHelper.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.http.HttpMethodType" sourceFile="HttpMethodType.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.client.ssh" total_bugs="0" total_types="3" total_size="113">
+      <ClassStats class="bluegreen.manager.client.ssh.SshClient" sourceFile="SshClient.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.ssh.SshConnectionFactory" sourceFile="SshConnectionFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="bluegreen.manager.client.ssh.SshTarget" sourceFile="SshTarget.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.jobs" total_bugs="0" total_types="9" total_size="433">
+      <ClassStats class="bluegreen.manager.jobs.GoLiveJob" sourceFile="GoLiveJob.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.Job" sourceFile="Job.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.JobFactory" sourceFile="JobFactory.java" interface="false" size="179" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.SkipRemark" sourceFile="SkipRemark.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.SkipRemarkHelper" sourceFile="SkipRemarkHelper.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.SkipRemarkHelper$1" sourceFile="SkipRemarkHelper.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.StagingDeployJob" sourceFile="StagingDeployJob.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.TaskSequenceJob" sourceFile="TaskSequenceJob.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="bluegreen.manager.jobs.TeardownJob" sourceFile="TeardownJob.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.main" total_bugs="0" total_types="5" total_size="112">
+      <ClassStats class="bluegreen.manager.main.ArgumentParser" sourceFile="ArgumentParser.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="bluegreen.manager.main.BlueGreenManager" sourceFile="BlueGreenManager.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.main.BlueGreenManager$1" sourceFile="BlueGreenManager.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.main.CmdlineException" sourceFile="CmdlineException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.main.ReturnCode" sourceFile="ReturnCode.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.model.dao" total_bugs="4" total_types="4" total_size="88" priority_2="4">
+      <ClassStats class="bluegreen.manager.model.dao.EnvironmentDAO" sourceFile="EnvironmentDAO.java" interface="false" size="40" bugs="3" priority_2="3"/>
+      <ClassStats class="bluegreen.manager.model.dao.GenericDAO" sourceFile="GenericDAO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.dao.JobHistoryDAO" sourceFile="JobHistoryDAO.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.dao.TaskHistoryDAO" sourceFile="TaskHistoryDAO.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.model.domain" total_bugs="7" total_types="11" total_size="648" priority_2="7">
+      <ClassStats class="bluegreen.manager.model.domain.Application" sourceFile="Application.java" interface="false" size="104" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.domain.ApplicationVm" sourceFile="ApplicationVm.java" interface="false" size="66" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.domain.DatabaseType" sourceFile="DatabaseType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.domain.Datacenter" sourceFile="Datacenter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.domain.Environment" sourceFile="Environment.java" interface="false" size="77" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.domain.JobHistory" sourceFile="JobHistory.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.domain.JobStatus" sourceFile="JobStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.domain.LogicalDatabase" sourceFile="LogicalDatabase.java" interface="false" size="51" bugs="2" priority_2="2"/>
+      <ClassStats class="bluegreen.manager.model.domain.PhysicalDatabase" sourceFile="PhysicalDatabase.java" interface="false" size="100" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.domain.TaskHistory" sourceFile="TaskHistory.java" interface="false" size="81" bugs="1" priority_2="1"/>
+      <ClassStats class="bluegreen.manager.model.domain.TaskStatus" sourceFile="TaskStatus.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.model.tx" total_bugs="0" total_types="7" total_size="322">
+      <ClassStats class="bluegreen.manager.model.tx.EnvLoaderFactory" sourceFile="EnvLoaderFactory.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.EnvironmentHelper" sourceFile="EnvironmentHelper.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.EnvironmentTx" sourceFile="EnvironmentTx.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.JobHistoryTx" sourceFile="JobHistoryTx.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.OneEnvLoader" sourceFile="OneEnvLoader.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.TaskHistoryTx" sourceFile="TaskHistoryTx.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.model.tx.TwoEnvLoader" sourceFile="TwoEnvLoader.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.substituter" total_bugs="0" total_types="9" total_size="196">
+      <ClassStats class="bluegreen.manager.substituter.OneEnvStringSubstituter" sourceFile="OneEnvStringSubstituter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.OnePointFiveEnvStringSubstituter" sourceFile="OnePointFiveEnvStringSubstituter.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.StringSubstituter" sourceFile="StringSubstituter.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.StringSubstituterBaseImpl" sourceFile="StringSubstituterBaseImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.StringSubstituterFactory" sourceFile="StringSubstituterFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.SubstituterResult" sourceFile="SubstituterResult.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.SubstitutionKeys" sourceFile="SubstitutionKeys.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.TwoEnvStringSubstituter" sourceFile="TwoEnvStringSubstituter.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="bluegreen.manager.substituter.ZeroEnvStringSubstituter" sourceFile="ZeroEnvStringSubstituter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.tasks" total_bugs="0" total_types="34" total_size="1572">
+      <ClassStats class="bluegreen.manager.tasks.ApplicationTask" sourceFile="ApplicationTask.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ApplicationVmTask" sourceFile="ApplicationVmTask.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.DiscoveryTask" sourceFile="DiscoveryTask.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ElbInstanceGoneProgressChecker" sourceFile="ElbInstanceGoneProgressChecker.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ElbInstanceHealthProgressChecker" sourceFile="ElbInstanceHealthProgressChecker.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.EnvironmentBuildTask" sourceFile="EnvironmentBuildTask.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ForgetEnvironmentTask" sourceFile="ForgetEnvironmentTask.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.FreezeTask" sourceFile="FreezeTask.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.LocalShellTask" sourceFile="LocalShellTask.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsInstanceDeleteTask" sourceFile="RdsInstanceDeleteTask.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsInstanceParamGroupProgressChecker" sourceFile="RdsInstanceParamGroupProgressChecker.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsInstanceParamGroupProgressChecker$1" sourceFile="RdsInstanceParamGroupProgressChecker.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsInstanceProgressChecker" sourceFile="RdsInstanceProgressChecker.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsInstanceProgressChecker$1" sourceFile="RdsInstanceProgressChecker.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsSnapshotAvailableProgressChecker" sourceFile="RdsSnapshotAvailableProgressChecker.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsSnapshotDeletedProgressChecker" sourceFile="RdsSnapshotDeletedProgressChecker.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsSnapshotProgressChecker" sourceFile="RdsSnapshotProgressChecker.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsSnapshotRestoreTask" sourceFile="RdsSnapshotRestoreTask.java" interface="false" size="272" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RdsSnapshotRestoreTask$1" sourceFile="RdsSnapshotRestoreTask.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RegisterApplicationTask" sourceFile="RegisterApplicationTask.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.RemoteShellTask" sourceFile="RemoteShellTask.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ShellConfig" sourceFile="ShellConfig.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ShellTask" sourceFile="ShellTask.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.SmokeTestTask" sourceFile="SmokeTestTask.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.SwapDatabasesTask" sourceFile="SwapDatabasesTask.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.Task" sourceFile="Task.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TaskImpl" sourceFile="TaskImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TaskRun" sourceFile="TaskRun.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TaskRunProcessor" sourceFile="TaskRunProcessor.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.ThawTask" sourceFile="ThawTask.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TransitionParameters" sourceFile="TransitionParameters.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TransitionProgressChecker" sourceFile="TransitionProgressChecker.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TransitionTask" sourceFile="TransitionTask.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="bluegreen.manager.tasks.TwoEnvTask" sourceFile="TwoEnvTask.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="bluegreen.manager.utils" total_bugs="0" total_types="11" total_size="188">
+      <ClassStats class="bluegreen.manager.utils.DateHelper" sourceFile="DateHelper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.HashUtil" sourceFile="HashUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.NowFactory" sourceFile="NowFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.ProcessBuilderAdapter" sourceFile="ProcessBuilderAdapter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.ProcessBuilderAdapterFactory" sourceFile="ProcessBuilderAdapterFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.ProgressChecker" sourceFile="ProgressChecker.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.RegexHelper" sourceFile="RegexHelper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.ShellResult" sourceFile="ShellResult.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.ThreadSleeper" sourceFile="ThreadSleeper.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.Waiter" sourceFile="Waiter.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="bluegreen.manager.utils.WaiterParameters" sourceFile="WaiterParameters.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="243" invocations="813" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="21434" standardDeviationMicrosecondsPerInvocation="861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="234" invocations="956" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="18488" standardDeviationMicrosecondsPerInvocation="793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="214" invocations="826" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="13177" standardDeviationMicrosecondsPerInvocation="633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="171" invocations="814" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="4842" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="159" invocations="835" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="8293" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="148" invocations="837" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="9222" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="145" invocations="826" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="10395" standardDeviationMicrosecondsPerInvocation="409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="139" invocations="203" avgMicrosecondsPerInvocation="685" maxMicrosecondsPerInvocation="8386" standardDeviationMicrosecondsPerInvocation="1329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="130" invocations="203" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="6677" standardDeviationMicrosecondsPerInvocation="1139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="126" invocations="1158" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="5658" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="102" invocations="593" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="2386" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="71" invocations="965" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="3212" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="68" invocations="847" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="25590" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="51" invocations="303" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="13990" standardDeviationMicrosecondsPerInvocation="828"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="51" invocations="126" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="3419" standardDeviationMicrosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="48" invocations="203" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="2597" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="48" invocations="126" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="7896" standardDeviationMicrosecondsPerInvocation="773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="47" invocations="126" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="2473" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="46" invocations="203" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="15745" standardDeviationMicrosecondsPerInvocation="1168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="45" invocations="126" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="4176" standardDeviationMicrosecondsPerInvocation="531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="44" invocations="826" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="1336" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="42" invocations="14214" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1143" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="42" invocations="203" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="2576" standardDeviationMicrosecondsPerInvocation="352"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="788" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="955" standardDeviationMicrosecondsPerInvocation="85"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="36" invocations="126" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="3148" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="34" invocations="813" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="855" standardDeviationMicrosecondsPerInvocation="62"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="203" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="2273" standardDeviationMicrosecondsPerInvocation="277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="203" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="6100" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="203" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="2431" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="29" invocations="126" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="2132" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="29" invocations="126" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="1984" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="28" invocations="126" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="1808" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="28" invocations="126" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="1636" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="26" invocations="126" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="1591" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="25" invocations="813" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="573" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="25" invocations="126" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="5078" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="25" invocations="126" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="7976" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="22" invocations="126" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="1446" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="22" invocations="847" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="2785" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="22" invocations="126" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="1644" standardDeviationMicrosecondsPerInvocation="227"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597113809000" analysisTimestamp="1597113811137" release="">
+  <Project projectName="repositorios/WillemJiang_acmeair">
+    <Jar>repositorios/WillemJiang_acmeair</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.acmeair.morphia.entities.FlightImpl">
+      <SourceLine classname="com.acmeair.morphia.entities.FlightImpl" start="56" end="231" sourcefile="FlightImpl.java" sourcepath="com/acmeair/morphia/entities/FlightImpl.java"/>
+    </Class>
+    <Field classname="com.acmeair.morphia.entities.FlightImpl" name="flightSegment" signature="Lcom/acmeair/entities/FlightSegment;" isStatic="false">
+      <SourceLine classname="com.acmeair.morphia.entities.FlightImpl" sourcefile="FlightImpl.java" sourcepath="com/acmeair/morphia/entities/FlightImpl.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.util.ISO8601DateFormat</MissingClass>
+    <MissingClass>com.netflix.zuul.ZuulFilter</MissingClass>
+    <MissingClass>com.netflix.zuul.context.RequestContext</MissingClass>
+    <MissingClass>io.servicecomb.common.rest.codec.RestObjectMapper</MissingClass>
+    <MissingClass>io.servicecomb.provider.springmvc.reference.RestTemplateBuilder</MissingClass>
+    <MissingClass>io.servicecomb.swagger.invocation.exception.InvocationException</MissingClass>
+    <MissingClass>io.swagger.jaxrs.config.BeanConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.NewCookie</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ExceptionMapper</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ResourceConfig</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.cloud.client.ServiceInstance</MissingClass>
+    <MissingClass>org.springframework.cloud.client.loadbalancer.LoadBalancerClient</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpEntity</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.client.ClientHttpResponse</MissingClass>
+    <MissingClass>org.springframework.util.LinkedMultiValueMap</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.web.client.ResponseErrorHandler</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:43:29 +0000" total_classes="112" referenced_classes="198" total_bugs="1" total_size="2762" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.38" clock_seconds="3.41" peak_mbytes="333.76" alloc_mbytes="3540.00" gc_seconds="0.17" priority_2="1">
+    <PackageStats package="com.acmeair" total_bugs="0" total_types="9" total_size="38">
+      <ClassStats class="com.acmeair.AcmeAirConstants" sourceFile="AcmeAirConstants.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.acmeair.AcmeAirGatewayApplication" sourceFile="AcmeAirGatewayApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.AcmeAirGatewayApplication$ServiceCombConfig" sourceFile="AcmeAirGatewayApplication.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.BookingServiceApplication" sourceFile="BookingServiceApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.BookingServiceApplication$ConsulServiceDiscoveryConfig" sourceFile="BookingServiceApplication.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.acmeair.BookingServiceApplication$ServiceCombConfig" sourceFile="BookingServiceApplication.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.acmeair.CustomerServiceApplication" sourceFile="CustomerServiceApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.CustomerServiceApplication$ConsulServiceDiscoveryConfig" sourceFile="CustomerServiceApplication.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.acmeair.CustomerServiceApplication$ServiceCombConfig" sourceFile="CustomerServiceApplication.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.config" total_bugs="0" total_types="5" total_size="107">
+      <ClassStats class="com.acmeair.config.AcmeAirConfiguration" sourceFile="AcmeAirConfiguration.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.acmeair.config.AcmeAirConfiguration$ServiceData" sourceFile="AcmeAirConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.config.CustomerConfiguration" sourceFile="CustomerConfiguration.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.acmeair.config.FlightLoaderConfig" sourceFile="FlightLoaderConfig.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.acmeair.config.LoaderREST" sourceFile="LoaderREST.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.entities" total_bugs="0" total_types="11" total_size="111">
+      <ClassStats class="com.acmeair.entities.AirportCodeMapping" sourceFile="AirportCodeMapping.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Booking" sourceFile="Booking.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Coupon" sourceFile="Coupon.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Customer" sourceFile="Customer.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Customer$MemberShipStatus" sourceFile="Customer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Customer$PhoneType" sourceFile="Customer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.CustomerAddress" sourceFile="CustomerAddress.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.CustomerSession" sourceFile="CustomerSession.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.Flight" sourceFile="Flight.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.FlightSegment" sourceFile="FlightSegment.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.acmeair.entities.TokenInfo" sourceFile="TokenInfo.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.hystrix" total_bugs="0" total_types="12" total_size="173">
+      <ClassStats class="com.acmeair.hystrix.AuthenticationCommand" sourceFile="AuthenticationCommand.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.AuthenticationCommand$1" sourceFile="AuthenticationCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.CseAuthenticationCommand" sourceFile="CseAuthenticationCommand.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.CseSeckillCommand" sourceFile="CseSeckillCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.CseUserCommand" sourceFile="CseUserCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.SeckillCommand" sourceFile="SeckillCommand.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.SeckillCommand$1" sourceFile="SeckillCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.SpringAuthenticationCommand" sourceFile="SpringAuthenticationCommand.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.SpringCloudSeckillCommand" sourceFile="SpringCloudSeckillCommand.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.SpringCloudUserCommand" sourceFile="SpringCloudUserCommand.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.UserCommand" sourceFile="UserCommand.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.acmeair.hystrix.UserCommand$1" sourceFile="UserCommand.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.loader" total_bugs="0" total_types="9" total_size="213">
+      <ClassStats class="com.acmeair.loader.CseRemoteCustomerLoader" sourceFile="CseRemoteCustomerLoader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.CustomerLoader" sourceFile="CustomerLoader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.CustomerLoaderConfig" sourceFile="CustomerLoaderConfig.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.CustomerLoaderREST" sourceFile="CustomerLoaderREST.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.FlightLoader" sourceFile="FlightLoader.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.Loader" sourceFile="Loader.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.RemoteCustomerLoader" sourceFile="RemoteCustomerLoader.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.RemoteCustomerLoader$1" sourceFile="RemoteCustomerLoader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.acmeair.loader.SpringCloudCustomerLoader" sourceFile="SpringCloudCustomerLoader.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.morphia.entities" total_bugs="1" total_types="8" total_size="600" priority_2="1">
+      <ClassStats class="com.acmeair.morphia.entities.AirportCodeMappingImpl" sourceFile="AirportCodeMappingImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.BookingImpl" sourceFile="BookingImpl.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.CouponImpl" sourceFile="CouponImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.CustomerAddressImpl" sourceFile="CustomerAddressImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.CustomerImpl" sourceFile="CustomerImpl.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.CustomerSessionImpl" sourceFile="CustomerSessionImpl.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.entities.FlightImpl" sourceFile="FlightImpl.java" interface="false" size="128" bugs="1" priority_2="1"/>
+      <ClassStats class="com.acmeair.morphia.entities.FlightSegmentImpl" sourceFile="FlightSegmentImpl.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.morphia.repositories" total_bugs="0" total_types="7" total_size="13">
+      <ClassStats class="com.acmeair.morphia.repositories.AirportRepository" sourceFile="AirportRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.BookingRepository" sourceFile="BookingRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.CouponRepository" sourceFile="CouponRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.CustomerSessionRepository" sourceFile="CustomerSessionRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.FlightRepository" sourceFile="FlightRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.repositories.FlightSegmentRepository" sourceFile="FlightSegmentRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.morphia.services" total_bugs="0" total_types="4" total_size="160">
+      <ClassStats class="com.acmeair.morphia.services.BookingServiceImpl" sourceFile="BookingServiceImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.services.CouponServiceImpl" sourceFile="CouponServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.services.CustomerServiceImpl" sourceFile="CustomerServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.acmeair.morphia.services.FlightServiceImpl" sourceFile="FlightServiceImpl.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.problems" total_bugs="0" total_types="9" total_size="115">
+      <ClassStats class="com.acmeair.problems.CPUProblem" sourceFile="CPUProblem.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ErrorProblem" sourceFile="ErrorProblem.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ProblemInjectFilter" sourceFile="ProblemInjectFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ProblemInjectFilter$ContainerRequest" sourceFile="ProblemInjectFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ProblemInjector" sourceFile="ProblemInjector.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ProblemInterceptor" sourceFile="ProblemInterceptor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.ProblemInterceptorSupport" sourceFile="ProblemInterceptorSupport.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.Request" sourceFile="Request.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.problems.SlowTransactionProblem" sourceFile="SlowTransactionProblem.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.service" total_bugs="0" total_types="11" total_size="149">
+      <ClassStats class="com.acmeair.service.AuthenticationService" sourceFile="AuthenticationService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.service.BookingService" sourceFile="BookingService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.service.CouponService" sourceFile="CouponService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.service.CustomerService" sourceFile="CustomerService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.acmeair.service.CustomerServiceSupport" sourceFile="CustomerServiceSupport.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.acmeair.service.DataService" sourceFile="DataService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.acmeair.service.FlightService" sourceFile="FlightService.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.acmeair.service.KeyGenerator" sourceFile="KeyGenerator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.acmeair.service.SeckillService" sourceFile="SeckillService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.service.TransactionService" sourceFile="TransactionService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.acmeair.service.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.web" total_bugs="0" total_types="15" total_size="441">
+      <ClassStats class="com.acmeair.web.AcmeAirApp" sourceFile="AcmeAirApp.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.acmeair.web.BookingsREST" sourceFile="BookingsREST.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CouponREST" sourceFile="CouponREST.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerREST" sourceFile="CustomerREST.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerServiceApp" sourceFile="CustomerServiceApp.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerServiceApp$CustomerExceptionHandler" sourceFile="CustomerServiceApp.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerValidationRule" sourceFile="CustomerValidationRule.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerValidationRuleConfig" sourceFile="CustomerValidationRuleConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.acmeair.web.CustomerValidationRuleImpl" sourceFile="CustomerValidationRuleImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.acmeair.web.FlightsREST" sourceFile="FlightsREST.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.acmeair.web.LoginCookieUpdateFilter" sourceFile="LoginCookieUpdateFilter.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.acmeair.web.LoginREST" sourceFile="LoginREST.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.acmeair.web.LoginResponseFilter" sourceFile="LoginResponseFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.acmeair.web.RESTCookieSessionFilter" sourceFile="RESTCookieSessionFilter.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.acmeair.web.UriRewriteFilter" sourceFile="UriRewriteFilter.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.acmeair.web.dto" total_bugs="0" total_types="12" total_size="642">
+      <ClassStats class="com.acmeair.web.dto.AddressInfo" sourceFile="AddressInfo.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.BookingInfo" sourceFile="BookingInfo.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.BookingPKInfo" sourceFile="BookingPKInfo.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.BookingReceiptInfo" sourceFile="BookingReceiptInfo.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.CouponInfo" sourceFile="CouponInfo.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.CustomerInfo" sourceFile="CustomerInfo.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.CustomerSessionInfo" sourceFile="CustomerSessionInfo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.FlightInfo" sourceFile="FlightInfo.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.FlightPKInfo" sourceFile="FlightPKInfo.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.FlightSegmentInfo" sourceFile="FlightSegmentInfo.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.TripFlightOptions" sourceFile="TripFlightOptions.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.acmeair.web.dto.TripLegInfo" sourceFile="TripLegInfo.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="257" invocations="907" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="11166" standardDeviationMicrosecondsPerInvocation="592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="129" invocations="198" avgMicrosecondsPerInvocation="656" maxMicrosecondsPerInvocation="13791" standardDeviationMicrosecondsPerInvocation="1718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="124" invocations="528" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="5280" standardDeviationMicrosecondsPerInvocation="470"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="118" invocations="523" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="5897" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="105" invocations="534" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="6602" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="101" invocations="525" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="5053" standardDeviationMicrosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="101" invocations="535" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="9693" standardDeviationMicrosecondsPerInvocation="541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="95" invocations="825" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="2956" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="91" invocations="198" avgMicrosecondsPerInvocation="464" maxMicrosecondsPerInvocation="4033" standardDeviationMicrosecondsPerInvocation="809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="91" invocations="528" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="8932" standardDeviationMicrosecondsPerInvocation="424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="71" invocations="915" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="520" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="67" invocations="774" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="19334" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="65" invocations="198" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="31439" standardDeviationMicrosecondsPerInvocation="2279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="63" invocations="305" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="3100" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="649" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="26118" standardDeviationMicrosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="49" invocations="274" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="12215" standardDeviationMicrosecondsPerInvocation="767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="45" invocations="198" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="5237" standardDeviationMicrosecondsPerInvocation="584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="33" invocations="112" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="4220" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="33" invocations="6829" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1053" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="198" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="8972" standardDeviationMicrosecondsPerInvocation="679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="198" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="2875" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="31" invocations="528" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="2483" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="198" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="2151" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="29" invocations="112" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="2663" standardDeviationMicrosecondsPerInvocation="319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="198" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2221" standardDeviationMicrosecondsPerInvocation="279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="24" invocations="112" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="1138" standardDeviationMicrosecondsPerInvocation="279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="23" invocations="112" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="10397" standardDeviationMicrosecondsPerInvocation="1016"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="23" invocations="112" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="1712" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="22" invocations="112" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="9431" standardDeviationMicrosecondsPerInvocation="1163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="21" invocations="198" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="8074" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="20" invocations="523" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="961" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="20" invocations="520" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1339" standardDeviationMicrosecondsPerInvocation="79"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="112" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="5581" standardDeviationMicrosecondsPerInvocation="535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="2417" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1847" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1672" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="18" invocations="198" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="1771" standardDeviationMicrosecondsPerInvocation="200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="1078" standardDeviationMicrosecondsPerInvocation="225"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

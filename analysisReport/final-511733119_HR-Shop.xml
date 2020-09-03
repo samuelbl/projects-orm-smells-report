@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596946584000" analysisTimestamp="1596946586131" release="">
+  <Project projectName="repositorios/511733119_HR-Shop">
+    <Jar>repositorios/511733119_HR-Shop</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.BaseDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.BaseDaoImpl" start="38" end="72" sourcefile="BaseDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BaseDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.BaseDaoImpl" name="query" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.BaseDaoImpl" start="71" end="72" startBytecode="0" endBytecode="115" sourcefile="BaseDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BaseDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.BaseDaoImpl" start="71" end="71" startBytecode="7" endBytecode="7" sourcefile="BaseDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BaseDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.BusinessDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="15" end="52" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.BusinessDaoImpl" name="getInto_Business" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="20" end="30" startBytecode="0" endBytecode="168" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.BusinessDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="15" end="52" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.BusinessDaoImpl" name="getNew_Product" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="39" end="48" startBytecode="0" endBytecode="168" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.BusinessDaoImpl" start="40" end="40" startBytecode="7" endBytecode="7" sourcefile="BusinessDaoImpl.java" sourcepath="com/hr/shop/daoImpl/BusinessDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CartDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="15" end="87" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CartDaoImpl" name="getCartId" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="20" end="21" startBytecode="0" endBytecode="104" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    <String value="Method: getCartId. Fields with EAGER without Join Fetch: protype, user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CartDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="15" end="87" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CartDaoImpl" name="getCart" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="29" end="36" startBytecode="0" endBytecode="114" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="29" end="29" startBytecode="0" endBytecode="0" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CartDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="15" end="87" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CartDaoImpl" name="getCartId" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="20" end="21" startBytecode="0" endBytecode="104" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CartDaoImpl" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="CartDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CartDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CategoryDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="19" end="52" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CategoryDaoImpl" name="queryByHot" signature="(Z)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="50" end="51" startBytecode="0" endBytecode="100" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="50" end="50" startBytecode="0" endBytecode="0" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CategoryDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="19" end="52" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CategoryDaoImpl" name="queryJoinAccount" signature="(Ljava/lang/String;II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="24" end="27" startBytecode="0" endBytecode="173" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CategoryDaoImpl" start="24" end="24" startBytecode="0" endBytecode="0" sourcefile="CategoryDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CategoryDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CommentDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="18" end="64" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CommentDaoImpl" name="getComment" signature="(II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="54" end="61" startBytecode="0" endBytecode="126" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="54" end="54" startBytecode="0" endBytecode="0" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.CommentDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="18" end="64" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.CommentDaoImpl" name="getProductComment" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="23" end="32" startBytecode="0" endBytecode="178" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.CommentDaoImpl" start="24" end="24" startBytecode="7" endBytecode="7" sourcefile="CommentDaoImpl.java" sourcepath="com/hr/shop/daoImpl/CommentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ForderDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="15" end="71" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ForderDaoImpl" name="getOrder" signature="(Ljava/lang/String;)Lcom/hr/shop/model/Forder;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="70" end="71" startBytecode="0" endBytecode="95" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="70" end="70" startBytecode="0" endBytecode="0" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    <String value="Method: getOrder. Fields with EAGER without Join Fetch: user, status, sorderList, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ForderDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="15" end="71" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ForderDaoImpl" name="findAllOrder" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="40" end="53" startBytecode="0" endBytecode="178" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="42" end="42" startBytecode="7" endBytecode="7" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ForderDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="15" end="71" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ForderDaoImpl" name="getOrder" signature="(Ljava/lang/String;)Lcom/hr/shop/model/Forder;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="70" end="71" startBytecode="0" endBytecode="95" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ForderDaoImpl" start="70" end="70" startBytecode="0" endBytecode="0" sourcefile="ForderDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ForderDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="queryByCid" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="36" end="42" startBytecode="0" endBytecode="120" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="36" end="36" startBytecode="0" endBytecode="0" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    <String value="Method: queryByCid. Fields with EAGER without Join Fetch: business, protypeList, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="queryJoinCategory" signature="(Ljava/lang/String;II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="18" end="19" startBytecode="0" endBytecode="173" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="18" end="18" startBytecode="0" endBytecode="0" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    <String value="Method: queryJoinCategory. Fields with EAGER without Join Fetch: business, protypeList, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="findNewest_Or_HighestSalesProduct" signature="(IILjava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="92" end="101" startBytecode="0" endBytecode="188" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="94" end="94" startBytecode="14" endBytecode="14" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="findProduct" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="70" end="80" startBytecode="0" endBytecode="178" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="72" end="72" startBytecode="7" endBytecode="7" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="getProduct" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="110" end="115" startBytecode="0" endBytecode="134" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="110" end="110" startBytecode="0" endBytecode="0" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="getSimilarProduct" signature="(Ljava/lang/String;II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="50" end="60" startBytecode="0" endBytecode="191" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="52" end="52" startBytecode="7" endBytecode="7" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="queryByCid" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="36" end="42" startBytecode="0" endBytecode="120" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="36" end="36" startBytecode="0" endBytecode="0" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.ProductDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="14" end="143" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.ProductDaoImpl" name="queryJoinCategory" signature="(Ljava/lang/String;II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="18" end="19" startBytecode="0" endBytecode="173" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.ProductDaoImpl" start="18" end="18" startBytecode="0" endBytecode="0" sourcefile="ProductDaoImpl.java" sourcepath="com/hr/shop/daoImpl/ProductDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="checkToken" signature="(ILjava/lang/String;)Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="67" end="68" startBytecode="0" endBytecode="129" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="67" end="67" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="getAllUserName" signature="(Ljava/lang/String;)Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="19" end="20" startBytecode="0" endBytecode="107" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="19" end="19" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="getUser" signature="(Ljava/lang/String;)Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="76" end="77" startBytecode="0" endBytecode="95" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="76" end="76" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="getUserFollowsBusiness" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="93" end="97" startBytecode="0" endBytecode="168" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="94" end="94" startBytecode="7" endBytecode="7" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="getUserFollowsProduct" signature="(III)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="108" end="116" startBytecode="0" endBytecode="147" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="109" end="109" startBytecode="7" endBytecode="7" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.daoImpl.UserDaoImpl">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="15" end="118" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.hr.shop.daoImpl.UserDaoImpl" name="login" signature="(Lcom/hr/shop/model/User;)Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="45" end="62" startBytecode="0" endBytecode="249" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.hr.shop.daoImpl.UserDaoImpl" start="45" end="45" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/hr/shop/daoImpl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Append_Comment">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" start="85" end="149" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Append_Comment" name="append_comment_pic_List" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Append_Comment">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" start="85" end="149" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Append_Comment" name="product" signature="Lcom/hr/shop/model/Product;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Append_Comment">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" start="85" end="149" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Append_Comment" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Append_Comment" sourcefile="Append_Comment.java" sourcepath="com/hr/shop/model/Append_Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Append_Comment_Pic">
+      <SourceLine classname="com.hr.shop.model.Append_Comment_Pic" start="63" end="109" sourcefile="Append_Comment_Pic.java" sourcepath="com/hr/shop/model/Append_Comment_Pic.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Append_Comment_Pic" name="append_comment" signature="Lcom/hr/shop/model/Append_Comment;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Append_Comment_Pic" sourcefile="Append_Comment_Pic.java" sourcepath="com/hr/shop/model/Append_Comment_Pic.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Cart">
+      <SourceLine classname="com.hr.shop.model.Cart" start="67" end="120" sourcefile="Cart.java" sourcepath="com/hr/shop/model/Cart.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Cart" name="protype" signature="Lcom/hr/shop/model/Protype;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Cart" sourcefile="Cart.java" sourcepath="com/hr/shop/model/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Cart">
+      <SourceLine classname="com.hr.shop.model.Cart" start="67" end="120" sourcefile="Cart.java" sourcepath="com/hr/shop/model/Cart.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Cart" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Cart" sourcefile="Cart.java" sourcepath="com/hr/shop/model/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Comment">
+      <SourceLine classname="com.hr.shop.model.Comment" start="106" end="195" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Comment" name="comment_pic_List" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Comment" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Comment">
+      <SourceLine classname="com.hr.shop.model.Comment" start="106" end="195" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Comment" name="append_comment" signature="Lcom/hr/shop/model/Append_Comment;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Comment" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Comment">
+      <SourceLine classname="com.hr.shop.model.Comment" start="106" end="195" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Comment" name="product" signature="Lcom/hr/shop/model/Product;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Comment" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Comment">
+      <SourceLine classname="com.hr.shop.model.Comment" start="106" end="195" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Comment" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Comment" sourcefile="Comment.java" sourcepath="com/hr/shop/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Comment_Pic">
+      <SourceLine classname="com.hr.shop.model.Comment_Pic" start="63" end="109" sourcefile="Comment_Pic.java" sourcepath="com/hr/shop/model/Comment_Pic.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Comment_Pic" name="comment" signature="Lcom/hr/shop/model/Comment;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Comment_Pic" sourcefile="Comment_Pic.java" sourcepath="com/hr/shop/model/Comment_Pic.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Forder">
+      <SourceLine classname="com.hr.shop.model.Forder" start="133" end="225" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Forder" name="sorderList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Forder" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Forder">
+      <SourceLine classname="com.hr.shop.model.Forder" start="133" end="225" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Forder" name="status" signature="Lcom/hr/shop/model/Status;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Forder" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Forder">
+      <SourceLine classname="com.hr.shop.model.Forder" start="133" end="225" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Forder" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Forder" sourcefile="Forder.java" sourcepath="com/hr/shop/model/Forder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Product">
+      <SourceLine classname="com.hr.shop.model.Product" start="119" end="226" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Product" name="protypeList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Product" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Product">
+      <SourceLine classname="com.hr.shop.model.Product" start="119" end="226" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Product" name="business" signature="Lcom/hr/shop/model/Business;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Product" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Product">
+      <SourceLine classname="com.hr.shop.model.Product" start="119" end="226" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Product" name="category" signature="Lcom/hr/shop/model/Category;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Product" sourcefile="Product.java" sourcepath="com/hr/shop/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Protype">
+      <SourceLine classname="com.hr.shop.model.Protype" start="75" end="135" sourcefile="Protype.java" sourcepath="com/hr/shop/model/Protype.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Protype" name="product" signature="Lcom/hr/shop/model/Product;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Protype" sourcefile="Protype.java" sourcepath="com/hr/shop/model/Protype.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Sorder">
+      <SourceLine classname="com.hr.shop.model.Sorder" start="75" end="144" sourcefile="Sorder.java" sourcepath="com/hr/shop/model/Sorder.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Sorder" name="forder" signature="Lcom/hr/shop/model/Forder;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Sorder" sourcefile="Sorder.java" sourcepath="com/hr/shop/model/Sorder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.Sorder">
+      <SourceLine classname="com.hr.shop.model.Sorder" start="75" end="144" sourcefile="Sorder.java" sourcepath="com/hr/shop/model/Sorder.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.Sorder" name="protype" signature="Lcom/hr/shop/model/Protype;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.Sorder" sourcefile="Sorder.java" sourcepath="com/hr/shop/model/Sorder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.User_follow_Business">
+      <SourceLine classname="com.hr.shop.model.User_follow_Business" start="55" end="96" sourcefile="User_follow_Business.java" sourcepath="com/hr/shop/model/User_follow_Business.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.User_follow_Business" name="business" signature="Lcom/hr/shop/model/Business;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.User_follow_Business" sourcefile="User_follow_Business.java" sourcepath="com/hr/shop/model/User_follow_Business.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.User_follow_Business">
+      <SourceLine classname="com.hr.shop.model.User_follow_Business" start="55" end="96" sourcefile="User_follow_Business.java" sourcepath="com/hr/shop/model/User_follow_Business.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.User_follow_Business" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.User_follow_Business" sourcefile="User_follow_Business.java" sourcepath="com/hr/shop/model/User_follow_Business.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.User_follow_Product">
+      <SourceLine classname="com.hr.shop.model.User_follow_Product" start="55" end="96" sourcefile="User_follow_Product.java" sourcepath="com/hr/shop/model/User_follow_Product.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.User_follow_Product" name="product" signature="Lcom/hr/shop/model/Product;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.User_follow_Product" sourcefile="User_follow_Product.java" sourcepath="com/hr/shop/model/User_follow_Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hr.shop.model.User_follow_Product">
+      <SourceLine classname="com.hr.shop.model.User_follow_Product" start="55" end="96" sourcefile="User_follow_Product.java" sourcepath="com/hr/shop/model/User_follow_Product.java"/>
+    </Class>
+    <Field classname="com.hr.shop.model.User_follow_Product" name="user" signature="Lcom/hr/shop/model/User;" isStatic="false">
+      <SourceLine classname="com.hr.shop.model.User_follow_Product" sourcefile="User_follow_Product.java" sourcepath="com/hr/shop/model/User_follow_Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="2" missingClasses="90">
+    <Error>
+      <ErrorMessage>Exception analyzing com.hr.shop.daoImpl.SorderDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.hr.shop.daoImpl.BaseDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.google.gson.GsonBuilder</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.commons.logging.impl.LogFactoryImpl</MissingClass>
+    <MissingClass>org.apache.commons.pool.BasePoolableObjectFactory</MissingClass>
+    <MissingClass>org.apache.commons.pool.impl.GenericObjectPool</MissingClass>
+    <MissingClass>org.apache.commons.pool.impl.GenericObjectPool$Config</MissingClass>
+    <MissingClass>org.apache.http.client.HttpClient</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpGet</MissingClass>
+    <MissingClass>org.apache.http.impl.client.BasicResponseHandler</MissingClass>
+    <MissingClass>org.apache.http.impl.client.DefaultHttpClient</MissingClass>
+    <MissingClass>org.apache.log4j.DailyRollingFileAppender</MissingClass>
+    <MissingClass>org.apache.log4j.Level</MissingClass>
+    <MissingClass>org.apache.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.log4j.Priority</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.jboss.netty.bootstrap.ClientBootstrap</MissingClass>
+    <MissingClass>org.jboss.netty.bootstrap.ServerBootstrap</MissingClass>
+    <MissingClass>org.jboss.netty.buffer.ChannelBuffer</MissingClass>
+    <MissingClass>org.jboss.netty.buffer.ChannelBufferFactory</MissingClass>
+    <MissingClass>org.jboss.netty.buffer.ChannelBuffers</MissingClass>
+    <MissingClass>org.jboss.netty.channel.Channel</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelConfig</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelFuture</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelFutureListener</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelHandlerContext</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelPipeline</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelPipelineFactory</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ChannelStateEvent</MissingClass>
+    <MissingClass>org.jboss.netty.channel.Channels</MissingClass>
+    <MissingClass>org.jboss.netty.channel.ExceptionEvent</MissingClass>
+    <MissingClass>org.jboss.netty.channel.MessageEvent</MissingClass>
+    <MissingClass>org.jboss.netty.channel.SimpleChannelUpstreamHandler</MissingClass>
+    <MissingClass>org.jboss.netty.channel.group.ChannelGroup</MissingClass>
+    <MissingClass>org.jboss.netty.channel.group.ChannelGroupFuture</MissingClass>
+    <MissingClass>org.jboss.netty.channel.group.DefaultChannelGroup</MissingClass>
+    <MissingClass>org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory</MissingClass>
+    <MissingClass>org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.frame.TooLongFrameException</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.DefaultHttpResponse</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpHeaders</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpMethod</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpRequest</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpRequestDecoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpRequestEncoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpResponse</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpResponseDecoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpResponseEncoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpResponseStatus</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.HttpVersion</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.BinaryWebSocketFrame</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.CloseWebSocketFrame</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.PingWebSocketFrame</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.TextWebSocketFrame</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder$State</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocket13FrameDecoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketClientHandshaker</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketFrame</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketServerHandshaker</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFactory</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.http.websocketx.WebSocketVersion</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.oneone.OneToOneEncoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.replay.ReplayingDecoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.codec.string.StringDecoder</MissingClass>
+    <MissingClass>org.jboss.netty.handler.ssl.SslHandler</MissingClass>
+    <MissingClass>org.jboss.netty.handler.timeout.IdleState</MissingClass>
+    <MissingClass>org.jboss.netty.handler.timeout.IdleStateAwareChannelHandler</MissingClass>
+    <MissingClass>org.jboss.netty.handler.timeout.IdleStateEvent</MissingClass>
+    <MissingClass>org.jboss.netty.handler.timeout.IdleStateHandler</MissingClass>
+    <MissingClass>org.jboss.netty.util.CharsetUtil</MissingClass>
+    <MissingClass>org.jboss.netty.util.HashedWheelTimer</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerExceptionResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 04:16:24 +0000" total_classes="659" referenced_classes="957" total_bugs="51" total_size="26105" num_packages="72" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="40.00" clock_seconds="11.73" peak_mbytes="864.09" alloc_mbytes="3540.00" gc_seconds="0.33" priority_2="47" priority_1="4">
+    <PackageStats package="com.aliyun.api" total_bugs="0" total_types="10" total_size="300">
+      <ClassStats class="com.aliyun.api.AliyunAsyncHandler" sourceFile="AliyunAsyncHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunClient" sourceFile="AliyunClient.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunConstants" sourceFile="AliyunConstants.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunParser" sourceFile="AliyunParser.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunRequest" sourceFile="AliyunRequest.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunResponse" sourceFile="AliyunResponse.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunSignature" sourceFile="AliyunSignature.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.aliyun.api.AliyunUploadRequest" sourceFile="AliyunUploadRequest.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.aliyun.api.DefaultAliyunClient" sourceFile="DefaultAliyunClient.java" interface="false" size="188" bugs="0"/>
+      <ClassStats class="com.aliyun.api.DefaultAliyunClient$1" sourceFile="DefaultAliyunClient.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.aliyun.api.internal.mapping" total_bugs="0" total_types="2" total_size="120">
+      <ClassStats class="com.aliyun.api.internal.mapping.Converter" sourceFile="Converter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.mapping.Converters" sourceFile="Converters.java" interface="false" size="118" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.aliyun.api.internal.parser.json" total_bugs="0" total_types="5" total_size="112">
+      <ClassStats class="com.aliyun.api.internal.parser.json.JsonConverter" sourceFile="JsonConverter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.json.JsonConverter$1" sourceFile="JsonConverter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.json.ObjectJsonParser" sourceFile="ObjectJsonParser.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.json.SimplifyJsonConverter" sourceFile="SimplifyJsonConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.json.SimplifyJsonConverter$1" sourceFile="SimplifyJsonConverter.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.aliyun.api.internal.parser.xml" total_bugs="0" total_types="3" total_size="65">
+      <ClassStats class="com.aliyun.api.internal.parser.xml.ObjectXmlParser" sourceFile="ObjectXmlParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.xml.XmlConverter" sourceFile="XmlConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.parser.xml.XmlConverter$1" sourceFile="XmlConverter.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.aliyun.api.internal.util" total_bugs="0" total_types="4" total_size="397">
+      <ClassStats class="com.aliyun.api.internal.util.AliyunLogger" sourceFile="AliyunLogger.java" interface="false" size="160" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.util.AliyunWebUtils" sourceFile="AliyunWebUtils.java" interface="false" size="222" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.util.AliyunWebUtils$1" sourceFile="AliyunWebUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.aliyun.api.internal.util.AliyunWebUtils$DefaultTrustManager" sourceFile="AliyunWebUtils.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.Constant" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.hr.shop.Constant.Map_Msg" sourceFile="Map_Msg.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.Exception" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.hr.shop.Exception.DefaultExceptionHandler" sourceFile="DefaultExceptionHandler.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.Interceptor" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="com.hr.shop.Interceptor.TokenInterceptor" sourceFile="TokenInterceptor.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.action" total_bugs="0" total_types="12" total_size="398">
+      <ClassStats class="com.hr.shop.action.AccountAction" sourceFile="AccountAction.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.BaseAction" sourceFile="BaseAction.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.BusinessAction" sourceFile="BusinessAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.CartAction" sourceFile="CartAction.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.CategoryAction" sourceFile="CategoryAction.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.CommentAction" sourceFile="CommentAction.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.ForderAction" sourceFile="ForderAction.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.LogAppender" sourceFile="LogAppender.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.ProductAction" sourceFile="ProductAction.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.ProtypeAction" sourceFile="ProtypeAction.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.SorderAction" sourceFile="SorderAction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.hr.shop.action.UserAction" sourceFile="UserAction.java" interface="false" size="141" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.aop" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.hr.shop.aop.MyLog" sourceFile="MyLog.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.dao" total_bugs="0" total_types="14" total_size="66">
+      <ClassStats class="com.hr.shop.dao.AccountDao" sourceFile="AccountDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.Append_CommentDao" sourceFile="Append_CommentDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.BaseDao" sourceFile="BaseDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.BusinessDao" sourceFile="BusinessDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.CartDao" sourceFile="CartDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.CommentDao" sourceFile="CommentDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.ForderDao" sourceFile="ForderDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.ProductDao" sourceFile="ProductDao.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.ProtypeDao" sourceFile="ProtypeDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.SorderDao" sourceFile="SorderDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.UserDao" sourceFile="UserDao.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.User_follow_BusinessDao" sourceFile="User_follow_BusinessDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.dao.User_follow_ProductDao" sourceFile="User_follow_ProductDao.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.daoImpl" total_bugs="27" total_types="14" total_size="371" priority_2="27">
+      <ClassStats class="com.hr.shop.daoImpl.AccountDaoImpl" sourceFile="AccountDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.daoImpl.Append_CommentDaoImpl" sourceFile="Append_CommentDaoImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.hr.shop.daoImpl.BaseDaoImpl" sourceFile="BaseDaoImpl.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hr.shop.daoImpl.BusinessDaoImpl" sourceFile="BusinessDaoImpl.java" interface="false" size="19" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.daoImpl.CartDaoImpl" sourceFile="CartDaoImpl.java" interface="false" size="46" bugs="3" priority_2="3"/>
+      <ClassStats class="com.hr.shop.daoImpl.CategoryDaoImpl" sourceFile="CategoryDaoImpl.java" interface="false" size="24" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.daoImpl.CommentDaoImpl" sourceFile="CommentDaoImpl.java" interface="false" size="25" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.daoImpl.ForderDaoImpl" sourceFile="ForderDaoImpl.java" interface="false" size="34" bugs="3" priority_2="3"/>
+      <ClassStats class="com.hr.shop.daoImpl.ProductDaoImpl" sourceFile="ProductDaoImpl.java" interface="false" size="68" bugs="8" priority_2="8"/>
+      <ClassStats class="com.hr.shop.daoImpl.ProtypeDaoImpl" sourceFile="ProtypeDaoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.hr.shop.daoImpl.SorderDaoImpl" sourceFile="SorderDaoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.hr.shop.daoImpl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="64" bugs="6" priority_2="6"/>
+      <ClassStats class="com.hr.shop.daoImpl.User_follow_BusinessDaoImpl" sourceFile="User_follow_BusinessDaoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.hr.shop.daoImpl.User_follow_ProductDaoImpl" sourceFile="User_follow_ProductDaoImpl.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.dto" total_bugs="0" total_types="6" total_size="303">
+      <ClassStats class="com.hr.shop.dto.Comment_Page" sourceFile="Comment_Page.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.hr.shop.dto.Comment_dto" sourceFile="Comment_dto.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.hr.shop.dto.FileImage" sourceFile="FileImage.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.hr.shop.dto.Order" sourceFile="Order.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.hr.shop.dto.Pager" sourceFile="Pager.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.hr.shop.dto.Pay_Result" sourceFile="Pay_Result.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.jsonView" total_bugs="0" total_types="6" total_size="8">
+      <ClassStats class="com.hr.shop.jsonView.View" sourceFile="View.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.jsonView.View$commentExcept" sourceFile="View.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.jsonView.View$exceptPwd" sourceFile="View.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.jsonView.View$son" sourceFile="View.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.jsonView.View$son2" sourceFile="View.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.jsonView.View$summary" sourceFile="View.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.model" total_bugs="24" total_types="16" total_size="834" priority_2="20" priority_1="4">
+      <ClassStats class="com.hr.shop.model.Account" sourceFile="Account.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.hr.shop.model.Append_Comment" sourceFile="Append_Comment.java" interface="false" size="54" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="com.hr.shop.model.Append_Comment_Pic" sourceFile="Append_Comment_Pic.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hr.shop.model.Business" sourceFile="Business.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.hr.shop.model.Cart" sourceFile="Cart.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.model.Category" sourceFile="Category.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.hr.shop.model.Comment" sourceFile="Comment.java" interface="false" size="75" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="com.hr.shop.model.Comment_Pic" sourceFile="Comment_Pic.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hr.shop.model.Forder" sourceFile="Forder.java" interface="false" size="77" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="com.hr.shop.model.Product" sourceFile="Product.java" interface="false" size="84" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="com.hr.shop.model.Protype" sourceFile="Protype.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hr.shop.model.Sorder" sourceFile="Sorder.java" interface="false" size="57" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.model.Status" sourceFile="Status.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.hr.shop.model.User" sourceFile="User.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.hr.shop.model.User_follow_Business" sourceFile="User_follow_Business.java" interface="false" size="35" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hr.shop.model.User_follow_Product" sourceFile="User_follow_Product.java" interface="false" size="35" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.service" total_bugs="0" total_types="14" total_size="90">
+      <ClassStats class="com.hr.shop.service.AccountService" sourceFile="AccountService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.Append_CommentService" sourceFile="Append_CommentService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.BaseService" sourceFile="BaseService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.BusinessService" sourceFile="BusinessService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.CartService" sourceFile="CartService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.CategoryService" sourceFile="CategoryService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.CommentService" sourceFile="CommentService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.ForderService" sourceFile="ForderService.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.ProductService" sourceFile="ProductService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.ProtypeService" sourceFile="ProtypeService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.SorderService" sourceFile="SorderService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.UserService" sourceFile="UserService.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.User_follow_BusinessService" sourceFile="User_follow_BusinessService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.service.User_follow_ProductService" sourceFile="User_follow_ProductService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.serviceImpl" total_bugs="0" total_types="14" total_size="425">
+      <ClassStats class="com.hr.shop.serviceImpl.AccountServiceImpl" sourceFile="AccountServiceImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.Append_CommentServiceImpl" sourceFile="Append_CommentServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.BaseServiceImpl" sourceFile="BaseServiceImpl.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.BusinessServiceImpl" sourceFile="BusinessServiceImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.CartServiceImpl" sourceFile="CartServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.ForderServiceImpl" sourceFile="ForderServiceImpl.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.ProtypeServiceImpl" sourceFile="ProtypeServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.SorderServiceImpl" sourceFile="SorderServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.User_follow_BusinessServiceImpl" sourceFile="User_follow_BusinessServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.hr.shop.serviceImpl.User_follow_ProductServiceImpl" sourceFile="User_follow_ProductServiceImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.util" total_bugs="0" total_types="6" total_size="170">
+      <ClassStats class="com.hr.shop.util.Config" sourceFile="Config.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.hr.shop.util.FileUploadUtil" sourceFile="FileUploadUtil.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.hr.shop.util.MD5Util" sourceFile="MD5Util.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.hr.shop.util.ProdoctTimerTask" sourceFile="ProdoctTimerTask.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.hr.shop.util.StringToTimestamp" sourceFile="StringToTimestamp.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.hr.shop.util.TokenUtil" sourceFile="TokenUtil.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hr.shop.validatorInterface" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.hr.shop.validatorInterface.ValidInterface" sourceFile="ValidInterface.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.qimen.api" total_bugs="0" total_types="4" total_size="175">
+      <ClassStats class="com.qimen.api.DefaultQimenClient" sourceFile="DefaultQimenClient.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.qimen.api.QimenClient" sourceFile="QimenClient.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.qimen.api.QimenRequest" sourceFile="QimenRequest.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.qimen.api.QimenResponse" sourceFile="QimenResponse.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api" total_bugs="0" total_types="23" total_size="803">
+      <ClassStats class="com.taobao.api.ApiException" sourceFile="ApiException.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.taobao.api.ApiRuleException" sourceFile="ApiRuleException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.AutoRetryClusterTaobaoClient" sourceFile="AutoRetryClusterTaobaoClient.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.taobao.api.AutoRetryTaobaoClient" sourceFile="AutoRetryTaobaoClient.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.taobao.api.BaseTaobaoRequest" sourceFile="BaseTaobaoRequest.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.taobao.api.BatchTaobaoClient" sourceFile="BatchTaobaoClient.java" interface="false" size="148" bugs="0"/>
+      <ClassStats class="com.taobao.api.ClusterTaobaoClient" sourceFile="ClusterTaobaoClient.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.taobao.api.Constants" sourceFile="Constants.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.taobao.api.DefaultTaobaoClient" sourceFile="DefaultTaobaoClient.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="com.taobao.api.FileItem" sourceFile="FileItem.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.FileItem$ByteArrayContract" sourceFile="FileItem.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.taobao.api.FileItem$Contract" sourceFile="FileItem.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.FileItem$LocalContract" sourceFile="FileItem.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.taobao.api.FileItem$StreamContract" sourceFile="FileItem.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.SecretException" sourceFile="SecretException.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoBatchRequest" sourceFile="TaobaoBatchRequest.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoBatchResponse" sourceFile="TaobaoBatchResponse.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoClient" sourceFile="TaobaoClient.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoObject" sourceFile="TaobaoObject.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoParser" sourceFile="TaobaoParser.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoRequest" sourceFile="TaobaoRequest.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoResponse" sourceFile="TaobaoResponse.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.taobao.api.TaobaoUploadRequest" sourceFile="TaobaoUploadRequest.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.domain" total_bugs="0" total_types="5" total_size="158">
+      <ClassStats class="com.taobao.api.domain.Area" sourceFile="Area.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.domain.BizResult" sourceFile="BizResult.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.domain.KfcSearchResult" sourceFile="KfcSearchResult.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.domain.Subtask" sourceFile="Subtask.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.domain.Task" sourceFile="Task.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.cluster" total_bugs="0" total_types="11" total_size="319">
+      <ClassStats class="com.taobao.api.internal.cluster.ApiConfig" sourceFile="ApiConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.ApiModle" sourceFile="ApiModle.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.ApiRule" sourceFile="ApiRule.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.ClusterManager" sourceFile="ClusterManager.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.ClusterManager$1" sourceFile="ClusterManager.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.DnsConfig" sourceFile="DnsConfig.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.EnvConfig" sourceFile="EnvConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.HttpdnsGetRequest" sourceFile="HttpdnsGetRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.HttpdnsGetResponse" sourceFile="HttpdnsGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.VipRule" sourceFile="VipRule.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.cluster.Weightable" sourceFile="Weightable.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.mapping" total_bugs="0" total_types="5" total_size="131">
+      <ClassStats class="com.taobao.api.internal.mapping.ApiField" sourceFile="ApiField.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.mapping.ApiListField" sourceFile="ApiListField.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.mapping.Converter" sourceFile="Converter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.mapping.Converters" sourceFile="Converters.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.mapping.Reader" sourceFile="Reader.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.parser.json" total_bugs="0" total_types="5" total_size="118">
+      <ClassStats class="com.taobao.api.internal.parser.json.JsonConverter" sourceFile="JsonConverter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.json.JsonConverter$1" sourceFile="JsonConverter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.json.ObjectJsonParser" sourceFile="ObjectJsonParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.json.SimplifyJsonConverter" sourceFile="SimplifyJsonConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.json.SimplifyJsonConverter$1" sourceFile="SimplifyJsonConverter.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.parser.xml" total_bugs="0" total_types="4" total_size="79">
+      <ClassStats class="com.taobao.api.internal.parser.xml.ObjectXmlParser" sourceFile="ObjectXmlParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.xml.QimenXmlParser" sourceFile="QimenXmlParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.xml.XmlConverter" sourceFile="XmlConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.parser.xml.XmlConverter$1" sourceFile="XmlConverter.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.spi" total_bugs="0" total_types="1" total_size="111">
+      <ClassStats class="com.taobao.api.internal.spi.SpiUtils" sourceFile="SpiUtils.java" interface="false" size="111" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.tmc" total_bugs="0" total_types="23" total_size="788">
+      <ClassStats class="com.taobao.api.internal.tmc.DuplicateRemoverTmcHandler" sourceFile="DuplicateRemoverTmcHandler.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.DuplicateRemoverTmcHandler$1" sourceFile="DuplicateRemoverTmcHandler.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.DuplicateRemoverTmcHandler$MsgKeySelector" sourceFile="DuplicateRemoverTmcHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.DuplicateRemoverTmcHandler$MsgScheduleTask" sourceFile="DuplicateRemoverTmcHandler.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.DuplicateRemoverTmcHandler$Pair" sourceFile="DuplicateRemoverTmcHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.KeySelector" sourceFile="KeySelector.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.Message" sourceFile="Message.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MessageFields" sourceFile="MessageFields.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MessageHandler" sourceFile="MessageHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MessageKind" sourceFile="MessageKind.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MessageStatus" sourceFile="MessageStatus.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MixClient" sourceFile="MixClient.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MixClient$1" sourceFile="MixClient.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.MixClient$ServerIdentity" sourceFile="MixClient.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcClient" sourceFile="TmcClient.java" interface="false" size="239" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcClient$1" sourceFile="TmcClient.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcClient$InnerClient" sourceFile="TmcClient.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcHandler" sourceFile="TmcHandler.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcHandler$1" sourceFile="TmcHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcHandler$2" sourceFile="TmcHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcHandler$3" sourceFile="TmcHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcHandler$ConfirmWorker" sourceFile="TmcHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.tmc.TmcIdentity" sourceFile="TmcIdentity.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink" total_bugs="0" total_types="10" total_size="450">
+      <ClassStats class="com.taobao.api.internal.toplink.BufferManager" sourceFile="BufferManager.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.DefaultLogger" sourceFile="DefaultLogger.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.DefaultLoggerFactory" sourceFile="DefaultLoggerFactory.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.LinkException" sourceFile="LinkException.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.Logger" sourceFile="Logger.java" interface="true" size="26" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.LoggerFactory" sourceFile="LoggerFactory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.Pool" sourceFile="Pool.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.ResetableTimer" sourceFile="ResetableTimer.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.ResetableTimer$1" sourceFile="ResetableTimer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.Text" sourceFile="Text.java" interface="false" size="114" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.channel" total_bugs="0" total_types="17" total_size="224">
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelContext" sourceFile="ChannelContext.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelException" sourceFile="ChannelException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelHandler" sourceFile="ChannelHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelSender" sourceFile="ChannelSender.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelSender$SendHandler" sourceFile="ChannelSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ChannelTimeoutException" sourceFile="ChannelTimeoutException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannel" sourceFile="ClientChannel.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannelHandler" sourceFile="ClientChannelHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannelPooledSelector" sourceFile="ClientChannelPooledSelector.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannelPooledSelector$ChannelPool" sourceFile="ClientChannelPooledSelector.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannelSelector" sourceFile="ClientChannelSelector.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ClientChannelSharedSelector" sourceFile="ClientChannelSharedSelector.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ConnectingChannelHandler" sourceFile="ConnectingChannelHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ServerChannel" sourceFile="ServerChannel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.ServerChannelSender" sourceFile="ServerChannelSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.SimpleChannelHandler" sourceFile="SimpleChannelHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.X509AlwaysTrustManager" sourceFile="X509AlwaysTrustManager.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.channel.embedded" total_bugs="0" total_types="7" total_size="208">
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedClientChannelPooledSelector" sourceFile="EmbeddedClientChannelPooledSelector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedClientChannelPooledSelector$EmbeddedChannelPool" sourceFile="EmbeddedClientChannelPooledSelector.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedClientChannelSharedSelector" sourceFile="EmbeddedClientChannelSharedSelector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedWebSocketClient" sourceFile="EmbeddedWebSocketClient.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedWebSocketClientChannel" sourceFile="EmbeddedWebSocketClientChannel.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedWebSocketClientChannel$1" sourceFile="EmbeddedWebSocketClientChannel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.embedded.EmbeddedWebSocketHandler" sourceFile="EmbeddedWebSocketHandler.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.channel.netty" total_bugs="0" total_types="9" total_size="227">
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.MaxIdleTimeHandler" sourceFile="MaxIdleTimeHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyChannelSender" sourceFile="NettyChannelSender.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyClient" sourceFile="NettyClient.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyClient$1" sourceFile="NettyClient.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyClientChannel" sourceFile="NettyClientChannel.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyClientUpstreamHandler" sourceFile="NettyClientUpstreamHandler.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyServerChannel" sourceFile="NettyServerChannel.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyServerChannel$1" sourceFile="NettyServerChannel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.netty.NettyServerUpstreamHandler" sourceFile="NettyServerUpstreamHandler.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.channel.tcp" total_bugs="0" total_types="10" total_size="147">
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpChannelSender" sourceFile="TcpChannelSender.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpChannelSender$1" sourceFile="TcpChannelSender.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpChannelSender$2" sourceFile="TcpChannelSender.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpClient" sourceFile="TcpClient.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpClientChannel" sourceFile="TcpClientChannel.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpClientChannel$1" sourceFile="TcpClientChannel.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpClientUpstreamHandler" sourceFile="TcpClientUpstreamHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpServerChannel" sourceFile="TcpServerChannel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpServerChannelSender" sourceFile="TcpServerChannelSender.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.tcp.TcpServerUpstreamHandler" sourceFile="TcpServerUpstreamHandler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.channel.websocket" total_bugs="0" total_types="12" total_size="366">
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.CustomWebSocket13FrameDecoder" sourceFile="CustomWebSocket13FrameDecoder.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketChannelSender" sourceFile="WebSocketChannelSender.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketChannelSender$1" sourceFile="WebSocketChannelSender.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClient" sourceFile="WebSocketClient.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClientChannel" sourceFile="WebSocketClientChannel.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClientChannel$1" sourceFile="WebSocketClientChannel.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClientHelper" sourceFile="WebSocketClientHelper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClientUpstreamHandler" sourceFile="WebSocketClientUpstreamHandler.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketClientUpstreamHandler$ClearHandler" sourceFile="WebSocketClientUpstreamHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketServerChannel" sourceFile="WebSocketServerChannel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketServerChannelSender" sourceFile="WebSocketServerChannelSender.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.channel.websocket.WebSocketServerUpstreamHandler" sourceFile="WebSocketServerUpstreamHandler.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket" total_bugs="0" total_types="4" total_size="100">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.BufferManager" sourceFile="BufferManager.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.HttpHeader" sourceFile="HttpHeader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.WebSocket" sourceFile="WebSocket.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.WebSockets" sourceFile="WebSockets.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.auth" total_bugs="0" total_types="8" total_size="196">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.AbstractAuthenticator" sourceFile="AbstractAuthenticator.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.AuthScheme" sourceFile="AuthScheme.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.Authenticator" sourceFile="Authenticator.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.BasicAuthenticator" sourceFile="BasicAuthenticator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.Challenge" sourceFile="Challenge.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.Credentials" sourceFile="Credentials.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.DefaultAuthenticator" sourceFile="DefaultAuthenticator.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.DigestAuthenticator" sourceFile="DigestAuthenticator.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.auth.win32" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.auth.win32.Mechanism" sourceFile="Mechanism.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.exception" total_bugs="0" total_types="2" total_size="127">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.exception.ErrorCode" sourceFile="ErrorCode.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.exception.WebSocketException" sourceFile="WebSocketException.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.frame" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.Frame" sourceFile="Frame.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.FrameHeader" sourceFile="FrameHeader.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.FrameParser" sourceFile="FrameParser.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.FrameParser$State" sourceFile="FrameParser.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.Maskable" sourceFile="Maskable.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06" total_bugs="0" total_types="14" total_size="308">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.BinaryFrame" sourceFile="BinaryFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.CloseFrame" sourceFile="CloseFrame.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06" sourceFile="FrameBuilderDraft06.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06$1" sourceFile="FrameBuilderDraft06.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06$Fin" sourceFile="FrameBuilderDraft06.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06$Opcode" sourceFile="FrameBuilderDraft06.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06$PayloadLengthType" sourceFile="FrameBuilderDraft06.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameBuilderDraft06$Rsv" sourceFile="FrameBuilderDraft06.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameDraft06" sourceFile="FrameDraft06.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameHeaderDraft06" sourceFile="FrameHeaderDraft06.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.FrameHeaderDraft06$1" sourceFile="FrameHeaderDraft06.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.PingFrame" sourceFile="PingFrame.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.PongFrame" sourceFile="PongFrame.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft06.TextFrame" sourceFile="TextFrame.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76" total_bugs="0" total_types="6" total_size="175">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.BinaryFrame" sourceFile="BinaryFrame.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.CloseFrame" sourceFile="CloseFrame.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.FrameBuilderDraft76" sourceFile="FrameBuilderDraft76.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.FrameDraft76" sourceFile="FrameDraft76.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.FrameHeaderDraft76" sourceFile="FrameHeaderDraft76.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.draft76.TextFrame" sourceFile="TextFrame.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455" total_bugs="0" total_types="14" total_size="349">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.BinaryFrame" sourceFile="BinaryFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.CloseFrame" sourceFile="CloseFrame.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455" sourceFile="FrameBuilderRfc6455.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455$1" sourceFile="FrameBuilderRfc6455.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455$Fin" sourceFile="FrameBuilderRfc6455.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455$Opcode" sourceFile="FrameBuilderRfc6455.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455$PayloadLengthType" sourceFile="FrameBuilderRfc6455.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameBuilderRfc6455$Rsv" sourceFile="FrameBuilderRfc6455.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameHeaderRfc6455" sourceFile="FrameHeaderRfc6455.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameHeaderRfc6455$1" sourceFile="FrameHeaderRfc6455.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.FrameRfc6455" sourceFile="FrameRfc6455.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.PingFrame" sourceFile="PingFrame.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.PongFrame" sourceFile="PongFrame.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.frame.rfc6455.TextFrame" sourceFile="TextFrame.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.handler" total_bugs="0" total_types="13" total_size="249">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.MaskDraft06FrameStreamHandler" sourceFile="MaskDraft06FrameStreamHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.MaskFrameStreamHandler" sourceFile="MaskFrameStreamHandler.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.PacketDumpStreamHandler" sourceFile="PacketDumpStreamHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.SSLStreamHandler" sourceFile="SSLStreamHandler.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.StreamHandler" sourceFile="StreamHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.StreamHandlerAdapter" sourceFile="StreamHandlerAdapter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.StreamHandlerChain" sourceFile="StreamHandlerChain.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketExtentionHandler" sourceFile="WebSocketExtentionHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketHandler" sourceFile="WebSocketHandler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketHandlerAdapter" sourceFile="WebSocketHandlerAdapter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketHandlerWrapper" sourceFile="WebSocketHandlerWrapper.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketPipeline" sourceFile="WebSocketPipeline.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handler.WebSocketStreamHandler" sourceFile="WebSocketStreamHandler.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.handshake" total_bugs="0" total_types="14" total_size="471">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.Handshake" sourceFile="Handshake.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.Handshake$State" sourceFile="Handshake.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.HttpResponseHeaderParser" sourceFile="HttpResponseHeaderParser.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.ProxyHandshake" sourceFile="ProxyHandshake.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.ProxyHandshake$1" sourceFile="ProxyHandshake.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.ProxyHandshake$State" sourceFile="ProxyHandshake.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake" sourceFile="SSLHandshake.java" interface="false" size="130" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$1" sourceFile="SSLHandshake.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$2" sourceFile="SSLHandshake.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$3" sourceFile="SSLHandshake.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$4" sourceFile="SSLHandshake.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$HandshakeBuffer" sourceFile="SSLHandshake.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.SSLHandshake$HandshakeCallback" sourceFile="SSLHandshake.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.handshake.X509AlwaysTrustManager" sourceFile="X509AlwaysTrustManager.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.impl" total_bugs="0" total_types="19" total_size="811">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase" sourceFile="WebSocketBase.java" interface="false" size="331" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase$1" sourceFile="WebSocketBase.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase$2" sourceFile="WebSocketBase.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase$3" sourceFile="WebSocketBase.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase$4" sourceFile="WebSocketBase.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketBase$State" sourceFile="WebSocketBase.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft06" sourceFile="WebSocketDraft06.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft06$1" sourceFile="WebSocketDraft06.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft06$2" sourceFile="WebSocketDraft06.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft06$3" sourceFile="WebSocketDraft06.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft76" sourceFile="WebSocketDraft76.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft76$1" sourceFile="WebSocketDraft76.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft76$2" sourceFile="WebSocketDraft76.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft76$3" sourceFile="WebSocketDraft76.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketDraft76$SecWebSocketKey" sourceFile="WebSocketDraft76.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketImpl" sourceFile="WebSocketImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketImpl$1" sourceFile="WebSocketImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketImpl$2" sourceFile="WebSocketImpl.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.impl.WebSocketImpl$3" sourceFile="WebSocketImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.proxy" total_bugs="0" total_types="1" total_size="73">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.proxy.Proxy" sourceFile="Proxy.java" interface="false" size="73" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.embedded.websocket.util" total_bugs="0" total_types="5" total_size="461">
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.util.Base64" sourceFile="Base64.java" interface="false" size="250" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.util.PacketDumpUtil" sourceFile="PacketDumpUtil.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.util.StringUtil$1" sourceFile="StringUtil.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.embedded.websocket.util.StringUtil$State" sourceFile="StringUtil.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.endpoint" total_bugs="0" total_types="23" total_size="601">
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.ChannelSenderWrapper" sourceFile="ChannelSenderWrapper.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.ClientChannelWrapper" sourceFile="ClientChannelWrapper.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.DefaultIdentity" sourceFile="DefaultIdentity.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.Endpoint" sourceFile="Endpoint.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointBaseContext" sourceFile="EndpointBaseContext.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointChannelHandler" sourceFile="EndpointChannelHandler.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointChannelHandler$1" sourceFile="EndpointChannelHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointChannelHandler$InnerSendHandler" sourceFile="EndpointChannelHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointContext" sourceFile="EndpointContext.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.EndpointProxy" sourceFile="EndpointProxy.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.Identity" sourceFile="Identity.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.Message" sourceFile="Message.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageHandler" sourceFile="MessageHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageIO" sourceFile="MessageIO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageIO$MessageDecoder" sourceFile="MessageIO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageIO$MessageEncoder" sourceFile="MessageIO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageScheduleTask" sourceFile="MessageScheduleTask.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageType" sourceFile="MessageType.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageType$HeaderType" sourceFile="MessageType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.MessageType$ValueFormat" sourceFile="MessageType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.SendCallback" sourceFile="SendCallback.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.SingleProxyStateHandler" sourceFile="SingleProxyStateHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.StateHandler" sourceFile="StateHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.endpoint.protocol" total_bugs="0" total_types="9" total_size="285">
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.CompatibleUtil" sourceFile="CompatibleUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.DefaultMessageDecoderFactory" sourceFile="DefaultMessageDecoderFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.DefaultMessageEncoderFactory" sourceFile="DefaultMessageEncoderFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageDecoder01" sourceFile="MessageDecoder01.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageDecoder02" sourceFile="MessageDecoder02.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageDecoderFactory" sourceFile="MessageDecoderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageEncoder01" sourceFile="MessageEncoder01.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageEncoder02" sourceFile="MessageEncoder02.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.endpoint.protocol.MessageEncoderFactory" sourceFile="MessageEncoderFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.logging" total_bugs="0" total_types="5" total_size="191">
+      <ClassStats class="com.taobao.api.internal.toplink.logging.CommonsLogger" sourceFile="CommonsLogger.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.logging.CommonsLoggerFactory" sourceFile="CommonsLoggerFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.logging.Log4jLogger" sourceFile="Log4jLogger.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.logging.Log4jLoggerFactory" sourceFile="Log4jLoggerFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.logging.LogUtil" sourceFile="LogUtil.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.netcat" total_bugs="0" total_types="4" total_size="59">
+      <ClassStats class="com.taobao.api.internal.toplink.netcat.CommandProcessor" sourceFile="CommandProcessor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.netcat.NetCatCommandServerChannelHandler" sourceFile="NetCatCommandServerChannelHandler.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.netcat.NetCatCommandServerChannelHandler$1" sourceFile="NetCatCommandServerChannelHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.netcat.NetCatOuputWriter" sourceFile="NetCatOuputWriter.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.netcat.netty" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.taobao.api.internal.toplink.netcat.netty.NettyNetCatCommandServerChannel" sourceFile="NettyNetCatCommandServerChannel.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.protocol" total_bugs="0" total_types="4" total_size="52">
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.CompatibleUtil" sourceFile="CompatibleUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.MessageHeader" sourceFile="MessageHeader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.NotSupportedException" sourceFile="NotSupportedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.ProtocolStreamHandle" sourceFile="ProtocolStreamHandle.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.protocol.http" total_bugs="0" total_types="2" total_size="87">
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.http.HttpHeader" sourceFile="HttpHeader.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.http.HttpProtocolHandle" sourceFile="HttpProtocolHandle.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.protocol.tcp" total_bugs="0" total_types="7" total_size="195">
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpContentDelimiter" sourceFile="TcpContentDelimiter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpHeaderFormat" sourceFile="TcpHeaderFormat.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpHeaders" sourceFile="TcpHeaders.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpOperations" sourceFile="TcpOperations.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpProtocolHandle" sourceFile="TcpProtocolHandle.java" interface="false" size="154" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpStringFormat" sourceFile="TcpStringFormat.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.protocol.tcp.TcpTransportHeader" sourceFile="TcpTransportHeader.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.remoting" total_bugs="0" total_types="39" total_size="763">
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.ChannelContextBean" sourceFile="ChannelContextBean.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DefaultMethodCallProcessor" sourceFile="DefaultMethodCallProcessor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DefaultRemotingServerChannelHandler" sourceFile="DefaultRemotingServerChannelHandler.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DefaultSerializationFactory" sourceFile="DefaultSerializationFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DefaultSerializer" sourceFile="DefaultSerializer.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DynamicProxy" sourceFile="DynamicProxy.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.DynamicProxy$1" sourceFile="DynamicProxy.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.FormatterException" sourceFile="FormatterException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.HandshakerBean" sourceFile="HandshakerBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.HandshakingHeadersBean" sourceFile="HandshakingHeadersBean.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.Message" sourceFile="Message.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodCall" sourceFile="MethodCall.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodCallContext" sourceFile="MethodCallContext.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodCallContextBean" sourceFile="MethodCallContextBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodCallProcessor" sourceFile="MethodCallProcessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodCallWrapper" sourceFile="MethodCallWrapper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodReturn" sourceFile="MethodReturn.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.MethodReturnWrapper" sourceFile="MethodReturnWrapper.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingClientChannelSharedSelector" sourceFile="NettyRemotingClientChannelSharedSelector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingDecoder" sourceFile="NettyRemotingDecoder.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingDecoder$1" sourceFile="NettyRemotingDecoder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingDecoder$State" sourceFile="NettyRemotingDecoder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingEncoder" sourceFile="NettyRemotingEncoder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingProtocolHandle" sourceFile="NettyRemotingProtocolHandle.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.NettyRemotingTcpServerChannel" sourceFile="NettyRemotingTcpServerChannel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingCallback" sourceFile="RemotingCallback.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingClientChannelHandler" sourceFile="RemotingClientChannelHandler.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingConfiguration" sourceFile="RemotingConfiguration.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingException" sourceFile="RemotingException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingServerChannelHandler" sourceFile="RemotingServerChannelHandler.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingServerChannelHandler$1" sourceFile="RemotingServerChannelHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingServerChannelHandler$2" sourceFile="RemotingServerChannelHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.RemotingService" sourceFile="RemotingService.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.SerializationFactory" sourceFile="SerializationFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.Serializer" sourceFile="Serializer.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.ServiceBean" sourceFile="ServiceBean.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.SpringRemotingServerChannelHandler" sourceFile="SpringRemotingServerChannelHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.SpringRemotingServerChannelHandler$Context" sourceFile="SpringRemotingServerChannelHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.SynchronizedRemotingCallback" sourceFile="SynchronizedRemotingCallback.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.remoting.protocol" total_bugs="0" total_types="3" total_size="37">
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.protocol.RemotingTcpHeaders" sourceFile="RemotingTcpHeaders.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.protocol.RemotingTcpProtocolHandle" sourceFile="RemotingTcpProtocolHandle.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.remoting.protocol.RemotingTransportHeader" sourceFile="RemotingTransportHeader.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.schedule" total_bugs="0" total_types="5" total_size="221">
+      <ClassStats class="com.taobao.api.internal.toplink.schedule.BatchedScheduler" sourceFile="BatchedScheduler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.schedule.BatchedScheduler$1" sourceFile="BatchedScheduler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.schedule.Scheduler" sourceFile="Scheduler.java" interface="false" size="153" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.schedule.Scheduler$1" sourceFile="Scheduler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.toplink.schedule.Scheduler$2" sourceFile="Scheduler.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.toplink.util" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="com.taobao.api.internal.toplink.util.GZIPHelper" sourceFile="GZIPHelper.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.util" total_bugs="0" total_types="17" total_size="1565">
+      <ClassStats class="com.taobao.api.internal.util.AtsUtils" sourceFile="AtsUtils.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.Base64" sourceFile="Base64.java" interface="false" size="261" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.LruHashMap" sourceFile="LruHashMap.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.NamedThreadFactory" sourceFile="NamedThreadFactory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.RequestCheckUtils" sourceFile="RequestCheckUtils.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.RequestParametersHolder" sourceFile="RequestParametersHolder.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.StringUtils" sourceFile="StringUtils.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.TaobaoContext" sourceFile="TaobaoContext.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.TaobaoHashMap" sourceFile="TaobaoHashMap.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.TaobaoLogger" sourceFile="TaobaoLogger.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.TaobaoUtils" sourceFile="TaobaoUtils.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.WebUtils" sourceFile="WebUtils.java" interface="false" size="247" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.WebUtils$1" sourceFile="WebUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.WebUtils$2" sourceFile="WebUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.WebUtils$TrustAllTrustManager" sourceFile="WebUtils.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.XmlUtils" sourceFile="XmlUtils.java" interface="false" size="262" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.XmlWriter" sourceFile="XmlWriter.java" interface="false" size="131" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.internal.util.json" total_bugs="0" total_types="9" total_size="544">
+      <ClassStats class="com.taobao.api.internal.util.json.BufferErrorListener" sourceFile="BufferErrorListener.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.ExceptionErrorListener" sourceFile="ExceptionErrorListener.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONErrorListener" sourceFile="JSONErrorListener.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONReader" sourceFile="JSONReader.java" interface="false" size="148" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONValidatingReader" sourceFile="JSONValidatingReader.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONValidatingWriter" sourceFile="JSONValidatingWriter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONValidator" sourceFile="JSONValidator.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.JSONWriter" sourceFile="JSONWriter.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="com.taobao.api.internal.util.json.StdoutStreamErrorListener" sourceFile="StdoutStreamErrorListener.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.request" total_bugs="0" total_types="20" total_size="639">
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcFlowChargeProvinceRequest" sourceFile="AlibabaAliqinFcFlowChargeProvinceRequest.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcFlowChargeRequest" sourceFile="AlibabaAliqinFcFlowChargeRequest.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcFlowGradeRequest" sourceFile="AlibabaAliqinFcFlowGradeRequest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcFlowQueryRequest" sourceFile="AlibabaAliqinFcFlowQueryRequest.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcSmsNumQueryRequest" sourceFile="AlibabaAliqinFcSmsNumQueryRequest.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcSmsNumSendRequest" sourceFile="AlibabaAliqinFcSmsNumSendRequest.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcTtsNumSinglecallRequest" sourceFile="AlibabaAliqinFcTtsNumSinglecallRequest.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcVoiceNumDoublecallRequest" sourceFile="AlibabaAliqinFcVoiceNumDoublecallRequest.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AlibabaAliqinFcVoiceNumSinglecallRequest" sourceFile="AlibabaAliqinFcVoiceNumSinglecallRequest.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AppipGetRequest" sourceFile="AppipGetRequest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.AreasGetRequest" sourceFile="AreasGetRequest.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.HttpdnsGetRequest" sourceFile="HttpdnsGetRequest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.KfcKeywordSearchRequest" sourceFile="KfcKeywordSearchRequest.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TimeGetRequest" sourceFile="TimeGetRequest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopAuthTokenCreateRequest" sourceFile="TopAuthTokenCreateRequest.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopAuthTokenRefreshRequest" sourceFile="TopAuthTokenRefreshRequest.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopIpoutGetRequest" sourceFile="TopIpoutGetRequest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopSecretGetRequest" sourceFile="TopSecretGetRequest.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopatsResultGetRequest" sourceFile="TopatsResultGetRequest.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.taobao.api.request.TopatsTaskDeleteRequest" sourceFile="TopatsTaskDeleteRequest.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.response" total_bugs="0" total_types="25" total_size="411">
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowChargeProvinceResponse" sourceFile="AlibabaAliqinFcFlowChargeProvinceResponse.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowChargeProvinceResponse$Result" sourceFile="AlibabaAliqinFcFlowChargeProvinceResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowChargeResponse" sourceFile="AlibabaAliqinFcFlowChargeResponse.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowChargeResponse$Result" sourceFile="AlibabaAliqinFcFlowChargeResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowGradeResponse" sourceFile="AlibabaAliqinFcFlowGradeResponse.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowGradeResponse$Result" sourceFile="AlibabaAliqinFcFlowGradeResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowQueryResponse" sourceFile="AlibabaAliqinFcFlowQueryResponse.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcFlowQueryResponse$Result" sourceFile="AlibabaAliqinFcFlowQueryResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcSmsNumQueryResponse" sourceFile="AlibabaAliqinFcSmsNumQueryResponse.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcSmsNumQueryResponse$FcPartnerSmsDetailDto" sourceFile="AlibabaAliqinFcSmsNumQueryResponse.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse" sourceFile="AlibabaAliqinFcSmsNumSendResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcTtsNumSinglecallResponse" sourceFile="AlibabaAliqinFcTtsNumSinglecallResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcVoiceNumDoublecallResponse" sourceFile="AlibabaAliqinFcVoiceNumDoublecallResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AlibabaAliqinFcVoiceNumSinglecallResponse" sourceFile="AlibabaAliqinFcVoiceNumSinglecallResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AppipGetResponse" sourceFile="AppipGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.AreasGetResponse" sourceFile="AreasGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.HttpdnsGetResponse" sourceFile="HttpdnsGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.KfcKeywordSearchResponse" sourceFile="KfcKeywordSearchResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TimeGetResponse" sourceFile="TimeGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopAuthTokenCreateResponse" sourceFile="TopAuthTokenCreateResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopAuthTokenRefreshResponse" sourceFile="TopAuthTokenRefreshResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopIpoutGetResponse" sourceFile="TopIpoutGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopSecretGetResponse" sourceFile="TopSecretGetResponse.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopatsResultGetResponse" sourceFile="TopatsResultGetResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.taobao.api.response.TopatsTaskDeleteResponse" sourceFile="TopatsTaskDeleteResponse.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.taobao.api.security" total_bugs="0" total_types="7" total_size="388">
+      <ClassStats class="com.taobao.api.security.SecretContext" sourceFile="SecretContext.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.SecretData" sourceFile="SecretData.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.SecurityClient" sourceFile="SecurityClient.java" interface="false" size="154" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.SecurityCore" sourceFile="SecurityCore.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.SecurityCore$1" sourceFile="SecurityCore.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.TopSecretGetRequest" sourceFile="TopSecretGetRequest.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.taobao.api.security.TopSecretGetResponse" sourceFile="TopSecretGetResponse.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.codec" total_bugs="0" total_types="9" total_size="38">
+      <ClassStats class="org.apache.commons.codec.BinaryDecoder" sourceFile="BinaryDecoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.BinaryEncoder" sourceFile="BinaryEncoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.Decoder" sourceFile="Decoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.DecoderException" sourceFile="DecoderException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.Encoder" sourceFile="Encoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.EncoderException" sourceFile="EncoderException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.StringDecoder" sourceFile="StringDecoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.StringEncoder" sourceFile="StringEncoder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.StringEncoderComparator" sourceFile="StringEncoderComparator.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.codec.binary" total_bugs="0" total_types="3" total_size="311">
+      <ClassStats class="org.apache.commons.codec.binary.Base64" sourceFile="Base64.java" interface="false" size="187" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.binary.BinaryCodec" sourceFile="BinaryCodec.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.binary.Hex" sourceFile="Hex.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.codec.digest" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="org.apache.commons.codec.digest.DigestUtils" sourceFile="DigestUtils.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.codec.language" total_bugs="0" total_types="6" total_size="781">
+      <ClassStats class="org.apache.commons.codec.language.DoubleMetaphone" sourceFile="DoubleMetaphone.java" interface="false" size="429" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult" sourceFile="DoubleMetaphone.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.language.Metaphone" sourceFile="Metaphone.java" interface="false" size="163" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.language.RefinedSoundex" sourceFile="RefinedSoundex.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.language.Soundex" sourceFile="Soundex.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.language.SoundexUtils" sourceFile="SoundexUtils.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.codec.net" total_bugs="0" total_types="6" total_size="431">
+      <ClassStats class="org.apache.commons.codec.net.BCodec" sourceFile="BCodec.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.net.QCodec" sourceFile="QCodec.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.net.QuotedPrintableCodec" sourceFile="QuotedPrintableCodec.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.net.RFC1522Codec" sourceFile="RFC1522Codec.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.net.StringEncodings" sourceFile="StringEncodings.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.apache.commons.codec.net.URLCodec" sourceFile="URLCodec.java" interface="false" size="110" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.jedis" total_bugs="0" total_types="54" total_size="6375">
+      <ClassStats class="redis.clients.jedis.BinaryClient" sourceFile="BinaryClient.java" interface="false" size="563" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryClient$LIST_POSITION" sourceFile="BinaryClient.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedis" sourceFile="BinaryJedis.java" interface="false" size="698" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedisCommands" sourceFile="BinaryJedisCommands.java" interface="true" size="85" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedisPubSub" sourceFile="BinaryJedisPubSub.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryShardedJedis" sourceFile="BinaryShardedJedis.java" interface="false" size="279" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryTransaction" sourceFile="BinaryTransaction.java" interface="false" size="395" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Builder" sourceFile="Builder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory" sourceFile="BuilderFactory.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$1" sourceFile="BuilderFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$10" sourceFile="BuilderFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$11" sourceFile="BuilderFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$12" sourceFile="BuilderFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$13" sourceFile="BuilderFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$2" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$3" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$4" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$5" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$6" sourceFile="BuilderFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$7" sourceFile="BuilderFactory.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$8" sourceFile="BuilderFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$9" sourceFile="BuilderFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Client" sourceFile="Client.java" interface="false" size="477" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Commands" sourceFile="Commands.java" interface="true" size="128" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Connection" sourceFile="Connection.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.DebugParams" sourceFile="DebugParams.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Jedis" sourceFile="Jedis.java" interface="false" size="625" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCommands" sourceFile="JedisCommands.java" interface="true" size="88" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisMonitor" sourceFile="JedisMonitor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPool" sourceFile="JedisPool.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPool$JedisFactory" sourceFile="JedisPool.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPoolConfig" sourceFile="JedisPoolConfig.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPubSub" sourceFile="JedisPubSub.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisShardInfo" sourceFile="JedisShardInfo.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline" sourceFile="Pipeline.java" interface="false" size="742" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline$1" sourceFile="Pipeline.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline$MultiResponseBuilder" sourceFile="Pipeline.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.PipelineBlock" sourceFile="PipelineBlock.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol" sourceFile="Protocol.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol$Command" sourceFile="Protocol.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol$Keyword" sourceFile="Protocol.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Queable" sourceFile="Queable.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Response" sourceFile="Response.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedis" sourceFile="ShardedJedis.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPipeline" sourceFile="ShardedJedisPipeline.java" interface="false" size="382" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPipeline$FutureResult" sourceFile="ShardedJedisPipeline.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPool" sourceFile="ShardedJedisPool.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPool$ShardedJedisFactory" sourceFile="ShardedJedisPool.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.SortingParams" sourceFile="SortingParams.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Transaction" sourceFile="Transaction.java" interface="false" size="337" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.TransactionBlock" sourceFile="TransactionBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Tuple" sourceFile="Tuple.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ZParams" sourceFile="ZParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ZParams$Aggregate" sourceFile="ZParams.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.jedis.exceptions" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="redis.clients.jedis.exceptions.JedisConnectionException" sourceFile="JedisConnectionException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisDataException" sourceFile="JedisDataException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisException" sourceFile="JedisException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.util" total_bugs="0" total_types="13" total_size="526">
+      <ClassStats class="redis.clients.util.Hashing" sourceFile="Hashing.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.util.Hashing$1" sourceFile="Hashing.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap" sourceFile="JedisByteHashMap.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap$ByteArrayWrapper" sourceFile="JedisByteHashMap.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap$JedisByteEntry" sourceFile="JedisByteHashMap.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="redis.clients.util.MurmurHash" sourceFile="MurmurHash.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="redis.clients.util.Pool" sourceFile="Pool.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="redis.clients.util.RedisInputStream" sourceFile="RedisInputStream.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="redis.clients.util.RedisOutputStream" sourceFile="RedisOutputStream.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="redis.clients.util.SafeEncoder" sourceFile="SafeEncoder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="redis.clients.util.ShardInfo" sourceFile="ShardInfo.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.util.Sharded" sourceFile="Sharded.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="redis.clients.util.Slowlog" sourceFile="Slowlog.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="682" invocations="5084" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="10483" standardDeviationMicrosecondsPerInvocation="337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="607" invocations="5121" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="11977" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="543" invocations="5114" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="8432" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="528" invocations="5200" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="9065" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="515" invocations="5217" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="9961" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="438" invocations="2176" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="32401" standardDeviationMicrosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="386" invocations="5122" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="9761" standardDeviationMicrosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="325" invocations="3922" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="7503" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="311" invocations="957" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="8848" standardDeviationMicrosecondsPerInvocation="759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="293" invocations="957" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="7592" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="279" invocations="6167" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="2760" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="178" invocations="659" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="37802" standardDeviationMicrosecondsPerInvocation="1503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="154" invocations="5763" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="26408" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="149" invocations="5121" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="2769" standardDeviationMicrosecondsPerInvocation="92"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="142" invocations="88776" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="3967" standardDeviationMicrosecondsPerInvocation="15"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="138" invocations="2186" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="545" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="132" invocations="659" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="3444" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="130" invocations="1167" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="22884" standardDeviationMicrosecondsPerInvocation="782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="128" invocations="659" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="4853" standardDeviationMicrosecondsPerInvocation="411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="125" invocations="659" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="4247" standardDeviationMicrosecondsPerInvocation="276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="108" invocations="957" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="3289" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="99" invocations="659" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="10015" standardDeviationMicrosecondsPerInvocation="520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="95" invocations="5084" avgMicrosecondsPerInvocation="18" maxMicrosecondsPerInvocation="1577" standardDeviationMicrosecondsPerInvocation="38"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="93" invocations="957" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1510" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="90" invocations="659" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="3488" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="90" invocations="659" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="12743" standardDeviationMicrosecondsPerInvocation="530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="88" invocations="5031" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="1152" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="80" invocations="957" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="2027" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="80" invocations="659" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="7726" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="80" invocations="957" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="4262" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="77" invocations="659" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="2508" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="76" invocations="1965" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="15409" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="75" invocations="659" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="2211" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="74" invocations="659" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="1663" standardDeviationMicrosecondsPerInvocation="204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FormatStringChecker" totalMilliseconds="74" invocations="659" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="27033" standardDeviationMicrosecondsPerInvocation="1059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="74" invocations="5763" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="3100" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="71" invocations="82610" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="1095" standardDeviationMicrosecondsPerInvocation="3"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="70" invocations="957" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="4741" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="66" invocations="659" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="20617" standardDeviationMicrosecondsPerInvocation="810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="65" invocations="659" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="2197" standardDeviationMicrosecondsPerInvocation="167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="65" invocations="957" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="7061" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="62" invocations="659" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="1947" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="62" invocations="659" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="1915" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="58" invocations="659" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2007" standardDeviationMicrosecondsPerInvocation="171"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597083202000" analysisTimestamp="1597083204055" release="">
+  <Project projectName="repositorios/NekoStark_javaee-example">
+    <Jar>repositorios/NekoStark_javaee-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="it.unifi.ing.stlab.swa.dao.NoteDao">
+      <SourceLine classname="it.unifi.ing.stlab.swa.dao.NoteDao" start="10" end="33" sourcefile="NoteDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/NoteDao.java"/>
+    </Class>
+    <Method classname="it.unifi.ing.stlab.swa.dao.NoteDao" name="findByUserId" signature="(Ljava/lang/Long;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="it.unifi.ing.stlab.swa.dao.NoteDao" start="16" end="16" startBytecode="0" endBytecode="94" sourcefile="NoteDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/NoteDao.java"/>
+    </Method>
+    <SourceLine classname="it.unifi.ing.stlab.swa.dao.NoteDao" start="16" end="16" startBytecode="4" endBytecode="4" sourcefile="NoteDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/NoteDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="it.unifi.ing.stlab.swa.dao.UserDao">
+      <SourceLine classname="it.unifi.ing.stlab.swa.dao.UserDao" start="10" end="37" sourcefile="UserDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/UserDao.java"/>
+    </Class>
+    <Method classname="it.unifi.ing.stlab.swa.dao.UserDao" name="login" signature="(Lit/unifi/ing/stlab/swa/model/User;)Lit/unifi/ing/stlab/swa/model/User;" isStatic="false">
+      <SourceLine classname="it.unifi.ing.stlab.swa.dao.UserDao" start="24" end="37" startBytecode="0" endBytecode="194" sourcefile="UserDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/UserDao.java"/>
+    </Method>
+    <SourceLine classname="it.unifi.ing.stlab.swa.dao.UserDao" start="24" end="24" startBytecode="4" endBytecode="4" sourcefile="UserDao.java" sourcepath="it/unifi/ing/stlab/swa/dao/UserDao.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="it.unifi.ing.stlab.swa.model.Note">
+      <SourceLine classname="it.unifi.ing.stlab.swa.model.Note" start="25" end="62" sourcefile="Note.java" sourcepath="it/unifi/ing/stlab/swa/model/Note.java"/>
+    </Class>
+    <Field classname="it.unifi.ing.stlab.swa.model.Note" name="user" signature="Lit/unifi/ing/stlab/swa/model/User;" isStatic="false">
+      <SourceLine classname="it.unifi.ing.stlab.swa.model.Note" sourcefile="Note.java" sourcepath="it/unifi/ing/stlab/swa/model/Note.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>javax.enterprise.inject.spi.Annotated</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.InjectionPoint</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:13:22 +0000" total_classes="14" referenced_classes="40" total_bugs="3" total_size="263" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.45" clock_seconds="1.26" peak_mbytes="125.05" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="it.unifi.ing.stlab.swa.bean" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="it.unifi.ing.stlab.swa.bean.UserSessionBean" sourceFile="UserSessionBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="it.unifi.ing.stlab.swa.bean.producer" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="it.unifi.ing.stlab.swa.bean.producer.HttpParam" sourceFile="HttpParam.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.bean.producer.HttpParams" sourceFile="HttpParams.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="it.unifi.ing.stlab.swa.bean.startup" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="it.unifi.ing.stlab.swa.bean.startup.StartupBean" sourceFile="StartupBean.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="it.unifi.ing.stlab.swa.controller" total_bugs="0" total_types="4" total_size="88">
+      <ClassStats class="it.unifi.ing.stlab.swa.controller.NoteEditController" sourceFile="NoteEditController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.controller.NoteListController" sourceFile="NoteListController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.controller.NoteViewController" sourceFile="NoteViewController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.controller.UserLoginController" sourceFile="UserLoginController.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="it.unifi.ing.stlab.swa.dao" total_bugs="2" total_types="2" total_size="35" priority_2="2">
+      <ClassStats class="it.unifi.ing.stlab.swa.dao.NoteDao" sourceFile="NoteDao.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.dao.UserDao" sourceFile="UserDao.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="it.unifi.ing.stlab.swa.model" total_bugs="1" total_types="4" total_size="88" priority_2="1">
+      <ClassStats class="it.unifi.ing.stlab.swa.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.model.ModelFactory" sourceFile="ModelFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.model.Note" sourceFile="Note.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="it.unifi.ing.stlab.swa.model.User" sourceFile="User.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="177" invocations="401" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="19016" standardDeviationMicrosecondsPerInvocation="1258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="48" invocations="40" avgMicrosecondsPerInvocation="1224" maxMicrosecondsPerInvocation="11546" standardDeviationMicrosecondsPerInvocation="2333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="407" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="2914" standardDeviationMicrosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="338" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="7995" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="58" avgMicrosecondsPerInvocation="571" maxMicrosecondsPerInvocation="25392" standardDeviationMicrosecondsPerInvocation="3298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="32" invocations="40" avgMicrosecondsPerInvocation="815" maxMicrosecondsPerInvocation="5460" standardDeviationMicrosecondsPerInvocation="1317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="31" invocations="124" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="3543" standardDeviationMicrosecondsPerInvocation="526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="25" invocations="57" avgMicrosecondsPerInvocation="444" maxMicrosecondsPerInvocation="5209" standardDeviationMicrosecondsPerInvocation="770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="59" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="8160" standardDeviationMicrosecondsPerInvocation="1080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="59" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="9571" standardDeviationMicrosecondsPerInvocation="1234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="73" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="11022" standardDeviationMicrosecondsPerInvocation="1321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="23" invocations="57" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="8717" standardDeviationMicrosecondsPerInvocation="1152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="21" invocations="57" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="2800" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="19" invocations="57" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="3037" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="40" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="7173" standardDeviationMicrosecondsPerInvocation="1190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="40" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="9065" standardDeviationMicrosecondsPerInvocation="1443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="40" avgMicrosecondsPerInvocation="408" maxMicrosecondsPerInvocation="4076" standardDeviationMicrosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="40" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="5030" standardDeviationMicrosecondsPerInvocation="831"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="11" invocations="40" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="2484" standardDeviationMicrosecondsPerInvocation="494"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

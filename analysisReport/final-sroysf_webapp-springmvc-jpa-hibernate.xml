@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597110171000" analysisTimestamp="1597110172768" release="">
+  <Project projectName="repositorios/sroysf_webapp-springmvc-jpa-hibernate">
+    <Jar>repositorios/sroysf_webapp-springmvc-jpa-hibernate</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.force.samples.entity.Book">
+      <SourceLine classname="com.force.samples.entity.Book" start="12" end="55" sourcefile="Book.java" sourcepath="com/force/samples/entity/Book.java"/>
+    </Class>
+    <Field classname="com.force.samples.entity.Book" name="author" signature="Lcom/force/samples/entity/Author;" isStatic="false">
+      <SourceLine classname="com.force.samples.entity.Book" sourcefile="Book.java" sourcepath="com/force/samples/entity/Book.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTemplate</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.support.JpaDaoSupport</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:42:51 +0000" total_classes="7" referenced_classes="20" total_bugs="1" total_size="169" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.21" clock_seconds="1.20" peak_mbytes="186.62" alloc_mbytes="3540.00" gc_seconds="0.08" priority_2="1">
+    <PackageStats package="com.force.samples.controllers" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.force.samples.controllers.HomeController" sourceFile="HomeController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.force.samples.controllers.RestController" sourceFile="RestController.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.force.samples.dao" total_bugs="0" total_types="2" total_size="13">
+      <ClassStats class="com.force.samples.dao.BookDAO" sourceFile="BookDAO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.force.samples.dao.BookDAOImpl" sourceFile="BookDAOImpl.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.force.samples.entity" total_bugs="1" total_types="2" total_size="48" priority_2="1">
+      <ClassStats class="com.force.samples.entity.Author" sourceFile="Author.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.force.samples.entity.Book" sourceFile="Book.java" interface="false" size="27" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.force.samples.util" total_bugs="0" total_types="1" total_size="72">
+      <ClassStats class="com.force.samples.util.DataLoadUtil" sourceFile="DataLoadUtil.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="195" invocations="376" avgMicrosecondsPerInvocation="520" maxMicrosecondsPerInvocation="20086" standardDeviationMicrosecondsPerInvocation="1471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="57" invocations="20" avgMicrosecondsPerInvocation="2854" maxMicrosecondsPerInvocation="18894" standardDeviationMicrosecondsPerInvocation="4733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="48" invocations="103" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="8094" standardDeviationMicrosecondsPerInvocation="1208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="41" invocations="381" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="3196" standardDeviationMicrosecondsPerInvocation="166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="35" invocations="320" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="1618" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="20" avgMicrosecondsPerInvocation="1705" maxMicrosecondsPerInvocation="12599" standardDeviationMicrosecondsPerInvocation="2849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="46" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="14303" standardDeviationMicrosecondsPerInvocation="2122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="26" invocations="38" avgMicrosecondsPerInvocation="693" maxMicrosecondsPerInvocation="21540" standardDeviationMicrosecondsPerInvocation="3431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="20" invocations="35" avgMicrosecondsPerInvocation="589" maxMicrosecondsPerInvocation="5270" standardDeviationMicrosecondsPerInvocation="1015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="20" avgMicrosecondsPerInvocation="1014" maxMicrosecondsPerInvocation="7030" standardDeviationMicrosecondsPerInvocation="1646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="19" invocations="35" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="9019" standardDeviationMicrosecondsPerInvocation="1500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="18" invocations="35" avgMicrosecondsPerInvocation="540" maxMicrosecondsPerInvocation="8132" standardDeviationMicrosecondsPerInvocation="1377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="18" invocations="35" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="5333" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="20" avgMicrosecondsPerInvocation="914" maxMicrosecondsPerInvocation="9370" standardDeviationMicrosecondsPerInvocation="2067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="8539" standardDeviationMicrosecondsPerInvocation="1442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="20" avgMicrosecondsPerInvocation="775" maxMicrosecondsPerInvocation="4696" standardDeviationMicrosecondsPerInvocation="1312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="3146" standardDeviationMicrosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="20" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="2895" standardDeviationMicrosecondsPerInvocation="746"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

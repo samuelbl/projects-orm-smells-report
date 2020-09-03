@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597090633000" analysisTimestamp="1597090634385" release="">
+  <Project projectName="repositorios/evgenyigumnov_spring-boot-security-rest-thymleaf-angularjs-bootstrap-jasperreports-jpa-seed">
+    <Jar>repositorios/evgenyigumnov_spring-boot-security-rest-thymleaf-angularjs-bootstrap-jasperreports-jpa-seed</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.igumnov.seedproject.model.City">
+      <SourceLine classname="com.igumnov.seedproject.model.City" start="10" end="47" sourcefile="City.java" sourcepath="com/igumnov/seedproject/model/City.java"/>
+    </Class>
+    <Field classname="com.igumnov.seedproject.model.City" name="country" signature="Lcom/igumnov/seedproject/model/Country;" isStatic="false">
+      <SourceLine classname="com.igumnov.seedproject.model.City" sourcefile="City.java" sourcepath="com/igumnov/seedproject/model/City.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.igumnov.seedproject.model.Country">
+      <SourceLine classname="com.igumnov.seedproject.model.Country" start="14" end="45" sourcefile="Country.java" sourcepath="com/igumnov/seedproject/model/Country.java"/>
+    </Class>
+    <Field classname="com.igumnov.seedproject.model.Country" name="cities" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.igumnov.seedproject.model.Country" sourcefile="Country.java" sourcepath="com/igumnov/seedproject/model/Country.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="27">
+    <MissingClass>net.sf.jasperreports.engine.JRDataSource</MissingClass>
+    <MissingClass>net.sf.jasperreports.engine.JRException</MissingClass>
+    <MissingClass>net.sf.jasperreports.engine.JRField</MissingClass>
+    <MissingClass>net.sf.jasperreports.engine.JasperCompileManager</MissingClass>
+    <MissingClass>net.sf.jasperreports.engine.JasperExportManager</MissingClass>
+    <MissingClass>net.sf.jasperreports.engine.JasperFillManager</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.rest.core.config.RepositoryRestConfiguration</MissingClass>
+    <MissingClass>org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.SessionLocaleResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:17:13 +0000" total_classes="12" referenced_classes="35" total_bugs="2" total_size="159" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.41" clock_seconds="1.26" peak_mbytes="188.89" alloc_mbytes="3540.00" gc_seconds="0.07" priority_2="1" priority_1="1">
+    <PackageStats package="com.igumnov.seedproject" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="com.igumnov.seedproject.SeedServer" sourceFile="SeedServer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.SeedServer$ApplicationSecurity" sourceFile="SeedServer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.SeedServer$AuthenticationSecurity" sourceFile="SeedServer.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.igumnov.seedproject.model" total_bugs="2" total_types="2" total_size="43" priority_2="1" priority_1="1">
+      <ClassStats class="com.igumnov.seedproject.model.City" sourceFile="City.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="com.igumnov.seedproject.model.Country" sourceFile="Country.java" interface="false" size="21" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.igumnov.seedproject.report" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.igumnov.seedproject.report.CustomJRDataSource" sourceFile="CustomJRDataSource.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.igumnov.seedproject.repository" total_bugs="0" total_types="3" total_size="9">
+      <ClassStats class="com.igumnov.seedproject.repository.CityRepository" sourceFile="CityRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.repository.CountryRepository" sourceFile="CountryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.repository.RepositoryConfiguration" sourceFile="RepositoryConfiguration.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.igumnov.seedproject.service" total_bugs="0" total_types="3" total_size="55">
+      <ClassStats class="com.igumnov.seedproject.service.AjaxController" sourceFile="AjaxController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.service.ApiService" sourceFile="ApiService.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.igumnov.seedproject.service.WebController" sourceFile="WebController.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="171" invocations="481" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="11699" standardDeviationMicrosecondsPerInvocation="802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="35" avgMicrosecondsPerInvocation="1926" maxMicrosecondsPerInvocation="16959" standardDeviationMicrosecondsPerInvocation="3454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="490" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="491" standardDeviationMicrosecondsPerInvocation="55"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="154" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="2678" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="37" invocations="35" avgMicrosecondsPerInvocation="1068" maxMicrosecondsPerInvocation="5631" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="33" invocations="392" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="1855" standardDeviationMicrosecondsPerInvocation="160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="28" invocations="41" avgMicrosecondsPerInvocation="685" maxMicrosecondsPerInvocation="23284" standardDeviationMicrosecondsPerInvocation="3575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="99" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="12570" standardDeviationMicrosecondsPerInvocation="1282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="26" invocations="41" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="6001" standardDeviationMicrosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="24" invocations="41" avgMicrosecondsPerInvocation="588" maxMicrosecondsPerInvocation="7297" standardDeviationMicrosecondsPerInvocation="1425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="23" invocations="41" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="8252" standardDeviationMicrosecondsPerInvocation="1579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="35" avgMicrosecondsPerInvocation="597" maxMicrosecondsPerInvocation="6975" standardDeviationMicrosecondsPerInvocation="1206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="19" invocations="41" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="8114" standardDeviationMicrosecondsPerInvocation="1281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="18" invocations="41" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="6386" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="8323" standardDeviationMicrosecondsPerInvocation="1397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="17" invocations="40" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="3522" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="3121" standardDeviationMicrosecondsPerInvocation="760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="35" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="2018" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="35" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="5172" standardDeviationMicrosecondsPerInvocation="883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="11" invocations="35" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="3270" standardDeviationMicrosecondsPerInvocation="909"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

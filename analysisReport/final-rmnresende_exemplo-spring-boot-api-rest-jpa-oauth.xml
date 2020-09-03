@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597108379000" analysisTimestamp="1597108380575" release="">
+  <Project projectName="repositorios/rmnresende_exemplo-spring-boot-api-rest-jpa-oauth">
+    <Jar>repositorios/rmnresende_exemplo-spring-boot-api-rest-jpa-oauth</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="2" missingClasses="9">
+    <Error>
+      <ErrorMessage>Exception analyzing br.com.dynamicdev.sommelierapi.model.Avaliacao using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing br.com.dynamicdev.sommelierapi.model.Avaliacao using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.ServletUriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:12:59 +0000" total_classes="46" referenced_classes="157" total_bugs="0" total_size="1285" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.90" clock_seconds="3.06" peak_mbytes="270.11" alloc_mbytes="3540.00" gc_seconds="0.13">
+    <PackageStats package="br.com.dynamicdev.sommelierapi" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.SommelierApiApplication" sourceFile="SommelierApiApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.handler" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.handler.RecursosExceptionHandler" sourceFile="RecursosExceptionHandler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.model" total_bugs="0" total_types="6" total_size="245">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.Avaliacao" sourceFile="Avaliacao.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.ClassificacaoVinho" sourceFile="ClassificacaoVinho.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.DetalhesErro" sourceFile="DetalhesErro.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.TipoVinho" sourceFile="TipoVinho.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.Usuario" sourceFile="Usuario.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="br.com.dynamicdev.sommelierapi.model.Vinho" sourceFile="Vinho.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.resources" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.resources.VinhoResource" sourceFile="VinhoResource.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.respository" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.respository.VinhoRepository" sourceFile="VinhoRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.service" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.service.VinhoService" sourceFile="VinhoService.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.dynamicdev.sommelierapi.service.exceptions" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="br.com.dynamicdev.sommelierapi.service.exceptions.RecursoNaoEncontradoException" sourceFile="RecursoNaoEncontradoException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="285" invocations="1003" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="13292" standardDeviationMicrosecondsPerInvocation="629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="158" invocations="157" avgMicrosecondsPerInvocation="1010" maxMicrosecondsPerInvocation="10170" standardDeviationMicrosecondsPerInvocation="1739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="124" invocations="157" avgMicrosecondsPerInvocation="792" maxMicrosecondsPerInvocation="6943" standardDeviationMicrosecondsPerInvocation="1263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="124" invocations="711" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="2077" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="101" invocations="270" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="9819" standardDeviationMicrosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="95" invocations="265" avgMicrosecondsPerInvocation="358" maxMicrosecondsPerInvocation="5001" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="94" invocations="274" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="8092" standardDeviationMicrosecondsPerInvocation="884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="86" invocations="269" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="6503" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="84" invocations="274" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="8838" standardDeviationMicrosecondsPerInvocation="883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="1007" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="527" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="73" invocations="157" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="19761" standardDeviationMicrosecondsPerInvocation="1650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="68" invocations="270" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="9783" standardDeviationMicrosecondsPerInvocation="655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="916" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="10109" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="50" invocations="178" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="4066" standardDeviationMicrosecondsPerInvocation="520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="287" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="25578" standardDeviationMicrosecondsPerInvocation="1505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="219" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="13911" standardDeviationMicrosecondsPerInvocation="960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="157" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="4676" standardDeviationMicrosecondsPerInvocation="567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="34" invocations="157" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2322" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="7013" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="2199" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="2214" standardDeviationMicrosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="9064" standardDeviationMicrosecondsPerInvocation="907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="26" invocations="46" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="7590" standardDeviationMicrosecondsPerInvocation="1596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="270" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1923" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="26" invocations="51" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="3058" standardDeviationMicrosecondsPerInvocation="750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="23" invocations="3849" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1565" standardDeviationMicrosecondsPerInvocation="38"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="22" invocations="157" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="1762" standardDeviationMicrosecondsPerInvocation="243"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085833000" analysisTimestamp="1597085834904" release="">
+  <Project projectName="repositorios/Cepr0_generic-crud">
+    <Jar>repositorios/Cepr0_generic-crud</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="io.github.cepr0.crud.repo.JpaRepo">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" start="49" end="87" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Class>
+    <Method classname="io.github.cepr0.crud.repo.JpaRepo" name="getAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="io.github.cepr0.crud.repo.JpaRepo">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" start="49" end="87" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Class>
+    <Method classname="io.github.cepr0.crud.repo.JpaRepo" name="getAll" signature="(Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="io.github.cepr0.crud.repo.JpaRepo">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" start="49" end="87" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Class>
+    <Method classname="io.github.cepr0.crud.repo.JpaRepo" name="getAll" signature="(Lorg/springframework/data/domain/Sort;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="io.github.cepr0.crud.repo.JpaRepo" sourcefile="JpaRepo.java" sourcepath="io/github/cepr0/crud/repo/JpaRepo.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="1" missingClasses="18">
+    <Error>
+      <ErrorMessage>Exception analyzing io.github.cepr0.crud.repo.JpaRepo using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>org.atteo.evo.inflector.English</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.FatalBeanException</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisher</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.repository.MongoRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.util.ClassUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:57:13 +0000" total_classes="22" referenced_classes="93" total_bugs="3" total_size="368" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.76" clock_seconds="2.09" peak_mbytes="196.03" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="3">
+    <PackageStats package="io.github.cepr0.crud.api" total_bugs="0" total_types="6" total_size="122">
+      <ClassStats class="io.github.cepr0.crud.api.AbstractCrudController" sourceFile="AbstractCrudController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.api.CrudPageSerializer" sourceFile="CrudPageSerializer.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.api.CrudPageSerializer$1" sourceFile="CrudPageSerializer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.api.CrudPageSerializer$ContentAliasMode" sourceFile="CrudPageSerializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.api.OnCreate" sourceFile="OnCreate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.api.OnUpdate" sourceFile="OnUpdate.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.dto" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="io.github.cepr0.crud.dto.CrudRequest" sourceFile="CrudRequest.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.dto.CrudResponse" sourceFile="CrudResponse.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.event" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="io.github.cepr0.crud.event.EntityEvent" sourceFile="EntityEvent.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.mapper" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="io.github.cepr0.crud.mapper.CrudMapper" sourceFile="CrudMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.mapper.ReferenceMapper" sourceFile="ReferenceMapper.java" interface="true" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.model" total_bugs="0" total_types="3" total_size="15">
+      <ClassStats class="io.github.cepr0.crud.model.ContentAlias" sourceFile="ContentAlias.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.model.IdentifiableEntity" sourceFile="IdentifiableEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.model.JpaEntity" sourceFile="JpaEntity.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.repo" total_bugs="3" total_types="4" total_size="57" priority_2="3">
+      <ClassStats class="io.github.cepr0.crud.repo.CrudRepo" sourceFile="CrudRepo.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.repo.DocNotFoundException" sourceFile="DocNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.repo.JpaRepo" sourceFile="JpaRepo.java" interface="true" size="20" bugs="3" priority_2="3"/>
+      <ClassStats class="io.github.cepr0.crud.repo.MongoRepo" sourceFile="MongoRepo.java" interface="true" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.service" total_bugs="0" total_types="3" total_size="99">
+      <ClassStats class="io.github.cepr0.crud.service.AbstractCrudService" sourceFile="AbstractCrudService.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.service.CallbackMapper" sourceFile="CallbackMapper.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.github.cepr0.crud.service.CrudService" sourceFile="CrudService.java" interface="true" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.github.cepr0.crud.support" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="io.github.cepr0.crud.support.CrudUtils" sourceFile="CrudUtils.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="225" invocations="666" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="11126" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="99" invocations="93" avgMicrosecondsPerInvocation="1072" maxMicrosecondsPerInvocation="19682" standardDeviationMicrosecondsPerInvocation="2691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="72" invocations="670" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="7876" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="69" invocations="74" avgMicrosecondsPerInvocation="938" maxMicrosecondsPerInvocation="17362" standardDeviationMicrosecondsPerInvocation="2197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="63" invocations="93" avgMicrosecondsPerInvocation="685" maxMicrosecondsPerInvocation="7225" standardDeviationMicrosecondsPerInvocation="1295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="74" avgMicrosecondsPerInvocation="851" maxMicrosecondsPerInvocation="12447" standardDeviationMicrosecondsPerInvocation="2217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="55" invocations="74" avgMicrosecondsPerInvocation="753" maxMicrosecondsPerInvocation="11408" standardDeviationMicrosecondsPerInvocation="1544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="52" invocations="288" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="3741" standardDeviationMicrosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="51" invocations="113" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="40038" standardDeviationMicrosecondsPerInvocation="3747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="51" invocations="73" avgMicrosecondsPerInvocation="698" maxMicrosecondsPerInvocation="6847" standardDeviationMicrosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="49" invocations="74" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="10635" standardDeviationMicrosecondsPerInvocation="1760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="48" invocations="74" avgMicrosecondsPerInvocation="660" maxMicrosecondsPerInvocation="15313" standardDeviationMicrosecondsPerInvocation="2177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="142" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="14797" standardDeviationMicrosecondsPerInvocation="1316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="586" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="1666" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="93" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="7782" standardDeviationMicrosecondsPerInvocation="924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="25" invocations="66" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="6139" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="93" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="3683" standardDeviationMicrosecondsPerInvocation="652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="93" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="9063" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="93" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="3351" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="22" avgMicrosecondsPerInvocation="931" maxMicrosecondsPerInvocation="11725" standardDeviationMicrosecondsPerInvocation="2435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="93" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="2068" standardDeviationMicrosecondsPerInvocation="375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="17" invocations="1551" avgMicrosecondsPerInvocation="11" maxMicrosecondsPerInvocation="728" standardDeviationMicrosecondsPerInvocation="44"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

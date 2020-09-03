@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595991540000" analysisTimestamp="1595991541363" release="">
+  <Project projectName="repositorios/danjee_generic-data">
+    <Jar>repositorios/danjee_generic-data</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.persistence.FetchType</MissingClass>
+    <MissingClass>javax.persistence.ManyToMany</MissingClass>
+    <MissingClass>javax.persistence.ManyToOne</MissingClass>
+    <MissingClass>javax.persistence.OneToMany</MissingClass>
+    <MissingClass>javax.persistence.OneToOne</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.EmptyInterceptor</MissingClass>
+    <MissingClass>org.hibernate.Hibernate</MissingClass>
+    <MissingClass>org.hibernate.Interceptor</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Criterion</MissingClass>
+    <MissingClass>org.hibernate.criterion.Example</MissingClass>
+    <MissingClass>org.hibernate.criterion.LogicalExpression</MissingClass>
+    <MissingClass>org.hibernate.criterion.MatchMode</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.ProjectionList</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.hibernate.criterion.SimpleExpression</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DataSourceUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 02:59:00 +0000" total_classes="25" referenced_classes="80" total_bugs="0" total_size="1449" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.33" clock_seconds="2.34" peak_mbytes="253.90" alloc_mbytes="3540.00" gc_seconds="0.11">
+    <PackageStats package="ro.fortsoft.genericdata.dao" total_bugs="0" total_types="2" total_size="469">
+      <ClassStats class="ro.fortsoft.genericdata.dao.GenericDAO" sourceFile="GenericDAO.java" interface="true" size="55" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.dao.GenericDAOImpl" sourceFile="GenericDAOImpl.java" interface="false" size="414" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ro.fortsoft.genericdata.service" total_bugs="0" total_types="2" total_size="161">
+      <ClassStats class="ro.fortsoft.genericdata.service.GenericService" sourceFile="GenericService.java" interface="true" size="49" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.service.GenericServiceImpl" sourceFile="GenericServiceImpl.java" interface="false" size="112" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ro.fortsoft.genericdata.utils.exception" total_bugs="0" total_types="3" total_size="73">
+      <ClassStats class="ro.fortsoft.genericdata.utils.exception.AppException" sourceFile="AppException.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.exception.HibernateMappingException" sourceFile="HibernateMappingException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.exception.RestrictionsUnknownException" sourceFile="RestrictionsUnknownException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ro.fortsoft.genericdata.utils.hibernate" total_bugs="0" total_types="13" total_size="321">
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.AbstractAuditInterceptor" sourceFile="AbstractAuditInterceptor.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.CriteriaUtil" sourceFile="CriteriaUtil.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.DAOSupport" sourceFile="DAOSupport.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.DefaultLoggable" sourceFile="DefaultLoggable.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.DefaultNomenclator" sourceFile="DefaultNomenclator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.DefaultPersistent" sourceFile="DefaultPersistent.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.HibernateDAOSupport" sourceFile="HibernateDAOSupport.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.Identifiable" sourceFile="Identifiable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.Initializable" sourceFile="Initializable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.Loggable" sourceFile="Loggable.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.Nomenclator" sourceFile="Nomenclator.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.Persistent" sourceFile="Persistent.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.hibernate.ReflectionUtil" sourceFile="ReflectionUtil.java" interface="false" size="124" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ro.fortsoft.genericdata.utils.query" total_bugs="0" total_types="5" total_size="425">
+      <ClassStats class="ro.fortsoft.genericdata.utils.query.BetweenComparator" sourceFile="BetweenComparator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.query.Pair" sourceFile="Pair.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.query.QueryParameter" sourceFile="QueryParameter.java" interface="false" size="239" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.query.Sorter" sourceFile="Sorter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="ro.fortsoft.genericdata.utils.query.ValueRestriction" sourceFile="ValueRestriction.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="201" invocations="625" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="15591" standardDeviationMicrosecondsPerInvocation="812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="95" invocations="284" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="12378" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="93" invocations="80" avgMicrosecondsPerInvocation="1165" maxMicrosecondsPerInvocation="27248" standardDeviationMicrosecondsPerInvocation="3496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="93" invocations="286" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="11752" standardDeviationMicrosecondsPerInvocation="985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="83" invocations="284" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="6352" standardDeviationMicrosecondsPerInvocation="570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="78" invocations="502" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="2899" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="76" invocations="80" avgMicrosecondsPerInvocation="950" maxMicrosecondsPerInvocation="15506" standardDeviationMicrosecondsPerInvocation="2262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="73" invocations="284" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="11066" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="63" invocations="284" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="10648" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="63" invocations="287" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="9707" standardDeviationMicrosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="59" invocations="633" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="3173" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="52" invocations="206" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="10447" standardDeviationMicrosecondsPerInvocation="807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="48" invocations="407" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="26334" standardDeviationMicrosecondsPerInvocation="1302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="546" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="3352" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="145" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="12889" standardDeviationMicrosecondsPerInvocation="1114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="80" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="6693" standardDeviationMicrosecondsPerInvocation="1059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="28" invocations="80" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="8929" standardDeviationMicrosecondsPerInvocation="1302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="80" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="4415" standardDeviationMicrosecondsPerInvocation="760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="23" invocations="284" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="3131" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="80" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="4565" standardDeviationMicrosecondsPerInvocation="618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="21" invocations="4318" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="960" standardDeviationMicrosecondsPerInvocation="20"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="80" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="4210" standardDeviationMicrosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="19" invocations="25" avgMicrosecondsPerInvocation="795" maxMicrosecondsPerInvocation="9446" standardDeviationMicrosecondsPerInvocation="1900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="25" avgMicrosecondsPerInvocation="710" maxMicrosecondsPerInvocation="3005" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="80" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="4135" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizingOnContentsOfFieldToProtectField" totalMilliseconds="15" invocations="25" avgMicrosecondsPerInvocation="606" maxMicrosecondsPerInvocation="12566" standardDeviationMicrosecondsPerInvocation="2446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="25" avgMicrosecondsPerInvocation="584" maxMicrosecondsPerInvocation="4393" standardDeviationMicrosecondsPerInvocation="1003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="14" invocations="284" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="1132" standardDeviationMicrosecondsPerInvocation="100"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

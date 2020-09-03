@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597084626000" analysisTimestamp="1597084629063" release="">
+  <Project projectName="repositorios/jordantaillefer_ComputerDatabaseFinal">
+    <Jar>repositorios/jordantaillefer_ComputerDatabaseFinal</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.model.Computer">
+      <SourceLine classname="com.main.excilys.model.Computer" start="55" end="158" sourcefile="Computer.java" sourcepath="com/main/excilys/model/Computer.java"/>
+    </Class>
+    <Field classname="com.main.excilys.model.Computer" name="company" signature="Lcom/main/excilys/model/Company;" isStatic="false">
+      <SourceLine classname="com.main.excilys.model.Computer" sourcefile="Computer.java" sourcepath="com/main/excilys/model/Computer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.model.User">
+      <SourceLine classname="com.main.excilys.model.User" start="30" end="115" sourcefile="User.java" sourcepath="com/main/excilys/model/User.java"/>
+    </Class>
+    <Field classname="com.main.excilys.model.User" name="userRoles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.model.User" sourcefile="User.java" sourcepath="com/main/excilys/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.model.UserRole">
+      <SourceLine classname="com.main.excilys.model.UserRole" start="41" end="118" sourcefile="UserRole.java" sourcepath="com/main/excilys/model/UserRole.java"/>
+    </Class>
+    <Field classname="com.main.excilys.model.UserRole" name="user" signature="Lcom/main/excilys/model/User;" isStatic="false">
+      <SourceLine classname="com.main.excilys.model.UserRole" sourcefile="UserRole.java" sourcepath="com/main/excilys/model/UserRole.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.CompanyRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.CompanyRepositoryImpl" start="17" end="51" sourcefile="CompanyRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/CompanyRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.CompanyRepositoryImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.CompanyRepositoryImpl" start="25" end="27" startBytecode="0" endBytecode="98" sourcefile="CompanyRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/CompanyRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.CompanyRepositoryImpl" start="25" end="25" startBytecode="4" endBytecode="4" sourcefile="CompanyRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/CompanyRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.ComputerRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="24" end="174" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="145" end="147" startBytecode="0" endBytecode="94" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="145" end="145" startBytecode="4" endBytecode="4" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    <String value="Method: findAll. Fields with EAGER without Join Fetch: company, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.ComputerRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="24" end="174" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="145" end="147" startBytecode="0" endBytecode="94" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="145" end="145" startBytecode="4" endBytecode="4" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.ComputerRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="24" end="174" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" name="findByCompanyNameStartingWith" signature="(Ljava/lang/String;IILcom/main/excilys/repository/FieldSort;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="56" end="61" startBytecode="0" endBytecode="228" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="56" end="56" startBytecode="0" endBytecode="0" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.ComputerRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="24" end="174" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" name="findByNameStartingWith" signature="(Ljava/lang/String;IILcom/main/excilys/repository/FieldSort;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="44" end="50" startBytecode="0" endBytecode="306" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="45" end="45" startBytecode="30" endBytecode="30" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.ComputerRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="24" end="174" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" name="findOne" signature="(J)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="66" end="75" startBytecode="0" endBytecode="208" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.ComputerRepositoryImpl" start="66" end="66" startBytecode="4" endBytecode="4" sourcefile="ComputerRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/ComputerRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.UserRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="17" end="84" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.UserRepositoryImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="41" end="43" startBytecode="0" endBytecode="98" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="41" end="41" startBytecode="4" endBytecode="4" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.UserRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="17" end="84" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.UserRepositoryImpl" name="findByNameStartingWith" signature="(Ljava/lang/String;II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="48" end="52" startBytecode="0" endBytecode="214" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="49" end="49" startBytecode="34" endBytecode="34" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.UserRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="17" end="84" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.UserRepositoryImpl" name="findOne" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="66" end="75" startBytecode="0" endBytecode="229" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.UserRepositoryImpl" start="66" end="66" startBytecode="4" endBytecode="4" sourcefile="UserRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.main.excilys.repository.impl.UserRoleRepositoryImpl">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRoleRepositoryImpl" start="17" end="40" sourcefile="UserRoleRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRoleRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.main.excilys.repository.impl.UserRoleRepositoryImpl" name="findRolesForOneUser" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.main.excilys.repository.impl.UserRoleRepositoryImpl" start="37" end="40" startBytecode="0" endBytecode="151" sourcefile="UserRoleRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRoleRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.main.excilys.repository.impl.UserRoleRepositoryImpl" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="UserRoleRepositoryImpl.java" sourcepath="com/main/excilys/repository/impl/UserRoleRepositoryImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="48">
+    <MissingClass>com.fasterxml.jackson.core.type.TypeReference</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.google.gson.reflect.TypeToken</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspContext</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspWriter</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.SimpleTagSupport</MissingClass>
+    <MissingClass>javax.ws.rs.client.Client</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.client.Entity</MissingClass>
+    <MissingClass>javax.ws.rs.client.Invocation$Builder</MissingClass>
+    <MissingClass>javax.ws.rs.client.WebTarget</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>org.glassfish.jersey.internal.util.Base64</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.JdbcUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.CookieLocaleResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.LocaleChangeInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.InternalResourceViewResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:37:06 +0000" total_classes="57" referenced_classes="136" total_bugs="13" total_size="1821" num_packages="17" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.26" clock_seconds="4.42" peak_mbytes="301.81" alloc_mbytes="3540.00" gc_seconds="0.23" priority_2="12" priority_1="1">
+    <PackageStats package="com.main.excilys" total_bugs="0" total_types="9" total_size="299">
+      <ClassStats class="com.main.excilys.Application" sourceFile="Application.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.main.excilys.CompanyPresentation" sourceFile="CompanyPresentation.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.main.excilys.CompanyPresentation$1" sourceFile="CompanyPresentation.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.main.excilys.ComputerDbException" sourceFile="ComputerDbException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.main.excilys.ComputerPresentation" sourceFile="ComputerPresentation.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.main.excilys.ComputerPresentation$1" sourceFile="ComputerPresentation.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.main.excilys.PersistenceContext" sourceFile="PersistenceContext.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.main.excilys.RestClient" sourceFile="RestClient.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.main.excilys.SecureInput" sourceFile="SecureInput.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.config" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.main.excilys.config.SpringRootConfig" sourceFile="SpringRootConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.main.excilys.config.SpringWebConfig" sourceFile="SpringWebConfig.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.main.excilys.config.WebInitializer" sourceFile="WebInitializer.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.controller.computer" total_bugs="0" total_types="4" total_size="83">
+      <ClassStats class="com.main.excilys.controller.computer.AddComputerController" sourceFile="AddComputerController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.main.excilys.controller.computer.DashboardComputerController" sourceFile="DashboardComputerController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.main.excilys.controller.computer.DeleteComputerController" sourceFile="DeleteComputerController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.main.excilys.controller.computer.EditComputerController" sourceFile="EditComputerController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.controller.user" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="com.main.excilys.controller.user.DashboardUserController" sourceFile="DashboardUserController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.main.excilys.controller.user.UserController" sourceFile="UserController.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.mapper" total_bugs="0" total_types="4" total_size="72">
+      <ClassStats class="com.main.excilys.mapper.CompanyToDtoMapper" sourceFile="CompanyToDtoMapper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.main.excilys.mapper.ComputerToDtoMapper" sourceFile="ComputerToDtoMapper.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.main.excilys.mapper.StringToLocalDateMapper" sourceFile="StringToLocalDateMapper.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.main.excilys.mapper.UserToDtoMapper" sourceFile="UserToDtoMapper.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.model" total_bugs="3" total_types="6" total_size="385" priority_2="2" priority_1="1">
+      <ClassStats class="com.main.excilys.model.Company" sourceFile="Company.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.main.excilys.model.CompanyRest" sourceFile="CompanyRest.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.main.excilys.model.Computer" sourceFile="Computer.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="com.main.excilys.model.ComputerRest" sourceFile="ComputerRest.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.main.excilys.model.User" sourceFile="User.java" interface="false" size="65" bugs="1" priority_1="1"/>
+      <ClassStats class="com.main.excilys.model.UserRole" sourceFile="UserRole.java" interface="false" size="59" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.model.dto" total_bugs="0" total_types="3" total_size="211">
+      <ClassStats class="com.main.excilys.model.dto.CompanyDto" sourceFile="CompanyDto.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.main.excilys.model.dto.ComputerDto" sourceFile="ComputerDto.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.main.excilys.model.dto.UserDto" sourceFile="UserDto.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.presentation" total_bugs="0" total_types="2" total_size="81">
+      <ClassStats class="com.main.excilys.presentation.Page" sourceFile="Page.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.main.excilys.presentation.Toaster" sourceFile="Toaster.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.presentation.taglib" total_bugs="0" total_types="2" total_size="75">
+      <ClassStats class="com.main.excilys.presentation.taglib.LinkTag" sourceFile="LinkTag.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.main.excilys.presentation.taglib.PaginationTag" sourceFile="PaginationTag.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.repository" total_bugs="0" total_types="6" total_size="67">
+      <ClassStats class="com.main.excilys.repository.CompanyRepository" sourceFile="CompanyRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.main.excilys.repository.ComputerRepository" sourceFile="ComputerRepository.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.main.excilys.repository.DaoException" sourceFile="DaoException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.main.excilys.repository.FieldSort" sourceFile="FieldSort.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.main.excilys.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.main.excilys.repository.UserRoleRepository" sourceFile="UserRoleRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.repository.impl" total_bugs="10" total_types="4" total_size="186" priority_2="10">
+      <ClassStats class="com.main.excilys.repository.impl.CompanyRepositoryImpl" sourceFile="CompanyRepositoryImpl.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="com.main.excilys.repository.impl.ComputerRepositoryImpl" sourceFile="ComputerRepositoryImpl.java" interface="false" size="104" bugs="5" priority_2="5"/>
+      <ClassStats class="com.main.excilys.repository.impl.UserRepositoryImpl" sourceFile="UserRepositoryImpl.java" interface="false" size="44" bugs="3" priority_2="3"/>
+      <ClassStats class="com.main.excilys.repository.impl.UserRoleRepositoryImpl" sourceFile="UserRoleRepositoryImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.request" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="com.main.excilys.request.DashboardComputerRequest" sourceFile="DashboardComputerRequest.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.response" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="com.main.excilys.response.DashboardComputerResponse" sourceFile="DashboardComputerResponse.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.rest" total_bugs="0" total_types="3" total_size="41">
+      <ClassStats class="com.main.excilys.rest.CompanyRestController" sourceFile="CompanyRestController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.main.excilys.rest.ComputerRestController" sourceFile="ComputerRestController.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.main.excilys.rest.UserRestController" sourceFile="UserRestController.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.security" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="com.main.excilys.security.SecurityConfiguration" sourceFile="SecurityConfiguration.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.main.excilys.security.SecurityWebApplicationInitializer" sourceFile="SecurityWebApplicationInitializer.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.service" total_bugs="0" total_types="3" total_size="98">
+      <ClassStats class="com.main.excilys.service.CompanyService" sourceFile="CompanyService.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.main.excilys.service.ComputerService" sourceFile="ComputerService.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.main.excilys.service.UserService" sourceFile="UserService.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.main.excilys.util" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="com.main.excilys.util.ComputerDbException" sourceFile="ComputerDbException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.main.excilys.util.OptionValidator" sourceFile="OptionValidator.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="471" invocations="994" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="50396" standardDeviationMicrosecondsPerInvocation="2161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="177" invocations="347" avgMicrosecondsPerInvocation="512" maxMicrosecondsPerInvocation="12815" standardDeviationMicrosecondsPerInvocation="1234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="161" invocations="347" avgMicrosecondsPerInvocation="464" maxMicrosecondsPerInvocation="6935" standardDeviationMicrosecondsPerInvocation="799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="158" invocations="136" avgMicrosecondsPerInvocation="1163" maxMicrosecondsPerInvocation="10371" standardDeviationMicrosecondsPerInvocation="2145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="135" invocations="352" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="16766" standardDeviationMicrosecondsPerInvocation="1131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="134" invocations="136" avgMicrosecondsPerInvocation="986" maxMicrosecondsPerInvocation="19484" standardDeviationMicrosecondsPerInvocation="2290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="132" invocations="354" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="13562" standardDeviationMicrosecondsPerInvocation="1079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="132" invocations="347" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="6057" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="123" invocations="1004" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="4179" standardDeviationMicrosecondsPerInvocation="220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="111" invocations="237" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="25653" standardDeviationMicrosecondsPerInvocation="1877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="106" invocations="836" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="28521" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="106" invocations="651" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="5648" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="101" invocations="347" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="10805" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="68" invocations="368" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="30859" standardDeviationMicrosecondsPerInvocation="1614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="61" invocations="239" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="13698" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="58" invocations="136" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="9046" standardDeviationMicrosecondsPerInvocation="1031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="47" invocations="347" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="10289" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="40" invocations="57" avgMicrosecondsPerInvocation="714" maxMicrosecondsPerInvocation="15352" standardDeviationMicrosecondsPerInvocation="2298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="40" invocations="136" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="5908" standardDeviationMicrosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="136" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="5685" standardDeviationMicrosecondsPerInvocation="706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="36" invocations="136" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="5364" standardDeviationMicrosecondsPerInvocation="606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="36" invocations="3939" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="2353" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="36" invocations="57" avgMicrosecondsPerInvocation="633" maxMicrosecondsPerInvocation="3115" standardDeviationMicrosecondsPerInvocation="760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="136" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="8103" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="32" invocations="57" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="8927" standardDeviationMicrosecondsPerInvocation="1197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="31" invocations="57" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="3707" standardDeviationMicrosecondsPerInvocation="575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="136" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="4035" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="27" invocations="57" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="3899" standardDeviationMicrosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="27" invocations="57" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="11818" standardDeviationMicrosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="27" invocations="57" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="2532" standardDeviationMicrosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="25" invocations="57" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="6156" standardDeviationMicrosecondsPerInvocation="841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="24" invocations="57" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="11757" standardDeviationMicrosecondsPerInvocation="1549"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

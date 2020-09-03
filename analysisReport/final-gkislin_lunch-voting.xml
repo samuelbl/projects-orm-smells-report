@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597103310000" analysisTimestamp="1597103311566" release="">
+  <Project projectName="repositorios/gkislin_lunch-voting">
+    <Jar>repositorios/gkislin_lunch-voting</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.model.Lunch">
+      <SourceLine classname="ru.gkislin.voting.model.Lunch" start="21" end="48" sourcefile="Lunch.java" sourcepath="ru/gkislin/voting/model/Lunch.java"/>
+    </Class>
+    <Field classname="ru.gkislin.voting.model.Lunch" name="menu" signature="Lru/gkislin/voting/model/Menu;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.model.Lunch" sourcefile="Lunch.java" sourcepath="ru/gkislin/voting/model/Lunch.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.model.Menu">
+      <SourceLine classname="ru.gkislin.voting.model.Menu" start="23" end="52" sourcefile="Menu.java" sourcepath="ru/gkislin/voting/model/Menu.java"/>
+    </Class>
+    <Field classname="ru.gkislin.voting.model.Menu" name="restaurant" signature="Lru/gkislin/voting/model/Restaurant;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.model.Menu" sourcefile="Menu.java" sourcepath="ru/gkislin/voting/model/Menu.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.model.Vote">
+      <SourceLine classname="ru.gkislin.voting.model.Vote" start="28" end="63" sourcefile="Vote.java" sourcepath="ru/gkislin/voting/model/Vote.java"/>
+    </Class>
+    <Field classname="ru.gkislin.voting.model.Vote" name="menu" signature="Lru/gkislin/voting/model/Menu;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.model.Vote" sourcefile="Vote.java" sourcepath="ru/gkislin/voting/model/Vote.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.model.Vote">
+      <SourceLine classname="ru.gkislin.voting.model.Vote" start="28" end="63" sourcefile="Vote.java" sourcepath="ru/gkislin/voting/model/Vote.java"/>
+    </Class>
+    <Field classname="ru.gkislin.voting.model.Vote" name="user" signature="Lru/gkislin/voting/model/User;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.model.Vote" sourcefile="Vote.java" sourcepath="ru/gkislin/voting/model/Vote.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.LunchRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.LunchRepository" start="19" end="19" sourcefile="LunchRepository.java" sourcepath="ru/gkislin/voting/repository/LunchRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.LunchRepository" name="findByMenu" signature="(Lru/gkislin/voting/model/Menu;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findByMenu. Fields with EAGER without Join Fetch: restaurant, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.LunchRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.LunchRepository" start="19" end="19" sourcefile="LunchRepository.java" sourcepath="ru/gkislin/voting/repository/LunchRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.LunchRepository" name="findByDate" signature="(Ljava/time/LocalDate;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.LunchRepository" sourcefile="LunchRepository.java" sourcepath="ru/gkislin/voting/repository/LunchRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.LunchRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.LunchRepository" start="19" end="19" sourcefile="LunchRepository.java" sourcepath="ru/gkislin/voting/repository/LunchRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.LunchRepository" name="findByMenu" signature="(Lru/gkislin/voting/model/Menu;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.LunchRepository" sourcefile="LunchRepository.java" sourcepath="ru/gkislin/voting/repository/LunchRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.MenuRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.MenuRepository" start="19" end="19" sourcefile="MenuRepository.java" sourcepath="ru/gkislin/voting/repository/MenuRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.MenuRepository" name="findByDate" signature="(Ljava/time/LocalDate;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findByDate. Fields with EAGER without Join Fetch: restaurant, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.MenuRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.MenuRepository" start="19" end="19" sourcefile="MenuRepository.java" sourcepath="ru/gkislin/voting/repository/MenuRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.MenuRepository" name="findByDate" signature="(Ljava/time/LocalDate;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.MenuRepository" sourcefile="MenuRepository.java" sourcepath="ru/gkislin/voting/repository/MenuRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.MenuRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.MenuRepository" start="19" end="19" sourcefile="MenuRepository.java" sourcepath="ru/gkislin/voting/repository/MenuRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.MenuRepository" name="findByRestaurant" signature="(Lru/gkislin/voting/model/Restaurant;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.MenuRepository" sourcefile="MenuRepository.java" sourcepath="ru/gkislin/voting/repository/MenuRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.RestaurantRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.RestaurantRepository" start="16" end="16" sourcefile="RestaurantRepository.java" sourcepath="ru/gkislin/voting/repository/RestaurantRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.RestaurantRepository" name="findByName" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.RestaurantRepository" sourcefile="RestaurantRepository.java" sourcepath="ru/gkislin/voting/repository/RestaurantRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.UserRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="ru/gkislin/voting/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.UserRepository" name="findByEmail" signature="(Ljava/lang/String;)Lru/gkislin/voting/model/User;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="ru/gkislin/voting/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ru.gkislin.voting.repository.VoteRepository">
+      <SourceLine classname="ru.gkislin.voting.repository.VoteRepository" sourcefile="VoteRepository.java" sourcepath="ru/gkislin/voting/repository/VoteRepository.java"/>
+    </Class>
+    <Method classname="ru.gkislin.voting.repository.VoteRepository" name="getForUserAndDate" signature="(ILjava/time/LocalDate;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="ru.gkislin.voting.repository.VoteRepository" sourcefile="VoteRepository.java" sourcepath="ru/gkislin/voting/repository/VoteRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="29">
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>org.h2.tools.Server</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.AbstractPersistable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.authentication.DisabledException</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:48:30 +0000" total_classes="22" referenced_classes="61" total_bugs="13" total_size="346" num_packages="7" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.60" clock_seconds="1.85" peak_mbytes="128.83" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="13">
+    <PackageStats package="ru.gkislin.voting" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="ru.gkislin.voting.LoggedUser" sourceFile="LoggedUser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.LunchVotingApplication" sourceFile="LunchVotingApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.config" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="ru.gkislin.voting.config.AppConfig" sourceFile="AppConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.model" total_bugs="4" total_types="8" total_size="181" priority_2="4">
+      <ClassStats class="ru.gkislin.voting.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.model.Lunch" sourceFile="Lunch.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="ru.gkislin.voting.model.Menu" sourceFile="Menu.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="ru.gkislin.voting.model.NamedEntity" sourceFile="NamedEntity.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.model.Restaurant" sourceFile="Restaurant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.model.Role" sourceFile="Role.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.model.User" sourceFile="User.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.model.Vote" sourceFile="Vote.java" interface="false" size="30" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.model.converter" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="ru.gkislin.voting.model.converter.LocalDateConverter" sourceFile="LocalDateConverter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.repository" total_bugs="9" total_types="5" total_size="25" priority_2="9">
+      <ClassStats class="ru.gkislin.voting.repository.LunchRepository" sourceFile="LunchRepository.java" interface="true" size="8" bugs="3" priority_2="3"/>
+      <ClassStats class="ru.gkislin.voting.repository.MenuRepository" sourceFile="MenuRepository.java" interface="true" size="8" bugs="3" priority_2="3"/>
+      <ClassStats class="ru.gkislin.voting.repository.RestaurantRepository" sourceFile="RestaurantRepository.java" interface="true" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="ru.gkislin.voting.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="ru.gkislin.voting.repository.VoteRepository" sourceFile="VoteRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.service" total_bugs="0" total_types="3" total_size="55">
+      <ClassStats class="ru.gkislin.voting.service.UserDetailsService" sourceFile="UserDetailsService.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.service.VoteService" sourceFile="VoteService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="ru.gkislin.voting.service.VoteService$VoteWithStatus" sourceFile="VoteService.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ru.gkislin.voting.web" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="ru.gkislin.voting.web.VoteController" sourceFile="VoteController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="253" invocations="553" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="26864" standardDeviationMicrosecondsPerInvocation="1535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="61" avgMicrosecondsPerInvocation="1541" maxMicrosecondsPerInvocation="12347" standardDeviationMicrosecondsPerInvocation="2849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="73" invocations="61" avgMicrosecondsPerInvocation="1206" maxMicrosecondsPerInvocation="14133" standardDeviationMicrosecondsPerInvocation="2514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="59" invocations="559" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="7377" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="53" invocations="182" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="5756" standardDeviationMicrosecondsPerInvocation="815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="41" invocations="99" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="7378" standardDeviationMicrosecondsPerInvocation="810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="118" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="13621" standardDeviationMicrosecondsPerInvocation="1379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="61" avgMicrosecondsPerInvocation="623" maxMicrosecondsPerInvocation="12538" standardDeviationMicrosecondsPerInvocation="2077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="439" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="1067" standardDeviationMicrosecondsPerInvocation="136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="61" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="6802" standardDeviationMicrosecondsPerInvocation="1280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="111" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="25036" standardDeviationMicrosecondsPerInvocation="2365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="35" invocations="61" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="10788" standardDeviationMicrosecondsPerInvocation="1586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="61" avgMicrosecondsPerInvocation="546" maxMicrosecondsPerInvocation="9515" standardDeviationMicrosecondsPerInvocation="1471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="33" invocations="91" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="2703" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="99" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="8366" standardDeviationMicrosecondsPerInvocation="855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="99" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="8866" standardDeviationMicrosecondsPerInvocation="886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="29" invocations="99" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="9807" standardDeviationMicrosecondsPerInvocation="986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="29" invocations="99" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="2426" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="61" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="4095" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="61" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="4894" standardDeviationMicrosecondsPerInvocation="740"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106700000" analysisTimestamp="1597106702253" release="">
+  <Project projectName="repositorios/kuros_random-jpa">
+    <Jar>repositorios/kuros_random-jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.EntityType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Metamodel</MissingClass>
+    <MissingClass>javax.persistence.metamodel.PluralAttribute</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:45:00 +0000" total_classes="190" referenced_classes="304" total_bugs="0" total_size="4067" num_packages="34" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="16.38" clock_seconds="4.62" peak_mbytes="344.39" alloc_mbytes="3540.00" gc_seconds="0.18">
+    <PackageStats package="com.github.kuros.random.jpa" total_bugs="0" total_types="4" total_size="185">
+      <ClassStats class="com.github.kuros.random.jpa.Database" sourceFile="Database.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.JPAContext" sourceFile="JPAContext.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.JPAContextFactory" sourceFile="JPAContextFactory.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.JPAContextImpl" sourceFile="JPAContextImpl.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.annotation" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.github.kuros.random.jpa.annotation.VisibleForTesting" sourceFile="VisibleForTesting.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.cache" total_bugs="0" total_types="2" total_size="79">
+      <ClassStats class="com.github.kuros.random.jpa.cache.Cache" sourceFile="Cache.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.cache.TriggerCache" sourceFile="TriggerCache.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.cleanup" total_bugs="0" total_types="2" total_size="155">
+      <ClassStats class="com.github.kuros.random.jpa.cleanup.Cleaner" sourceFile="Cleaner.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.cleanup.CleanerImpl" sourceFile="CleanerImpl.java" interface="false" size="149" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.definition" total_bugs="0" total_types="8" total_size="216">
+      <ClassStats class="com.github.kuros.random.jpa.definition.ChildGraph" sourceFile="ChildGraph.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.ChildNode" sourceFile="ChildNode.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.CyclicValidator" sourceFile="CyclicValidator.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.HierarchyGenerator" sourceFile="HierarchyGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.HierarchyGeneratorImpl" sourceFile="HierarchyGeneratorImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.HierarchyGraph" sourceFile="HierarchyGraph.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.MinimumHierarchyGenerator" sourceFile="MinimumHierarchyGenerator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.definition.TableNode" sourceFile="TableNode.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.exception" total_bugs="0" total_types="7" total_size="39">
+      <ClassStats class="com.github.kuros.random.jpa.exception.EmptyFieldException" sourceFile="EmptyFieldException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.FieldNotFoundException" sourceFile="FieldNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.MetaModelGenerationException" sourceFile="MetaModelGenerationException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.MethodInvocationException" sourceFile="MethodInvocationException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.MethodNotFoundException" sourceFile="MethodNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.RandomJPAException" sourceFile="RandomJPAException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.exception.ResultNotFoundException" sourceFile="ResultNotFoundException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.link" total_bugs="0" total_types="4" total_size="71">
+      <ClassStats class="com.github.kuros.random.jpa.link.Before" sourceFile="Before.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.link.Dependencies" sourceFile="Dependencies.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.link.Link" sourceFile="Link.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.link.Preconditions" sourceFile="Preconditions.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.log" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="com.github.kuros.random.jpa.log.LogFactory" sourceFile="LogFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.log.Logger" sourceFile="Logger.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.log.providers" total_bugs="0" total_types="3" total_size="106">
+      <ClassStats class="com.github.kuros.random.jpa.log.providers.DefaultProvider" sourceFile="DefaultProvider.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.log.providers.Log4JProvider" sourceFile="Log4JProvider.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.log.providers.Slf4JProvider" sourceFile="Slf4JProvider.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.mapper" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="com.github.kuros.random.jpa.mapper.Relation" sourceFile="Relation.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.mapper.RelationCreator" sourceFile="RelationCreator.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.mapper.RelationCreator$1" sourceFile="RelationCreator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.mapper.RelationCreator$ColumnNotDeclared" sourceFile="RelationCreator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.mapper.RelationCreator$EntityNotDeclared" sourceFile="RelationCreator.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.metamodel" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.AttributeProvider" sourceFile="AttributeProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.AttributeProviderFactory" sourceFile="AttributeProviderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.MetaModelProvider" sourceFile="MetaModelProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.MetaModelProviderImpl" sourceFile="MetaModelProviderImpl.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.metamodel.model" total_bugs="0" total_types="4" total_size="112">
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.model.ColumnNameType" sourceFile="ColumnNameType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.model.ColumnNameType$Type" sourceFile="ColumnNameType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.model.EntityTableMapping" sourceFile="EntityTableMapping.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.model.FieldWrapper" sourceFile="FieldWrapper.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.metamodel.providers" total_bugs="0" total_types="2" total_size="141">
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.providers.EclipseLinkProvider" sourceFile="EclipseLinkProvider.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.metamodel.providers.HibernateProvider" sourceFile="HibernateProvider.java" interface="false" size="87" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.persistor" total_bugs="0" total_types="2" total_size="87">
+      <ClassStats class="com.github.kuros.random.jpa.persistor.EntityPersistorImpl" sourceFile="EntityPersistorImpl.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.Persistor" sourceFile="Persistor.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.persistor.functions" total_bugs="0" total_types="6" total_size="165">
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.FindById" sourceFile="FindById.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.FindByUniqueIdentities" sourceFile="FindByUniqueIdentities.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.Function" sourceFile="Function.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.FunctionProcessor" sourceFile="FunctionProcessor.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.PersistFunction" sourceFile="PersistFunction.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.functions.TriggerFunction" sourceFile="TriggerFunction.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.persistor.hepler" total_bugs="0" total_types="2" total_size="83">
+      <ClassStats class="com.github.kuros.random.jpa.persistor.hepler.Finder" sourceFile="Finder.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.hepler.Finder$1" sourceFile="Finder.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.persistor.model" total_bugs="0" total_types="3" total_size="52">
+      <ClassStats class="com.github.kuros.random.jpa.persistor.model.ResultMap" sourceFile="ResultMap.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.model.ResultMapImpl" sourceFile="ResultMapImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.persistor.model.ResultNodeTree" sourceFile="ResultNodeTree.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider" total_bugs="0" total_types="4" total_size="9">
+      <ClassStats class="com.github.kuros.random.jpa.provider.MultiplePrimaryKeyProvider" sourceFile="MultiplePrimaryKeyProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.RelationshipProvider" sourceFile="RelationshipProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.SQLCharacterLengthProvider" sourceFile="SQLCharacterLengthProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.UniqueConstraintProvider" sourceFile="UniqueConstraintProvider.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.base" total_bugs="0" total_types="4" total_size="186">
+      <ClassStats class="com.github.kuros.random.jpa.provider.base.AbstractCharacterLengthProvider" sourceFile="AbstractCharacterLengthProvider.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.base.AbstractMultiplePrimaryKeyProvider" sourceFile="AbstractMultiplePrimaryKeyProvider.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.base.AbstractRelationshipProvider" sourceFile="AbstractRelationshipProvider.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.base.AbstractUniqueConstraintProvider" sourceFile="AbstractUniqueConstraintProvider.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.factory" total_bugs="0" total_types="12" total_size="106">
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.MultiplePrimaryKeyProviderFactory" sourceFile="MultiplePrimaryKeyProviderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.MultiplePrimaryKeyProviderFactory$1" sourceFile="MultiplePrimaryKeyProviderFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.MultiplePrimaryKeyProviderFactory$DefaultMultiplePrimaryKeyProvider" sourceFile="MultiplePrimaryKeyProviderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.RelationshipProviderFactory" sourceFile="RelationshipProviderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.RelationshipProviderFactory$1" sourceFile="RelationshipProviderFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.RelationshipProviderFactory$EmptyRelationshipProvider" sourceFile="RelationshipProviderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.SQLCharacterLengthProviderFactory" sourceFile="SQLCharacterLengthProviderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.SQLCharacterLengthProviderFactory$1" sourceFile="SQLCharacterLengthProviderFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.SQLCharacterLengthProviderFactory$DefaultSQLCharacterLengthProvider" sourceFile="SQLCharacterLengthProviderFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.UniqueConstraintProviderFactory" sourceFile="UniqueConstraintProviderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.UniqueConstraintProviderFactory$1" sourceFile="UniqueConstraintProviderFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.factory.UniqueConstraintProviderFactory$DefaultUniqueConstraintProvider" sourceFile="UniqueConstraintProviderFactory.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.h2" total_bugs="0" total_types="4" total_size="50">
+      <ClassStats class="com.github.kuros.random.jpa.provider.h2.H2CharacterLengthProvider" sourceFile="H2CharacterLengthProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.h2.H2MultiplePrimaryKeyProvider" sourceFile="H2MultiplePrimaryKeyProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.h2.H2RelationshipProvider" sourceFile="H2RelationshipProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.h2.H2UniqueConstraintProvider" sourceFile="H2UniqueConstraintProvider.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.model" total_bugs="0" total_types="3" total_size="63">
+      <ClassStats class="com.github.kuros.random.jpa.provider.model.ColumnCharacterLength" sourceFile="ColumnCharacterLength.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.model.ColumnDetail" sourceFile="ColumnDetail.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.model.ForeignKeyRelation" sourceFile="ForeignKeyRelation.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.mssql" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="com.github.kuros.random.jpa.provider.mssql.MSSQLCharacterLengthProvider" sourceFile="MSSQLCharacterLengthProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mssql.MSSQLMultiplePrimaryKeyProvider" sourceFile="MSSQLMultiplePrimaryKeyProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mssql.MSSQLRelationshipProvider" sourceFile="MSSQLRelationshipProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mssql.MSSQLUniqueConstraintProvider" sourceFile="MSSQLUniqueConstraintProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.mysql" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="com.github.kuros.random.jpa.provider.mysql.MySqlCharacterLengthProvider" sourceFile="MySqlCharacterLengthProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mysql.MySqlMultiplePrimaryKeyProvider" sourceFile="MySqlMultiplePrimaryKeyProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mysql.MySqlRelationshipProvider" sourceFile="MySqlRelationshipProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.mysql.MySqlUniqueConstraintProvider" sourceFile="MySqlUniqueConstraintProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.oracle" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="com.github.kuros.random.jpa.provider.oracle.OracleCharacterLengthProvider" sourceFile="OracleCharacterLengthProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.oracle.OracleMultiplePrimaryKeyProvider" sourceFile="OracleMultiplePrimaryKeyProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.oracle.OracleRelationshipProvider" sourceFile="OracleRelationshipProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.oracle.OracleUniqueConstraintProvider" sourceFile="OracleUniqueConstraintProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.provider.postgres" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="com.github.kuros.random.jpa.provider.postgres.PostgresCharacterLengthProvider" sourceFile="PostgresCharacterLengthProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.postgres.PostgresMultiplePrimaryKeyProvider" sourceFile="PostgresMultiplePrimaryKeyProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.postgres.PostgresRelationshipProvider" sourceFile="PostgresRelationshipProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.provider.postgres.PostgresUniqueConstraintProvider" sourceFile="PostgresUniqueConstraintProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.random" total_bugs="0" total_types="2" total_size="63">
+      <ClassStats class="com.github.kuros.random.jpa.random.Randomize" sourceFile="Randomize.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.RandomizeImpl" sourceFile="RandomizeImpl.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.random.generator" total_bugs="0" total_types="6" total_size="154">
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.Generator" sourceFile="Generator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.RandomAttributeGenerator" sourceFile="RandomAttributeGenerator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.RandomClassGenerator" sourceFile="RandomClassGenerator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.RandomFactory" sourceFile="RandomFactory.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.RandomFieldGenerator" sourceFile="RandomFieldGenerator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.RandomGenerator" sourceFile="RandomGenerator.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.random.generator.types" total_bugs="0" total_types="42" total_size="457">
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigDecimalGenerator" sourceFile="BigDecimalGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigDecimalGenerator$1" sourceFile="BigDecimalGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigDecimalGenerator$Instance" sourceFile="BigDecimalGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigIntegerGenerator" sourceFile="BigIntegerGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigIntegerGenerator$1" sourceFile="BigIntegerGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BigIntegerGenerator$Instance" sourceFile="BigIntegerGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BlobGenerator" sourceFile="BlobGenerator.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BlobGenerator$1" sourceFile="BlobGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BlobGenerator$Instance" sourceFile="BlobGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BooleanGenerator" sourceFile="BooleanGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BooleanGenerator$1" sourceFile="BooleanGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.BooleanGenerator$Instance" sourceFile="BooleanGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ByteGenerator" sourceFile="ByteGenerator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ByteGenerator$1" sourceFile="ByteGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ByteGenerator$Instance" sourceFile="ByteGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.CharacterGenerator" sourceFile="CharacterGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.CharacterGenerator$1" sourceFile="CharacterGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.CharacterGenerator$Instance" sourceFile="CharacterGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ClobGenerator" sourceFile="ClobGenerator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ClobGenerator$1" sourceFile="ClobGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ClobGenerator$Instance" sourceFile="ClobGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DateGenerator" sourceFile="DateGenerator.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DateGenerator$1" sourceFile="DateGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DateGenerator$Instance" sourceFile="DateGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DoubleGenerator" sourceFile="DoubleGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DoubleGenerator$1" sourceFile="DoubleGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.DoubleGenerator$Instance" sourceFile="DoubleGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.FloatGenerator" sourceFile="FloatGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.FloatGenerator$1" sourceFile="FloatGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.FloatGenerator$Instance" sourceFile="FloatGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.IntegerGenerator" sourceFile="IntegerGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.IntegerGenerator$1" sourceFile="IntegerGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.IntegerGenerator$Instance" sourceFile="IntegerGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.LongGenerator" sourceFile="LongGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.LongGenerator$1" sourceFile="LongGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.LongGenerator$Instance" sourceFile="LongGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ShortGenerator" sourceFile="ShortGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ShortGenerator$1" sourceFile="ShortGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.ShortGenerator$Instance" sourceFile="ShortGenerator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.StringGenerator" sourceFile="StringGenerator.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.StringGenerator$1" sourceFile="StringGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.generator.types.StringGenerator$Instance" sourceFile="StringGenerator.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.random.simple" total_bugs="0" total_types="2" total_size="86">
+      <ClassStats class="com.github.kuros.random.jpa.random.simple.SimpleRandomGenerator" sourceFile="SimpleRandomGenerator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.random.simple.SimpleRandomGeneratorFactory" sourceFile="SimpleRandomGeneratorFactory.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.resolver" total_bugs="0" total_types="6" total_size="218">
+      <ClassStats class="com.github.kuros.random.jpa.resolver.CreationOrderResolver" sourceFile="CreationOrderResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.resolver.CreationOrderResolverImpl" sourceFile="CreationOrderResolverImpl.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.resolver.DependencyResolver" sourceFile="DependencyResolver.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.resolver.PersistedEntityResolver" sourceFile="PersistedEntityResolver.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.resolver.PersistedEntityResolverImpl" sourceFile="PersistedEntityResolverImpl.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.resolver.PersistedEntityResolverImpl$FieldValue" sourceFile="PersistedEntityResolverImpl.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.types" total_bugs="0" total_types="18" total_size="432">
+      <ClassStats class="com.github.kuros.random.jpa.types.AttributeIndexValue" sourceFile="AttributeIndexValue.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.AttributeValue" sourceFile="AttributeValue.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.ClassDepth" sourceFile="ClassDepth.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.ClassIndex" sourceFile="ClassIndex.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.CreationOrder" sourceFile="CreationOrder.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.CreationPlan" sourceFile="CreationPlan.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.CreationPlanImpl" sourceFile="CreationPlanImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.DeletionOrder" sourceFile="DeletionOrder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.DeletionOrderImpl" sourceFile="DeletionOrderImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.Entity" sourceFile="Entity.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.EntityHelper" sourceFile="EntityHelper.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.FieldIndex" sourceFile="FieldIndex.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.FieldIndexValue" sourceFile="FieldIndexValue.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.Node" sourceFile="Node.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.Plan" sourceFile="Plan.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.Printer" sourceFile="Printer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.ResultNode" sourceFile="ResultNode.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.types.Trigger" sourceFile="Trigger.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.util" total_bugs="0" total_types="9" total_size="354">
+      <ClassStats class="com.github.kuros.random.jpa.util.ArrayListMultimap" sourceFile="ArrayListMultimap.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.AttributeHelper" sourceFile="AttributeHelper.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.MergeUtil" sourceFile="MergeUtil.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.MergeUtil$OrderKey" sourceFile="MergeUtil.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.Multimap" sourceFile="Multimap.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.NodeHelper" sourceFile="NodeHelper.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.NumberUtil" sourceFile="NumberUtil.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.StringJoiner" sourceFile="StringJoiner.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.kuros.random.jpa.util.Util" sourceFile="Util.java" interface="false" size="129" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.kuros.random.jpa.v1.resolver" total_bugs="0" total_types="1" total_size="55">
+      <ClassStats class="com.github.kuros.random.jpa.v1.resolver.CreationPlanResolver" sourceFile="CreationPlanResolver.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="327" invocations="1030" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="37942" standardDeviationMicrosecondsPerInvocation="1355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="200" invocations="828" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="5277" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="198" invocations="827" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="19791" standardDeviationMicrosecondsPerInvocation="756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="182" invocations="828" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="5787" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="177" invocations="836" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="9823" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="177" invocations="304" avgMicrosecondsPerInvocation="582" maxMicrosecondsPerInvocation="9134" standardDeviationMicrosecondsPerInvocation="1292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="164" invocations="304" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="8083" standardDeviationMicrosecondsPerInvocation="1060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="159" invocations="848" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="9596" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="130" invocations="1331" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="2852" standardDeviationMicrosecondsPerInvocation="185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="126" invocations="828" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="8913" standardDeviationMicrosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="122" invocations="691" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="3259" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="85" invocations="1036" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="2451" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="69" invocations="969" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="16799" standardDeviationMicrosecondsPerInvocation="546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="68" invocations="891" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="25489" standardDeviationMicrosecondsPerInvocation="853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="63" invocations="304" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="5090" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="61" invocations="384" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="13636" standardDeviationMicrosecondsPerInvocation="727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="59" invocations="828" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="8466" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="57" invocations="304" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="4760" standardDeviationMicrosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="46" invocations="304" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2240" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="40" invocations="13542" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="875" standardDeviationMicrosecondsPerInvocation="14"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="40" invocations="304" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="2360" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="39" invocations="304" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="8999" standardDeviationMicrosecondsPerInvocation="541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="37" invocations="190" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="3369" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="36" invocations="190" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1370" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="35" invocations="190" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="7179" standardDeviationMicrosecondsPerInvocation="574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="34" invocations="190" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="1733" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="33" invocations="190" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="1386" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="32" invocations="190" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="2112" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="32" invocations="782" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="1120" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="30" invocations="304" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="8806" standardDeviationMicrosecondsPerInvocation="647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="28" invocations="304" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="1949" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="28" invocations="190" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2347" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="27" invocations="827" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="964" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="27" invocations="304" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1796" standardDeviationMicrosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="26" invocations="23902" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="596" standardDeviationMicrosecondsPerInvocation="4"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="25" invocations="190" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="2240" standardDeviationMicrosecondsPerInvocation="186"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

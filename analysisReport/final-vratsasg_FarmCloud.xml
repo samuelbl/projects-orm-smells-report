@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597107120000" analysisTimestamp="1597107121802" release="">
+  <Project projectName="repositorios/vratsasg_FarmCloud">
+    <Jar>repositorios/vratsasg_FarmCloud</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.webstart.model.UserProfile">
+      <SourceLine classname="com.webstart.model.UserProfile" start="53" end="156" sourcefile="UserProfile.java" sourcepath="com/webstart/model/UserProfile.java"/>
+    </Class>
+    <Field classname="com.webstart.model.UserProfile" name="user" signature="Lcom/webstart/model/Users;" isStatic="false">
+      <SourceLine classname="com.webstart.model.UserProfile" sourcefile="UserProfile.java" sourcepath="com/webstart/model/UserProfile.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.webstart.repository.FeatureofinterestJpaRepository">
+      <SourceLine classname="com.webstart.repository.FeatureofinterestJpaRepository" sourcefile="FeatureofinterestJpaRepository.java" sourcepath="com/webstart/repository/FeatureofinterestJpaRepository.java"/>
+    </Class>
+    <Method classname="com.webstart.repository.FeatureofinterestJpaRepository" name="setCoordinatorAlgorithmParams" signature="(Ljava/lang/String;Ljava/sql/Timestamp;Ljava/sql/Timestamp;Ljava/math/BigDecimal;)V" isStatic="false">
+      <SourceLine classname="com.webstart.repository.FeatureofinterestJpaRepository" sourcefile="FeatureofinterestJpaRepository.java" sourcepath="com/webstart/repository/FeatureofinterestJpaRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.webstart.repository.FeatureofinterestJpaRepository">
+      <SourceLine classname="com.webstart.repository.FeatureofinterestJpaRepository" sourcefile="FeatureofinterestJpaRepository.java" sourcepath="com/webstart/repository/FeatureofinterestJpaRepository.java"/>
+    </Class>
+    <Method classname="com.webstart.repository.FeatureofinterestJpaRepository" name="setDeviceIrrigDates" signature="(ILjava/lang/String;Ljava/util/Date;Ljava/util/Date;)V" isStatic="false">
+      <SourceLine classname="com.webstart.repository.FeatureofinterestJpaRepository" sourcefile="FeatureofinterestJpaRepository.java" sourcepath="com/webstart/repository/FeatureofinterestJpaRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="1" missingClasses="46">
+    <Error>
+      <ErrorMessage>Exception analyzing com.webstart.repository.FeatureofinterestJpaRepository using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.itextpdf.text.BaseColor</MissingClass>
+    <MissingClass>com.itextpdf.text.Document</MissingClass>
+    <MissingClass>com.itextpdf.text.Font</MissingClass>
+    <MissingClass>com.itextpdf.text.FontFactory</MissingClass>
+    <MissingClass>com.itextpdf.text.Paragraph</MissingClass>
+    <MissingClass>com.itextpdf.text.Phrase</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.PdfPCell</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.PdfPTable</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.PdfWriter</MissingClass>
+    <MissingClass>com.vividsolutions.jts.geom.Point</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFWorkbook</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Cell</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.CellStyle</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.IndexedColors</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Row</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Sheet</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.DateTimeZone</MissingClass>
+    <MissingClass>org.joda.time.Instant</MissingClass>
+    <MissingClass>org.joda.time.LocalDateTime</MissingClass>
+    <MissingClass>org.joda.time.format.DateTimeFormat</MissingClass>
+    <MissingClass>org.joda.time.format.DateTimeFormatter</MissingClass>
+    <MissingClass>org.json.simple.JSONArray</MissingClass>
+    <MissingClass>org.json.simple.JSONObject</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.system.ApplicationPidFileWriter</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:52:00 +0000" total_classes="63" referenced_classes="107" total_bugs="3" total_size="3208" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.76" clock_seconds="3.50" peak_mbytes="271.73" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="3">
+    <PackageStats package="com.webstart" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.webstart.FarmCloudApplication" sourceFile="FarmCloudApplication.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.DTO" total_bugs="0" total_types="20" total_size="770">
+      <ClassStats class="com.webstart.DTO.AutomaticWater" sourceFile="AutomaticWater.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.Crop" sourceFile="Crop.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.CropInfoDTO" sourceFile="CropInfoDTO.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.CurrentMeasure" sourceFile="CurrentMeasure.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.Device" sourceFile="Device.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.EmbeddedData" sourceFile="EmbeddedData.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.EmbeddedDataWrapper" sourceFile="EmbeddedDataWrapper.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.EmebddedSetupDevicdeDto" sourceFile="EmebddedSetupDevicdeDto.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.EndDeviceStatusDTO" sourceFile="EndDeviceStatusDTO.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.FeatureMinMaxValue" sourceFile="FeatureMinMaxValue.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.FeatureObsProp" sourceFile="FeatureObsProp.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.FeatureObsPropMinMax" sourceFile="FeatureObsPropMinMax.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.FeatureSensor" sourceFile="FeatureSensor.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.FeatureidIdentifier" sourceFile="FeatureidIdentifier.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.ObservableMeasure" sourceFile="ObservableMeasure.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.ObservationMeasure" sourceFile="ObservationMeasure.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.Sensor" sourceFile="Sensor.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.ValueTime" sourceFile="ValueTime.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.WateringMeasure" sourceFile="WateringMeasure.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.webstart.DTO.WateringValueTime" sourceFile="WateringValueTime.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.Enums" total_bugs="0" total_types="4" total_size="80">
+      <ClassStats class="com.webstart.Enums.FeatureTypeEnum" sourceFile="FeatureTypeEnum.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.webstart.Enums.MeasurementTypeEnum" sourceFile="MeasurementTypeEnum.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.webstart.Enums.NotificationTypeEnum" sourceFile="NotificationTypeEnum.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.webstart.Enums.StatusTimeConverterEnum" sourceFile="StatusTimeConverterEnum.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.Helpers" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="com.webstart.Helpers.HelperCls" sourceFile="HelperCls.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.webstart.Helpers.HelperCls$ConvertToDateTime" sourceFile="HelperCls.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.configuration" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.webstart.configuration.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.controller" total_bugs="0" total_types="5" total_size="708">
+      <ClassStats class="com.webstart.controller.EmbeddedController" sourceFile="EmbeddedController.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.webstart.controller.ExtractController" sourceFile="ExtractController.java" interface="false" size="330" bugs="0"/>
+      <ClassStats class="com.webstart.controller.HomeController" sourceFile="HomeController.java" interface="false" size="209" bugs="0"/>
+      <ClassStats class="com.webstart.controller.IndexController" sourceFile="IndexController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.webstart.controller.UserController" sourceFile="UserController.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.model" total_bugs="1" total_types="14" total_size="828" priority_2="1">
+      <ClassStats class="com.webstart.model.Featureofinterest" sourceFile="Featureofinterest.java" interface="false" size="171" bugs="0"/>
+      <ClassStats class="com.webstart.model.Featureofinteresttype" sourceFile="Featureofinteresttype.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.webstart.model.Notifications" sourceFile="Notifications.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.webstart.model.NumericValue" sourceFile="NumericValue.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.webstart.model.ObservableProperty" sourceFile="ObservableProperty.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.webstart.model.ObservablePropertyMinMax" sourceFile="ObservablePropertyMinMax.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.webstart.model.Observation" sourceFile="Observation.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.webstart.model.Procedure" sourceFile="Procedure.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.webstart.model.ProcedureDescriptionFormat" sourceFile="ProcedureDescriptionFormat.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.webstart.model.Series" sourceFile="Series.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.webstart.model.Unit" sourceFile="Unit.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.webstart.model.UserProfile" sourceFile="UserProfile.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="com.webstart.model.Users" sourceFile="Users.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.webstart.model.UsersRole" sourceFile="UsersRole.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.repository" total_bugs="2" total_types="8" total_size="56" priority_2="2">
+      <ClassStats class="com.webstart.repository.FeatureofinterestJpaRepository" sourceFile="FeatureofinterestJpaRepository.java" interface="true" size="29" bugs="2" priority_2="2"/>
+      <ClassStats class="com.webstart.repository.NotificationsJpaRepository" sourceFile="NotificationsJpaRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.webstart.repository.NumericValueJpaRepository" sourceFile="NumericValueJpaRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.webstart.repository.ObservablePropertyJpaRepository" sourceFile="ObservablePropertyJpaRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.webstart.repository.ObservationJpaRepository" sourceFile="ObservationJpaRepository.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.webstart.repository.SeriesJpaRepository" sourceFile="SeriesJpaRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.webstart.repository.UserProfileJpaRepository" sourceFile="UserProfileJpaRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.webstart.repository.UsersJpaRepository" sourceFile="UsersJpaRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.webstart.service" total_bugs="0" total_types="8" total_size="719">
+      <ClassStats class="com.webstart.service.FeatureofInterestService" sourceFile="FeatureofInterestService.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="com.webstart.service.FeatureofInterestServiceImpl" sourceFile="FeatureofInterestServiceImpl.java" interface="false" size="322" bugs="0"/>
+      <ClassStats class="com.webstart.service.MeasureService" sourceFile="MeasureService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.webstart.service.MeasuresServiceImpl" sourceFile="MeasuresServiceImpl.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="com.webstart.service.ObservationPropertyServiceImpl" sourceFile="ObservationPropertyServiceImpl.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="com.webstart.service.ObservationProperyService" sourceFile="ObservationProperyService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.webstart.service.UsersService" sourceFile="UsersService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.webstart.service.UsersServiceImpl" sourceFile="UsersServiceImpl.java" interface="false" size="82" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="237" invocations="653" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="12158" standardDeviationMicrosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="168" invocations="580" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="16275" standardDeviationMicrosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="167" invocations="583" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="10185" standardDeviationMicrosecondsPerInvocation="921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="159" invocations="581" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="6298" standardDeviationMicrosecondsPerInvocation="722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="145" invocations="580" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="7825" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="136" invocations="583" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="11538" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="113" invocations="581" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="9944" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="96" invocations="205" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="6504" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="107" avgMicrosecondsPerInvocation="882" maxMicrosecondsPerInvocation="8587" standardDeviationMicrosecondsPerInvocation="1701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="91" invocations="823" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="6283" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="77" invocations="107" avgMicrosecondsPerInvocation="728" maxMicrosecondsPerInvocation="6387" standardDeviationMicrosecondsPerInvocation="1236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="62" invocations="669" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="26610" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="61" invocations="186" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="32069" standardDeviationMicrosecondsPerInvocation="2349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="57" invocations="664" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="1068" standardDeviationMicrosecondsPerInvocation="83"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="517" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="1051" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="40" invocations="107" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="18220" standardDeviationMicrosecondsPerInvocation="1781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="37" invocations="9395" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1127" standardDeviationMicrosecondsPerInvocation="20"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="107" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="4425" standardDeviationMicrosecondsPerInvocation="605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="34" invocations="63" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="30438" standardDeviationMicrosecondsPerInvocation="3812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="34" invocations="581" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="1842" standardDeviationMicrosecondsPerInvocation="155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="31" invocations="63" avgMicrosecondsPerInvocation="501" maxMicrosecondsPerInvocation="2576" standardDeviationMicrosecondsPerInvocation="504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="107" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="3319" standardDeviationMicrosecondsPerInvocation="547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="29" invocations="63" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="3692" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="107" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="4208" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="63" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="3093" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="107" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="9657" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="24" invocations="63" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="5007" standardDeviationMicrosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="24" invocations="63" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="3959" standardDeviationMicrosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="23" invocations="63" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="8918" standardDeviationMicrosecondsPerInvocation="1144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="23" invocations="63" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="5029" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="11" avgMicrosecondsPerInvocation="2122" maxMicrosecondsPerInvocation="4072" standardDeviationMicrosecondsPerInvocation="1262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="22" invocations="579" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="2248" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="107" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="1927" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="63" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="3490" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LockDataflowFactory" totalMilliseconds="21" invocations="89" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="1892" standardDeviationMicrosecondsPerInvocation="412"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

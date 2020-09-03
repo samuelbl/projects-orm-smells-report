@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597100109000" analysisTimestamp="1597100112230" release="">
+  <Project projectName="repositorios/materasystems_curso-de-ferias-2020-spring">
+    <Jar>repositorios/materasystems_curso-de-ferias-2020-spring</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Conta">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Conta" start="20" end="45" sourcefile="Conta.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Conta.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Conta" name="cliente" signature="Lcom/matera/cursoferias/digitalbank/entity/Cliente;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Conta" sourcefile="Conta.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Conta.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Estorno">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Estorno" start="15" end="29" sourcefile="Estorno.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Estorno.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Estorno" name="lancamentoEstorno" signature="Lcom/matera/cursoferias/digitalbank/entity/Lancamento;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Estorno" sourcefile="Estorno.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Estorno.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Estorno">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Estorno" start="15" end="29" sourcefile="Estorno.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Estorno.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Estorno" name="lancamentoOriginal" signature="Lcom/matera/cursoferias/digitalbank/entity/Lancamento;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Estorno" sourcefile="Estorno.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Estorno.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Lancamento">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Lancamento" start="20" end="48" sourcefile="Lancamento.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Lancamento.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Lancamento" name="conta" signature="Lcom/matera/cursoferias/digitalbank/entity/Conta;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Lancamento" sourcefile="Lancamento.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Lancamento.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Transferencia">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Transferencia" start="15" end="29" sourcefile="Transferencia.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Transferencia.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Transferencia" name="lancamentoCredito" signature="Lcom/matera/cursoferias/digitalbank/entity/Lancamento;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Transferencia" sourcefile="Transferencia.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Transferencia.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.entity.Transferencia">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Transferencia" start="15" end="29" sourcefile="Transferencia.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Transferencia.java"/>
+    </Class>
+    <Field classname="com.matera.cursoferias.digitalbank.entity.Transferencia" name="lancamentoDebito" signature="Lcom/matera/cursoferias/digitalbank/entity/Lancamento;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.entity.Transferencia" sourcefile="Transferencia.java" sourcepath="com/matera/cursoferias/digitalbank/entity/Transferencia.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.repository.LancamentoRepository">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.repository.LancamentoRepository" sourcefile="LancamentoRepository.java" sourcepath="com/matera/cursoferias/digitalbank/repository/LancamentoRepository.java"/>
+    </Class>
+    <Method classname="com.matera.cursoferias.digitalbank.repository.LancamentoRepository" name="consultaLancamentosPorPeriodo" signature="(Ljava/lang/Long;Ljava/time/LocalDate;Ljava/time/LocalDate;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.repository.LancamentoRepository" sourcefile="LancamentoRepository.java" sourcepath="com/matera/cursoferias/digitalbank/repository/LancamentoRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.matera.cursoferias.digitalbank.repository.TransferenciaRepository">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.repository.TransferenciaRepository" sourcefile="TransferenciaRepository.java" sourcepath="com/matera/cursoferias/digitalbank/repository/TransferenciaRepository.java"/>
+    </Class>
+    <Method classname="com.matera.cursoferias.digitalbank.repository.TransferenciaRepository" name="consultaTransferenciaPorIdLancamento" signature="(Ljava/lang/Long;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.matera.cursoferias.digitalbank.repository.TransferenciaRepository" sourcefile="TransferenciaRepository.java" sourcepath="com/matera/cursoferias/digitalbank/repository/TransferenciaRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.ApplicationRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:55:09 +0000" total_classes="94" referenced_classes="215" total_bugs="8" total_size="2425" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="14.65" clock_seconds="9.08" peak_mbytes="342.81" alloc_mbytes="3540.00" gc_seconds="0.52" priority_2="8">
+    <PackageStats package="com.matera.cursoferias.digitalbank" total_bugs="0" total_types="3" total_size="77">
+      <ClassStats class="com.matera.cursoferias.digitalbank.AppStartupRunner" sourceFile="AppStartupRunner.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.DigitalbankApplication" sourceFile="DigitalbankApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.ServletInitializer" sourceFile="ServletInitializer.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.controller" total_bugs="0" total_types="3" total_size="150">
+      <ClassStats class="com.matera.cursoferias.digitalbank.controller.ClienteController" sourceFile="ClienteController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.controller.ContaController" sourceFile="ContaController.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.controller.ControllerBase" sourceFile="ControllerBase.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.dto.request" total_bugs="0" total_types="6" total_size="147">
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.ClienteRequestDTO" sourceFile="ClienteRequestDTO.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.ClienteRequestDTO$ClienteRequestDTOBuilder" sourceFile="ClienteRequestDTO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.LancamentoRequestDTO" sourceFile="LancamentoRequestDTO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.LancamentoRequestDTO$LancamentoRequestDTOBuilder" sourceFile="LancamentoRequestDTO.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.TransferenciaRequestDTO" sourceFile="TransferenciaRequestDTO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.request.TransferenciaRequestDTO$TransferenciaRequestDTOBuilder" sourceFile="TransferenciaRequestDTO.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.dto.response" total_bugs="0" total_types="9" total_size="259">
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ClienteResponseDTO" sourceFile="ClienteResponseDTO.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ClienteResponseDTO$ClienteResponseDTOBuilder" sourceFile="ClienteResponseDTO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ComprovanteResponseDTO" sourceFile="ComprovanteResponseDTO.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ComprovanteResponseDTO$ComprovanteResponseDTOBuilder" sourceFile="ComprovanteResponseDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ContaResponseDTO" sourceFile="ContaResponseDTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ContaResponseDTO$ContaResponseDTOBuilder" sourceFile="ContaResponseDTO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ErroResponseDTO" sourceFile="ErroResponseDTO.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ExtratoResponseDTO" sourceFile="ExtratoResponseDTO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.dto.response.ResponseDTO" sourceFile="ResponseDTO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.entity" total_bugs="6" total_types="24" total_size="361" priority_2="6">
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Cliente" sourceFile="Cliente.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Cliente$1" sourceFile="Cliente.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Cliente$ClienteBuilder" sourceFile="Cliente.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Cliente$ClienteBuilderImpl" sourceFile="Cliente.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Conta" sourceFile="Conta.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Conta$1" sourceFile="Conta.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Conta$ContaBuilder" sourceFile="Conta.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Conta$ContaBuilderImpl" sourceFile="Conta.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.EntidadeBase" sourceFile="EntidadeBase.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.EntidadeBase$1" sourceFile="EntidadeBase.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.EntidadeBase$EntidadeBaseBuilder" sourceFile="EntidadeBase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.EntidadeBase$EntidadeBaseBuilderImpl" sourceFile="EntidadeBase.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Estorno" sourceFile="Estorno.java" interface="false" size="17" bugs="2" priority_2="2"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Estorno$1" sourceFile="Estorno.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Estorno$EstornoBuilder" sourceFile="Estorno.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Estorno$EstornoBuilderImpl" sourceFile="Estorno.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Lancamento" sourceFile="Lancamento.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Lancamento$1" sourceFile="Lancamento.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Lancamento$LancamentoBuilder" sourceFile="Lancamento.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Lancamento$LancamentoBuilderImpl" sourceFile="Lancamento.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Transferencia" sourceFile="Transferencia.java" interface="false" size="17" bugs="2" priority_2="2"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Transferencia$1" sourceFile="Transferencia.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Transferencia$TransferenciaBuilder" sourceFile="Transferencia.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.entity.Transferencia$TransferenciaBuilderImpl" sourceFile="Transferencia.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.enumerator" total_bugs="0" total_types="3" total_size="62">
+      <ClassStats class="com.matera.cursoferias.digitalbank.enumerator.Natureza" sourceFile="Natureza.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.enumerator.SituacaoConta" sourceFile="SituacaoConta.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.enumerator.TipoLancamento" sourceFile="TipoLancamento.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.exception" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.matera.cursoferias.digitalbank.exception.ServiceException" sourceFile="ServiceException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.repository" total_bugs="2" total_types="5" total_size="15" priority_2="2">
+      <ClassStats class="com.matera.cursoferias.digitalbank.repository.ClienteRepository" sourceFile="ClienteRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.repository.ContaRepository" sourceFile="ContaRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.repository.EstornoRepository" sourceFile="EstornoRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.repository.LancamentoRepository" sourceFile="LancamentoRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.repository.TransferenciaRepository" sourceFile="TransferenciaRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.service" total_bugs="0" total_types="3" total_size="301">
+      <ClassStats class="com.matera.cursoferias.digitalbank.service.ClienteService" sourceFile="ClienteService.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.service.ContaService" sourceFile="ContaService.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.matera.cursoferias.digitalbank.service.LancamentoService" sourceFile="LancamentoService.java" interface="false" size="122" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.matera.cursoferias.digitalbank.utils" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.matera.cursoferias.digitalbank.utils.DigitalbankUtils" sourceFile="DigitalbankUtils.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="13" total_size="512">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="656" invocations="1107" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="24593" standardDeviationMicrosecondsPerInvocation="1996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="310" invocations="215" avgMicrosecondsPerInvocation="1441" maxMicrosecondsPerInvocation="29473" standardDeviationMicrosecondsPerInvocation="3916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="305" invocations="703" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="18502" standardDeviationMicrosecondsPerInvocation="1733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="289" invocations="215" avgMicrosecondsPerInvocation="1346" maxMicrosecondsPerInvocation="42862" standardDeviationMicrosecondsPerInvocation="4085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="276" invocations="672" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="20123" standardDeviationMicrosecondsPerInvocation="1657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="255" invocations="707" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="19683" standardDeviationMicrosecondsPerInvocation="1628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="249" invocations="1111" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="12372" standardDeviationMicrosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="246" invocations="707" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="32355" standardDeviationMicrosecondsPerInvocation="2183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="242" invocations="676" avgMicrosecondsPerInvocation="358" maxMicrosecondsPerInvocation="18636" standardDeviationMicrosecondsPerInvocation="1487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="239" invocations="1182" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="54580" standardDeviationMicrosecondsPerInvocation="1757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="225" invocations="285" avgMicrosecondsPerInvocation="791" maxMicrosecondsPerInvocation="92620" standardDeviationMicrosecondsPerInvocation="5735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="194" invocations="994" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="70084" standardDeviationMicrosecondsPerInvocation="2425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="188" invocations="703" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="21906" standardDeviationMicrosecondsPerInvocation="1197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="181" invocations="417" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="24218" standardDeviationMicrosecondsPerInvocation="1925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="164" invocations="215" avgMicrosecondsPerInvocation="767" maxMicrosecondsPerInvocation="24085" standardDeviationMicrosecondsPerInvocation="3018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="147" invocations="742" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="68906" standardDeviationMicrosecondsPerInvocation="2616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="121" invocations="215" avgMicrosecondsPerInvocation="565" maxMicrosecondsPerInvocation="21464" standardDeviationMicrosecondsPerInvocation="2156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="119" invocations="94" avgMicrosecondsPerInvocation="1269" maxMicrosecondsPerInvocation="20273" standardDeviationMicrosecondsPerInvocation="3320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="88" invocations="215" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="14827" standardDeviationMicrosecondsPerInvocation="1529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="88" invocations="215" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="19384" standardDeviationMicrosecondsPerInvocation="1875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="84" invocations="94" avgMicrosecondsPerInvocation="896" maxMicrosecondsPerInvocation="38696" standardDeviationMicrosecondsPerInvocation="4843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="81" invocations="215" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="15522" standardDeviationMicrosecondsPerInvocation="1444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="76" invocations="94" avgMicrosecondsPerInvocation="815" maxMicrosecondsPerInvocation="12763" standardDeviationMicrosecondsPerInvocation="2456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="73" invocations="215" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="20541" standardDeviationMicrosecondsPerInvocation="1985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="69" invocations="94" avgMicrosecondsPerInvocation="741" maxMicrosecondsPerInvocation="17733" standardDeviationMicrosecondsPerInvocation="2283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="66" invocations="94" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="31268" standardDeviationMicrosecondsPerInvocation="3274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="65" invocations="10843" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="16045" standardDeviationMicrosecondsPerInvocation="175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="64" invocations="94" avgMicrosecondsPerInvocation="686" maxMicrosecondsPerInvocation="16493" standardDeviationMicrosecondsPerInvocation="2741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="63" invocations="215" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="23213" standardDeviationMicrosecondsPerInvocation="1630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="63" invocations="94" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="13065" standardDeviationMicrosecondsPerInvocation="2006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="60" invocations="94" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="13250" standardDeviationMicrosecondsPerInvocation="2381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="59" invocations="215" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="21422" standardDeviationMicrosecondsPerInvocation="1743"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

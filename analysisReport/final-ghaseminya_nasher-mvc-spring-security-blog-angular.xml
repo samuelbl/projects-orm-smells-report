@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596954486000" analysisTimestamp="1596954488098" release="">
+  <Project projectName="repositorios/ghaseminya_nasher-mvc-spring-security-blog-angular">
+    <Jar>repositorios/ghaseminya_nasher-mvc-spring-security-blog-angular</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ir.mnm.nasher.entity.AccessToken">
+      <SourceLine classname="ir.mnm.nasher.entity.AccessToken" start="29" end="72" sourcefile="AccessToken.java" sourcepath="ir/mnm/nasher/entity/AccessToken.java"/>
+    </Class>
+    <Field classname="ir.mnm.nasher.entity.AccessToken" name="user" signature="Lir/mnm/nasher/entity/User;" isStatic="false">
+      <SourceLine classname="ir.mnm.nasher.entity.AccessToken" sourcefile="AccessToken.java" sourcepath="ir/mnm/nasher/entity/AccessToken.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>org.codehaus.jackson.map.ObjectMapper</MissingClass>
+    <MissingClass>org.codehaus.jackson.map.ObjectWriter</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 06:28:06 +0000" total_classes="36" referenced_classes="76" total_bugs="1" total_size="651" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.07" clock_seconds="1.71" peak_mbytes="148.67" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="ir.mnm.nasher" total_bugs="0" total_types="3" total_size="9">
+      <ClassStats class="ir.mnm.nasher.JsonViews" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.JsonViews$Admin" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.JsonViews$User" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.dao" total_bugs="0" total_types="3" total_size="79">
+      <ClassStats class="ir.mnm.nasher.dao.Dao" sourceFile="Dao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.DataBaseInitializer" sourceFile="DataBaseInitializer.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.JpaDao" sourceFile="JpaDao.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.dao.accesstoken" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="ir.mnm.nasher.dao.accesstoken.AccessTokenDao" sourceFile="AccessTokenDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.accesstoken.JpaAccessTokenDao" sourceFile="JpaAccessTokenDao.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.dao.blogpost" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="ir.mnm.nasher.dao.blogpost.BlogPostDao" sourceFile="BlogPostDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.blogpost.JpaBlogPostDao" sourceFile="JpaBlogPostDao.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.dao.category" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="ir.mnm.nasher.dao.category.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.category.JpaCategoryDao" sourceFile="JpaCategoryDao.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.dao.user" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="ir.mnm.nasher.dao.user.JpaUserDao" sourceFile="JpaUserDao.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.dao.user.UserDao" sourceFile="UserDao.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.entity" total_bugs="1" total_types="7" total_size="193" priority_2="1">
+      <ClassStats class="ir.mnm.nasher.entity.AccessToken" sourceFile="AccessToken.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="ir.mnm.nasher.entity.BlogPost" sourceFile="BlogPost.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.entity.Category" sourceFile="Category.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.entity.Comment" sourceFile="Comment.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.entity.Entity" sourceFile="Entity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.entity.Role" sourceFile="Role.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.entity.User" sourceFile="User.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.rest" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="ir.mnm.nasher.rest.AuthenticationTokenProcessingFilter" sourceFile="AuthenticationTokenProcessingFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.rest.UnauthorizedEntryPoint" sourceFile="UnauthorizedEntryPoint.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.rest.resources" total_bugs="0" total_types="4" total_size="109">
+      <ClassStats class="ir.mnm.nasher.rest.resources.BlogPostResource" sourceFile="BlogPostResource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.rest.resources.CategoryResource" sourceFile="CategoryResource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.rest.resources.FileResource" sourceFile="FileResource.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.rest.resources.UserResource" sourceFile="UserResource.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.service" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="ir.mnm.nasher.service.DaoUserService" sourceFile="DaoUserService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.transfer" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="ir.mnm.nasher.transfer.TokenTransfer" sourceFile="TokenTransfer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.transfer.UserTransfer" sourceFile="UserTransfer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.util" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="ir.mnm.nasher.util.dodownload" sourceFile="dodownload.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.util.tools" sourceFile="tools.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ir.mnm.nasher.web.controller" total_bugs="0" total_types="3" total_size="62">
+      <ClassStats class="ir.mnm.nasher.web.controller.blogs" sourceFile="blogs.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.web.controller.categoryController" sourceFile="categoryController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ir.mnm.nasher.web.controller.oneController" sourceFile="oneController.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="158" invocations="554" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="8523" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="71" invocations="76" avgMicrosecondsPerInvocation="940" maxMicrosecondsPerInvocation="13031" standardDeviationMicrosecondsPerInvocation="2084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="76" avgMicrosecondsPerInvocation="692" maxMicrosecondsPerInvocation="8644" standardDeviationMicrosecondsPerInvocation="1362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="50" invocations="131" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="9687" standardDeviationMicrosecondsPerInvocation="1015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="48" invocations="131" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="9469" standardDeviationMicrosecondsPerInvocation="1067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="250" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="3701" standardDeviationMicrosecondsPerInvocation="375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="44" invocations="559" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="476" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="143" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="26152" standardDeviationMicrosecondsPerInvocation="2186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="41" invocations="133" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="9989" standardDeviationMicrosecondsPerInvocation="997"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="40" invocations="131" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="4167" standardDeviationMicrosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="37" invocations="131" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="9464" standardDeviationMicrosecondsPerInvocation="870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="453" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="8763" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="36" invocations="76" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="16297" standardDeviationMicrosecondsPerInvocation="1966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="35" invocations="131" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="4919" standardDeviationMicrosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="136" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="13733" standardDeviationMicrosecondsPerInvocation="1198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="83" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="4128" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="76" avgMicrosecondsPerInvocation="347" maxMicrosecondsPerInvocation="7419" standardDeviationMicrosecondsPerInvocation="934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="76" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="8854" standardDeviationMicrosecondsPerInvocation="1035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="76" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="5369" standardDeviationMicrosecondsPerInvocation="668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="76" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="3141" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="1536" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1191" standardDeviationMicrosecondsPerInvocation="46"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="76" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="2277" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="14" invocations="36" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="5539" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="13" invocations="76" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="4099" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="12" invocations="36" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="2642" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="36" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="5817" standardDeviationMicrosecondsPerInvocation="942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="11" invocations="131" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="1313" standardDeviationMicrosecondsPerInvocation="188"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

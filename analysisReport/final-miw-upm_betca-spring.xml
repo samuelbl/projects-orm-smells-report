@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597083294000" analysisTimestamp="1597083295950" release="">
+  <Project projectName="repositorios/miw-upm_betca-spring">
+    <Jar>repositorios/miw-upm_betca-spring</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.daos.UnRelatedDao">
+      <SourceLine classname="es.upm.miw.persistence.jpa.daos.UnRelatedDao" sourcefile="UnRelatedDao.java" sourcepath="es/upm/miw/persistence/jpa/daos/UnRelatedDao.java"/>
+    </Class>
+    <Method classname="es.upm.miw.persistence.jpa.daos.UnRelatedDao" name="deleteByNickQuery" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.daos.UnRelatedDao" sourcefile="UnRelatedDao.java" sourcepath="es/upm/miw/persistence/jpa/daos/UnRelatedDao.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.AggregationEntity">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" start="21" end="69" sourcefile="AggregationEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/AggregationEntity.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" name="anotherEntityList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" sourcefile="AggregationEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/AggregationEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.AggregationEntity">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" start="21" end="69" sourcefile="AggregationEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/AggregationEntity.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" name="anotherEntity" signature="Les/upm/miw/persistence/jpa/entities/AnotherEntity;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.AggregationEntity" sourcefile="AggregationEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/AggregationEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.CompositionEntity">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" start="24" end="76" sourcefile="CompositionEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/CompositionEntity.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" name="anyEntityList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" sourcefile="CompositionEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/CompositionEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.CompositionEntity">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" start="24" end="76" sourcefile="CompositionEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/CompositionEntity.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" name="anyEntityList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.CompositionEntity" sourcefile="CompositionEntity.java" sourcepath="es/upm/miw/persistence/jpa/entities/CompositionEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.library.Author">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.library.Author" start="23" end="74" sourcefile="Author.java" sourcepath="es/upm/miw/persistence/jpa/entities/library/Author.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.library.Author" name="style" signature="Les/upm/miw/persistence/jpa/entities/library/Style;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.library.Author" sourcefile="Author.java" sourcepath="es/upm/miw/persistence/jpa/entities/library/Author.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="es.upm.miw.persistence.jpa.entities.library.Book">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.library.Book" start="23" end="74" sourcefile="Book.java" sourcepath="es/upm/miw/persistence/jpa/entities/library/Book.java"/>
+    </Class>
+    <Field classname="es.upm.miw.persistence.jpa.entities.library.Book" name="themeList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="es.upm.miw.persistence.jpa.entities.library.Book" sourcefile="Book.java" sourcepath="es/upm/miw/persistence/jpa/entities/library/Book.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="73">
+    <MissingClass>com.auth0.jwt.JWT</MissingClass>
+    <MissingClass>com.auth0.jwt.JWTCreator$Builder</MissingClass>
+    <MissingClass>com.auth0.jwt.JWTVerifier</MissingClass>
+    <MissingClass>com.auth0.jwt.algorithms.Algorithm</MissingClass>
+    <MissingClass>com.auth0.jwt.interfaces.Claim</MissingClass>
+    <MissingClass>com.auth0.jwt.interfaces.DecodedJWT</MissingClass>
+    <MissingClass>com.auth0.jwt.interfaces.Verification</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.itextpdf.barcodes.Barcode128</MissingClass>
+    <MissingClass>com.itextpdf.barcodes.BarcodeQRCode</MissingClass>
+    <MissingClass>com.itextpdf.io.image.ImageDataFactory</MissingClass>
+    <MissingClass>com.itextpdf.kernel.color.Color</MissingClass>
+    <MissingClass>com.itextpdf.kernel.geom.PageSize</MissingClass>
+    <MissingClass>com.itextpdf.kernel.pdf.PdfDocument</MissingClass>
+    <MissingClass>com.itextpdf.kernel.pdf.PdfWriter</MissingClass>
+    <MissingClass>com.itextpdf.kernel.pdf.canvas.draw.DottedLine</MissingClass>
+    <MissingClass>com.itextpdf.layout.Document</MissingClass>
+    <MissingClass>com.itextpdf.layout.border.SolidBorder</MissingClass>
+    <MissingClass>com.itextpdf.layout.element.Cell</MissingClass>
+    <MissingClass>com.itextpdf.layout.element.Image</MissingClass>
+    <MissingClass>com.itextpdf.layout.element.LineSeparator</MissingClass>
+    <MissingClass>com.itextpdf.layout.element.Paragraph</MissingClass>
+    <MissingClass>com.itextpdf.layout.element.Table</MissingClass>
+    <MissingClass>com.itextpdf.layout.property.HorizontalAlignment</MissingClass>
+    <MissingClass>com.itextpdf.layout.property.TextAlignment</MissingClass>
+    <MissingClass>com.itextpdf.layout.property.VerticalAlignment</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.logging.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.logging.log4j.Logger</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.FilterRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.data.domain.Example</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Criteria</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Query</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.repository.MongoRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.reactive.ReactiveSortingRepository</MissingClass>
+    <MissingClass>org.springframework.mail.MailSender</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.www.BasicAuthenticationFilter</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>reactor.core.publisher.EmitterProcessor</MissingClass>
+    <MissingClass>reactor.core.publisher.Flux</MissingClass>
+    <MissingClass>reactor.core.publisher.Mono</MissingClass>
+    <MissingClass>reactor.core.publisher.SynchronousSink</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:14:54 +0000" total_classes="104" referenced_classes="188" total_bugs="7" total_size="1948" num_packages="21" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.01" clock_seconds="3.11" peak_mbytes="327.20" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="3" priority_1="4">
+    <PackageStats package="es.upm.miw" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="es.upm.miw.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.aspect" total_bugs="0" total_types="6" total_size="105">
+      <ClassStats class="es.upm.miw.aspect.ApiLogs" sourceFile="ApiLogs.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="es.upm.miw.aspect.Aspects" sourceFile="Aspects.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="es.upm.miw.aspect.MyClassAnnotation" sourceFile="MyClassAnnotation.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.aspect.MyMethodAnnotation" sourceFile="MyMethodAnnotation.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.aspect.ProcessTime" sourceFile="ProcessTime.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="es.upm.miw.aspect.Time" sourceFile="Time.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.aspect_target" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="es.upm.miw.aspect_target.ServiceOne" sourceFile="ServiceOne.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.config" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="es.upm.miw.config.WebMvcConfig" sourceFile="WebMvcConfig.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.injection" total_bugs="0" total_types="4" total_size="42">
+      <ClassStats class="es.upm.miw.injection.InjectionConfig" sourceFile="InjectionConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="es.upm.miw.injection.InjectionMain" sourceFile="InjectionMain.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="es.upm.miw.injection.PrototypeInjectionOnlyMessageService" sourceFile="PrototypeInjectionOnlyMessageService.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.injection.SingletonMessageService" sourceFile="SingletonMessageService.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.lombok" total_bugs="0" total_types="4" total_size="92">
+      <ClassStats class="es.upm.miw.lombok.DtoWithLombok" sourceFile="DtoWithLombok.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="es.upm.miw.lombok.DtoWithLombok$DtoWithLombokBuilder" sourceFile="DtoWithLombok.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="es.upm.miw.lombok.EntityClass" sourceFile="EntityClass.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="es.upm.miw.lombok.EntityClass$EntityClassBuilder" sourceFile="EntityClass.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.jpa.daos" total_bugs="1" total_types="5" total_size="16" priority_2="1">
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.AggregationDao" sourceFile="AggregationDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.AnotherDao" sourceFile="AnotherDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.AnyDao" sourceFile="AnyDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.CompositionDao" sourceFile="CompositionDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.UnRelatedDao" sourceFile="UnRelatedDao.java" interface="true" size="12" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.jpa.daos.library" total_bugs="0" total_types="4" total_size="9">
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.library.AuthorDao" sourceFile="AuthorDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.library.BookDao" sourceFile="BookDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.library.StyleDao" sourceFile="StyleDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.daos.library.ThemeDao" sourceFile="ThemeDao.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.jpa.entities" total_bugs="4" total_types="12" total_size="284" priority_2="1" priority_1="3">
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AbstractEntity" sourceFile="AbstractEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AbstractRootEntity" sourceFile="AbstractRootEntity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AggregationEntity" sourceFile="AggregationEntity.java" interface="false" size="35" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AnotherEntity" sourceFile="AnotherEntity.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AnyClass" sourceFile="AnyClass.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.AnyEntity" sourceFile="AnyEntity.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.CompositionEntity" sourceFile="CompositionEntity.java" interface="false" size="40" bugs="2" priority_1="2"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.ConcreteEntity" sourceFile="ConcreteEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.EmbeddableEntity" sourceFile="EmbeddableEntity.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.Gender" sourceFile="Gender.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.OtherConcreteEntity" sourceFile="OtherConcreteEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.UnRelatedEntity" sourceFile="UnRelatedEntity.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.jpa.entities.library" total_bugs="2" total_types="5" total_size="152" priority_2="1" priority_1="1">
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.library.Author" sourceFile="Author.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.library.Book" sourceFile="Book.java" interface="false" size="38" bugs="1" priority_1="1"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.library.Contact" sourceFile="Contact.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.library.Style" sourceFile="Style.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.jpa.entities.library.Theme" sourceFile="Theme.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.mongo.documents" total_bugs="0" total_types="11" total_size="305">
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.AggregationDocument" sourceFile="AggregationDocument.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.AnyClass" sourceFile="AnyClass.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.AnyDocument" sourceFile="AnyDocument.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.CompositionDocument" sourceFile="CompositionDocument.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.Demo" sourceFile="Demo.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.DemoDto" sourceFile="DemoDto.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.EmbeddableDocument" sourceFile="EmbeddableDocument.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.Gender" sourceFile="Gender.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.Query1Dto" sourceFile="Query1Dto.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.Query2Dto" sourceFile="Query2Dto.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.UnRelatedDocument" sourceFile="UnRelatedDocument.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.mongo.documents.library" total_bugs="0" total_types="8" total_size="190">
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.Author" sourceFile="Author.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.Book" sourceFile="Book.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.Contact" sourceFile="Contact.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.ContactDto" sourceFile="ContactDto.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.EmailDto" sourceFile="EmailDto.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.NameDto" sourceFile="NameDto.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.Style" sourceFile="Style.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.documents.library.Theme" sourceFile="Theme.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.mongo.repositories" total_bugs="0" total_types="6" total_size="26">
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.AggregationRepository" sourceFile="AggregationRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.AnyRepository" sourceFile="AnyRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.CompositionRepository" sourceFile="CompositionRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.DemoRepository" sourceFile="DemoRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.UnRelatedReactRepository" sourceFile="UnRelatedReactRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.UnRelatedRepository" sourceFile="UnRelatedRepository.java" interface="true" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.persistence.mongo.repositories.library" total_bugs="0" total_types="5" total_size="42">
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.library.AuthorRepository" sourceFile="AuthorRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.library.BookRepository" sourceFile="BookRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.library.LibraryService" sourceFile="LibraryService.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.library.StyleRepository" sourceFile="StyleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="es.upm.miw.persistence.mongo.repositories.library.ThemeRepository" sourceFile="ThemeRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.reactor" total_bugs="0" total_types="3" total_size="150">
+      <ClassStats class="es.upm.miw.reactor.ReactiveProgramming" sourceFile="ReactiveProgramming.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="es.upm.miw.reactor.UnRelatedController" sourceFile="UnRelatedController.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="es.upm.miw.reactor.WebFluxResource" sourceFile="WebFluxResource.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers" total_bugs="0" total_types="6" total_size="159">
+      <ClassStats class="es.upm.miw.rest_controllers.AdminResource" sourceFile="AdminResource.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.Dto" sourceFile="Dto.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.ExceptionResource" sourceFile="ExceptionResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.SecurityResource" sourceFile="SecurityResource.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers.exceptions" total_bugs="0" total_types="13" total_size="88">
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.ApiExceptionHandler" sourceFile="ApiExceptionHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.BadRequestException" sourceFile="BadRequestException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.ConflictException" sourceFile="ConflictException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.ErrorMessage" sourceFile="ErrorMessage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.FieldAlreadyExistException" sourceFile="FieldAlreadyExistException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.FieldInvalidException" sourceFile="FieldInvalidException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.ForbiddenException" sourceFile="ForbiddenException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.JwtException" sourceFile="JwtException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.MailException" sourceFile="MailException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.MalformedHeaderException" sourceFile="MalformedHeaderException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.PdfException" sourceFile="PdfException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.exceptions.UnauthorizedException" sourceFile="UnauthorizedException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers.filter" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="es.upm.miw.rest_controllers.filter.MyFilter" sourceFile="MyFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.filter.TimeAccessFilter" sourceFile="TimeAccessFilter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers.jwt" total_bugs="0" total_types="3" total_size="63">
+      <ClassStats class="es.upm.miw.rest_controllers.jwt.JwtAuthorizationFilter" sourceFile="JwtAuthorizationFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.jwt.JwtResource" sourceFile="JwtResource.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.jwt.JwtService" sourceFile="JwtService.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers.mail" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="es.upm.miw.rest_controllers.mail.MailService" sourceFile="MailService.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="es.upm.miw.rest_controllers.pdf" total_bugs="0" total_types="3" total_size="145">
+      <ClassStats class="es.upm.miw.rest_controllers.pdf.PdfBuilder" sourceFile="PdfBuilder.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.pdf.PdfResource" sourceFile="PdfResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="es.upm.miw.rest_controllers.pdf.PdfTableBuilder" sourceFile="PdfTableBuilder.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="277" invocations="1023" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="11531" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="131" invocations="188" avgMicrosecondsPerInvocation="697" maxMicrosecondsPerInvocation="26422" standardDeviationMicrosecondsPerInvocation="2136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="130" invocations="188" avgMicrosecondsPerInvocation="694" maxMicrosecondsPerInvocation="8649" standardDeviationMicrosecondsPerInvocation="1437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="106" invocations="554" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="9436" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="87" invocations="1038" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="3616" standardDeviationMicrosecondsPerInvocation="146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="86" invocations="554" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="1895" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="85" invocations="556" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="9279" standardDeviationMicrosecondsPerInvocation="432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="84" invocations="554" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="10069" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="74" invocations="556" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="10053" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="74" invocations="554" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="2707" standardDeviationMicrosecondsPerInvocation="198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="74" invocations="188" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="26736" standardDeviationMicrosecondsPerInvocation="1996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="65" invocations="814" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="3155" standardDeviationMicrosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="57" invocations="336" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="4161" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="598" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="26659" standardDeviationMicrosecondsPerInvocation="1088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="49" invocations="301" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="12675" standardDeviationMicrosecondsPerInvocation="759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="806" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="1685" standardDeviationMicrosecondsPerInvocation="109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="42" invocations="188" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="5444" standardDeviationMicrosecondsPerInvocation="691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="41" invocations="188" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="6537" standardDeviationMicrosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="33" invocations="188" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="2070" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="188" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="7335" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="30" invocations="104" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="3854" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="27" invocations="5541" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="994" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="188" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="2384" standardDeviationMicrosecondsPerInvocation="287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="24" invocations="554" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1531" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="23" invocations="104" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="2408" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="2066" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="7925" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="11928" standardDeviationMicrosecondsPerInvocation="1240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="5701" standardDeviationMicrosecondsPerInvocation="570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="1564" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="3231" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="18" invocations="104" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="2413" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="18" invocations="554" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="1248" standardDeviationMicrosecondsPerInvocation="82"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

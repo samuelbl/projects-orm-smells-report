@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597111473000" analysisTimestamp="1597111474332" release="">
+  <Project projectName="repositorios/m1key_audiolicious">
+    <Jar>repositorios/m1key_audiolicious</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="me.m1key.audiolicious.domain.entities.Stat">
+      <SourceLine classname="me.m1key.audiolicious.domain.entities.Stat" start="80" end="157" sourcefile="Stat.java" sourcepath="me/m1key/audiolicious/domain/entities/Stat.java"/>
+    </Class>
+    <Field classname="me.m1key.audiolicious.domain.entities.Stat" name="library" signature="Lme/m1key/audiolicious/domain/entities/Library;" isStatic="false">
+      <SourceLine classname="me.m1key.audiolicious.domain.entities.Stat" sourcefile="Stat.java" sourcepath="me/m1key/audiolicious/domain/entities/Stat.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="me.m1key.audiolicious.repositories.JpaArtistRepository">
+      <SourceLine classname="me.m1key.audiolicious.repositories.JpaArtistRepository" start="36" end="66" sourcefile="JpaArtistRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaArtistRepository.java"/>
+    </Class>
+    <Method classname="me.m1key.audiolicious.repositories.JpaArtistRepository" name="getArtist" signature="(Ljava/lang/String;)Lme/m1key/audiolicious/domain/entities/Artist;" isStatic="false">
+      <SourceLine classname="me.m1key.audiolicious.repositories.JpaArtistRepository" start="48" end="56" startBytecode="0" endBytecode="174" sourcefile="JpaArtistRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaArtistRepository.java"/>
+    </Method>
+    <SourceLine classname="me.m1key.audiolicious.repositories.JpaArtistRepository" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="JpaArtistRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaArtistRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="me.m1key.audiolicious.repositories.JpaLibraryRepository">
+      <SourceLine classname="me.m1key.audiolicious.repositories.JpaLibraryRepository" start="35" end="66" sourcefile="JpaLibraryRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaLibraryRepository.java"/>
+    </Class>
+    <Method classname="me.m1key.audiolicious.repositories.JpaLibraryRepository" name="getByUuid" signature="(Ljava/lang/String;)Lme/m1key/audiolicious/domain/entities/Library;" isStatic="false">
+      <SourceLine classname="me.m1key.audiolicious.repositories.JpaLibraryRepository" start="47" end="54" startBytecode="0" endBytecode="162" sourcefile="JpaLibraryRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaLibraryRepository.java"/>
+    </Method>
+    <SourceLine classname="me.m1key.audiolicious.repositories.JpaLibraryRepository" start="47" end="47" startBytecode="4" endBytecode="4" sourcefile="JpaLibraryRepository.java" sourcepath="me/m1key/audiolicious/repositories/JpaLibraryRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>com.ximpleware.AutoPilot</MissingClass>
+    <MissingClass>com.ximpleware.NavException</MissingClass>
+    <MissingClass>com.ximpleware.VTDGen</MissingClass>
+    <MissingClass>com.ximpleware.VTDNav</MissingClass>
+    <MissingClass>com.ximpleware.XPathEvalException</MissingClass>
+    <MissingClass>javax.ejb.AsyncResult</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.FlushModeType</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.format.DateTimeFormatter</MissingClass>
+    <MissingClass>org.joda.time.format.ISODateTimeFormat</MissingClass>
+    <MissingClass>org.richfaces.event.FileUploadEvent</MissingClass>
+    <MissingClass>org.richfaces.model.UploadedFile</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:04:33 +0000" total_classes="137" referenced_classes="199" total_bugs="3" total_size="2180" num_packages="15" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.46" clock_seconds="2.92" peak_mbytes="317.78" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="3">
+    <PackageStats package="me.m1key.audiolicious.commons" total_bugs="0" total_types="51" total_size="358">
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName" sourceFile="XmlNodeName.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$1" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$10" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$11" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$12" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$13" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$14" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$15" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$16" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$17" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$18" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$19" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$2" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$20" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$21" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$22" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$23" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$24" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$25" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$26" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$27" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$28" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$29" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$3" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$30" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$31" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$32" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$33" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$34" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$35" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$36" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$37" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$38" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$39" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$4" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$40" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$41" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$42" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$43" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$44" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$45" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$46" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$47" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$48" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$49" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$5" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$50" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$6" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$7" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$8" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.XmlNodeName$9" sourceFile="XmlNodeName.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.commons.qualifiers" total_bugs="0" total_types="5" total_size="5">
+      <ClassStats class="me.m1key.audiolicious.commons.qualifiers.AggregateHandler" sourceFile="AggregateHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.qualifiers.AggregateMapper" sourceFile="AggregateMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.qualifiers.NoopHandler" sourceFile="NoopHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.qualifiers.NullArtist" sourceFile="NullArtist.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.commons.qualifiers.NullLibrary" sourceFile="NullLibrary.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.domain.entities" total_bugs="1" total_types="11" total_size="305" priority_2="1">
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Album" sourceFile="Album.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.AlbumAndSongInfo" sourceFile="AlbumAndSongInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.AlbumInfo" sourceFile="AlbumInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Artist" sourceFile="Artist.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Library" sourceFile="Library.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.NullEntitiesFactory" sourceFile="NullEntitiesFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Rating" sourceFile="Rating.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Song" sourceFile="Song.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.SongInfo" sourceFile="SongInfo.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.Stat" sourceFile="Stat.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="me.m1key.audiolicious.domain.entities.StatInfo" sourceFile="StatInfo.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.domain.to" total_bugs="0" total_types="15" total_size="715">
+      <ClassStats class="me.m1key.audiolicious.domain.to.AlbumAndSongInfoBuilder" sourceFile="AlbumAndSongInfoBuilder.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.AudiobookTo" sourceFile="AudiobookTo.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.AudiobookToBuilder" sourceFile="AudiobookToBuilder.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.LibraryTo" sourceFile="LibraryTo.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.PodcastTo" sourceFile="PodcastTo.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.PodcastToBuilder" sourceFile="PodcastToBuilder.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.RatingTo" sourceFile="RatingTo.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.SongTo" sourceFile="SongTo.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.SongToBuilder" sourceFile="SongToBuilder.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.StatInfoBuilder" sourceFile="StatInfoBuilder.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.TrackTo" sourceFile="TrackTo.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.TrackToType" sourceFile="TrackToType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.ValuesBasedStatInfo" sourceFile="ValuesBasedStatInfo.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.VideoTo" sourceFile="VideoTo.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.domain.to.VideoToBuilder" sourceFile="VideoToBuilder.java" interface="false" size="60" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.libraryparser" total_bugs="0" total_types="4" total_size="131">
+      <ClassStats class="me.m1key.audiolicious.libraryparser.LibraryParser" sourceFile="LibraryParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.libraryparser.RawTrackDataHandler" sourceFile="RawTrackDataHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.libraryparser.VtdItunesLibraryParser" sourceFile="VtdItunesLibraryParser.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.libraryparser.XmlParseException" sourceFile="XmlParseException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objecthandler" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="me.m1key.audiolicious.objecthandler.DefaultObjectTrackDataHandler" sourceFile="DefaultObjectTrackDataHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.DefaultRawTrackDataHandler" sourceFile="DefaultRawTrackDataHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.ObjectTrackDataHandler" sourceFile="ObjectTrackDataHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.TrackHandler" sourceFile="TrackHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objecthandler.factories" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="me.m1key.audiolicious.objecthandler.factories.TrackHandlersFactory" sourceFile="TrackHandlersFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.factories.TrackMappersFactory" sourceFile="TrackMappersFactory.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objecthandler.handlers" total_bugs="0" total_types="8" total_size="26">
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.AudiobookHandler" sourceFile="AudiobookHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.DefaultNoopTrackHandler" sourceFile="DefaultNoopTrackHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.DefaultSongHandler" sourceFile="DefaultSongHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.NoopTrackHandler" sourceFile="NoopTrackHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.PodcastHandler" sourceFile="PodcastHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.SongHandler" sourceFile="SongHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.StatefulSongService" sourceFile="StatefulSongService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objecthandler.handlers.VideoHandler" sourceFile="VideoHandler.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objectmapper" total_bugs="0" total_types="5" total_size="37">
+      <ClassStats class="me.m1key.audiolicious.objectmapper.AggregateTrackMapper" sourceFile="AggregateTrackMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.CannotMapTrackValuesException" sourceFile="CannotMapTrackValuesException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.DefaultAggregateTrackMapper" sourceFile="DefaultAggregateTrackMapper.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.ObjectMappingException" sourceFile="ObjectMappingException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.TrackMapper" sourceFile="TrackMapper.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objectmapper.extractor" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="me.m1key.audiolicious.objectmapper.extractor.DataExtractor" sourceFile="DataExtractor.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.extractor.DefaultEnglishValuesProvider" sourceFile="DefaultEnglishValuesProvider.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.extractor.EnglishValuesProvider" sourceFile="EnglishValuesProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.extractor.I18nDataExtractor" sourceFile="I18nDataExtractor.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.objectmapper.trackmappers" total_bugs="0" total_types="9" total_size="199">
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.AudiobookMapper" sourceFile="AudiobookMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.DefaultAudiobookMapper" sourceFile="DefaultAudiobookMapper.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.DefaultPodcastMapper" sourceFile="DefaultPodcastMapper.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.DefaultSongMapper" sourceFile="DefaultSongMapper.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.DefaultVideoMapper" sourceFile="DefaultVideoMapper.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.NonAggregateTrackMapper" sourceFile="NonAggregateTrackMapper.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.PodcastMapper" sourceFile="PodcastMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.SongMapper" sourceFile="SongMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.objectmapper.trackmappers.VideoMapper" sourceFile="VideoMapper.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.repositories" total_bugs="2" total_types="2" total_size="37" priority_2="2">
+      <ClassStats class="me.m1key.audiolicious.repositories.JpaArtistRepository" sourceFile="JpaArtistRepository.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="me.m1key.audiolicious.repositories.JpaLibraryRepository" sourceFile="JpaLibraryRepository.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.services" total_bugs="0" total_types="11" total_size="122">
+      <ClassStats class="me.m1key.audiolicious.services.ApplicationConversation" sourceFile="ApplicationConversation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.ArtistRepository" sourceFile="ArtistRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.CacheAwareLibraryImporter" sourceFile="CacheAwareLibraryImporter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.CacheableSongService" sourceFile="CacheableSongService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.DefaultApplicationConversation" sourceFile="DefaultApplicationConversation.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.DefaultLibraryService" sourceFile="DefaultLibraryService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.InMemoryCacheableSongService" sourceFile="InMemoryCacheableSongService.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.LibraryImporter" sourceFile="LibraryImporter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.LibraryRepository" sourceFile="LibraryRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.LibraryService" sourceFile="LibraryService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.services.ToBasedStatInfo" sourceFile="ToBasedStatInfo.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.web.beans" total_bugs="0" total_types="5" total_size="116">
+      <ClassStats class="me.m1key.audiolicious.web.beans.AudioliciousConfigurationException" sourceFile="AudioliciousConfigurationException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.web.beans.ConsumptionBean" sourceFile="ConsumptionBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.web.beans.FileUploadBean" sourceFile="FileUploadBean.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.web.beans.LibrariesBean" sourceFile="LibrariesBean.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="me.m1key.audiolicious.web.beans.LibrarySaveBean" sourceFile="LibrarySaveBean.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="me.m1key.audiolicious.web.to" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="me.m1key.audiolicious.web.to.LibraryTo" sourceFile="LibraryTo.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="221" invocations="756" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="12852" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="133" invocations="493" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="22439" standardDeviationMicrosecondsPerInvocation="1095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="108" invocations="498" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="7238" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="101" invocations="498" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="17815" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="95" invocations="498" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="8911" standardDeviationMicrosecondsPerInvocation="589"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="95" invocations="499" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="7668" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="82" invocations="499" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="8911" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="77" invocations="199" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="10103" standardDeviationMicrosecondsPerInvocation="1178"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="199" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="10799" standardDeviationMicrosecondsPerInvocation="1019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="71" invocations="661" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="27949" standardDeviationMicrosecondsPerInvocation="1091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="675" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="6456" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="57" invocations="288" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="3462" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="55" invocations="543" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="24550" standardDeviationMicrosecondsPerInvocation="1051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="760" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="686" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="49" invocations="250" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="16080" standardDeviationMicrosecondsPerInvocation="1059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="34" invocations="137" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="1888" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="199" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="5654" standardDeviationMicrosecondsPerInvocation="500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="29" invocations="137" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="3006" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="27" invocations="7417" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="1106" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="26" invocations="137" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="2126" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="498" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="1532" standardDeviationMicrosecondsPerInvocation="102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="26" invocations="137" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="6530" standardDeviationMicrosecondsPerInvocation="592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="24" invocations="199" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="2389" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="199" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="8948" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="21" invocations="137" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="3852" standardDeviationMicrosecondsPerInvocation="363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="199" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="3617" standardDeviationMicrosecondsPerInvocation="379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="199" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="2185" standardDeviationMicrosecondsPerInvocation="217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="19" invocations="493" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="938" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="18" invocations="137" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="1837" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="137" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="2027" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="18" invocations="137" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="7715" standardDeviationMicrosecondsPerInvocation="661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="17" invocations="137" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="3258" standardDeviationMicrosecondsPerInvocation="373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="16" invocations="17174" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="66" standardDeviationMicrosecondsPerInvocation="1"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="16" invocations="492" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="565" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="16" invocations="137" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="1285" standardDeviationMicrosecondsPerInvocation="158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="199" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="2087" standardDeviationMicrosecondsPerInvocation="232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="137" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="1911" standardDeviationMicrosecondsPerInvocation="222"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

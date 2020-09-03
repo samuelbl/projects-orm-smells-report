@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597099279000" analysisTimestamp="1597099281205" release="">
+  <Project projectName="repositorios/dguduguntla_spring-jpa-lazyload">
+    <Jar>repositorios/dguduguntla_spring-jpa-lazyload</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.PersistenceUnitUtil</MissingClass>
+    <MissingClass>org.modelmapper.ModelMapper</MissingClass>
+    <MissingClass>org.modelmapper.PropertyMap</MissingClass>
+    <MissingClass>org.modelmapper.TypeMap</MissingClass>
+    <MissingClass>org.modelmapper.config.Configuration</MissingClass>
+    <MissingClass>org.modelmapper.spi.MappingContext</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:41:19 +0000" total_classes="50" referenced_classes="164" total_bugs="0" total_size="1260" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.71" clock_seconds="3.03" peak_mbytes="284.16" alloc_mbytes="3540.00" gc_seconds="0.13">
+    <PackageStats package="com.gdp.lazyload" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.gdp.lazyload.LazyLoadingApplication" sourceFile="LazyLoadingApplication.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.LazyLoadingApplication$1" sourceFile="LazyLoadingApplication.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gdp.lazyload.controller" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.gdp.lazyload.controller.DepartmentController" sourceFile="DepartmentController.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gdp.lazyload.domain" total_bugs="0" total_types="4" total_size="92">
+      <ClassStats class="com.gdp.lazyload.domain.DepartmentDTO" sourceFile="DepartmentDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.domain.Departments" sourceFile="Departments.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.domain.EmployeeDTO" sourceFile="EmployeeDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.domain.LocationDTO" sourceFile="LocationDTO.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gdp.lazyload.entity" total_bugs="0" total_types="5" total_size="108">
+      <ClassStats class="com.gdp.lazyload.entity.Country" sourceFile="Country.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.entity.Department" sourceFile="Department.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.entity.Employee" sourceFile="Employee.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.entity.Location" sourceFile="Location.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.entity.Region" sourceFile="Region.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gdp.lazyload.repository" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.gdp.lazyload.repository.DepartmentRepository" sourceFile="DepartmentRepository.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.gdp.lazyload.service" total_bugs="0" total_types="2" total_size="43">
+      <ClassStats class="com.gdp.lazyload.service.DepartmentService" sourceFile="DepartmentService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.gdp.lazyload.service.DepartmentServiceImpl" sourceFile="DepartmentServiceImpl.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="464">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="263" invocations="993" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="16571" standardDeviationMicrosecondsPerInvocation="756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="164" invocations="164" avgMicrosecondsPerInvocation="1000" maxMicrosecondsPerInvocation="13863" standardDeviationMicrosecondsPerInvocation="1976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="121" invocations="164" avgMicrosecondsPerInvocation="740" maxMicrosecondsPerInvocation="8092" standardDeviationMicrosecondsPerInvocation="1189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="759" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="3596" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="102" invocations="308" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="7819" standardDeviationMicrosecondsPerInvocation="757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="97" invocations="312" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="8079" standardDeviationMicrosecondsPerInvocation="790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="89" invocations="313" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="8619" standardDeviationMicrosecondsPerInvocation="891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="88" invocations="303" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="4815" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="87" invocations="307" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="9528" standardDeviationMicrosecondsPerInvocation="797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="81" invocations="164" avgMicrosecondsPerInvocation="496" maxMicrosecondsPerInvocation="27652" standardDeviationMicrosecondsPerInvocation="2240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="80" invocations="999" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="513" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="70" invocations="308" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="9569" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="67" invocations="183" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="16637" standardDeviationMicrosecondsPerInvocation="1317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="54" invocations="229" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="14129" standardDeviationMicrosecondsPerInvocation="969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="330" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="23211" standardDeviationMicrosecondsPerInvocation="1278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="43" invocations="164" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="6471" standardDeviationMicrosecondsPerInvocation="676"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="38" invocations="164" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="6082" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="164" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="7752" standardDeviationMicrosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="910" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="1029" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="31" invocations="164" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="2102" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="164" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="2994" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="31" invocations="164" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="8188" standardDeviationMicrosecondsPerInvocation="812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="27" invocations="50" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="4633" standardDeviationMicrosecondsPerInvocation="1278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="24" invocations="164" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="5185" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="51" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="3144" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="23" invocations="308" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1241" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="22" invocations="4472" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1551" standardDeviationMicrosecondsPerInvocation="36"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="20" invocations="164" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="1956" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="18" invocations="50" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="1633" standardDeviationMicrosecondsPerInvocation="355"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

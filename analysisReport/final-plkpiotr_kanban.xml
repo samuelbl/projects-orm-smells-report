@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597105266000" analysisTimestamp="1597105268128" release="">
+  <Project projectName="repositorios/plkpiotr_kanban">
+    <Jar>repositorios/plkpiotr_kanban</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.CompanyDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="21" end="62" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.CompanyDAO" name="getEmployees" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="60" end="60" startBytecode="0" endBytecode="91" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="60" end="60" startBytecode="4" endBytecode="4" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.CompanyDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="21" end="62" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.CompanyDAO" name="getProjects" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="48" end="48" startBytecode="0" endBytecode="91" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.CompanyDAO" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="CompanyDAO.java" sourcepath="com/plkpiotr/kanban/dao/CompanyDAO.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getEmployeeByNick" signature="(Ljava/lang/String;)Lcom/plkpiotr/kanban/domain/Employee;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="77" end="77" startBytecode="0" endBytecode="91" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="77" end="77" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    <String value="Method: getEmployeeByNick. Fields with EAGER without Join Fetch: company, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getEmployeeByNickAndPassword" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/plkpiotr/kanban/domain/Employee;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="91" end="91" startBytecode="0" endBytecode="113" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="91" end="91" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    <String value="Method: getEmployeeByNickAndPassword. Fields with EAGER without Join Fetch: company, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getAllTasks" signature="(Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="105" end="105" startBytecode="0" endBytecode="88" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="105" end="105" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getCompany" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="130" end="130" startBytecode="0" endBytecode="88" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="130" end="130" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getEmployeeByNick" signature="(Ljava/lang/String;)Lcom/plkpiotr/kanban/domain/Employee;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="77" end="77" startBytecode="0" endBytecode="91" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="77" end="77" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.EmployeeDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="25" end="132" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.EmployeeDAO" name="getEmployeeByNickAndPassword" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/plkpiotr/kanban/domain/Employee;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="91" end="91" startBytecode="0" endBytecode="113" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.EmployeeDAO" start="91" end="91" startBytecode="4" endBytecode="4" sourcefile="EmployeeDAO.java" sourcepath="com/plkpiotr/kanban/dao/EmployeeDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.ProjectDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="23" end="104" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.ProjectDAO" name="getAllTasks" signature="(Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="89" end="89" startBytecode="0" endBytecode="88" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="89" end="89" startBytecode="4" endBytecode="4" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.dao.ProjectDAO">
+      <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="23" end="104" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+    </Class>
+    <Method classname="com.plkpiotr.kanban.dao.ProjectDAO" name="getProjectForEmployee" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Lcom/plkpiotr/kanban/domain/Project;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="75" end="75" startBytecode="0" endBytecode="113" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+    </Method>
+    <SourceLine classname="com.plkpiotr.kanban.dao.ProjectDAO" start="75" end="75" startBytecode="4" endBytecode="4" sourcefile="ProjectDAO.java" sourcepath="com/plkpiotr/kanban/dao/ProjectDAO.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.domain.Employee">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Employee" start="12" end="114" sourcefile="Employee.java" sourcepath="com/plkpiotr/kanban/domain/Employee.java"/>
+    </Class>
+    <Field classname="com.plkpiotr.kanban.domain.Employee" name="company" signature="Lcom/plkpiotr/kanban/domain/Company;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Employee" sourcefile="Employee.java" sourcepath="com/plkpiotr/kanban/domain/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.domain.Project">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Project" start="12" end="81" sourcefile="Project.java" sourcepath="com/plkpiotr/kanban/domain/Project.java"/>
+    </Class>
+    <Field classname="com.plkpiotr.kanban.domain.Project" name="company" signature="Lcom/plkpiotr/kanban/domain/Company;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Project" sourcefile="Project.java" sourcepath="com/plkpiotr/kanban/domain/Project.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.domain.Task">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Task" start="11" end="70" sourcefile="Task.java" sourcepath="com/plkpiotr/kanban/domain/Task.java"/>
+    </Class>
+    <Field classname="com.plkpiotr.kanban.domain.Task" name="employee" signature="Lcom/plkpiotr/kanban/domain/Employee;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Task" sourcefile="Task.java" sourcepath="com/plkpiotr/kanban/domain/Task.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.plkpiotr.kanban.domain.Task">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Task" start="11" end="70" sourcefile="Task.java" sourcepath="com/plkpiotr/kanban/domain/Task.java"/>
+    </Class>
+    <Field classname="com.plkpiotr.kanban.domain.Task" name="project" signature="Lcom/plkpiotr/kanban/domain/Project;" isStatic="false">
+      <SourceLine classname="com.plkpiotr.kanban.domain.Task" sourcefile="Task.java" sourcepath="com/plkpiotr/kanban/domain/Task.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="3" missingClasses="16">
+    <Error>
+      <ErrorMessage>Exception analyzing com.plkpiotr.kanban.dao.EmployeeDAO using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.plkpiotr.kanban.dao.CompanyDAO using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.plkpiotr.kanban.dao.ProjectDAO using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.NoResultException</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletRequestEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletRequestListener</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:21:06 +0000" total_classes="18" referenced_classes="42" total_bugs="14" total_size="579" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.93" clock_seconds="1.65" peak_mbytes="138.25" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="14">
+    <PackageStats package="com.plkpiotr.kanban.dao" total_bugs="10" total_types="4" total_size="157" priority_2="10">
+      <ClassStats class="com.plkpiotr.kanban.dao.CompanyDAO" sourceFile="CompanyDAO.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.plkpiotr.kanban.dao.EmployeeDAO" sourceFile="EmployeeDAO.java" interface="false" size="50" bugs="6" priority_2="6"/>
+      <ClassStats class="com.plkpiotr.kanban.dao.ProjectDAO" sourceFile="ProjectDAO.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="com.plkpiotr.kanban.dao.TaskDAO" sourceFile="TaskDAO.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.plkpiotr.kanban.domain" total_bugs="4" total_types="4" total_size="156" priority_2="4">
+      <ClassStats class="com.plkpiotr.kanban.domain.Company" sourceFile="Company.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.domain.Employee" sourceFile="Employee.java" interface="false" size="57" bugs="1" priority_2="1"/>
+      <ClassStats class="com.plkpiotr.kanban.domain.Project" sourceFile="Project.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.plkpiotr.kanban.domain.Task" sourceFile="Task.java" interface="false" size="33" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.plkpiotr.kanban.listeners" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.plkpiotr.kanban.listeners.ConfigurationListener" sourceFile="ConfigurationListener.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.listeners.InitializationListener" sourceFile="InitializationListener.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.plkpiotr.kanban.servlets" total_bugs="0" total_types="8" total_size="236">
+      <ClassStats class="com.plkpiotr.kanban.servlets.AddTaskServlet" sourceFile="AddTaskServlet.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.CompanyServlet" sourceFile="CompanyServlet.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.IndexServlet" sourceFile="IndexServlet.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.LogInServlet" sourceFile="LogInServlet.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.LogOutServlet" sourceFile="LogOutServlet.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.ProfileServlet" sourceFile="ProfileServlet.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.ProjectServlet" sourceFile="ProjectServlet.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.plkpiotr.kanban.servlets.RegistrationServlet" sourceFile="RegistrationServlet.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="179" invocations="462" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="12826" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="100" invocations="18" avgMicrosecondsPerInvocation="5576" maxMicrosecondsPerInvocation="96834" standardDeviationMicrosecondsPerInvocation="22138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="83" invocations="42" avgMicrosecondsPerInvocation="1982" maxMicrosecondsPerInvocation="23590" standardDeviationMicrosecondsPerInvocation="4200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="45" invocations="465" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="1789" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="397" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="12864" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="43" invocations="106" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="7143" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="43" invocations="107" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="8506" standardDeviationMicrosecondsPerInvocation="990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="42" invocations="106" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="3571" standardDeviationMicrosecondsPerInvocation="648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="41" invocations="42" avgMicrosecondsPerInvocation="982" maxMicrosecondsPerInvocation="4657" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="106" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="30990" standardDeviationMicrosecondsPerInvocation="2988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="186" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="5059" standardDeviationMicrosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="35" invocations="106" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="8715" standardDeviationMicrosecondsPerInvocation="911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="31" invocations="107" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="9331" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="30" invocations="106" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="2423" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="73" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="13876" standardDeviationMicrosecondsPerInvocation="1640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="42" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="6714" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="42" avgMicrosecondsPerInvocation="527" maxMicrosecondsPerInvocation="4264" standardDeviationMicrosecondsPerInvocation="977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="21" invocations="57" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="3561" standardDeviationMicrosecondsPerInvocation="576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="18" invocations="18" avgMicrosecondsPerInvocation="1018" maxMicrosecondsPerInvocation="13038" standardDeviationMicrosecondsPerInvocation="2918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="42" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="8631" standardDeviationMicrosecondsPerInvocation="1337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="42" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="4338" standardDeviationMicrosecondsPerInvocation="763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="42" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="2628" standardDeviationMicrosecondsPerInvocation="485"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

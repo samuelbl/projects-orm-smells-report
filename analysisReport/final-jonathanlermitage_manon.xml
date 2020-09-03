@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597095338000" analysisTimestamp="1597095339579" release="">
+  <Project projectName="repositorios/jonathanlermitage_manon">
+    <Jar>repositorios/jonathanlermitage_manon</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipEntity">
+      <SourceLine classname="manon.document.user.FriendshipEntity" start="30" end="59" sourcefile="FriendshipEntity.java" sourcepath="manon/document/user/FriendshipEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipEntity" name="requestFrom" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipEntity" sourcefile="FriendshipEntity.java" sourcepath="manon/document/user/FriendshipEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipEntity">
+      <SourceLine classname="manon.document.user.FriendshipEntity" start="30" end="59" sourcefile="FriendshipEntity.java" sourcepath="manon/document/user/FriendshipEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipEntity" name="requestTo" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipEntity" sourcefile="FriendshipEntity.java" sourcepath="manon/document/user/FriendshipEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipEventEntity">
+      <SourceLine classname="manon.document.user.FriendshipEventEntity" start="35" end="68" sourcefile="FriendshipEventEntity.java" sourcepath="manon/document/user/FriendshipEventEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipEventEntity" name="friend" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipEventEntity" sourcefile="FriendshipEventEntity.java" sourcepath="manon/document/user/FriendshipEventEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipEventEntity">
+      <SourceLine classname="manon.document.user.FriendshipEventEntity" start="35" end="68" sourcefile="FriendshipEventEntity.java" sourcepath="manon/document/user/FriendshipEventEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipEventEntity" name="user" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipEventEntity" sourcefile="FriendshipEventEntity.java" sourcepath="manon/document/user/FriendshipEventEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipRequestEntity">
+      <SourceLine classname="manon.document.user.FriendshipRequestEntity" start="30" end="59" sourcefile="FriendshipRequestEntity.java" sourcepath="manon/document/user/FriendshipRequestEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipRequestEntity" name="requestFrom" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipRequestEntity" sourcefile="FriendshipRequestEntity.java" sourcepath="manon/document/user/FriendshipRequestEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="manon.document.user.FriendshipRequestEntity">
+      <SourceLine classname="manon.document.user.FriendshipRequestEntity" start="30" end="59" sourcefile="FriendshipRequestEntity.java" sourcepath="manon/document/user/FriendshipRequestEntity.java"/>
+    </Class>
+    <Field classname="manon.document.user.FriendshipRequestEntity" name="requestTo" signature="Lmanon/document/user/UserEntity;" isStatic="false">
+      <SourceLine classname="manon.document.user.FriendshipRequestEntity" sourcefile="FriendshipRequestEntity.java" sourcepath="manon/document/user/FriendshipRequestEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipEventRepository">
+      <SourceLine classname="manon.repository.user.FriendshipEventRepository" sourcefile="FriendshipEventRepository.java" sourcepath="manon/repository/user/FriendshipEventRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipEventRepository" name="findAllByUserOrderByCreationDateDesc" signature="(J)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findAllByUserOrderByCreationDateDesc. Fields with EAGER without Join Fetch: friend, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipEventRepository">
+      <SourceLine classname="manon.repository.user.FriendshipEventRepository" sourcefile="FriendshipEventRepository.java" sourcepath="manon/repository/user/FriendshipEventRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipEventRepository" name="findAllByUserOrderByCreationDateDesc" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipEventRepository" sourcefile="FriendshipEventRepository.java" sourcepath="manon/repository/user/FriendshipEventRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRepository" name="deleteCouple" signature="(JJ)V" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRepository" name="findAllFor" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRepository" name="streamAllFor" signature="(J)Ljava/util/stream/Stream;" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRepository" sourcefile="FriendshipRepository.java" sourcepath="manon/repository/user/FriendshipRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRequestRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRequestRepository" name="findAllByRequestFrom" signature="(J)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findAllByRequestFrom. Fields with EAGER without Join Fetch: requestTo, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRequestRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRequestRepository" name="findAllByRequestTo" signature="(J)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findAllByRequestTo. Fields with EAGER without Join Fetch: requestFrom, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRequestRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRequestRepository" name="deleteCouple" signature="(JJ)V" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRequestRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRequestRepository" name="findAllByRequestFrom" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.FriendshipRequestRepository">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.FriendshipRequestRepository" name="findAllByRequestTo" signature="(J)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="manon.repository.user.FriendshipRequestRepository" sourcefile="FriendshipRequestRepository.java" sourcepath="manon/repository/user/FriendshipRequestRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.UserRepository">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.UserRepository" name="findAndFetchUserSnapshots" signature="(J)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.UserRepository">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.UserRepository" name="findVersionById" signature="(J)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="manon.repository.user.UserRepository">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Class>
+    <Method classname="manon.repository.user.UserRepository" name="findVersionByUsername" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="manon.repository.user.UserRepository" sourcefile="UserRepository.java" sourcepath="manon/repository/user/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="133">
+    <MissingClass>com.fasterxml.jackson.annotation.JsonInclude$Include</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.MapperFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.jdk8.Jdk8Module</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.jsr310.JavaTimeModule</MissingClass>
+    <MissingClass>com.fasterxml.jackson.module.afterburner.AfterburnerModule</MissingClass>
+    <MissingClass>com.querydsl.core.BooleanBuilder</MissingClass>
+    <MissingClass>com.querydsl.core.types.Path</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadata</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EntityPathBase</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathInits</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.StringPath</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.ExpiredJwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParserBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.MalformedJwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.UnsupportedJwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.io.Decoder</MissingClass>
+    <MissingClass>io.jsonwebtoken.io.Decoders</MissingClass>
+    <MissingClass>io.jsonwebtoken.security.Keys</MissingClass>
+    <MissingClass>io.jsonwebtoken.security.SignatureException</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.flywaydb.core.Flyway</MissingClass>
+    <MissingClass>org.flywaydb.core.api.configuration.FluentConfiguration</MissingClass>
+    <MissingClass>org.mapstruct.factory.Mappers</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.slf4j.MDC</MissingClass>
+    <MissingClass>org.springframework.batch.core.ExitStatus</MissingClass>
+    <MissingClass>org.springframework.batch.core.JobExecution</MissingClass>
+    <MissingClass>org.springframework.batch.core.JobInstance</MissingClass>
+    <MissingClass>org.springframework.batch.core.JobParametersBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.configuration.annotation.JobBuilderFactory</MissingClass>
+    <MissingClass>org.springframework.batch.core.configuration.annotation.StepBuilderFactory</MissingClass>
+    <MissingClass>org.springframework.batch.core.job.builder.JobBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.job.builder.SimpleJobBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.launch.JobLauncher</MissingClass>
+    <MissingClass>org.springframework.batch.core.launch.support.RunIdIncrementer</MissingClass>
+    <MissingClass>org.springframework.batch.core.listener.ChunkListenerSupport</MissingClass>
+    <MissingClass>org.springframework.batch.core.listener.JobExecutionListenerSupport</MissingClass>
+    <MissingClass>org.springframework.batch.core.scope.context.ChunkContext</MissingClass>
+    <MissingClass>org.springframework.batch.core.scope.context.StepContext</MissingClass>
+    <MissingClass>org.springframework.batch.core.step.builder.AbstractTaskletStepBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.step.builder.SimpleStepBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.step.builder.StepBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.step.builder.TaskletStepBuilder</MissingClass>
+    <MissingClass>org.springframework.batch.core.step.tasklet.Tasklet</MissingClass>
+    <MissingClass>org.springframework.batch.item.ItemProcessor</MissingClass>
+    <MissingClass>org.springframework.batch.item.data.RepositoryItemReader</MissingClass>
+    <MissingClass>org.springframework.batch.item.data.RepositoryItemWriter</MissingClass>
+    <MissingClass>org.springframework.batch.repeat.RepeatStatus</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.WebApplicationType</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.context.ApplicationPidFileWriter</MissingClass>
+    <MissingClass>org.springframework.boot.jdbc.DataSourceBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.client.RestTemplateBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.FilterRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.cache.Cache</MissingClass>
+    <MissingClass>org.springframework.cache.CacheManager</MissingClass>
+    <MissingClass>org.springframework.cache.annotation.CachingConfigurerSupport</MissingClass>
+    <MissingClass>org.springframework.cache.concurrent.ConcurrentMapCacheManager</MissingClass>
+    <MissingClass>org.springframework.context.ConfigurableApplicationContext</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheConfiguration</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheManager</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheManager$RedisCacheManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.RedisTemplate</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.converter.HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.mail.MailException</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.Customizer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.WebAuthenticationDetailsSource</MissingClass>
+    <MissingClass>org.springframework.security.web.firewall.StrictHttpFirewall</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+    <MissingClass>org.springframework.web.cors.CorsConfiguration</MissingClass>
+    <MissingClass>org.springframework.web.cors.UrlBasedCorsConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.web.filter.CommonsRequestLoggingFilter</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.InternalResourceViewResolver</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:35:38 +0000" total_classes="183" referenced_classes="333" total_bugs="19" total_size="3530" num_packages="32" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="15.82" clock_seconds="4.43" peak_mbytes="360.71" alloc_mbytes="3540.00" gc_seconds="0.18" priority_2="19">
+    <PackageStats package="manon" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="manon.Application" sourceFile="Application.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.api.app" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="manon.api.app.PingWS" sourceFile="PingWS.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.api.batch" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="manon.api.batch.JobRunnerWS" sourceFile="JobRunnerWS.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.api.user" total_bugs="0" total_types="5" total_size="122">
+      <ClassStats class="manon.api.user.AuthAdminWS" sourceFile="AuthAdminWS.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="manon.api.user.AuthWS" sourceFile="AuthWS.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="manon.api.user.FriendshipWS" sourceFile="FriendshipWS.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="manon.api.user.UserAdminWS" sourceFile="UserAdminWS.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="manon.api.user.UserWS" sourceFile="UserWS.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.app" total_bugs="0" total_types="6" total_size="99">
+      <ClassStats class="manon.app.Cfg" sourceFile="Cfg.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="manon.app.Globals" sourceFile="Globals.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.app.Globals$API" sourceFile="Globals.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="manon.app.Globals$CacheNames" sourceFile="Globals.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="manon.app.Globals$Datasources" sourceFile="Globals.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.app.Globals$Properties" sourceFile="Globals.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.app.config" total_bugs="0" total_types="16" total_size="261">
+      <ClassStats class="manon.app.config.ConverterConfig" sourceFile="ConverterConfig.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="manon.app.config.DatasourceConfig" sourceFile="DatasourceConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="manon.app.config.EmbeddedCacheConfig" sourceFile="EmbeddedCacheConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="manon.app.config.FilterConfig" sourceFile="FilterConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.app.config.FilterConfig$1" sourceFile="FilterConfig.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="manon.app.config.FilterConfig$LoggingFilter" sourceFile="FilterConfig.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="manon.app.config.FlywaySlaveInitializerConfig" sourceFile="FlywaySlaveInitializerConfig.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="manon.app.config.JacksonConfig" sourceFile="JacksonConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="manon.app.config.JwtAuthenticationEntryPointConfig" sourceFile="JwtAuthenticationEntryPointConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="manon.app.config.JwtAuthenticationFilterConfig" sourceFile="JwtAuthenticationFilterConfig.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="manon.app.config.LoggingFilterConfig" sourceFile="LoggingFilterConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="manon.app.config.RedisCacheConfig" sourceFile="RedisCacheConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.app.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="manon.app.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="manon.app.config.TimeConfig" sourceFile="TimeConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.app.config.WebConfig" sourceFile="WebConfig.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.batch" total_bugs="0" total_types="5" total_size="86">
+      <ClassStats class="manon.batch.UserSnapshotJobConfig" sourceFile="UserSnapshotJobConfig.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="manon.batch.UserSnapshotJobConfig$1" sourceFile="UserSnapshotJobConfig.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="manon.batch.UserSnapshotJobConfig$FlushTasklet" sourceFile="UserSnapshotJobConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="manon.batch.UserSnapshotJobConfig$StatsTasklet" sourceFile="UserSnapshotJobConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="manon.batch.UserSnapshotJobConfig$UserItemProcessor" sourceFile="UserSnapshotJobConfig.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.batch.listener" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="manon.batch.listener.ChunkFlushListener" sourceFile="ChunkFlushListener.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="manon.batch.listener.JobListener" sourceFile="JobListener.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.document" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="manon.document.DefaultView" sourceFile="DefaultView.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.document.app" total_bugs="0" total_types="3" total_size="66">
+      <ClassStats class="manon.document.app.AuthTokenEntity" sourceFile="AuthTokenEntity.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="manon.document.app.AuthTokenEntity$AuthTokenEntityBuilder" sourceFile="AuthTokenEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.document.app.QAuthTokenEntity" sourceFile="QAuthTokenEntity.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.document.user" total_bugs="6" total_types="24" total_size="559" priority_2="6">
+      <ClassStats class="manon.document.user.FriendshipEntity" sourceFile="FriendshipEntity.java" interface="false" size="31" bugs="2" priority_2="2"/>
+      <ClassStats class="manon.document.user.FriendshipEntity$FriendshipEntityBuilder" sourceFile="FriendshipEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.document.user.FriendshipEventEntity" sourceFile="FriendshipEventEntity.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="manon.document.user.FriendshipEventEntity$FriendshipEventEntityBuilder" sourceFile="FriendshipEventEntity.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="manon.document.user.FriendshipEventEntity$Validation" sourceFile="FriendshipEventEntity.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="manon.document.user.FriendshipRequestEntity" sourceFile="FriendshipRequestEntity.java" interface="false" size="31" bugs="2" priority_2="2"/>
+      <ClassStats class="manon.document.user.FriendshipRequestEntity$FriendshipRequestEntityBuilder" sourceFile="FriendshipRequestEntity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.document.user.QFriendshipEntity" sourceFile="QFriendshipEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="manon.document.user.QFriendshipEventEntity" sourceFile="QFriendshipEventEntity.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="manon.document.user.QFriendshipRequestEntity" sourceFile="QFriendshipRequestEntity.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="manon.document.user.QUserEntity" sourceFile="QUserEntity.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="manon.document.user.QUserSnapshotEntity" sourceFile="QUserSnapshotEntity.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="manon.document.user.QUserStatsEntity" sourceFile="QUserStatsEntity.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="manon.document.user.UserEntity" sourceFile="UserEntity.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="manon.document.user.UserEntity$UserEntityBuilder" sourceFile="UserEntity.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="manon.document.user.UserEntity$Validation" sourceFile="UserEntity.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="manon.document.user.UserEntity$WithUserSnapshots" sourceFile="UserEntity.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="manon.document.user.UserIdProjection" sourceFile="UserIdProjection.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="manon.document.user.UserSnapshotEntity" sourceFile="UserSnapshotEntity.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="manon.document.user.UserSnapshotEntity$UserSnapshotEntityBuilder" sourceFile="UserSnapshotEntity.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="manon.document.user.UserSnapshotEntity$WithUserView" sourceFile="UserSnapshotEntity.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="manon.document.user.UserStatsEntity" sourceFile="UserStatsEntity.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="manon.document.user.UserStatsEntity$UserStatsEntityBuilder" sourceFile="UserStatsEntity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="manon.document.user.UserVersionProjection" sourceFile="UserVersionProjection.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.dto.user" total_bugs="0" total_types="4" total_size="98">
+      <ClassStats class="manon.dto.user.AbstractUserDto" sourceFile="AbstractUserDto.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="manon.dto.user.UserDto" sourceFile="UserDto.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="manon.dto.user.UserSnapshotDto" sourceFile="UserSnapshotDto.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="manon.dto.user.UserWithSnapshotsDto" sourceFile="UserWithSnapshotsDto.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.err" total_bugs="0" total_types="3" total_size="14">
+      <ClassStats class="manon.err.AbstractControllerAdvice" sourceFile="AbstractControllerAdvice.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="manon.err.AbstractManagedException" sourceFile="AbstractManagedException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.err.ErrorResponse" sourceFile="ErrorResponse.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.err.app" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="manon.err.app.AppControllerAdvice" sourceFile="AppControllerAdvice.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.err.app.PingException" sourceFile="PingException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.err.batch" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="manon.err.batch.BatchControllerAdvice" sourceFile="BatchControllerAdvice.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.err.batch.TaskNotFoundException" sourceFile="TaskNotFoundException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.err.user" total_bugs="0" total_types="8" total_size="30">
+      <ClassStats class="manon.err.user.FriendshipExistsException" sourceFile="FriendshipExistsException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.FriendshipNotFoundException" sourceFile="FriendshipNotFoundException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.FriendshipRequestExistsException" sourceFile="FriendshipRequestExistsException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.FriendshipRequestNotFoundException" sourceFile="FriendshipRequestNotFoundException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.PasswordNotMatchException" sourceFile="PasswordNotMatchException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.UserControllerAdvice" sourceFile="UserControllerAdvice.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="manon.err.user.UserExistsException" sourceFile="UserExistsException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="manon.err.user.UserNotFoundException" sourceFile="UserNotFoundException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.mapper.user" total_bugs="0" total_types="2" total_size="58">
+      <ClassStats class="manon.mapper.user.UserMapper" sourceFile="UserMapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="manon.mapper.user.UserMapperImpl" sourceFile="UserMapperImpl.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.model.app" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="manon.model.app.MethodExecutionStats" sourceFile="MethodExecutionStats.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.model.batch" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="manon.model.batch.TaskStatus" sourceFile="TaskStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="manon.model.batch.TaskStatus$TaskStatusBuilder" sourceFile="TaskStatus.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.model.user" total_bugs="0" total_types="6" total_size="130">
+      <ClassStats class="manon.model.user.FriendshipEventCode" sourceFile="FriendshipEventCode.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="manon.model.user.RegistrationState" sourceFile="RegistrationState.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="manon.model.user.UserPublicInfo" sourceFile="UserPublicInfo.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="manon.model.user.UserPublicInfo$UserPublicInfoBuilder" sourceFile="UserPublicInfo.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="manon.model.user.UserRole" sourceFile="UserRole.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="manon.model.user.UserSimpleDetails" sourceFile="UserSimpleDetails.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.model.user.form" total_bugs="0" total_types="9" total_size="105">
+      <ClassStats class="manon.model.user.form.UserLogin" sourceFile="UserLogin.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserLogin$1" sourceFile="UserLogin.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserLogin$UserLoginBuilder" sourceFile="UserLogin.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserPasswordUpdateForm" sourceFile="UserPasswordUpdateForm.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserPasswordUpdateForm$1" sourceFile="UserPasswordUpdateForm.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserPasswordUpdateForm$UserPasswordUpdateFormBuilder" sourceFile="UserPasswordUpdateForm.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserUpdateForm" sourceFile="UserUpdateForm.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserUpdateForm$1" sourceFile="UserUpdateForm.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="manon.model.user.form.UserUpdateForm$UserUpdateFormBuilder" sourceFile="UserUpdateForm.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.repository.app" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="manon.repository.app.AuthTokenRepository" sourceFile="AuthTokenRepository.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.repository.user" total_bugs="13" total_types="6" total_size="27" priority_2="13">
+      <ClassStats class="manon.repository.user.FriendshipEventRepository" sourceFile="FriendshipEventRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+      <ClassStats class="manon.repository.user.FriendshipRepository" sourceFile="FriendshipRepository.java" interface="true" size="5" bugs="3" priority_2="3"/>
+      <ClassStats class="manon.repository.user.FriendshipRequestRepository" sourceFile="FriendshipRequestRepository.java" interface="true" size="5" bugs="5" priority_2="5"/>
+      <ClassStats class="manon.repository.user.UserRepository" sourceFile="UserRepository.java" interface="true" size="9" bugs="3" priority_2="3"/>
+      <ClassStats class="manon.repository.user.UserSnapshotRepository" sourceFile="UserSnapshotRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="manon.repository.user.UserStatsRepository" sourceFile="UserStatsRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.app" total_bugs="0" total_types="6" total_size="22">
+      <ClassStats class="manon.service.app.AuthTokenService" sourceFile="AuthTokenService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="manon.service.app.JwtTokenService" sourceFile="JwtTokenService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="manon.service.app.NotificationService" sourceFile="NotificationService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="manon.service.app.PerformanceRecorder" sourceFile="PerformanceRecorder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="manon.service.app.PingService" sourceFile="PingService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="manon.service.app.TrxDemoService" sourceFile="TrxDemoService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.app.impl" total_bugs="0" total_types="6" total_size="200">
+      <ClassStats class="manon.service.app.impl.AuthTokenServiceImpl" sourceFile="AuthTokenServiceImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="manon.service.app.impl.JwtTokenServiceImpl" sourceFile="JwtTokenServiceImpl.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="manon.service.app.impl.NotificationServiceImpl" sourceFile="NotificationServiceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="manon.service.app.impl.PerformanceRecorderImpl" sourceFile="PerformanceRecorderImpl.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="manon.service.app.impl.PingServiceImpl" sourceFile="PingServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="manon.service.app.impl.TrxDemoServiceImpl" sourceFile="TrxDemoServiceImpl.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.batch" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="manon.service.batch.JobRunnerService" sourceFile="JobRunnerService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.batch.impl" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="manon.service.batch.impl.JobRunnerServiceImpl" sourceFile="JobRunnerServiceImpl.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.user" total_bugs="0" total_types="8" total_size="68">
+      <ClassStats class="manon.service.user.FriendshipEventService" sourceFile="FriendshipEventService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="manon.service.user.FriendshipRequestService" sourceFile="FriendshipRequestService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="manon.service.user.FriendshipService" sourceFile="FriendshipService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="manon.service.user.PasswordEncoderService" sourceFile="PasswordEncoderService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="manon.service.user.RegistrationService" sourceFile="RegistrationService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="manon.service.user.UserService" sourceFile="UserService.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="manon.service.user.UserSnapshotService" sourceFile="UserSnapshotService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="manon.service.user.UserStatsService" sourceFile="UserStatsService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.service.user.impl" total_bugs="0" total_types="9" total_size="288">
+      <ClassStats class="manon.service.user.impl.FriendshipEventServiceImpl" sourceFile="FriendshipEventServiceImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.FriendshipRequestServiceImpl" sourceFile="FriendshipRequestServiceImpl.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.FriendshipServiceImpl" sourceFile="FriendshipServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.PasswordEncoderServiceImpl" sourceFile="PasswordEncoderServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.RegistrationServiceImpl" sourceFile="RegistrationServiceImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.UserSnapshotServiceImpl" sourceFile="UserSnapshotServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="manon.service.user.impl.UserStatsServiceImpl" sourceFile="UserStatsServiceImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="manon.util" total_bugs="0" total_types="5" total_size="72">
+      <ClassStats class="manon.util.ExistForTesting" sourceFile="ExistForTesting.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="manon.util.Tools" sourceFile="Tools.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="manon.util.Tools$Mdc" sourceFile="Tools.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="manon.util.Tools$Media" sourceFile="Tools.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="manon.util.VisibleForTesting" sourceFile="VisibleForTesting.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="13" total_size="512">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="328" invocations="1492" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="28563" standardDeviationMicrosecondsPerInvocation="1000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="185" invocations="890" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="9962" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="183" invocations="333" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="13177" standardDeviationMicrosecondsPerInvocation="1233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="177" invocations="897" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="6101" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="161" invocations="333" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="8538" standardDeviationMicrosecondsPerInvocation="916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="152" invocations="903" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="8890" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="145" invocations="896" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="5033" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="140" invocations="904" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="9221" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="130" invocations="897" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="9214" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="119" invocations="1367" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="3258" standardDeviationMicrosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="100" invocations="1508" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="2597" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="93" invocations="639" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="2985" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="72" invocations="1021" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="25636" standardDeviationMicrosecondsPerInvocation="804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="66" invocations="496" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="11626" standardDeviationMicrosecondsPerInvocation="549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="62" invocations="333" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="3968" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="50" invocations="333" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="6364" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="46" invocations="1168" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="1623" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="45" invocations="897" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1354" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="45" invocations="333" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="3109" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="44" invocations="12875" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="989" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="44" invocations="333" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="2230" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="43" invocations="333" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="8198" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="39" invocations="183" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="3129" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="38" invocations="183" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="4140" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="36" invocations="183" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="2545" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="34" invocations="333" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="1616" standardDeviationMicrosecondsPerInvocation="228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="33" invocations="183" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="4282" standardDeviationMicrosecondsPerInvocation="650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="30" invocations="183" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1147" standardDeviationMicrosecondsPerInvocation="200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="30" invocations="333" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="8137" standardDeviationMicrosecondsPerInvocation="466"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="29" invocations="890" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="862" standardDeviationMicrosecondsPerInvocation="65"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="28" invocations="333" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="8925" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="27" invocations="183" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="6446" standardDeviationMicrosecondsPerInvocation="488"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="27" invocations="183" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2201" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="25" invocations="851" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="635" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="25" invocations="183" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="3105" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="24" invocations="183" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="2271" standardDeviationMicrosecondsPerInvocation="201"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

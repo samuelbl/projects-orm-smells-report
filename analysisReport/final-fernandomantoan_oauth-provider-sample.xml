@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597113639000" analysisTimestamp="1597113640493" release="">
+  <Project projectName="repositorios/fernandomantoan_oauth-provider-sample">
+    <Jar>repositorios/fernandomantoan_oauth-provider-sample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.fernandomantoan.tcc.oauth.domain.entity.applications.ApplicationAuthorized">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.entity.applications.ApplicationAuthorized" start="16" end="145" sourcefile="ApplicationAuthorized.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/entity/applications/ApplicationAuthorized.java"/>
+    </Class>
+    <Field classname="com.fernandomantoan.tcc.oauth.domain.entity.applications.ApplicationAuthorized" name="user" signature="Lcom/fernandomantoan/tcc/oauth/domain/entity/credentials/User;" isStatic="false">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.entity.applications.ApplicationAuthorized" sourcefile="ApplicationAuthorized.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/entity/applications/ApplicationAuthorized.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository" start="11" end="20" sourcefile="ApplicationAuthorizedRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/ApplicationAuthorizedRepository.java"/>
+    </Class>
+    <Method classname="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository" name="findByTokenValue" signature="(Ljava/lang/String;)Lcom/fernandomantoan/tcc/oauth/domain/entity/applications/ApplicationAuthorized;" isStatic="false">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository" start="16" end="20" startBytecode="0" endBytecode="162" sourcefile="ApplicationAuthorizedRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/ApplicationAuthorizedRepository.java"/>
+    </Method>
+    <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository" start="16" end="16" startBytecode="4" endBytecode="4" sourcefile="ApplicationAuthorizedRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/ApplicationAuthorizedRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository" start="11" end="20" sourcefile="UserRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository" name="findByUsername" signature="(Ljava/lang/String;)Lcom/fernandomantoan/tcc/oauth/domain/entity/credentials/User;" isStatic="false">
+      <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository" start="16" end="20" startBytecode="0" endBytecode="162" sourcefile="UserRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/UserRepository.java"/>
+    </Method>
+    <SourceLine classname="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository" start="16" end="16" startBytecode="4" endBytecode="4" sourcefile="UserRepository.java" sourcepath="com/fernandomantoan/tcc/oauth/domain/repository/UserRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="29">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.ConsumerDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.ExpiredOAuthTokenException</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.InvalidOAuthTokenException</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.OAuthAccessProviderToken</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.OAuthProviderToken</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.OAuthProviderTokenImpl</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.OAuthProviderTokenServices</MissingClass>
+    <MissingClass>org.springframework.security.oauth.provider.token.OAuthTokenLifecycleListener</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:40:39 +0000" total_classes="18" referenced_classes="54" total_bugs="3" total_size="512" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.52" clock_seconds="1.56" peak_mbytes="192.08" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="com.fernandomantoan.tcc.oauth.controller" total_bugs="0" total_types="4" total_size="92">
+      <ClassStats class="com.fernandomantoan.tcc.oauth.controller.AccessConfirmationController" sourceFile="AccessConfirmationController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.controller.ApplicationController" sourceFile="ApplicationController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.controller.DashBoardController" sourceFile="DashBoardController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.controller.UserController" sourceFile="UserController.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.fernandomantoan.tcc.oauth.domain.entity.applications" total_bugs="1" total_types="2" total_size="81" priority_2="1">
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.entity.applications.ApplicationAuthorized" sourceFile="ApplicationAuthorized.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.entity.applications.ConsumerDetails" sourceFile="ConsumerDetails.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.fernandomantoan.tcc.oauth.domain.entity.credentials" total_bugs="0" total_types="2" total_size="75">
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.entity.credentials.Role" sourceFile="Role.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.entity.credentials.User" sourceFile="User.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.fernandomantoan.tcc.oauth.domain.repository" total_bugs="2" total_types="3" total_size="50" priority_2="2">
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.repository.AbstractRepository" sourceFile="AbstractRepository.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.repository.ApplicationAuthorizedRepository" sourceFile="ApplicationAuthorizedRepository.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.repository.UserRepository" sourceFile="UserRepository.java" interface="false" size="9" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.fernandomantoan.tcc.oauth.domain.service" total_bugs="0" total_types="7" total_size="214">
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.ApplicationService" sourceFile="ApplicationService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.ApplicationServiceImpl" sourceFile="ApplicationServiceImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.ConsumerDetailsServiceImpl" sourceFile="ConsumerDetailsServiceImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.TokenService" sourceFile="TokenService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.TokenServiceImpl" sourceFile="TokenServiceImpl.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.UserService" sourceFile="UserService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.fernandomantoan.tcc.oauth.domain.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="197" invocations="557" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="16217" standardDeviationMicrosecondsPerInvocation="957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="91" invocations="54" avgMicrosecondsPerInvocation="1700" maxMicrosecondsPerInvocation="31641" standardDeviationMicrosecondsPerInvocation="4633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="562" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="3209" standardDeviationMicrosecondsPerInvocation="160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="48" invocations="309" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2573" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="43" invocations="54" avgMicrosecondsPerInvocation="809" maxMicrosecondsPerInvocation="9367" standardDeviationMicrosecondsPerInvocation="1425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="36" invocations="115" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="5831" standardDeviationMicrosecondsPerInvocation="644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="34" invocations="118" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="7235" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="458" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1571" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="106" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="14405" standardDeviationMicrosecondsPerInvocation="1446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="32" invocations="115" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="3494" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="129" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="21569" standardDeviationMicrosecondsPerInvocation="1886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="115" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="7988" standardDeviationMicrosecondsPerInvocation="755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="29" invocations="119" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="9058" standardDeviationMicrosecondsPerInvocation="830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="54" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="5255" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="115" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="1759" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="54" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="6642" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="54" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="3809" standardDeviationMicrosecondsPerInvocation="816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="54" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="2156" standardDeviationMicrosecondsPerInvocation="429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="54" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="2529" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="63" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="1218" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="54" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="4528" standardDeviationMicrosecondsPerInvocation="645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="983" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="1291" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="11" invocations="18" avgMicrosecondsPerInvocation="623" maxMicrosecondsPerInvocation="7368" standardDeviationMicrosecondsPerInvocation="1647"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597104563000" analysisTimestamp="1597104564904" release="">
+  <Project projectName="repositorios/cheese10yun_spring-jpa-best-practices">
+    <Jar>repositorios/cheese10yun_spring-jpa-best-practices</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cheese.springjpa.coupon.Coupon">
+      <SourceLine classname="com.cheese.springjpa.coupon.Coupon" start="15" end="42" sourcefile="Coupon.java" sourcepath="com/cheese/springjpa/coupon/Coupon.java"/>
+    </Class>
+    <Field classname="com.cheese.springjpa.coupon.Coupon" name="order" signature="Lcom/cheese/springjpa/order/Order;" isStatic="false">
+      <SourceLine classname="com.cheese.springjpa.coupon.Coupon" sourcefile="Coupon.java" sourcepath="com/cheese/springjpa/coupon/Coupon.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cheese.springjpa.delivery.Delivery">
+      <SourceLine classname="com.cheese.springjpa.delivery.Delivery" start="25" end="57" sourcefile="Delivery.java" sourcepath="com/cheese/springjpa/delivery/Delivery.java"/>
+    </Class>
+    <Field classname="com.cheese.springjpa.delivery.Delivery" name="logs" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.cheese.springjpa.delivery.Delivery" sourcefile="Delivery.java" sourcepath="com/cheese/springjpa/delivery/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cheese.springjpa.delivery.DeliveryLog">
+      <SourceLine classname="com.cheese.springjpa.delivery.DeliveryLog" start="17" end="116" sourcefile="DeliveryLog.java" sourcepath="com/cheese/springjpa/delivery/DeliveryLog.java"/>
+    </Class>
+    <Field classname="com.cheese.springjpa.delivery.DeliveryLog" name="delivery" signature="Lcom/cheese/springjpa/delivery/Delivery;" isStatic="false">
+      <SourceLine classname="com.cheese.springjpa.delivery.DeliveryLog" sourcefile="DeliveryLog.java" sourcepath="com/cheese/springjpa/delivery/DeliveryLog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cheese.springjpa.order.Order">
+      <SourceLine classname="com.cheese.springjpa.order.Order" start="13" end="40" sourcefile="Order.java" sourcepath="com/cheese/springjpa/order/Order.java"/>
+    </Class>
+    <Field classname="com.cheese.springjpa.order.Order" name="coupon" signature="Lcom/cheese/springjpa/coupon/Coupon;" isStatic="false">
+      <SourceLine classname="com.cheese.springjpa.order.Order" sourcefile="Order.java" sourcepath="com/cheese/springjpa/order/Order.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="38">
+    <MissingClass>com.querydsl.core.types.Path</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadata</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.BeanPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.BooleanExpression</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.DateTimePath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EntityPathBase</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathInits</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.StringPath</MissingClass>
+    <MissingClass>com.querydsl.jpa.JPQLQuery</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.ApplicationRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.dao.DataIntegrityViolationException</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.Querydsl</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.QuerydslRepositorySupport</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.validation.BindException</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:09:23 +0000" total_classes="76" referenced_classes="138" total_bugs="4" total_size="1257" num_packages="15" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.58" clock_seconds="2.47" peak_mbytes="236.88" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="3" priority_1="1">
+    <PackageStats package="com.cheese.springjpa" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.cheese.springjpa.SpringJpaApplication" sourceFile="SpringJpaApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.api" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.cheese.springjpa.Account.api.AccountController" sourceFile="AccountController.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.application" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.cheese.springjpa.Account.application.AccountService" sourceFile="AccountService.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.dao" total_bugs="0" total_types="6" total_size="51">
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountFindService" sourceFile="AccountFindService.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountRepository" sourceFile="AccountRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountSearchService" sourceFile="AccountSearchService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountSearchService$1" sourceFile="AccountSearchService.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountSupportRepository" sourceFile="AccountSupportRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dao.AccountSupportRepositoryImpl" sourceFile="AccountSupportRepositoryImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.domain" total_bugs="0" total_types="12" total_size="269">
+      <ClassStats class="com.cheese.springjpa.Account.domain.Account" sourceFile="Account.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Account$AccountBuilder" sourceFile="Account.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Address" sourceFile="Address.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Address$AddressBuilder" sourceFile="Address.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Email" sourceFile="Email.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Email$EmailBuilder" sourceFile="Email.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Password" sourceFile="Password.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.Password$PasswordBuilder" sourceFile="Password.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.QAccount" sourceFile="QAccount.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.QAddress" sourceFile="QAddress.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.QEmail" sourceFile="QEmail.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.domain.QPassword" sourceFile="QPassword.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.dto" total_bugs="0" total_types="7" total_size="110">
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto" sourceFile="AccountDto.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto$MyAccountReq" sourceFile="AccountDto.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto$MyAccountReq$MyAccountReqBuilder" sourceFile="AccountDto.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto$Res" sourceFile="AccountDto.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto$SignUpReq" sourceFile="AccountDto.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountDto$SignUpReq$SignUpReqBuilder" sourceFile="AccountDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.dto.AccountSearchType" sourceFile="AccountSearchType.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.Account.exception" total_bugs="0" total_types="3" total_size="35">
+      <ClassStats class="com.cheese.springjpa.Account.exception.AccountNotFoundException" sourceFile="AccountNotFoundException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.exception.EmailDuplicationException" sourceFile="EmailDuplicationException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.Account.exception.PasswordFailedExceededException" sourceFile="PasswordFailedExceededException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.common.model" total_bugs="0" total_types="3" total_size="52">
+      <ClassStats class="com.cheese.springjpa.common.model.DateTime" sourceFile="DateTime.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.common.model.PageRequest" sourceFile="PageRequest.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.common.model.QDateTime" sourceFile="QDateTime.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.config" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.cheese.springjpa.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.config.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.coupon" total_bugs="1" total_types="5" total_size="70" priority_2="1">
+      <ClassStats class="com.cheese.springjpa.coupon.Coupon" sourceFile="Coupon.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cheese.springjpa.coupon.Coupon$CouponBuilder" sourceFile="Coupon.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.coupon.CouponRepository" sourceFile="CouponRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.coupon.CouponService" sourceFile="CouponService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.coupon.QCoupon" sourceFile="QCoupon.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.delivery" total_bugs="2" total_types="18" total_size="309" priority_2="1" priority_1="1">
+      <ClassStats class="com.cheese.springjpa.delivery.Delivery" sourceFile="Delivery.java" interface="false" size="32" bugs="1" priority_1="1"/>
+      <ClassStats class="com.cheese.springjpa.delivery.Delivery$DeliveryBuilder" sourceFile="Delivery.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryController" sourceFile="DeliveryController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto" sourceFile="DeliveryDto.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$CreationReq" sourceFile="DeliveryDto.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$CreationReq$CreationReqBuilder" sourceFile="DeliveryDto.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$LogRes" sourceFile="DeliveryDto.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$Res" sourceFile="DeliveryDto.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$UpdateReq" sourceFile="DeliveryDto.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryDto$UpdateReq$UpdateReqBuilder" sourceFile="DeliveryDto.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryLog" sourceFile="DeliveryLog.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryLog$1" sourceFile="DeliveryLog.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryLog$DeliveryLogBuilder" sourceFile="DeliveryLog.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryRepository" sourceFile="DeliveryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryService" sourceFile="DeliveryService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.DeliveryStatus" sourceFile="DeliveryStatus.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.QDelivery" sourceFile="QDelivery.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.QDeliveryLog" sourceFile="QDeliveryLog.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.delivery.exception" total_bugs="0" total_types="3" total_size="17">
+      <ClassStats class="com.cheese.springjpa.delivery.exception.DeliveryAlreadyDeliveringException" sourceFile="DeliveryAlreadyDeliveringException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.exception.DeliveryNotFoundException" sourceFile="DeliveryNotFoundException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.delivery.exception.DeliveryStatusEqaulsException" sourceFile="DeliveryStatusEqaulsException.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.error" total_bugs="0" total_types="6" total_size="141">
+      <ClassStats class="com.cheese.springjpa.error.ErrorCode" sourceFile="ErrorCode.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.error.ErrorExceptionController" sourceFile="ErrorExceptionController.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.error.ErrorResponse" sourceFile="ErrorResponse.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.error.ErrorResponse$ErrorResponseBuilder" sourceFile="ErrorResponse.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.error.ErrorResponse$FieldError" sourceFile="ErrorResponse.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.error.ErrorResponse$FieldError$FieldErrorBuilder" sourceFile="ErrorResponse.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.order" total_bugs="1" total_types="5" total_size="71" priority_2="1">
+      <ClassStats class="com.cheese.springjpa.order.Order" sourceFile="Order.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cheese.springjpa.order.Order$OrderBuilder" sourceFile="Order.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.order.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.order.OrderService" sourceFile="OrderService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.order.QOrder" sourceFile="QOrder.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cheese.springjpa.properties" total_bugs="0" total_types="3" total_size="66">
+      <ClassStats class="com.cheese.springjpa.properties.AntiSamplePropertiesRunner" sourceFile="AntiSamplePropertiesRunner.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.properties.SampleProperties" sourceFile="SampleProperties.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.cheese.springjpa.properties.SamplePropertiesRunner" sourceFile="SamplePropertiesRunner.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="246" invocations="793" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="18246" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="89" invocations="365" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="13286" standardDeviationMicrosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="88" invocations="138" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="11070" standardDeviationMicrosecondsPerInvocation="1497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="80" invocations="365" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="15856" standardDeviationMicrosecondsPerInvocation="941"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="74" invocations="365" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="5222" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="74" invocations="365" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="12637" standardDeviationMicrosecondsPerInvocation="795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="138" avgMicrosecondsPerInvocation="517" maxMicrosecondsPerInvocation="7218" standardDeviationMicrosecondsPerInvocation="1102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="60" invocations="798" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="526" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="56" invocations="365" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="9213" standardDeviationMicrosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="55" invocations="365" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="2569" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="51" invocations="368" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="26925" standardDeviationMicrosecondsPerInvocation="1399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="638" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1410" standardDeviationMicrosecondsPerInvocation="145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="518" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="2110" standardDeviationMicrosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="41" invocations="202" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="15008" standardDeviationMicrosecondsPerInvocation="1086"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="38" invocations="246" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="1371" standardDeviationMicrosecondsPerInvocation="188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="138" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="5891" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="33" invocations="138" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="6437" standardDeviationMicrosecondsPerInvocation="824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="23" invocations="3439" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="850" standardDeviationMicrosecondsPerInvocation="27"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="23" invocations="76" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="16144" standardDeviationMicrosecondsPerInvocation="1832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="138" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="8015" standardDeviationMicrosecondsPerInvocation="725"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="138" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2961" standardDeviationMicrosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="22" invocations="138" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="1372" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="76" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="2282" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="76" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="3215" standardDeviationMicrosecondsPerInvocation="391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="19" invocations="76" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="6730" standardDeviationMicrosecondsPerInvocation="759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="17" invocations="76" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="1215" standardDeviationMicrosecondsPerInvocation="242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="76" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="5840" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="16" invocations="365" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="1204" standardDeviationMicrosecondsPerInvocation="75"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FinalizerNullsFields" totalMilliseconds="16" invocations="76" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="16037" standardDeviationMicrosecondsPerInvocation="1826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="138" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="2401" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="76" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1622" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="14" invocations="365" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="786" standardDeviationMicrosecondsPerInvocation="63"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="13" invocations="76" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1855" standardDeviationMicrosecondsPerInvocation="217"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

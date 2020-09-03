@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597098559000" analysisTimestamp="1597098560652" release="">
+  <Project projectName="repositorios/Ideyatech_opentides3">
+    <Jar>repositorios/Ideyatech_opentides3</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.Notification">
+      <SourceLine classname="org.opentides.bean.Notification" start="161" end="420" sourcefile="Notification.java" sourcepath="org/opentides/bean/Notification.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.Notification" name="recipientUser" signature="Lorg/opentides/bean/user/BaseUser;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.Notification" sourcefile="Notification.java" sourcepath="org/opentides/bean/Notification.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.BaseUser">
+      <SourceLine classname="org.opentides.bean.user.BaseUser" start="141" end="688" sourcefile="BaseUser.java" sourcepath="org/opentides/bean/user/BaseUser.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.BaseUser" name="credential" signature="Lorg/opentides/bean/user/UserCredential;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.BaseUser" sourcefile="BaseUser.java" sourcepath="org/opentides/bean/user/BaseUser.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.MultitenantUser">
+      <SourceLine classname="org.opentides.bean.user.MultitenantUser" start="39" end="79" sourcefile="MultitenantUser.java" sourcepath="org/opentides/bean/user/MultitenantUser.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.MultitenantUser" name="tenant" signature="Lorg/opentides/bean/user/Tenant;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.MultitenantUser" sourcefile="MultitenantUser.java" sourcepath="org/opentides/bean/user/MultitenantUser.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.Tenant">
+      <SourceLine classname="org.opentides.bean.user.Tenant" start="47" end="223" sourcefile="Tenant.java" sourcepath="org/opentides/bean/user/Tenant.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.Tenant" name="accountType" signature="Lorg/opentides/bean/user/AccountType;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.Tenant" sourcefile="Tenant.java" sourcepath="org/opentides/bean/user/Tenant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.Tenant">
+      <SourceLine classname="org.opentides.bean.user.Tenant" start="47" end="223" sourcefile="Tenant.java" sourcepath="org/opentides/bean/user/Tenant.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.Tenant" name="owner" signature="Lorg/opentides/bean/user/MultitenantUser;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.Tenant" sourcefile="Tenant.java" sourcepath="org/opentides/bean/user/Tenant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.UserAuthority">
+      <SourceLine classname="org.opentides.bean.user.UserAuthority" start="56" end="143" sourcefile="UserAuthority.java" sourcepath="org/opentides/bean/user/UserAuthority.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.UserAuthority" name="userGroup" signature="Lorg/opentides/bean/user/UserGroup;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.UserAuthority" sourcefile="UserAuthority.java" sourcepath="org/opentides/bean/user/UserAuthority.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.UserCredential">
+      <SourceLine classname="org.opentides.bean.user.UserCredential" start="71" end="185" sourcefile="UserCredential.java" sourcepath="org/opentides/bean/user/UserCredential.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.UserCredential" name="user" signature="Lorg/opentides/bean/user/BaseUser;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.UserCredential" sourcefile="UserCredential.java" sourcepath="org/opentides/bean/user/UserCredential.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.opentides.bean.user.UserGroup">
+      <SourceLine classname="org.opentides.bean.user.UserGroup" start="70" end="325" sourcefile="UserGroup.java" sourcepath="org/opentides/bean/user/UserGroup.java"/>
+    </Class>
+    <Field classname="org.opentides.bean.user.UserGroup" name="authorities" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.opentides.bean.user.UserGroup" sourcefile="UserGroup.java" sourcepath="org/opentides/bean/user/UserGroup.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.opentides.dao.impl.BaseEntityDaoJpaImpl">
+      <SourceLine classname="org.opentides.dao.impl.BaseEntityDaoJpaImpl" start="62" end="626" sourcefile="BaseEntityDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/BaseEntityDaoJpaImpl.java"/>
+    </Class>
+    <Method classname="org.opentides.dao.impl.BaseEntityDaoJpaImpl" name="loadEntityModel" signature="(Ljava/io/Serializable;ZZ)Lorg/opentides/bean/BaseEntity;" isStatic="false">
+      <SourceLine classname="org.opentides.dao.impl.BaseEntityDaoJpaImpl" start="339" end="354" startBytecode="0" endBytecode="417" sourcefile="BaseEntityDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/BaseEntityDaoJpaImpl.java"/>
+    </Method>
+    <SourceLine classname="org.opentides.dao.impl.BaseEntityDaoJpaImpl" start="342" end="342" startBytecode="55" endBytecode="55" sourcefile="BaseEntityDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/BaseEntityDaoJpaImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.opentides.dao.impl.UserWidgetsDaoJpaImpl">
+      <SourceLine classname="org.opentides.dao.impl.UserWidgetsDaoJpaImpl" start="38" end="75" sourcefile="UserWidgetsDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/UserWidgetsDaoJpaImpl.java"/>
+    </Class>
+    <Method classname="org.opentides.dao.impl.UserWidgetsDaoJpaImpl" name="findUserWidgets" signature="(J[Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.opentides.dao.impl.UserWidgetsDaoJpaImpl" start="44" end="57" startBytecode="0" endBytecode="341" sourcefile="UserWidgetsDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/UserWidgetsDaoJpaImpl.java"/>
+    </Method>
+    <SourceLine classname="org.opentides.dao.impl.UserWidgetsDaoJpaImpl" start="45" end="45" startBytecode="20" endBytecode="20" sourcefile="UserWidgetsDaoJpaImpl.java" sourcepath="org/opentides/dao/impl/UserWidgetsDaoJpaImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.opentides.persistence.evolve.Evolver">
+      <SourceLine classname="org.opentides.persistence.evolve.Evolver" start="38" end="135" sourcefile="Evolver.java" sourcepath="org/opentides/persistence/evolve/Evolver.java"/>
+    </Class>
+    <Method classname="org.opentides.persistence.evolve.Evolver" name="doExecute" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="org.opentides.persistence.evolve.Evolver" start="81" end="101" startBytecode="0" endBytecode="400" sourcefile="Evolver.java" sourcepath="org/opentides/persistence/evolve/Evolver.java"/>
+    </Method>
+    <SourceLine classname="org.opentides.persistence.evolve.Evolver" start="87" end="87" startBytecode="109" endBytecode="109" sourcefile="Evolver.java" sourcepath="org/opentides/persistence/evolve/Evolver.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.opentides.util.EvolveUtil">
+      <SourceLine classname="org.opentides.util.EvolveUtil" start="28" end="246" sourcefile="EvolveUtil.java" sourcepath="org/opentides/util/EvolveUtil.java"/>
+    </Class>
+    <Method classname="org.opentides.util.EvolveUtil" name="executeHqlQuery" signature="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lorg/hibernate/Session;Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="org.opentides.util.EvolveUtil" start="147" end="203" startBytecode="0" endBytecode="1352" sourcefile="EvolveUtil.java" sourcepath="org/opentides/util/EvolveUtil.java"/>
+    </Method>
+    <SourceLine classname="org.opentides.util.EvolveUtil" start="170" end="170" startBytecode="273" endBytecode="273" sourcefile="EvolveUtil.java" sourcepath="org/opentides/util/EvolveUtil.java"/>
+  </BugInstance>
+  <Errors errors="1" missingClasses="209">
+    <Error>
+      <ErrorMessage>Exception analyzing org.opentides.dao.impl.BaseEntityDaoJpaImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.core.JsonFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.MapperFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectWriter</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ser.std.StdSerializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module</MissingClass>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.sun.image.codec.jpeg.JPEGCodec</MissingClass>
+    <MissingClass>com.sun.image.codec.jpeg.JPEGEncodeParam</MissingClass>
+    <MissingClass>com.sun.image.codec.jpeg.JPEGImageEncoder</MissingClass>
+    <MissingClass>javax.mail.Authenticator</MissingClass>
+    <MissingClass>javax.mail.Message</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.Multipart</MissingClass>
+    <MissingClass>javax.mail.PasswordAuthentication</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.AddressException</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeBodyPart</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage$RecipientType</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMultipart</MissingClass>
+    <MissingClass>javax.persistence.Column</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.JoinColumn</MissingClass>
+    <MissingClass>javax.persistence.LockModeType</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.collections.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.DefaultHttpMethodRetryHandler</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.Header</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HostConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpConnectionManager</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethodBase</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.PostMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpConnectionManagerParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpMethodParams</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.log4j.FileAppender</MissingClass>
+    <MissingClass>org.apache.log4j.Level</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.apache.velocity.exception.MethodInvocationException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ParseErrorException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.atmosphere.cpr.ApplicationConfig</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereConfig</MissingClass>
+    <MissingClass>org.atmosphere.cpr.AtmosphereResource</MissingClass>
+    <MissingClass>org.atmosphere.cpr.Broadcaster</MissingClass>
+    <MissingClass>org.atmosphere.cpr.BroadcasterFactory</MissingClass>
+    <MissingClass>org.atmosphere.cpr.MetaBroadcaster</MissingClass>
+    <MissingClass>org.atmosphere.util.ServletContextFactory</MissingClass>
+    <MissingClass>org.dom4j.Document</MissingClass>
+    <MissingClass>org.dom4j.Element</MissingClass>
+    <MissingClass>org.dom4j.io.SAXReader</MissingClass>
+    <MissingClass>org.hibernate.CallbackException</MissingClass>
+    <MissingClass>org.hibernate.EmptyInterceptor</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.MappingException</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.SQLQuery</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.collection.internal.PersistentBag</MissingClass>
+    <MissingClass>org.hibernate.context.spi.CurrentTenantIdentifierResolver</MissingClass>
+    <MissingClass>org.hibernate.dialect.Dialect</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.connections.spi.ConnectionProvider</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.internal.FormatStyle</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.internal.Formatter</MissingClass>
+    <MissingClass>org.hibernate.tool.hbm2ddl.DatabaseMetadata</MissingClass>
+    <MissingClass>org.hibernate.tool.hbm2ddl.SchemaExport</MissingClass>
+    <MissingClass>org.hibernate.tool.hbm2ddl.SchemaUpdateScript</MissingClass>
+    <MissingClass>org.hsqldb.lib.StringUtil</MissingClass>
+    <MissingClass>org.ocpsoft.prettytime.PrettyTime</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.MutablePropertyValues</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.ListFactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.MapFactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.BeanDefinitionRegistry</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.SimpleBeanDefinitionRegistry</MissingClass>
+    <MissingClass>org.springframework.beans.propertyeditors.CustomDateEditor</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.annotation.ClassPathBeanDefinitionScanner</MissingClass>
+    <MissingClass>org.springframework.context.support.DefaultMessageSourceResolvable</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.convert.TypeDescriptor</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.ConditionalGenericConverter</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.GenericConverter$ConvertiblePair</MissingClass>
+    <MissingClass>org.springframework.core.io.FileSystemResource</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.support.PathMatchingResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternUtils</MissingClass>
+    <MissingClass>org.springframework.core.task.TaskExecutor</MissingClass>
+    <MissingClass>org.springframework.core.type.ClassMetadata</MissingClass>
+    <MissingClass>org.springframework.core.type.classreading.CachingMetadataReaderFactory</MissingClass>
+    <MissingClass>org.springframework.core.type.classreading.MetadataReader</MissingClass>
+    <MissingClass>org.springframework.core.type.classreading.MetadataReaderFactory</MissingClass>
+    <MissingClass>org.springframework.core.type.filter.AnnotationTypeFilter</MissingClass>
+    <MissingClass>org.springframework.core.type.filter.AssignableTypeFilter</MissingClass>
+    <MissingClass>org.springframework.core.type.filter.TypeFilter</MissingClass>
+    <MissingClass>org.springframework.dao.DataAccessException</MissingClass>
+    <MissingClass>org.springframework.expression.Expression</MissingClass>
+    <MissingClass>org.springframework.expression.ExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.standard.SpelExpressionParser</MissingClass>
+    <MissingClass>org.springframework.http.HttpEntity</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpOutputMessage</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.converter.HttpMessageNotWritableException</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.JdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.persistenceunit.PersistenceUnitPostProcessor</MissingClass>
+    <MissingClass>org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor</MissingClass>
+    <MissingClass>org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.event.AbstractAuthenticationEvent</MissingClass>
+    <MissingClass>org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent</MissingClass>
+    <MissingClass>org.springframework.security.authentication.event.AuthenticationSuccessEvent</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.session.SessionInformation</MissingClass>
+    <MissingClass>org.springframework.security.core.session.SessionRegistry</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.WebAuthenticationDetails</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionCallbackWithoutResult</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionTemplate</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.ui.velocity.VelocityEngineUtils</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.ClassUtils</MissingClass>
+    <MissingClass>org.springframework.util.CollectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.LinkedMultiValueMap</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.validation.BindException</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.ValidationUtils</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.bind.support.WebDataBinderFactory</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.context.request.RequestContextHolder</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodArgumentResolver</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodReturnValueHandler</MissingClass>
+    <MissingClass>org.springframework.web.method.support.ModelAndViewContainer</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:29:19 +0000" total_classes="604" referenced_classes="860" total_bugs="12" total_size="28814" num_packages="47" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="43.45" clock_seconds="12.93" peak_mbytes="932.51" alloc_mbytes="3540.00" gc_seconds="0.32" priority_2="11" priority_1="1">
+    <PackageStats package="com.ideyatech.bean" total_bugs="0" total_types="1" total_size="152">
+      <ClassStats class="com.ideyatech.bean.Ninja" sourceFile="Ninja.java" interface="false" size="152" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jhlabs.composite" total_bugs="0" total_types="50" total_size="1204">
+      <ClassStats class="com.jhlabs.composite.AddComposite" sourceFile="AddComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.AddComposite$Context" sourceFile="AddComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.AverageComposite" sourceFile="AverageComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.AverageComposite$Context" sourceFile="AverageComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.BurnComposite" sourceFile="BurnComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.BurnComposite$Context" sourceFile="BurnComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorBurnComposite" sourceFile="ColorBurnComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorBurnComposite$Context" sourceFile="ColorBurnComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorComposite" sourceFile="ColorComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorComposite$Context" sourceFile="ColorComposite.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorDodgeComposite" sourceFile="ColorDodgeComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ColorDodgeComposite$Context" sourceFile="ColorDodgeComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ContourComposite" sourceFile="ContourComposite.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ContourCompositeContext" sourceFile="ContourComposite.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DarkenComposite" sourceFile="DarkenComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DarkenComposite$Context" sourceFile="DarkenComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DifferenceComposite" sourceFile="DifferenceComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DifferenceComposite$Context" sourceFile="DifferenceComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DodgeComposite" sourceFile="DodgeComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.DodgeComposite$Context" sourceFile="DodgeComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ExclusionComposite" sourceFile="ExclusionComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ExclusionComposite$Context" sourceFile="ExclusionComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.HardLightComposite" sourceFile="HardLightComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.HardLightComposite$Context" sourceFile="HardLightComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.HueComposite" sourceFile="HueComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.HueComposite$Context" sourceFile="HueComposite.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.LightenComposite" sourceFile="LightenComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.LightenComposite$Context" sourceFile="LightenComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.MiscComposite" sourceFile="MiscComposite.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.MiscCompositeContext" sourceFile="MiscCompositeContext.java" interface="false" size="219" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.MultiplyComposite" sourceFile="MultiplyComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.MultiplyComposite$Context" sourceFile="MultiplyComposite.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.NegationComposite" sourceFile="NegationComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.NegationComposite$Context" sourceFile="NegationComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.OverlayComposite" sourceFile="OverlayComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.OverlayComposite$Context" sourceFile="OverlayComposite.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.PinLightComposite" sourceFile="PinLightComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.PinLightComposite$Context" sourceFile="PinLightComposite.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.RGBComposite" sourceFile="RGBComposite.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.RGBComposite$RGBCompositeContext" sourceFile="RGBComposite.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SaturationComposite" sourceFile="SaturationComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SaturationComposite$Context" sourceFile="SaturationComposite.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ScreenComposite" sourceFile="ScreenComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ScreenComposite$Context" sourceFile="ScreenComposite.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SoftLightComposite" sourceFile="SoftLightComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SoftLightComposite$Context" sourceFile="SoftLightComposite.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SubtractComposite" sourceFile="SubtractComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.SubtractComposite$Context" sourceFile="SubtractComposite.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ValueComposite" sourceFile="ValueComposite.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.composite.ValueComposite$Context" sourceFile="ValueComposite.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jhlabs.image" total_bugs="0" total_types="177" total_size="12596">
+      <ClassStats class="com.jhlabs.image.AbstractBufferedImageOp" sourceFile="AbstractBufferedImageOp.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ApplyMaskFilter" sourceFile="ApplyMaskFilter.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ArrayColormap" sourceFile="ArrayColormap.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.AverageFilter" sourceFile="AverageFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BicubicScaleFilter" sourceFile="BicubicScaleFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BinaryFilter" sourceFile="BinaryFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BlockFilter" sourceFile="BlockFilter.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BlurFilter" sourceFile="BlurFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BorderFilter" sourceFile="BorderFilter.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BoxBlurFilter" sourceFile="BoxBlurFilter.java" interface="false" size="134" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BrushedMetalFilter" sourceFile="BrushedMetalFilter.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.BumpFilter" sourceFile="BumpFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CausticsFilter" sourceFile="CausticsFilter.java" interface="false" size="187" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CellularFilter" sourceFile="CellularFilter.java" interface="false" size="319" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CellularFilter$Point" sourceFile="CellularFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ChannelMixFilter" sourceFile="ChannelMixFilter.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CheckFilter" sourceFile="CheckFilter.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ChromaKeyFilter" sourceFile="ChromaKeyFilter.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ChromeFilter" sourceFile="ChromeFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ChromeFilter$1" sourceFile="ChromeFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CircleFilter" sourceFile="CircleFilter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ColorHalftoneFilter" sourceFile="ColorHalftoneFilter.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Colormap" sourceFile="Colormap.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CompositeFilter" sourceFile="CompositeFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CompoundFilter" sourceFile="CompoundFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ContourFilter" sourceFile="ContourFilter.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ContrastFilter" sourceFile="ContrastFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ConvolveFilter" sourceFile="ConvolveFilter.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CropFilter" sourceFile="CropFilter.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CrystallizeFilter" sourceFile="CrystallizeFilter.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CurlFilter" sourceFile="CurlFilter.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CurlFilter$Sampler" sourceFile="CurlFilter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Curve" sourceFile="Curve.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.CurvesFilter" sourceFile="CurvesFilter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DeinterlaceFilter" sourceFile="DeinterlaceFilter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DespeckleFilter" sourceFile="DespeckleFilter.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DiffuseFilter" sourceFile="DiffuseFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DiffusionFilter" sourceFile="DiffusionFilter.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DilateFilter" sourceFile="DilateFilter.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DisplaceFilter" sourceFile="DisplaceFilter.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DissolveFilter" sourceFile="DissolveFilter.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DitherFilter" sourceFile="DitherFilter.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.DoGFilter" sourceFile="DoGFilter.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.EdgeFilter" sourceFile="EdgeFilter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.EmbossFilter" sourceFile="EmbossFilter.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.EqualizeFilter" sourceFile="EqualizeFilter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ErodeAlphaFilter" sourceFile="ErodeAlphaFilter.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ErodeFilter" sourceFile="ErodeFilter.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ExposureFilter" sourceFile="ExposureFilter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FBMFilter" sourceFile="FBMFilter.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FadeFilter" sourceFile="FadeFilter.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FeedbackFilter" sourceFile="FeedbackFilter.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FieldWarpFilter" sourceFile="FieldWarpFilter.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FieldWarpFilter$Line" sourceFile="FieldWarpFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FillFilter" sourceFile="FillFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FlareFilter" sourceFile="FlareFilter.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FlipFilter" sourceFile="FlipFilter.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Flush3DFilter" sourceFile="Flush3DFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.FourColorFilter" sourceFile="FourColorFilter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GainFilter" sourceFile="GainFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GammaFilter" sourceFile="GammaFilter.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GaussianFilter" sourceFile="GaussianFilter.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GlintFilter" sourceFile="GlintFilter.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GlowFilter" sourceFile="GlowFilter.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Gradient" sourceFile="Gradient.java" interface="false" size="249" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GradientFilter" sourceFile="GradientFilter.java" interface="false" size="231" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GradientWipeFilter" sourceFile="GradientWipeFilter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GrayFilter" sourceFile="GrayFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GrayscaleColormap" sourceFile="GrayscaleColormap.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.GrayscaleFilter" sourceFile="GrayscaleFilter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.HSBAdjustFilter" sourceFile="HSBAdjustFilter.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.HalftoneFilter" sourceFile="HalftoneFilter.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.HighPassFilter" sourceFile="HighPassFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Histogram" sourceFile="Histogram.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ImageCombiningFilter" sourceFile="ImageCombiningFilter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ImageMath" sourceFile="ImageMath.java" interface="false" size="336" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ImageUtils" sourceFile="ImageUtils.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.InterpolateFilter" sourceFile="InterpolateFilter.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.InvertAlphaFilter" sourceFile="InvertAlphaFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.InvertFilter" sourceFile="InvertFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.IteratedFilter" sourceFile="IteratedFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.JavaLnFFilter" sourceFile="JavaLnFFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.KaleidoscopeFilter" sourceFile="KaleidoscopeFilter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.KeyFilter" sourceFile="KeyFilter.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LaplaceFilter" sourceFile="LaplaceFilter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LensBlurFilter" sourceFile="LensBlurFilter.java" interface="false" size="192" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LevelsFilter" sourceFile="LevelsFilter.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LifeFilter" sourceFile="LifeFilter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter" sourceFile="LightFilter.java" interface="false" size="331" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$1" sourceFile="LightFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$AmbientLight" sourceFile="LightFilter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$DistantLight" sourceFile="LightFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$Light" sourceFile="LightFilter.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$Material" sourceFile="LightFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$PointLight" sourceFile="LightFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LightFilter$SpotLight" sourceFile="LightFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LinearColormap" sourceFile="LinearColormap.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.LookupFilter" sourceFile="LookupFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MapColorsFilter" sourceFile="MapColorsFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MapFilter" sourceFile="MapFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MarbleFilter" sourceFile="MarbleFilter.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MarbleTexFilter" sourceFile="MarbleTexFilter.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MaskFilter" sourceFile="MaskFilter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MaximumFilter" sourceFile="MaximumFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MedianFilter" sourceFile="MedianFilter.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MinimumFilter" sourceFile="MinimumFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MirrorFilter" sourceFile="MirrorFilter.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MotionBlurFilter" sourceFile="MotionBlurFilter.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MotionBlurOp" sourceFile="MotionBlurOp.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.MutatableFilter" sourceFile="MutatableFilter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.NoiseFilter" sourceFile="NoiseFilter.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OctTreeQuantizer" sourceFile="OctTreeQuantizer.java" interface="false" size="147" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OctTreeQuantizer$OctTreeNode" sourceFile="OctTreeQuantizer.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OffsetFilter" sourceFile="OffsetFilter.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OilFilter" sourceFile="OilFilter.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OpacityFilter" sourceFile="OpacityFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.OutlineFilter" sourceFile="OutlineFilter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PerspectiveFilter" sourceFile="PerspectiveFilter.java" interface="false" size="174" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PinchFilter" sourceFile="PinchFilter.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PixelUtils" sourceFile="PixelUtils.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PlasmaFilter" sourceFile="PlasmaFilter.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PointFilter" sourceFile="PointFilter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PointillizeFilter" sourceFile="PointillizeFilter.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PolarFilter" sourceFile="PolarFilter.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PosterizeFilter" sourceFile="PosterizeFilter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.PremultiplyFilter" sourceFile="PremultiplyFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.QuantizeFilter" sourceFile="QuantizeFilter.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Quantizer" sourceFile="Quantizer.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.QuiltFilter" sourceFile="QuiltFilter.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RGBAdjustFilter" sourceFile="RGBAdjustFilter.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RaysFilter" sourceFile="RaysFilter.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ReduceNoiseFilter" sourceFile="ReduceNoiseFilter.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RenderTextFilter" sourceFile="RenderTextFilter.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RescaleFilter" sourceFile="RescaleFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RippleFilter" sourceFile="RippleFilter.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.RotateFilter" sourceFile="RotateFilter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SaturationFilter" sourceFile="SaturationFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ScaleFilter" sourceFile="ScaleFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ScratchFilter" sourceFile="ScratchFilter.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShadeFilter" sourceFile="ShadeFilter.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShadowFilter" sourceFile="ShadowFilter.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShapeFilter" sourceFile="ShapeFilter.java" interface="false" size="261" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SharpenFilter" sourceFile="SharpenFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShatterFilter" sourceFile="ShatterFilter.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShatterFilter$Tile" sourceFile="ShatterFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShearFilter" sourceFile="ShearFilter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ShineFilter" sourceFile="ShineFilter.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SkeletonFilter" sourceFile="SkeletonFilter.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SkyFilter" sourceFile="SkyFilter.java" interface="false" size="293" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SmartBlurFilter" sourceFile="SmartBlurFilter.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SmearFilter" sourceFile="SmearFilter.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SolarizeFilter" sourceFile="SolarizeFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SparkleFilter" sourceFile="SparkleFilter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.Spectrum" sourceFile="Spectrum.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SpectrumColormap" sourceFile="SpectrumColormap.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SphereFilter" sourceFile="SphereFilter.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SplineColormap" sourceFile="SplineColormap.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.StampFilter" sourceFile="StampFilter.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SwimFilter" sourceFile="SwimFilter.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.SwizzleFilter" sourceFile="SwizzleFilter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TextureFilter" sourceFile="TextureFilter.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.ThresholdFilter" sourceFile="ThresholdFilter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TileImageFilter" sourceFile="TileImageFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TransferFilter" sourceFile="TransferFilter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TransformFilter" sourceFile="TransformFilter.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TransitionFilter" sourceFile="TransitionFilter.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TritoneFilter" sourceFile="TritoneFilter.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.TwirlFilter" sourceFile="TwirlFilter.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.UnpremultiplyFilter" sourceFile="UnpremultiplyFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.UnsharpFilter" sourceFile="UnsharpFilter.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.VariableBlurFilter" sourceFile="VariableBlurFilter.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WarpFilter" sourceFile="WarpFilter.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WarpGrid" sourceFile="WarpGrid.java" interface="false" size="230" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WaterFilter" sourceFile="WaterFilter.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WeaveFilter" sourceFile="WeaveFilter.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WholeImageFilter" sourceFile="WholeImageFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.image.WoodFilter" sourceFile="WoodFilter.java" interface="false" size="97" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jhlabs.math" total_bugs="0" total_types="20" total_size="692">
+      <ClassStats class="com.jhlabs.math.BinaryFunction" sourceFile="BinaryFunction.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.BlackFunction" sourceFile="BlackFunction.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.CellularFunction2D" sourceFile="CellularFunction2D.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.CellularFunction2D$Point" sourceFile="CellularFunction2D.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.CompositeFunction1D" sourceFile="CompositeFunction1D.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.CompoundFunction2D" sourceFile="CompoundFunction2D.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.FBM" sourceFile="FBM.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.FFT" sourceFile="FFT.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.FractalSumFunction" sourceFile="FractalSumFunction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.Function1D" sourceFile="Function1D.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.Function2D" sourceFile="Function2D.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.Function3D" sourceFile="Function3D.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.ImageFunction2D" sourceFile="ImageFunction2D.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.MarbleFunction" sourceFile="MarbleFunction.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.MathFunction1D" sourceFile="MathFunction1D.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.Noise" sourceFile="Noise.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.RidgedFBM" sourceFile="RidgedFBM.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.SCNoise" sourceFile="SCNoise.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.TurbulenceFunction" sourceFile="TurbulenceFunction.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jhlabs.math.VLNoise" sourceFile="VLNoise.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jhlabs.vecmath" total_bugs="0" total_types="10" total_size="930">
+      <ClassStats class="com.jhlabs.vecmath.AxisAngle4f" sourceFile="AxisAngle4f.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Color4f" sourceFile="Color4f.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Matrix4f" sourceFile="Matrix4f.java" interface="false" size="297" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Point3f" sourceFile="Point3f.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Point4f" sourceFile="Point4f.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Quat4f" sourceFile="Quat4f.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Tuple3f" sourceFile="Tuple3f.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Tuple4f" sourceFile="Tuple4f.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Vector3f" sourceFile="Vector3f.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.jhlabs.vecmath.Vector4f" sourceFile="Vector4f.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mortennobel.imagescaling" total_bugs="0" total_types="27" total_size="915">
+      <ClassStats class="com.mortennobel.imagescaling.AdvancedResizeOp" sourceFile="AdvancedResizeOp.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.AdvancedResizeOp$UnsharpenMask" sourceFile="AdvancedResizeOp.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.BSplineFilter" sourceFile="BSplineFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.BellFilter" sourceFile="BellFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.BiCubicFilter" sourceFile="BiCubicFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.BiCubicHighFreqResponse" sourceFile="BiCubicHighFreqResponse.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.BoxFilter" sourceFile="BoxFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.DimensionConstrain" sourceFile="DimensionConstrain.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.DimensionConstrain$1" sourceFile="DimensionConstrain.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.DimensionConstrain$2" sourceFile="DimensionConstrain.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.DimensionConstrain$3" sourceFile="DimensionConstrain.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.DimensionConstrain$4" sourceFile="DimensionConstrain.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.HermiteFilter" sourceFile="HermiteFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ImageUtils" sourceFile="ImageUtils.java" interface="false" size="130" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.Lanczos3Filter" sourceFile="Lanczos3Filter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.MitchellFilter" sourceFile="MitchellFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.MultiStepRescaleOp" sourceFile="MultiStepRescaleOp.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ProgressListener" sourceFile="ProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleFilter" sourceFile="ResampleFilter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleFilters" sourceFile="ResampleFilters.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleOp" sourceFile="ResampleOp.java" interface="false" size="284" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleOp$1" sourceFile="ResampleOp.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleOp$2" sourceFile="ResampleOp.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ResampleOp$SubSamplingData" sourceFile="ResampleOp.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ThumpnailRescaleOp" sourceFile="ThumpnailRescaleOp.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.ThumpnailRescaleOp$Sampling" sourceFile="ThumpnailRescaleOp.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.TriangleFilter" sourceFile="TriangleFilter.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mortennobel.imagescaling.experimental" total_bugs="0" total_types="4" total_size="249">
+      <ClassStats class="com.mortennobel.imagescaling.experimental.ImprovedMultistepRescaleOp" sourceFile="ImprovedMultistepRescaleOp.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.experimental.ResampleOpSingleThread" sourceFile="ResampleOpSingleThread.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.experimental.ResampleOpSingleThread$1" sourceFile="ResampleOpSingleThread.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.mortennobel.imagescaling.experimental.ResampleOpSingleThread$SubSamplingData" sourceFile="ResampleOpSingleThread.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="imageUtil" total_bugs="0" total_types="4" total_size="215">
+      <ClassStats class="imageUtil.Example" sourceFile="Example.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="imageUtil.Image" sourceFile="Image.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="imageUtil.ImageLoader" sourceFile="ImageLoader.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="imageUtil.ImageType" sourceFile="ImageType.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.annotation" total_bugs="0" total_types="22" total_size="67">
+      <ClassStats class="org.opentides.annotation.Auditable" sourceFile="Auditable.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.BuildDeleteStatement" sourceFile="BuildDeleteStatement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.BuildInsertStatement" sourceFile="BuildInsertStatement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.BuildUpdateStatement" sourceFile="BuildUpdateStatement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.CrudSecure" sourceFile="CrudSecure.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.FormBind" sourceFile="FormBind.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.FormBind$Load" sourceFile="FormBind.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateCrudController" sourceFile="GenerateCrudController.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateCrudController$PageType" sourceFile="GenerateCrudController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateCrudPages" sourceFile="GenerateCrudPages.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateCrudPages$PageType" sourceFile="GenerateCrudPages.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateDao" sourceFile="GenerateDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateMessagesProperties" sourceFile="GenerateMessagesProperties.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateService" sourceFile="GenerateService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.GenerateValidator" sourceFile="GenerateValidator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.PrimaryField" sourceFile="PrimaryField.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.Protected" sourceFile="Protected.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.RestableFields" sourceFile="RestableFields.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.SearchableFields" sourceFile="SearchableFields.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.Synchronizable" sourceFile="Synchronizable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.SynchronizableFields" sourceFile="SynchronizableFields.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.Valid" sourceFile="Valid.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.annotation.field" total_bugs="0" total_types="10" total_size="82">
+      <ClassStats class="org.opentides.annotation.field.Checkbox" sourceFile="Checkbox.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.DatePicker" sourceFile="DatePicker.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.DisplayOnly" sourceFile="DisplayOnly.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.Dropdown" sourceFile="Dropdown.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.HiddenField" sourceFile="HiddenField.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.MultiRecord" sourceFile="MultiRecord.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.RadioButton" sourceFile="RadioButton.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.TextArea" sourceFile="TextArea.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.TextField" sourceFile="TextField.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.annotation.field.Validation" sourceFile="Validation.java" interface="true" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.bean" total_bugs="1" total_types="48" total_size="2278" priority_2="1">
+      <ClassStats class="org.opentides.bean.AjaxUpload" sourceFile="AjaxUpload.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.AnnotationDefinition" sourceFile="AnnotationDefinition.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.opentides.bean.AuditLog" sourceFile="AuditLog.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="org.opentides.bean.AuditableField" sourceFile="AuditableField.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.opentides.bean.BaseCriteria" sourceFile="BaseCriteria.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.bean.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="org.opentides.bean.BeanDefinition" sourceFile="BeanDefinition.java" interface="false" size="124" bugs="0"/>
+      <ClassStats class="org.opentides.bean.ChangeLog" sourceFile="ChangeLog.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.opentides.bean.ChangedField" sourceFile="ChangedField.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.opentides.bean.ChangedRecord" sourceFile="ChangedRecord.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Comment" sourceFile="Comment.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Commentable" sourceFile="Commentable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Definition" sourceFile="Definition.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Event" sourceFile="Event.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.opentides.bean.FieldDefinition" sourceFile="FieldDefinition.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.opentides.bean.FileInfo" sourceFile="FileInfo.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.opentides.bean.ImageInfo" sourceFile="ImageInfo.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.opentides.bean.ImageUploadable" sourceFile="ImageUploadable.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.opentides.bean.JSONNotification" sourceFile="JSONNotification.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.opentides.bean.JoinTable" sourceFile="JoinTable.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.opentides.bean.JsonKeyValue" sourceFile="JsonKeyValue.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.opentides.bean.MapDBFactoryBean" sourceFile="MapDBFactoryBean.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.opentides.bean.MergeListFactoryBean" sourceFile="MergeListFactoryBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.bean.MessageResponse" sourceFile="MessageResponse.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.opentides.bean.MessageResponse$Type" sourceFile="MessageResponse.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Ninja" sourceFile="Ninja.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Notification" sourceFile="Notification.java" interface="false" size="123" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.bean.Notification$Medium" sourceFile="Notification.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Notification$Status" sourceFile="Notification.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.RestResponse" sourceFile="RestResponse.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SearchResults" sourceFile="SearchResults.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Sequence" sourceFile="Sequence.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SortField" sourceFile="SortField.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SortField$OrderFlow" sourceFile="SortField.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SortedProperties" sourceFile="SortedProperties.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SqlStatement" sourceFile="SqlStatement.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SyncEndpoint" sourceFile="SyncEndpoint.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SyncMessage" sourceFile="SyncMessage.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SyncMessage$Status" sourceFile="SyncMessage.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SyncResults" sourceFile="SyncResults.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SyncResults$Status" sourceFile="SyncResults.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.bean.SystemCodes" sourceFile="SystemCodes.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Tag" sourceFile="Tag.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Taggable" sourceFile="Taggable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Uploadable" sourceFile="Uploadable.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.bean.UrlResponseObject" sourceFile="UrlResponseObject.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.bean.UserWidgets" sourceFile="UserWidgets.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.opentides.bean.Widget" sourceFile="Widget.java" interface="false" size="215" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.bean.converter" total_bugs="0" total_types="6" total_size="117">
+      <ClassStats class="org.opentides.bean.converter.BaseEntityToLongConverter" sourceFile="BaseEntityToLongConverter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.bean.converter.BaseEntityToStringConverter" sourceFile="BaseEntityToStringConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.bean.converter.StringArrayToListOfTagsConverter" sourceFile="StringArrayToListOfTagsConverter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.opentides.bean.converter.StringToBaseEntityConverter" sourceFile="StringToBaseEntityConverter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.opentides.bean.converter.StringToDateConverter" sourceFile="StringToDateConverter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.opentides.bean.converter.StringToSystemCodesConverter" sourceFile="StringToSystemCodesConverter.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.bean.factory.support" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="org.opentides.bean.factory.support.BaseEntityRegistry" sourceFile="BaseEntityRegistry.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.bean.user" total_bugs="7" total_types="10" total_size="739" priority_2="6" priority_1="1">
+      <ClassStats class="org.opentides.bean.user.AccountType" sourceFile="AccountType.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.opentides.bean.user.AccountType$Period" sourceFile="AccountType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.bean.user.BaseUser" sourceFile="BaseUser.java" interface="false" size="240" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.bean.user.MultitenantUser" sourceFile="MultitenantUser.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.bean.user.PasswordReset" sourceFile="PasswordReset.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.opentides.bean.user.SessionUser" sourceFile="SessionUser.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.opentides.bean.user.Tenant" sourceFile="Tenant.java" interface="false" size="62" bugs="2" priority_2="2"/>
+      <ClassStats class="org.opentides.bean.user.UserAuthority" sourceFile="UserAuthority.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.bean.user.UserCredential" sourceFile="UserCredential.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.bean.user.UserGroup" sourceFile="UserGroup.java" interface="false" size="144" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.config" total_bugs="0" total_types="1" total_size="40">
+      <ClassStats class="org.opentides.config.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.context" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="org.opentides.context.ApplicationContextProvider" sourceFile="ApplicationContextProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.context.support" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="org.opentides.context.support.PatternResourceBundleMessageSource" sourceFile="PatternResourceBundleMessageSource.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.dao" total_bugs="0" total_types="19" total_size="92">
+      <ClassStats class="org.opentides.dao.AccountTypeDao" sourceFile="AccountTypeDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.dao.AuditLogDao" sourceFile="AuditLogDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.dao.BaseEntityDao" sourceFile="BaseEntityDao.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="org.opentides.dao.ChangeLogDao" sourceFile="ChangeLogDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.dao.CommentDao" sourceFile="CommentDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.dao.FileInfoDao" sourceFile="FileInfoDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.dao.ImageInfoDao" sourceFile="ImageInfoDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.dao.MultitenantUserDao" sourceFile="MultitenantUserDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.dao.NotificationDao" sourceFile="NotificationDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.dao.PasswordResetDao" sourceFile="PasswordResetDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.dao.SequenceDao" sourceFile="SequenceDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.dao.SyncEndpointDao" sourceFile="SyncEndpointDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.dao.SystemCodesDao" sourceFile="SystemCodesDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.dao.TagDao" sourceFile="TagDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.dao.TenantDao" sourceFile="TenantDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.dao.UserDao" sourceFile="UserDao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.opentides.dao.UserGroupDao" sourceFile="UserGroupDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.dao.UserWidgetsDao" sourceFile="UserWidgetsDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.dao.WidgetDao" sourceFile="WidgetDao.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.dao.impl" total_bugs="2" total_types="19" total_size="744" priority_2="2">
+      <ClassStats class="org.opentides.dao.impl.AccountTypeDaoJpaImpl" sourceFile="AccountTypeDaoJpaImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.AuditLogDaoImpl" sourceFile="AuditLogDaoImpl.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.BaseEntityDaoJpaImpl" sourceFile="BaseEntityDaoJpaImpl.java" interface="false" size="271" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.dao.impl.ChangeLogDaoJpaImpl" sourceFile="ChangeLogDaoJpaImpl.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.CommentDaoJpaImpl" sourceFile="CommentDaoJpaImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.FileInfoDaoJpaImpl" sourceFile="FileInfoDaoJpaImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.ImageInfoDaoJpaImpl" sourceFile="ImageInfoDaoJpaImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.MultitenantUserDaoJpaImpl" sourceFile="MultitenantUserDaoJpaImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.NotificationDaoImpl" sourceFile="NotificationDaoImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.PasswordResetDaoJpaImpl" sourceFile="PasswordResetDaoJpaImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.SequenceDaoJpaImpl" sourceFile="SequenceDaoJpaImpl.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.SyncEndpointDaoJpaImpl" sourceFile="SyncEndpointDaoJpaImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.SystemCodesDaoJpaImpl" sourceFile="SystemCodesDaoJpaImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.TagDaoJpaImpl" sourceFile="TagDaoJpaImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.TenantDaoJpaImpl" sourceFile="TenantDaoJpaImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.UserDaoJpaImpl" sourceFile="UserDaoJpaImpl.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.UserGroupDaoJpaImpl" sourceFile="UserGroupDaoJpaImpl.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.opentides.dao.impl.UserWidgetsDaoJpaImpl" sourceFile="UserWidgetsDaoJpaImpl.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.dao.impl.WidgetDaoJpaImpl" sourceFile="WidgetDaoJpaImpl.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.editor" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="org.opentides.editor.Normalizer" sourceFile="Normalizer.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.eventhandler" total_bugs="0" total_types="1" total_size="67">
+      <ClassStats class="org.opentides.eventhandler.EmailHandler" sourceFile="EmailHandler.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.exception" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="org.opentides.exception.CodeGenerationException" sourceFile="CodeGenerationException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.opentides.exception.DataAccessException" sourceFile="DataAccessException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.opentides.exception.InvalidImplementationException" sourceFile="InvalidImplementationException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.job" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="org.opentides.job.NotifyDevices" sourceFile="NotifyDevices.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.listener" total_bugs="0" total_types="4" total_size="79">
+      <ClassStats class="org.opentides.listener.ApplicationStartupListener" sourceFile="ApplicationStartupListener.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.opentides.listener.LoginListener" sourceFile="LoginListener.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.listener.LogoutListener" sourceFile="LogoutListener.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.listener.MultitenantLogoutListener" sourceFile="MultitenantLogoutListener.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.listener.command" total_bugs="0" total_types="3" total_size="37">
+      <ClassStats class="org.opentides.listener.command.DBEvolveCommand" sourceFile="DBEvolveCommand.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.listener.command.MTSchemaUpdateCommand" sourceFile="MTSchemaUpdateCommand.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.opentides.listener.command.StartupCommand" sourceFile="StartupCommand.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.evolve" total_bugs="1" total_types="6" total_size="190" priority_2="1">
+      <ClassStats class="org.opentides.persistence.evolve.AdminEvolve" sourceFile="AdminEvolve.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.evolve.BaseCSVEvolve" sourceFile="BaseCSVEvolve.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.evolve.DBEvolve" sourceFile="DBEvolve.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.evolve.DBEvolveManager" sourceFile="DBEvolveManager.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.evolve.Evolver" sourceFile="Evolver.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.persistence.evolve.VersionComparator" sourceFile="VersionComparator.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.hibernate" total_bugs="0" total_types="5" total_size="242">
+      <ClassStats class="org.opentides.persistence.hibernate.MultiTenantConnectionProviderImpl" sourceFile="MultiTenantConnectionProviderImpl.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.hibernate.MultiTenantDBEvolveManager" sourceFile="MultiTenantDBEvolveManager.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.hibernate.MultiTenantIdentifierResolver" sourceFile="MultiTenantIdentifierResolver.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.hibernate.MultiTenantSchemaUpdate" sourceFile="MultiTenantSchemaUpdate.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.hibernate.PersistenceScanner" sourceFile="PersistenceScanner.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.interceptor" total_bugs="0" total_types="2" total_size="324">
+      <ClassStats class="org.opentides.persistence.interceptor.AuditLogInterceptor" sourceFile="AuditLogInterceptor.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.interceptor.SynchronizableInterceptor" sourceFile="SynchronizableInterceptor.java" interface="false" size="228" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.jdbc" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="org.opentides.persistence.jdbc.MultitenantJdbcTemplate" sourceFile="MultitenantJdbcTemplate.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.listener" total_bugs="0" total_types="4" total_size="67">
+      <ClassStats class="org.opentides.persistence.listener.AuditLogListener" sourceFile="AuditLogListener.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.listener.EntityCreatedByListener" sourceFile="EntityCreatedByListener.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.listener.EntityDateListener" sourceFile="EntityDateListener.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.listener.EntitySchemaNameListener" sourceFile="EntitySchemaNameListener.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.persistence.user" total_bugs="0" total_types="2" total_size="95">
+      <ClassStats class="org.opentides.persistence.user.AuthenticationDaoJdbcImpl" sourceFile="AuthenticationDaoJdbcImpl.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.opentides.persistence.user.MultitenantAuthenticationDaoJdbcImpl" sourceFile="MultitenantAuthenticationDaoJdbcImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.processor" total_bugs="0" total_types="2" total_size="129">
+      <ClassStats class="org.opentides.processor.AttributeProcessor" sourceFile="AttributeProcessor.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.opentides.processor.ClassProcessor" sourceFile="ClassProcessor.java" interface="false" size="98" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.processor.param" total_bugs="0" total_types="6" total_size="90">
+      <ClassStats class="org.opentides.processor.param.CheckBoxParamReader" sourceFile="CheckBoxParamReader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.processor.param.ClassParamReader" sourceFile="ClassParamReader.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.opentides.processor.param.FieldParamReader" sourceFile="FieldParamReader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.processor.param.ParamContext" sourceFile="ParamContext.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.opentides.processor.param.ParamReader" sourceFile="ParamReader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.processor.param.ParamReaderFactory" sourceFile="ParamReaderFactory.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.rest.impl" total_bugs="0" total_types="2" total_size="190">
+      <ClassStats class="org.opentides.rest.impl.BaseCrudRestServiceImpl" sourceFile="BaseCrudRestServiceImpl.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="org.opentides.rest.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.service" total_bugs="0" total_types="19" total_size="149">
+      <ClassStats class="org.opentides.service.AccountTypeService" sourceFile="AccountTypeService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.service.AuditLogService" sourceFile="AuditLogService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.opentides.service.BaseCrudService" sourceFile="BaseCrudService.java" interface="true" size="39" bugs="0"/>
+      <ClassStats class="org.opentides.service.BaseService" sourceFile="BaseService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.service.ChangeLogService" sourceFile="ChangeLogService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.service.CommentService" sourceFile="CommentService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.service.FileInfoService" sourceFile="FileInfoService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.opentides.service.FileUploadService" sourceFile="FileUploadService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.service.ImageInfoService" sourceFile="ImageInfoService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.service.MailingService" sourceFile="MailingService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.service.MultitenantUserService" sourceFile="MultitenantUserService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.service.SyncEndpointService" sourceFile="SyncEndpointService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.service.SystemCodesService" sourceFile="SystemCodesService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.service.TagService" sourceFile="TagService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.service.TenantService" sourceFile="TenantService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.service.UserGroupService" sourceFile="UserGroupService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.opentides.service.UserService" sourceFile="UserService.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="org.opentides.service.UserWidgetsService" sourceFile="UserWidgetsService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.service.WidgetService" sourceFile="WidgetService.java" interface="true" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.service.impl" total_bugs="0" total_types="26" total_size="1315">
+      <ClassStats class="org.opentides.service.impl.AccountTypeServiceImpl" sourceFile="AccountTypeServiceImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.AuditLogServiceImpl" sourceFile="AuditLogServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.AuditLogServiceImpl$1" sourceFile="AuditLogServiceImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.AuditLogServiceImpl$CreateDateComparator" sourceFile="AuditLogServiceImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.BaseCrudServiceImpl" sourceFile="BaseCrudServiceImpl.java" interface="false" size="186" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.BaseServiceDefaultImpl" sourceFile="BaseServiceDefaultImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.ChangeLogServiceImpl" sourceFile="ChangeLogServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.DefaultFileUploadServiceImpl" sourceFile="DefaultFileUploadServiceImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.FileInfoServiceImpl" sourceFile="FileInfoServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.ImageInfoServiceImpl" sourceFile="ImageInfoServiceImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.MailingServiceImpl" sourceFile="MailingServiceImpl.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.MailingServiceImpl$1" sourceFile="MailingServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.MailingServiceImpl$2" sourceFile="MailingServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.MultitenantUserServiceImpl" sourceFile="MultitenantUserServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.NotificationService" sourceFile="NotificationService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.NotificationServiceImpl" sourceFile="NotificationServiceImpl.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.SyncEndpointServiceImpl" sourceFile="SyncEndpointServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.SystemCodesServiceImpl" sourceFile="SystemCodesServiceImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.TenantServiceImpl" sourceFile="TenantServiceImpl.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.UserGroupServiceImpl" sourceFile="UserGroupServiceImpl.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.UserGroupServiceImpl$ValueComparer" sourceFile="UserGroupServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="238" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.UserWidgetsServiceImpl" sourceFile="UserWidgetsServiceImpl.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="org.opentides.service.impl.WidgetServiceImpl" sourceFile="WidgetServiceImpl.java" interface="false" size="124" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.util" total_bugs="1" total_types="21" total_size="2394" priority_2="1">
+      <ClassStats class="org.opentides.util.AnnotationUtil" sourceFile="AnnotationUtil.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.opentides.util.CacheUtil" sourceFile="CacheUtil.java" interface="false" size="335" bugs="0"/>
+      <ClassStats class="org.opentides.util.CloningUtil" sourceFile="CloningUtil.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.opentides.util.CrudUtil" sourceFile="CrudUtil.java" interface="false" size="440" bugs="0"/>
+      <ClassStats class="org.opentides.util.DatabaseUtil" sourceFile="DatabaseUtil.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.opentides.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.opentides.util.EvolveUtil" sourceFile="EvolveUtil.java" interface="false" size="144" bugs="1" priority_2="1"/>
+      <ClassStats class="org.opentides.util.FileUtil" sourceFile="FileUtil.java" interface="false" size="202" bugs="0"/>
+      <ClassStats class="org.opentides.util.ImageUtil" sourceFile="ImageUtil.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="org.opentides.util.MTCacheUtil" sourceFile="MTCacheUtil.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.opentides.util.MultitenancyUtil" sourceFile="MultitenancyUtil.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.util.NamingUtil" sourceFile="NamingUtil.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="org.opentides.util.PackageUtil" sourceFile="PackageUtil.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.opentides.util.SecurityUtil" sourceFile="SecurityUtil.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.opentides.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="176" bugs="0"/>
+      <ClassStats class="org.opentides.util.SyncUtil" sourceFile="SyncUtil.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.opentides.util.TenantContextHolder" sourceFile="TenantContextHolder.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.opentides.util.UrlUtil" sourceFile="UrlUtil.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.opentides.util.ValidatorUtil" sourceFile="ValidatorUtil.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.opentides.util.WidgetUtil" sourceFile="WidgetUtil.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.opentides.util.XMLPersistenceUtil" sourceFile="XMLPersistenceUtil.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.util.image" total_bugs="0" total_types="3" total_size="170">
+      <ClassStats class="org.opentides.util.image.Image" sourceFile="Image.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="org.opentides.util.image.ImageLoader" sourceFile="ImageLoader.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.opentides.util.image.ImageType" sourceFile="ImageType.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="org.opentides.web.AlertingExceptionResolver" sourceFile="AlertingExceptionResolver.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.opentides.web.EventHandler" sourceFile="EventHandler.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.controller" total_bugs="0" total_types="28" total_size="1337">
+      <ClassStats class="org.opentides.web.controller.AccountTypeCrudController" sourceFile="AccountTypeCrudController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.AjaxRequestController" sourceFile="AjaxRequestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.AuditLogController" sourceFile="AuditLogController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.BaseCommentController" sourceFile="BaseCommentController.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.BaseCrudController" sourceFile="BaseCrudController.java" interface="false" size="256" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.BaseCrudController$1" sourceFile="BaseCrudController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.BaseCrudController$2" sourceFile="BaseCrudController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.BaseCrudController$3" sourceFile="BaseCrudController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.ChangePasswordController" sourceFile="ChangePasswordController.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.ConfirmPasswordResetController" sourceFile="ConfirmPasswordResetController.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.DBEvolveController" sourceFile="DBEvolveController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.FileController" sourceFile="FileController.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.HomeController" sourceFile="HomeController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.ImageController" sourceFile="ImageController.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.NotificationController" sourceFile="NotificationController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.NotifyHandler" sourceFile="NotifyHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.RequestPasswordController" sourceFile="RequestPasswordController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.SynchronizableController" sourceFile="SynchronizableController.java" interface="false" size="181" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.SystemCodesCrudController" sourceFile="SystemCodesCrudController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.SystemUtilController" sourceFile="SystemUtilController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.TenantCrudController" sourceFile="TenantCrudController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.TenantRegisterController" sourceFile="TenantRegisterController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.UserAccountSettingsController" sourceFile="UserAccountSettingsController.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.UserCrudController" sourceFile="UserCrudController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.UserGroupCrudController" sourceFile="UserGroupCrudController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.UserRegistrationController" sourceFile="UserRegistrationController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.WidgetController" sourceFile="WidgetController.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.opentides.web.controller.YourNotificationController" sourceFile="YourNotificationController.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.editor" total_bugs="0" total_types="2" total_size="51">
+      <ClassStats class="org.opentides.web.editor.AccountTypeEditor" sourceFile="AccountTypeEditor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.opentides.web.editor.BaseEntityEditor" sourceFile="BaseEntityEditor.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.json" total_bugs="0" total_types="12" total_size="122">
+      <ClassStats class="org.opentides.web.json.DataView" sourceFile="DataView.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.JsonViewSupportFactoryBean" sourceFile="JsonViewSupportFactoryBean.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.PojoView" sourceFile="PojoView.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.ResponseView" sourceFile="ResponseView.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.ViewAwareJsonMessageConverter" sourceFile="ViewAwareJsonMessageConverter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.ViewInjectingReturnValueHandler" sourceFile="ViewInjectingReturnValueHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views" sourceFile="Views.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views$BaseView" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views$DisplayView" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views$FormView" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views$FullView" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.opentides.web.json.Views$SearchView" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.json.mapper" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.opentides.web.json.mapper.HibernateAwareObjectMapper" sourceFile="HibernateAwareObjectMapper.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.json.serializer" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="org.opentides.web.json.serializer.TagsSerializer" sourceFile="TagsSerializer.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.processor" total_bugs="0" total_types="1" total_size="64">
+      <ClassStats class="org.opentides.web.processor.FormBindMethodProcessor" sourceFile="FormBindMethodProcessor.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.security" total_bugs="0" total_types="4" total_size="137">
+      <ClassStats class="org.opentides.web.security.MultitenantContextFilter" sourceFile="MultitenantContextFilter.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.opentides.web.security.MultitenantURLAuthenticationFailureHandler" sourceFile="MultitenantURLAuthenticationFailureHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.opentides.web.security.TenantContextFilter" sourceFile="TenantContextFilter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.opentides.web.security.TenantParameterLoginUrlAuthenticationEntryPoint" sourceFile="TenantParameterLoginUrlAuthenticationEntryPoint.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.opentides.web.validator" total_bugs="0" total_types="10" total_size="235">
+      <ClassStats class="org.opentides.web.validator.AccountTypeValidator" sourceFile="AccountTypeValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.ChangePasswordValidator" sourceFile="ChangePasswordValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.CommentValidator" sourceFile="CommentValidator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.ConfirmPasswordResetValidator" sourceFile="ConfirmPasswordResetValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.ImageValidator" sourceFile="ImageValidator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.SystemCodesValidator" sourceFile="SystemCodesValidator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.TenantValidator" sourceFile="TenantValidator.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.UserGroupValidator" sourceFile="UserGroupValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.UserValidator" sourceFile="UserValidator.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.opentides.web.validator.WidgetValidator" sourceFile="WidgetValidator.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1009" invocations="4286" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="47680" standardDeviationMicrosecondsPerInvocation="1249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="752" invocations="4322" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="30100" standardDeviationMicrosecondsPerInvocation="780"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="748" invocations="4390" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="32637" standardDeviationMicrosecondsPerInvocation="783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="715" invocations="4320" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="31694" standardDeviationMicrosecondsPerInvocation="757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="581" invocations="4379" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="12657" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="547" invocations="2478" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="19453" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="394" invocations="4323" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="17817" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="379" invocations="2217" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="6811" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="346" invocations="5369" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="4006" standardDeviationMicrosecondsPerInvocation="166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="288" invocations="860" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="9567" standardDeviationMicrosecondsPerInvocation="820"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="286" invocations="860" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="12625" standardDeviationMicrosecondsPerInvocation="783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="269" invocations="860" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="132827" standardDeviationMicrosecondsPerInvocation="4718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="218" invocations="4322" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="12765" standardDeviationMicrosecondsPerInvocation="248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="157" invocations="2497" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="904" standardDeviationMicrosecondsPerInvocation="46"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="152" invocations="604" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="3082" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="151" invocations="4662" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="28793" standardDeviationMicrosecondsPerInvocation="437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="146" invocations="604" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="23473" standardDeviationMicrosecondsPerInvocation="1040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="142" invocations="604" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="4256" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="134" invocations="4262" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="16345" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="129" invocations="604" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="3773" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="126" invocations="604" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="2123" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="125" invocations="89116" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="834" standardDeviationMicrosecondsPerInvocation="6"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="108" invocations="4286" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="1125" standardDeviationMicrosecondsPerInvocation="60"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="103" invocations="1166" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="13845" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="93" invocations="604" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="10357" standardDeviationMicrosecondsPerInvocation="809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="83" invocations="860" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="23193" standardDeviationMicrosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="81" invocations="604" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="3317" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="79" invocations="4662" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="9936" standardDeviationMicrosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="79" invocations="860" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="1773" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="79" invocations="604" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="1569" standardDeviationMicrosecondsPerInvocation="202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="77" invocations="604" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="1471" standardDeviationMicrosecondsPerInvocation="186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="77" invocations="860" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="1929" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="73" invocations="604" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="3409" standardDeviationMicrosecondsPerInvocation="210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="69" invocations="2106" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="2261" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="68" invocations="604" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="2264" standardDeviationMicrosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="67" invocations="604" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="2295" standardDeviationMicrosecondsPerInvocation="175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="66" invocations="604" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1135" standardDeviationMicrosecondsPerInvocation="151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="66" invocations="604" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="2296" standardDeviationMicrosecondsPerInvocation="165"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596953741000" analysisTimestamp="1596953742939" release="">
+  <Project projectName="repositorios/ikismail_ShoppingCart">
+    <Jar>repositorios/ikismail_ShoppingCart</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.dao.CustomerDaoImpl">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="17" end="66" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Class>
+    <Method classname="com.dao.CustomerDaoImpl" name="getAllCustomers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="54" end="57" startBytecode="0" endBytecode="113" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.dao.CustomerDaoImpl" start="55" end="55" startBytecode="11" endBytecode="11" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    <String value="Method: getAllCustomers. Fields with EAGER without Join Fetch: shippingAddress, billingAddress, users, cart, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.dao.CustomerDaoImpl">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="17" end="66" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Class>
+    <Method classname="com.dao.CustomerDaoImpl" name="getCustomerByemailId" signature="(Ljava/lang/String;)Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="61" end="66" startBytecode="0" endBytecode="160" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.dao.CustomerDaoImpl" start="62" end="62" startBytecode="11" endBytecode="11" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    <String value="Method: getCustomerByemailId. Fields with EAGER without Join Fetch: shippingAddress, billingAddress, users, cart, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.dao.CustomerDaoImpl">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="17" end="66" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Class>
+    <Method classname="com.dao.CustomerDaoImpl" name="getAllCustomers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="54" end="57" startBytecode="0" endBytecode="113" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.dao.CustomerDaoImpl" start="55" end="55" startBytecode="11" endBytecode="11" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.dao.CustomerDaoImpl">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="17" end="66" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Class>
+    <Method classname="com.dao.CustomerDaoImpl" name="getCustomerByemailId" signature="(Ljava/lang/String;)Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.dao.CustomerDaoImpl" start="61" end="66" startBytecode="0" endBytecode="160" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.dao.CustomerDaoImpl" start="62" end="62" startBytecode="11" endBytecode="11" sourcefile="CustomerDaoImpl.java" sourcepath="com/dao/CustomerDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.BillingAddress">
+      <SourceLine classname="com.model.BillingAddress" start="14" end="84" sourcefile="BillingAddress.java" sourcepath="com/model/BillingAddress.java"/>
+    </Class>
+    <Field classname="com.model.BillingAddress" name="customer" signature="Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.model.BillingAddress" sourcefile="BillingAddress.java" sourcepath="com/model/BillingAddress.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Cart">
+      <SourceLine classname="com.model.Cart" start="21" end="69" sourcefile="Cart.java" sourcepath="com/model/Cart.java"/>
+    </Class>
+    <Field classname="com.model.Cart" name="cartItem" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.model.Cart" sourcefile="Cart.java" sourcepath="com/model/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Cart">
+      <SourceLine classname="com.model.Cart" start="21" end="69" sourcefile="Cart.java" sourcepath="com/model/Cart.java"/>
+    </Class>
+    <Field classname="com.model.Cart" name="customer" signature="Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.model.Cart" sourcefile="Cart.java" sourcepath="com/model/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CartItem">
+      <SourceLine classname="com.model.CartItem" start="17" end="76" sourcefile="CartItem.java" sourcepath="com/model/CartItem.java"/>
+    </Class>
+    <Field classname="com.model.CartItem" name="cart" signature="Lcom/model/Cart;" isStatic="false">
+      <SourceLine classname="com.model.CartItem" sourcefile="CartItem.java" sourcepath="com/model/CartItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CartItem">
+      <SourceLine classname="com.model.CartItem" start="17" end="76" sourcefile="CartItem.java" sourcepath="com/model/CartItem.java"/>
+    </Class>
+    <Field classname="com.model.CartItem" name="product" signature="Lcom/model/Product;" isStatic="false">
+      <SourceLine classname="com.model.CartItem" sourcefile="CartItem.java" sourcepath="com/model/CartItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Customer">
+      <SourceLine classname="com.model.Customer" start="19" end="109" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Class>
+    <Field classname="com.model.Customer" name="billingAddress" signature="Lcom/model/BillingAddress;" isStatic="false">
+      <SourceLine classname="com.model.Customer" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Customer">
+      <SourceLine classname="com.model.Customer" start="19" end="109" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Class>
+    <Field classname="com.model.Customer" name="cart" signature="Lcom/model/Cart;" isStatic="false">
+      <SourceLine classname="com.model.Customer" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Customer">
+      <SourceLine classname="com.model.Customer" start="19" end="109" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Class>
+    <Field classname="com.model.Customer" name="shippingAddress" signature="Lcom/model/ShippingAddress;" isStatic="false">
+      <SourceLine classname="com.model.Customer" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.Customer">
+      <SourceLine classname="com.model.Customer" start="19" end="109" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Class>
+    <Field classname="com.model.Customer" name="users" signature="Lcom/model/User;" isStatic="false">
+      <SourceLine classname="com.model.Customer" sourcefile="Customer.java" sourcepath="com/model/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CustomerOrder">
+      <SourceLine classname="com.model.CustomerOrder" start="15" end="77" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Class>
+    <Field classname="com.model.CustomerOrder" name="billingAddress" signature="Lcom/model/BillingAddress;" isStatic="false">
+      <SourceLine classname="com.model.CustomerOrder" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CustomerOrder">
+      <SourceLine classname="com.model.CustomerOrder" start="15" end="77" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Class>
+    <Field classname="com.model.CustomerOrder" name="cart" signature="Lcom/model/Cart;" isStatic="false">
+      <SourceLine classname="com.model.CustomerOrder" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CustomerOrder">
+      <SourceLine classname="com.model.CustomerOrder" start="15" end="77" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Class>
+    <Field classname="com.model.CustomerOrder" name="customer" signature="Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.model.CustomerOrder" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.CustomerOrder">
+      <SourceLine classname="com.model.CustomerOrder" start="15" end="77" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Class>
+    <Field classname="com.model.CustomerOrder" name="shippingAddress" signature="Lcom/model/ShippingAddress;" isStatic="false">
+      <SourceLine classname="com.model.CustomerOrder" sourcefile="CustomerOrder.java" sourcepath="com/model/CustomerOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.ShippingAddress">
+      <SourceLine classname="com.model.ShippingAddress" start="14" end="85" sourcefile="ShippingAddress.java" sourcepath="com/model/ShippingAddress.java"/>
+    </Class>
+    <Field classname="com.model.ShippingAddress" name="customer" signature="Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.model.ShippingAddress" sourcefile="ShippingAddress.java" sourcepath="com/model/ShippingAddress.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.model.User">
+      <SourceLine classname="com.model.User" start="14" end="65" sourcefile="User.java" sourcepath="com/model/User.java"/>
+    </Class>
+    <Field classname="com.model.User" name="customer" signature="Lcom/model/Customer;" isStatic="false">
+      <SourceLine classname="com.model.User" sourcefile="User.java" sourcepath="com/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.commons.CommonsMultipartResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 06:15:41 +0000" total_classes="44" referenced_classes="66" total_bugs="19" total_size="923" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.20" clock_seconds="1.78" peak_mbytes="190.45" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="18" priority_1="1">
+    <PackageStats package="com.controller" total_bugs="0" total_types="6" total_size="202">
+      <ClassStats class="com.controller.CartController" sourceFile="CartController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.controller.CartItemController" sourceFile="CartItemController.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.controller.HomeController" sourceFile="HomeController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.controller.OrderController" sourceFile="OrderController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.controller.ProductController" sourceFile="ProductController.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.controller.UserController" sourceFile="UserController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dao" total_bugs="4" total_types="14" total_size="210" priority_2="4">
+      <ClassStats class="com.dao.CartDao" sourceFile="CartDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.dao.CartDaoImpl" sourceFile="CartDaoImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.dao.CartItemDao" sourceFile="CartItemDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.dao.CartItemDaoImpl" sourceFile="CartItemDaoImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.dao.CustomerDao" sourceFile="CustomerDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.dao.CustomerDaoImpl" sourceFile="CustomerDaoImpl.java" interface="false" size="35" bugs="4" priority_2="4"/>
+      <ClassStats class="com.dao.CustomerOrderDao" sourceFile="CustomerOrderDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dao.CustomerOrderDaoImpl" sourceFile="CustomerOrderDaoImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dao.ProductDao" sourceFile="ProductDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.dao.ProductDaoImpl" sourceFile="ProductDaoImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.dao.QueriesDao" sourceFile="QueriesDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dao.QueriesDaoImpl" sourceFile="QueriesDaoImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.dao.UserDao" sourceFile="UserDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.dao.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.model" total_bugs="15" total_types="10" total_size="386" priority_2="14" priority_1="1">
+      <ClassStats class="com.model.Authorities" sourceFile="Authorities.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.model.BillingAddress" sourceFile="BillingAddress.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="com.model.Cart" sourceFile="Cart.java" interface="false" size="28" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.model.CartItem" sourceFile="CartItem.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="com.model.Customer" sourceFile="Customer.java" interface="false" size="52" bugs="4" priority_2="4"/>
+      <ClassStats class="com.model.CustomerOrder" sourceFile="CustomerOrder.java" interface="false" size="34" bugs="4" priority_2="4"/>
+      <ClassStats class="com.model.Product" sourceFile="Product.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.model.Queries" sourceFile="Queries.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.model.ShippingAddress" sourceFile="ShippingAddress.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="com.model.User" sourceFile="User.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.service" total_bugs="0" total_types="14" total_size="125">
+      <ClassStats class="com.service.CartItemService" sourceFile="CartItemService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.service.CartItemServiceImpl" sourceFile="CartItemServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.service.CartService" sourceFile="CartService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.service.CartServiceImpl" sourceFile="CartServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.service.CustomerOrderService" sourceFile="CustomerOrderService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.service.CustomerOrderServiceImpl" sourceFile="CustomerOrderServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.service.CustomerService" sourceFile="CustomerService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.service.CustomerServiceImpl" sourceFile="CustomerServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.service.ProductService" sourceFile="ProductService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.service.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.service.QueriesService" sourceFile="QueriesService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.service.QueriesServiceImpl" sourceFile="QueriesServiceImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.service.UserService" sourceFile="UserService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="162" invocations="510" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="10586" standardDeviationMicrosecondsPerInvocation="730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="60" invocations="237" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="12304" standardDeviationMicrosecondsPerInvocation="1121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="57" invocations="66" avgMicrosecondsPerInvocation="865" maxMicrosecondsPerInvocation="13161" standardDeviationMicrosecondsPerInvocation="2184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="52" invocations="432" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="21577" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="46" invocations="236" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="4935" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="46" invocations="515" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2904" standardDeviationMicrosecondsPerInvocation="133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="44" invocations="237" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="9073" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="66" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="7052" standardDeviationMicrosecondsPerInvocation="1375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="39" invocations="236" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2209" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="236" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="9647" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="236" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="4223" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="38" invocations="275" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="23019" standardDeviationMicrosecondsPerInvocation="1383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="316" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="3317" standardDeviationMicrosecondsPerInvocation="271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="109" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="14222" standardDeviationMicrosecondsPerInvocation="1384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="66" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="7921" standardDeviationMicrosecondsPerInvocation="1047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="44" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="9083" standardDeviationMicrosecondsPerInvocation="1375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="66" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="4472" standardDeviationMicrosecondsPerInvocation="868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="20" invocations="44" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="7731" standardDeviationMicrosecondsPerInvocation="1369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="66" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="7848" standardDeviationMicrosecondsPerInvocation="997"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="44" avgMicrosecondsPerInvocation="391" maxMicrosecondsPerInvocation="5762" standardDeviationMicrosecondsPerInvocation="854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="66" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="2450" standardDeviationMicrosecondsPerInvocation="426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="16" invocations="91" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="2259" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="66" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="5299" standardDeviationMicrosecondsPerInvocation="712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="15" invocations="44" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="13595" standardDeviationMicrosecondsPerInvocation="2018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="15" invocations="1844" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="1065" standardDeviationMicrosecondsPerInvocation="36"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="14" invocations="44" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="8454" standardDeviationMicrosecondsPerInvocation="1273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="66" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="3153" standardDeviationMicrosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="44" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="5571" standardDeviationMicrosecondsPerInvocation="833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="236" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="1646" standardDeviationMicrosecondsPerInvocation="141"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114570000" analysisTimestamp="1597114572027" release="">
+  <Project projectName="repositorios/szhyde_springnext-manager">
+    <Jar>repositorios/szhyde_springnext-manager</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.entity.Group">
+      <SourceLine classname="org.springnext.manager.base.entity.Group" start="25" end="116" sourcefile="Group.java" sourcepath="org/springnext/manager/base/entity/Group.java"/>
+    </Class>
+    <Field classname="org.springnext.manager.base.entity.Group" name="parent" signature="Lorg/springnext/manager/base/entity/Group;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.entity.Group" sourcefile="Group.java" sourcepath="org/springnext/manager/base/entity/Group.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.entity.Permissions">
+      <SourceLine classname="org.springnext.manager.base.entity.Permissions" start="28" end="112" sourcefile="Permissions.java" sourcepath="org/springnext/manager/base/entity/Permissions.java"/>
+    </Class>
+    <Field classname="org.springnext.manager.base.entity.Permissions" name="parent" signature="Lorg/springnext/manager/base/entity/Permissions;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.entity.Permissions" sourcefile="Permissions.java" sourcepath="org/springnext/manager/base/entity/Permissions.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.entity.Resources">
+      <SourceLine classname="org.springnext.manager.base.entity.Resources" start="20" end="74" sourcefile="Resources.java" sourcepath="org/springnext/manager/base/entity/Resources.java"/>
+    </Class>
+    <Field classname="org.springnext.manager.base.entity.Resources" name="permissions" signature="Lorg/springnext/manager/base/entity/Permissions;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.entity.Resources" sourcefile="Resources.java" sourcepath="org/springnext/manager/base/entity/Resources.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.entity.User">
+      <SourceLine classname="org.springnext.manager.base.entity.User" start="23" end="129" sourcefile="User.java" sourcepath="org/springnext/manager/base/entity/User.java"/>
+    </Class>
+    <Field classname="org.springnext.manager.base.entity.User" name="group" signature="Lorg/springnext/manager/base/entity/Group;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.entity.User" sourcefile="User.java" sourcepath="org/springnext/manager/base/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.entity.User">
+      <SourceLine classname="org.springnext.manager.base.entity.User" start="23" end="129" sourcefile="User.java" sourcepath="org/springnext/manager/base/entity/User.java"/>
+    </Class>
+    <Field classname="org.springnext.manager.base.entity.User" name="role" signature="Lorg/springnext/manager/base/entity/Role;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.entity.User" sourcefile="User.java" sourcepath="org/springnext/manager/base/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.repository.jpa.BaseDao">
+      <SourceLine classname="org.springnext.manager.base.repository.jpa.BaseDao" sourcefile="BaseDao.java" sourcepath="org/springnext/manager/base/repository/jpa/BaseDao.java"/>
+    </Class>
+    <Method classname="org.springnext.manager.base.repository.jpa.BaseDao" name="deleteAllByTids" signature="([Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.repository.jpa.BaseDao" sourcefile="BaseDao.java" sourcepath="org/springnext/manager/base/repository/jpa/BaseDao.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springnext.manager.base.repository.jpa.GroupDao">
+      <SourceLine classname="org.springnext.manager.base.repository.jpa.GroupDao" sourcefile="GroupDao.java" sourcepath="org/springnext/manager/base/repository/jpa/GroupDao.java"/>
+    </Class>
+    <Method classname="org.springnext.manager.base.repository.jpa.GroupDao" name="getParentGroup" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springnext.manager.base.repository.jpa.GroupDao" sourcefile="GroupDao.java" sourcepath="org/springnext/manager/base/repository/jpa/GroupDao.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="83">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.google.code.kaptcha.impl.DefaultKaptcha</MissingClass>
+    <MissingClass>com.google.code.kaptcha.util.Config</MissingClass>
+    <MissingClass>com.google.common.base.Charsets</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.ListJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.persistence.metamodel.EntityType</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>net.sf.ehcache.Ehcache</MissingClass>
+    <MissingClass>net.sf.ehcache.Element</MissingClass>
+    <MissingClass>org.apache.catalina.util.URLEncoder</MissingClass>
+    <MissingClass>org.apache.commons.collections.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections.MapUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.dozer.DozerBeanMapper</MissingClass>
+    <MissingClass>org.dozer.Mapper</MissingClass>
+    <MissingClass>org.hibernate.service.spi.ServiceException</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheCacheManager</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDecisionManager</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.access.ConfigAttribute</MissingClass>
+    <MissingClass>org.springframework.security.access.SecurityConfig</MissingClass>
+    <MissingClass>org.springframework.security.access.intercept.AbstractSecurityInterceptor</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.factory.PasswordEncoderFactories</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.FilterInvocation</MissingClass>
+    <MissingClass>org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:56:10 +0000" total_classes="57" referenced_classes="131" total_bugs="7" total_size="1546" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.66" clock_seconds="2.66" peak_mbytes="202.13" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="7">
+    <PackageStats package="org.springnext.manager" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.springnext.manager.BootApplication" sourceFile="BootApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.annotation" total_bugs="0" total_types="2" total_size="61">
+      <ClassStats class="org.springnext.manager.base.annotation.PermissionsAnnotation" sourceFile="PermissionsAnnotation.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.annotation.PermissionsScannerProcessor" sourceFile="PermissionsScannerProcessor.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.config" total_bugs="0" total_types="3" total_size="74">
+      <ClassStats class="org.springnext.manager.base.config.EhcacheConfig" sourceFile="EhcacheConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.config.KaptchaConfig" sourceFile="KaptchaConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.config.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.controller" total_bugs="0" total_types="5" total_size="240">
+      <ClassStats class="org.springnext.manager.base.controller.DictionaryController" sourceFile="DictionaryController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.controller.GroupController" sourceFile="GroupController.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.controller.MainController" sourceFile="MainController.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.controller.RoleController" sourceFile="RoleController.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.controller.UserController" sourceFile="UserController.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.dto" total_bugs="0" total_types="5" total_size="206">
+      <ClassStats class="org.springnext.manager.base.dto.BaseDTO" sourceFile="BaseDTO.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.dto.PermissionsDTO" sourceFile="PermissionsDTO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.dto.RoleDTO" sourceFile="RoleDTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.dto.SecurityUser" sourceFile="SecurityUser.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.entity" total_bugs="5" total_types="7" total_size="238" priority_2="5">
+      <ClassStats class="org.springnext.manager.base.entity.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.entity.Dictionary" sourceFile="Dictionary.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.entity.Group" sourceFile="Group.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springnext.manager.base.entity.Permissions" sourceFile="Permissions.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springnext.manager.base.entity.Resources" sourceFile="Resources.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springnext.manager.base.entity.Role" sourceFile="Role.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.entity.User" sourceFile="User.java" interface="false" size="52" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.persistence" total_bugs="0" total_types="5" total_size="84">
+      <ClassStats class="org.springnext.manager.base.persistence.DynamicSpecifications" sourceFile="DynamicSpecifications.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.persistence.DynamicSpecifications$1" sourceFile="DynamicSpecifications.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.persistence.DynamicSpecifications$2" sourceFile="DynamicSpecifications.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.persistence.SearchFilter" sourceFile="SearchFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.persistence.SearchFilter$Operator" sourceFile="SearchFilter.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.repository.jpa" total_bugs="2" total_types="7" total_size="11" priority_2="2">
+      <ClassStats class="org.springnext.manager.base.repository.jpa.BaseDao" sourceFile="BaseDao.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.DictionaryDao" sourceFile="DictionaryDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.GroupDao" sourceFile="GroupDao.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.PermissionsDao" sourceFile="PermissionsDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.ResourcesDao" sourceFile="ResourcesDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.RoleDao" sourceFile="RoleDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.repository.jpa.UserDao" sourceFile="UserDao.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.security" total_bugs="0" total_types="6" total_size="101">
+      <ClassStats class="org.springnext.manager.base.security.SecurityMessageSource" sourceFile="SecurityMessageSource.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.security.SpringNextAccessDecisionManager" sourceFile="SpringNextAccessDecisionManager.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.security.SpringNextFilterSecurityInterceptor" sourceFile="SpringNextFilterSecurityInterceptor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.security.SpringNextInvocationSecurityMetadataSourceService" sourceFile="SpringNextInvocationSecurityMetadataSourceService.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.security.ValidateCodeException" sourceFile="ValidateCodeException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.security.ValidateCodeFilter" sourceFile="ValidateCodeFilter.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.service" total_bugs="0" total_types="11" total_size="232">
+      <ClassStats class="org.springnext.manager.base.service.BaseService" sourceFile="BaseService.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.BusinessLogger" sourceFile="BusinessLogger.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.CustomUserDetailsService" sourceFile="CustomUserDetailsService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.CustomUserDetailsService$1" sourceFile="CustomUserDetailsService.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.DictionaryService" sourceFile="DictionaryService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.GroupService" sourceFile="GroupService.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.PermissionsService" sourceFile="PermissionsService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.ResourcesService" sourceFile="ResourcesService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.RoleService" sourceFile="RoleService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.UninitializedRepositoryException" sourceFile="UninitializedRepositoryException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.service.UserService" sourceFile="UserService.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.utils" total_bugs="0" total_types="1" total_size="142">
+      <ClassStats class="org.springnext.manager.base.utils.Servlets" sourceFile="Servlets.java" interface="false" size="142" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springnext.manager.base.vo" total_bugs="0" total_types="4" total_size="151">
+      <ClassStats class="org.springnext.manager.base.vo.AjaxMessage" sourceFile="AjaxMessage.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.vo.LayTableRequestVO" sourceFile="LayTableRequestVO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.vo.LayTableResponseVO" sourceFile="LayTableResponseVO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.springnext.manager.base.vo.LayTreeVO" sourceFile="LayTreeVO.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="248" invocations="931" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="18671" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="106" invocations="337" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="12946" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="98" invocations="337" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="11328" standardDeviationMicrosecondsPerInvocation="977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="88" invocations="337" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="8448" standardDeviationMicrosecondsPerInvocation="773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="87" invocations="131" avgMicrosecondsPerInvocation="665" maxMicrosecondsPerInvocation="7056" standardDeviationMicrosecondsPerInvocation="1382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="83" invocations="336" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="5852" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="78" invocations="615" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="3419" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="77" invocations="337" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="9349" standardDeviationMicrosecondsPerInvocation="795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="70" invocations="942" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="3100" standardDeviationMicrosecondsPerInvocation="109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="68" invocations="131" avgMicrosecondsPerInvocation="523" maxMicrosecondsPerInvocation="5988" standardDeviationMicrosecondsPerInvocation="998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="65" invocations="337" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="9653" standardDeviationMicrosecondsPerInvocation="569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="51" invocations="739" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="14401" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="51" invocations="173" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4513" standardDeviationMicrosecondsPerInvocation="591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="48" invocations="347" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="25590" standardDeviationMicrosecondsPerInvocation="1370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="43" invocations="234" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="14353" standardDeviationMicrosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="131" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="3282" standardDeviationMicrosecondsPerInvocation="508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="27" invocations="131" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="2118" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="26" invocations="4428" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1369" standardDeviationMicrosecondsPerInvocation="31"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="26" invocations="57" avgMicrosecondsPerInvocation="463" maxMicrosecondsPerInvocation="12953" standardDeviationMicrosecondsPerInvocation="1693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="23" invocations="337" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="2240" standardDeviationMicrosecondsPerInvocation="193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="57" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="11912" standardDeviationMicrosecondsPerInvocation="1550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="131" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="7142" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="131" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="3787" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="131" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="2042" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="57" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="2798" standardDeviationMicrosecondsPerInvocation="439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="19" invocations="131" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="4807" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="19" invocations="57" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="3731" standardDeviationMicrosecondsPerInvocation="511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="57" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="5425" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="57" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="2419" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="15" invocations="336" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="1335" standardDeviationMicrosecondsPerInvocation="135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="57" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="4853" standardDeviationMicrosecondsPerInvocation="643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="57" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="3854" standardDeviationMicrosecondsPerInvocation="520"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

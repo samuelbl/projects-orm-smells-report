@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595981186000" analysisTimestamp="1595981188024" release="">
+  <Project projectName="repositorios/kingschan1204_jblog">
+    <Jar>repositorios/kingschan1204_jblog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.kingschan.blog.dao.HibernateBaseDao">
+      <SourceLine classname="com.kingschan.blog.dao.HibernateBaseDao" start="38" end="667" sourcefile="HibernateBaseDao.java" sourcepath="com/kingschan/blog/dao/HibernateBaseDao.java"/>
+    </Class>
+    <Method classname="com.kingschan.blog.dao.HibernateBaseDao" name="getRowCountHql" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.kingschan.blog.dao.HibernateBaseDao" start="467" end="477" startBytecode="0" endBytecode="229" sourcefile="HibernateBaseDao.java" sourcepath="com/kingschan/blog/dao/HibernateBaseDao.java"/>
+    </Method>
+    <SourceLine classname="com.kingschan.blog.dao.HibernateBaseDao" start="467" end="467" startBytecode="4" endBytecode="4" sourcefile="HibernateBaseDao.java" sourcepath="com/kingschan/blog/dao/HibernateBaseDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.kingschan.blog.services.impl.ArticleServiceImpl">
+      <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="55" end="547" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+    </Class>
+    <Method classname="com.kingschan.blog.services.impl.ArticleServiceImpl" name="buildIndex" signature="()V" isStatic="false">
+      <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="259" end="268" startBytecode="0" endBytecode="225" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="262" end="262" startBytecode="14" endBytecode="14" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.kingschan.blog.services.impl.ArticleServiceImpl">
+      <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="55" end="547" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+    </Class>
+    <Method classname="com.kingschan.blog.services.impl.ArticleServiceImpl" name="getCommentsByArticle" signature="(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/kingschan/blog/dao/Pagination;" isStatic="false">
+      <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="416" end="465" startBytecode="0" endBytecode="1227" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.kingschan.blog.services.impl.ArticleServiceImpl" start="446" end="446" startBytecode="333" endBytecode="333" sourcefile="ArticleServiceImpl.java" sourcepath="com/kingschan/blog/services/impl/ArticleServiceImpl.java"/>
+  </BugInstance>
+  <Errors errors="2" missingClasses="136">
+    <Error>
+      <ErrorMessage>Exception analyzing com.kingschan.blog.po.Article using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:47)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.kingschan.blog.po.Article using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:41)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.uuid.EthernetAddress</MissingClass>
+    <MissingClass>com.fasterxml.uuid.Generators</MissingClass>
+    <MissingClass>com.fasterxml.uuid.impl.TimeBasedGenerator</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.color.SingleColorFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.custom.ConfigurableCaptchaService</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.filter.predefined.CurvesRippleFilterFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.filter.predefined.DiffuseRippleFilterFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.filter.predefined.DoubleRippleFilterFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.filter.predefined.MarbleRippleFilterFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.filter.predefined.WobbleRippleFilterFactory</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.utils.encoder.EncoderHelper</MissingClass>
+    <MissingClass>com.github.bingoohuang.patchca.word.RandomWordFactory</MissingClass>
+    <MissingClass>com.hankcs.lucene.HanLPIndexAnalyzer</MissingClass>
+    <MissingClass>com.qiniu.common.QiniuException</MissingClass>
+    <MissingClass>com.qiniu.common.Zone</MissingClass>
+    <MissingClass>com.qiniu.http.Response</MissingClass>
+    <MissingClass>com.qiniu.storage.BucketManager</MissingClass>
+    <MissingClass>com.qiniu.storage.Configuration</MissingClass>
+    <MissingClass>com.qiniu.storage.UploadManager</MissingClass>
+    <MissingClass>com.qiniu.util.Auth</MissingClass>
+    <MissingClass>eu.bitwalker.useragentutils.Browser</MissingClass>
+    <MissingClass>eu.bitwalker.useragentutils.DeviceType</MissingClass>
+    <MissingClass>eu.bitwalker.useragentutils.OperatingSystem</MissingClass>
+    <MissingClass>eu.bitwalker.useragentutils.UserAgent</MissingClass>
+    <MissingClass>freemarker.cache.TemplateLoader</MissingClass>
+    <MissingClass>freemarker.core.Environment</MissingClass>
+    <MissingClass>freemarker.template.Configuration</MissingClass>
+    <MissingClass>freemarker.template.DefaultObjectWrapper</MissingClass>
+    <MissingClass>freemarker.template.ObjectWrapper</MissingClass>
+    <MissingClass>freemarker.template.Template</MissingClass>
+    <MissingClass>freemarker.template.TemplateDirectiveBody</MissingClass>
+    <MissingClass>freemarker.template.TemplateDirectiveModel</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionListener</MissingClass>
+    <MissingClass>net.sf.ehcache.Cache</MissingClass>
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>net.sf.ehcache.Element</MissingClass>
+    <MissingClass>net.sf.json.JSONArray</MissingClass>
+    <MissingClass>net.sf.json.JSONObject</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileItemIterator</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.FileItemStream</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.disk.DiskFileItemFactory</MissingClass>
+    <MissingClass>org.apache.commons.fileupload.servlet.ServletFileUpload</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.DefaultHttpMethodRetryHandler</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.Header</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HostConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpState</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.MultiThreadedHttpConnectionManager</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.UsernamePasswordCredentials</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.auth.AuthScope</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.DeleteMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.PostMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.multipart.FilePart</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.multipart.PartBase</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.multipart.StringPart</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HostParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpConnectionManagerParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpConnectionParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpMethodParams</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.protocol.Protocol</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.protocol.ProtocolSocketFactory</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.Highlighter</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.QueryScorer</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.SimpleFragmenter</MissingClass>
+    <MissingClass>org.apache.lucene.search.highlight.SimpleHTMLFormatter</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.dom4j.Attribute</MissingClass>
+    <MissingClass>org.dom4j.Document</MissingClass>
+    <MissingClass>org.dom4j.DocumentException</MissingClass>
+    <MissingClass>org.dom4j.DocumentHelper</MissingClass>
+    <MissingClass>org.dom4j.Element</MissingClass>
+    <MissingClass>org.dom4j.Node</MissingClass>
+    <MissingClass>org.dom4j.io.OutputFormat</MissingClass>
+    <MissingClass>org.dom4j.io.SAXReader</MissingClass>
+    <MissingClass>org.dom4j.io.XMLWriter</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.metadata.ClassMetadata</MissingClass>
+    <MissingClass>org.hibernate.search.FullTextQuery</MissingClass>
+    <MissingClass>org.hibernate.search.FullTextSession</MissingClass>
+    <MissingClass>org.hibernate.search.Search</MissingClass>
+    <MissingClass>org.hibernate.search.SearchFactory</MissingClass>
+    <MissingClass>org.hibernate.search.bridge.StringBridge</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.BooleanJunction</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.EntityContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.MustJunction</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.QueryBuilder</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.QueryContextBuilder</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermMatchingContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermTermination</MissingClass>
+    <MissingClass>org.hibernate.transform.Transformers</MissingClass>
+    <MissingClass>org.hibernate.type.Type</MissingClass>
+    <MissingClass>org.json.JSONArray</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+    <MissingClass>org.jsoup.Jsoup</MissingClass>
+    <MissingClass>org.jsoup.nodes.Document</MissingClass>
+    <MissingClass>org.jsoup.nodes.Element</MissingClass>
+    <MissingClass>org.jsoup.safety.Whitelist</MissingClass>
+    <MissingClass>org.jsoup.select.Elements</MissingClass>
+    <MissingClass>org.pegdown.PegDownProcessor</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheCacheManager</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.web.HttpRequestHandler</MissingClass>
+    <MissingClass>org.springframework.web.context.ContextLoader</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartHttpServletRequest</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 00:06:26 +0000" total_classes="266" referenced_classes="485" total_bugs="3" total_size="15001" num_packages="49" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="34.10" clock_seconds="11.26" peak_mbytes="603.12" alloc_mbytes="3540.00" gc_seconds="0.43" priority_2="3">
+    <PackageStats package="com.baidu.ueditor" total_bugs="0" total_types="4" total_size="263">
+      <ClassStats class="com.baidu.ueditor.ActionEnter" sourceFile="ActionEnter.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.ConfigManager" sourceFile="ConfigManager.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.Encoder" sourceFile="Encoder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.PathFormat" sourceFile="PathFormat.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.baidu.ueditor.define" total_bugs="0" total_types="12" total_size="235">
+      <ClassStats class="com.baidu.ueditor.define.ActionMap" sourceFile="ActionMap.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.ActionMap$1" sourceFile="ActionMap.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.ActionState" sourceFile="ActionState.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.AppInfo" sourceFile="AppInfo.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.AppInfo$1" sourceFile="AppInfo.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.BaseState" sourceFile="BaseState.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.FileType" sourceFile="FileType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.FileType$1" sourceFile="FileType.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.MIMEType" sourceFile="MIMEType.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.MIMEType$1" sourceFile="MIMEType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.MultiState" sourceFile="MultiState.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.define.State" sourceFile="State.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.baidu.ueditor.hunter" total_bugs="0" total_types="2" total_size="143">
+      <ClassStats class="com.baidu.ueditor.hunter.FileManager" sourceFile="FileManager.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.hunter.ImageHunter" sourceFile="ImageHunter.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.baidu.ueditor.upload" total_bugs="0" total_types="4" total_size="173">
+      <ClassStats class="com.baidu.ueditor.upload.Base64Uploader" sourceFile="Base64Uploader.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.upload.BinaryUploader" sourceFile="BinaryUploader.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.upload.StorageManager" sourceFile="StorageManager.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.baidu.ueditor.upload.Uploader" sourceFile="Uploader.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.aop" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="com.kingschan.blog.common.aop.ErrorLogAdvice" sourceFile="ErrorLogAdvice.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.article" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.kingschan.blog.common.article.ArticleProcessing" sourceFile="ArticleProcessing.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.bean.convert" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.kingschan.blog.common.bean.convert.BeanConvert" sourceFile="BeanConvert.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.enums" total_bugs="0" total_types="4" total_size="115">
+      <ClassStats class="com.kingschan.blog.common.enums.BLOG_MODEL" sourceFile="BLOG_MODEL.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.enums.BLOG_SKIN_PAGE" sourceFile="BLOG_SKIN_PAGE.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.enums.UserLevel" sourceFile="UserLevel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.enums.Variable" sourceFile="Variable.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive" total_bugs="0" total_types="2" total_size="107">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.BlogResDirective" sourceFile="BlogResDirective.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.CalendarDirective" sourceFile="CalendarDirective.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive.article" total_bugs="0" total_types="11" total_size="242">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.ArticleCommentDirective" sourceFile="ArticleCommentDirective.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.ArticleDirective" sourceFile="ArticleDirective.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.ArticleTimeLineItemsDirective" sourceFile="ArticleTimeLineItemsDirective.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.ArticleTimeLineItemsDirective$1" sourceFile="ArticleTimeLineItemsDirective.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.ArticleTimeLineNavigateDirective" sourceFile="ArticleTimeLineNavigateDirective.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.CategoryDirective" sourceFile="CategoryDirective.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.CountCategoryDirective" sourceFile="CountCategoryDirective.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.HotArticleDirective" sourceFile="HotArticleDirective.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.LableArticleItemsDirective" sourceFile="LableArticleItemsDirective.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.LableDirective" sourceFile="LableDirective.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.article.SimilarArticlesDirective" sourceFile="SimilarArticlesDirective.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive.blogsite" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.blogsite.WebSiteCountInfoDirective" sourceFile="WebSiteCountInfoDirective.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.blogsite.WebSiteDirective" sourceFile="WebSiteDirective.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive.bookmark" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.bookmark.BookMarkDirective" sourceFile="BookMarkDirective.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.bookmark.BookMarkFolderDirective" sourceFile="BookMarkFolderDirective.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive.home" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.home.HomeArticleDirective" sourceFile="HomeArticleDirective.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.directive.util" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.util.SubStringDirective" sourceFile="SubStringDirective.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.directive.util.TimeSummaryDirective" sourceFile="TimeSummaryDirective.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.template" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.kingschan.blog.common.freemarker.template.StringTemplateLoader" sourceFile="StringTemplateLoader.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.template.StringTemplateParser" sourceFile="StringTemplateParser.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.freemarker.util" total_bugs="0" total_types="2" total_size="71">
+      <ClassStats class="com.kingschan.blog.common.freemarker.util.FreemarkerParseUtil" sourceFile="FreemarkerParseUtil.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.freemarker.util.TemplateStaticUtil" sourceFile="TemplateStaticUtil.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.hibernate.search" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.kingschan.blog.common.hibernate.search.ArticleTextBridge" sourceFile="ArticleTextBridge.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.qiniu" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.kingschan.blog.common.qiniu.QiNiuManagement" sourceFile="QiNiuManagement.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.sina" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.kingschan.blog.common.sina.SinaWeiBoUtil" sourceFile="SinaWeiBoUtil.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.common.skin.template" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="com.kingschan.blog.common.skin.template.SkinTemplateVariable" sourceFile="SkinTemplateVariable.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.common.skin.template.SkinTemplateVariable$1" sourceFile="SkinTemplateVariable.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.controller.admin" total_bugs="0" total_types="9" total_size="497">
+      <ClassStats class="com.kingschan.blog.controller.admin.AdminPanelController" sourceFile="AdminPanelController.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.ArticleController" sourceFile="ArticleController.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.BlogResController" sourceFile="BlogResController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.BookMarkController" sourceFile="BookMarkController.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.CategoryController" sourceFile="CategoryController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.ReportController" sourceFile="ReportController.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.UploadController" sourceFile="UploadController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.UserController" sourceFile="UserController.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.admin.WebSiteController" sourceFile="WebSiteController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.controller.font" total_bugs="0" total_types="2" total_size="92">
+      <ClassStats class="com.kingschan.blog.controller.font.FontArticleController" sourceFile="FontArticleController.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.font.FontController" sourceFile="FontController.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.controller.pub" total_bugs="0" total_types="3" total_size="417">
+      <ClassStats class="com.kingschan.blog.controller.pub.HomeController" sourceFile="HomeController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.pub.IndexController" sourceFile="IndexController.java" interface="false" size="171" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.controller.pub.PubController" sourceFile="PubController.java" interface="false" size="228" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.dao" total_bugs="1" total_types="12" total_size="440" priority_2="1">
+      <ClassStats class="com.kingschan.blog.dao.ArticleCommentDao" sourceFile="ArticleCommentDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.ArticleDao" sourceFile="ArticleDao.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.BaseDao" sourceFile="BaseDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.BlogResDao" sourceFile="BlogResDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.BookMarksDao" sourceFile="BookMarksDao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.HibernateBaseDao" sourceFile="HibernateBaseDao.java" interface="false" size="314" bugs="1" priority_2="1"/>
+      <ClassStats class="com.kingschan.blog.dao.LableDao" sourceFile="LableDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.Pagination" sourceFile="Pagination.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.ReportDao" sourceFile="ReportDao.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.UserDao" sourceFile="UserDao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.WebSiteDao" sourceFile="WebSiteDao.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.dao.font" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.kingschan.blog.dao.font.BlogFontDao" sourceFile="BlogFontDao.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.dao.font.impl" total_bugs="0" total_types="1" total_size="132">
+      <ClassStats class="com.kingschan.blog.dao.font.impl.BlogFontDaoImpl" sourceFile="BlogFontDaoImpl.java" interface="false" size="132" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.dao.impl" total_bugs="0" total_types="9" total_size="619">
+      <ClassStats class="com.kingschan.blog.dao.impl.ArticleCommentDaoImpl" sourceFile="ArticleCommentDaoImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.ArticleDaoImpl" sourceFile="ArticleDaoImpl.java" interface="false" size="274" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.BlogResDaoImpl" sourceFile="BlogResDaoImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.BookMarksDaoImpl" sourceFile="BookMarksDaoImpl.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.CategoryDaoImpl" sourceFile="CategoryDaoImpl.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.LableDaoImpl" sourceFile="LableDaoImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.ReportDaoImpl" sourceFile="ReportDaoImpl.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.dao.impl.WebSiteDaoImpl" sourceFile="WebSiteDaoImpl.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.model.dto" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.kingschan.blog.model.dto.ArticleDto" sourceFile="ArticleDto.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.model.vo" total_bugs="0" total_types="11" total_size="702">
+      <ClassStats class="com.kingschan.blog.model.vo.ArticleCommentVo" sourceFile="ArticleCommentVo.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.ArticleVo" sourceFile="ArticleVo.java" interface="false" size="141" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.BlogSiteStatisticalVo" sourceFile="BlogSiteStatisticalVo.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.BookMarkFolderVo" sourceFile="BookMarkFolderVo.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.BookMarkVo" sourceFile="BookMarkVo.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.CategoryVo" sourceFile="CategoryVo.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.LableVo" sourceFile="LableVo.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.MsgBoardVo" sourceFile="MsgBoardVo.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.PubTimeLineVo" sourceFile="PubTimeLineVo.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.UserVo" sourceFile="UserVo.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.model.vo.WebSiteVo" sourceFile="WebSiteVo.java" interface="false" size="93" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.po" total_bugs="0" total_types="17" total_size="1304">
+      <ClassStats class="com.kingschan.blog.po.Article" sourceFile="Article.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.ArticleComment" sourceFile="ArticleComment.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.ArticleCommentSupport" sourceFile="ArticleCommentSupport.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.ArticleText" sourceFile="ArticleText.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BaseAgent" sourceFile="BaseAgent.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BlogArticleLikes" sourceFile="BlogArticleLikes.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BlogDiyMenu" sourceFile="BlogDiyMenu.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BlogMsgBoard" sourceFile="BlogMsgBoard.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BlogRes" sourceFile="BlogRes.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BlogStatisticalSite" sourceFile="BlogStatisticalSite.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.Bookmarks" sourceFile="Bookmarks.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.BookmarksFolder" sourceFile="BookmarksFolder.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.Category" sourceFile="Category.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.Lable" sourceFile="Lable.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.RequestLog" sourceFile="RequestLog.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.User" sourceFile="User.java" interface="false" size="159" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.po.WebSite" sourceFile="WebSite.java" interface="false" size="125" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services" total_bugs="0" total_types="10" total_size="94">
+      <ClassStats class="com.kingschan.blog.services.ArticleCommentService" sourceFile="ArticleCommentService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.ArticleService" sourceFile="ArticleService.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.BlogResService" sourceFile="BlogResService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.BookMarkService" sourceFile="BookMarkService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.CategoryService" sourceFile="CategoryService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.CommonService" sourceFile="CommonService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.LableService" sourceFile="LableService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.ReportService" sourceFile="ReportService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.UserService" sourceFile="UserService.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.WebSiteService" sourceFile="WebSiteService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.font" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="com.kingschan.blog.services.font.FontBlogArticleService" sourceFile="FontBlogArticleService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.font.FontBlogService" sourceFile="FontBlogService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.font.impl" total_bugs="0" total_types="2" total_size="137">
+      <ClassStats class="com.kingschan.blog.services.font.impl.FontBlogArticleServiceImpl" sourceFile="FontBlogArticleServiceImpl.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.font.impl.FontBlogServiceImpl" sourceFile="FontBlogServiceImpl.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.impl" total_bugs="2" total_types="10" total_size="759" priority_2="2">
+      <ClassStats class="com.kingschan.blog.services.impl.ArticleCommentServiceImpl" sourceFile="ArticleCommentServiceImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.ArticleServiceImpl" sourceFile="ArticleServiceImpl.java" interface="false" size="326" bugs="2" priority_2="2"/>
+      <ClassStats class="com.kingschan.blog.services.impl.BlogResServiceImpl" sourceFile="BlogResServiceImpl.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.BookMarkServiceImpl" sourceFile="BookMarkServiceImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.CommonServiceImpl" sourceFile="CommonServiceImpl.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.LableServiceImpl" sourceFile="LableServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.ReportServiceImpl" sourceFile="ReportServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="171" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.impl.WebSiteServiceImpl" sourceFile="WebSiteServiceImpl.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.pub" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.kingschan.blog.services.pub.PubBlogService" sourceFile="PubBlogService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.pub.impl" total_bugs="0" total_types="1" total_size="67">
+      <ClassStats class="com.kingschan.blog.services.pub.impl.PubBlogServiceImpl" sourceFile="PubBlogServiceImpl.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.system" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="com.kingschan.blog.services.system.EmailNotifyService" sourceFile="EmailNotifyService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.system.UrlValidationService" sourceFile="UrlValidationService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.system.impl" total_bugs="0" total_types="2" total_size="57">
+      <ClassStats class="com.kingschan.blog.services.system.impl.EmailNotifyServiceImpl" sourceFile="EmailNotifyServiceImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.services.system.impl.UrlValidationServiceImpl" sourceFile="UrlValidationServiceImpl.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.services.system.task" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="com.kingschan.blog.services.system.task.BlogStatisticalTaskService" sourceFile="BlogStatisticalTaskService.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.util" total_bugs="0" total_types="19" total_size="953">
+      <ClassStats class="com.kingschan.blog.util.Base64ImgUtil" sourceFile="Base64ImgUtil.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.BlogUrlHelper" sourceFile="BlogUrlHelper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.BlogUtil" sourceFile="BlogUtil.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.CommomEncrypt" sourceFile="CommomEncrypt.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.CookieUtil" sourceFile="CookieUtil.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.DateUtil$1" sourceFile="DateUtil.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.DateUtil$Format" sourceFile="DateUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.DesEncrypt" sourceFile="DesEncrypt.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.DownLoadImgUtil" sourceFile="DownLoadImgUtil.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.PathUtil" sourceFile="PathUtil.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.RegexUtil" sourceFile="RegexUtil.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.ServletUtil" sourceFile="ServletUtil.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.SpringUtil" sourceFile="SpringUtil.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.SqlUtil" sourceFile="SqlUtil.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.TimeStampUtil" sourceFile="TimeStampUtil.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.UnixDate" sourceFile="UnixDate.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.kingschan.blog.util.XmlOperation" sourceFile="XmlOperation.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.web.interceptor" total_bugs="0" total_types="1" total_size="177">
+      <ClassStats class="com.kingschan.blog.web.interceptor.BlogFilter" sourceFile="BlogFilter.java" interface="false" size="177" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.web.interceptor.assist" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.kingschan.blog.web.interceptor.assist.BlogUrlMapping" sourceFile="BlogUrlMapping.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.web.listener" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.kingschan.blog.web.listener.DomainSessionListener" sourceFile="DomainSessionListener.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.kingschan.blog.web.servlet" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="com.kingschan.blog.web.servlet.UploadImgServlet" sourceFile="UploadImgServlet.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="weibo4j" total_bugs="0" total_types="18" total_size="1224">
+      <ClassStats class="weibo4j.Account" sourceFile="Account.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="weibo4j.Comments" sourceFile="Comments.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="weibo4j.Favorite" sourceFile="Favorite.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="weibo4j.Friendships" sourceFile="Friendships.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="weibo4j.Location" sourceFile="Location.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="weibo4j.Oauth" sourceFile="Oauth.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="weibo4j.Place" sourceFile="Place.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="weibo4j.PublicService" sourceFile="PublicService.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="weibo4j.Register" sourceFile="Register.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="weibo4j.Reminds" sourceFile="Reminds.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="weibo4j.Search" sourceFile="Search.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="weibo4j.ShortUrl" sourceFile="ShortUrl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="weibo4j.Suggestion" sourceFile="Suggestion.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="weibo4j.Tags" sourceFile="Tags.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="weibo4j.Timeline" sourceFile="Timeline.java" interface="false" size="222" bugs="0"/>
+      <ClassStats class="weibo4j.Trend" sourceFile="Trend.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="weibo4j.Users" sourceFile="Users.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="weibo4j.Weibo" sourceFile="Weibo.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="weibo4j.http" total_bugs="0" total_types="8" total_size="618">
+      <ClassStats class="weibo4j.http.AccessToken" sourceFile="AccessToken.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="weibo4j.http.BASE64Encoder" sourceFile="BASE64Encoder.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="weibo4j.http.HTMLEntity" sourceFile="HTMLEntity.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="weibo4j.http.HttpClient" sourceFile="HttpClient.java" interface="false" size="252" bugs="0"/>
+      <ClassStats class="weibo4j.http.HttpClient$ByteArrayPart" sourceFile="HttpClient.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="weibo4j.http.ImageItem" sourceFile="ImageItem.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="weibo4j.http.Response" sourceFile="Response.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="weibo4j.http.Response$1" sourceFile="Response.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="weibo4j.model" total_bugs="0" total_types="44" total_size="3592">
+      <ClassStats class="weibo4j.model.ApiRateLimits" sourceFile="ApiRateLimits.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="weibo4j.model.Comment" sourceFile="Comment.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="weibo4j.model.CommentWapper" sourceFile="CommentWapper.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="weibo4j.model.Configuration" sourceFile="Configuration.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="weibo4j.model.Constants" sourceFile="Constants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="weibo4j.model.Emotion" sourceFile="Emotion.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="weibo4j.model.Favorites" sourceFile="Favorites.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="weibo4j.model.FavoritesIds" sourceFile="FavoritesIds.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="weibo4j.model.FavoritesTag" sourceFile="FavoritesTag.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="weibo4j.model.FriendsTimelineIds" sourceFile="FriendsTimelineIds.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="weibo4j.model.Gender" sourceFile="Gender.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="weibo4j.model.Geos" sourceFile="Geos.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="weibo4j.model.IDs" sourceFile="IDs.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="weibo4j.model.MentionsIds" sourceFile="MentionsIds.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="weibo4j.model.MySSLSocketFactory" sourceFile="MySSLSocketFactory.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="weibo4j.model.MySSLSocketFactory$1" sourceFile="MySSLSocketFactory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="weibo4j.model.MySSLSocketFactory$TrustAnyTrustManager" sourceFile="MySSLSocketFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="weibo4j.model.Paging" sourceFile="Paging.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="weibo4j.model.Places" sourceFile="Places.java" interface="false" size="213" bugs="0"/>
+      <ClassStats class="weibo4j.model.Poisition" sourceFile="Poisition.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="weibo4j.model.PoisitionCategory" sourceFile="PoisitionCategory.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="weibo4j.model.PostParameter" sourceFile="PostParameter.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="weibo4j.model.Privacy" sourceFile="Privacy.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="weibo4j.model.Query" sourceFile="Query.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="weibo4j.model.RateLimitStatus" sourceFile="RateLimitStatus.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="weibo4j.model.RepostTimelineIds" sourceFile="RepostTimelineIds.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="weibo4j.model.School" sourceFile="School.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="weibo4j.model.SchoolSearch" sourceFile="SchoolSearch.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="weibo4j.model.Source" sourceFile="Source.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="weibo4j.model.Status" sourceFile="Status.java" interface="false" size="250" bugs="0"/>
+      <ClassStats class="weibo4j.model.StatusWapper" sourceFile="StatusWapper.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="weibo4j.model.Tag" sourceFile="Tag.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="weibo4j.model.TagWapper" sourceFile="TagWapper.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="weibo4j.model.Trend" sourceFile="Trend.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="weibo4j.model.Trends" sourceFile="Trends.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="weibo4j.model.User" sourceFile="User.java" interface="false" size="314" bugs="0"/>
+      <ClassStats class="weibo4j.model.UserCounts" sourceFile="UserCounts.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="weibo4j.model.UserTimelineIds" sourceFile="UserTimelineIds.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="weibo4j.model.UserTrend" sourceFile="UserTrend.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="weibo4j.model.UserWapper" sourceFile="UserWapper.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="weibo4j.model.Version" sourceFile="Version.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="weibo4j.model.Visible" sourceFile="Visible.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="weibo4j.model.WeiboException" sourceFile="WeiboException.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="weibo4j.model.WeiboResponse" sourceFile="WeiboResponse.java" interface="false" size="122" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="weibo4j.org.json" total_bugs="0" total_types="14" total_size="1311">
+      <ClassStats class="weibo4j.org.json.CDL" sourceFile="CDL.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.Cookie" sourceFile="Cookie.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.CookieList" sourceFile="CookieList.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.HTTP" sourceFile="HTTP.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.HTTPTokener" sourceFile="HTTPTokener.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONArray" sourceFile="JSONArray.java" interface="false" size="257" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONException" sourceFile="JSONException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONObject" sourceFile="JSONObject.java" interface="false" size="520" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONObject$1" sourceFile="JSONObject.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONObject$Null" sourceFile="JSONObject.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONString" sourceFile="JSONString.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONStringer" sourceFile="JSONStringer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONTokener" sourceFile="JSONTokener.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="weibo4j.org.json.JSONWriter" sourceFile="JSONWriter.java" interface="false" size="99" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="weibo4j.util" total_bugs="0" total_types="4" total_size="100">
+      <ClassStats class="weibo4j.util.ArrayUtils" sourceFile="ArrayUtils.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="weibo4j.util.BareBonesBrowserLaunch" sourceFile="BareBonesBrowserLaunch.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="weibo4j.util.URLEncodeUtils" sourceFile="URLEncodeUtils.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="weibo4j.util.WeiboConfig" sourceFile="WeiboConfig.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="548" invocations="2714" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="12477" standardDeviationMicrosecondsPerInvocation="578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="547" invocations="1906" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="36492" standardDeviationMicrosecondsPerInvocation="1921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="537" invocations="1891" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="24156" standardDeviationMicrosecondsPerInvocation="879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="476" invocations="2812" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="17059" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="467" invocations="2729" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="10055" standardDeviationMicrosecondsPerInvocation="454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="439" invocations="2728" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="27786" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="419" invocations="2819" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="14381" standardDeviationMicrosecondsPerInvocation="536"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="373" invocations="485" avgMicrosecondsPerInvocation="769" maxMicrosecondsPerInvocation="26589" standardDeviationMicrosecondsPerInvocation="1811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="340" invocations="485" avgMicrosecondsPerInvocation="702" maxMicrosecondsPerInvocation="25992" standardDeviationMicrosecondsPerInvocation="1746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="331" invocations="2730" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="13666" standardDeviationMicrosecondsPerInvocation="374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="312" invocations="3574" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="20729" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="275" invocations="1601" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="6290" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="173" invocations="485" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="32169" standardDeviationMicrosecondsPerInvocation="1794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="155" invocations="711" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="12769" standardDeviationMicrosecondsPerInvocation="897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="131" invocations="266" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="21523" standardDeviationMicrosecondsPerInvocation="2007"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="128" invocations="2914" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="26731" standardDeviationMicrosecondsPerInvocation="509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="123" invocations="266" avgMicrosecondsPerInvocation="463" maxMicrosecondsPerInvocation="17204" standardDeviationMicrosecondsPerInvocation="1216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="117" invocations="2729" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1611" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="108" invocations="485" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="5074" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="104" invocations="48806" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="4783" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="103" invocations="485" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="10305" standardDeviationMicrosecondsPerInvocation="661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="102" invocations="266" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="10708" standardDeviationMicrosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="102" invocations="266" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="10006" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="98" invocations="266" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="8640" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="93" invocations="485" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="5271" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="89" invocations="266" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="18475" standardDeviationMicrosecondsPerInvocation="1238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="77" invocations="1632" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1597" standardDeviationMicrosecondsPerInvocation="104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="74" invocations="266" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="11581" standardDeviationMicrosecondsPerInvocation="815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizationOnSharedBuiltinConstant" totalMilliseconds="72" invocations="266" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="37010" standardDeviationMicrosecondsPerInvocation="2264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="71" invocations="485" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="4892" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="71" invocations="485" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="22687" standardDeviationMicrosecondsPerInvocation="1133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="70" invocations="485" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="7952" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="68" invocations="2714" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="3397" standardDeviationMicrosecondsPerInvocation="82"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="66" invocations="2712" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="4240" standardDeviationMicrosecondsPerInvocation="98"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="65" invocations="266" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="14720" standardDeviationMicrosecondsPerInvocation="921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="64" invocations="266" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="4469" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="64" invocations="266" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="3337" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="64" invocations="266" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="2820" standardDeviationMicrosecondsPerInvocation="352"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="62" invocations="266" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="14912" standardDeviationMicrosecondsPerInvocation="971"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

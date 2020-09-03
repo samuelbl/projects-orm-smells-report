@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597111842000" analysisTimestamp="1597111843905" release="">
+  <Project projectName="repositorios/okihouse_spring-jpa-querydsl-sample">
+    <Jar>repositorios/okihouse_spring-jpa-querydsl-sample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.boot.jpa.domain.User">
+      <SourceLine classname="com.boot.jpa.domain.User" start="22" end="50" sourcefile="User.java" sourcepath="com/boot/jpa/domain/User.java"/>
+    </Class>
+    <Field classname="com.boot.jpa.domain.User" name="userInfo" signature="Lcom/boot/jpa/domain/UserInfo;" isStatic="false">
+      <SourceLine classname="com.boot.jpa.domain.User" sourcefile="User.java" sourcepath="com/boot/jpa/domain/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.boot.jpa.domain.UserInfo">
+      <SourceLine classname="com.boot.jpa.domain.UserInfo" start="16" end="28" sourcefile="UserInfo.java" sourcepath="com/boot/jpa/domain/UserInfo.java"/>
+    </Class>
+    <Field classname="com.boot.jpa.domain.UserInfo" name="user" signature="Lcom/boot/jpa/domain/User;" isStatic="false">
+      <SourceLine classname="com.boot.jpa.domain.UserInfo" sourcefile="UserInfo.java" sourcepath="com/boot/jpa/domain/UserInfo.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>com.mysema.query.jpa.impl.JPADeleteClause</MissingClass>
+    <MissingClass>com.mysema.query.jpa.impl.JPAQuery</MissingClass>
+    <MissingClass>com.mysema.query.types.Path</MissingClass>
+    <MissingClass>com.mysema.query.types.PathMetadata</MissingClass>
+    <MissingClass>com.mysema.query.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.mysema.query.types.Projections</MissingClass>
+    <MissingClass>com.mysema.query.types.path.EntityPathBase</MissingClass>
+    <MissingClass>com.mysema.query.types.path.EnumPath</MissingClass>
+    <MissingClass>com.mysema.query.types.path.PathInits</MissingClass>
+    <MissingClass>com.mysema.query.types.path.StringPath</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.context.web.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.QueryDslRepositorySupport</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.Querydsl</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:10:42 +0000" total_classes="15" referenced_classes="39" total_bugs="2" total_size="232" num_packages="7" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.90" clock_seconds="1.39" peak_mbytes="188.55" alloc_mbytes="3540.00" gc_seconds="0.07" priority_2="2">
+    <PackageStats package="com.boot" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.boot.SpringJpaQuerydslSampleApplication" sourceFile="SpringJpaQuerydslSampleApplication.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.domain" total_bugs="2" total_types="7" total_size="158" priority_2="2">
+      <ClassStats class="com.boot.jpa.domain.QUser" sourceFile="QUser.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.boot.jpa.domain.QUserHistory" sourceFile="QUserHistory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.boot.jpa.domain.QUserInfo" sourceFile="QUserInfo.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.boot.jpa.domain.User" sourceFile="User.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="com.boot.jpa.domain.User$USER_TYPE" sourceFile="User.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.boot.jpa.domain.UserHistory" sourceFile="UserHistory.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.boot.jpa.domain.UserInfo" sourceFile="UserInfo.java" interface="false" size="19" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.repository.user" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.boot.jpa.repository.user.UserRepository" sourceFile="UserRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.repository.user.custom" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="com.boot.jpa.repository.user.custom.UserCustomRepository" sourceFile="UserCustomRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.boot.jpa.repository.user.custom.UserRepositoryImpl" sourceFile="UserRepositoryImpl.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.repository.userinfo" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.boot.jpa.repository.userinfo.UserInfoRepository" sourceFile="UserInfoRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.repository.userinfo.custom" total_bugs="0" total_types="2" total_size="13">
+      <ClassStats class="com.boot.jpa.repository.userinfo.custom.UserInfoCustomRepository" sourceFile="UserInfoCustomRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.boot.jpa.repository.userinfo.custom.UserInfoRepositoryImpl" sourceFile="UserInfoRepositoryImpl.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.boot.jpa.vo" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.boot.jpa.vo.ResultVO" sourceFile="ResultVO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="179" invocations="424" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="12895" standardDeviationMicrosecondsPerInvocation="965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="39" avgMicrosecondsPerInvocation="1344" maxMicrosecondsPerInvocation="11237" standardDeviationMicrosecondsPerInvocation="2380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="432" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="567" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="40" invocations="155" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="4003" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="39" invocations="77" avgMicrosecondsPerInvocation="507" maxMicrosecondsPerInvocation="5150" standardDeviationMicrosecondsPerInvocation="894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="83" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="25753" standardDeviationMicrosecondsPerInvocation="2800"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="39" avgMicrosecondsPerInvocation="880" maxMicrosecondsPerInvocation="6306" standardDeviationMicrosecondsPerInvocation="1401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="32" invocations="340" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1539" standardDeviationMicrosecondsPerInvocation="161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="31" invocations="77" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="7883" standardDeviationMicrosecondsPerInvocation="949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="31" invocations="77" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="9585" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="77" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="2594" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="78" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="14495" standardDeviationMicrosecondsPerInvocation="1657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="26" invocations="77" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="8434" standardDeviationMicrosecondsPerInvocation="964"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="25" invocations="77" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="2591" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="39" avgMicrosecondsPerInvocation="506" maxMicrosecondsPerInvocation="6415" standardDeviationMicrosecondsPerInvocation="1115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="19" invocations="39" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="11888" standardDeviationMicrosecondsPerInvocation="1886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="39" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="8631" standardDeviationMicrosecondsPerInvocation="1382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="39" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="4638" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="47" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="1090" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="39" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="2423" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="39" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="4346" standardDeviationMicrosecondsPerInvocation="735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="39" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="2322" standardDeviationMicrosecondsPerInvocation="472"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

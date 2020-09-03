@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596944472000" analysisTimestamp="1596944473466" release="">
+  <Project projectName="repositorios/theotherian_hibernate-gotchas">
+    <Jar>repositorios/theotherian_hibernate-gotchas</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.theotherian.hibernate.joinwithmaxresults.entities.Person">
+      <SourceLine classname="com.theotherian.hibernate.joinwithmaxresults.entities.Person" start="24" end="77" sourcefile="Person.java" sourcepath="com/theotherian/hibernate/joinwithmaxresults/entities/Person.java"/>
+    </Class>
+    <Field classname="com.theotherian.hibernate.joinwithmaxresults.entities.Person" name="things" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.theotherian.hibernate.joinwithmaxresults.entities.Person" sourcefile="Person.java" sourcepath="com/theotherian/hibernate/joinwithmaxresults/entities/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.theotherian.hibernate.joinwithmaxresults.entities.Thing">
+      <SourceLine classname="com.theotherian.hibernate.joinwithmaxresults.entities.Thing" start="16" end="46" sourcefile="Thing.java" sourcepath="com/theotherian/hibernate/joinwithmaxresults/entities/Thing.java"/>
+    </Class>
+    <Field classname="com.theotherian.hibernate.joinwithmaxresults.entities.Thing" name="person" signature="Lcom/theotherian/hibernate/joinwithmaxresults/entities/Person;" isStatic="false">
+      <SourceLine classname="com.theotherian.hibernate.joinwithmaxresults.entities.Thing" sourcefile="Thing.java" sourcepath="com/theotherian/hibernate/joinwithmaxresults/entities/Thing.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.classic.Session</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hsqldb.server.Server</MissingClass>
+    <MissingClass>org.pojomatic.Pojomatic</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:41:12 +0000" total_classes="6" referenced_classes="23" total_bugs="2" total_size="134" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.26" clock_seconds="1.26" peak_mbytes="186.04" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1" priority_1="1">
+    <PackageStats package="com.theotherian.hibernate" total_bugs="0" total_types="3" total_size="52">
+      <ClassStats class="com.theotherian.hibernate.HibernateUtil" sourceFile="HibernateUtil.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.theotherian.hibernate.HibernateUtil$1" sourceFile="HibernateUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.theotherian.hibernate.SessionRunnable" sourceFile="SessionRunnable.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.theotherian.hibernate.joinwithmaxresults" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.theotherian.hibernate.joinwithmaxresults.Example" sourceFile="Example.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.theotherian.hibernate.joinwithmaxresults.entities" total_bugs="2" total_types="2" total_size="59" priority_2="1" priority_1="1">
+      <ClassStats class="com.theotherian.hibernate.joinwithmaxresults.entities.Person" sourceFile="Person.java" interface="false" size="29" bugs="1" priority_1="1"/>
+      <ClassStats class="com.theotherian.hibernate.joinwithmaxresults.entities.Thing" sourceFile="Thing.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="211" invocations="374" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="17557" standardDeviationMicrosecondsPerInvocation="1524"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="74" invocations="6" avgMicrosecondsPerInvocation="12485" maxMicrosecondsPerInvocation="72202" standardDeviationMicrosecondsPerInvocation="26719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="62" invocations="23" avgMicrosecondsPerInvocation="2719" maxMicrosecondsPerInvocation="22616" standardDeviationMicrosecondsPerInvocation="5065"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="378" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2783" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="97" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="4574" standardDeviationMicrosecondsPerInvocation="727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="37" invocations="23" avgMicrosecondsPerInvocation="1628" maxMicrosecondsPerInvocation="10978" standardDeviationMicrosecondsPerInvocation="2705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="35" invocations="320" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="3090" standardDeviationMicrosecondsPerInvocation="247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="51" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="14180" standardDeviationMicrosecondsPerInvocation="2063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="23" avgMicrosecondsPerInvocation="1259" maxMicrosecondsPerInvocation="9716" standardDeviationMicrosecondsPerInvocation="2592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="37" avgMicrosecondsPerInvocation="737" maxMicrosecondsPerInvocation="23372" standardDeviationMicrosecondsPerInvocation="3774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="23" avgMicrosecondsPerInvocation="1120" maxMicrosecondsPerInvocation="14909" standardDeviationMicrosecondsPerInvocation="3021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="20" invocations="36" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="8024" standardDeviationMicrosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="18" invocations="36" avgMicrosecondsPerInvocation="525" maxMicrosecondsPerInvocation="7557" standardDeviationMicrosecondsPerInvocation="1246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="17" invocations="36" avgMicrosecondsPerInvocation="496" maxMicrosecondsPerInvocation="8526" standardDeviationMicrosecondsPerInvocation="1414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="17" invocations="36" avgMicrosecondsPerInvocation="485" maxMicrosecondsPerInvocation="8380" standardDeviationMicrosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="16" invocations="35" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="2820" standardDeviationMicrosecondsPerInvocation="647"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

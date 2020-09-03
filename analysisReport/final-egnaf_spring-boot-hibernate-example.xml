@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596958158000" analysisTimestamp="1596958159849" release="">
+  <Project projectName="repositorios/egnaf_spring-boot-hibernate-example">
+    <Jar>repositorios/egnaf_spring-boot-hibernate-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.egnaf.springHibernateExample.models.manyToOne.Car">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.manyToOne.Car" start="10" end="22" sourcefile="Car.java" sourcepath="com/github/egnaf/springHibernateExample/models/manyToOne/Car.java"/>
+    </Class>
+    <Field classname="com.github.egnaf.springHibernateExample.models.manyToOne.Car" name="driver" signature="Lcom/github/egnaf/springHibernateExample/models/manyToOne/Driver;" isStatic="false">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.manyToOne.Car" sourcefile="Car.java" sourcepath="com/github/egnaf/springHibernateExample/models/manyToOne/Car.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.egnaf.springHibernateExample.models.manyToOne.Driver">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.manyToOne.Driver" start="11" end="22" sourcefile="Driver.java" sourcepath="com/github/egnaf/springHibernateExample/models/manyToOne/Driver.java"/>
+    </Class>
+    <Field classname="com.github.egnaf.springHibernateExample.models.manyToOne.Driver" name="cars" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.manyToOne.Driver" sourcefile="Driver.java" sourcepath="com/github/egnaf/springHibernateExample/models/manyToOne/Driver.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.egnaf.springHibernateExample.models.oneToMany.Pupil">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.oneToMany.Pupil" start="10" end="22" sourcefile="Pupil.java" sourcepath="com/github/egnaf/springHibernateExample/models/oneToMany/Pupil.java"/>
+    </Class>
+    <Field classname="com.github.egnaf.springHibernateExample.models.oneToMany.Pupil" name="teacher" signature="Lcom/github/egnaf/springHibernateExample/models/oneToMany/Teacher;" isStatic="false">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.oneToMany.Pupil" sourcefile="Pupil.java" sourcepath="com/github/egnaf/springHibernateExample/models/oneToMany/Pupil.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.egnaf.springHibernateExample.models.oneToOne.Human">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.oneToOne.Human" start="10" end="22" sourcefile="Human.java" sourcepath="com/github/egnaf/springHibernateExample/models/oneToOne/Human.java"/>
+    </Class>
+    <Field classname="com.github.egnaf.springHibernateExample.models.oneToOne.Human" name="passport" signature="Lcom/github/egnaf/springHibernateExample/models/oneToOne/Passport;" isStatic="false">
+      <SourceLine classname="com.github.egnaf.springHibernateExample.models.oneToOne.Human" sourcefile="Human.java" sourcepath="com/github/egnaf/springHibernateExample/models/oneToOne/Human.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 07:29:18 +0000" total_classes="9" referenced_classes="20" total_bugs="4" total_size="172" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.57" clock_seconds="1.30" peak_mbytes="124.22" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="3" priority_1="1">
+    <PackageStats package="com.github.egnaf" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.github.egnaf.DemoApplication" sourceFile="DemoApplication.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.egnaf.springHibernateExample.models.manyToMany" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.manyToMany.Elective" sourceFile="Elective.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.manyToMany.Student" sourceFile="Student.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.egnaf.springHibernateExample.models.manyToOne" total_bugs="2" total_types="2" total_size="40" priority_2="1" priority_1="1">
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.manyToOne.Car" sourceFile="Car.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.manyToOne.Driver" sourceFile="Driver.java" interface="false" size="20" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.github.egnaf.springHibernateExample.models.oneToMany" total_bugs="1" total_types="2" total_size="40" priority_2="1">
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.oneToMany.Pupil" sourceFile="Pupil.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.oneToMany.Teacher" sourceFile="Teacher.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.egnaf.springHibernateExample.models.oneToOne" total_bugs="1" total_types="2" total_size="39" priority_2="1">
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.oneToOne.Human" sourceFile="Human.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.egnaf.springHibernateExample.models.oneToOne.Passport" sourceFile="Passport.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="188" invocations="342" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="28567" standardDeviationMicrosecondsPerInvocation="1956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="94" invocations="93" avgMicrosecondsPerInvocation="1016" maxMicrosecondsPerInvocation="85230" standardDeviationMicrosecondsPerInvocation="8780"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="39" invocations="93" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="4464" standardDeviationMicrosecondsPerInvocation="706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="344" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="2660" standardDeviationMicrosecondsPerInvocation="147"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="36" invocations="93" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="2933" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="35" invocations="20" avgMicrosecondsPerInvocation="1750" maxMicrosecondsPerInvocation="10176" standardDeviationMicrosecondsPerInvocation="2642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="93" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="5440" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="32" invocations="93" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="3771" standardDeviationMicrosecondsPerInvocation="544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="93" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="6653" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="29" invocations="155" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2587" standardDeviationMicrosecondsPerInvocation="347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="28" invocations="93" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="7546" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="28" invocations="292" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="1080" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="41" avgMicrosecondsPerInvocation="634" maxMicrosecondsPerInvocation="14727" standardDeviationMicrosecondsPerInvocation="2287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="24" invocations="20" avgMicrosecondsPerInvocation="1211" maxMicrosecondsPerInvocation="6531" standardDeviationMicrosecondsPerInvocation="1552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="20" avgMicrosecondsPerInvocation="928" maxMicrosecondsPerInvocation="8984" standardDeviationMicrosecondsPerInvocation="1937"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="20" avgMicrosecondsPerInvocation="887" maxMicrosecondsPerInvocation="7067" standardDeviationMicrosecondsPerInvocation="1559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="1053" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="20" avgMicrosecondsPerInvocation="714" maxMicrosecondsPerInvocation="5045" standardDeviationMicrosecondsPerInvocation="1302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="20" avgMicrosecondsPerInvocation="581" maxMicrosecondsPerInvocation="5202" standardDeviationMicrosecondsPerInvocation="1183"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

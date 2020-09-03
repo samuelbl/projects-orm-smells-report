@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596944571000" analysisTimestamp="1596944572759" release="">
+  <Project projectName="repositorios/szotaa_snippr">
+    <Jar>repositorios/szotaa_snippr</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.szotaa.snippr.snippet.domain.Snippet">
+      <SourceLine classname="pl.szotaa.snippr.snippet.domain.Snippet" start="27" end="80" sourcefile="Snippet.java" sourcepath="pl/szotaa/snippr/snippet/domain/Snippet.java"/>
+    </Class>
+    <Field classname="pl.szotaa.snippr.snippet.domain.Snippet" name="owner" signature="Lpl/szotaa/snippr/user/domain/User;" isStatic="false">
+      <SourceLine classname="pl.szotaa.snippr.snippet.domain.Snippet" sourcefile="Snippet.java" sourcepath="pl/szotaa/snippr/snippet/domain/Snippet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.szotaa.snippr.user.domain.User">
+      <SourceLine classname="pl.szotaa.snippr.user.domain.User" start="31" end="81" sourcefile="User.java" sourcepath="pl/szotaa/snippr/user/domain/User.java"/>
+    </Class>
+    <Field classname="pl.szotaa.snippr.user.domain.User" name="roles" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="pl.szotaa.snippr.user.domain.User" sourcefile="User.java" sourcepath="pl/szotaa/snippr/user/domain/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="48">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwt</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.Path</MissingClass>
+    <MissingClass>javax.validation.Validation</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.ValidatorFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CorsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.www.BasicAuthenticationFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.ServletUriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:42:51 +0000" total_classes="37" referenced_classes="92" total_bugs="2" total_size="561" num_packages="15" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.12" clock_seconds="2.02" peak_mbytes="194.74" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="1" priority_1="1">
+    <PackageStats package="pl.szotaa.snippr" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="pl.szotaa.snippr.SnipprApplication" sourceFile="SnipprApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.common" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="pl.szotaa.snippr.common.AbstractConstraintViolationException" sourceFile="AbstractConstraintViolationException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.common.ErrorResponse" sourceFile="ErrorResponse.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.common.FieldError" sourceFile="FieldError.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.other" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="pl.szotaa.snippr.other.SpringFoxConfiguration" sourceFile="SpringFoxConfiguration.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.security" total_bugs="0" total_types="5" total_size="106">
+      <ClassStats class="pl.szotaa.snippr.security.JWTAuthenticationFilter" sourceFile="JWTAuthenticationFilter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.security.JWTAuthorizationFilter" sourceFile="JWTAuthorizationFilter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.security.SecurityConfiguration" sourceFile="SecurityConfiguration.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.security.SecurityConstants" sourceFile="SecurityConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.security.SecurityExpressions" sourceFile="SecurityExpressions.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.controller" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="pl.szotaa.snippr.snippet.controller.SnippetController" sourceFile="SnippetController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.controller.SnippetControllerAdvice" sourceFile="SnippetControllerAdvice.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.domain" total_bugs="1" total_types="2" total_size="73" priority_2="1">
+      <ClassStats class="pl.szotaa.snippr.snippet.domain.Snippet" sourceFile="Snippet.java" interface="false" size="52" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.domain.Snippet$SnippetBuilder" sourceFile="Snippet.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.exception" total_bugs="0" total_types="4" total_size="16">
+      <ClassStats class="pl.szotaa.snippr.snippet.exception.SnippetCreationFailedException" sourceFile="SnippetCreationFailedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.exception.SnippetExpiredException" sourceFile="SnippetExpiredException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.exception.SnippetNotFoundException" sourceFile="SnippetNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.exception.SnippetUpdateFailedException" sourceFile="SnippetUpdateFailedException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.repostiory" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="pl.szotaa.snippr.snippet.repostiory.SnippetRepository" sourceFile="SnippetRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.service" total_bugs="0" total_types="1" total_size="41">
+      <ClassStats class="pl.szotaa.snippr.snippet.service.SnippetService" sourceFile="SnippetService.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.snippet.validation" total_bugs="0" total_types="5" total_size="44">
+      <ClassStats class="pl.szotaa.snippr.snippet.validation.NotBeforeCurrentTime" sourceFile="NotBeforeCurrentTime.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.validation.NotBeforeCurrentTimeValidator" sourceFile="NotBeforeCurrentTimeValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.validation.ProgrammingLanguage" sourceFile="ProgrammingLanguage.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.validation.ProgrammingLanguageValidator" sourceFile="ProgrammingLanguageValidator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.snippet.validation.ProgrammingLanguageValidator$ProgrammingLanguages" sourceFile="ProgrammingLanguageValidator.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.user.controller" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="pl.szotaa.snippr.user.controller.UserController" sourceFile="UserController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.controller.UserControllerAdvice" sourceFile="UserControllerAdvice.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.user.domain" total_bugs="1" total_types="3" total_size="81" priority_1="1">
+      <ClassStats class="pl.szotaa.snippr.user.domain.Role" sourceFile="Role.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.domain.User" sourceFile="User.java" interface="false" size="44" bugs="1" priority_1="1"/>
+      <ClassStats class="pl.szotaa.snippr.user.domain.User$UserBuilder" sourceFile="User.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.user.exception" total_bugs="0" total_types="4" total_size="19">
+      <ClassStats class="pl.szotaa.snippr.user.exception.UserAlreadyExistsException" sourceFile="UserAlreadyExistsException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.exception.UserCreationFailedException" sourceFile="UserCreationFailedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.exception.UserNotFoundException" sourceFile="UserNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.exception.UserUpdateFailedException" sourceFile="UserUpdateFailedException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.user.repository" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="pl.szotaa.snippr.user.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.szotaa.snippr.user.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.szotaa.snippr.user.service" total_bugs="0" total_types="1" total_size="50">
+      <ClassStats class="pl.szotaa.snippr.user.service.UserService" sourceFile="UserService.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="218" invocations="706" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="11881" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="101" invocations="92" avgMicrosecondsPerInvocation="1105" maxMicrosecondsPerInvocation="24245" standardDeviationMicrosecondsPerInvocation="2990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="69" invocations="92" avgMicrosecondsPerInvocation="756" maxMicrosecondsPerInvocation="7311" standardDeviationMicrosecondsPerInvocation="1484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="66" invocations="171" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="11030" standardDeviationMicrosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="59" invocations="167" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="5451" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="713" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="452" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="55" invocations="172" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="11104" standardDeviationMicrosecondsPerInvocation="931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="331" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="5893" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="48" invocations="171" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="11329" standardDeviationMicrosecondsPerInvocation="900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="171" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="5381" standardDeviationMicrosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="555" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="2403" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="172" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="10647" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="179" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="28802" standardDeviationMicrosecondsPerInvocation="2143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="166" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="13476" standardDeviationMicrosecondsPerInvocation="1069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="29" invocations="108" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="2207" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="92" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="5086" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="26" invocations="92" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="7559" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="92" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="8562" standardDeviationMicrosecondsPerInvocation="927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="92" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="3046" standardDeviationMicrosecondsPerInvocation="429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="92" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="1263" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="17" invocations="2580" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="839" standardDeviationMicrosecondsPerInvocation="24"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="92" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="2236" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="14" invocations="171" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="3744" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="12" invocations="37" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="3692" standardDeviationMicrosecondsPerInvocation="644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="37" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="4833" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="12" invocations="37" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="2560" standardDeviationMicrosecondsPerInvocation="497"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597107446000" analysisTimestamp="1597107448054" release="">
+  <Project projectName="repositorios/rmcguinness_quarkus-example">
+    <Jar>repositorios/rmcguinness_quarkus-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rationaldevelopers.examples.model.Category">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Category" start="58" end="116" sourcefile="Category.java" sourcepath="com/rationaldevelopers/examples/model/Category.java"/>
+    </Class>
+    <Field classname="com.rationaldevelopers.examples.model.Category" name="tasks" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Category" sourcefile="Category.java" sourcepath="com/rationaldevelopers/examples/model/Category.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rationaldevelopers.examples.model.Category">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Category" start="58" end="116" sourcefile="Category.java" sourcepath="com/rationaldevelopers/examples/model/Category.java"/>
+    </Class>
+    <Field classname="com.rationaldevelopers.examples.model.Category" name="user" signature="Lcom/rationaldevelopers/examples/model/User;" isStatic="false">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Category" sourcefile="Category.java" sourcepath="com/rationaldevelopers/examples/model/Category.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rationaldevelopers.examples.model.Note">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Note" start="48" end="93" sourcefile="Note.java" sourcepath="com/rationaldevelopers/examples/model/Note.java"/>
+    </Class>
+    <Field classname="com.rationaldevelopers.examples.model.Note" name="task" signature="Lcom/rationaldevelopers/examples/model/Task;" isStatic="false">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Note" sourcefile="Note.java" sourcepath="com/rationaldevelopers/examples/model/Note.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rationaldevelopers.examples.model.Task">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Task" start="56" end="184" sourcefile="Task.java" sourcepath="com/rationaldevelopers/examples/model/Task.java"/>
+    </Class>
+    <Field classname="com.rationaldevelopers.examples.model.Task" name="notes" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Task" sourcefile="Task.java" sourcepath="com/rationaldevelopers/examples/model/Task.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rationaldevelopers.examples.model.Task">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Task" start="56" end="184" sourcefile="Task.java" sourcepath="com/rationaldevelopers/examples/model/Task.java"/>
+    </Class>
+    <Field classname="com.rationaldevelopers.examples.model.Task" name="category" signature="Lcom/rationaldevelopers/examples/model/Category;" isStatic="false">
+      <SourceLine classname="com.rationaldevelopers.examples.model.Task" sourcefile="Task.java" sourcepath="com/rationaldevelopers/examples/model/Task.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.SecurityContext</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Hex</MissingClass>
+    <MissingClass>org.apache.commons.codec.digest.DigestUtils</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:57:26 +0000" total_classes="11" referenced_classes="49" total_bugs="5" total_size="365" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.35" clock_seconds="1.51" peak_mbytes="192.70" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="3" priority_1="2">
+    <PackageStats package="com.rationaldevelopers.examples.concurrent" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="com.rationaldevelopers.examples.concurrent.ManagedThreadLocal" sourceFile="ManagedThreadLocal.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rationaldevelopers.examples.endpoints" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="com.rationaldevelopers.examples.endpoints.APIApplication" sourceFile="APIApplication.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.rationaldevelopers.examples.endpoints.UserEndPoint" sourceFile="UserEndPoint.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rationaldevelopers.examples.model" total_bugs="5" total_types="5" total_size="248" priority_2="3" priority_1="2">
+      <ClassStats class="com.rationaldevelopers.examples.model.Category" sourceFile="Category.java" interface="false" size="43" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.rationaldevelopers.examples.model.Note" sourceFile="Note.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="com.rationaldevelopers.examples.model.Persistent" sourceFile="Persistent.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.rationaldevelopers.examples.model.Task" sourceFile="Task.java" interface="false" size="80" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.rationaldevelopers.examples.model.User" sourceFile="User.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rationaldevelopers.examples.service" total_bugs="0" total_types="3" total_size="77">
+      <ClassStats class="com.rationaldevelopers.examples.service.CategoryService" sourceFile="CategoryService.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.rationaldevelopers.examples.service.DataService" sourceFile="DataService.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.rationaldevelopers.examples.service.UserService" sourceFile="UserService.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="232" invocations="514" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="20501" standardDeviationMicrosecondsPerInvocation="1236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="60" invocations="49" avgMicrosecondsPerInvocation="1226" maxMicrosecondsPerInvocation="11177" standardDeviationMicrosecondsPerInvocation="2005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="520" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="411" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="46" invocations="49" avgMicrosecondsPerInvocation="949" maxMicrosecondsPerInvocation="5298" standardDeviationMicrosecondsPerInvocation="1372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="425" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="1728" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="38" invocations="234" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="2572" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="35" invocations="101" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="5004" standardDeviationMicrosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="34" invocations="100" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="13866" standardDeviationMicrosecondsPerInvocation="1407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="101" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="8588" standardDeviationMicrosecondsPerInvocation="859"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="32" invocations="102" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="10419" standardDeviationMicrosecondsPerInvocation="1026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="101" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="23022" standardDeviationMicrosecondsPerInvocation="2271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="31" invocations="101" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="2045" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="29" invocations="101" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="3656" standardDeviationMicrosecondsPerInvocation="433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="101" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="8319" standardDeviationMicrosecondsPerInvocation="822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="49" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="7575" standardDeviationMicrosecondsPerInvocation="1122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="438" maxMicrosecondsPerInvocation="4078" standardDeviationMicrosecondsPerInvocation="884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="9632" standardDeviationMicrosecondsPerInvocation="1375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="49" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="2499" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="49" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="4945" standardDeviationMicrosecondsPerInvocation="737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="13" invocations="56" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="853" standardDeviationMicrosecondsPerInvocation="158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="49" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="1899" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="11" invocations="49" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="4071" standardDeviationMicrosecondsPerInvocation="821"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

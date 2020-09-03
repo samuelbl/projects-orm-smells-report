@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595984653000" analysisTimestamp="1595984655495" release="">
+  <Project projectName="repositorios/sahan89_ShoppingCart">
+    <Jar>repositorios/sahan89_ShoppingCart</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sahan.zaizi.domain.ShoppingCart">
+      <SourceLine classname="com.sahan.zaizi.domain.ShoppingCart" start="13" end="95" sourcefile="ShoppingCart.java" sourcepath="com/sahan/zaizi/domain/ShoppingCart.java"/>
+    </Class>
+    <Field classname="com.sahan.zaizi.domain.ShoppingCart" name="product" signature="Lcom/sahan/zaizi/domain/Product;" isStatic="false">
+      <SourceLine classname="com.sahan.zaizi.domain.ShoppingCart" sourcefile="ShoppingCart.java" sourcepath="com/sahan/zaizi/domain/ShoppingCart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sahan.zaizi.domain.ShoppingCart">
+      <SourceLine classname="com.sahan.zaizi.domain.ShoppingCart" start="13" end="95" sourcefile="ShoppingCart.java" sourcepath="com/sahan/zaizi/domain/ShoppingCart.java"/>
+    </Class>
+    <Field classname="com.sahan.zaizi.domain.ShoppingCart" name="user" signature="Lcom/sahan/zaizi/domain/User;" isStatic="false">
+      <SourceLine classname="com.sahan.zaizi.domain.ShoppingCart" sourcefile="ShoppingCart.java" sourcepath="com/sahan/zaizi/domain/ShoppingCart.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.ConfigurableApplicationContext</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 01:04:13 +0000" total_classes="15" referenced_classes="33" total_bugs="2" total_size="264" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.59" clock_seconds="1.37" peak_mbytes="124.14" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="2">
+    <PackageStats package="com.sahan.zaizi" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.sahan.zaizi.ShoppingCartApplication" sourceFile="ShoppingCartApplication.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sahan.zaizi.controller" total_bugs="0" total_types="3" total_size="31">
+      <ClassStats class="com.sahan.zaizi.controller.HistoryController" sourceFile="HistoryController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.controller.ProductController" sourceFile="ProductController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.controller.ShoppingCartController" sourceFile="ShoppingCartController.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sahan.zaizi.domain" total_bugs="2" total_types="3" total_size="117" priority_2="2">
+      <ClassStats class="com.sahan.zaizi.domain.Product" sourceFile="Product.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.domain.ShoppingCart" sourceFile="ShoppingCart.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="com.sahan.zaizi.domain.User" sourceFile="User.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sahan.zaizi.dto" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.sahan.zaizi.dto.ShoppingCartDTO" sourceFile="ShoppingCartDTO.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.dto.ShoppingCartIdDTO" sourceFile="ShoppingCartIdDTO.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sahan.zaizi.repository" total_bugs="0" total_types="3" total_size="4">
+      <ClassStats class="com.sahan.zaizi.repository.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.repository.ShoppingCartRepository" sourceFile="ShoppingCartRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sahan.zaizi.service" total_bugs="0" total_types="3" total_size="72">
+      <ClassStats class="com.sahan.zaizi.service.ProductService" sourceFile="ProductService.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.service.ShoppingCartService" sourceFile="ShoppingCartService.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.sahan.zaizi.service.UserService" sourceFile="UserService.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="197" invocations="393" avgMicrosecondsPerInvocation="501" maxMicrosecondsPerInvocation="17955" standardDeviationMicrosecondsPerInvocation="1421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="101" invocations="74" avgMicrosecondsPerInvocation="1372" maxMicrosecondsPerInvocation="92004" standardDeviationMicrosecondsPerInvocation="10615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="33" avgMicrosecondsPerInvocation="1691" maxMicrosecondsPerInvocation="11897" standardDeviationMicrosecondsPerInvocation="2627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="336" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="12794" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="152" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="4539" standardDeviationMicrosecondsPerInvocation="613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="39" invocations="395" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="689" standardDeviationMicrosecondsPerInvocation="62"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="33" avgMicrosecondsPerInvocation="1109" maxMicrosecondsPerInvocation="5849" standardDeviationMicrosecondsPerInvocation="1660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="29" invocations="73" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="7163" standardDeviationMicrosecondsPerInvocation="904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="29" invocations="73" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="5227" standardDeviationMicrosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="28" invocations="67" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="14049" standardDeviationMicrosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="26" invocations="73" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="8675" standardDeviationMicrosecondsPerInvocation="1069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="73" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="7818" standardDeviationMicrosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="25" invocations="73" avgMicrosecondsPerInvocation="347" maxMicrosecondsPerInvocation="5102" standardDeviationMicrosecondsPerInvocation="734"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="22" invocations="73" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="8666" standardDeviationMicrosecondsPerInvocation="1035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="33" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="7079" standardDeviationMicrosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="33" avgMicrosecondsPerInvocation="584" maxMicrosecondsPerInvocation="10231" standardDeviationMicrosecondsPerInvocation="1757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="33" avgMicrosecondsPerInvocation="525" maxMicrosecondsPerInvocation="4984" standardDeviationMicrosecondsPerInvocation="1102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="33" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="6081" standardDeviationMicrosecondsPerInvocation="1089"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

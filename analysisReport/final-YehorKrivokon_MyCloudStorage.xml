@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596956185000" analysisTimestamp="1596956186296" release="">
+  <Project projectName="repositorios/YehorKrivokon_MyCloudStorage">
+    <Jar>repositorios/YehorKrivokon_MyCloudStorage</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="net.MyCloud.cloud.daoImpl.DataDaoImpl">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="15" end="67" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Class>
+    <Method classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" name="findByDataid" signature="(J)Lnet/MyCloud/cloud/model/Data;" isStatic="false">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="37" end="39" startBytecode="0" endBytecode="106" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="net.MyCloud.cloud.daoImpl.DataDaoImpl">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="15" end="67" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Class>
+    <Method classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" name="searchData" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="65" end="67" startBytecode="0" endBytecode="123" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="65" end="65" startBytecode="4" endBytecode="4" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="net.MyCloud.cloud.daoImpl.DataDaoImpl">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="15" end="67" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Class>
+    <Method classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" name="userDataList" signature="(Ljava/lang/Long;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="44" end="60" startBytecode="0" endBytecode="293" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="net.MyCloud.cloud.daoImpl.DataDaoImpl" start="45" end="45" startBytecode="23" endBytecode="23" sourcefile="DataDaoImpl.java" sourcepath="net/MyCloud/cloud/daoImpl/DataDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.MyCloud.cloud.model.Data">
+      <SourceLine classname="net.MyCloud.cloud.model.Data" start="9" end="84" sourcefile="Data.java" sourcepath="net/MyCloud/cloud/model/Data.java"/>
+    </Class>
+    <Field classname="net.MyCloud.cloud.model.Data" name="user" signature="Lnet/MyCloud/cloud/model/User;" isStatic="false">
+      <SourceLine classname="net.MyCloud.cloud.model.Data" sourcefile="Data.java" sourcepath="net/MyCloud/cloud/model/Data.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.ValidationUtils</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 06:56:25 +0000" total_classes="16" referenced_classes="61" total_bugs="4" total_size="315" num_packages="7" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.55" clock_seconds="1.56" peak_mbytes="128.11" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="4">
+    <PackageStats package="net.MyCloud.cloud.controller" total_bugs="0" total_types="1" total_size="74">
+      <ClassStats class="net.MyCloud.cloud.controller.UserController" sourceFile="UserController.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.dao" total_bugs="0" total_types="3" total_size="9">
+      <ClassStats class="net.MyCloud.cloud.dao.DataDao" sourceFile="DataDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.dao.RoleDao" sourceFile="RoleDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.dao.UserDao" sourceFile="UserDao.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.daoImpl" total_bugs="3" total_types="1" total_size="34" priority_2="3">
+      <ClassStats class="net.MyCloud.cloud.daoImpl.DataDaoImpl" sourceFile="DataDaoImpl.java" interface="false" size="34" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.exceptions" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="net.MyCloud.cloud.exceptions.FileErrorException" sourceFile="FileErrorException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.model" total_bugs="1" total_types="3" total_size="105" priority_2="1">
+      <ClassStats class="net.MyCloud.cloud.model.Data" sourceFile="Data.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="net.MyCloud.cloud.model.Role" sourceFile="Role.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.model.User" sourceFile="User.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.service" total_bugs="0" total_types="6" total_size="71">
+      <ClassStats class="net.MyCloud.cloud.service.DataService" sourceFile="DataService.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.service.SecurityService" sourceFile="SecurityService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.service.SecurityServiceImpl" sourceFile="SecurityServiceImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.service.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.MyCloud.cloud.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.MyCloud.cloud.validator" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="net.MyCloud.cloud.validator.UserValidator" sourceFile="UserValidator.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="184" invocations="583" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="12231" standardDeviationMicrosecondsPerInvocation="862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="70" invocations="61" avgMicrosecondsPerInvocation="1157" maxMicrosecondsPerInvocation="12734" standardDeviationMicrosecondsPerInvocation="2307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="493" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="27012" standardDeviationMicrosecondsPerInvocation="1218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="53" invocations="213" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="3790" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="61" avgMicrosecondsPerInvocation="865" maxMicrosecondsPerInvocation="9333" standardDeviationMicrosecondsPerInvocation="1783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="589" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="514" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="36" invocations="69" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="8520" standardDeviationMicrosecondsPerInvocation="1149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="79" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="25047" standardDeviationMicrosecondsPerInvocation="2791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="32" invocations="70" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="8695" standardDeviationMicrosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="109" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="14460" standardDeviationMicrosecondsPerInvocation="1410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="31" invocations="70" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="9659" standardDeviationMicrosecondsPerInvocation="1210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="28" invocations="69" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="3400" standardDeviationMicrosecondsPerInvocation="618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="69" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="10279" standardDeviationMicrosecondsPerInvocation="1251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="26" invocations="69" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="2662" standardDeviationMicrosecondsPerInvocation="584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="61" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="7313" standardDeviationMicrosecondsPerInvocation="1025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="16" avgMicrosecondsPerInvocation="1345" maxMicrosecondsPerInvocation="21218" standardDeviationMicrosecondsPerInvocation="5131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="61" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="4345" standardDeviationMicrosecondsPerInvocation="801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="61" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="8647" standardDeviationMicrosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="61" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="2963" standardDeviationMicrosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="61" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="5445" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="61" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="1942" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="12" invocations="40" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="994" standardDeviationMicrosecondsPerInvocation="299"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

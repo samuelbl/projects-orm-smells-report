@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597104215000" analysisTimestamp="1597104217222" release="">
+  <Project projectName="repositorios/gustavoorsi_e-learning">
+    <Jar>repositorios/gustavoorsi_e-learning</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.elearning.model.entities.Lesson">
+      <SourceLine classname="com.elearning.model.entities.Lesson" start="41" end="94" sourcefile="Lesson.java" sourcepath="com/elearning/model/entities/Lesson.java"/>
+    </Class>
+    <Field classname="com.elearning.model.entities.Lesson" name="course" signature="Lcom/elearning/model/entities/Course;" isStatic="false">
+      <SourceLine classname="com.elearning.model.entities.Lesson" sourcefile="Lesson.java" sourcepath="com/elearning/model/entities/Lesson.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.elearning.model.entities.LessonStep">
+      <SourceLine classname="com.elearning.model.entities.LessonStep" start="32" end="71" sourcefile="LessonStep.java" sourcepath="com/elearning/model/entities/LessonStep.java"/>
+    </Class>
+    <Field classname="com.elearning.model.entities.LessonStep" name="lesson" signature="Lcom/elearning/model/entities/Lesson;" isStatic="false">
+      <SourceLine classname="com.elearning.model.entities.LessonStep" sourcefile="LessonStep.java" sourcepath="com/elearning/model/entities/LessonStep.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.elearning.model.persistence.jparepositories.LessonRepository">
+      <SourceLine classname="com.elearning.model.persistence.jparepositories.LessonRepository" sourcefile="LessonRepository.java" sourcepath="com/elearning/model/persistence/jparepositories/LessonRepository.java"/>
+    </Class>
+    <Method classname="com.elearning.model.persistence.jparepositories.LessonRepository" name="findByIdAndFetchLessonStepsEagerly" signature="(Ljava/lang/Long;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.elearning.model.persistence.jparepositories.LessonRepository" sourcefile="LessonRepository.java" sourcepath="com/elearning/model/persistence/jparepositories/LessonRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="138">
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.google.common.base.Optional</MissingClass>
+    <MissingClass>com.google.common.base.Strings</MissingClass>
+    <MissingClass>com.netflix.appinfo.InstanceInfo</MissingClass>
+    <MissingClass>com.netflix.discovery.DiscoveryClient</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>net.sf.ehcache.Cache</MissingClass>
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>net.sf.ehcache.Element</MissingClass>
+    <MissingClass>net.sf.ehcache.config.CacheConfiguration</MissingClass>
+    <MissingClass>net.sf.ehcache.config.Configuration</MissingClass>
+    <MissingClass>nz.net.ultraq.thymeleaf.LayoutDialect</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.slf4j.MDC</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.context.web.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.cache.annotation.CachingConfigurer</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheCacheManager</MissingClass>
+    <MissingClass>org.springframework.cache.interceptor.SimpleKeyGenerator</MissingClass>
+    <MissingClass>org.springframework.core.ParameterizedTypeReference</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.solr.core.geo.Point</MissingClass>
+    <MissingClass>org.springframework.data.solr.repository.SolrCrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.web.PagedResourcesAssembler</MissingClass>
+    <MissingClass>org.springframework.hateoas.Link</MissingClass>
+    <MissingClass>org.springframework.hateoas.PagedResources</MissingClass>
+    <MissingClass>org.springframework.hateoas.Resource</MissingClass>
+    <MissingClass>org.springframework.hateoas.ResourceAssembler</MissingClass>
+    <MissingClass>org.springframework.hateoas.VndErrors</MissingClass>
+    <MissingClass>org.springframework.hateoas.hal.Jackson2HalModule</MissingClass>
+    <MissingClass>org.springframework.hateoas.mvc.ControllerLinkBuilder</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.InternalAuthenticationServiceException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.MessageDigestPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity$RequestMatcherConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.AnonymousConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.AuthorityUtils</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.encrypt.Encryptors</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.client.DefaultOAuth2ClientContext</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.client.OAuth2RestTemplate</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder$ClientBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.TokenStore</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.social.config.annotation.ConnectionFactoryConfigurer</MissingClass>
+    <MissingClass>org.springframework.social.config.annotation.SocialConfigurer</MissingClass>
+    <MissingClass>org.springframework.social.connect.Connection</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionKey</MissingClass>
+    <MissingClass>org.springframework.social.connect.UserProfile</MissingClass>
+    <MissingClass>org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.ConnectController</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.ProviderSignInUtils</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.thymeleaf.SpringSocialDialect</MissingClass>
+    <MissingClass>org.springframework.social.facebook.connect.FacebookConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.social.linkedin.connect.LinkedInConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.social.security.AuthenticationNameUserIdSource</MissingClass>
+    <MissingClass>org.springframework.social.security.SocialUserDetails</MissingClass>
+    <MissingClass>org.springframework.social.security.SocialUserDetailsService</MissingClass>
+    <MissingClass>org.springframework.social.security.SpringSocialConfigurer</MissingClass>
+    <MissingClass>org.springframework.social.twitter.connect.TwitterConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.ServletUriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UrlPathHelper</MissingClass>
+    <MissingClass>org.thymeleaf.extras.springsecurity3.dialect.SpringSecurityDialect</MissingClass>
+    <MissingClass>org.thymeleaf.spring4.SpringTemplateEngine</MissingClass>
+    <MissingClass>org.thymeleaf.spring4.view.ThymeleafViewResolver</MissingClass>
+    <MissingClass>org.thymeleaf.templateresolver.ServletContextTemplateResolver</MissingClass>
+    <MissingClass>org.thymeleaf.templateresolver.TemplateResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:03:35 +0000" total_classes="132" referenced_classes="203" total_bugs="3" total_size="1785" num_packages="57" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.77" clock_seconds="2.75" peak_mbytes="302.78" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="com" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="com.RootApplication" sourceFile="RootApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.RootTestApplication" sourceFile="RootTestApplication.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.elearning.RootApplication" sourceFile="RootApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.authserver.config" total_bugs="0" total_types="4" total_size="65">
+      <ClassStats class="com.elearning.authserver.config.OauthTableConfiguration" sourceFile="OauthTableConfiguration.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.elearning.authserver.config.SecurityConfiguration" sourceFile="SecurityConfiguration.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.elearning.authserver.config.SecurityConfiguration$1" sourceFile="SecurityConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.authserver.config.WebSecurityConfiguration" sourceFile="WebSecurityConfiguration.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.authserver.security.services" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="com.elearning.authserver.security.services.FakeUserDetailsService" sourceFile="FakeUserDetailsService.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.constants" total_bugs="0" total_types="4" total_size="34">
+      <ClassStats class="com.elearning.constants.ElearningConstants" sourceFile="ElearningConstants.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.elearning.constants.ElearningConstants$API_SERVICE_1" sourceFile="ElearningConstants.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.elearning.constants.ElearningConstants$API_SERVICE_2" sourceFile="ElearningConstants.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.elearning.constants.ElearningConstants$API_SERVICE_3" sourceFile="ElearningConstants.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.model.config" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.elearning.model.config.DevDbInitConfiguration" sourceFile="DevDbInitConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.model.constants" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="com.elearning.model.constants.Role" sourceFile="Role.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.elearning.model.constants.SocialMediaService" sourceFile="SocialMediaService.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.model.entities" total_bugs="2" total_types="5" total_size="197" priority_2="2">
+      <ClassStats class="com.elearning.model.entities.Course" sourceFile="Course.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.elearning.model.entities.Foo" sourceFile="Foo.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.elearning.model.entities.Lesson" sourceFile="Lesson.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="com.elearning.model.entities.LessonStep" sourceFile="LessonStep.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="com.elearning.model.entities.User" sourceFile="User.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.model.exception" total_bugs="0" total_types="5" total_size="23">
+      <ClassStats class="com.elearning.model.exception.CourseNotFoundException" sourceFile="CourseNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.model.exception.CourseTopicAlreadyExistException" sourceFile="CourseTopicAlreadyExistException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.model.exception.EntityNotFoundException" sourceFile="EntityNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.elearning.model.exception.LessonNotFoundException" sourceFile="LessonNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.model.exception.LessonStepNotFoundException" sourceFile="LessonStepNotFoundException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.model.persistence.jparepositories" total_bugs="1" total_types="5" total_size="17" priority_2="1">
+      <ClassStats class="com.elearning.model.persistence.jparepositories.CourseRepository" sourceFile="CourseRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.elearning.model.persistence.jparepositories.FooRepository" sourceFile="FooRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.elearning.model.persistence.jparepositories.LessonRepository" sourceFile="LessonRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="com.elearning.model.persistence.jparepositories.LessonStepRepository" sourceFile="LessonStepRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.elearning.model.persistence.jparepositories.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.aop" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.elearning.rest1.aop.ExceptionControllerAdvice" sourceFile="ExceptionControllerAdvice.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.config" total_bugs="0" total_types="4" total_size="26">
+      <ClassStats class="com.elearning.rest1.config.MocksConfig" sourceFile="MocksConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.RestServiceUnitTest" sourceFile="RestServiceUnitTest.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.TestRestServiceWebConfig" sourceFile="TestRestServiceWebConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.TestUtils" sourceFile="TestUtils.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.config.messageConverters" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.elearning.rest1.config.messageConverters.MessageConverterConfiguration" sourceFile="MessageConverterConfiguration.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.config.security" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.elearning.rest1.config.security.LoggedInUser" sourceFile="LoggedInUser.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.config.security.oauth2" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.elearning.rest1.config.security.oauth2.OAuth2ResourceServerConfig" sourceFile="OAuth2ResourceServerConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.security.oauth2.Oauth2AuthenticationServerConfig" sourceFile="Oauth2AuthenticationServerConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.security.oauth2.Oauth2AuthorizationServerConfig" sourceFile="Oauth2AuthorizationServerConfig.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.config.security.web" total_bugs="0" total_types="4" total_size="38">
+      <ClassStats class="com.elearning.rest1.config.security.web.UserRepositoryUserDetailsService" sourceFile="UserRepositoryUserDetailsService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.security.web.UserRepositoryUserDetailsService$1" sourceFile="UserRepositoryUserDetailsService.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.security.web.UserRepositoryUserDetailsService$CustomUserDetails" sourceFile="UserRepositoryUserDetailsService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.config.security.web.WebSecurityAuthenticationConfig" sourceFile="WebSecurityAuthenticationConfig.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.endpoints" total_bugs="0" total_types="6" total_size="87">
+      <ClassStats class="com.elearning.rest1.endpoints.AbstractRestControllerTest" sourceFile="AbstractRestControllerTest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.endpoints.CourseRestController" sourceFile="CourseRestController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.endpoints.CourseRestControllerTest" sourceFile="CourseRestControllerTest.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.endpoints.FooRestController" sourceFile="FooRestController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.endpoints.LessonRestController" sourceFile="LessonRestController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.endpoints.LessonStepRestController" sourceFile="LessonStepRestController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.endpoints.constantURLs" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.elearning.rest1.endpoints.constantURLs.ConstantEndpointURLs" sourceFile="ConstantEndpointURLs.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.resources" total_bugs="0" total_types="5" total_size="19">
+      <ClassStats class="com.elearning.rest1.resources.CourseResource" sourceFile="CourseResource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.FooResource" sourceFile="FooResource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.LessonResource" sourceFile="LessonResource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.LessonStepResource" sourceFile="LessonStepResource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.Rest1ServiceEurekaLinkCreator" sourceFile="Rest1ServiceEurekaLinkCreator.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest1.resources.assemblers" total_bugs="0" total_types="4" total_size="44">
+      <ClassStats class="com.elearning.rest1.resources.assemblers.CourseResourceAssembler" sourceFile="CourseResourceAssembler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.assemblers.FooResourceAssembler" sourceFile="FooResourceAssembler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.assemblers.LessonResourceAssembler" sourceFile="LessonResourceAssembler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.rest1.resources.assemblers.LessonStepResourceAssembler" sourceFile="LessonStepResourceAssembler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.aop" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.elearning.rest2.aop.ExceptionControllerAdvice" sourceFile="ExceptionControllerAdvice.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.config.messageConverters" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.elearning.rest2.config.messageConverters.MessageConverterConfiguration" sourceFile="MessageConverterConfiguration.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.config.security" total_bugs="0" total_types="2" total_size="62">
+      <ClassStats class="com.elearning.rest2.config.security.EhCacheTokenConfiguration" sourceFile="EhCacheTokenConfiguration.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.config.security.SecurityRest2Configuration" sourceFile="SecurityRest2Configuration.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.domain" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="com.elearning.rest2.domain.Foo" sourceFile="Foo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.domain.User" sourceFile="User.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.endpoints" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.elearning.rest2.endpoints.FooController" sourceFile="FooController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.resources" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.elearning.rest2.resources.FooResource" sourceFile="FooResource.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.resources.assemblers" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.elearning.rest2.resources.assemblers.FooResourceAssembler" sourceFile="FooResourceAssembler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.authentications" total_bugs="0" total_types="3" total_size="26">
+      <ClassStats class="com.elearning.rest2.security.authentications.AuthenticatedExternalWebService" sourceFile="AuthenticatedExternalWebService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.authentications.AuthenticationWithToken" sourceFile="AuthenticationWithToken.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.authentications.BackendAdminUsernamePasswordAuthenticationToken" sourceFile="BackendAdminUsernamePasswordAuthenticationToken.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.authenticators.external" total_bugs="0" total_types="3" total_size="17">
+      <ClassStats class="com.elearning.rest2.security.authenticators.external.ExternalServiceAuthenticator" sourceFile="ExternalServiceAuthenticator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.authenticators.external.ExternalWebServiceStub" sourceFile="ExternalWebServiceStub.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.authenticators.external.SomeExternalServiceAuthenticator" sourceFile="SomeExternalServiceAuthenticator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.filters" total_bugs="0" total_types="2" total_size="138">
+      <ClassStats class="com.elearning.rest2.security.filters.AuthenticationFilter" sourceFile="AuthenticationFilter.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.filters.ManagementEndpointAuthenticationFilter" sourceFile="ManagementEndpointAuthenticationFilter.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.providers" total_bugs="0" total_types="3" total_size="56">
+      <ClassStats class="com.elearning.rest2.security.providers.BackendAdminUsernamePasswordAuthenticationProvider" sourceFile="BackendAdminUsernamePasswordAuthenticationProvider.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.providers.DomainUsernamePasswordAuthenticationProvider" sourceFile="DomainUsernamePasswordAuthenticationProvider.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.elearning.rest2.security.providers.TokenAuthenticationProvider" sourceFile="TokenAuthenticationProvider.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.responses" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.elearning.rest2.security.responses.TokenResponse" sourceFile="TokenResponse.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest2.security.services" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.elearning.rest2.security.services.TokenService" sourceFile="TokenService.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.aop" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.elearning.rest3.aop.ExceptionControllerAdvice" sourceFile="ExceptionControllerAdvice.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.domain" total_bugs="0" total_types="1" total_size="41">
+      <ClassStats class="com.elearning.rest3.domain.Product" sourceFile="Product.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.endpoints" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.elearning.rest3.endpoints.Rest3Controller" sourceFile="Rest3Controller.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.repository" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.elearning.rest3.repository.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.resources" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.elearning.rest3.resources.ProductResource" sourceFile="ProductResource.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.rest3.resources.assemblers" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.elearning.rest3.resources.assemblers.ProductResourceAssembler" sourceFile="ProductResourceAssembler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.service" total_bugs="0" total_types="4" total_size="18">
+      <ClassStats class="com.elearning.service.CourseService" sourceFile="CourseService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.elearning.service.FooService" sourceFile="FooService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.elearning.service.LessonService" sourceFile="LessonService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.elearning.service.LessonStepService" sourceFile="LessonStepService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.service.impl" total_bugs="0" total_types="4" total_size="70">
+      <ClassStats class="com.elearning.service.impl.CourseServiceImpl" sourceFile="CourseServiceImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.elearning.service.impl.FooServiceImpl" sourceFile="FooServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.elearning.service.impl.LessonServiceImpl" sourceFile="LessonServiceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.elearning.service.impl.LessonStepServiceImpl" sourceFile="LessonStepServiceImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.config.mvc" total_bugs="0" total_types="5" total_size="80">
+      <ClassStats class="com.elearning.web.config.mvc.MessageConverterConfiguration" sourceFile="MessageConverterConfiguration.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.mvc.RestTemplatesConfiguration" sourceFile="RestTemplatesConfiguration.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.mvc.ThymeleafConfiguration" sourceFile="ThymeleafConfiguration.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.mvc.WebMvcConfiguration" sourceFile="WebMvcConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.mvc.WebXml" sourceFile="WebXml.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.config.proxy" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.elearning.web.config.proxy.ProxyConfig" sourceFile="ProxyConfig.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.config.security" total_bugs="0" total_types="4" total_size="62">
+      <ClassStats class="com.elearning.web.config.security.LoggedInUser" sourceFile="LoggedInUser.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.security.WebSecurityAuthenticationConfig" sourceFile="WebSecurityAuthenticationConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.security.WebSecurityAuthorizationConfig" sourceFile="WebSecurityAuthorizationConfig.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.security.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.config.security.social" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.elearning.web.config.security.social.SocialIntegrationConfig" sourceFile="SocialIntegrationConfig.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.config.security.userrepositories" total_bugs="0" total_types="3" total_size="43">
+      <ClassStats class="com.elearning.web.config.security.userrepositories.CustomUserDetails" sourceFile="CustomUserDetails.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.security.userrepositories.SimpleSocialUserDetailsService" sourceFile="SimpleSocialUserDetailsService.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.elearning.web.config.security.userrepositories.UserRepositoryUserDetailsService" sourceFile="UserRepositoryUserDetailsService.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.constants" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.elearning.web.constants.ConstantEndpointURLs" sourceFile="ConstantEndpointURLs.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.controller" total_bugs="0" total_types="4" total_size="87">
+      <ClassStats class="com.elearning.web.controller.CoursesController" sourceFile="CoursesController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.elearning.web.controller.FooController" sourceFile="FooController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.elearning.web.controller.RegistrationController" sourceFile="RegistrationController.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.elearning.web.controller.SignUpController" sourceFile="SignUpController.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.dto" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.elearning.web.dto.Courses" sourceFile="Courses.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.form" total_bugs="0" total_types="2" total_size="52">
+      <ClassStats class="com.elearning.web.form.CourseForm" sourceFile="CourseForm.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.elearning.web.form.RegistrationForm" sourceFile="RegistrationForm.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.elearning.web.service.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.service.endpointdiscovery" total_bugs="0" total_types="3" total_size="17">
+      <ClassStats class="com.elearning.web.service.endpointdiscovery.BasicRestServiceDiscovery" sourceFile="BasicRestServiceDiscovery.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.endpointdiscovery.EurekaServiceDiscovery" sourceFile="EurekaServiceDiscovery.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.endpointdiscovery.ServiceDiscovery" sourceFile="ServiceDiscovery.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.service.exceptions" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.elearning.web.service.exceptions.DuplicateEmailException" sourceFile="DuplicateEmailException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.service.impl.local" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.elearning.web.service.impl.local.CourseServiceLocalImpl" sourceFile="CourseServiceLocalImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.impl.local.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.service.impl.remote" total_bugs="0" total_types="5" total_size="63">
+      <ClassStats class="com.elearning.web.service.impl.remote.CourseServiceRestImpl" sourceFile="CourseServiceRestImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.impl.remote.CourseServiceRestImpl$1" sourceFile="CourseServiceRestImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.impl.remote.CourseServiceRestImpl$2" sourceFile="CourseServiceRestImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.impl.remote.FooServiceRestImpl" sourceFile="FooServiceRestImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.elearning.web.service.impl.remote.FooServiceRestImpl$1" sourceFile="FooServiceRestImpl.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.elearning.web.util" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.elearning.web.util.SecurityUtil" sourceFile="SecurityUtil.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="demo" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="demo.ELearningAuthenticationServerApplicationTests" sourceFile="ELearningAuthenticationServerApplicationTests.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="212" invocations="1044" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="12648" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="104" invocations="438" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="6527" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="90" invocations="428" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="4415" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="86" invocations="438" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="8086" standardDeviationMicrosecondsPerInvocation="481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="86" invocations="203" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="11511" standardDeviationMicrosecondsPerInvocation="1145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="81" invocations="438" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="7581" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="80" invocations="203" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="10285" standardDeviationMicrosecondsPerInvocation="1087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="75" invocations="437" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="3056" standardDeviationMicrosecondsPerInvocation="276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="70" invocations="1060" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="555" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="69" invocations="438" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="7856" standardDeviationMicrosecondsPerInvocation="419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="62" invocations="702" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2654" standardDeviationMicrosecondsPerInvocation="193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="54" invocations="331" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="2388" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="51" invocations="466" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="22663" standardDeviationMicrosecondsPerInvocation="1047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="43" invocations="388" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="13535" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="745" avgMicrosecondsPerInvocation="58" maxMicrosecondsPerInvocation="1555" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="203" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="3280" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="203" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="1996" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="3729" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="968" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="26" invocations="132" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="2376" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="24" invocations="203" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2221" standardDeviationMicrosecondsPerInvocation="230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="23" invocations="438" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="1156" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="132" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="2792" standardDeviationMicrosecondsPerInvocation="283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="203" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="6938" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="203" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="4908" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="20" invocations="132" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="5143" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="18" invocations="132" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1557" standardDeviationMicrosecondsPerInvocation="189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="132" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="8940" standardDeviationMicrosecondsPerInvocation="896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="17" invocations="132" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="1372" standardDeviationMicrosecondsPerInvocation="190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="17" invocations="132" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="1575" standardDeviationMicrosecondsPerInvocation="174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Naming" totalMilliseconds="16" invocations="132" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="3115" standardDeviationMicrosecondsPerInvocation="271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="203" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="2694" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="132" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="1979" standardDeviationMicrosecondsPerInvocation="248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="14" invocations="428" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1412" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="14" invocations="132" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="1611" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="14" invocations="132" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="2517" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="13" invocations="203" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1237" standardDeviationMicrosecondsPerInvocation="147"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

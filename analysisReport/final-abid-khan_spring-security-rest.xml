@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086215000" analysisTimestamp="1597086216824" release="">
+  <Project projectName="repositorios/abid-khan_spring-security-rest">
+    <Jar>repositorios/abid-khan_spring-security-rest</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="security.entity.AuthToken">
+      <SourceLine classname="security.entity.AuthToken" start="11" end="45" sourcefile="AuthToken.java" sourcepath="security/entity/AuthToken.java"/>
+    </Class>
+    <Field classname="security.entity.AuthToken" name="user" signature="Lsecurity/entity/User;" isStatic="false">
+      <SourceLine classname="security.entity.AuthToken" sourcefile="AuthToken.java" sourcepath="security/entity/AuthToken.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="security.repository.AuthTokenRepository">
+      <SourceLine classname="security.repository.AuthTokenRepository" sourcefile="AuthTokenRepository.java" sourcepath="security/repository/AuthTokenRepository.java"/>
+    </Class>
+    <Method classname="security.repository.AuthTokenRepository" name="deleteByTokenAndSeries" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="security.repository.AuthTokenRepository" sourcefile="AuthTokenRepository.java" sourcepath="security/repository/AuthTokenRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="43">
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.AbstractPersistable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationServiceException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.codec.Base64</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.Http403ForbiddenEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.rememberme.InvalidCookieException</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:03:35 +0000" total_classes="29" referenced_classes="49" total_bugs="2" total_size="396" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.08" clock_seconds="1.49" peak_mbytes="190.22" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="security" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="security.SecurityApplication" sourceFile="SecurityApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="security.SecurityApplicationTests" sourceFile="SecurityApplicationTests.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.bean" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="security.bean.User" sourceFile="User.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.config" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="security.config.APISecurityConfig" sourceFile="APISecurityConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="security.config.MvcConfig" sourceFile="MvcConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="security.config.MvcSecurityConfig" sourceFile="MvcSecurityConfig.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.constant" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="security.constant.Constant" sourceFile="Constant.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.controller" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="security.controller.APIController" sourceFile="APIController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="security.controller.AuthController" sourceFile="AuthController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.data" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="security.data.DataGenerator" sourceFile="DataGenerator.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.entity" total_bugs="1" total_types="3" total_size="64" priority_2="1">
+      <ClassStats class="security.entity.AbstractAuditableEntity" sourceFile="AbstractAuditableEntity.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="security.entity.AuthToken" sourceFile="AuthToken.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="security.entity.User" sourceFile="User.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.filter" total_bugs="0" total_types="1" total_size="47">
+      <ClassStats class="security.filter.TokenBasedAuthenticationFilter" sourceFile="TokenBasedAuthenticationFilter.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.handler" total_bugs="0" total_types="4" total_size="43">
+      <ClassStats class="security.handler.AuthenticationFailureHandlerImpl" sourceFile="AuthenticationFailureHandlerImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="security.handler.AuthenticationSuccessHandlerImpl" sourceFile="AuthenticationSuccessHandlerImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="security.handler.LogoutSuccessHandlerImpl" sourceFile="LogoutSuccessHandlerImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="security.handler.TokenBasedAuthenticationSuccessHandlerImpl" sourceFile="TokenBasedAuthenticationSuccessHandlerImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.repository" total_bugs="1" total_types="2" total_size="6" priority_2="1">
+      <ClassStats class="security.repository.AuthTokenRepository" sourceFile="AuthTokenRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="security.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.schedule" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="security.schedule.CleanupAuthenticationTokenScheduler" sourceFile="CleanupAuthenticationTokenScheduler.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.service.base" total_bugs="0" total_types="3" total_size="11">
+      <ClassStats class="security.service.base.AuthTokenGeneratorService" sourceFile="AuthTokenGeneratorService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="security.service.base.AuthTokenService" sourceFile="AuthTokenService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="security.service.base.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="security.service.impl" total_bugs="0" total_types="5" total_size="92">
+      <ClassStats class="security.service.impl.AuthTokenGeneratorServiceImpl" sourceFile="AuthTokenGeneratorServiceImpl.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="security.service.impl.AuthTokenServiceImpl" sourceFile="AuthTokenServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="security.service.impl.NoOpAuthenticationManager" sourceFile="NoOpAuthenticationManager.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="security.service.impl.UserDetailServiceImpl" sourceFile="UserDetailServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="security.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="191" invocations="512" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="28079" standardDeviationMicrosecondsPerInvocation="1432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="51" invocations="49" avgMicrosecondsPerInvocation="1047" maxMicrosecondsPerInvocation="11614" standardDeviationMicrosecondsPerInvocation="2171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="520" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="658" standardDeviationMicrosecondsPerInvocation="59"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="41" invocations="88" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="8552" standardDeviationMicrosecondsPerInvocation="1016"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="39" invocations="88" avgMicrosecondsPerInvocation="444" maxMicrosecondsPerInvocation="3739" standardDeviationMicrosecondsPerInvocation="749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="49" avgMicrosecondsPerInvocation="742" maxMicrosecondsPerInvocation="5395" standardDeviationMicrosecondsPerInvocation="1187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="100" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="26929" standardDeviationMicrosecondsPerInvocation="2672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="31" invocations="88" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="4090" standardDeviationMicrosecondsPerInvocation="620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="31" invocations="160" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="3639" standardDeviationMicrosecondsPerInvocation="409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="30" invocations="88" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="7934" standardDeviationMicrosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="88" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="8967" standardDeviationMicrosecondsPerInvocation="976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="380" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="1085" standardDeviationMicrosecondsPerInvocation="134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="30" invocations="88" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="8772" standardDeviationMicrosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="113" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="12062" standardDeviationMicrosecondsPerInvocation="1157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="4267" standardDeviationMicrosecondsPerInvocation="1002"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="49" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="6894" standardDeviationMicrosecondsPerInvocation="1058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="49" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="8478" standardDeviationMicrosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="16" invocations="63" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="2299" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="49" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="3033" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="49" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="4914" standardDeviationMicrosecondsPerInvocation="751"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="49" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="2681" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="12" invocations="29" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="8655" standardDeviationMicrosecondsPerInvocation="1557"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

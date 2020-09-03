@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595986486000" analysisTimestamp="1595986487638" release="">
+  <Project projectName="repositorios/nicolatassini_heroku-j2ee-springmvc-hibernate-template">
+    <Jar>repositorios/nicolatassini_heroku-j2ee-springmvc-hibernate-template</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.template.demo.dao.PersonDao">
+      <SourceLine classname="com.template.demo.dao.PersonDao" start="13" end="33" sourcefile="PersonDao.java" sourcepath="com/template/demo/dao/PersonDao.java"/>
+    </Class>
+    <Method classname="com.template.demo.dao.PersonDao" name="getPeople" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.template.demo.dao.PersonDao" start="24" end="24" startBytecode="0" endBytecode="58" sourcefile="PersonDao.java" sourcepath="com/template/demo/dao/PersonDao.java"/>
+    </Method>
+    <SourceLine classname="com.template.demo.dao.PersonDao" start="24" end="24" startBytecode="4" endBytecode="4" sourcefile="PersonDao.java" sourcepath="com/template/demo/dao/PersonDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.template.demo.service.BaseServiceImpl">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="36" end="171" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Class>
+    <Method classname="com.template.demo.service.BaseServiceImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="70" end="71" startBytecode="0" endBytecode="117" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="70" end="70" startBytecode="11" endBytecode="11" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.template.demo.service.BaseServiceImpl">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="36" end="171" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Class>
+    <Method classname="com.template.demo.service.BaseServiceImpl" name="findAll" signature="(II)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="80" end="83" startBytecode="0" endBytecode="161" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="80" end="80" startBytecode="11" endBytecode="11" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.template.demo.service.BaseServiceImpl">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="36" end="171" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Class>
+    <Method classname="com.template.demo.service.BaseServiceImpl" name="findByProperty" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="92" end="94" startBytecode="0" endBytecode="159" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.template.demo.service.BaseServiceImpl" start="92" end="92" startBytecode="11" endBytecode="11" sourcefile="BaseServiceImpl.java" sourcepath="com/template/demo/service/BaseServiceImpl.java"/>
+  </BugInstance>
+  <Errors errors="1" missingClasses="9">
+    <Error>
+      <ErrorMessage>Exception analyzing com.template.demo.service.BaseServiceImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.persistence.Entity</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 01:34:46 +0000" total_classes="10" referenced_classes="49" total_bugs="4" total_size="353" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.47" clock_seconds="1.62" peak_mbytes="126.73" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="4">
+    <PackageStats package="com.template.demo.controller" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="com.template.demo.controller.BaseController" sourceFile="BaseController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.template.demo.controller.HomeController" sourceFile="HomeController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.template.demo.controller.PersonController" sourceFile="PersonController.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.template.demo.dao" total_bugs="1" total_types="1" total_size="13" priority_2="1">
+      <ClassStats class="com.template.demo.dao.PersonDao" sourceFile="PersonDao.java" interface="false" size="13" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.template.demo.exception" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.template.demo.exception.BaseException" sourceFile="BaseException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.template.demo.model" total_bugs="0" total_types="3" total_size="210">
+      <ClassStats class="com.template.demo.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.template.demo.model.Person" sourceFile="Person.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.template.demo.model.User" sourceFile="User.java" interface="false" size="116" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.template.demo.service" total_bugs="3" total_types="2" total_size="60" priority_2="3">
+      <ClassStats class="com.template.demo.service.BaseService" sourceFile="BaseService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.template.demo.service.BaseServiceImpl" sourceFile="BaseServiceImpl.java" interface="false" size="51" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="250" invocations="537" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="20045" standardDeviationMicrosecondsPerInvocation="1501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="544" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="17168" standardDeviationMicrosecondsPerInvocation="764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="71" invocations="49" avgMicrosecondsPerInvocation="1451" maxMicrosecondsPerInvocation="11295" standardDeviationMicrosecondsPerInvocation="2507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="57" invocations="49" avgMicrosecondsPerInvocation="1166" maxMicrosecondsPerInvocation="13219" standardDeviationMicrosecondsPerInvocation="2344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="57" invocations="219" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="3853" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="466" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="1265" standardDeviationMicrosecondsPerInvocation="148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="95" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="25775" standardDeviationMicrosecondsPerInvocation="2624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="94" avgMicrosecondsPerInvocation="347" maxMicrosecondsPerInvocation="14511" standardDeviationMicrosecondsPerInvocation="1521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="32" invocations="87" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="8028" standardDeviationMicrosecondsPerInvocation="939"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="87" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="3423" standardDeviationMicrosecondsPerInvocation="514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="28" invocations="87" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="9319" standardDeviationMicrosecondsPerInvocation="1039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="49" avgMicrosecondsPerInvocation="579" maxMicrosecondsPerInvocation="6884" standardDeviationMicrosecondsPerInvocation="1123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="26" invocations="87" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="9778" standardDeviationMicrosecondsPerInvocation="1074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="26" invocations="87" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="9323" standardDeviationMicrosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="25" invocations="87" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="2912" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="49" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="8511" standardDeviationMicrosecondsPerInvocation="1344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="49" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="9260" standardDeviationMicrosecondsPerInvocation="1331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="18" invocations="49" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="8776" standardDeviationMicrosecondsPerInvocation="1264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="49" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="2515" standardDeviationMicrosecondsPerInvocation="520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="49" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="2963" standardDeviationMicrosecondsPerInvocation="543"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

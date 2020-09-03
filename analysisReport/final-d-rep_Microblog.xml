@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597093153000" analysisTimestamp="1597093155110" release="">
+  <Project projectName="repositorios/d-rep_Microblog">
+    <Jar>repositorios/d-rep_Microblog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.domain.AuthorityKey">
+      <SourceLine classname="us.repasky.microblog.domain.AuthorityKey" start="37" end="75" sourcefile="AuthorityKey.java" sourcepath="us/repasky/microblog/domain/AuthorityKey.java"/>
+    </Class>
+    <Field classname="us.repasky.microblog.domain.AuthorityKey" name="blogUser" signature="Lus/repasky/microblog/domain/BlogUser;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.domain.AuthorityKey" sourcefile="AuthorityKey.java" sourcepath="us/repasky/microblog/domain/AuthorityKey.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.domain.FollowerKey">
+      <SourceLine classname="us.repasky.microblog.domain.FollowerKey" start="36" end="74" sourcefile="FollowerKey.java" sourcepath="us/repasky/microblog/domain/FollowerKey.java"/>
+    </Class>
+    <Field classname="us.repasky.microblog.domain.FollowerKey" name="follower" signature="Lus/repasky/microblog/domain/BlogUser;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.domain.FollowerKey" sourcefile="FollowerKey.java" sourcepath="us/repasky/microblog/domain/FollowerKey.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.domain.FollowerKey">
+      <SourceLine classname="us.repasky.microblog.domain.FollowerKey" start="36" end="74" sourcefile="FollowerKey.java" sourcepath="us/repasky/microblog/domain/FollowerKey.java"/>
+    </Class>
+    <Field classname="us.repasky.microblog.domain.FollowerKey" name="target" signature="Lus/repasky/microblog/domain/BlogUser;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.domain.FollowerKey" sourcefile="FollowerKey.java" sourcepath="us/repasky/microblog/domain/FollowerKey.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.domain.Post">
+      <SourceLine classname="us.repasky.microblog.domain.Post" start="48" end="158" sourcefile="Post.java" sourcepath="us/repasky/microblog/domain/Post.java"/>
+    </Class>
+    <Field classname="us.repasky.microblog.domain.Post" name="blogUser" signature="Lus/repasky/microblog/domain/BlogUser;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.domain.Post" sourcefile="Post.java" sourcepath="us/repasky/microblog/domain/Post.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.repositories.PostRepository">
+      <SourceLine classname="us.repasky.microblog.repositories.PostRepository" sourcefile="PostRepository.java" sourcepath="us/repasky/microblog/repositories/PostRepository.java"/>
+    </Class>
+    <Method classname="us.repasky.microblog.repositories.PostRepository" name="findByUsernameIn" signature="(Ljava/util/List;Ljava/util/Date;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.repositories.PostRepository" sourcefile="PostRepository.java" sourcepath="us/repasky/microblog/repositories/PostRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="us.repasky.microblog.repositories.PostRepository">
+      <SourceLine classname="us.repasky.microblog.repositories.PostRepository" sourcefile="PostRepository.java" sourcepath="us/repasky/microblog/repositories/PostRepository.java"/>
+    </Class>
+    <Method classname="us.repasky.microblog.repositories.PostRepository" name="findByUsernameIn" signature="(Ljava/util/List;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="us.repasky.microblog.repositories.PostRepository" sourcefile="PostRepository.java" sourcepath="us/repasky/microblog/repositories/PostRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="18">
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringStyle</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.Period</MissingClass>
+    <MissingClass>org.joda.time.format.PeriodFormatter</MissingClass>
+    <MissingClass>org.joda.time.format.PeriodFormatterBuilder</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.provisioning.UserDetailsManager</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:59:13 +0000" total_classes="15" referenced_classes="46" total_bugs="6" total_size="522" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.92" clock_seconds="1.97" peak_mbytes="190.25" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="6">
+    <PackageStats package="us.repasky.microblog.controllers" total_bugs="0" total_types="2" total_size="152">
+      <ClassStats class="us.repasky.microblog.controllers.FollowController" sourceFile="FollowController.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.controllers.UserController" sourceFile="UserController.java" interface="false" size="95" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="us.repasky.microblog.domain" total_bugs="4" total_types="7" total_size="192" priority_2="4">
+      <ClassStats class="us.repasky.microblog.domain.AuthorityKey" sourceFile="AuthorityKey.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="us.repasky.microblog.domain.BlogAuthority" sourceFile="BlogAuthority.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.domain.BlogUser" sourceFile="BlogUser.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.domain.FollowAction" sourceFile="FollowAction.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.domain.Follower" sourceFile="Follower.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.domain.FollowerKey" sourceFile="FollowerKey.java" interface="false" size="22" bugs="2" priority_2="2"/>
+      <ClassStats class="us.repasky.microblog.domain.Post" sourceFile="Post.java" interface="false" size="63" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="us.repasky.microblog.dto" total_bugs="0" total_types="1" total_size="38">
+      <ClassStats class="us.repasky.microblog.dto.UserPostDto" sourceFile="UserPostDto.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="us.repasky.microblog.repositories" total_bugs="2" total_types="3" total_size="8" priority_2="2">
+      <ClassStats class="us.repasky.microblog.repositories.BlogUserRepository" sourceFile="BlogUserRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.repositories.FollowerRepository" sourceFile="FollowerRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.repositories.PostRepository" sourceFile="PostRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="us.repasky.microblog.services" total_bugs="0" total_types="2" total_size="132">
+      <ClassStats class="us.repasky.microblog.services.UserService" sourceFile="UserService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="us.repasky.microblog.services.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="121" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="300" invocations="466" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="23789" standardDeviationMicrosecondsPerInvocation="1938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="90" invocations="46" avgMicrosecondsPerInvocation="1976" maxMicrosecondsPerInvocation="27737" standardDeviationMicrosecondsPerInvocation="4967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="79" invocations="84" avgMicrosecondsPerInvocation="943" maxMicrosecondsPerInvocation="15114" standardDeviationMicrosecondsPerInvocation="2460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="75" invocations="251" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="8459" standardDeviationMicrosecondsPerInvocation="985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="469" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2979" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="49" invocations="106" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="4984" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="48" invocations="106" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="4722" standardDeviationMicrosecondsPerInvocation="681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="47" invocations="46" avgMicrosecondsPerInvocation="1030" maxMicrosecondsPerInvocation="18814" standardDeviationMicrosecondsPerInvocation="2832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="380" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="3386" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="42" invocations="106" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="7155" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="35" invocations="106" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="2314" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="46" avgMicrosecondsPerInvocation="758" maxMicrosecondsPerInvocation="11390" standardDeviationMicrosecondsPerInvocation="1912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="34" invocations="106" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="7778" standardDeviationMicrosecondsPerInvocation="790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="121" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="23444" standardDeviationMicrosecondsPerInvocation="2116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="106" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="7749" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="46" avgMicrosecondsPerInvocation="688" maxMicrosecondsPerInvocation="13978" standardDeviationMicrosecondsPerInvocation="2116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="46" avgMicrosecondsPerInvocation="670" maxMicrosecondsPerInvocation="11636" standardDeviationMicrosecondsPerInvocation="2321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="46" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="6832" standardDeviationMicrosecondsPerInvocation="1567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="46" avgMicrosecondsPerInvocation="532" maxMicrosecondsPerInvocation="10320" standardDeviationMicrosecondsPerInvocation="1630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="19" invocations="70" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="1265" standardDeviationMicrosecondsPerInvocation="298"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

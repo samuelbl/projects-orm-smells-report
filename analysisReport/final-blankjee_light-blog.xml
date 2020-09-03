@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597107861000" analysisTimestamp="1597107862919" release="">
+  <Project projectName="repositorios/blankjee_light-blog">
+    <Jar>repositorios/blankjee_light-blog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.BlogRepository">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.BlogRepository" name="findByYear" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findByYear. Fields with EAGER without Join Fetch: type, user, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.BlogRepository">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.BlogRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findTop. Fields with EAGER without Join Fetch: type, user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.BlogRepository">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.BlogRepository" name="findByQuery" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.BlogRepository">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.BlogRepository" name="findByYear" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.BlogRepository">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.BlogRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.blankjee.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/blankjee/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.TagRepository">
+      <SourceLine classname="com.blankjee.dao.TagRepository" sourcefile="TagRepository.java" sourcepath="com/blankjee/dao/TagRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.TagRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.blankjee.dao.TagRepository" sourcefile="TagRepository.java" sourcepath="com/blankjee/dao/TagRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.dao.TypeRepository">
+      <SourceLine classname="com.blankjee.dao.TypeRepository" sourcefile="TypeRepository.java" sourcepath="com/blankjee/dao/TypeRepository.java"/>
+    </Class>
+    <Method classname="com.blankjee.dao.TypeRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.blankjee.dao.TypeRepository" sourcefile="TypeRepository.java" sourcepath="com/blankjee/dao/TypeRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.po.Blog">
+      <SourceLine classname="com.blankjee.po.Blog" start="38" end="237" sourcefile="Blog.java" sourcepath="com/blankjee/po/Blog.java"/>
+    </Class>
+    <Field classname="com.blankjee.po.Blog" name="type" signature="Lcom/blankjee/po/Type;" isStatic="false">
+      <SourceLine classname="com.blankjee.po.Blog" sourcefile="Blog.java" sourcepath="com/blankjee/po/Blog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.po.Blog">
+      <SourceLine classname="com.blankjee.po.Blog" start="38" end="237" sourcefile="Blog.java" sourcepath="com/blankjee/po/Blog.java"/>
+    </Class>
+    <Field classname="com.blankjee.po.Blog" name="user" signature="Lcom/blankjee/po/User;" isStatic="false">
+      <SourceLine classname="com.blankjee.po.Blog" sourcefile="Blog.java" sourcepath="com/blankjee/po/Blog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.po.Comment">
+      <SourceLine classname="com.blankjee.po.Comment" start="26" end="119" sourcefile="Comment.java" sourcepath="com/blankjee/po/Comment.java"/>
+    </Class>
+    <Field classname="com.blankjee.po.Comment" name="blog" signature="Lcom/blankjee/po/Blog;" isStatic="false">
+      <SourceLine classname="com.blankjee.po.Comment" sourcefile="Comment.java" sourcepath="com/blankjee/po/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.blankjee.po.Comment">
+      <SourceLine classname="com.blankjee.po.Comment" start="26" end="119" sourcefile="Comment.java" sourcepath="com/blankjee/po/Comment.java"/>
+    </Class>
+    <Field classname="com.blankjee.po.Comment" name="parentComment" signature="Lcom/blankjee/po/Comment;" isStatic="false">
+      <SourceLine classname="com.blankjee.po.Comment" sourcefile="Comment.java" sourcepath="com/blankjee/po/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.commonmark.ext.gfm.tables.TablesExtension</MissingClass>
+    <MissingClass>org.commonmark.ext.heading.anchor.HeadingAnchorExtension</MissingClass>
+    <MissingClass>org.commonmark.node.Node</MissingClass>
+    <MissingClass>org.commonmark.parser.Parser</MissingClass>
+    <MissingClass>org.commonmark.parser.Parser$Builder</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.AttributeProvider</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.AttributeProviderFactory</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.HtmlRenderer</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.HtmlRenderer$Builder</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapper</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapperImpl</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationUtils</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.context.request.RequestContextHolder</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:04:21 +0000" total_classes="45" referenced_classes="94" total_bugs="11" total_size="967" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.64" clock_seconds="2.14" peak_mbytes="191.48" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="11">
+    <PackageStats package="com.blankjee" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.blankjee.BlogApplication" sourceFile="BlogApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.blankjee.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.aspect" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="com.blankjee.aspect.LogAspect" sourceFile="LogAspect.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.blankjee.aspect.LogAspect$RequestLog" sourceFile="LogAspect.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.dao" total_bugs="7" total_types="5" total_size="16" priority_2="7">
+      <ClassStats class="com.blankjee.dao.BlogRepository" sourceFile="BlogRepository.java" interface="true" size="6" bugs="5" priority_2="5"/>
+      <ClassStats class="com.blankjee.dao.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.blankjee.dao.TagRepository" sourceFile="TagRepository.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.blankjee.dao.TypeRepository" sourceFile="TypeRepository.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.blankjee.dao.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.handler" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.blankjee.handler.ControllerExceptionHandler" sourceFile="ControllerExceptionHandler.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.interceptor" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="com.blankjee.interceptor.LoginInterceptor" sourceFile="LoginInterceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.blankjee.interceptor.WebConfig" sourceFile="WebConfig.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.po" total_bugs="4" total_types="5" total_size="321" priority_2="4">
+      <ClassStats class="com.blankjee.po.Blog" sourceFile="Blog.java" interface="false" size="137" bugs="2" priority_2="2"/>
+      <ClassStats class="com.blankjee.po.Comment" sourceFile="Comment.java" interface="false" size="67" bugs="2" priority_2="2"/>
+      <ClassStats class="com.blankjee.po.Tag" sourceFile="Tag.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.blankjee.po.Type" sourceFile="Type.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.blankjee.po.User" sourceFile="User.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.service" total_bugs="0" total_types="12" total_size="230">
+      <ClassStats class="com.blankjee.service.BlogService" sourceFile="BlogService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.blankjee.service.BlogServiceImpl" sourceFile="BlogServiceImpl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.blankjee.service.BlogServiceImpl$1" sourceFile="BlogServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.blankjee.service.BlogServiceImpl$2" sourceFile="BlogServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.blankjee.service.CommentService" sourceFile="CommentService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.blankjee.service.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.blankjee.service.TagService" sourceFile="TagService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.blankjee.service.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.blankjee.service.TypeService" sourceFile="TypeService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.blankjee.service.TypeServiceImpl" sourceFile="TypeServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.blankjee.service.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.blankjee.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.util" total_bugs="0" total_types="5" total_size="71">
+      <ClassStats class="com.blankjee.util.MD5Utils" sourceFile="MD5Utils.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.blankjee.util.MarkdownUtils" sourceFile="MarkdownUtils.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.blankjee.util.MarkdownUtils$1" sourceFile="MarkdownUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.blankjee.util.MarkdownUtils$CustomAttributeProvider" sourceFile="MarkdownUtils.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.blankjee.util.MyBeanUtils" sourceFile="MyBeanUtils.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.vo" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.blankjee.vo.BlogQuery" sourceFile="BlogQuery.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.web" total_bugs="0" total_types="6" total_size="82">
+      <ClassStats class="com.blankjee.web.AboutShowController" sourceFile="AboutShowController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.blankjee.web.ArchiveShowController" sourceFile="ArchiveShowController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.blankjee.web.CommentController" sourceFile="CommentController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.blankjee.web.IndexController" sourceFile="IndexController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.blankjee.web.TagShowController" sourceFile="TagShowController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.blankjee.web.TypeShowController" sourceFile="TypeShowController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.blankjee.web.admin" total_bugs="0" total_types="4" total_size="140">
+      <ClassStats class="com.blankjee.web.admin.BlogController" sourceFile="BlogController.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.blankjee.web.admin.LoginController" sourceFile="LoginController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.blankjee.web.admin.TagController" sourceFile="TagController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.blankjee.web.admin.TypeController" sourceFile="TypeController.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="214" invocations="699" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="15108" standardDeviationMicrosecondsPerInvocation="855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="91" invocations="94" avgMicrosecondsPerInvocation="972" maxMicrosecondsPerInvocation="12149" standardDeviationMicrosecondsPerInvocation="2064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="94" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="9949" standardDeviationMicrosecondsPerInvocation="1587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="71" invocations="451" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="4104" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="62" invocations="226" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="9634" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="57" invocations="709" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="1360" standardDeviationMicrosecondsPerInvocation="67"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="54" invocations="226" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="3448" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="227" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="9480" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="226" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="3927" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="45" invocations="227" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="9517" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="45" invocations="226" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="10066" standardDeviationMicrosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="269" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="25428" standardDeviationMicrosecondsPerInvocation="1550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="38" invocations="166" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="14469" standardDeviationMicrosecondsPerInvocation="1162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="35" invocations="564" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="1174" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="94" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="6464" standardDeviationMicrosecondsPerInvocation="854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="94" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="9927" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="126" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="1362" standardDeviationMicrosecondsPerInvocation="255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="94" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="9217" standardDeviationMicrosecondsPerInvocation="1000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="25" invocations="94" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="4975" standardDeviationMicrosecondsPerInvocation="730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="94" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="2192" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="20" invocations="2759" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="1205" standardDeviationMicrosecondsPerInvocation="31"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="94" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="4347" standardDeviationMicrosecondsPerInvocation="530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="45" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="2653" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="15" invocations="45" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="2812" standardDeviationMicrosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="14" invocations="45" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="10541" standardDeviationMicrosecondsPerInvocation="1550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="226" avgMicrosecondsPerInvocation="58" maxMicrosecondsPerInvocation="1581" standardDeviationMicrosecondsPerInvocation="129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="12" invocations="94" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="1572" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="12" invocations="94" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="1831" standardDeviationMicrosecondsPerInvocation="297"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

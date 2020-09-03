@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597107875000" analysisTimestamp="1597107876696" release="">
+  <Project projectName="repositorios/YooYoungmo_article-jpa-native-query">
+    <Jar>repositorios/YooYoungmo_article-jpa-native-query</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.article.jpa.entitiy.Order">
+      <SourceLine classname="ymyoo.article.jpa.entitiy.Order" start="26" end="65" sourcefile="Order.java" sourcepath="ymyoo/article/jpa/entitiy/Order.java"/>
+    </Class>
+    <Field classname="ymyoo.article.jpa.entitiy.Order" name="member" signature="Lymyoo/article/jpa/entitiy/Member;" isStatic="false">
+      <SourceLine classname="ymyoo.article.jpa.entitiy.Order" sourcefile="Order.java" sourcepath="ymyoo/article/jpa/entitiy/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.article.jpa.entitiy.Order">
+      <SourceLine classname="ymyoo.article.jpa.entitiy.Order" start="26" end="65" sourcefile="Order.java" sourcepath="ymyoo/article/jpa/entitiy/Order.java"/>
+    </Class>
+    <Field classname="ymyoo.article.jpa.entitiy.Order" name="product" signature="Lymyoo/article/jpa/entitiy/Product;" isStatic="false">
+      <SourceLine classname="ymyoo.article.jpa.entitiy.Order" sourcefile="Order.java" sourcepath="ymyoo/article/jpa/entitiy/Order.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:04:35 +0000" total_classes="4" referenced_classes="17" total_bugs="2" total_size="128" num_packages="2" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.59" clock_seconds="1.36" peak_mbytes="188.52" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="2">
+    <PackageStats package="ymyoo.article.jpa.dto" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="ymyoo.article.jpa.dto.ProductOrderedMemberDTO" sourceFile="ProductOrderedMemberDTO.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.article.jpa.entitiy" total_bugs="2" total_types="3" total_size="96" priority_2="2">
+      <ClassStats class="ymyoo.article.jpa.entitiy.Member" sourceFile="Member.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="ymyoo.article.jpa.entitiy.Order" sourceFile="Order.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="ymyoo.article.jpa.entitiy.Product" sourceFile="Product.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="225" invocations="350" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="25875" standardDeviationMicrosecondsPerInvocation="1990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="147" invocations="170" avgMicrosecondsPerInvocation="867" maxMicrosecondsPerInvocation="13975" standardDeviationMicrosecondsPerInvocation="2181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="110" invocations="4" avgMicrosecondsPerInvocation="27582" maxMicrosecondsPerInvocation="109905" standardDeviationMicrosecondsPerInvocation="47529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="49" invocations="17" avgMicrosecondsPerInvocation="2929" maxMicrosecondsPerInvocation="30203" standardDeviationMicrosecondsPerInvocation="6965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="45" invocations="351" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="4491" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="305" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2446" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="37" avgMicrosecondsPerInvocation="886" maxMicrosecondsPerInvocation="20948" standardDeviationMicrosecondsPerInvocation="3410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="30" invocations="35" avgMicrosecondsPerInvocation="859" maxMicrosecondsPerInvocation="27533" standardDeviationMicrosecondsPerInvocation="4575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="17" avgMicrosecondsPerInvocation="1432" maxMicrosecondsPerInvocation="16726" standardDeviationMicrosecondsPerInvocation="3844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="17" avgMicrosecondsPerInvocation="1409" maxMicrosecondsPerInvocation="13730" standardDeviationMicrosecondsPerInvocation="3339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="20" invocations="17" avgMicrosecondsPerInvocation="1197" maxMicrosecondsPerInvocation="5260" standardDeviationMicrosecondsPerInvocation="1504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="17" avgMicrosecondsPerInvocation="1066" maxMicrosecondsPerInvocation="13428" standardDeviationMicrosecondsPerInvocation="3104"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

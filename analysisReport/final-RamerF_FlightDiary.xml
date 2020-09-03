@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597081457000" analysisTimestamp="1597081458660" release="">
+  <Project projectName="repositorios/RamerF_FlightDiary">
+    <Jar>repositorios/RamerF_FlightDiary</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Albums">
+      <SourceLine classname="org.ramer.diary.domain.Albums" start="15" end="44" sourcefile="Albums.java" sourcepath="org/ramer/diary/domain/Albums.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Albums" name="topic" signature="Lorg/ramer/diary/domain/Topic;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Albums" sourcefile="Albums.java" sourcepath="org/ramer/diary/domain/Albums.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Comment">
+      <SourceLine classname="org.ramer.diary.domain.Comment" start="18" end="108" sourcefile="Comment.java" sourcepath="org/ramer/diary/domain/Comment.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Comment" name="topic" signature="Lorg/ramer/diary/domain/Topic;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Comment" sourcefile="Comment.java" sourcepath="org/ramer/diary/domain/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Reply">
+      <SourceLine classname="org.ramer.diary.domain.Reply" start="17" end="93" sourcefile="Reply.java" sourcepath="org/ramer/diary/domain/Reply.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Reply" name="comment" signature="Lorg/ramer/diary/domain/Comment;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Reply" sourcefile="Reply.java" sourcepath="org/ramer/diary/domain/Reply.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Reply">
+      <SourceLine classname="org.ramer.diary.domain.Reply" start="17" end="93" sourcefile="Reply.java" sourcepath="org/ramer/diary/domain/Reply.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Reply" name="user" signature="Lorg/ramer/diary/domain/User;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Reply" sourcefile="Reply.java" sourcepath="org/ramer/diary/domain/Reply.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Roles">
+      <SourceLine classname="org.ramer.diary.domain.Roles" start="14" end="58" sourcefile="Roles.java" sourcepath="org/ramer/diary/domain/Roles.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Roles" name="privileges" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Roles" sourcefile="Roles.java" sourcepath="org/ramer/diary/domain/Roles.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.Tags">
+      <SourceLine classname="org.ramer.diary.domain.Tags" start="16" end="61" sourcefile="Tags.java" sourcepath="org/ramer/diary/domain/Tags.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.Tags" name="topic" signature="Lorg/ramer/diary/domain/Topic;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.Tags" sourcefile="Tags.java" sourcepath="org/ramer/diary/domain/Tags.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.domain.User">
+      <SourceLine classname="org.ramer.diary.domain.User" start="17" end="187" sourcefile="User.java" sourcepath="org/ramer/diary/domain/User.java"/>
+    </Class>
+    <Field classname="org.ramer.diary.domain.User" name="roles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.ramer.diary.domain.User" sourcefile="User.java" sourcepath="org/ramer/diary/domain/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.repository.FavouriteRepository">
+      <SourceLine classname="org.ramer.diary.repository.FavouriteRepository" sourcefile="FavouriteRepository.java" sourcepath="org/ramer/diary/repository/FavouriteRepository.java"/>
+    </Class>
+    <Method classname="org.ramer.diary.repository.FavouriteRepository" name="deleteByUserAndTopic" signature="(Lorg/ramer/diary/domain/User;Lorg/ramer/diary/domain/Topic;)V" isStatic="false">
+      <SourceLine classname="org.ramer.diary.repository.FavouriteRepository" sourcefile="FavouriteRepository.java" sourcepath="org/ramer/diary/repository/FavouriteRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.repository.FollowRepository">
+      <SourceLine classname="org.ramer.diary.repository.FollowRepository" sourcefile="FollowRepository.java" sourcepath="org/ramer/diary/repository/FollowRepository.java"/>
+    </Class>
+    <Method classname="org.ramer.diary.repository.FollowRepository" name="deleteByUserAndFollowedUser" signature="(Lorg/ramer/diary/domain/User;Lorg/ramer/diary/domain/User;)V" isStatic="false">
+      <SourceLine classname="org.ramer.diary.repository.FollowRepository" sourcefile="FollowRepository.java" sourcepath="org/ramer/diary/repository/FollowRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.repository.PraiseRepository">
+      <SourceLine classname="org.ramer.diary.repository.PraiseRepository" sourcefile="PraiseRepository.java" sourcepath="org/ramer/diary/repository/PraiseRepository.java"/>
+    </Class>
+    <Method classname="org.ramer.diary.repository.PraiseRepository" name="deleteByTopic" signature="(Lorg/ramer/diary/domain/Topic;)V" isStatic="false">
+      <SourceLine classname="org.ramer.diary.repository.PraiseRepository" sourcefile="PraiseRepository.java" sourcepath="org/ramer/diary/repository/PraiseRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.ramer.diary.repository.PraiseRepository">
+      <SourceLine classname="org.ramer.diary.repository.PraiseRepository" sourcefile="PraiseRepository.java" sourcepath="org/ramer/diary/repository/PraiseRepository.java"/>
+    </Class>
+    <Method classname="org.ramer.diary.repository.PraiseRepository" name="deleteByTopicAndUser" signature="(Lorg/ramer/diary/domain/Topic;Lorg/ramer/diary/domain/User;)V" isStatic="false">
+      <SourceLine classname="org.ramer.diary.repository.PraiseRepository" sourcefile="PraiseRepository.java" sourcepath="org/ramer/diary/repository/PraiseRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="78">
+    <MissingClass>com.alibaba.fastjson.JSON</MissingClass>
+    <MissingClass>com.alibaba.fastjson.JSONObject</MissingClass>
+    <MissingClass>com.qiniu.util.Auth</MissingClass>
+    <MissingClass>com.qiniu.util.StringMap</MissingClass>
+    <MissingClass>com.qiniu.util.UrlSafeBase64</MissingClass>
+    <MissingClass>javax.mail.Message</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>okhttp3.Call</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient</MissingClass>
+    <MissingClass>okhttp3.Request</MissingClass>
+    <MissingClass>okhttp3.Request$Builder</MissingClass>
+    <MissingClass>okhttp3.RequestBody</MissingClass>
+    <MissingClass>okhttp3.Response</MissingClass>
+    <MissingClass>okhttp3.ResponseBody</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.event.ContextRefreshedEvent</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerExceptionResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 17:44:17 +0000" total_classes="90" referenced_classes="179" total_bugs="11" total_size="2641" num_packages="15" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="14.88" clock_seconds="4.64" peak_mbytes="336.11" alloc_mbytes="3540.00" gc_seconds="0.18" priority_2="9" priority_1="2">
+    <PackageStats package="org.ramer.diary" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="org.ramer.diary.FlightDiary" sourceFile="FlightDiary.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.config" total_bugs="0" total_types="7" total_size="131">
+      <ClassStats class="org.ramer.diary.config.ApiDocConfig" sourceFile="ApiDocConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.ApplicationStartup" sourceFile="ApplicationStartup.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.CustomUserService" sourceFile="CustomUserService.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.SecurityEncrypt" sourceFile="SecurityEncrypt.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.SystemConstant" sourceFile="SystemConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ramer.diary.config.WebMvcConfiguration" sourceFile="WebMvcConfiguration.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.constant" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="org.ramer.diary.constant.MessageConstant" sourceFile="MessageConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.ramer.diary.constant.PageConstant" sourceFile="PageConstant.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.controller" total_bugs="0" total_types="2" total_size="208">
+      <ClassStats class="org.ramer.diary.controller.CommonController" sourceFile="CommonController.java" interface="false" size="196" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.UploadController" sourceFile="UploadController.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.controller.user" total_bugs="0" total_types="8" total_size="563">
+      <ClassStats class="org.ramer.diary.controller.user.CommentController" sourceFile="CommentController.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.FavouriteController" sourceFile="FavouriteController.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.FollowController" sourceFile="FollowController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.PraiseController" sourceFile="PraiseController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.PrivMessController" sourceFile="PrivMessController.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.TopicController" sourceFile="TopicController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.UserController" sourceFile="UserController.java" interface="false" size="187" bugs="0"/>
+      <ClassStats class="org.ramer.diary.controller.user.VisitController" sourceFile="VisitController.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.domain" total_bugs="7" total_types="14" total_size="764" priority_2="5" priority_1="2">
+      <ClassStats class="org.ramer.diary.domain.Albums" sourceFile="Albums.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ramer.diary.domain.Comment" sourceFile="Comment.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ramer.diary.domain.DiaryAuthUser" sourceFile="DiaryAuthUser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Favourite" sourceFile="Favourite.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.FeedBack" sourceFile="FeedBack.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Follow" sourceFile="Follow.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Notify" sourceFile="Notify.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Praise" sourceFile="Praise.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Privilege" sourceFile="Privilege.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.Reply" sourceFile="Reply.java" interface="false" size="56" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ramer.diary.domain.Roles" sourceFile="Roles.java" interface="false" size="40" bugs="1" priority_1="1"/>
+      <ClassStats class="org.ramer.diary.domain.Tags" sourceFile="Tags.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ramer.diary.domain.Topic" sourceFile="Topic.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.ramer.diary.domain.User" sourceFile="User.java" interface="false" size="163" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.domain.dto" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="org.ramer.diary.domain.dto.CommonResponse" sourceFile="CommonResponse.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.domain.map" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="org.ramer.diary.domain.map.UserRoleMap" sourceFile="UserRoleMap.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.exception" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="org.ramer.diary.exception.DiaryException" sourceFile="DiaryException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ramer.diary.exception.DiaryExceptionHandler" sourceFile="DiaryExceptionHandler.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.filter" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="org.ramer.diary.filter.EncodingFilter" sourceFile="EncodingFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ramer.diary.filter.LoginFilter" sourceFile="LoginFilter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.repository" total_bugs="4" total_types="13" total_size="47" priority_2="4">
+      <ClassStats class="org.ramer.diary.repository.AlbumsRepository" sourceFile="AlbumsRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.FavouriteRepository" sourceFile="FavouriteRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ramer.diary.repository.FeedBackRepository" sourceFile="FeedBackRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.FollowRepository" sourceFile="FollowRepository.java" interface="true" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ramer.diary.repository.NotifyRepository" sourceFile="NotifyRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.PraiseRepository" sourceFile="PraiseRepository.java" interface="true" size="5" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ramer.diary.repository.PrivilegeRepository" sourceFile="PrivilegeRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.ReplyRepository" sourceFile="ReplyRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.RolesRepository" sourceFile="RolesRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.TagsRepository" sourceFile="TagsRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.TopicRepository" sourceFile="TopicRepository.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.ramer.diary.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.service" total_bugs="0" total_types="13" total_size="73">
+      <ClassStats class="org.ramer.diary.service.AlbumsService" sourceFile="AlbumsService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.CommentService" sourceFile="CommentService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.FavouriteService" sourceFile="FavouriteService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.FollowService" sourceFile="FollowService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.NotifyService" sourceFile="NotifyService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.PraiseService" sourceFile="PraiseService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.PrivilegeService" sourceFile="PrivilegeService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.ReplyService" sourceFile="ReplyService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.RolesService" sourceFile="RolesService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.TagsService" sourceFile="TagsService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.TopicService" sourceFile="TopicService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.UploadService" sourceFile="UploadService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.UserService" sourceFile="UserService.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.service.impl" total_bugs="0" total_types="13" total_size="376">
+      <ClassStats class="org.ramer.diary.service.impl.AlbumsServiceImpl" sourceFile="AlbumsServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.FavouriteServiceImpl" sourceFile="FavouriteServiceImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.FollowServiceImpl" sourceFile="FollowServiceImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.NotifyServiceImpl" sourceFile="NotifyServiceImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.PraiseServiceImpl" sourceFile="PraiseServiceImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.PrivilegeServicesImpl" sourceFile="PrivilegeServicesImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.ReplyServiceImpl" sourceFile="ReplyServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.RolesServicesImpl" sourceFile="RolesServicesImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.TagsServiceImpl" sourceFile="TagsServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.TopicServiceImpl" sourceFile="TopicServiceImpl.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.UploadServiceImpl" sourceFile="UploadServiceImpl.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.ramer.diary.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.util" total_bugs="0" total_types="10" total_size="357">
+      <ClassStats class="org.ramer.diary.util.CollectionsUtils" sourceFile="CollectionsUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.EncryptUtil" sourceFile="EncryptUtil.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.FileUtils" sourceFile="FileUtils.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.IntegerUtil" sourceFile="IntegerUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.MailUtils" sourceFile="MailUtils.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.Pagination" sourceFile="Pagination.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.RedisKeyTemplate" sourceFile="RedisKeyTemplate.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.ScheduleWork" sourceFile="ScheduleWork.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.StringUtils" sourceFile="StringUtils.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.ramer.diary.util.UserUtils" sourceFile="UserUtils.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ramer.diary.validator" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="org.ramer.diary.validator.UserValidator" sourceFile="UserValidator.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="357" invocations="1055" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="33634" standardDeviationMicrosecondsPerInvocation="1332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="194" invocations="179" avgMicrosecondsPerInvocation="1086" maxMicrosecondsPerInvocation="27891" standardDeviationMicrosecondsPerInvocation="2614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="188" invocations="535" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="21920" standardDeviationMicrosecondsPerInvocation="1126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="186" invocations="533" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="9568" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="169" invocations="1065" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="29109" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="154" invocations="540" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="19053" standardDeviationMicrosecondsPerInvocation="1151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="153" invocations="539" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="11300" standardDeviationMicrosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="151" invocations="179" avgMicrosecondsPerInvocation="845" maxMicrosecondsPerInvocation="11034" standardDeviationMicrosecondsPerInvocation="1506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="140" invocations="535" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="13216" standardDeviationMicrosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="132" invocations="856" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="11996" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="118" invocations="535" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="9106" standardDeviationMicrosecondsPerInvocation="535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="85" invocations="347" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="7319" standardDeviationMicrosecondsPerInvocation="535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="80" invocations="179" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="16776" standardDeviationMicrosecondsPerInvocation="1856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="69" invocations="179" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="33440" standardDeviationMicrosecondsPerInvocation="2510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="63" invocations="179" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="13442" standardDeviationMicrosecondsPerInvocation="1221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="62" invocations="179" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="6097" standardDeviationMicrosecondsPerInvocation="731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="61" invocations="285" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="12364" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="61" invocations="629" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="25222" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="55" invocations="859" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="4772" standardDeviationMicrosecondsPerInvocation="196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="50" invocations="179" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="5515" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="42" invocations="535" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="6985" standardDeviationMicrosecondsPerInvocation="329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="42" invocations="90" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="9102" standardDeviationMicrosecondsPerInvocation="1081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="40" invocations="179" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="10227" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="39" invocations="8453" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="2689" standardDeviationMicrosecondsPerInvocation="35"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="38" invocations="90" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="14802" standardDeviationMicrosecondsPerInvocation="1834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="36" invocations="90" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="14769" standardDeviationMicrosecondsPerInvocation="1590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="36" invocations="90" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="3832" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="29" invocations="90" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="7683" standardDeviationMicrosecondsPerInvocation="912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="27" invocations="629" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="7096" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="90" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="3693" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="26" invocations="90" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="5176" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="25" invocations="90" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="3560" standardDeviationMicrosecondsPerInvocation="567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="24" invocations="90" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="1464" standardDeviationMicrosecondsPerInvocation="373"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596946567000" analysisTimestamp="1596946568661" release="">
+  <Project projectName="repositorios/xaverric_dms">
+    <Jar>repositorios/xaverric_dms</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.CategoryDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="14" end="52" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" name="getAllCategories" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="30" end="30" startBytecode="0" endBytecode="60" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="30" end="30" startBytecode="4" endBytecode="4" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.CategoryDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="14" end="52" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" name="getCategoryByName" signature="(Ljava/lang/String;)Lcz/uhk/fim/repository/entity/Category;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="23" end="25" startBytecode="0" endBytecode="102" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.CategoryDaoImpl" start="23" end="23" startBytecode="4" endBytecode="4" sourcefile="CategoryDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/CategoryDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="deleteFileVersion" signature="(Lcz/uhk/fim/repository/dto/api/FileDTO;Ljava/lang/Long;)Lcz/uhk/fim/repository/entity/File;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="29" end="41" startBytecode="0" endBytecode="230" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="32" end="32" startBytecode="10" endBytecode="10" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    <String value="Method: deleteFileVersion. Fields with EAGER without Join Fetch: user, fileType, category, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="findAllFiles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="46" end="46" startBytecode="0" endBytecode="68" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    <String value="Method: findAllFiles. Fields with EAGER without Join Fetch: user, fileType, category, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="getFileByNameUsername" signature="(Ljava/lang/String;Ljava/lang/String;)Lcz/uhk/fim/repository/entity/File;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="57" end="61" startBytecode="0" endBytecode="110" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    <String value="Method: getFileByNameUsername. Fields with EAGER without Join Fetch: user, fileType, category, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="deleteFileVersion" signature="(Lcz/uhk/fim/repository/dto/api/FileDTO;Ljava/lang/Long;)Lcz/uhk/fim/repository/entity/File;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="29" end="41" startBytecode="0" endBytecode="230" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="32" end="32" startBytecode="10" endBytecode="10" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="findAllFiles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="46" end="46" startBytecode="0" endBytecode="68" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="16" end="82" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileDaoImpl" name="getFileByNameUsername" signature="(Ljava/lang/String;Ljava/lang/String;)Lcz/uhk/fim/repository/entity/File;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="57" end="61" startBytecode="0" endBytecode="110" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileDaoImpl" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="FileDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="14" end="68" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" name="getAllFileTypes" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="29" end="29" startBytecode="0" endBytecode="60" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="14" end="68" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" name="getFileTypeBySuffix" signature="(Ljava/lang/String;)Lcz/uhk/fim/repository/entity/FileType;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="39" end="41" startBytecode="0" endBytecode="102" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.FileTypeDaoImpl" start="39" end="39" startBytecode="4" endBytecode="4" sourcefile="FileTypeDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/FileTypeDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.LabelDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="13" end="40" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.LabelDaoImpl" name="getAllLabels" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="28" end="28" startBytecode="0" endBytecode="60" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="28" end="28" startBytecode="4" endBytecode="4" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.LabelDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="13" end="40" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.LabelDaoImpl" name="getLabelByName" signature="(Ljava/lang/String;)Lcz/uhk/fim/repository/entity/Label;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="38" end="40" startBytecode="0" endBytecode="102" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.LabelDaoImpl" start="38" end="38" startBytecode="4" endBytecode="4" sourcefile="LabelDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/LabelDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.NoteDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="17" end="52" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.NoteDaoImpl" name="getAllNotes" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="33" end="33" startBytecode="0" endBytecode="60" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="33" end="33" startBytecode="4" endBytecode="4" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.NoteDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="17" end="52" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.NoteDaoImpl" name="getNotesBySubject" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="50" end="52" startBytecode="0" endBytecode="100" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="50" end="50" startBytecode="4" endBytecode="4" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.NoteDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="17" end="52" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.NoteDaoImpl" name="getNotesForFile" signature="(Ljava/lang/Long;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="38" end="40" startBytecode="0" endBytecode="100" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.NoteDaoImpl" start="38" end="38" startBytecode="4" endBytecode="4" sourcefile="NoteDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/NoteDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.RoleDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="13" end="85" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.RoleDaoImpl" name="getAllRoles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="31" end="31" startBytecode="0" endBytecode="60" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.RoleDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="13" end="85" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.RoleDaoImpl" name="getMaxId" signature="()Ljava/lang/Long;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="83" end="85" startBytecode="0" endBytecode="99" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="83" end="83" startBytecode="4" endBytecode="4" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.RoleDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="13" end="85" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.RoleDaoImpl" name="getRole" signature="(Ljava/lang/Object;)Lcz/uhk/fim/repository/entity/Role;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="72" end="79" startBytecode="0" endBytecode="160" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.RoleDaoImpl" start="75" end="75" startBytecode="34" endBytecode="34" sourcefile="RoleDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/RoleDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.UserDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="16" end="85" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.UserDaoImpl" name="getUserByUsername" signature="(Ljava/lang/String;)Lcz/uhk/fim/repository/entity/User;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="25" end="27" startBytecode="0" endBytecode="102" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="25" end="25" startBytecode="4" endBytecode="4" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.UserDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="16" end="85" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.UserDaoImpl" name="getUsersByName" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="32" end="34" startBytecode="0" endBytecode="100" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.dao.UserDaoImpl">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="16" end="85" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="cz.uhk.fim.repository.dao.UserDaoImpl" name="getUsersByRole" signature="(Lcz/uhk/fim/repository/entity/Role;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="39" end="41" startBytecode="0" endBytecode="103" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="cz.uhk.fim.repository.dao.UserDaoImpl" start="39" end="39" startBytecode="4" endBytecode="4" sourcefile="UserDaoImpl.java" sourcepath="cz/uhk/fim/repository/dao/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.entity.File">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" start="9" end="174" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Class>
+    <Field classname="cz.uhk.fim.repository.entity.File" name="category" signature="Lcz/uhk/fim/repository/entity/Category;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.entity.File">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" start="9" end="174" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Class>
+    <Field classname="cz.uhk.fim.repository.entity.File" name="fileType" signature="Lcz/uhk/fim/repository/entity/FileType;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.entity.File">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" start="9" end="174" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Class>
+    <Field classname="cz.uhk.fim.repository.entity.File" name="user" signature="Lcz/uhk/fim/repository/entity/User;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.entity.File" sourcefile="File.java" sourcepath="cz/uhk/fim/repository/entity/File.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.entity.Note">
+      <SourceLine classname="cz.uhk.fim.repository.entity.Note" start="8" end="80" sourcefile="Note.java" sourcepath="cz/uhk/fim/repository/entity/Note.java"/>
+    </Class>
+    <Field classname="cz.uhk.fim.repository.entity.Note" name="file" signature="Lcz/uhk/fim/repository/entity/File;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.entity.Note" sourcefile="Note.java" sourcepath="cz/uhk/fim/repository/entity/Note.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cz.uhk.fim.repository.entity.Note">
+      <SourceLine classname="cz.uhk.fim.repository.entity.Note" start="8" end="80" sourcefile="Note.java" sourcepath="cz/uhk/fim/repository/entity/Note.java"/>
+    </Class>
+    <Field classname="cz.uhk.fim.repository.entity.Note" name="user" signature="Lcz/uhk/fim/repository/entity/User;" isStatic="false">
+      <SourceLine classname="cz.uhk.fim.repository.entity.Note" sourcefile="Note.java" sourcepath="cz/uhk/fim/repository/entity/Note.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="35">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.dao.DaoAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.PathMatchConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.RedirectView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 04:16:07 +0000" total_classes="74" referenced_classes="131" total_bugs="26" total_size="1720" num_packages="19" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.96" clock_seconds="2.74" peak_mbytes="282.71" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="26">
+    <PackageStats package="cz.uhk.fim.api.rest.controller" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="cz.uhk.fim.api.rest.controller.Router" sourceFile="Router.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="cz.uhk.fim.dms.DMSApp" sourceFile="DMSApp.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.ServletInitializer" sourceFile="ServletInitializer.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.api" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="cz.uhk.fim.dms.service.api.ResultInfo" sourceFile="ResultInfo.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.ResultInfo$Status" sourceFile="ResultInfo.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.api.entity" total_bugs="0" total_types="7" total_size="48">
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.CategoryService" sourceFile="CategoryService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.FileService" sourceFile="FileService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.FileTypeService" sourceFile="FileTypeService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.LabelService" sourceFile="LabelService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.NoteService" sourceFile="NoteService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.RoleService" sourceFile="RoleService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.entity.UserService" sourceFile="UserService.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.api.file" total_bugs="0" total_types="3" total_size="10">
+      <ClassStats class="cz.uhk.fim.dms.service.api.file.FileDownloadService" sourceFile="FileDownloadService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.file.FileUploadService" sourceFile="FileUploadService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.api.file.FileValidationService" sourceFile="FileValidationService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.api.userlogin" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="cz.uhk.fim.dms.service.api.userlogin.SecurityService" sourceFile="SecurityService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.entity" total_bugs="0" total_types="7" total_size="117">
+      <ClassStats class="cz.uhk.fim.dms.service.entity.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.FileServiceImpl" sourceFile="FileServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.FileTypeServiceImpl" sourceFile="FileTypeServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.LabelServiceImpl" sourceFile="LabelServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.NoteServiceImpl" sourceFile="NoteServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.RoleServiceImpl" sourceFile="RoleServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.entity.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.file" total_bugs="0" total_types="3" total_size="68">
+      <ClassStats class="cz.uhk.fim.dms.service.file.FileDownloadServiceImpl" sourceFile="FileDownloadServiceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.file.FileUploadServiceImpl" sourceFile="FileUploadServiceImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.file.FileValidationServiceImpl" sourceFile="FileValidationServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.userlogin" total_bugs="0" total_types="3" total_size="68">
+      <ClassStats class="cz.uhk.fim.dms.service.userlogin.SecurityConfiguration" sourceFile="SecurityConfiguration.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.userlogin.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.dms.service.userlogin.UserLoginServiceImpl" sourceFile="UserLoginServiceImpl.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.service.userregistration" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="cz.uhk.fim.dms.service.userregistration.UserRegistrationService" sourceFile="UserRegistrationService.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.dms.tools" total_bugs="0" total_types="1" total_size="71">
+      <ClassStats class="cz.uhk.fim.dms.tools.InitialDataSet" sourceFile="InitialDataSet.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.gui.config" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="cz.uhk.fim.gui.config.WebAppConfig" sourceFile="WebAppConfig.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.dao" total_bugs="21" total_types="7" total_size="237" priority_2="21">
+      <ClassStats class="cz.uhk.fim.repository.dao.CategoryDaoImpl" sourceFile="CategoryDaoImpl.java" interface="false" size="25" bugs="2" priority_2="2"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.FileDaoImpl" sourceFile="FileDaoImpl.java" interface="false" size="44" bugs="6" priority_2="6"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.FileTypeDaoImpl" sourceFile="FileTypeDaoImpl.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.LabelDaoImpl" sourceFile="LabelDaoImpl.java" interface="false" size="18" bugs="2" priority_2="2"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.NoteDaoImpl" sourceFile="NoteDaoImpl.java" interface="false" size="24" bugs="3" priority_2="3"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.RoleDaoImpl" sourceFile="RoleDaoImpl.java" interface="false" size="46" bugs="3" priority_2="3"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="46" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.dao.api" total_bugs="0" total_types="8" total_size="58">
+      <ClassStats class="cz.uhk.fim.repository.dao.api.AbstractGenericDAO" sourceFile="AbstractGenericDAO.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.FileDao" sourceFile="FileDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.FileTypeDao" sourceFile="FileTypeDao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.LabelDao" sourceFile="LabelDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.NoteDao" sourceFile="NoteDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.RoleDao" sourceFile="RoleDao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dao.api.UserDao" sourceFile="UserDao.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.dto" total_bugs="0" total_types="2" total_size="214">
+      <ClassStats class="cz.uhk.fim.repository.dto.FileDTOImpl" sourceFile="FileDTOImpl.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dto.UserDTOImpl" sourceFile="UserDTOImpl.java" interface="false" size="114" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.dto.api" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="cz.uhk.fim.repository.dto.api.FileDTO" sourceFile="FileDTO.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.dto.api.UserDTO" sourceFile="UserDTO.java" interface="true" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.entity" total_bugs="5" total_types="7" total_size="302" priority_2="5">
+      <ClassStats class="cz.uhk.fim.repository.entity.Category" sourceFile="Category.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.File" sourceFile="File.java" interface="false" size="91" bugs="3" priority_2="3"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.FileType" sourceFile="FileType.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.Label" sourceFile="Label.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.Note" sourceFile="Note.java" interface="false" size="41" bugs="2" priority_2="2"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.Role" sourceFile="Role.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.entity.User" sourceFile="User.java" interface="false" size="60" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.repository.types.api" total_bugs="0" total_types="6" total_size="207">
+      <ClassStats class="cz.uhk.fim.repository.types.api.CategoryType" sourceFile="CategoryType.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.types.api.FileTypeCategory" sourceFile="FileTypeCategory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.types.api.FileTypeEnum" sourceFile="FileTypeEnum.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.types.api.FileTypeEnum$1" sourceFile="FileTypeEnum.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.types.api.FileTypeSuffix" sourceFile="FileTypeSuffix.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.repository.types.api.RoleType" sourceFile="RoleType.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cz.uhk.fim.rest.controller" total_bugs="0" total_types="10" total_size="191">
+      <ClassStats class="cz.uhk.fim.rest.controller.CategoryController" sourceFile="CategoryController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.FileController" sourceFile="FileController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.FileDownloadController" sourceFile="FileDownloadController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.FileTypeController" sourceFile="FileTypeController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.FileUploadController" sourceFile="FileUploadController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.LabelController" sourceFile="LabelController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.MainController" sourceFile="MainController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.NoteController" sourceFile="NoteController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.RoleController" sourceFile="RoleController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cz.uhk.fim.rest.controller.UserController" sourceFile="UserController.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="262" invocations="780" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="23368" standardDeviationMicrosecondsPerInvocation="1096"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="103" invocations="384" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="6819" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="97" invocations="131" avgMicrosecondsPerInvocation="745" maxMicrosecondsPerInvocation="10366" standardDeviationMicrosecondsPerInvocation="1559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="94" invocations="385" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="11527" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="88" invocations="131" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="7230" standardDeviationMicrosecondsPerInvocation="1182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="78" invocations="386" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="8491" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="75" invocations="385" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="7490" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="73" invocations="386" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="9253" standardDeviationMicrosecondsPerInvocation="624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="72" invocations="613" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="9573" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="68" invocations="385" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="9161" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="63" invocations="792" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="521" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="51" invocations="521" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="26220" standardDeviationMicrosecondsPerInvocation="1146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="47" invocations="238" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="3229" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="214" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="14064" standardDeviationMicrosecondsPerInvocation="986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="655" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="1468" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="131" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="5820" standardDeviationMicrosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="27" invocations="131" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="5265" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="27" invocations="131" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="2503" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="26" invocations="5586" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="951" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="25" invocations="74" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="3968" standardDeviationMicrosecondsPerInvocation="514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="25" invocations="131" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="1370" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="131" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="8536" standardDeviationMicrosecondsPerInvocation="761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="23" invocations="131" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="2461" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="74" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="1418" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="385" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="1549" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="19" invocations="74" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="1576" standardDeviationMicrosecondsPerInvocation="343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="18" invocations="384" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="3746" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="74" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="4235" standardDeviationMicrosecondsPerInvocation="530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="16" invocations="74" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="3303" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="16" invocations="131" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="4346" standardDeviationMicrosecondsPerInvocation="558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="74" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="6529" standardDeviationMicrosecondsPerInvocation="958"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="15" invocations="74" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="3467" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="15" invocations="74" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="1180" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="14" invocations="74" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="6806" standardDeviationMicrosecondsPerInvocation="799"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

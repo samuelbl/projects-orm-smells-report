@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086163000" analysisTimestamp="1597086164855" release="">
+  <Project projectName="repositorios/atereshkov_Diber-backend">
+    <Jar>repositorios/atereshkov_Diber-backend</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.handioq.diber.model.entity.User">
+      <SourceLine classname="com.github.handioq.diber.model.entity.User" start="66" end="212" sourcefile="User.java" sourcepath="com/github/handioq/diber/model/entity/User.java"/>
+    </Class>
+    <Field classname="com.github.handioq.diber.model.entity.User" name="roles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.github.handioq.diber.model.entity.User" sourcefile="User.java" sourcepath="com/github/handioq/diber/model/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="42">
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.tomcat.jdbc.pool.DataSource</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.domain.AuditorAware</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specifications</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.DefaultTokenServices</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.JdbcTokenStore</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:02:43 +0000" total_classes="86" referenced_classes="133" total_bugs="1" total_size="2318" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.68" clock_seconds="3.63" peak_mbytes="324.26" alloc_mbytes="3540.00" gc_seconds="0.17" priority_1="1">
+    <PackageStats package="com.github.handioq.diber" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.github.handioq.diber.Application" sourceFile="Application.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.configuration" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="com.github.handioq.diber.configuration.AuditorAwareImpl" sourceFile="AuditorAwareImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.configuration.CORSFilter" sourceFile="CORSFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.configuration.JpaConfig" sourceFile="JpaConfig.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.configuration.security" total_bugs="0" total_types="4" total_size="61">
+      <ClassStats class="com.github.handioq.diber.configuration.security.AuthorizationServerConfiguration" sourceFile="AuthorizationServerConfiguration.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.configuration.security.OAuth2ServerConfiguration" sourceFile="OAuth2ServerConfiguration.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.configuration.security.OAuth2ServerConfiguration$ResourceServerConfiguration" sourceFile="OAuth2ServerConfiguration.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.configuration.security.SecurityConfiguration" sourceFile="SecurityConfiguration.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.controller" total_bugs="0" total_types="13" total_size="505">
+      <ClassStats class="com.github.handioq.diber.controller.AddressController" sourceFile="AddressController.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.AuthController" sourceFile="AuthController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.MainController" sourceFile="MainController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.OrderController" sourceFile="OrderController.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.RequestController" sourceFile="RequestController.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.StatisticController" sourceFile="StatisticController.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.TicketController" sourceFile="TicketController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserAddressController" sourceFile="UserAddressController.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserController" sourceFile="UserController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserOrderController" sourceFile="UserOrderController.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserRequestController" sourceFile="UserRequestController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserReviewController" sourceFile="UserReviewController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.controller.UserTicketController" sourceFile="UserTicketController.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.model.base" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="com.github.handioq.diber.model.base.AuditableEntity" sourceFile="AuditableEntity.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.base.BaseDto" sourceFile="BaseDto.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.base.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.model.dto" total_bugs="0" total_types="12" total_size="671">
+      <ClassStats class="com.github.handioq.diber.model.dto.AddressDto" sourceFile="AddressDto.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.ClientStatisticsDto" sourceFile="ClientStatisticsDto.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.ErrorResponseDto" sourceFile="ErrorResponseDto.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.InvoiceDto" sourceFile="InvoiceDto.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.MessageDto" sourceFile="MessageDto.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.OrderDto" sourceFile="OrderDto.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.RequestDto" sourceFile="RequestDto.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.ReviewDto" sourceFile="ReviewDto.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.RoleDto" sourceFile="RoleDto.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.StatisticsDto" sourceFile="StatisticsDto.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.TicketDto" sourceFile="TicketDto.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.dto.UserDto" sourceFile="UserDto.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.model.entity" total_bugs="1" total_types="9" total_size="543" priority_1="1">
+      <ClassStats class="com.github.handioq.diber.model.entity.Address" sourceFile="Address.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Invoice" sourceFile="Invoice.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Message" sourceFile="Message.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Order" sourceFile="Order.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Request" sourceFile="Request.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Review" sourceFile="Review.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Role" sourceFile="Role.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.Ticket" sourceFile="Ticket.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.model.entity.User" sourceFile="User.java" interface="false" size="114" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.model.enums" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="com.github.handioq.diber.model.enums.RoleEnum" sourceFile="RoleEnum.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.repository" total_bugs="0" total_types="10" total_size="33">
+      <ClassStats class="com.github.handioq.diber.repository.AddressRepository" sourceFile="AddressRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.AuthRepository" sourceFile="AuthRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.MessageRepository" sourceFile="MessageRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.RequestRepository" sourceFile="RequestRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.ReviewRepository" sourceFile="ReviewRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.StatisticRepository" sourceFile="StatisticRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.TicketRepository" sourceFile="TicketRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.repository.specification" total_bugs="0" total_types="3" total_size="98">
+      <ClassStats class="com.github.handioq.diber.repository.specification.OrderSpecification" sourceFile="OrderSpecification.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.specification.OrderSpecificationsBuilder" sourceFile="OrderSpecificationsBuilder.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.repository.specification.SearchCriteria" sourceFile="SearchCriteria.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.service" total_bugs="0" total_types="11" total_size="61">
+      <ClassStats class="com.github.handioq.diber.service.AddressService" sourceFile="AddressService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.AuthService" sourceFile="AuthService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.MessageService" sourceFile="MessageService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.OrderService" sourceFile="OrderService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.RequestService" sourceFile="RequestService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.ReviewService" sourceFile="ReviewService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.RoleService" sourceFile="RoleService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.SecurityService" sourceFile="SecurityService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.StatisticService" sourceFile="StatisticService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.TicketService" sourceFile="TicketService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.UserService" sourceFile="UserService.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.service.impl" total_bugs="0" total_types="14" total_size="208">
+      <ClassStats class="com.github.handioq.diber.service.impl.AddressServiceImpl" sourceFile="AddressServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.AuthServiceImpl" sourceFile="AuthServiceImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.MessageServiceImpl" sourceFile="MessageServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.OrderServiceImpl" sourceFile="OrderServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.RequestServiceImpl" sourceFile="RequestServiceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.ReviewServiceImpl" sourceFile="ReviewServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.RoleServiceImpl" sourceFile="RoleServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.SecurityServiceImpl" sourceFile="SecurityServiceImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.StatisticServiceImpl" sourceFile="StatisticServiceImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.TicketServiceImpl" sourceFile="TicketServiceImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.UserDetailsServiceImpl$1" sourceFile="UserDetailsServiceImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.UserDetailsServiceImpl$UserRepositoryUserDetails" sourceFile="UserDetailsServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.handioq.diber.utils" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="com.github.handioq.diber.utils.Constants" sourceFile="Constants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.github.handioq.diber.utils.DateUtil" sourceFile="DateUtil.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="321" invocations="773" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="18604" standardDeviationMicrosecondsPerInvocation="1048"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="127" invocations="528" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="6436" standardDeviationMicrosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="125" invocations="529" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="9478" standardDeviationMicrosecondsPerInvocation="545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="112" invocations="530" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="12886" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="104" invocations="133" avgMicrosecondsPerInvocation="786" maxMicrosecondsPerInvocation="9750" standardDeviationMicrosecondsPerInvocation="1674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="101" invocations="530" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="11842" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="97" invocations="528" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="5442" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="94" invocations="529" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="12158" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="86" invocations="782" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="3576" standardDeviationMicrosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="84" invocations="695" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="7573" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="84" invocations="133" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="9686" standardDeviationMicrosecondsPerInvocation="1271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="73" invocations="602" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="31623" standardDeviationMicrosecondsPerInvocation="1304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="71" invocations="621" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="6490" standardDeviationMicrosecondsPerInvocation="432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="68" invocations="133" avgMicrosecondsPerInvocation="518" maxMicrosecondsPerInvocation="42817" standardDeviationMicrosecondsPerInvocation="3723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="61" invocations="254" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="3110" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="56" invocations="207" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="13845" standardDeviationMicrosecondsPerInvocation="1066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="44" invocations="133" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="5287" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="133" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="6065" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="38" invocations="6135" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1056" standardDeviationMicrosecondsPerInvocation="27"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="31" invocations="86" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="3046" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="31" invocations="133" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="9219" standardDeviationMicrosecondsPerInvocation="985"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="30" invocations="86" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="2079" standardDeviationMicrosecondsPerInvocation="373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="133" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="4103" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="28" invocations="86" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="5206" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="529" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="2947" standardDeviationMicrosecondsPerInvocation="146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="25" invocations="86" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="3565" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="25" invocations="133" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="3214" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="24" invocations="86" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="1886" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="22" invocations="86" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="6496" standardDeviationMicrosecondsPerInvocation="711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="21" invocations="86" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="4486" standardDeviationMicrosecondsPerInvocation="526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="20" invocations="528" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="1299" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="18" invocations="86" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="2067" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="17" invocations="86" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="1988" standardDeviationMicrosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="16" invocations="86" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="7983" standardDeviationMicrosecondsPerInvocation="858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="16" invocations="526" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="1030" standardDeviationMicrosecondsPerInvocation="67"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="16" invocations="86" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="1879" standardDeviationMicrosecondsPerInvocation="285"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

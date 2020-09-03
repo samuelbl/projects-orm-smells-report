@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597082064000" analysisTimestamp="1597082065537" release="">
+  <Project projectName="repositorios/janhalasa_JpaCriteriaWithLambdaExpressions">
+    <Jar>repositorios/janhalasa_JpaCriteriaWithLambdaExpressions</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.halasa.criterialambda.domain.Car">
+      <SourceLine classname="com.halasa.criterialambda.domain.Car" start="31" end="70" sourcefile="Car.java" sourcepath="com/halasa/criterialambda/domain/Car.java"/>
+    </Class>
+    <Field classname="com.halasa.criterialambda.domain.Car" name="model" signature="Lcom/halasa/criterialambda/domain/CarModel;" isStatic="false">
+      <SourceLine classname="com.halasa.criterialambda.domain.Car" sourcefile="Car.java" sourcepath="com/halasa/criterialambda/domain/Car.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.halasa.criterialambda.domain.CarModel">
+      <SourceLine classname="com.halasa.criterialambda.domain.CarModel" start="25" end="59" sourcefile="CarModel.java" sourcepath="com/halasa/criterialambda/domain/CarModel.java"/>
+    </Class>
+    <Field classname="com.halasa.criterialambda.domain.CarModel" name="vendor" signature="Lcom/halasa/criterialambda/domain/Vendor;" isStatic="false">
+      <SourceLine classname="com.halasa.criterialambda.domain.CarModel" sourcefile="CarModel.java" sourcepath="com/halasa/criterialambda/domain/CarModel.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaDelete</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.ListJoin</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ListAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.SingularAttribute</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 17:54:24 +0000" total_classes="19" referenced_classes="51" total_bugs="2" total_size="324" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.92" clock_seconds="1.90" peak_mbytes="191.86" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="2">
+    <PackageStats package="com.halasa.criterialambda" total_bugs="0" total_types="1" total_size="46">
+      <ClassStats class="com.halasa.criterialambda.Main" sourceFile="Main.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.halasa.criterialambda.dao" total_bugs="0" total_types="5" total_size="110">
+      <ClassStats class="com.halasa.criterialambda.dao.AbstractDao" sourceFile="AbstractDao.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.dao.CarDao" sourceFile="CarDao.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.dao.CarModelDao" sourceFile="CarModelDao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.dao.DriverDao" sourceFile="DriverDao.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.dao.VendorDao" sourceFile="VendorDao.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.halasa.criterialambda.dao.builder" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.halasa.criterialambda.dao.builder.PredicateBuilder" sourceFile="PredicateBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.dao.builder.QueryBuilder" sourceFile="QueryBuilder.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.halasa.criterialambda.domain" total_bugs="2" total_types="11" total_size="164" priority_2="2">
+      <ClassStats class="com.halasa.criterialambda.domain.Car" sourceFile="Car.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Car$Colour" sourceFile="Car.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.CarModel" sourceFile="CarModel.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.halasa.criterialambda.domain.CarModel_" sourceFile="CarModel_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Car_" sourceFile="Car_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Driver" sourceFile="Driver.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Driver_" sourceFile="Driver_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.EntityWithId" sourceFile="EntityWithId.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.EntityWithId_" sourceFile="EntityWithId_.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Vendor" sourceFile="Vendor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.halasa.criterialambda.domain.Vendor_" sourceFile="Vendor_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="307" invocations="482" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="87354" standardDeviationMicrosecondsPerInvocation="4120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="83" invocations="51" avgMicrosecondsPerInvocation="1636" maxMicrosecondsPerInvocation="16482" standardDeviationMicrosecondsPerInvocation="3215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="253" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="10585" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="61" invocations="87" avgMicrosecondsPerInvocation="710" maxMicrosecondsPerInvocation="7976" standardDeviationMicrosecondsPerInvocation="1367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="56" invocations="51" avgMicrosecondsPerInvocation="1099" maxMicrosecondsPerInvocation="9135" standardDeviationMicrosecondsPerInvocation="1906"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="487" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="3007" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="49" invocations="87" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="6665" standardDeviationMicrosecondsPerInvocation="1057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="47" invocations="87" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="15163" standardDeviationMicrosecondsPerInvocation="1806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="45" invocations="87" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="9751" standardDeviationMicrosecondsPerInvocation="1208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="42" invocations="51" avgMicrosecondsPerInvocation="835" maxMicrosecondsPerInvocation="15727" standardDeviationMicrosecondsPerInvocation="2360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="93" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="13030" standardDeviationMicrosecondsPerInvocation="1471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="87" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="4416" standardDeviationMicrosecondsPerInvocation="760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="38" invocations="89" avgMicrosecondsPerInvocation="430" maxMicrosecondsPerInvocation="24843" standardDeviationMicrosecondsPerInvocation="2613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="412" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="1199" standardDeviationMicrosecondsPerInvocation="154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="38" invocations="51" avgMicrosecondsPerInvocation="748" maxMicrosecondsPerInvocation="8685" standardDeviationMicrosecondsPerInvocation="1754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="37" invocations="87" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="12365" standardDeviationMicrosecondsPerInvocation="1420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="51" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="7120" standardDeviationMicrosecondsPerInvocation="1529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="24" invocations="19" avgMicrosecondsPerInvocation="1294" maxMicrosecondsPerInvocation="18958" standardDeviationMicrosecondsPerInvocation="4243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="51" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="3958" standardDeviationMicrosecondsPerInvocation="794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="20" invocations="961" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="7823" standardDeviationMicrosecondsPerInvocation="263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="19" invocations="51" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="3864" standardDeviationMicrosecondsPerInvocation="714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="51" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="3073" standardDeviationMicrosecondsPerInvocation="612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

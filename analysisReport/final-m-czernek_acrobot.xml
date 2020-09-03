@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596937937000" analysisTimestamp="1596937938793" release="">
+  <Project projectName="repositorios/m-czernek_acrobot">
+    <Jar>repositorios/m-czernek_acrobot</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.redhat.entities.Acronym">
+      <SourceLine classname="com.redhat.entities.Acronym" start="35" end="86" sourcefile="Acronym.java" sourcepath="com/redhat/entities/Acronym.java"/>
+    </Class>
+    <Field classname="com.redhat.entities.Acronym" name="explanations" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.redhat.entities.Acronym" sourcefile="Acronym.java" sourcepath="com/redhat/entities/Acronym.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.redhat.entities.Explanation">
+      <SourceLine classname="com.redhat.entities.Explanation" start="29" end="100" sourcefile="Explanation.java" sourcepath="com/redhat/entities/Explanation.java"/>
+    </Class>
+    <Field classname="com.redhat.entities.Explanation" name="acronym" signature="Lcom/redhat/entities/Acronym;" isStatic="false">
+      <SourceLine classname="com.redhat.entities.Explanation" sourcefile="Explanation.java" sourcepath="com/redhat/entities/Explanation.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.JsonNodeFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.ObjectNode</MissingClass>
+    <MissingClass>com.google.api.client.googleapis.auth.oauth2.GoogleCredential</MissingClass>
+    <MissingClass>com.google.api.client.googleapis.javanet.GoogleNetHttpTransport</MissingClass>
+    <MissingClass>com.google.api.client.http.ByteArrayContent</MissingClass>
+    <MissingClass>com.google.api.client.http.GenericUrl</MissingClass>
+    <MissingClass>com.google.api.client.http.HttpRequest</MissingClass>
+    <MissingClass>com.google.api.client.http.HttpRequestFactory</MissingClass>
+    <MissingClass>com.google.api.client.http.HttpTransport</MissingClass>
+    <MissingClass>com.google.api.client.http.javanet.NetHttpTransport</MissingClass>
+    <MissingClass>com.google.cloud.pubsub.v1.AckReplyConsumer</MissingClass>
+    <MissingClass>com.google.cloud.pubsub.v1.MessageReceiver</MissingClass>
+    <MissingClass>com.google.cloud.pubsub.v1.Subscriber</MissingClass>
+    <MissingClass>com.google.cloud.pubsub.v1.Subscriber$Builder</MissingClass>
+    <MissingClass>com.google.protobuf.ByteString</MissingClass>
+    <MissingClass>com.google.pubsub.v1.ProjectSubscriptionName</MissingClass>
+    <MissingClass>com.google.pubsub.v1.ProjectSubscriptionName$Builder</MissingClass>
+    <MissingClass>com.google.pubsub.v1.PubsubMessage</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 01:52:17 +0000" total_classes="9" referenced_classes="52" total_bugs="2" total_size="386" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.48" clock_seconds="1.53" peak_mbytes="193.07" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="1" priority_1="1">
+    <PackageStats package="com.redhat" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.redhat.Main" sourceFile="Main.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.redhat.constants" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.redhat.constants.Constants" sourceFile="Constants.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.redhat.entities" total_bugs="2" total_types="2" total_size="84" priority_2="1" priority_1="1">
+      <ClassStats class="com.redhat.entities.Acronym" sourceFile="Acronym.java" interface="false" size="35" bugs="1" priority_1="1"/>
+      <ClassStats class="com.redhat.entities.Explanation" sourceFile="Explanation.java" interface="false" size="49" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.redhat.messages" total_bugs="0" total_types="3" total_size="148">
+      <ClassStats class="com.redhat.messages.AcroBot" sourceFile="AcroBot.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.redhat.messages.AdministrativeMessageHelper" sourceFile="AdministrativeMessageHelper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.redhat.messages.MessageHelper" sourceFile="MessageHelper.java" interface="false" size="88" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.redhat.persistence" total_bugs="0" total_types="2" total_size="118">
+      <ClassStats class="com.redhat.persistence.AcronymExplanationDal" sourceFile="AcronymExplanationDal.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.redhat.persistence.PersistenceManager" sourceFile="PersistenceManager.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="201" invocations="550" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="16519" standardDeviationMicrosecondsPerInvocation="967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="52" avgMicrosecondsPerInvocation="1297" maxMicrosecondsPerInvocation="12272" standardDeviationMicrosecondsPerInvocation="2242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="557" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="481" standardDeviationMicrosecondsPerInvocation="46"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="52" avgMicrosecondsPerInvocation="863" maxMicrosecondsPerInvocation="4446" standardDeviationMicrosecondsPerInvocation="1214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="40" invocations="188" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="5127" standardDeviationMicrosecondsPerInvocation="446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="39" invocations="63" avgMicrosecondsPerInvocation="627" maxMicrosecondsPerInvocation="6846" standardDeviationMicrosecondsPerInvocation="991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="472" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="1507" standardDeviationMicrosecondsPerInvocation="134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="63" avgMicrosecondsPerInvocation="560" maxMicrosecondsPerInvocation="25548" standardDeviationMicrosecondsPerInvocation="3177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="34" invocations="63" avgMicrosecondsPerInvocation="542" maxMicrosecondsPerInvocation="11109" standardDeviationMicrosecondsPerInvocation="1392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="63" avgMicrosecondsPerInvocation="531" maxMicrosecondsPerInvocation="8276" standardDeviationMicrosecondsPerInvocation="1072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="32" invocations="63" avgMicrosecondsPerInvocation="521" maxMicrosecondsPerInvocation="2262" standardDeviationMicrosecondsPerInvocation="543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="108" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="13714" standardDeviationMicrosecondsPerInvocation="1339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="29" invocations="63" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="9115" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="26" invocations="63" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="2428" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="52" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="6827" standardDeviationMicrosecondsPerInvocation="1007"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="52" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="3476" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="52" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="9029" standardDeviationMicrosecondsPerInvocation="1261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="17" invocations="9" avgMicrosecondsPerInvocation="1949" maxMicrosecondsPerInvocation="7390" standardDeviationMicrosecondsPerInvocation="2863"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="52" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="2349" standardDeviationMicrosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="16" invocations="49" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="1206" standardDeviationMicrosecondsPerInvocation="310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="52" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="2625" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="52" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="4897" standardDeviationMicrosecondsPerInvocation="705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="9" avgMicrosecondsPerInvocation="1290" maxMicrosecondsPerInvocation="5738" standardDeviationMicrosecondsPerInvocation="1679"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

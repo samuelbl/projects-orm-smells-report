@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597108612000" analysisTimestamp="1597108613970" release="">
+  <Project projectName="repositorios/softservedata_lv257">
+    <Jar>repositorios/softservedata_lv257</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="26" end="63" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" name="getAllCompanies" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="37" end="38" startBytecode="0" endBytecode="74" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    <String value="Method: getAllCompanies. Fields with EAGER without Join Fetch: address, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="26" end="63" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" name="getAllPersons" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="43" end="44" startBytecode="0" endBytecode="74" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="43" end="43" startBytecode="4" endBytecode="4" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    <String value="Method: getAllPersons. Fields with EAGER without Join Fetch: address, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="26" end="63" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" name="getAllCompanies" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="37" end="38" startBytecode="0" endBytecode="74" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="26" end="63" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" name="getAllPersons" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="43" end="44" startBytecode="0" endBytecode="74" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" start="43" end="43" startBytecode="4" endBytecode="4" sourcefile="OwnerDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/OwnerDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="13" end="49" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" name="findByName" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/Privilege;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="20" end="23" startBytecode="0" endBytecode="115" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="20" end="20" startBytecode="4" endBytecode="4" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="13" end="49" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" name="getAllPrivileges" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="48" end="49" startBytecode="0" endBytecode="92" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="PrivilegeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/PrivilegeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="15" end="28" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" name="findByName" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="20" end="22" startBytecode="0" endBytecode="78" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="15" end="28" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" name="findRootCategories" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="27" end="28" startBytecode="0" endBytecode="74" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" start="27" end="27" startBytecode="4" endBytecode="4" sourcefile="ResourceCategoryDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceCategoryDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="18" end="58" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" name="findByDescription" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="36" end="39" startBytecode="0" endBytecode="78" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="36" end="36" startBytecode="0" endBytecode="0" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="18" end="58" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" name="findByTitle" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="44" end="46" startBytecode="0" endBytecode="78" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="44" end="44" startBytecode="0" endBytecode="0" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="18" end="58" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" name="findByTitleAndUnits" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="26" end="31" startBytecode="0" endBytecode="158" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="26" end="26" startBytecode="0" endBytecode="0" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="18" end="58" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" name="findByUnits" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="51" end="53" startBytecode="0" endBytecode="78" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" start="51" end="51" startBytecode="0" endBytecode="0" sourcefile="ResourcePropertyDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourcePropertyDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl" start="13" end="40" sourcefile="ResourceRequestDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceRequestDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl" start="36" end="40" startBytecode="0" endBytecode="124" sourcefile="ResourceRequestDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceRequestDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="ResourceRequestDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceRequestDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="findWithPropertiesByID" signature="(Ljava/lang/Long;)Lcom/softserve/edu/Resources/entity/ResourceType;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="80" end="92" startBytecode="0" endBytecode="218" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="82" end="82" startBytecode="6" endBytecode="6" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    <String value="Method: findWithPropertiesByID. Fields with EAGER without Join Fetch: category, assigner, request, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="getInstances" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="72" end="73" startBytecode="0" endBytecode="76" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="72" end="72" startBytecode="0" endBytecode="0" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    <String value="Method: getInstances. Fields with EAGER without Join Fetch: category, assigner, request, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="findByName" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="31" end="32" startBytecode="0" endBytecode="78" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="31" end="31" startBytecode="0" endBytecode="0" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="findByTypeName" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="97" end="98" startBytecode="0" endBytecode="78" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="97" end="97" startBytecode="0" endBytecode="0" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="findWithPropertiesByID" signature="(Ljava/lang/Long;)Lcom/softserve/edu/Resources/entity/ResourceType;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="80" end="92" startBytecode="0" endBytecode="218" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="82" end="82" startBytecode="6" endBytecode="6" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="19" end="118" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" name="getInstances" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="72" end="73" startBytecode="0" endBytecode="76" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" start="72" end="72" startBytecode="0" endBytecode="0" sourcefile="ResourceTypeDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/ResourceTypeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="18" end="45" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" name="findByName" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/Role;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="23" end="26" startBytecode="0" endBytecode="115" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="23" end="23" startBytecode="4" endBytecode="4" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="18" end="45" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" name="getAllRoles" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="32" end="33" startBytecode="0" endBytecode="92" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="RoleDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/RoleDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="findByEmail" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="47" end="49" startBytecode="0" endBytecode="118" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="47" end="47" startBytecode="0" endBytecode="0" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    <String value="Method: findByEmail. Fields with EAGER without Join Fetch: roles, verificationToken, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="getAllUsers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="53" end="54" startBytecode="0" endBytecode="92" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    <String value="Method: getAllUsers. Fields with EAGER without Join Fetch: roles, verificationToken, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="getUsersWithRoles" signature="([Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="59" end="60" startBytecode="0" endBytecode="81" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="59" end="59" startBytecode="0" endBytecode="0" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    <String value="Method: getUsersWithRoles. Fields with EAGER without Join Fetch: verificationToken, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="findByEmail" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="47" end="49" startBytecode="0" endBytecode="118" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="47" end="47" startBytecode="0" endBytecode="0" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="getAllUsers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="53" end="54" startBytecode="0" endBytecode="92" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="18" end="60" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" name="getUsersWithRoles" signature="([Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="59" end="60" startBytecode="0" endBytecode="81" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDAOImpl" start="59" end="59" startBytecode="0" endBytecode="0" sourcefile="UserDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="22" end="55" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" name="getAllUserDetails" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="32" end="33" startBytecode="0" endBytecode="92" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    <String value="Method: getAllUserDetails. Fields with EAGER without Join Fetch: document, user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="22" end="55" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" name="findByEmail" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="43" end="44" startBytecode="0" endBytecode="77" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="43" end="43" startBytecode="0" endBytecode="0" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="22" end="55" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" name="findByUserId" signature="(J)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="48" end="50" startBytecode="0" endBytecode="80" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="48" end="48" startBytecode="0" endBytecode="0" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="22" end="55" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" name="getAllUserDetails" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="32" end="33" startBytecode="0" endBytecode="92" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="UserDetailsDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/UserDetailsDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="17" end="43" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" name="findByToken" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/VerificationToken;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="33" end="43" startBytecode="0" endBytecode="195" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="33" end="33" startBytecode="4" endBytecode="4" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+    <String value="Method: findByToken. Fields with EAGER without Join Fetch: user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="17" end="43" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+    </Class>
+    <Method classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" name="findByToken" signature="(Ljava/lang/String;)Lcom/softserve/edu/Resources/entity/VerificationToken;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="33" end="43" startBytecode="0" endBytecode="195" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" start="33" end="33" startBytecode="4" endBytecode="4" sourcefile="VerificationTokenDAOImpl.java" sourcepath="com/softserve/edu/Resources/dao/impl/VerificationTokenDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.Address">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Address" start="76" end="244" sourcefile="Address.java" sourcepath="com/softserve/edu/Resources/entity/Address.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.Address" name="owners" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Address" sourcefile="Address.java" sourcepath="com/softserve/edu/Resources/entity/Address.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ConstrainedProperty">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ConstrainedProperty" start="28" end="68" sourcefile="ConstrainedProperty.java" sourcepath="com/softserve/edu/Resources/entity/ConstrainedProperty.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ConstrainedProperty" name="property" signature="Lcom/softserve/edu/Resources/entity/ResourceProperty;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ConstrainedProperty" sourcefile="ConstrainedProperty.java" sourcepath="com/softserve/edu/Resources/entity/ConstrainedProperty.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.Owner">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Owner" start="44" end="107" sourcefile="Owner.java" sourcepath="com/softserve/edu/Resources/entity/Owner.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.Owner" name="address" signature="Lcom/softserve/edu/Resources/entity/Address;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Owner" sourcefile="Owner.java" sourcepath="com/softserve/edu/Resources/entity/Owner.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.Resource">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Resource" start="22" end="93" sourcefile="Resource.java" sourcepath="com/softserve/edu/Resources/entity/Resource.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.Resource" name="address" signature="Lcom/softserve/edu/Resources/entity/Address;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.Resource" sourcefile="Resource.java" sourcepath="com/softserve/edu/Resources/entity/Resource.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceCategory">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceCategory" start="25" end="113" sourcefile="ResourceCategory.java" sourcepath="com/softserve/edu/Resources/entity/ResourceCategory.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceCategory" name="parentCategory" signature="Lcom/softserve/edu/Resources/entity/ResourceCategory;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceCategory" sourcefile="ResourceCategory.java" sourcepath="com/softserve/edu/Resources/entity/ResourceCategory.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceOwning">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" start="34" end="107" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceOwning" name="owner" signature="Lcom/softserve/edu/Resources/entity/Owner;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceOwning">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" start="34" end="107" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceOwning" name="resource" signature="Lcom/softserve/edu/Resources/entity/Resource;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceOwning">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" start="34" end="107" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceOwning" name="resourceType" signature="Lcom/softserve/edu/Resources/entity/ResourceType;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceOwning" sourcefile="ResourceOwning.java" sourcepath="com/softserve/edu/Resources/entity/ResourceOwning.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceRequest">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" start="55" end="195" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceRequest" name="document" signature="Lcom/softserve/edu/Resources/entity/Document;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceRequest">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" start="55" end="195" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceRequest" name="register" signature="Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceRequest">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" start="55" end="195" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceRequest" name="resourceType" signature="Lcom/softserve/edu/Resources/entity/ResourceType;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceRequest">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" start="55" end="195" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceRequest" name="resourcesAdmin" signature="Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceRequest" sourcefile="ResourceRequest.java" sourcepath="com/softserve/edu/Resources/entity/ResourceRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceType">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" start="42" end="176" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceType" name="assigner" signature="Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceType">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" start="42" end="176" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceType" name="category" signature="Lcom/softserve/edu/Resources/entity/ResourceCategory;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.ResourceType">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" start="42" end="176" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.ResourceType" name="request" signature="Lcom/softserve/edu/Resources/entity/ResourceRequest;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.ResourceType" sourcefile="ResourceType.java" sourcepath="com/softserve/edu/Resources/entity/ResourceType.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.User">
+      <SourceLine classname="com.softserve.edu.Resources.entity.User" start="45" end="153" sourcefile="User.java" sourcepath="com/softserve/edu/Resources/entity/User.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.User" name="roles" signature="Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.User" sourcefile="User.java" sourcepath="com/softserve/edu/Resources/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.User">
+      <SourceLine classname="com.softserve.edu.Resources.entity.User" start="45" end="153" sourcefile="User.java" sourcepath="com/softserve/edu/Resources/entity/User.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.User" name="verificationToken" signature="Lcom/softserve/edu/Resources/entity/VerificationToken;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.User" sourcefile="User.java" sourcepath="com/softserve/edu/Resources/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.UserDetails">
+      <SourceLine classname="com.softserve.edu.Resources.entity.UserDetails" start="81" end="260" sourcefile="UserDetails.java" sourcepath="com/softserve/edu/Resources/entity/UserDetails.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.UserDetails" name="document" signature="Lcom/softserve/edu/Resources/entity/Avatar;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.UserDetails" sourcefile="UserDetails.java" sourcepath="com/softserve/edu/Resources/entity/UserDetails.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.UserDetails">
+      <SourceLine classname="com.softserve.edu.Resources.entity.UserDetails" start="81" end="260" sourcefile="UserDetails.java" sourcepath="com/softserve/edu/Resources/entity/UserDetails.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.UserDetails" name="user" signature="Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.UserDetails" sourcefile="UserDetails.java" sourcepath="com/softserve/edu/Resources/entity/UserDetails.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.softserve.edu.Resources.entity.VerificationToken">
+      <SourceLine classname="com.softserve.edu.Resources.entity.VerificationToken" start="30" end="142" sourcefile="VerificationToken.java" sourcepath="com/softserve/edu/Resources/entity/VerificationToken.java"/>
+    </Class>
+    <Field classname="com.softserve.edu.Resources.entity.VerificationToken" name="user" signature="Lcom/softserve/edu/Resources/entity/User;" isStatic="false">
+      <SourceLine classname="com.softserve.edu.Resources.entity.VerificationToken" sourcefile="VerificationToken.java" sourcepath="com/softserve/edu/Resources/entity/VerificationToken.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="91">
+    <MissingClass>com.amazonaws.auth.AWSStaticCredentialsProvider</MissingClass>
+    <MissingClass>com.amazonaws.auth.BasicAWSCredentials</MissingClass>
+    <MissingClass>com.amazonaws.regions.Regions</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3ClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.CannedAccessControlList</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.GetObjectRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.PutObjectRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.S3Object</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.S3ObjectInputStream</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.LockModeType</MissingClass>
+    <MissingClass>javax.persistence.PersistenceException</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.MultipartConfigElement</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletRegistration$Dynamic</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionListener</MissingClass>
+    <MissingClass>org.apache.commons.dbcp2.BasicDataSource</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpRequestBase</MissingClass>
+    <MissingClass>org.apache.velocity.Template</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.jboss.aerogear.security.otp.api.Base32</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisher</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.annotation.AnnotationConfigApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.support.ResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.dao.DataIntegrityViolationException</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.JdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.namedparam.MapSqlParameterSource</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.Database</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.context.request.WebRequest</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.support.StandardServletMultipartResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.InternalResourceViewResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:16:52 +0000" total_classes="168" referenced_classes="265" total_bugs="53" total_size="5629" num_packages="18" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="17.01" clock_seconds="4.83" peak_mbytes="345.37" alloc_mbytes="3540.00" gc_seconds="0.18" priority_2="51" priority_1="2">
+    <PackageStats package="com.softserve.edu.Resources" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.softserve.edu.Resources.Constants" sourceFile="Constants.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.amaintest" total_bugs="0" total_types="1" total_size="76">
+      <ClassStats class="com.softserve.edu.Resources.amaintest.MainTest" sourceFile="MainTest.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.authentication" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="com.softserve.edu.Resources.authentication.MyUserDetailsService" sourceFile="MyUserDetailsService.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.config" total_bugs="0" total_types="7" total_size="146">
+      <ClassStats class="com.softserve.edu.Resources.config.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.DBConfig" sourceFile="DBConfig.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.SessionListener" sourceFile="SessionListener.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.SpringSecurityInitializer" sourceFile="SpringSecurityInitializer.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.SpringWebAppInitializer" sourceFile="SpringWebAppInitializer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.WebConfig" sourceFile="WebConfig.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.config.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.controller" total_bugs="0" total_types="14" total_size="648">
+      <ClassStats class="com.softserve.edu.Resources.controller.AdministrationController" sourceFile="AdministrationController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.DevTestController" sourceFile="DevTestController.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.LookUpController" sourceFile="LookUpController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.MainController" sourceFile="MainController.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.RegisterResourceController" sourceFile="RegisterResourceController.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.RegistrationUserController" sourceFile="RegistrationUserController.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.RequestResourceController" sourceFile="RequestResourceController.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.ResourceController" sourceFile="ResourceController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.ResourceRequestAdmController" sourceFile="ResourceRequestAdmController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.ResourceTypeManagementController" sourceFile="ResourceTypeManagementController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.RestTestController" sourceFile="RestTestController.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.SecurityController" sourceFile="SecurityController.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.UserController" sourceFile="UserController.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.controller.UserController$FileController" sourceFile="UserController.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.dao" total_bugs="0" total_types="13" total_size="80">
+      <ClassStats class="com.softserve.edu.Resources.dao.AddressDAO" sourceFile="AddressDAO.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.GenericDAO" sourceFile="GenericDAO.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.OwnerDAO" sourceFile="OwnerDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.PrivilegeDAO" sourceFile="PrivilegeDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.ResourceCategoryDAO" sourceFile="ResourceCategoryDAO.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.ResourceDao" sourceFile="ResourceDao.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.ResourcePropertyDAO" sourceFile="ResourcePropertyDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.ResourceTypeDAO" sourceFile="ResourceTypeDAO.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.RoleDAO" sourceFile="RoleDAO.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.UserDAO" sourceFile="UserDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.UserDetailsDAO" sourceFile="UserDetailsDAO.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.UserProfileDAO" sourceFile="UserProfileDAO.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.VerificationTokenDAO" sourceFile="VerificationTokenDAO.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.dao.impl" total_bugs="33" total_types="15" total_size="479" priority_2="33">
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.AddressDAOImpl" sourceFile="AddressDAOImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.DocumentDAOImpl" sourceFile="DocumentDAOImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.GenericDAOImpl" sourceFile="GenericDAOImpl.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.OwnerDAOImpl" sourceFile="OwnerDAOImpl.java" interface="false" size="25" bugs="4" priority_2="4"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.PrivilegeDAOImpl" sourceFile="PrivilegeDAOImpl.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.ResourceCategoryDAOImpl" sourceFile="ResourceCategoryDAOImpl.java" interface="false" size="10" bugs="2" priority_2="2"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.ResourceDaoImpl" sourceFile="ResourceDaoImpl.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.ResourcePropertyDAOImpl" sourceFile="ResourcePropertyDAOImpl.java" interface="false" size="24" bugs="4" priority_2="4"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.ResourceRequestDAOImpl" sourceFile="ResourceRequestDAOImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.ResourceTypeDAOImpl" sourceFile="ResourceTypeDAOImpl.java" interface="false" size="68" bugs="6" priority_2="6"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.RoleDAOImpl" sourceFile="RoleDAOImpl.java" interface="false" size="18" bugs="2" priority_2="2"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.UserDAOImpl" sourceFile="UserDAOImpl.java" interface="false" size="22" bugs="6" priority_2="6"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.UserDetailsDAOImpl" sourceFile="UserDetailsDAOImpl.java" interface="false" size="24" bugs="4" priority_2="4"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.UserProfileDAOImpl" sourceFile="UserProfileDAOImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dao.impl.VerificationTokenDAOImpl" sourceFile="VerificationTokenDAOImpl.java" interface="false" size="19" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.dto" total_bugs="0" total_types="34" total_size="1105">
+      <ClassStats class="com.softserve.edu.Resources.dto.CarRestTest" sourceFile="CarRestTest.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ConstrainedPropertyBrief" sourceFile="ConstrainedPropertyBrief.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.DtoUtilMapper" sourceFile="DtoUtilMapper.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ExceptionJSONInfo" sourceFile="ExceptionJSONInfo.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.FieldErrorDTO" sourceFile="FieldErrorDTO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.GenericResourceDTO" sourceFile="GenericResourceDTO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.GroupedResourceCount" sourceFile="GroupedResourceCount.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Message" sourceFile="Message.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Message$1" sourceFile="Message.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Message$Purpose" sourceFile="Message.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Message$Purpose$1" sourceFile="Message.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Message$Purpose$2" sourceFile="Message.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.MessageTestRest" sourceFile="MessageTestRest.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.OwnerDTO" sourceFile="OwnerDTO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.PasswordDTO" sourceFile="PasswordDTO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.PrivilegesDTO" sourceFile="PrivilegesDTO.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.RequestDTO" sourceFile="RequestDTO.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourceCategoryDTO" sourceFile="ResourceCategoryDTO.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourceImplDTO" sourceFile="ResourceImplDTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourcePropertyDescription" sourceFile="ResourcePropertyDescription.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourceRequestDTO" sourceFile="ResourceRequestDTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourceTypeBrief" sourceFile="ResourceTypeBrief.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ResourceTypeDTO" sourceFile="ResourceTypeDTO.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.SearchDTO" sourceFile="SearchDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.SelectInfoDTO" sourceFile="SelectInfoDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.TypeInfoDTO" sourceFile="TypeInfoDTO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.UserProfileDTO" sourceFile="UserProfileDTO.java" interface="false" size="158" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ValidationErrorDTO" sourceFile="ValidationErrorDTO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ValueTypeDTO" sourceFile="ValueTypeDTO.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.ViewTypesDTO" sourceFile="ViewTypesDTO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Views" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Views$Categories" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.Views$CategoriesWithTypes" sourceFile="Views.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.dto.asd" total_bugs="0" total_types="3" total_size="90">
+      <ClassStats class="com.softserve.edu.Resources.dto.asd.PropertyPrivilege" sourceFile="PropertyPrivilege.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.asd.SystemPrivilege" sourceFile="SystemPrivilege.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.dto.asd.TypePrivilege" sourceFile="TypePrivilege.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.entity" total_bugs="20" total_types="26" total_size="1491" priority_2="18" priority_1="2">
+      <ClassStats class="com.softserve.edu.Resources.entity.Address" sourceFile="Address.java" interface="false" size="107" bugs="1" priority_1="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Avatar" sourceFile="Avatar.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Company" sourceFile="Company.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ConstrainedProperty" sourceFile="ConstrainedProperty.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Document" sourceFile="Document.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.GenericResource" sourceFile="GenericResource.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Owner" sourceFile="Owner.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Person" sourceFile="Person.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.PersonalizedResources" sourceFile="PersonalizedResources.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Privilege" sourceFile="Privilege.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.PrivilegeType" sourceFile="PrivilegeType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.PropertyValue" sourceFile="PropertyValue.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Resource" sourceFile="Resource.java" interface="false" size="57" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceCategory" sourceFile="ResourceCategory.java" interface="false" size="57" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceOwning" sourceFile="ResourceOwning.java" interface="false" size="62" bugs="3" priority_2="3"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceProperty" sourceFile="ResourceProperty.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceRequest" sourceFile="ResourceRequest.java" interface="false" size="94" bugs="4" priority_2="4"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceRequest$Status" sourceFile="ResourceRequest.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ResourceType" sourceFile="ResourceType.java" interface="false" size="82" bugs="3" priority_2="3"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.Role" sourceFile="Role.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.User" sourceFile="User.java" interface="false" size="75" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.UserDetails" sourceFile="UserDetails.java" interface="false" size="136" bugs="2" priority_2="2"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ValueType" sourceFile="ValueType.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.ValueType$1" sourceFile="ValueType.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.VerificationToken" sourceFile="VerificationToken.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="com.softserve.edu.Resources.entity.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.exception" total_bugs="0" total_types="10" total_size="106">
+      <ClassStats class="com.softserve.edu.Resources.exception.BadCategoryNameException" sourceFile="BadCategoryNameException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.CycleDependencyException" sourceFile="CycleDependencyException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.GlobalDefaultExceptionHandler" sourceFile="GlobalDefaultExceptionHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.InvalidResourceCategoryException" sourceFile="InvalidResourceCategoryException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.InvalidResourceTypeException" sourceFile="InvalidResourceTypeException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.RemovingCategoriesWithTypesException" sourceFile="RemovingCategoriesWithTypesException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.ResourceTypeInstantiationException" sourceFile="ResourceTypeInstantiationException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.ResourceTypeNotFoundException" sourceFile="ResourceTypeNotFoundException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.exception.UserAlreadyExistException" sourceFile="UserAlreadyExistException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.registration" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.softserve.edu.Resources.registration.OnRegistrationCompleteEvent" sourceFile="OnRegistrationCompleteEvent.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.registration.listener" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="com.softserve.edu.Resources.registration.listener.RegistrationListener" sourceFile="RegistrationListener.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.rest" total_bugs="0" total_types="4" total_size="97">
+      <ClassStats class="com.softserve.edu.Resources.rest.CategoriesRestController" sourceFile="CategoriesRestController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.rest.PropertiesRestController" sourceFile="PropertiesRestController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.rest.ResourcesRestController" sourceFile="ResourcesRestController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.rest.UserRestController" sourceFile="UserRestController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.service" total_bugs="0" total_types="10" total_size="103">
+      <ClassStats class="com.softserve.edu.Resources.service.AddressService" sourceFile="AddressService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.OwnerService" sourceFile="OwnerService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.PrivilegeService" sourceFile="PrivilegeService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.PropertyService" sourceFile="PropertyService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.ResourceCategoryService" sourceFile="ResourceCategoryService.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.ResourceService" sourceFile="ResourceService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.ResourceTypeService" sourceFile="ResourceTypeService.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.UserDetailsService" sourceFile="UserDetailsService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.UserProfileService" sourceFile="UserProfileService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.UserService" sourceFile="UserService.java" interface="true" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.service.impl" total_bugs="0" total_types="15" total_size="872">
+      <ClassStats class="com.softserve.edu.Resources.service.impl.AddressServiceImpl" sourceFile="AddressServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.DocumentService" sourceFile="DocumentService.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.OwnerServiceImpl" sourceFile="OwnerServiceImpl.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.PrivilegeServiceImpl" sourceFile="PrivilegeServiceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.PropertyServiceImpl" sourceFile="PropertyServiceImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.RequestService" sourceFile="RequestService.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.ResourceCategoryServiceImpl" sourceFile="ResourceCategoryServiceImpl.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.ResourceServiceImpl" sourceFile="ResourceServiceImpl.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.ResourceTypeServiceImpl" sourceFile="ResourceTypeServiceImpl.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.RoleService" sourceFile="RoleService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.TestService" sourceFile="TestService.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.UserProfileServiceImpl" sourceFile="UserProfileServiceImpl.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.service.impl.VelocityMailService" sourceFile="VelocityMailService.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.util" total_bugs="0" total_types="10" total_size="231">
+      <ClassStats class="com.softserve.edu.Resources.util.AcceptRequestMail" sourceFile="AcceptRequestMail.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.CriteriaQueryBuilder" sourceFile="CriteriaQueryBuilder.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.FileUpload" sourceFile="FileUpload.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.FileUploadLocalUtility" sourceFile="FileUploadLocalUtility.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.FileUploadUtility" sourceFile="FileUploadUtility.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.Mail" sourceFile="Mail.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.QueryBuilder" sourceFile="QueryBuilder.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.RegistrationConfirmMail" sourceFile="RegistrationConfirmMail.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.ResponceMail" sourceFile="ResponceMail.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.util.ValidationDTOUtility" sourceFile="ValidationDTOUtility.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.softserve.edu.Resources.validator" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="com.softserve.edu.Resources.validator.FormValidator" sourceFile="FormValidator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.softserve.edu.Resources.validator.UploadFileValidator" sourceFile="UploadFileValidator.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="277" invocations="1136" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="7446" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="217" invocations="1200" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="5430" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="210" invocations="1214" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="5718" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="194" invocations="1213" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="9041" standardDeviationMicrosecondsPerInvocation="452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="189" invocations="1218" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="15721" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="165" invocations="1218" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="8972" standardDeviationMicrosecondsPerInvocation="485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="134" invocations="1214" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="8192" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="125" invocations="704" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="12122" standardDeviationMicrosecondsPerInvocation="538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="120" invocations="265" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="5600" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="115" invocations="265" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="5406" standardDeviationMicrosecondsPerInvocation="755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="111" invocations="168" avgMicrosecondsPerInvocation="666" maxMicrosecondsPerInvocation="10268" standardDeviationMicrosecondsPerInvocation="1706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="1547" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="7638" standardDeviationMicrosecondsPerInvocation="230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="78" invocations="265" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="30403" standardDeviationMicrosecondsPerInvocation="2166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="75" invocations="1151" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="464" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="73" invocations="1378" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="22938" standardDeviationMicrosecondsPerInvocation="618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="62" invocations="893" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="11495" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="59" invocations="389" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="13861" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="54" invocations="69" avgMicrosecondsPerInvocation="795" maxMicrosecondsPerInvocation="1949" standardDeviationMicrosecondsPerInvocation="679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="54" invocations="16825" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="1461" standardDeviationMicrosecondsPerInvocation="15"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="54" invocations="168" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="1773" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="51" invocations="168" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="2802" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="51" invocations="168" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="9239" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="265" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="2657" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="49" invocations="1214" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="1712" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="42" invocations="168" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="22567" standardDeviationMicrosecondsPerInvocation="1733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="41" invocations="265" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="1721" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="41" invocations="265" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="1641" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="40" invocations="168" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="2253" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="265" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="2424" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="33" invocations="168" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="16697" standardDeviationMicrosecondsPerInvocation="1286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="33" invocations="168" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="3788" standardDeviationMicrosecondsPerInvocation="362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="32" invocations="168" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="7773" standardDeviationMicrosecondsPerInvocation="618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="32" invocations="168" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="2452" standardDeviationMicrosecondsPerInvocation="250"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="30" invocations="168" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="2755" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="29" invocations="1166" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="1044" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="29" invocations="1200" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="852" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="28" invocations="168" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="1669" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="28" invocations="168" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="4124" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="24" invocations="168" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="1409" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="265" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="1547" standardDeviationMicrosecondsPerInvocation="185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="22" invocations="168" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="881" standardDeviationMicrosecondsPerInvocation="168"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

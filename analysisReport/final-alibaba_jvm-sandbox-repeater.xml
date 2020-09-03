@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106833000" analysisTimestamp="1597106835066" release="">
+  <Project projectName="repositorios/alibaba_jvm-sandbox-repeater">
+    <Jar>repositorios/alibaba_jvm-sandbox-repeater</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.alibaba.repeater.console.dal.model.Replay">
+      <SourceLine classname="com.alibaba.repeater.console.dal.model.Replay" start="18" end="65" sourcefile="Replay.java" sourcepath="com/alibaba/repeater/console/dal/model/Replay.java"/>
+    </Class>
+    <Field classname="com.alibaba.repeater.console.dal.model.Replay" name="record" signature="Lcom/alibaba/repeater/console/dal/model/Record;" isStatic="false">
+      <SourceLine classname="com.alibaba.repeater.console.dal.model.Replay" sourcefile="Replay.java" sourcepath="com/alibaba/repeater/console/dal/model/Replay.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="115">
+    <MissingClass>ch.qos.logback.classic.LoggerContext</MissingClass>
+    <MissingClass>ch.qos.logback.classic.joran.JoranConfigurator</MissingClass>
+    <MissingClass>com.alibaba.fastjson.JSON</MissingClass>
+    <MissingClass>com.alibaba.fastjson.TypeReference</MissingClass>
+    <MissingClass>com.alibaba.fastjson.serializer.SerializerFeature</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.Information$Mode</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.Module</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.ModuleException</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.ProcessControlException</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.BeforeEvent</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.Event</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.Event$Type</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.InvokeEvent</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.ReturnEvent</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.event.ThrowsEvent</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.EventListener</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.Advice</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.AdviceAdapterListener</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.AdviceListener</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.Behavior</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.EventWatchBuilder</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.EventWatchBuilder$IBuildingForBehavior</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.EventWatchBuilder$IBuildingForClass</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.listener.ext.EventWatcher</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.resource.ConfigInfo</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.resource.LoadedClassDataSource</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.resource.ModuleController</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.resource.ModuleEventWatcher</MissingClass>
+    <MissingClass>com.alibaba.jvm.sandbox.api.resource.ModuleManager</MissingClass>
+    <MissingClass>com.alibaba.ttl.TransmittableThreadLocal</MissingClass>
+    <MissingClass>com.alibaba.ttl.TtlCallable</MissingClass>
+    <MissingClass>com.alibaba.ttl.TtlRunnable</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectWriter</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.type.TypeFactory</MissingClass>
+    <MissingClass>com.google.common.base.Joiner</MissingClass>
+    <MissingClass>com.google.common.base.Objects</MissingClass>
+    <MissingClass>com.google.common.base.Splitter</MissingClass>
+    <MissingClass>com.google.common.base.Splitter$MapSplitter</MissingClass>
+    <MissingClass>com.google.common.base.Stopwatch</MissingClass>
+    <MissingClass>com.google.common.cache.CacheBuilder</MissingClass>
+    <MissingClass>com.google.common.cache.CacheLoader</MissingClass>
+    <MissingClass>com.google.common.cache.LoadingCache</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>com.google.common.eventbus.AsyncEventBus</MissingClass>
+    <MissingClass>com.google.common.eventbus.EventBus</MissingClass>
+    <MissingClass>com.google.common.io.BaseEncoding</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.AsyncContext</MissingClass>
+    <MissingClass>javax.servlet.AsyncEvent</MissingClass>
+    <MissingClass>javax.servlet.AsyncListener</MissingClass>
+    <MissingClass>javax.servlet.GenericServlet</MissingClass>
+    <MissingClass>javax.servlet.Servlet</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequestWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>net.sf.ehcache.Cache</MissingClass>
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>net.sf.ehcache.Element</MissingClass>
+    <MissingClass>okhttp3.Call</MissingClass>
+    <MissingClass>okhttp3.FormBody$Builder</MissingClass>
+    <MissingClass>okhttp3.HttpUrl</MissingClass>
+    <MissingClass>okhttp3.HttpUrl$Builder</MissingClass>
+    <MissingClass>okhttp3.MediaType</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient$Builder</MissingClass>
+    <MissingClass>okhttp3.Request</MissingClass>
+    <MissingClass>okhttp3.Request$Builder</MissingClass>
+    <MissingClass>okhttp3.RequestBody</MissingClass>
+    <MissingClass>okhttp3.Response</MissingClass>
+    <MissingClass>okhttp3.ResponseBody</MissingClass>
+    <MissingClass>org.apache.commons.collections4.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections4.MapUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringStyle</MissingClass>
+    <MissingClass>org.apache.commons.lang3.concurrent.BasicThreadFactory$Builder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.reflect.FieldUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.reflect.MethodUtils</MissingClass>
+    <MissingClass>org.apache.dubbo.config.ApplicationConfig</MissingClass>
+    <MissingClass>org.apache.dubbo.config.ReferenceConfig</MissingClass>
+    <MissingClass>org.apache.dubbo.config.RegistryConfig</MissingClass>
+    <MissingClass>org.apache.dubbo.config.context.ConfigManager</MissingClass>
+    <MissingClass>org.apache.dubbo.rpc.service.GenericService</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.context.request.RequestContextHolder</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:47:13 +0000" total_classes="594" referenced_classes="887" total_bugs="1" total_size="23333" num_packages="75" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="38.80" clock_seconds="11.35" peak_mbytes="809.13" alloc_mbytes="3540.00" gc_seconds="0.39" priority_2="1">
+    <PackageStats package="com.alibaba.jvm.sandbox.repater.plugin.http" total_bugs="0" total_types="4" total_size="215">
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.HttpPlugin" sourceFile="HttpPlugin.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.HttpRepeater" sourceFile="HttpRepeater.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.HttpStandaloneListener" sourceFile="HttpStandaloneListener.java" interface="false" size="155" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.InvokeAdvice" sourceFile="InvokeAdvice.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper" total_bugs="0" total_types="6" total_size="193">
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperAsyncListener" sourceFile="WrapperAsyncListener.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperOutputStreamCopier" sourceFile="WrapperOutputStreamCopier.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperRequest" sourceFile="WrapperRequest.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperRequest$1" sourceFile="WrapperRequest.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperResponseCopier" sourceFile="WrapperResponseCopier.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repater.plugin.http.wrapper.WrapperTransModel" sourceFile="WrapperTransModel.java" interface="false" size="65" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.aide.compare" total_bugs="0" total_types="8" total_size="209">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.Comparable" sourceFile="Comparable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.ComparableFactory" sourceFile="ComparableFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.ComparableFactory$1" sourceFile="ComparableFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.CompareResult" sourceFile="CompareResult.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.Difference" sourceFile="Difference.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.Difference$Type" sourceFile="Difference.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.IntegratedComparator" sourceFile="IntegratedComparator.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.TypeUtils" sourceFile="TypeUtils.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator" total_bugs="0" total_types="8" total_size="193">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.ArrayComparator" sourceFile="ArrayComparator.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.CollectionComparator" sourceFile="CollectionComparator.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.Comparator" sourceFile="Comparator.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.Comparator$CompareMode" sourceFile="Comparator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.LenientDateComparator" sourceFile="LenientDateComparator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.MapComparator" sourceFile="MapComparator.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.ObjectComparator" sourceFile="ObjectComparator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.comparator.SimpleComparator" sourceFile="SimpleComparator.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.aide.compare.cycle" total_bugs="0" total_types="3" total_size="38">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.cycle.CycleReferenceDetector" sourceFile="CycleReferenceDetector.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.cycle.CycleReferenceDetector$Node" sourceFile="CycleReferenceDetector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.cycle.CycleReferenceException" sourceFile="CycleReferenceException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.aide.compare.path" total_bugs="0" total_types="4" total_size="69">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.path.JsonPathLocator" sourceFile="JsonPathLocator.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.path.Path" sourceFile="Path.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.path.Path$Type" sourceFile="Path.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.aide.compare.path.PathLocator" sourceFile="PathLocator.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.module" total_bugs="0" total_types="6" total_size="238">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.Constants" sourceFile="Constants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.HeartbeatHandler" sourceFile="HeartbeatHandler.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.HeartbeatHandler$1" sourceFile="HeartbeatHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.ModuleJarUnLoadCompleted" sourceFile="ModuleJarUnLoadCompleted.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.RepeaterModule" sourceFile="RepeaterModule.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.RepeaterModule$1" sourceFile="RepeaterModule.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.module.advice" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.advice.SpringInstantiateAdvice" sourceFile="SpringInstantiateAdvice.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.advice.SpringInstantiateAdvice$1" sourceFile="SpringInstantiateAdvice.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.module.classloader" total_bugs="0" total_types="8" total_size="219">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassLoader" sourceFile="PluginClassLoader.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassLoader$Routing" sourceFile="PluginClassLoader.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting" sourceFile="PluginClassRouting.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting$1" sourceFile="PluginClassRouting.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting$Builder" sourceFile="PluginClassRouting.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting$Matcher" sourceFile="PluginClassRouting.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting$Matcher$1" sourceFile="PluginClassRouting.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.classloader.PluginClassRouting$Matcher$2" sourceFile="PluginClassRouting.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.module.impl" total_bugs="0" total_types="1" total_size="53">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.impl.JarFileLifeCycleManager" sourceFile="JarFileLifeCycleManager.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.module.util" total_bugs="0" total_types="2" total_size="41">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.util.LogbackUtils" sourceFile="LogbackUtils.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.module.util.SPILoader" sourceFile="SPILoader.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.Constants" sourceFile="Constants.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.api" total_bugs="0" total_types="7" total_size="25">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.Broadcaster" sourceFile="Broadcaster.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.ConfigManager" sourceFile="ConfigManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.FlowDispatcher" sourceFile="FlowDispatcher.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.InvocationFilter" sourceFile="InvocationFilter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.InvocationListener" sourceFile="InvocationListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.InvocationProcessor" sourceFile="InvocationProcessor.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.api.LifecycleManager" sourceFile="LifecycleManager.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.StandaloneSwitch" sourceFile="StandaloneSwitch.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.bridge" total_bugs="0" total_types="4" total_size="83">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.bridge.ClassloaderBridge" sourceFile="ClassloaderBridge.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.bridge.RepeaterBridge" sourceFile="RepeaterBridge.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.bridge.RepeaterBridge$1" sourceFile="RepeaterBridge.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.bridge.RepeaterBridge$LazyInstanceHolder" sourceFile="RepeaterBridge.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.cache" total_bugs="0" total_types="6" total_size="85">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RecordCache" sourceFile="RecordCache.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RecordCache$1" sourceFile="RecordCache.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RecordCache$2" sourceFile="RecordCache.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RepeatCache" sourceFile="RepeatCache.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RepeatCache$1" sourceFile="RepeatCache.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.cache.RepeatCache$2" sourceFile="RepeatCache.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.eventbus" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.eventbus.EventBusInner" sourceFile="EventBusInner.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.eventbus.RepeatEvent" sourceFile="RepeatEvent.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.impl" total_bugs="0" total_types="11" total_size="359">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractBroadcaster" sourceFile="AbstractBroadcaster.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractBroadcaster$QueueConsumerTask" sourceFile="AbstractBroadcaster.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractBroadcaster$QueueConsumerTask$1" sourceFile="AbstractBroadcaster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractInvocationProcessor" sourceFile="AbstractInvocationProcessor.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractInvocationProcessor$1" sourceFile="AbstractInvocationProcessor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractInvokePluginAdapter" sourceFile="AbstractInvokePluginAdapter.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractMockStrategy" sourceFile="AbstractMockStrategy.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.AbstractRepeater" sourceFile="AbstractRepeater.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.MockInterceptorFacade" sourceFile="MockInterceptorFacade.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.RepeatInterceptorFacade" sourceFile="RepeatInterceptorFacade.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.StrategyProvider" sourceFile="StrategyProvider.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api" total_bugs="0" total_types="12" total_size="323">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultBroadcaster" sourceFile="DefaultBroadcaster.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultBroadcaster$1" sourceFile="DefaultBroadcaster.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultConfigManager" sourceFile="DefaultConfigManager.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultConfigManager$1" sourceFile="DefaultConfigManager.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultEventListener" sourceFile="DefaultEventListener.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultEventListener$1" sourceFile="DefaultEventListener.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultEventListener$2" sourceFile="DefaultEventListener.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultFlowDispatcher" sourceFile="DefaultFlowDispatcher.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultFlowDispatcher$1" sourceFile="DefaultFlowDispatcher.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultFlowDispatcher$LazyInstanceHolder" sourceFile="DefaultFlowDispatcher.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultInvocationListener" sourceFile="DefaultInvocationListener.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.api.DefaultInvocationProcessor" sourceFile="DefaultInvocationProcessor.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi" total_bugs="0" total_types="8" total_size="172">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.DefaultMockStrategy" sourceFile="DefaultMockStrategy.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ParameterMatchMockStrategy" sourceFile="ParameterMatchMockStrategy.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ParameterMatchMockStrategy$1" sourceFile="ParameterMatchMockStrategy.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ParameterMatchMockStrategy$2" sourceFile="ParameterMatchMockStrategy.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ReflectCompareStrategy" sourceFile="ReflectCompareStrategy.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ReflectCompareStrategy$1" sourceFile="ReflectCompareStrategy.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.ReflectCompareStrategy$2" sourceFile="ReflectCompareStrategy.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.spi.RepeatSubscribeSupporter" sourceFile="RepeatSubscribeSupporter.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.standalone" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.standalone.StandaloneBroadcaster" sourceFile="StandaloneBroadcaster.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.impl.standalone.StandaloneConfigManager" sourceFile="StandaloneConfigManager.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.model" total_bugs="0" total_types="5" total_size="162">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.model.ApplicationModel" sourceFile="ApplicationModel.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.model.EnhanceModel" sourceFile="EnhanceModel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.model.EnhanceModel$EnhanceModelBuilder" sourceFile="EnhanceModel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.model.EnhanceModel$MethodPattern" sourceFile="EnhanceModel.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.model.EnhanceModel$MethodPattern$MethodPatternBuilder" sourceFile="EnhanceModel.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize" total_bugs="0" total_types="8" total_size="211">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.AbstractSerializerAdapter" sourceFile="AbstractSerializerAdapter.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.HessianSerializer" sourceFile="HessianSerializer.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.JSonSerializer" sourceFile="JSonSerializer.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.NoneSerializer" sourceFile="NoneSerializer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.SerializeException" sourceFile="SerializeException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.Serializer" sourceFile="Serializer.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.Serializer$Type" sourceFile="Serializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.SerializerProvider" sourceFile="SerializerProvider.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.hessian" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.hessian.LocalDateTimeDeserializer" sourceFile="LocalDateTimeDeserializer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.serialize.hessian.LocalDateTimeSerializer" sourceFile="LocalDateTimeSerializer.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.spring" total_bugs="0" total_types="2" total_size="68">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.spring.SpringContextAdapter" sourceFile="SpringContextAdapter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.spring.SpringContextInnerContainer" sourceFile="SpringContextInnerContainer.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.trace" total_bugs="0" total_types="7" total_size="186">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.SequenceGenerator" sourceFile="SequenceGenerator.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.SequenceGenerator$1" sourceFile="SequenceGenerator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.TraceContext" sourceFile="TraceContext.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.TraceGenerator" sourceFile="TraceGenerator.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.Tracer" sourceFile="Tracer.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.TtlConcurrentAdvice" sourceFile="TtlConcurrentAdvice.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.trace.TtlConcurrentAdvice$1" sourceFile="TtlConcurrentAdvice.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.util" total_bugs="0" total_types="13" total_size="429">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.ClassUtils" sourceFile="ClassUtils.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.ExceptionAware" sourceFile="ExceptionAware.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.ExecutorInner" sourceFile="ExecutorInner.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.HttpUtil" sourceFile="HttpUtil.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.HttpUtil$1" sourceFile="HttpUtil.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.HttpUtil$HttpMethod" sourceFile="HttpUtil.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.HttpUtil$Resp" sourceFile="HttpUtil.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.HttpUtil$Resp$RespBuilder" sourceFile="HttpUtil.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.LogUtil" sourceFile="LogUtil.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.MethodSignatureParser" sourceFile="MethodSignatureParser.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.MethodSignatureParser$MethodSpec" sourceFile="MethodSignatureParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.PathUtils" sourceFile="PathUtils.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.util.PropertyUtil" sourceFile="PropertyUtil.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.core.wrapper" total_bugs="0" total_types="2" total_size="114">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.wrapper.RecordWrapper" sourceFile="RecordWrapper.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.core.wrapper.SerializerWrapper" sourceFile="SerializerWrapper.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.domain" total_bugs="0" total_types="15" total_size="746">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.Behavior" sourceFile="Behavior.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.DubboInvocation" sourceFile="DubboInvocation.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.HttpInvocation" sourceFile="HttpInvocation.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.Identity" sourceFile="Identity.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.Invocation" sourceFile="Invocation.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.InvokeType" sourceFile="InvokeType.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.MockInvocation" sourceFile="MockInvocation.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RecordModel" sourceFile="RecordModel.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeatContext" sourceFile="RepeatContext.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeatMeta" sourceFile="RepeatMeta.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeatModel" sourceFile="RepeatModel.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeaterConfig" sourceFile="RepeaterConfig.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeaterResult" sourceFile="RepeaterResult.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.RepeaterResult$Builder" sourceFile="RepeaterResult.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.SubscribeEvent" sourceFile="SubscribeEvent.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock" total_bugs="0" total_types="7" total_size="213">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.MockRequest" sourceFile="MockRequest.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.MockRequest$MockRequestBuilder" sourceFile="MockRequest.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.MockResponse" sourceFile="MockResponse.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.MockResponse$Action" sourceFile="MockResponse.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.MockResponse$MockResponseBuilder" sourceFile="MockResponse.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.SelectResult" sourceFile="SelectResult.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.domain.mock.SelectResult$SelectResultBuilder" sourceFile="SelectResult.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.dubbo" total_bugs="0" total_types="6" total_size="177">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboConsumerInvocationProcessor" sourceFile="DubboConsumerInvocationProcessor.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboConsumerPlugin" sourceFile="DubboConsumerPlugin.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboEventListener" sourceFile="DubboEventListener.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboProviderInvocationProcessor" sourceFile="DubboProviderInvocationProcessor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboProviderPlugin" sourceFile="DubboProviderPlugin.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.dubbo.DubboRepeater" sourceFile="DubboRepeater.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.exception" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.exception.NormalException" sourceFile="NormalException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.exception.PluginLifeCycleException" sourceFile="PluginLifeCycleException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.exception.RecordException" sourceFile="RecordException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.exception.RepeatException" sourceFile="RepeatException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.hibernate" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.hibernate.HibernatePlugin" sourceFile="HibernatePlugin.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.hibernate.HibernateProcessor" sourceFile="HibernateProcessor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.ibatis" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.ibatis.IBatisPlugin" sourceFile="IBatisPlugin.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.ibatis.IBatisProcessor" sourceFile="IBatisProcessor.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.java" total_bugs="0" total_types="6" total_size="134">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaEntrancePlugin" sourceFile="JavaEntrancePlugin.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaInstanceCache" sourceFile="JavaInstanceCache.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaInvocationProcessor" sourceFile="JavaInvocationProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaPluginUtils" sourceFile="JavaPluginUtils.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaRepeater" sourceFile="JavaRepeater.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.java.JavaSubInvokePlugin" sourceFile="JavaSubInvokePlugin.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.jpa" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.jpa.SpringDataJpaPlugin" sourceFile="SpringDataJpaPlugin.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.jpa.SpringDataJpaProcessor" sourceFile="SpringDataJpaProcessor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.mybatis" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.mybatis.MybatisPlugin" sourceFile="MybatisPlugin.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.mybatis.MybatisProcessor" sourceFile="MybatisProcessor.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.redis" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.redis.RedisPlugin" sourceFile="RedisPlugin.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.redis.RedisProcessor" sourceFile="RedisProcessor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.socketio" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.socketio.SocketIOPlugin" sourceFile="SocketIOPlugin.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.socketio.SocketIOProcessor" sourceFile="SocketIOProcessor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.jvm.sandbox.repeater.plugin.spi" total_bugs="0" total_types="7" total_size="56">
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.InvokePlugin" sourceFile="InvokePlugin.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.MockInterceptor" sourceFile="MockInterceptor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.MockStrategy" sourceFile="MockStrategy.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.MockStrategy$StrategyType" sourceFile="MockStrategy.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.RepeatInterceptor" sourceFile="RepeatInterceptor.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.Repeater" sourceFile="Repeater.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.jvm.sandbox.repeater.plugin.spi.SubscribeSupporter" sourceFile="SubscribeSupporter.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.client" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="com.alibaba.repeater.client.SpringContextAware" sourceFile="SpringContextAware.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.client.SpringContextContainer" sourceFile="SpringContextContainer.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.common" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.alibaba.repeater.console.common.PackageInfo" sourceFile="PackageInfo.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.common.domain" total_bugs="0" total_types="13" total_size="436">
+      <ClassStats class="com.alibaba.repeater.console.common.domain.BaseBO" sourceFile="BaseBO.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.DifferenceBO" sourceFile="DifferenceBO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.InvocationBO" sourceFile="InvocationBO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.MockInvocationBO" sourceFile="MockInvocationBO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.ModuleConfigBO" sourceFile="ModuleConfigBO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.ModuleInfoBO" sourceFile="ModuleInfoBO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.ModuleStatus" sourceFile="ModuleStatus.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.PageResult" sourceFile="PageResult.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.RecordBO" sourceFile="RecordBO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.RecordDetailBO" sourceFile="RecordDetailBO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.Regress" sourceFile="Regress.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.ReplayBO" sourceFile="ReplayBO.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.domain.ReplayStatus" sourceFile="ReplayStatus.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.common.exception" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.alibaba.repeater.console.common.exception.BizException" sourceFile="BizException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.common.params" total_bugs="0" total_types="7" total_size="95">
+      <ClassStats class="com.alibaba.repeater.console.common.params.BaseParams" sourceFile="BaseParams.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.ModuleConfigParams" sourceFile="ModuleConfigParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.ModuleInfoParams" sourceFile="ModuleInfoParams.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.RecordParams" sourceFile="RecordParams.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.RecordParams$RecordParamsBuilder" sourceFile="RecordParams.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.ReplayParams" sourceFile="ReplayParams.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.common.params.ReplayParams$ReplayParamsBuilder" sourceFile="ReplayParams.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.dal.dao" total_bugs="0" total_types="4" total_size="72">
+      <ClassStats class="com.alibaba.repeater.console.dal.dao.ModuleConfigDao" sourceFile="ModuleConfigDao.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.dao.ModuleInfoDao" sourceFile="ModuleInfoDao.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.dao.RecordDao" sourceFile="RecordDao.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.dao.ReplayDao" sourceFile="ReplayDao.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.dal.model" total_bugs="1" total_types="4" total_size="184" priority_2="1">
+      <ClassStats class="com.alibaba.repeater.console.dal.model.ModuleConfig" sourceFile="ModuleConfig.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.model.ModuleInfo" sourceFile="ModuleInfo.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.model.Record" sourceFile="Record.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.model.Replay" sourceFile="Replay.java" interface="false" size="64" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.dal.repository" total_bugs="0" total_types="4" total_size="10">
+      <ClassStats class="com.alibaba.repeater.console.dal.repository.ModuleConfigRepository" sourceFile="ModuleConfigRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.repository.ModuleInfoRepository" sourceFile="ModuleInfoRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.repository.RecordRepository" sourceFile="RecordRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.dal.repository.ReplayRepository" sourceFile="ReplayRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.service" total_bugs="0" total_types="5" total_size="30">
+      <ClassStats class="com.alibaba.repeater.console.service.ModuleConfigService" sourceFile="ModuleConfigService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.ModuleInfoService" sourceFile="ModuleInfoService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.RecordService" sourceFile="RecordService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.RegressService" sourceFile="RegressService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.ReplayService" sourceFile="ReplayService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.service.convert" total_bugs="0" total_types="9" total_size="161">
+      <ClassStats class="com.alibaba.repeater.console.service.convert.DifferenceConvert" sourceFile="DifferenceConvert.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.InvocationConverter" sourceFile="InvocationConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.MockInvocationConvert" sourceFile="MockInvocationConvert.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.ModelConverter" sourceFile="ModelConverter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.ModuleConfigConverter" sourceFile="ModuleConfigConverter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.ModuleInfoConverter" sourceFile="ModuleInfoConverter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.RecordConverter" sourceFile="RecordConverter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.RecordDetailConverter" sourceFile="RecordDetailConverter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.convert.ReplayConverter" sourceFile="ReplayConverter.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.service.impl" total_bugs="0" total_types="5" total_size="365">
+      <ClassStats class="com.alibaba.repeater.console.service.impl.ModuleConfigServiceImpl" sourceFile="ModuleConfigServiceImpl.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.impl.ModuleInfoServiceImpl" sourceFile="ModuleInfoServiceImpl.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.impl.RecordServiceImpl" sourceFile="RecordServiceImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.impl.RegressServiceImpl" sourceFile="RegressServiceImpl.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.impl.ReplayServiceImpl" sourceFile="ReplayServiceImpl.java" interface="false" size="105" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.service.util" total_bugs="0" total_types="3" total_size="92">
+      <ClassStats class="com.alibaba.repeater.console.service.util.ConvertUtil" sourceFile="ConvertUtil.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.util.JacksonUtil" sourceFile="JacksonUtil.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.service.util.ResultHelper" sourceFile="ResultHelper.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.start" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="com.alibaba.repeater.console.start.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.ConfigurationBean" sourceFile="ConfigurationBean.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.start.controller.api" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="com.alibaba.repeater.console.start.controller.api.ConfigFacadeApi" sourceFile="ConfigFacadeApi.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.api.PersistenceFacadeApi" sourceFile="PersistenceFacadeApi.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.start.controller.page" total_bugs="0" total_types="4" total_size="89">
+      <ClassStats class="com.alibaba.repeater.console.start.controller.page.ModuleConfigController" sourceFile="ModuleConfigController.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.page.ModuleInfoController" sourceFile="ModuleInfoController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.page.OnlineController" sourceFile="OnlineController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.page.ReplayController" sourceFile="ReplayController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.start.controller.test" total_bugs="0" total_types="4" total_size="70">
+      <ClassStats class="com.alibaba.repeater.console.start.controller.test.RegressController" sourceFile="RegressController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.test.RegressController$1" sourceFile="RegressController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.test.RegressController$2" sourceFile="RegressController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.alibaba.repeater.console.start.controller.test.RegressPageController" sourceFile="RegressPageController.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.alibaba.repeater.console.start.controller.vo" total_bugs="0" total_types="1" total_size="104">
+      <ClassStats class="com.alibaba.repeater.console.start.controller.vo.PagerAdapter" sourceFile="PagerAdapter.java" interface="false" size="104" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.burlap.client" total_bugs="0" total_types="10" total_size="1021">
+      <ClassStats class="com.caucho.burlap.client.BurlapMetaInfoAPI" sourceFile="BurlapMetaInfoAPI.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapProtocolException" sourceFile="BurlapProtocolException.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapProxy" sourceFile="BurlapProxy.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapProxyFactory" sourceFile="BurlapProxyFactory.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapProxyResolver" sourceFile="BurlapProxyResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapRemote" sourceFile="BurlapRemote.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapRuntimeException" sourceFile="BurlapRuntimeException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.BurlapServiceException" sourceFile="BurlapServiceException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.MicroBurlapInput" sourceFile="MicroBurlapInput.java" interface="false" size="458" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.client.MicroBurlapOutput" sourceFile="MicroBurlapOutput.java" interface="false" size="244" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.burlap.io" total_bugs="0" total_types="10" total_size="1108">
+      <ClassStats class="com.caucho.burlap.io.AbstractBurlapInput" sourceFile="AbstractBurlapInput.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.AbstractBurlapOutput" sourceFile="AbstractBurlapOutput.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.AbstractBurlapResolver" sourceFile="AbstractBurlapResolver.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapInput" sourceFile="BurlapInput.java" interface="false" size="727" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapOutput" sourceFile="BurlapOutput.java" interface="false" size="314" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapProtocolException" sourceFile="BurlapProtocolException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapRemote" sourceFile="BurlapRemote.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapRemoteObject" sourceFile="BurlapRemoteObject.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapRemoteResolver" sourceFile="BurlapRemoteResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.io.BurlapServiceException" sourceFile="BurlapServiceException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.burlap.server" total_bugs="0" total_types="2" total_size="150">
+      <ClassStats class="com.caucho.burlap.server.BurlapServlet" sourceFile="BurlapServlet.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.caucho.burlap.server.BurlapSkeleton" sourceFile="BurlapSkeleton.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="com.caucho.hessian.HessianException" sourceFile="HessianException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.HessianUnshared" sourceFile="HessianUnshared.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.client" total_bugs="0" total_types="14" total_size="627">
+      <ClassStats class="com.caucho.hessian.client.AbstractHessianConnection" sourceFile="AbstractHessianConnection.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.AbstractHessianConnectionFactory" sourceFile="AbstractHessianConnectionFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianConnection" sourceFile="HessianConnection.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianConnectionException" sourceFile="HessianConnectionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianConnectionFactory" sourceFile="HessianConnectionFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianMetaInfoAPI" sourceFile="HessianMetaInfoAPI.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianProxy" sourceFile="HessianProxy.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianProxy$LogWriter" sourceFile="HessianProxy.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianProxy$ResultInputStream" sourceFile="HessianProxy.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianProxyFactory" sourceFile="HessianProxyFactory.java" interface="false" size="216" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianProxyResolver" sourceFile="HessianProxyResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianRuntimeException" sourceFile="HessianRuntimeException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianURLConnection" sourceFile="HessianURLConnection.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.client.HessianURLConnectionFactory" sourceFile="HessianURLConnectionFactory.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.io" total_bugs="0" total_types="207" total_size="9575">
+      <ClassStats class="com.caucho.hessian.io.AbstractDeserializer" sourceFile="AbstractDeserializer.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractDeserializer$NullDeserializer" sourceFile="AbstractDeserializer.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractHessianInput" sourceFile="AbstractHessianInput.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractHessianOutput" sourceFile="AbstractHessianOutput.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractHessianResolver" sourceFile="AbstractHessianResolver.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractListDeserializer" sourceFile="AbstractListDeserializer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractMapDeserializer" sourceFile="AbstractMapDeserializer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractSerializer" sourceFile="AbstractSerializer.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractSerializer$NullSerializer" sourceFile="AbstractSerializer.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractSerializerFactory" sourceFile="AbstractSerializerFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractStreamDeserializer" sourceFile="AbstractStreamDeserializer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractStreamSerializer" sourceFile="AbstractStreamSerializer.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AbstractStringValueDeserializer" sourceFile="AbstractStringValueDeserializer.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationDeserializer" sourceFile="AnnotationDeserializer.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationInvocationHandler" sourceFile="AnnotationInvocationHandler.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$BooleanMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$DateMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$DoubleMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$IntMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$LongMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$MethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.AnnotationSerializer$StringMethodSerializer" sourceFile="AnnotationSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ArrayDeserializer" sourceFile="ArrayDeserializer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ArraySerializer" sourceFile="ArraySerializer.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BasicDeserializer" sourceFile="BasicDeserializer.java" interface="false" size="274" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BasicSerializer" sourceFile="BasicSerializer.java" interface="false" size="147" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BeanDeserializer" sourceFile="BeanDeserializer.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BeanSerializer" sourceFile="BeanSerializer.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BeanSerializer$MethodNameCmp" sourceFile="BeanSerializer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BeanSerializerFactory" sourceFile="BeanSerializerFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BigDecimalDeserializer" sourceFile="BigDecimalDeserializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BigDecimalSerializerFactory" sourceFile="BigDecimalSerializerFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BigDecimalSerializerFactory$BigDecimalDeserializer" sourceFile="BigDecimalSerializerFactory.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.BigDecimalSerializerFactory$BigDecimalSerializer" sourceFile="BigDecimalSerializerFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ByteArraySerializer" sourceFile="ByteArraySerializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ByteHandle" sourceFile="ByteHandle.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.CalendarHandle" sourceFile="CalendarHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.CalendarSerializer" sourceFile="CalendarSerializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ClassDeserializer" sourceFile="ClassDeserializer.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ClassFactory" sourceFile="ClassFactory.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ClassFactory$1" sourceFile="ClassFactory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ClassFactory$Allow" sourceFile="ClassFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ClassSerializer" sourceFile="ClassSerializer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.CollectionDeserializer" sourceFile="CollectionDeserializer.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.CollectionSerializer" sourceFile="CollectionSerializer.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ContextSerializerFactory" sourceFile="ContextSerializerFactory.java" interface="false" size="246" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Deflation" sourceFile="Deflation.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Deflation$DeflateInputStream" sourceFile="Deflation.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Deflation$DeflateOutputStream" sourceFile="Deflation.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Deserializer" sourceFile="Deserializer.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.EnumDeserializer" sourceFile="EnumDeserializer.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.EnumSerializer" sourceFile="EnumSerializer.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.EnumerationDeserializer" sourceFile="EnumerationDeserializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.EnumerationSerializer" sourceFile="EnumerationSerializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.EnvelopeFactory" sourceFile="EnvelopeFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ExtSerializerFactory" sourceFile="ExtSerializerFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.FileDeserializer" sourceFile="FileDeserializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.FloatHandle" sourceFile="FloatHandle.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Constants" sourceFile="Hessian2Constants.java" interface="true" size="67" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Input" sourceFile="Hessian2Input.java" interface="false" size="1030" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Input$ObjectDefinition" sourceFile="Hessian2Input.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Input$ReadInputStream" sourceFile="Hessian2Input.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Output" sourceFile="Hessian2Output.java" interface="false" size="690" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2Output$BytesOutputStream" sourceFile="Hessian2Output.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2StreamingInput" sourceFile="Hessian2StreamingInput.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2StreamingInput$StreamingInputStream" sourceFile="Hessian2StreamingInput.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Hessian2StreamingOutput" sourceFile="Hessian2StreamingOutput.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugInputStream" sourceFile="HessianDebugInputStream.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugInputStream$LogWriter" sourceFile="HessianDebugInputStream.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugOutputStream" sourceFile="HessianDebugOutputStream.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugOutputStream$LogWriter" sourceFile="HessianDebugOutputStream.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState" sourceFile="HessianDebugState.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$BinaryState" sourceFile="HessianDebugState.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Call2State" sourceFile="HessianDebugState.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$CallState1" sourceFile="HessianDebugState.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$CompactListState" sourceFile="HessianDebugState.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$DateState" sourceFile="HessianDebugState.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$DoubleIntegerState" sourceFile="HessianDebugState.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$DoubleState" sourceFile="HessianDebugState.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Fault2State" sourceFile="HessianDebugState.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Hessian2State" sourceFile="HessianDebugState.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$IndirectState" sourceFile="HessianDebugState.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$InitialState" sourceFile="HessianDebugState.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$InitialState1" sourceFile="HessianDebugState.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$IntegerState" sourceFile="HessianDebugState.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ListState" sourceFile="HessianDebugState.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ListState1" sourceFile="HessianDebugState.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$LongState" sourceFile="HessianDebugState.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$MapState" sourceFile="HessianDebugState.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$MapState1" sourceFile="HessianDebugState.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$MillsState" sourceFile="HessianDebugState.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ObjectDef" sourceFile="HessianDebugState.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ObjectDefState" sourceFile="HessianDebugState.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ObjectState" sourceFile="HessianDebugState.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$RefState" sourceFile="HessianDebugState.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$RefState1" sourceFile="HessianDebugState.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$RemoteState" sourceFile="HessianDebugState.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Reply2State" sourceFile="HessianDebugState.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$ReplyState1" sourceFile="HessianDebugState.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$State" sourceFile="HessianDebugState.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$State1" sourceFile="HessianDebugState.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$StreamingState" sourceFile="HessianDebugState.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$StringState" sourceFile="HessianDebugState.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Top1State" sourceFile="HessianDebugState.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianDebugState$Top2State" sourceFile="HessianDebugState.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianEnvelope" sourceFile="HessianEnvelope.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianFactory" sourceFile="HessianFactory.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianFieldException" sourceFile="HessianFieldException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianHandle" sourceFile="HessianHandle.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianInput" sourceFile="HessianInput.java" interface="false" size="630" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianInput$1" sourceFile="HessianInput.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianInputFactory" sourceFile="HessianInputFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianInputFactory$1" sourceFile="HessianInputFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianInputFactory$HeaderType" sourceFile="HessianInputFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianMethodSerializationException" sourceFile="HessianMethodSerializationException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianOutput" sourceFile="HessianOutput.java" interface="false" size="337" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianProtocolException" sourceFile="HessianProtocolException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianRemote" sourceFile="HessianRemote.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianRemoteObject" sourceFile="HessianRemoteObject.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianRemoteResolver" sourceFile="HessianRemoteResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianSerializerInput" sourceFile="HessianSerializerInput.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianSerializerOutput" sourceFile="HessianSerializerOutput.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.HessianServiceException" sourceFile="HessianServiceException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.IOExceptionWrapper" sourceFile="IOExceptionWrapper.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.InetAddressHandle" sourceFile="InetAddressHandle.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.InetAddressSerializer" sourceFile="InetAddressSerializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.InputStreamDeserializer" sourceFile="InputStreamDeserializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.InputStreamSerializer" sourceFile="InputStreamSerializer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.IteratorDeserializer" sourceFile="IteratorDeserializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.IteratorSerializer" sourceFile="IteratorSerializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Java8TimeSerializerFactory" sourceFile="Java8TimeSerializerFactory.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="223" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$BooleanFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$ByteFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$DoubleFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$FieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$FloatFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$IntFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$LongFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$NullFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$ObjectFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$ShortFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$SqlDateFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$SqlTimeFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$SqlTimestampFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaDeserializer$StringFieldDeserializer" sourceFile="JavaDeserializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer" sourceFile="JavaSerializer.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$BooleanFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$DateFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$DoubleFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$FieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$IntFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$LongFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaSerializer$StringFieldSerializer" sourceFile="JavaSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.JavaUnsharedSerializer" sourceFile="JavaUnsharedSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.LocaleHandle" sourceFile="LocaleHandle.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.LocaleSerializer" sourceFile="LocaleSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.MapDeserializer" sourceFile="MapDeserializer.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.MapSerializer" sourceFile="MapSerializer.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ObjectDeserializer" sourceFile="ObjectDeserializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ObjectHandleSerializer" sourceFile="ObjectHandleSerializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ObjectNameDeserializer" sourceFile="ObjectNameDeserializer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ObjectSerializer" sourceFile="ObjectSerializer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.RemoteDeserializer" sourceFile="RemoteDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.RemoteSerializer" sourceFile="RemoteSerializer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.Serializer" sourceFile="Serializer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.SerializerFactory" sourceFile="SerializerFactory.java" interface="false" size="361" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ShortHandle" sourceFile="ShortHandle.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.SqlDateDeserializer" sourceFile="SqlDateDeserializer.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.SqlDateSerializer" sourceFile="SqlDateSerializer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.StackTraceElementDeserializer" sourceFile="StackTraceElementDeserializer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.StringValueDeserializer" sourceFile="StringValueDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.StringValueSerializer" sourceFile="StringValueSerializer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ThrowableSerializer" sourceFile="ThrowableSerializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="197" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$BooleanFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$ByteFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$CharFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$DoubleFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$FieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$FloatFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$IntFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$LongFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$NullFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$ObjectFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$ShortFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$SqlDateFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$SqlTimeFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$SqlTimestampFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeDeserializer$StringFieldDeserializer" sourceFile="UnsafeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$BooleanFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$ByteFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$CharFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$DateFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$DoubleFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$FieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$FloatFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$IntFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$LongFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$ObjectFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$ShortFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeSerializer$StringFieldSerializer" sourceFile="UnsafeSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.UnsafeUnsharedSerializer" sourceFile="UnsafeUnsharedSerializer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.ValueDeserializer" sourceFile="ValueDeserializer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.WriteReplaceSerializer" sourceFile="WriteReplaceSerializer.java" interface="false" size="75" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.io.java8time" total_bugs="0" total_types="16" total_size="365">
+      <ClassStats class="com.caucho.hessian.io.java8time.DurationHandle" sourceFile="DurationHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.InstantHandle" sourceFile="InstantHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.Java8TimeSerializer" sourceFile="Java8TimeSerializer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.LocalDateHandle" sourceFile="LocalDateHandle.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.LocalDateTimeHandle" sourceFile="LocalDateTimeHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.LocalTimeHandle" sourceFile="LocalTimeHandle.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.LocaleHandle" sourceFile="LocaleHandle.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.MonthDayHandle" sourceFile="MonthDayHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.OffsetDateTimeHandle" sourceFile="OffsetDateTimeHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.OffsetTimeHandle" sourceFile="OffsetTimeHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.PeriodHandle" sourceFile="PeriodHandle.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.YearHandle" sourceFile="YearHandle.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.YearMonthHandle" sourceFile="YearMonthHandle.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.ZoneIdHandle" sourceFile="ZoneIdHandle.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.ZoneOffsetHandle" sourceFile="ZoneOffsetHandle.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.io.java8time.ZonedDateTimeHandle" sourceFile="ZonedDateTimeHandle.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.jmx" total_bugs="0" total_types="8" total_size="209">
+      <ClassStats class="com.caucho.hessian.jmx.JMXSerializerFactory" sourceFile="JMXSerializerFactory.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanAttributeInfoDeserializer" sourceFile="MBeanAttributeInfoDeserializer.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanConstructorInfoDeserializer" sourceFile="MBeanConstructorInfoDeserializer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanInfoDeserializer" sourceFile="MBeanInfoDeserializer.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanNotificationInfoDeserializer" sourceFile="MBeanNotificationInfoDeserializer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanOperationInfoDeserializer" sourceFile="MBeanOperationInfoDeserializer.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.MBeanParameterInfoDeserializer" sourceFile="MBeanParameterInfoDeserializer.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.jmx.ObjectInstanceDeserializer" sourceFile="ObjectInstanceDeserializer.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.micro" total_bugs="0" total_types="2" total_size="340">
+      <ClassStats class="com.caucho.hessian.micro.MicroHessianInput" sourceFile="MicroHessianInput.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.micro.MicroHessianOutput" sourceFile="MicroHessianOutput.java" interface="false" size="184" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.mux" total_bugs="0" total_types="3" total_size="342">
+      <ClassStats class="com.caucho.hessian.mux.MuxInputStream" sourceFile="MuxInputStream.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.mux.MuxOutputStream" sourceFile="MuxOutputStream.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.mux.MuxServer" sourceFile="MuxServer.java" interface="false" size="150" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.security" total_bugs="0" total_types="6" total_size="381">
+      <ClassStats class="com.caucho.hessian.security.X509Encryption" sourceFile="X509Encryption.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.security.X509Encryption$EncryptInputStream" sourceFile="X509Encryption.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.security.X509Encryption$EncryptOutputStream" sourceFile="X509Encryption.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.security.X509Signature" sourceFile="X509Signature.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.security.X509Signature$SignatureInputStream" sourceFile="X509Signature.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.security.X509Signature$SignatureOutputStream" sourceFile="X509Signature.java" interface="false" size="63" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.server" total_bugs="0" total_types="5" total_size="373">
+      <ClassStats class="com.caucho.hessian.server.HessianServlet" sourceFile="HessianServlet.java" interface="false" size="168" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.server.HessianServlet$LogWriter" sourceFile="HessianServlet.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.server.HessianSkeleton" sourceFile="HessianSkeleton.java" interface="false" size="149" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.server.HessianSkeleton$1" sourceFile="HessianSkeleton.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.server.HessianSkeleton$LogWriter" sourceFile="HessianSkeleton.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.test" total_bugs="0" total_types="23" total_size="1149">
+      <ClassStats class="com.caucho.hessian.test.A0" sourceFile="A0.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A1" sourceFile="A1.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A10" sourceFile="A10.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A11" sourceFile="A11.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A12" sourceFile="A12.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A13" sourceFile="A13.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A14" sourceFile="A14.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A15" sourceFile="A15.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A16" sourceFile="A16.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A2" sourceFile="A2.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A3" sourceFile="A3.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A4" sourceFile="A4.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A5" sourceFile="A5.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A6" sourceFile="A6.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A7" sourceFile="A7.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A8" sourceFile="A8.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.A9" sourceFile="A9.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.Test" sourceFile="Test.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.TestCons" sourceFile="TestCons.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.TestHessian2" sourceFile="TestHessian2.java" interface="true" size="184" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.TestHessian2Servlet" sourceFile="TestHessian2Servlet.java" interface="false" size="756" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.TestHessianServlet" sourceFile="TestHessianServlet.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.test.TestObject" sourceFile="TestObject.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.hessian.util" total_bugs="0" total_types="3" total_size="219">
+      <ClassStats class="com.caucho.hessian.util.HessianFreeList" sourceFile="HessianFreeList.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.util.IdentityIntMap" sourceFile="IdentityIntMap.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="com.caucho.hessian.util.IntMap" sourceFile="IntMap.java" interface="false" size="91" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.services.client" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.caucho.services.client.ServiceProxyFactory" sourceFile="ServiceProxyFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.services.message" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="com.caucho.services.message.MessageSender" sourceFile="MessageSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.caucho.services.message.MessageServiceException" sourceFile="MessageServiceException.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.services.name" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="com.caucho.services.name.NameServer" sourceFile="NameServer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.services.name.NameServerRemote" sourceFile="NameServerRemote.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.services.name.NameServiceException" sourceFile="NameServiceException.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.caucho.services.server" total_bugs="0" total_types="4" total_size="195">
+      <ClassStats class="com.caucho.services.server.AbstractSkeleton" sourceFile="AbstractSkeleton.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="com.caucho.services.server.GenericService" sourceFile="GenericService.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.caucho.services.server.Service" sourceFile="Service.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.caucho.services.server.ServiceContext" sourceFile="ServiceContext.java" interface="false" size="80" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="587" invocations="3693" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="16265" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="570" invocations="3722" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="10259" standardDeviationMicrosecondsPerInvocation="338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="517" invocations="3830" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="10525" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="515" invocations="3721" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="10756" standardDeviationMicrosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="505" invocations="3847" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="23332" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="420" invocations="2222" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="12053" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="392" invocations="3722" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="9681" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="358" invocations="887" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="38012" standardDeviationMicrosecondsPerInvocation="1625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="325" invocations="2611" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="3409" standardDeviationMicrosecondsPerInvocation="227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="305" invocations="887" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="16890" standardDeviationMicrosecondsPerInvocation="904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="285" invocations="4783" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="3527" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="161" invocations="594" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="23090" standardDeviationMicrosecondsPerInvocation="1281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="146" invocations="3722" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="2549" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="144" invocations="4143" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="27698" standardDeviationMicrosecondsPerInvocation="439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="132" invocations="2234" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="702" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="121" invocations="594" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="5162" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="119" invocations="594" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="3764" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="115" invocations="594" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="3688" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="114" invocations="887" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="6748" standardDeviationMicrosecondsPerInvocation="344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="112" invocations="594" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="46406" standardDeviationMicrosecondsPerInvocation="1908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="111" invocations="1124" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="14040" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="110" invocations="594" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="3358" standardDeviationMicrosecondsPerInvocation="300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="108" invocations="59259" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="833" standardDeviationMicrosecondsPerInvocation="7"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="106" invocations="594" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="24837" standardDeviationMicrosecondsPerInvocation="1044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="93" invocations="3693" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="1478" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="87" invocations="594" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="9325" standardDeviationMicrosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="87" invocations="1167" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="1611" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="85" invocations="594" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2717" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="83" invocations="3623" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="1323" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="82" invocations="887" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="1925" standardDeviationMicrosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="80" invocations="594" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="9463" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="77" invocations="887" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1811" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="74" invocations="582" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="1444" standardDeviationMicrosecondsPerInvocation="198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="68" invocations="4143" avgMicrosecondsPerInvocation="16" maxMicrosecondsPerInvocation="3571" standardDeviationMicrosecondsPerInvocation="96"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="67" invocations="887" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="3571" standardDeviationMicrosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="67" invocations="1971" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="3043" standardDeviationMicrosecondsPerInvocation="109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="65" invocations="594" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="5691" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="64" invocations="887" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="7671" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="63" invocations="594" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="2285" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="59" invocations="887" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="2968" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="57" invocations="594" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1958" standardDeviationMicrosecondsPerInvocation="148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="56" invocations="594" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="2521" standardDeviationMicrosecondsPerInvocation="175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="56" invocations="594" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="4300" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="55" invocations="594" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="2494" standardDeviationMicrosecondsPerInvocation="183"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

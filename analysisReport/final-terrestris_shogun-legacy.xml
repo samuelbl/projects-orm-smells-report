@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596946918000" analysisTimestamp="1596946919827" release="">
+  <Project projectName="repositorios/terrestris_shogun-legacy">
+    <Jar>repositorios/terrestris_shogun-legacy</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="6" missingClasses="53">
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.Wms using detector com.ufpe.badsmells.OneToManyCollectionsDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getField called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getField(PreorderVisitor.java:562)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.collectionVerify(OneToManyCollectionsDetector.java:35)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.visitAnnotation(OneToManyCollectionsDetector.java:31)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.MapLayer using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:47)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.MapLayer using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:41)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.MapLayer using detector com.ufpe.badsmells.OneToManyCollectionsDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getField called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getField(PreorderVisitor.java:562)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.collectionVerify(OneToManyCollectionsDetector.java:35)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.visitAnnotation(OneToManyCollectionsDetector.java:31)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.Group using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:47)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing de.terrestris.shogun.model.Group using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:41)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonIgnore</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>javassist.Modifier</MissingClass>
+    <MissingClass>javax.persistence.ManyToMany</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringStyle</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.FetchMode</MissingClass>
+    <MissingClass>org.hibernate.Hibernate</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.collection.internal.PersistentSet</MissingClass>
+    <MissingClass>org.hibernate.criterion.Conjunction</MissingClass>
+    <MissingClass>org.hibernate.criterion.CriteriaSpecification</MissingClass>
+    <MissingClass>org.hibernate.criterion.Criterion</MissingClass>
+    <MissingClass>org.hibernate.criterion.Disjunction</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.ProjectionList</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.hibernate.criterion.SimpleExpression</MissingClass>
+    <MissingClass>org.hibernate.spatial.criterion.SpatialRelateExpression</MissingClass>
+    <MissingClass>org.hibernate.spatial.criterion.SpatialRestrictions</MissingClass>
+    <MissingClass>org.locationtech.jts.geom.Geometry</MissingClass>
+    <MissingClass>org.locationtech.jts.io.WKTReader</MissingClass>
+    <MissingClass>org.springframework.mail.MailSendException</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.Md5PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.web.RedirectStrategy</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 04:21:58 +0000" total_classes="75" referenced_classes="159" total_bugs="0" total_size="3784" num_packages="18" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.73" clock_seconds="3.80" peak_mbytes="279.96" alloc_mbytes="3540.00" gc_seconds="0.16">
+    <PackageStats package="de.terrestris.shogun.annotation" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="de.terrestris.shogun.annotation.RestrictedBy" sourceFile="RestrictedBy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.annotation.RestrictionType" sourceFile="RestrictionType.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.annotation.parser" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="de.terrestris.shogun.annotation.parser.RestrictedByAnnotationParser" sourceFile="RestrictedByAnnotationParser.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.annotation.parser.RestrictedByAnnotationParser$1" sourceFile="RestrictedByAnnotationParser.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.dao" total_bugs="0" total_types="1" total_size="574">
+      <ClassStats class="de.terrestris.shogun.dao.DatabaseDao" sourceFile="DatabaseDao.java" interface="false" size="574" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.deserializer" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="de.terrestris.shogun.deserializer.DateDeserializer" sourceFile="DateDeserializer.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.deserializer.GeometryDeserializer" sourceFile="GeometryDeserializer.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.exception" total_bugs="0" total_types="5" total_size="69">
+      <ClassStats class="de.terrestris.shogun.exception.ShogunDatabaseAccessException" sourceFile="ShogunDatabaseAccessException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.exception.ShogunException" sourceFile="ShogunException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.exception.ShogunInvalidParameterException" sourceFile="ShogunInvalidParameterException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.exception.ShogunParseException" sourceFile="ShogunParseException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.exception.ShogunServiceException" sourceFile="ShogunServiceException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.hibernatecriteria.filter" total_bugs="0" total_types="8" total_size="343">
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.Filter" sourceFile="Filter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.Filter$LogicalOperator" sourceFile="Filter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.FilterItem" sourceFile="FilterItem.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.FilterItem$Operator" sourceFile="FilterItem.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.FilterOperand" sourceFile="FilterOperand.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.HibernateFilter" sourceFile="HibernateFilter.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.HibernateFilterItem" sourceFile="HibernateFilterItem.java" interface="false" size="188" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.filter.HibernateFilterItem$1" sourceFile="HibernateFilterItem.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.hibernatecriteria.paging" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.paging.HibernatePagingObject" sourceFile="HibernatePagingObject.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.hibernatecriteria.sort" total_bugs="0" total_types="2" total_size="66">
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.sort.HibernateSortItem" sourceFile="HibernateSortItem.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.hibernatecriteria.sort.HibernateSortObject" sourceFile="HibernateSortObject.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.init" total_bugs="0" total_types="1" total_size="245">
+      <ClassStats class="de.terrestris.shogun.init.DatabaseContentInitializer" sourceFile="DatabaseContentInitializer.java" interface="false" size="245" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.jsonmodel" total_bugs="0" total_types="9" total_size="87">
+      <ClassStats class="de.terrestris.shogun.jsonmodel.DeleteIdList" sourceFile="DeleteIdList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.GroupList" sourceFile="GroupList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.LutParams" sourceFile="LutParams.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.MapConfigList" sourceFile="MapConfigList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.ModuleList" sourceFile="ModuleList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.UserList" sourceFile="UserList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.WfsProxyConfigList" sourceFile="WfsProxyConfigList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.WmsMapLayerList" sourceFile="WmsMapLayerList.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonmodel.WmsProxyConfigList" sourceFile="WmsProxyConfigList.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.jsonrequest" total_bugs="0" total_types="6" total_size="126">
+      <ClassStats class="de.terrestris.shogun.jsonrequest.Filter" sourceFile="Filter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonrequest.FilterItem" sourceFile="FilterItem.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonrequest.Paging" sourceFile="Paging.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonrequest.Request" sourceFile="Request.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonrequest.Sort" sourceFile="Sort.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.jsonrequest.SortItem" sourceFile="SortItem.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.jsonrequest.association" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="de.terrestris.shogun.jsonrequest.association.Association" sourceFile="Association.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.model" total_bugs="0" total_types="17" total_size="1236">
+      <ClassStats class="de.terrestris.shogun.model.BaseModel" sourceFile="BaseModel.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.BaseModelInheritance" sourceFile="BaseModelInheritance.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.BaseModelInterface" sourceFile="BaseModelInterface.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.BaseProxyConfig" sourceFile="BaseProxyConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.Group" sourceFile="Group.java" interface="false" size="204" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.LayerMetadata" sourceFile="LayerMetadata.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.MapConfig" sourceFile="MapConfig.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.MapLayer" sourceFile="MapLayer.java" interface="false" size="214" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.Module" sourceFile="Module.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.OwsProxyConfig" sourceFile="OwsProxyConfig.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.Role" sourceFile="Role.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.User" sourceFile="User.java" interface="false" size="186" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.WfsProxyConfig" sourceFile="WfsProxyConfig.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.Wms" sourceFile="Wms.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.WmsLayer" sourceFile="WmsLayer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.WmsMapLayer" sourceFile="WmsMapLayer.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.model.WmsProxyConfig" sourceFile="WmsProxyConfig.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.security" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="de.terrestris.shogun.security.ShogunAuthProcessingFilter" sourceFile="ShogunAuthProcessingFilter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.security.ShogunAuthProcessingFilter$1" sourceFile="ShogunAuthProcessingFilter.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.serializer" total_bugs="0" total_types="5" total_size="57">
+      <ClassStats class="de.terrestris.shogun.serializer.DateSerializer" sourceFile="DateSerializer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.serializer.LeanBaseModelListSerializer" sourceFile="LeanBaseModelListSerializer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.serializer.LeanBaseModelSetSerializer" sourceFile="LeanBaseModelSetSerializer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.serializer.SimpleUserSerializer" sourceFile="SimpleUserSerializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.serializer.WKTSerializer" sourceFile="WKTSerializer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.service" total_bugs="0" total_types="4" total_size="483">
+      <ClassStats class="de.terrestris.shogun.service.AbstractShogunService" sourceFile="AbstractShogunService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.service.MapAdministrationService" sourceFile="MapAdministrationService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.service.ShogunService" sourceFile="ShogunService.java" interface="false" size="210" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.service.UserAdministrationService" sourceFile="UserAdministrationService.java" interface="false" size="244" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.util" total_bugs="0" total_types="3" total_size="62">
+      <ClassStats class="de.terrestris.shogun.util.JsHelper" sourceFile="JsHelper.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.util.Mail" sourceFile="Mail.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.util.Password" sourceFile="Password.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.terrestris.shogun.web" total_bugs="0" total_types="4" total_size="233">
+      <ClassStats class="de.terrestris.shogun.web.AbstractWebController" sourceFile="AbstractWebController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.web.MapAdministrationController" sourceFile="MapAdministrationController.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.web.ShogunController" sourceFile="ShogunController.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="de.terrestris.shogun.web.UserAdministrationController" sourceFile="UserAdministrationController.java" interface="false" size="87" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="232" invocations="843" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="15098" standardDeviationMicrosecondsPerInvocation="796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="170" invocations="682" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="13330" standardDeviationMicrosecondsPerInvocation="782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="161" invocations="690" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="8279" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="161" invocations="675" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="9191" standardDeviationMicrosecondsPerInvocation="644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="150" invocations="682" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="12962" standardDeviationMicrosecondsPerInvocation="787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="137" invocations="690" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="11284" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="137" invocations="159" avgMicrosecondsPerInvocation="865" maxMicrosecondsPerInvocation="10331" standardDeviationMicrosecondsPerInvocation="1692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="114" invocations="996" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="3733" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="113" invocations="159" avgMicrosecondsPerInvocation="711" maxMicrosecondsPerInvocation="5988" standardDeviationMicrosecondsPerInvocation="1247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="109" invocations="682" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="7593" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="96" invocations="311" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="7105" standardDeviationMicrosecondsPerInvocation="689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="68" invocations="849" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="3032" standardDeviationMicrosecondsPerInvocation="113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="692" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="24143" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="159" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="3750" standardDeviationMicrosecondsPerInvocation="589"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="50" invocations="691" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="15987" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="49" invocations="248" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="13757" standardDeviationMicrosecondsPerInvocation="904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="43" invocations="682" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="4557" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="159" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="4881" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="35" invocations="11144" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="937" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="34" invocations="75" avgMicrosecondsPerInvocation="460" maxMicrosecondsPerInvocation="11857" standardDeviationMicrosecondsPerInvocation="1449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="159" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="7129" standardDeviationMicrosecondsPerInvocation="626"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="32" invocations="75" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="3494" standardDeviationMicrosecondsPerInvocation="595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="30" invocations="159" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2265" standardDeviationMicrosecondsPerInvocation="309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="30" invocations="75" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="4386" standardDeviationMicrosecondsPerInvocation="611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="159" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="4586" standardDeviationMicrosecondsPerInvocation="491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="27" invocations="75" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="11233" standardDeviationMicrosecondsPerInvocation="1701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="75" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="4314" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="27" invocations="75" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="3095" standardDeviationMicrosecondsPerInvocation="545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="26" invocations="75" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="5169" standardDeviationMicrosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="26" invocations="159" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="10285" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="159" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="3010" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="75" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="5421" standardDeviationMicrosecondsPerInvocation="702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizeOnClassLiteralNotGetClass" totalMilliseconds="24" invocations="75" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="15428" standardDeviationMicrosecondsPerInvocation="1770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="24" invocations="675" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="1292" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="22" invocations="75" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="6056" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="21" invocations="75" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="2782" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="21" invocations="675" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="919" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="19" invocations="75" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="1838" standardDeviationMicrosecondsPerInvocation="346"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

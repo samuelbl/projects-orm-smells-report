@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597096139000" analysisTimestamp="1597096140746" release="">
+  <Project projectName="repositorios/guqing_springboot-jpa-starter">
+    <Jar>repositorios/guqing_springboot-jpa-starter</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.Log">
+      <SourceLine classname="xyz.guqing.app.model.entity.Log" start="12" end="35" sourcefile="Log.java" sourcepath="xyz/guqing/app/model/entity/Log.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.Log" name="user" signature="Lxyz/guqing/app/model/entity/User;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.Log" sourcefile="Log.java" sourcepath="xyz/guqing/app/model/entity/Log.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.Permission">
+      <SourceLine classname="xyz.guqing.app.model.entity.Permission" start="13" end="37" sourcefile="Permission.java" sourcepath="xyz/guqing/app/model/entity/Permission.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.Permission" name="resources" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.Permission" sourcefile="Permission.java" sourcepath="xyz/guqing/app/model/entity/Permission.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.Permission">
+      <SourceLine classname="xyz.guqing.app.model.entity.Permission" start="13" end="37" sourcefile="Permission.java" sourcepath="xyz/guqing/app/model/entity/Permission.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.Permission" name="resources" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.Permission" sourcefile="Permission.java" sourcepath="xyz/guqing/app/model/entity/Permission.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.Role">
+      <SourceLine classname="xyz.guqing.app.model.entity.Role" start="12" end="31" sourcefile="Role.java" sourcepath="xyz/guqing/app/model/entity/Role.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.Role" name="permissions" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.Role" sourcefile="Role.java" sourcepath="xyz/guqing/app/model/entity/Role.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.Role">
+      <SourceLine classname="xyz.guqing.app.model.entity.Role" start="12" end="31" sourcefile="Role.java" sourcepath="xyz/guqing/app/model/entity/Role.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.Role" name="permissions" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.Role" sourcefile="Role.java" sourcepath="xyz/guqing/app/model/entity/Role.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.User">
+      <SourceLine classname="xyz.guqing.app.model.entity.User" start="12" end="57" sourcefile="User.java" sourcepath="xyz/guqing/app/model/entity/User.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.User" name="role" signature="Lxyz/guqing/app/model/entity/Role;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.User" sourcefile="User.java" sourcepath="xyz/guqing/app/model/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.model.entity.UserConnect">
+      <SourceLine classname="xyz.guqing.app.model.entity.UserConnect" start="12" end="29" sourcefile="UserConnect.java" sourcepath="xyz/guqing/app/model/entity/UserConnect.java"/>
+    </Class>
+    <Field classname="xyz.guqing.app.model.entity.UserConnect" name="user" signature="Lxyz/guqing/app/model/entity/User;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.model.entity.UserConnect" sourcefile="UserConnect.java" sourcepath="xyz/guqing/app/model/entity/UserConnect.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.repository.UserRepository">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="xyz.guqing.app.repository.UserRepository" name="findByEmail" signature="(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)Lxyz/guqing/app/model/entity/User;" isStatic="false"/>
+    <String value="Method: findByEmail. Fields with EAGER without Join Fetch: role, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.repository.UserRepository">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="xyz.guqing.app.repository.UserRepository" name="findByUsername" signature="(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)Lxyz/guqing/app/model/entity/User;" isStatic="false"/>
+    <String value="Method: findByUsername. Fields with EAGER without Join Fetch: role, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.repository.UserRepository">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="xyz.guqing.app.repository.UserRepository" name="findByEmail" signature="(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)Lxyz/guqing/app/model/entity/User;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="xyz.guqing.app.repository.UserRepository">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="xyz.guqing.app.repository.UserRepository" name="findByUsername" signature="(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)Lxyz/guqing/app/model/entity/User;" isStatic="false">
+      <SourceLine classname="xyz.guqing.app.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="xyz/guqing/app/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="87">
+    <MissingClass>cn.hutool.json.JSONUtil</MissingClass>
+    <MissingClass>com.alibaba.fastjson.JSON</MissingClass>
+    <MissingClass>com.alibaba.fastjson.JSONArray</MissingClass>
+    <MissingClass>com.alibaba.fastjson.serializer.SerializerFeature</MissingClass>
+    <MissingClass>com.alibaba.fastjson.support.config.FastJsonConfig</MissingClass>
+    <MissingClass>com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter</MissingClass>
+    <MissingClass>com.github.benmanes.caffeine.cache.CacheWriter</MissingClass>
+    <MissingClass>com.github.benmanes.caffeine.cache.Caffeine</MissingClass>
+    <MissingClass>com.xkcoding.justauth.AuthRequestFactory</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.SignatureAlgorithm</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>me.zhyd.oauth.cache.AuthStateCache</MissingClass>
+    <MissingClass>me.zhyd.oauth.enums.AuthUserGender</MissingClass>
+    <MissingClass>me.zhyd.oauth.model.AuthCallback</MissingClass>
+    <MissingClass>me.zhyd.oauth.model.AuthResponse</MissingClass>
+    <MissingClass>me.zhyd.oauth.model.AuthToken</MissingClass>
+    <MissingClass>me.zhyd.oauth.model.AuthUser</MissingClass>
+    <MissingClass>me.zhyd.oauth.request.AuthRequest</MissingClass>
+    <MissingClass>me.zhyd.oauth.utils.AuthStateUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapperImpl</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.cache.Cache</MissingClass>
+    <MissingClass>org.springframework.cache.CacheManager</MissingClass>
+    <MissingClass>org.springframework.cache.caffeine.CaffeineCacheManager</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CorsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.access.AccessDeniedHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AuthenticationFailureHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.WebAuthenticationDetailsSource</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.LogoutSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.util.AntPathMatcher</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.CollectionUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindException</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>org.springframework.web.cors.CorsConfiguration</MissingClass>
+    <MissingClass>org.springframework.web.cors.UrlBasedCorsConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.web.filter.CorsFilter</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:48:59 +0000" total_classes="114" referenced_classes="245" total_bugs="11" total_size="2920" num_packages="22" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="16.15" clock_seconds="4.99" peak_mbytes="338.96" alloc_mbytes="3540.00" gc_seconds="0.19" priority_2="7" priority_1="4">
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="13" total_size="512">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="xyz.guqing.app.AppApplication" sourceFile="AppApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.config" total_bugs="0" total_types="7" total_size="129">
+      <ClassStats class="xyz.guqing.app.config.AuthStateConfiguration" sourceFile="AuthStateConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.CacheConfig" sourceFile="CacheConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.CacheConfig$1" sourceFile="CacheConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.CorsConfig" sourceFile="CorsConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.FastJSONConverter" sourceFile="FastJSONConverter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.MyAuthStateCache" sourceFile="MyAuthStateCache.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.config.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.controller" total_bugs="0" total_types="5" total_size="110">
+      <ClassStats class="xyz.guqing.app.controller.DashboardController" sourceFile="DashboardController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.controller.OauthController" sourceFile="OauthController.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.controller.PermissionController" sourceFile="PermissionController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.controller.RoleController" sourceFile="RoleController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.controller.UserController" sourceFile="UserController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.exception" total_bugs="0" total_types="9" total_size="75">
+      <ClassStats class="xyz.guqing.app.exception.AuthFailException" sourceFile="AuthFailException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.BadRequestException" sourceFile="BadRequestException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.BaseException" sourceFile="BaseException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.BeanUtilsException" sourceFile="BeanUtilsException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.DataConflictException" sourceFile="DataConflictException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.DataNotFoundException" sourceFile="DataNotFoundException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.ServiceException" sourceFile="ServiceException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.UnsupportedMediaTypeException" sourceFile="UnsupportedMediaTypeException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.exception.UnsupportedOauthTypeException" sourceFile="UnsupportedOauthTypeException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.handler" total_bugs="0" total_types="3" total_size="91">
+      <ClassStats class="xyz.guqing.app.handler.GlobalExceptionResolver" sourceFile="GlobalExceptionResolver.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.handler.LogAspect" sourceFile="LogAspect.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.handler.ValidParamHandler" sourceFile="ValidParamHandler.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.annotation" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="xyz.guqing.app.model.annotation.WriteLog" sourceFile="WriteLog.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.dto" total_bugs="0" total_types="5" total_size="218">
+      <ClassStats class="xyz.guqing.app.model.dto.LogDTO" sourceFile="LogDTO.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.dto.PermissionDTO" sourceFile="PermissionDTO.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.dto.ResourceDTO" sourceFile="ResourceDTO.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.dto.RoleDTO" sourceFile="RoleDTO.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.entity" total_bugs="7" total_types="6" total_size="282" priority_2="3" priority_1="4">
+      <ClassStats class="xyz.guqing.app.model.entity.Log" sourceFile="Log.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="xyz.guqing.app.model.entity.Permission" sourceFile="Permission.java" interface="false" size="43" bugs="2" priority_1="2"/>
+      <ClassStats class="xyz.guqing.app.model.entity.Resource" sourceFile="Resource.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.entity.Role" sourceFile="Role.java" interface="false" size="35" bugs="2" priority_1="2"/>
+      <ClassStats class="xyz.guqing.app.model.entity.User" sourceFile="User.java" interface="false" size="87" bugs="1" priority_2="1"/>
+      <ClassStats class="xyz.guqing.app.model.entity.UserConnect" sourceFile="UserConnect.java" interface="false" size="39" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.enums" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="xyz.guqing.app.model.enums.LogType" sourceFile="LogType.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.enums.UserGender" sourceFile="UserGender.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.params" total_bugs="0" total_types="4" total_size="135">
+      <ClassStats class="xyz.guqing.app.model.params.LoginParam" sourceFile="LoginParam.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.params.OauthUserParam" sourceFile="OauthUserParam.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.params.PasswordParam" sourceFile="PasswordParam.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.params.UserParam" sourceFile="UserParam.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.properties" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="xyz.guqing.app.model.properties.AppProperties" sourceFile="AppProperties.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.model.support" total_bugs="0" total_types="6" total_size="58">
+      <ClassStats class="xyz.guqing.app.model.support.InputConverter" sourceFile="InputConverter.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.support.LogTypeConstant" sourceFile="LogTypeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.support.LoginTypeConstant" sourceFile="LoginTypeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.support.OutputConverter" sourceFile="OutputConverter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.support.UserConnectConverter" sourceFile="UserConnectConverter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.model.support.UserStatusConstant" sourceFile="UserStatusConstant.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.repository" total_bugs="4" total_types="5" total_size="8" priority_2="4">
+      <ClassStats class="xyz.guqing.app.repository.LogRepository" sourceFile="LogRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.repository.PermissionRepository" sourceFile="PermissionRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.repository.UserConnectRepository" sourceFile="UserConnectRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="3" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.security.filter" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="xyz.guqing.app.security.filter.JwtTokenFilter" sourceFile="JwtTokenFilter.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.security.handler" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="xyz.guqing.app.security.handler.MyAccessDeniedHandler" sourceFile="MyAccessDeniedHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.handler.MyAuthenticationEntryPoint" sourceFile="MyAuthenticationEntryPoint.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.handler.MyAuthenticationFailureHandler" sourceFile="MyAuthenticationFailureHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.handler.MyLogoutSuccessHandler" sourceFile="MyLogoutSuccessHandler.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.security.properties" total_bugs="0" total_types="3" total_size="59">
+      <ClassStats class="xyz.guqing.app.security.properties.LoginProperties" sourceFile="LoginProperties.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.properties.SecurityProperties" sourceFile="SecurityProperties.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.properties.TokenProperties" sourceFile="TokenProperties.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.security.support" total_bugs="0" total_types="3" total_size="106">
+      <ClassStats class="xyz.guqing.app.security.support.MyUserDetails" sourceFile="MyUserDetails.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.support.MyUserDetailsServiceImpl" sourceFile="MyUserDetailsServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.support.RbacAuthorityService" sourceFile="RbacAuthorityService.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.security.utils" total_bugs="0" total_types="3" total_size="131">
+      <ClassStats class="xyz.guqing.app.security.utils.IpUtil" sourceFile="IpUtil.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.utils.JwtTokenUtil" sourceFile="JwtTokenUtil.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.security.utils.SecurityUserHelper" sourceFile="SecurityUserHelper.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.service" total_bugs="0" total_types="4" total_size="141">
+      <ClassStats class="xyz.guqing.app.service.LogService" sourceFile="LogService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.service.PermissionService" sourceFile="PermissionService.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.service.RoleService" sourceFile="RoleService.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.service.UserService" sourceFile="UserService.java" interface="false" size="108" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="xyz.guqing.app.utils" total_bugs="0" total_types="5" total_size="218">
+      <ClassStats class="xyz.guqing.app.utils.BeanUtils" sourceFile="BeanUtils.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.utils.IpUtils" sourceFile="IpUtils.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.utils.PageInfo" sourceFile="PageInfo.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.utils.ReflectionUtils" sourceFile="ReflectionUtils.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="xyz.guqing.app.utils.Result" sourceFile="Result.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="358" invocations="1239" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="13791" standardDeviationMicrosecondsPerInvocation="689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="235" invocations="827" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="37547" standardDeviationMicrosecondsPerInvocation="1414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="219" invocations="245" avgMicrosecondsPerInvocation="896" maxMicrosecondsPerInvocation="31952" standardDeviationMicrosecondsPerInvocation="2765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="205" invocations="836" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="7399" standardDeviationMicrosecondsPerInvocation="595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="168" invocations="840" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="7780" standardDeviationMicrosecondsPerInvocation="480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="156" invocations="245" avgMicrosecondsPerInvocation="639" maxMicrosecondsPerInvocation="16896" standardDeviationMicrosecondsPerInvocation="1388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="155" invocations="834" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="5260" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="147" invocations="840" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="8918" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="142" invocations="836" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="8627" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="131" invocations="1296" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="12842" standardDeviationMicrosecondsPerInvocation="410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="123" invocations="1248" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="2497" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="106" invocations="463" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="7598" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="85" invocations="368" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="18770" standardDeviationMicrosecondsPerInvocation="1052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="81" invocations="858" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="27178" standardDeviationMicrosecondsPerInvocation="949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="77" invocations="1030" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="12883" standardDeviationMicrosecondsPerInvocation="453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="73" invocations="245" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="47126" standardDeviationMicrosecondsPerInvocation="3005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="60" invocations="245" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="4213" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="56" invocations="245" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="7963" standardDeviationMicrosecondsPerInvocation="756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="53" invocations="245" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="4021" standardDeviationMicrosecondsPerInvocation="454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="52" invocations="836" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="1856" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="47" invocations="11660" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="935" standardDeviationMicrosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="46" invocations="245" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="6527" standardDeviationMicrosecondsPerInvocation="571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="46" invocations="245" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="2270" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="43" invocations="245" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="13892" standardDeviationMicrosecondsPerInvocation="910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="43" invocations="114" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="7959" standardDeviationMicrosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="38" invocations="114" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="2754" standardDeviationMicrosecondsPerInvocation="474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="32" invocations="114" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="2518" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="30" invocations="114" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="1589" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="30" invocations="798" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="2395" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="114" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="5079" standardDeviationMicrosecondsPerInvocation="801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="27" invocations="245" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="6634" standardDeviationMicrosecondsPerInvocation="563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="26" invocations="114" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="2425" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="26" invocations="114" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="6713" standardDeviationMicrosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="25" invocations="245" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="3231" standardDeviationMicrosecondsPerInvocation="266"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

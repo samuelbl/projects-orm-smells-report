@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106643000" analysisTimestamp="1597106644911" release="">
+  <Project projectName="repositorios/ajoshi-learn_hibernate-learn">
+    <Jar>repositorios/ajoshi-learn_hibernate-learn</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="app.book.entities.advancedmappingsexamples.Address">
+      <SourceLine classname="app.book.entities.advancedmappingsexamples.Address" start="13" end="23" sourcefile="Address.java" sourcepath="app/book/entities/advancedmappingsexamples/Address.java"/>
+    </Class>
+    <Field classname="app.book.entities.advancedmappingsexamples.Address" name="user" signature="Lapp/book/entities/advancedmappingsexamples/User;" isStatic="false">
+      <SourceLine classname="app.book.entities.advancedmappingsexamples.Address" sourcefile="Address.java" sourcepath="app/book/entities/advancedmappingsexamples/Address.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="app.book.entities.advancedmappingsexamples.User">
+      <SourceLine classname="app.book.entities.advancedmappingsexamples.User" start="11" end="22" sourcefile="User.java" sourcepath="app/book/entities/advancedmappingsexamples/User.java"/>
+    </Class>
+    <Field classname="app.book.entities.advancedmappingsexamples.User" name="shippingAddress" signature="Lapp/book/entities/advancedmappingsexamples/Address;" isStatic="false">
+      <SourceLine classname="app.book.entities.advancedmappingsexamples.User" sourcefile="User.java" sourcepath="app/book/entities/advancedmappingsexamples/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="app.book.entities.manyvaluedexamples.Bid">
+      <SourceLine classname="app.book.entities.manyvaluedexamples.Bid" start="11" end="22" sourcefile="Bid.java" sourcepath="app/book/entities/manyvaluedexamples/Bid.java"/>
+    </Class>
+    <Field classname="app.book.entities.manyvaluedexamples.Bid" name="item" signature="Lapp/book/entities/manyvaluedexamples/Item;" isStatic="false">
+      <SourceLine classname="app.book.entities.manyvaluedexamples.Bid" sourcefile="Bid.java" sourcepath="app/book/entities/manyvaluedexamples/Bid.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.annotations.common.util.StringHelper</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.cfg.ImprovedNamingStrategy</MissingClass>
+    <MissingClass>org.hibernate.type.AbstractSingleColumnStandardBasicType</MissingClass>
+    <MissingClass>org.hibernate.type.BigDecimalType</MissingClass>
+    <MissingClass>org.hibernate.type.CurrencyType</MissingClass>
+    <MissingClass>org.hibernate.type.StandardBasicTypes</MissingClass>
+    <MissingClass>org.hibernate.type.descriptor.java.AbstractTypeDescriptor</MissingClass>
+    <MissingClass>org.hibernate.type.descriptor.sql.VarcharTypeDescriptor</MissingClass>
+    <MissingClass>org.hibernate.usertype.CompositeUserType</MissingClass>
+    <MissingClass>org.hibernate.usertype.ParameterizedType</MissingClass>
+    <MissingClass>org.hibernate.usertype.UserType</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:44:03 +0000" total_classes="42" referenced_classes="84" total_bugs="3" total_size="801" num_packages="20" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.48" clock_seconds="2.40" peak_mbytes="242.85" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="3">
+    <PackageStats package="app" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="app.HibernateConfigurator" sourceFile="HibernateConfigurator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="app.Main" sourceFile="Main.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.configuration" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="app.book.configuration.CustomNamingStrategy" sourceFile="CustomNamingStrategy.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities" total_bugs="0" total_types="4" total_size="119">
+      <ClassStats class="app.book.entities.Address" sourceFile="Address.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="app.book.entities.Category" sourceFile="Category.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="app.book.entities.Item" sourceFile="Item.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="app.book.entities.User" sourceFile="User.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.advancedmappingsexamples" total_bugs="2" total_types="2" total_size="40" priority_2="2">
+      <ClassStats class="app.book.entities.advancedmappingsexamples.Address" sourceFile="Address.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="app.book.entities.advancedmappingsexamples.User" sourceFile="User.java" interface="false" size="20" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.associationsexamples.entities" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="app.book.entities.associationsexamples.entities.Bid" sourceFile="Bid.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.custommappingtypes.entities" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="app.book.entities.custommappingtypes.entities.MonetaryAmount" sourceFile="MonetaryAmount.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.custommappingtypes.usertypes" total_bugs="0" total_types="3" total_size="85">
+      <ClassStats class="app.book.entities.custommappingtypes.usertypes.MonetaryAmountCompositeUserType" sourceFile="MonetaryAmountCompositeUserType.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="app.book.entities.custommappingtypes.usertypes.MonetaryAmountConversionType" sourceFile="MonetaryAmountConversionType.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.book.entities.custommappingtypes.usertypes.MonetaryAmountUserType" sourceFile="MonetaryAmountUserType.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.inheritanceexamples.implicitpolymorphism" total_bugs="0" total_types="3" total_size="45">
+      <ClassStats class="app.book.entities.inheritanceexamples.implicitpolymorphism.BankAccount" sourceFile="BankAccount.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.implicitpolymorphism.BillingDetails" sourceFile="BillingDetails.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.implicitpolymorphism.CreditCard" sourceFile="CreditCard.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.inheritanceexamples.tableperclass" total_bugs="0" total_types="3" total_size="41">
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclass.BankAccount" sourceFile="BankAccount.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclass.BillingDetails" sourceFile="BillingDetails.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclass.CreditCard" sourceFile="CreditCard.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.inheritanceexamples.tableperclasshierarchy" total_bugs="0" total_types="3" total_size="41">
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclasshierarchy.BankAccount" sourceFile="BankAccount.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclasshierarchy.BillingDetails" sourceFile="BillingDetails.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tableperclasshierarchy.CreditCard" sourceFile="CreditCard.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.inheritanceexamples.tablepersubclass" total_bugs="0" total_types="3" total_size="37">
+      <ClassStats class="app.book.entities.inheritanceexamples.tablepersubclass.BankAccount" sourceFile="BankAccount.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tablepersubclass.BillingDetails" sourceFile="BillingDetails.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="app.book.entities.inheritanceexamples.tablepersubclass.CreditCard" sourceFile="CreditCard.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.manyvaluedexamples" total_bugs="1" total_types="3" total_size="55" priority_2="1">
+      <ClassStats class="app.book.entities.manyvaluedexamples.Bid" sourceFile="Bid.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="app.book.entities.manyvaluedexamples.Category" sourceFile="Category.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="app.book.entities.manyvaluedexamples.Item" sourceFile="Item.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.book.entities.ternaryassociations" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="app.book.entities.ternaryassociations.Account" sourceFile="Account.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="app.book.entities.ternaryassociations.Category" sourceFile="Category.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="app.book.entities.ternaryassociations.Item" sourceFile="Item.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.customtypes.custombasictype" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="app.hibernatereference.chapter2.customtypes.custombasictype.BitSetType" sourceFile="BitSetType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="app.hibernatereference.chapter2.customtypes.custombasictype.BitSetTypeDescriptor" sourceFile="BitSetTypeDescriptor.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.customtypes.custombasictype.entities" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="app.hibernatereference.chapter2.customtypes.custombasictype.entities.Product" sourceFile="Product.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.enums.attributeconverterexample.converter" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="app.hibernatereference.chapter2.enums.attributeconverterexample.converter.GenderConverter" sourceFile="GenderConverter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.enums.attributeconverterexample.enities" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="app.hibernatereference.chapter2.enums.attributeconverterexample.enities.Gender" sourceFile="Gender.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="app.hibernatereference.chapter2.enums.attributeconverterexample.enities.Person" sourceFile="Person.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.enums.enumssimpleexample" total_bugs="0" total_types="2" total_size="31">
+      <ClassStats class="app.hibernatereference.chapter2.enums.enumssimpleexample.Phone" sourceFile="Phone.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="app.hibernatereference.chapter2.enums.enumssimpleexample.PhoneType" sourceFile="PhoneType.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.lobs" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="app.hibernatereference.chapter2.lobs.Product" sourceFile="Product.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.hibernatereference.chapter2.mappingtypes.entities" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="app.hibernatereference.chapter2.mappingtypes.entities.Employee" sourceFile="Employee.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="193" invocations="562" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="11145" standardDeviationMicrosecondsPerInvocation="737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="101" invocations="84" avgMicrosecondsPerInvocation="1212" maxMicrosecondsPerInvocation="19055" standardDeviationMicrosecondsPerInvocation="2816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="93" invocations="378" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="5393" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="85" invocations="370" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="4334" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="73" invocations="378" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="9534" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="72" invocations="378" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="9169" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="68" invocations="378" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="3535" standardDeviationMicrosecondsPerInvocation="287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="61" invocations="378" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="9699" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="58" invocations="84" avgMicrosecondsPerInvocation="692" maxMicrosecondsPerInvocation="5190" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="57" invocations="544" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="2122" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="54" invocations="378" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="25392" standardDeviationMicrosecondsPerInvocation="1319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="53" invocations="567" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="2083" standardDeviationMicrosecondsPerInvocation="101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="36" invocations="180" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="1571" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="36" invocations="138" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="13626" standardDeviationMicrosecondsPerInvocation="1186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="84" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="5096" standardDeviationMicrosecondsPerInvocation="898"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="32" invocations="470" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="1613" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="30" invocations="3607" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="6489" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="84" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="8621" standardDeviationMicrosecondsPerInvocation="974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="84" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="6112" standardDeviationMicrosecondsPerInvocation="920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="84" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="2473" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="21" invocations="378" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="1429" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="42" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="4516" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="84" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="5020" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="84" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="2381" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="42" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="3193" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="42" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="1483" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="16" invocations="84" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="2040" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="2983" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="2817" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="2622" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="14" invocations="42" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="4854" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.DepthFirstSearchFactory" totalMilliseconds="14" invocations="378" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="7571" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="13" invocations="42" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="6761" standardDeviationMicrosecondsPerInvocation="1008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="13" invocations="370" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="675" standardDeviationMicrosecondsPerInvocation="59"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="13" invocations="370" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="1107" standardDeviationMicrosecondsPerInvocation="65"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

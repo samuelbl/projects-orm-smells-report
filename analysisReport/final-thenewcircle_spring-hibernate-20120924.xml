@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597095620000" analysisTimestamp="1597095621537" release="">
+  <Project projectName="repositorios/thenewcircle_spring-hibernate-20120924">
+    <Jar>repositorios/thenewcircle_spring-hibernate-20120924</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.marakana.contacts.entities.Office">
+      <SourceLine classname="com.marakana.contacts.entities.Office" start="24" end="55" sourcefile="Office.java" sourcepath="com/marakana/contacts/entities/Office.java"/>
+    </Class>
+    <Field classname="com.marakana.contacts.entities.Office" name="address" signature="Lcom/marakana/contacts/entities/Address;" isStatic="false">
+      <SourceLine classname="com.marakana.contacts.entities.Office" sourcefile="Office.java" sourcepath="com/marakana/contacts/entities/Office.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.marakana.contacts.entities.Office">
+      <SourceLine classname="com.marakana.contacts.entities.Office" start="24" end="55" sourcefile="Office.java" sourcepath="com/marakana/contacts/entities/Office.java"/>
+    </Class>
+    <Field classname="com.marakana.contacts.entities.Office" name="company" signature="Lcom/marakana/contacts/entities/Company;" isStatic="false">
+      <SourceLine classname="com.marakana.contacts.entities.Office" sourcefile="Office.java" sourcepath="com/marakana/contacts/entities/Office.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.marakana.contacts.entities.Person">
+      <SourceLine classname="com.marakana.contacts.entities.Person" start="23" end="53" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Class>
+    <Field classname="com.marakana.contacts.entities.Person" name="address" signature="Lcom/marakana/contacts/entities/Address;" isStatic="false">
+      <SourceLine classname="com.marakana.contacts.entities.Person" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.marakana.contacts.entities.Person">
+      <SourceLine classname="com.marakana.contacts.entities.Person" start="23" end="53" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Class>
+    <Field classname="com.marakana.contacts.entities.Person" name="employer" signature="Lcom/marakana/contacts/entities/Company;" isStatic="false">
+      <SourceLine classname="com.marakana.contacts.entities.Person" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.marakana.contacts.entities.Person">
+      <SourceLine classname="com.marakana.contacts.entities.Person" start="23" end="53" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Class>
+    <Field classname="com.marakana.contacts.entities.Person" name="manager" signature="Lcom/marakana/contacts/entities/Person;" isStatic="false">
+      <SourceLine classname="com.marakana.contacts.entities.Person" sourcefile="Person.java" sourcepath="com/marakana/contacts/entities/Person.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:40:20 +0000" total_classes="21" referenced_classes="45" total_bugs="5" total_size="311" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.41" clock_seconds="1.88" peak_mbytes="187.99" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="5">
+    <PackageStats package="com.marakana.contacts.controllers" total_bugs="0" total_types="4" total_size="104">
+      <ClassStats class="com.marakana.contacts.controllers.CompanyController" sourceFile="CompanyController.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.controllers.ContactController" sourceFile="ContactController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.controllers.OfficeController" sourceFile="OfficeController.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.controllers.PersonController" sourceFile="PersonController.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.marakana.contacts.entities" total_bugs="5" total_types="7" total_size="137" priority_2="5">
+      <ClassStats class="com.marakana.contacts.entities.Address" sourceFile="Address.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.entities.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.entities.Company" sourceFile="Company.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.entities.Contact" sourceFile="Contact.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.entities.Office" sourceFile="Office.java" interface="false" size="28" bugs="2" priority_2="2"/>
+      <ClassStats class="com.marakana.contacts.entities.Person" sourceFile="Person.java" interface="false" size="26" bugs="3" priority_2="3"/>
+      <ClassStats class="com.marakana.contacts.entities.UrlEntity" sourceFile="UrlEntity.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.marakana.contacts.repositories" total_bugs="0" total_types="4" total_size="4">
+      <ClassStats class="com.marakana.contacts.repositories.CompanyRepository" sourceFile="CompanyRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.repositories.ContactRepository" sourceFile="ContactRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.repositories.OfficeRepository" sourceFile="OfficeRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.repositories.PersonRepository" sourceFile="PersonRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.marakana.contacts.representations" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="com.marakana.contacts.representations.AddressRepresentation" sourceFile="AddressRepresentation.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.representations.PersonRepresentation" sourceFile="PersonRepresentation.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.marakana.contacts.validators" total_bugs="0" total_types="4" total_size="39">
+      <ClassStats class="com.marakana.contacts.validators.Employee" sourceFile="Employee.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.validators.EmployeeValidator" sourceFile="EmployeeValidator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.validators.ZipCode" sourceFile="ZipCode.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.marakana.contacts.validators.ZipCodeValidator" sourceFile="ZipCodeValidator.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="233" invocations="412" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="13967" standardDeviationMicrosecondsPerInvocation="1322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="68" invocations="417" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="6975" standardDeviationMicrosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="65" invocations="184" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="8983" standardDeviationMicrosecondsPerInvocation="851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="45" avgMicrosecondsPerInvocation="1406" maxMicrosecondsPerInvocation="10585" standardDeviationMicrosecondsPerInvocation="2402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="62" invocations="45" avgMicrosecondsPerInvocation="1397" maxMicrosecondsPerInvocation="30648" standardDeviationMicrosecondsPerInvocation="4551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="72" avgMicrosecondsPerInvocation="567" maxMicrosecondsPerInvocation="14731" standardDeviationMicrosecondsPerInvocation="1999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="351" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="1978" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="84" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="28172" standardDeviationMicrosecondsPerInvocation="3046"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="36" invocations="78" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="6131" standardDeviationMicrosecondsPerInvocation="849"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="35" invocations="78" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="13622" standardDeviationMicrosecondsPerInvocation="1575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="45" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="10368" standardDeviationMicrosecondsPerInvocation="1796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="45" avgMicrosecondsPerInvocation="759" maxMicrosecondsPerInvocation="8075" standardDeviationMicrosecondsPerInvocation="1811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="32" invocations="79" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="9937" standardDeviationMicrosecondsPerInvocation="1168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="31" invocations="74" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="3847" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="28" invocations="78" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="5403" standardDeviationMicrosecondsPerInvocation="677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="28" invocations="79" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="9788" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="45" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="7891" standardDeviationMicrosecondsPerInvocation="1199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="45" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="5133" standardDeviationMicrosecondsPerInvocation="904"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="723" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="4587" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="45" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="2645" standardDeviationMicrosecondsPerInvocation="509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="46" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="3078" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="15" invocations="21" avgMicrosecondsPerInvocation="727" maxMicrosecondsPerInvocation="10987" standardDeviationMicrosecondsPerInvocation="2301"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

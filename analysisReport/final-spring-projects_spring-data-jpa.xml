@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597101653000" analysisTimestamp="1597101654731" release="">
+  <Project projectName="repositorios/spring-projects_spring-data-jpa">
+    <Jar>repositorios/spring-projects_spring-data-jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.data.jpa.domain.AbstractAuditable">
+      <SourceLine classname="org.springframework.data.jpa.domain.AbstractAuditable" start="41" end="131" sourcefile="AbstractAuditable.java" sourcepath="org/springframework/data/jpa/domain/AbstractAuditable.java"/>
+    </Class>
+    <Field classname="org.springframework.data.jpa.domain.AbstractAuditable" name="createdBy" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.springframework.data.jpa.domain.AbstractAuditable" sourcefile="AbstractAuditable.java" sourcepath="org/springframework/data/jpa/domain/AbstractAuditable.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.data.jpa.domain.AbstractAuditable">
+      <SourceLine classname="org.springframework.data.jpa.domain.AbstractAuditable" start="41" end="131" sourcefile="AbstractAuditable.java" sourcepath="org/springframework/data/jpa/domain/AbstractAuditable.java"/>
+    </Class>
+    <Field classname="org.springframework.data.jpa.domain.AbstractAuditable" name="lastModifiedBy" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="org.springframework.data.jpa.domain.AbstractAuditable" sourcefile="AbstractAuditable.java" sourcepath="org/springframework/data/jpa/domain/AbstractAuditable.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.data.jpa.repository.query.QueryUtils">
+      <SourceLine classname="org.springframework.data.jpa.repository.query.QueryUtils" start="97" end="775" sourcefile="QueryUtils.java" sourcepath="org/springframework/data/jpa/repository/query/QueryUtils.java"/>
+    </Class>
+    <Method classname="org.springframework.data.jpa.repository.query.QueryUtils" name="toOrders" signature="(Lorg/springframework/data/domain/Sort;Ljavax/persistence/criteria/From;Ljavax/persistence/criteria/CriteriaBuilder;)Ljava/util/List;" isStatic="true">
+      <SourceLine classname="org.springframework.data.jpa.repository.query.QueryUtils" start="550" end="563" startBytecode="0" endBytecode="240" sourcefile="QueryUtils.java" sourcepath="org/springframework/data/jpa/repository/query/QueryUtils.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.data.jpa.repository.query.QueryUtils" start="554" end="554" startBytecode="12" endBytecode="12" sourcefile="QueryUtils.java" sourcepath="org/springframework/data/jpa/repository/query/QueryUtils.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="269">
+    <MissingClass>com.querydsl.core.NonUniqueResultException</MissingClass>
+    <MissingClass>com.querydsl.core.types.EntityPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.Order</MissingClass>
+    <MissingClass>com.querydsl.core.types.OrderSpecifier</MissingClass>
+    <MissingClass>com.querydsl.core.types.OrderSpecifier$NullHandling</MissingClass>
+    <MissingClass>com.querydsl.core.types.Path</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadata</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.Predicate</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EntityPathBase</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.Expressions</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathBuilder</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathBuilderFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.SimplePath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.StringPath</MissingClass>
+    <MissingClass>com.querydsl.jpa.EclipseLinkTemplates</MissingClass>
+    <MissingClass>com.querydsl.jpa.HQLTemplates</MissingClass>
+    <MissingClass>com.querydsl.jpa.JPQLQuery</MissingClass>
+    <MissingClass>com.querydsl.jpa.impl.AbstractJPAQuery</MissingClass>
+    <MissingClass>com.querydsl.jpa.impl.JPADeleteClause</MissingClass>
+    <MissingClass>com.querydsl.jpa.impl.JPAQuery</MissingClass>
+    <MissingClass>com.querydsl.jpa.impl.JPAUpdateClause</MissingClass>
+    <MissingClass>javax.enterprise.inject.UnsatisfiedResolutionException</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.AfterBeanDiscovery</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.Bean</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.ProcessBean</MissingClass>
+    <MissingClass>javax.persistence.Access</MissingClass>
+    <MissingClass>javax.persistence.AccessType</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.AttributeNode</MissingClass>
+    <MissingClass>javax.persistence.Entity</MissingClass>
+    <MissingClass>javax.persistence.EntityGraph</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.IdClass</MissingClass>
+    <MissingClass>javax.persistence.NamedStoredProcedureQueries</MissingClass>
+    <MissingClass>javax.persistence.NamedStoredProcedureQuery</MissingClass>
+    <MissingClass>javax.persistence.Parameter</MissingClass>
+    <MissingClass>javax.persistence.ParameterMode</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.QueryHint</MissingClass>
+    <MissingClass>javax.persistence.StoredProcedureParameter</MissingClass>
+    <MissingClass>javax.persistence.StoredProcedureQuery</MissingClass>
+    <MissingClass>javax.persistence.Subgraph</MissingClass>
+    <MissingClass>javax.persistence.Tuple</MissingClass>
+    <MissingClass>javax.persistence.TupleElement</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Expression</MissingClass>
+    <MissingClass>javax.persistence.criteria.Fetch</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.JoinType</MissingClass>
+    <MissingClass>javax.persistence.criteria.ParameterExpression</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Predicate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute$PersistentAttributeType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Bindable</MissingClass>
+    <MissingClass>javax.persistence.metamodel.EntityType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.IdentifiableType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Metamodel</MissingClass>
+    <MissingClass>javax.persistence.metamodel.SingularAttribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Type</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Type$PersistenceType</MissingClass>
+    <MissingClass>javax.persistence.spi.PersistenceUnitInfo</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInterceptor</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInvocation</MissingClass>
+    <MissingClass>org.aspectj.runtime.reflect.Factory</MissingClass>
+    <MissingClass>org.eclipse.persistence.jpa.JpaQuery</MissingClass>
+    <MissingClass>org.eclipse.persistence.queries.DatabaseQuery</MissingClass>
+    <MissingClass>org.eclipse.persistence.queries.ScrollableCursor</MissingClass>
+    <MissingClass>org.hibernate.ScrollMode</MissingClass>
+    <MissingClass>org.hibernate.ScrollableResults</MissingClass>
+    <MissingClass>org.hibernate.proxy.HibernateProxy</MissingClass>
+    <MissingClass>org.hibernate.proxy.LazyInitializer</MissingClass>
+    <MissingClass>org.hibernate.query.Query</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.aop.TargetSource</MissingClass>
+    <MissingClass>org.springframework.aop.framework.ProxyFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapper</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapperImpl</MissingClass>
+    <MissingClass>org.springframework.beans.MutablePropertyValues</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanDefinitionStoreException</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactoryUtils</MissingClass>
+    <MissingClass>org.springframework.beans.factory.ObjectFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.ObjectProvider</MissingClass>
+    <MissingClass>org.springframework.beans.factory.aspectj.AbstractDependencyInjectionAspect</MissingClass>
+    <MissingClass>org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect</MissingClass>
+    <MissingClass>org.springframework.beans.factory.aspectj.ConfigurableObject</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.AbstractFactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanFactoryPostProcessor</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.ConfigurableListableBeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.parsing.BeanComponentDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.AbstractBeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.AutowireCandidateQualifier</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.BeanDefinitionBuilder</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.BeanDefinitionReaderUtils</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.BeanDefinitionRegistry</MissingClass>
+    <MissingClass>org.springframework.beans.factory.support.RootBeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.BeanDefinitionParser</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.NamespaceHandlerSupport</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.ParserContext</MissingClass>
+    <MissingClass>org.springframework.beans.factory.xml.XmlReaderContext</MissingClass>
+    <MissingClass>org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.NamedThreadLocal</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotatedElementUtils</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationAttributes</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationUtils</MissingClass>
+    <MissingClass>org.springframework.core.convert.ConversionService</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.core.convert.support.ConfigurableConversionService</MissingClass>
+    <MissingClass>org.springframework.core.convert.support.DefaultConversionService</MissingClass>
+    <MissingClass>org.springframework.core.env.StandardEnvironment</MissingClass>
+    <MissingClass>org.springframework.core.io.DefaultResourceLoader</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.ResourceLoader</MissingClass>
+    <MissingClass>org.springframework.core.io.support.PathMatchingResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternUtils</MissingClass>
+    <MissingClass>org.springframework.core.type.AnnotationMetadata</MissingClass>
+    <MissingClass>org.springframework.core.type.filter.AnnotationTypeFilter</MissingClass>
+    <MissingClass>org.springframework.dao.CleanupFailureDataAccessException</MissingClass>
+    <MissingClass>org.springframework.dao.DataRetrievalFailureException</MissingClass>
+    <MissingClass>org.springframework.dao.EmptyResultDataAccessException</MissingClass>
+    <MissingClass>org.springframework.dao.IncorrectResultSizeDataAccessException</MissingClass>
+    <MissingClass>org.springframework.dao.InvalidDataAccessApiUsageException</MissingClass>
+    <MissingClass>org.springframework.data.annotation.AccessType</MissingClass>
+    <MissingClass>org.springframework.data.annotation.AccessType$Type</MissingClass>
+    <MissingClass>org.springframework.data.auditing.AuditingHandler</MissingClass>
+    <MissingClass>org.springframework.data.auditing.config.AuditingBeanDefinitionRegistrarSupport</MissingClass>
+    <MissingClass>org.springframework.data.auditing.config.AuditingConfiguration</MissingClass>
+    <MissingClass>org.springframework.data.auditing.config.AuditingHandlerBeanDefinitionParser</MissingClass>
+    <MissingClass>org.springframework.data.config.ParsingUtils</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$DateToInstantConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$DateToLocalDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$DateToLocalDateTimeConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$DateToLocalTimeConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$InstantToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$LocalDateTimeToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$LocalDateToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$LocalTimeToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$StringToZoneIdConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.Jsr310Converters$ZoneIdToStringConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$DateToInstantConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$DateToLocalDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$DateToLocalDateTimeConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$DateToLocalTimeConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$InstantToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$LocalDateTimeToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$LocalDateToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$LocalTimeToDateConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$StringToZoneIdConverter</MissingClass>
+    <MissingClass>org.springframework.data.convert.ThreeTenBackPortConverters$ZoneIdToStringConverter</MissingClass>
+    <MissingClass>org.springframework.data.domain.Auditable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Example</MissingClass>
+    <MissingClass>org.springframework.data.domain.ExampleMatcher</MissingClass>
+    <MissingClass>org.springframework.data.domain.ExampleMatcher$NullHandler</MissingClass>
+    <MissingClass>org.springframework.data.domain.ExampleMatcher$PropertyValueTransformer</MissingClass>
+    <MissingClass>org.springframework.data.domain.ExampleMatcher$StringMatcher</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Persistable</MissingClass>
+    <MissingClass>org.springframework.data.domain.SliceImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$NullHandling</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.mapping.Association</MissingClass>
+    <MissingClass>org.springframework.data.mapping.PersistentEntity</MissingClass>
+    <MissingClass>org.springframework.data.mapping.PersistentProperty</MissingClass>
+    <MissingClass>org.springframework.data.mapping.PropertyPath</MissingClass>
+    <MissingClass>org.springframework.data.mapping.context.AbstractMappingContext</MissingClass>
+    <MissingClass>org.springframework.data.mapping.model.AnnotationBasedPersistentProperty</MissingClass>
+    <MissingClass>org.springframework.data.mapping.model.BasicPersistentEntity</MissingClass>
+    <MissingClass>org.springframework.data.mapping.model.IdPropertyIdentifierAccessor</MissingClass>
+    <MissingClass>org.springframework.data.projection.SpelAwareProxyProjectionFactory</MissingClass>
+    <MissingClass>org.springframework.data.projection.SpelAwareProxyProjectionFactory$SpelAwareProjectionInformation</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.EntityPathResolver</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.QSort</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.QuerydslPredicateExecutor</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.QuerydslUtils</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.SimpleEntityPathResolver</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.cdi.CdiRepositoryBean</MissingClass>
+    <MissingClass>org.springframework.data.repository.cdi.CdiRepositoryExtensionSupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.AnnotationRepositoryConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.RepositoryBeanDefinitionParser</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.RepositoryConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.data.repository.config.XmlRepositoryConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.EntityInformation</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.EntityMetadata</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.NamedQueries</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.RepositoryInformation</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.RepositoryMetadata</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.AbstractEntityInformation</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.QueryCreationListener</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryFactorySupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryFragment</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryProxyPostProcessor</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.TransactionalRepositoryFactoryBeanSupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.Parameter</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.Parameters</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.ParametersParameterAccessor</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryByExampleExecutor</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryCreationException</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryLookupStrategy</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryLookupStrategy$Key</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryMethod</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.QueryMethodEvaluationContextProvider</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.RepositoryQuery</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.ResultProcessor</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.ReturnedType</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.SpelQueryContext</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.SpelQueryContext$SpelExtractor</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.parser.AbstractQueryCreator</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.parser.Part</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.parser.Part$IgnoreCaseType</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.parser.Part$Type</MissingClass>
+    <MissingClass>org.springframework.data.repository.query.parser.PartTree</MissingClass>
+    <MissingClass>org.springframework.data.repository.support.PageableExecutionUtils</MissingClass>
+    <MissingClass>org.springframework.data.spel.spi.EvaluationContextExtension</MissingClass>
+    <MissingClass>org.springframework.data.support.ExampleMatcherAccessor</MissingClass>
+    <MissingClass>org.springframework.data.util.ClassTypeInformation</MissingClass>
+    <MissingClass>org.springframework.data.util.CloseableIterator</MissingClass>
+    <MissingClass>org.springframework.data.util.DirectFieldAccessFallbackBeanWrapper</MissingClass>
+    <MissingClass>org.springframework.data.util.Lazy</MissingClass>
+    <MissingClass>org.springframework.data.util.Optionals</MissingClass>
+    <MissingClass>org.springframework.data.util.ProxyUtils</MissingClass>
+    <MissingClass>org.springframework.data.util.ProxyUtils$ProxyDetector</MissingClass>
+    <MissingClass>org.springframework.data.util.StreamUtils</MissingClass>
+    <MissingClass>org.springframework.data.util.Streamable</MissingClass>
+    <MissingClass>org.springframework.data.util.TypeInformation</MissingClass>
+    <MissingClass>org.springframework.expression.Expression</MissingClass>
+    <MissingClass>org.springframework.expression.ParserContext</MissingClass>
+    <MissingClass>org.springframework.expression.spel.standard.SpelExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.support.StandardEvaluationContext</MissingClass>
+    <MissingClass>org.springframework.instrument.classloading.ShadowingClassLoader</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.persistenceunit.MutablePersistenceUnitInfo</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.persistenceunit.PersistenceUnitPostProcessor</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionSynchronizationManager</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.ClassUtils</MissingClass>
+    <MissingClass>org.springframework.util.CollectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.ConcurrentReferenceHashMap</MissingClass>
+    <MissingClass>org.springframework.util.LinkedMultiValueMap</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.util.ObjectUtils</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.StreamUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.threeten.bp.Instant</MissingClass>
+    <MissingClass>org.threeten.bp.LocalDate</MissingClass>
+    <MissingClass>org.threeten.bp.LocalDateTime</MissingClass>
+    <MissingClass>org.threeten.bp.LocalTime</MissingClass>
+    <MissingClass>org.threeten.bp.ZoneId</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:20:53 +0000" total_classes="246" referenced_classes="416" total_bugs="3" total_size="6359" num_packages="17" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="22.20" clock_seconds="6.35" peak_mbytes="473.64" alloc_mbytes="3540.00" gc_seconds="0.34" priority_2="3">
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="464">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.convert" total_bugs="0" total_types="4" total_size="120">
+      <ClassStats class="org.springframework.data.jpa.convert.QueryByExamplePredicateBuilder" sourceFile="QueryByExamplePredicateBuilder.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.QueryByExamplePredicateBuilder$1" sourceFile="QueryByExamplePredicateBuilder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.QueryByExamplePredicateBuilder$PathNode" sourceFile="QueryByExamplePredicateBuilder.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.convert.threeten" total_bugs="0" total_types="7" total_size="54">
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters" sourceFile="Jsr310JpaConverters.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters$InstantConverter" sourceFile="Jsr310JpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters$LocalDateConverter" sourceFile="Jsr310JpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters$LocalDateTimeConverter" sourceFile="Jsr310JpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters$LocalTimeConverter" sourceFile="Jsr310JpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters$ZoneIdConverter" sourceFile="Jsr310JpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threeten.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.convert.threetenbp" total_bugs="0" total_types="7" total_size="54">
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters$InstantConverter" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters$LocalDateConverter" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters$LocalDateTimeConverter" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters$LocalTimeConverter" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.ThreeTenBackPortJpaConverters$ZoneIdConverter" sourceFile="ThreeTenBackPortJpaConverters.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.convert.threetenbp.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.domain" total_bugs="2" total_types="14" total_size="302" priority_2="2">
+      <ClassStats class="org.springframework.data.jpa.domain.AbstractAuditable" sourceFile="AbstractAuditable.java" interface="false" size="33" bugs="2" priority_2="2"/>
+      <ClassStats class="org.springframework.data.jpa.domain.AbstractAuditable_" sourceFile="AbstractAuditable_.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.AbstractPersistable" sourceFile="AbstractPersistable.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.AbstractPersistable_" sourceFile="AbstractPersistable_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.JpaSort" sourceFile="JpaSort.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.JpaSort$1" sourceFile="JpaSort.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.JpaSort$JpaOrder" sourceFile="JpaSort.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.JpaSort$Path" sourceFile="JpaSort.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.QAbstractAuditable" sourceFile="QAbstractAuditable.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.QAbstractPersistable" sourceFile="QAbstractPersistable.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.Specification" sourceFile="Specification.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.SpecificationComposition" sourceFile="SpecificationComposition.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.SpecificationComposition$Combiner" sourceFile="SpecificationComposition.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.domain.support" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="org.springframework.data.jpa.domain.support.AuditingBeanFactoryPostProcessor" sourceFile="AuditingBeanFactoryPostProcessor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.support.AuditingEntityListener" sourceFile="AuditingEntityListener.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.domain.support.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.mapping" total_bugs="0" total_types="9" total_size="194">
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaMetamodelMappingContext" sourceFile="JpaMetamodelMappingContext.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaMetamodelMappingContext$1" sourceFile="JpaMetamodelMappingContext.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaMetamodelMappingContext$Metamodels" sourceFile="JpaMetamodelMappingContext.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaPersistentEntity" sourceFile="JpaPersistentEntity.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaPersistentEntityImpl" sourceFile="JpaPersistentEntityImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaPersistentEntityImpl$JpaProxyAwareIdentifierAccessor" sourceFile="JpaPersistentEntityImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaPersistentProperty" sourceFile="JpaPersistentProperty.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.JpaPersistentPropertyImpl" sourceFile="JpaPersistentPropertyImpl.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.mapping.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.projection" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="org.springframework.data.jpa.projection.CollectionAwareProjectionFactory" sourceFile="CollectionAwareProjectionFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.projection.CollectionAwareProjectionFactory$CollectionAwareProjectionInformation" sourceFile="CollectionAwareProjectionFactory.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.provider" total_bugs="0" total_types="12" total_size="167">
+      <ClassStats class="org.springframework.data.jpa.provider.HibernateUtils" sourceFile="HibernateUtils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.JpaClassUtils" sourceFile="JpaClassUtils.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider" sourceFile="PersistenceProvider.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$1" sourceFile="PersistenceProvider.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$2" sourceFile="PersistenceProvider.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$3" sourceFile="PersistenceProvider.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$Constants" sourceFile="PersistenceProvider.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$EclipseLinkScrollableResultsIterator" sourceFile="PersistenceProvider.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.PersistenceProvider$HibernateScrollableResultsIterator" sourceFile="PersistenceProvider.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.ProxyIdAccessor" sourceFile="ProxyIdAccessor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.QueryExtractor" sourceFile="QueryExtractor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.provider.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.repository" total_bugs="0" total_types="11" total_size="66">
+      <ClassStats class="org.springframework.data.jpa.repository.EntityGraph" sourceFile="EntityGraph.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.EntityGraph$EntityGraphType" sourceFile="EntityGraph.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.JpaContext" sourceFile="JpaContext.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.JpaRepository" sourceFile="JpaRepository.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.JpaSpecificationExecutor" sourceFile="JpaSpecificationExecutor.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.Lock" sourceFile="Lock.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.Modifying" sourceFile="Modifying.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.Query" sourceFile="Query.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.QueryHints" sourceFile="QueryHints.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.Temporal" sourceFile="Temporal.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.repository.cdi" total_bugs="0" total_types="3" total_size="49">
+      <ClassStats class="org.springframework.data.jpa.repository.cdi.JpaRepositoryBean" sourceFile="JpaRepositoryBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension" sourceFile="JpaRepositoryExtension.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.cdi.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.repository.config" total_bugs="0" total_types="14" total_size="259">
+      <ClassStats class="org.springframework.data.jpa.repository.config.AuditingBeanDefinitionParser" sourceFile="AuditingBeanDefinitionParser.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.AuditingBeanDefinitionParser$1" sourceFile="AuditingBeanDefinitionParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.AuditingBeanDefinitionParser$SpringConfiguredBeanDefinitionParser" sourceFile="AuditingBeanDefinitionParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.BeanDefinitionNames" sourceFile="BeanDefinitionNames.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.EnableJpaAuditing" sourceFile="EnableJpaAuditing.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.EnableJpaRepositories" sourceFile="EnableJpaRepositories.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.InspectionClassLoader" sourceFile="InspectionClassLoader.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaAuditingRegistrar" sourceFile="JpaAuditingRegistrar.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaMetamodelMappingContextFactoryBean" sourceFile="JpaMetamodelMappingContextFactoryBean.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaRepositoriesRegistrar" sourceFile="JpaRepositoriesRegistrar.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension" sourceFile="JpaRepositoryConfigExtension.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension$LazyJvmAgent" sourceFile="JpaRepositoryConfigExtension.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.JpaRepositoryNameSpaceHandler" sourceFile="JpaRepositoryNameSpaceHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.config.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.repository.query" total_bugs="1" total_types="82" total_size="2616" priority_2="1">
+      <ClassStats class="org.springframework.data.jpa.repository.query.AbstractJpaQuery" sourceFile="AbstractJpaQuery.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter" sourceFile="AbstractJpaQuery.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap" sourceFile="AbstractJpaQuery.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery" sourceFile="AbstractStringBasedJpaQuery.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.DeclaredQuery" sourceFile="DeclaredQuery.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.DefaultJpaEntityMetadata" sourceFile="DefaultJpaEntityMetadata.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.DefaultJpaQueryMethodFactory" sourceFile="DefaultJpaQueryMethodFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.EmptyDeclaredQuery" sourceFile="EmptyDeclaredQuery.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.EscapeCharacter" sourceFile="EscapeCharacter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ExpressionBasedStringQuery" sourceFile="ExpressionBasedStringQuery.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException" sourceFile="InvalidJpaQueryMethodException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.Jpa21Utils" sourceFile="Jpa21Utils.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaCountQueryCreator" sourceFile="JpaCountQueryCreator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaEntityGraph" sourceFile="JpaEntityGraph.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaEntityMetadata" sourceFile="JpaEntityMetadata.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaParameters" sourceFile="JpaParameters.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaParameters$JpaParameter" sourceFile="JpaParameters.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaParametersParameterAccessor" sourceFile="JpaParametersParameterAccessor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryCreator" sourceFile="JpaQueryCreator.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryCreator$1" sourceFile="JpaQueryCreator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryCreator$PredicateBuilder" sourceFile="JpaQueryCreator.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution" sourceFile="JpaQueryExecution.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution" sourceFile="JpaQueryExecution.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$DeleteExecution" sourceFile="JpaQueryExecution.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$ExistsExecution" sourceFile="JpaQueryExecution.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution" sourceFile="JpaQueryExecution.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution" sourceFile="JpaQueryExecution.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$ProcedureExecution" sourceFile="JpaQueryExecution.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution" sourceFile="JpaQueryExecution.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$SlicedExecution" sourceFile="JpaQueryExecution.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryExecution$StreamExecution" sourceFile="JpaQueryExecution.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryFactory" sourceFile="JpaQueryFactory.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$1" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy" sourceFile="JpaQueryLookupStrategy.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryMethod" sourceFile="JpaQueryMethod.java" interface="false" size="141" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaQueryMethodFactory" sourceFile="JpaQueryMethodFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaResultConverters" sourceFile="JpaResultConverters.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.JpaResultConverters$BlobToByteArrayConverter" sourceFile="JpaResultConverters.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.NamedQuery" sourceFile="NamedQuery.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.NativeJpaQuery" sourceFile="NativeJpaQuery.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ParameterBinder" sourceFile="ParameterBinder.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ParameterBinderFactory" sourceFile="ParameterBinderFactory.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ParameterMetadataProvider" sourceFile="ParameterMetadataProvider.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ParameterMetadataProvider$1" sourceFile="ParameterMetadataProvider.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.ParameterMetadataProvider$ParameterMetadata" sourceFile="ParameterMetadataProvider.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.PartTreeJpaQuery" sourceFile="PartTreeJpaQuery.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.PartTreeJpaQuery$CountQueryPreparer" sourceFile="PartTreeJpaQuery.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer" sourceFile="PartTreeJpaQuery.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.Procedure" sourceFile="Procedure.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter" sourceFile="QueryParameterSetter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$1" sourceFile="QueryParameterSetter.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery" sourceFile="QueryParameterSetter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling" sourceFile="QueryParameterSetter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1" sourceFile="QueryParameterSetter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$2" sourceFile="QueryParameterSetter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter" sourceFile="QueryParameterSetter.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$QueryMetadata" sourceFile="QueryParameterSetter.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetter$QueryMetadataCache" sourceFile="QueryParameterSetter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetterFactory" sourceFile="QueryParameterSetterFactory.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$BasicQueryParameterSetterFactory" sourceFile="QueryParameterSetterFactory.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$CriteriaQueryParameterSetterFactory" sourceFile="QueryParameterSetterFactory.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$ExpressionBasedQueryParameterSetterFactory" sourceFile="QueryParameterSetterFactory.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryParameterSetterFactory$ParameterImpl" sourceFile="QueryParameterSetterFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.QueryUtils" sourceFile="QueryUtils.java" interface="false" size="293" bugs="1" priority_2="1"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.SimpleJpaQuery" sourceFile="SimpleJpaQuery.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StoredProcedureAttributeSource" sourceFile="StoredProcedureAttributeSource.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StoredProcedureAttributeSource$1" sourceFile="StoredProcedureAttributeSource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StoredProcedureAttributes" sourceFile="StoredProcedureAttributes.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StoredProcedureJpaQuery" sourceFile="StoredProcedureJpaQuery.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery" sourceFile="StringQuery.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$1" sourceFile="StringQuery.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$InParameterBinding" sourceFile="StringQuery.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$LikeParameterBinding" sourceFile="StringQuery.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$Metadata" sourceFile="StringQuery.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$ParameterBinding" sourceFile="StringQuery.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$ParameterBindingParser" sourceFile="StringQuery.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.StringQuery$ParameterBindingParser$ParameterBindingType" sourceFile="StringQuery.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.query.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.repository.support" total_bugs="0" total_types="34" total_size="1181">
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadata" sourceFile="CrudMethodMetadata.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor" sourceFile="CrudMethodMetadataPostProcessor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$1" sourceFile="CrudMethodMetadataPostProcessor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor" sourceFile="CrudMethodMetadataPostProcessor.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata" sourceFile="CrudMethodMetadataPostProcessor.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$ThreadBoundTargetSource" sourceFile="CrudMethodMetadataPostProcessor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.DefaultJpaContext" sourceFile="DefaultJpaContext.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.DefaultQueryHints" sourceFile="DefaultQueryHints.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor" sourceFile="EntityManagerBeanDefinitionRegistrarPostProcessor.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaEntityInformation" sourceFile="JpaEntityInformation.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaEntityInformationSupport" sourceFile="JpaEntityInformationSupport.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension" sourceFile="JpaEvaluationContextExtension.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension$JpaRootObject" sourceFile="JpaEvaluationContextExtension.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation" sourceFile="JpaMetamodelEntityInformation.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdMetadata" sourceFile="JpaMetamodelEntityInformation.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation$IdentifierDerivingDirectFieldAccessFallbackBeanWrapper" sourceFile="JpaMetamodelEntityInformation.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaPersistableEntityInformation" sourceFile="JpaPersistableEntityInformation.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaRepositoryFactory" sourceFile="JpaRepositoryFactory.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaRepositoryFactory$EclipseLinkProjectionQueryCreationListener" sourceFile="JpaRepositoryFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean" sourceFile="JpaRepositoryFactoryBean.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.JpaRepositoryImplementation" sourceFile="JpaRepositoryImplementation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.MutableQueryHints" sourceFile="MutableQueryHints.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QueryHintValue" sourceFile="QueryHintValue.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QueryHints" sourceFile="QueryHints.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QueryHints$NoHints" sourceFile="QueryHints.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.Querydsl" sourceFile="Querydsl.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.Querydsl$1" sourceFile="Querydsl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QuerydslJpaPredicateExecutor" sourceFile="QuerydslJpaPredicateExecutor.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QuerydslJpaRepository" sourceFile="QuerydslJpaRepository.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.QuerydslRepositorySupport" sourceFile="QuerydslRepositorySupport.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.SimpleJpaRepository" sourceFile="SimpleJpaRepository.java" interface="false" size="269" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.SimpleJpaRepository$ByIdsSpecification" sourceFile="SimpleJpaRepository.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.SimpleJpaRepository$ExampleSpecification" sourceFile="SimpleJpaRepository.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.repository.support.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.support" total_bugs="0" total_types="3" total_size="117">
+      <ClassStats class="org.springframework.data.jpa.support.ClasspathScanningPersistenceUnitPostProcessor" sourceFile="ClasspathScanningPersistenceUnitPostProcessor.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.support.MergingPersistenceUnitManager" sourceFile="MergingPersistenceUnitManager.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.support.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.data.jpa.util" total_bugs="0" total_types="6" total_size="140">
+      <ClassStats class="org.springframework.data.jpa.util.BeanDefinitionUtils" sourceFile="BeanDefinitionUtils.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.util.BeanDefinitionUtils$EntityManagerFactoryBeanDefinition" sourceFile="BeanDefinitionUtils.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.util.HibernateProxyDetector" sourceFile="HibernateProxyDetector.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.util.JpaMetamodel" sourceFile="JpaMetamodel.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.util.JpaMetamodelCacheCleanup" sourceFile="JpaMetamodelCacheCleanup.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.data.jpa.util.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="364" invocations="1720" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="19938" standardDeviationMicrosecondsPerInvocation="807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="331" invocations="1315" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="9903" standardDeviationMicrosecondsPerInvocation="549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="285" invocations="1238" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="7815" standardDeviationMicrosecondsPerInvocation="408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="280" invocations="1326" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="8888" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="258" invocations="1306" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="13804" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="228" invocations="1145" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="35396" standardDeviationMicrosecondsPerInvocation="1097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="215" invocations="1340" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="10112" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="200" invocations="416" avgMicrosecondsPerInvocation="481" maxMicrosecondsPerInvocation="9234" standardDeviationMicrosecondsPerInvocation="1051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="178" invocations="1315" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="10198" standardDeviationMicrosecondsPerInvocation="327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="172" invocations="416" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="7402" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="153" invocations="1892" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="2368" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="111" invocations="1734" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="647" standardDeviationMicrosecondsPerInvocation="46"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="92" invocations="246" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="16927" standardDeviationMicrosecondsPerInvocation="1583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="91" invocations="1425" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="34392" standardDeviationMicrosecondsPerInvocation="911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="82" invocations="21797" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="2528" standardDeviationMicrosecondsPerInvocation="22"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="79" invocations="1315" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="6528" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="77" invocations="416" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="3047" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="72" invocations="633" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="13503" standardDeviationMicrosecondsPerInvocation="562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="69" invocations="416" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1995" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="58" invocations="246" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="2769" standardDeviationMicrosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="57" invocations="416" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1744" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="54" invocations="1289" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="5578" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="54" invocations="246" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="2824" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="50" invocations="416" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="3268" standardDeviationMicrosecondsPerInvocation="305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="47" invocations="246" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1785" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="44" invocations="246" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="3776" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="44" invocations="1118" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="1703" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="43" invocations="416" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="7143" standardDeviationMicrosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="41" invocations="246" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="2339" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="40" invocations="1238" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="899" standardDeviationMicrosecondsPerInvocation="55"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="38" invocations="246" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2428" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="37" invocations="416" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2848" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNonShortCircuit" totalMilliseconds="36" invocations="246" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="17243" standardDeviationMicrosecondsPerInvocation="1098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="34" invocations="246" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="1380" standardDeviationMicrosecondsPerInvocation="189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="34" invocations="246" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="7384" standardDeviationMicrosecondsPerInvocation="477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="33" invocations="416" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="1606" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="32" invocations="246" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="1469" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="32" invocations="246" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="2295" standardDeviationMicrosecondsPerInvocation="200"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

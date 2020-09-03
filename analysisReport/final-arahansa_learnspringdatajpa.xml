@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597101857000" analysisTimestamp="1597101859320" release="">
+  <Project projectName="repositorios/arahansa_learnspringdatajpa">
+    <Jar>repositorios/arahansa_learnspringdatajpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.common.Comment">
+      <SourceLine classname="com.example.common.Comment" start="11" end="86" sourcefile="Comment.java" sourcepath="com/example/common/Comment.java"/>
+    </Class>
+    <Field classname="com.example.common.Comment" name="article" signature="Lcom/example/common/BoardArticle;" isStatic="false">
+      <SourceLine classname="com.example.common.Comment" sourcefile="Comment.java" sourcepath="com/example/common/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.example.query.jpql.JPQLController">
+      <SourceLine classname="com.example.query.jpql.JPQLController" start="21" end="48" sourcefile="JPQLController.java" sourcepath="com/example/query/jpql/JPQLController.java"/>
+    </Class>
+    <Method classname="com.example.query.jpql.JPQLController" name="jpql" signature="(Lorg/springframework/ui/Model;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.example.query.jpql.JPQLController" start="35" end="48" startBytecode="0" endBytecode="238" sourcefile="JPQLController.java" sourcepath="com/example/query/jpql/JPQLController.java"/>
+    </Method>
+    <SourceLine classname="com.example.query.jpql.JPQLController" start="40" end="40" startBytecode="43" endBytecode="43" sourcefile="JPQLController.java" sourcepath="com/example/query/jpql/JPQLController.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.r_mapping.onetomany.Student">
+      <SourceLine classname="com.example.r_mapping.onetomany.Student" start="22" end="58" sourcefile="Student.java" sourcepath="com/example/r_mapping/onetomany/Student.java"/>
+    </Class>
+    <Field classname="com.example.r_mapping.onetomany.Student" name="university" signature="Lcom/example/r_mapping/onetomany/University;" isStatic="false">
+      <SourceLine classname="com.example.r_mapping.onetomany.Student" sourcefile="Student.java" sourcepath="com/example/r_mapping/onetomany/Student.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.r_mapping.onetoone.Member">
+      <SourceLine classname="com.example.r_mapping.onetoone.Member" start="12" end="53" sourcefile="Member.java" sourcepath="com/example/r_mapping/onetoone/Member.java"/>
+    </Class>
+    <Field classname="com.example.r_mapping.onetoone.Member" name="memberDetail" signature="Lcom/example/r_mapping/onetoone/MemberDetail;" isStatic="false">
+      <SourceLine classname="com.example.r_mapping.onetoone.Member" sourcefile="Member.java" sourcepath="com/example/r_mapping/onetoone/Member.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.r_mapping.onetoone.MemberDetail">
+      <SourceLine classname="com.example.r_mapping.onetoone.MemberDetail" start="13" end="61" sourcefile="MemberDetail.java" sourcepath="com/example/r_mapping/onetoone/MemberDetail.java"/>
+    </Class>
+    <Field classname="com.example.r_mapping.onetoone.MemberDetail" name="member" signature="Lcom/example/r_mapping/onetoone/Member;" isStatic="false">
+      <SourceLine classname="com.example.r_mapping.onetoone.MemberDetail" sourcefile="MemberDetail.java" sourcepath="com/example/r_mapping/onetoone/MemberDetail.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>org.hibernate.Hibernate</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.support.PropertySourcesPlaceholderConfigurer</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:24:17 +0000" total_classes="61" referenced_classes="95" total_bugs="5" total_size="1016" num_packages="16" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.01" clock_seconds="1.95" peak_mbytes="194.35" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="5">
+    <PackageStats package="com.example" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="com.example.App" sourceFile="App.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.common" total_bugs="1" total_types="8" total_size="187" priority_2="1">
+      <ClassStats class="com.example.common.BoardArticle" sourceFile="BoardArticle.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.example.common.BoardArticleRepository" sourceFile="BoardArticleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.example.common.Comment" sourceFile="Comment.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.common.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.common.CommonBoardArticleController" sourceFile="CommonBoardArticleController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.example.common.Tags" sourceFile="Tags.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.example.common.User" sourceFile="User.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.example.common.UserRepository" sourceFile="UserRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.etc.validation" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="com.example.etc.validation.DressOrder" sourceFile="DressOrder.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.example.etc.validation.DressOrderRepository" sourceFile="DressOrderRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.etc.validation.ValidationController" sourceFile="ValidationController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.collection" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.example.mapping.collection.MapStudent" sourceFile="MapStudent.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.compoundkey" total_bugs="0" total_types="4" total_size="82">
+      <ClassStats class="com.example.mapping.compoundkey.ComposedIdKey" sourceFile="ComposedIdKey.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.example.mapping.compoundkey.CompoundKeyController" sourceFile="CompoundKeyController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.example.mapping.compoundkey.PeopleManagement" sourceFile="PeopleManagement.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.example.mapping.compoundkey.PeopleManagementRepository" sourceFile="PeopleManagementRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.embedded" total_bugs="0" total_types="4" total_size="69">
+      <ClassStats class="com.example.mapping.embedded.EmbeddedController" sourceFile="EmbeddedController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.example.mapping.embedded.HumanBody" sourceFile="HumanBody.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.example.mapping.embedded.HumanBodyRepository" sourceFile="HumanBodyRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.mapping.embedded.Leg" sourceFile="Leg.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.inheritance.join" total_bugs="0" total_types="5" total_size="55">
+      <ClassStats class="com.example.mapping.inheritance.join.BaseBallPlayer" sourceFile="BaseBallPlayer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.join.BaseBallPlayerRepository" sourceFile="BaseBallPlayerRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.join.HanWhaPlayer" sourceFile="HanWhaPlayer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.join.InheritanceJoinController" sourceFile="InheritanceJoinController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.join.SkPlayer" sourceFile="SkPlayer.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.inheritance.perclass" total_bugs="0" total_types="5" total_size="55">
+      <ClassStats class="com.example.mapping.inheritance.perclass.Module" sourceFile="Module.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.perclass.PrivateProject" sourceFile="PrivateProject.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.perclass.Project" sourceFile="Project.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.perclass.ProjectRepository" sourceFile="ProjectRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.perclass.inheritancePerClassController" sourceFile="inheritancePerClassController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.inheritance.singletable" total_bugs="0" total_types="5" total_size="65">
+      <ClassStats class="com.example.mapping.inheritance.singletable.Animal" sourceFile="Animal.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.singletable.AnimalRepository" sourceFile="AnimalRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.singletable.Bird" sourceFile="Bird.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.singletable.InheritanceSingleController" sourceFile="InheritanceSingleController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.mapping.inheritance.singletable.Lion" sourceFile="Lion.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.mappedsuperclass" total_bugs="0" total_types="4" total_size="51">
+      <ClassStats class="com.example.mapping.mappedsuperclass.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.example.mapping.mappedsuperclass.MappedController" sourceFile="MappedController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.example.mapping.mappedsuperclass.MappedSuperRepository" sourceFile="MappedSuperRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.mapping.mappedsuperclass.MappedSupper" sourceFile="MappedSupper.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.mapping.secondary" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.example.mapping.secondary.SecondaryController" sourceFile="SecondaryController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.mapping.secondary.SecondaryRepository" sourceFile="SecondaryRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.example.mapping.secondary.Secondarymaster" sourceFile="Secondarymaster.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.query.jpql" total_bugs="1" total_types="1" total_size="18" priority_2="1">
+      <ClassStats class="com.example.query.jpql.JPQLController" sourceFile="JPQLController.java" interface="false" size="18" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.example.r_mapping.justone" total_bugs="0" total_types="4" total_size="61">
+      <ClassStats class="com.example.r_mapping.justone.JustOne" sourceFile="JustOne.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.justone.JustOneController" sourceFile="JustOneController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.justone.JustOneEnum" sourceFile="JustOneEnum.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.justone.JustOneRepository" sourceFile="JustOneRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.r_mapping.manytomany" total_bugs="0" total_types="5" total_size="90">
+      <ClassStats class="com.example.r_mapping.manytomany.Book" sourceFile="Book.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.manytomany.BookRepository" sourceFile="BookRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.manytomany.Category" sourceFile="Category.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.manytomany.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.manytomany.ManyToManyController" sourceFile="ManyToManyController.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.r_mapping.onetomany" total_bugs="1" total_types="4" total_size="91" priority_2="1">
+      <ClassStats class="com.example.r_mapping.onetomany.OnetoManyController" sourceFile="OnetoManyController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.onetomany.Student" sourceFile="Student.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.r_mapping.onetomany.University" sourceFile="University.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.onetomany.UniversityRepository" sourceFile="UniversityRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.r_mapping.onetoone" total_bugs="2" total_types="4" total_size="66" priority_2="2">
+      <ClassStats class="com.example.r_mapping.onetoone.Member" sourceFile="Member.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.r_mapping.onetoone.MemberDetail" sourceFile="MemberDetail.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.r_mapping.onetoone.MemberRepository" sourceFile="MemberRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.example.r_mapping.onetoone.OnetoOneController" sourceFile="OnetoOneController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="197" invocations="560" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="14437" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="68" invocations="95" avgMicrosecondsPerInvocation="722" maxMicrosecondsPerInvocation="12617" standardDeviationMicrosecondsPerInvocation="1988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="61" invocations="460" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="25044" standardDeviationMicrosecondsPerInvocation="1171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="58" invocations="285" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="5501" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="53" invocations="567" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="2616" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="50" invocations="439" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="3924" standardDeviationMicrosecondsPerInvocation="319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="285" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="9926" standardDeviationMicrosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="48" invocations="95" avgMicrosecondsPerInvocation="512" maxMicrosecondsPerInvocation="9021" standardDeviationMicrosecondsPerInvocation="1234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="48" invocations="285" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="8510" standardDeviationMicrosecondsPerInvocation="547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="46" invocations="284" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="1908" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="44" invocations="285" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="9333" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="42" invocations="290" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="25284" standardDeviationMicrosecondsPerInvocation="1479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="40" invocations="284" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="2220" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="143" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="13254" standardDeviationMicrosecondsPerInvocation="1224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="95" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="6462" standardDeviationMicrosecondsPerInvocation="794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="126" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1646" standardDeviationMicrosecondsPerInvocation="227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="95" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="9161" standardDeviationMicrosecondsPerInvocation="987"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="95" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="4173" standardDeviationMicrosecondsPerInvocation="663"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="61" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="2612" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="95" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="7158" standardDeviationMicrosecondsPerInvocation="763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="95" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="2478" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="61" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="2411" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="2813" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="840" standardDeviationMicrosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="95" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2560" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="285" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="1546" standardDeviationMicrosecondsPerInvocation="112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="12" invocations="61" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="3384" standardDeviationMicrosecondsPerInvocation="427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="61" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="5249" standardDeviationMicrosecondsPerInvocation="664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="61" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="894" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="61" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="938" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="11" invocations="61" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="2537" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="11" invocations="61" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="6957" standardDeviationMicrosecondsPerInvocation="879"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

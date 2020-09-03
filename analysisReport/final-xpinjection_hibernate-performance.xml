@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596955162000" analysisTimestamp="1596955163860" release="">
+  <Project projectName="repositorios/xpinjection_hibernate-performance">
+    <Jar>repositorios/xpinjection_hibernate-performance</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="4">
+    <MissingClass>com.p6spy.engine.spy.appender.MessageFormattingStrategy</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.internal.BasicFormatterImpl</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.internal.Formatter</MissingClass>
+    <MissingClass>org.hibernate.resource.jdbc.spi.StatementInspector</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 06:39:22 +0000" total_classes="11" referenced_classes="63" total_bugs="0" total_size="159" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.13" clock_seconds="1.53" peak_mbytes="127.12" alloc_mbytes="3540.00" gc_seconds="0.11">
+    <PackageStats package="com.jeeconf.hibernate.performancetuning" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.DbConfig" sourceFile="DbConfig.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jeeconf.hibernate.performancetuning.sqlformatter" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqlformatter.SimpleFormatter" sourceFile="SimpleFormatter.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jeeconf.hibernate.performancetuning.sqltracker" total_bugs="0" total_types="9" total_size="145">
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.AssertSqlCount" sourceFile="AssertSqlCount.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryCountInfo" sourceFile="QueryCountInfo.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryCountInfoHandler" sourceFile="QueryCountInfoHandler.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryCountInfoHandler$1" sourceFile="QueryCountInfoHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryCountInfoHolder" sourceFile="QueryCountInfoHolder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryHandler" sourceFile="QueryHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.QueryType" sourceFile="QueryType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.SqlCountMismatchException" sourceFile="SqlCountMismatchException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.jeeconf.hibernate.performancetuning.sqltracker.StatementInspectorImpl" sourceFile="StatementInspectorImpl.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="238" invocations="537" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="24855" standardDeviationMicrosecondsPerInvocation="1439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="101" invocations="63" avgMicrosecondsPerInvocation="1610" maxMicrosecondsPerInvocation="16435" standardDeviationMicrosecondsPerInvocation="3301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="90" invocations="193" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="23298" standardDeviationMicrosecondsPerInvocation="1758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="64" invocations="63" avgMicrosecondsPerInvocation="1027" maxMicrosecondsPerInvocation="8822" standardDeviationMicrosecondsPerInvocation="1840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="541" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="3071" standardDeviationMicrosecondsPerInvocation="137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="37" invocations="96" avgMicrosecondsPerInvocation="391" maxMicrosecondsPerInvocation="14738" standardDeviationMicrosecondsPerInvocation="1563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="31" invocations="488" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="1069" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="30" invocations="63" avgMicrosecondsPerInvocation="478" maxMicrosecondsPerInvocation="6618" standardDeviationMicrosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="28" invocations="43" avgMicrosecondsPerInvocation="670" maxMicrosecondsPerInvocation="23531" standardDeviationMicrosecondsPerInvocation="3530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="63" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="5178" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="63" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="8046" standardDeviationMicrosecondsPerInvocation="1171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="21" invocations="43" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="10163" standardDeviationMicrosecondsPerInvocation="1508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="19" invocations="63" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="2293" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="19" invocations="42" avgMicrosecondsPerInvocation="472" maxMicrosecondsPerInvocation="5774" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="19" invocations="42" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="8267" standardDeviationMicrosecondsPerInvocation="1254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="19" invocations="42" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="7834" standardDeviationMicrosecondsPerInvocation="1196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="18" invocations="42" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="2521" standardDeviationMicrosecondsPerInvocation="535"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

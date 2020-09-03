@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597091152000" analysisTimestamp="1597091154035" release="">
+  <Project projectName="repositorios/agoncal_agoncal-application-cdbookstore">
+    <Jar>repositorios/agoncal_agoncal-application-cdbookstore</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.model.Book">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.Book" start="47" end="197" sourcefile="Book.java" sourcepath="org/agoncal/application/cdbookstore/model/Book.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.cdbookstore.model.Book" name="category" signature="Lorg/agoncal/application/cdbookstore/model/Category;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.Book" sourcefile="Book.java" sourcepath="org/agoncal/application/cdbookstore/model/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.model.Book">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.Book" start="47" end="197" sourcefile="Book.java" sourcepath="org/agoncal/application/cdbookstore/model/Book.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.cdbookstore.model.Book" name="publisher" signature="Lorg/agoncal/application/cdbookstore/model/Publisher;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.Book" sourcefile="Book.java" sourcepath="org/agoncal/application/cdbookstore/model/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.model.CD">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.CD" start="17" end="129" sourcefile="CD.java" sourcepath="org/agoncal/application/cdbookstore/model/CD.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.cdbookstore.model.CD" name="genre" signature="Lorg/agoncal/application/cdbookstore/model/Genre;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.CD" sourcefile="CD.java" sourcepath="org/agoncal/application/cdbookstore/model/CD.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.model.CD">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.CD" start="17" end="129" sourcefile="CD.java" sourcepath="org/agoncal/application/cdbookstore/model/CD.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.cdbookstore.model.CD" name="label" signature="Lorg/agoncal/application/cdbookstore/model/Label;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.model.CD" sourcefile="CD.java" sourcepath="org/agoncal/application/cdbookstore/model/CD.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.rest.BookEndpoint">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="25" end="135" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+    </Class>
+    <Method classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" name="findById" signature="(Ljava/lang/Long;)Ljavax/ws/rs/core/Response;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="77" end="91" startBytecode="0" endBytecode="250" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+    </Method>
+    <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="77" end="77" startBytecode="4" endBytecode="4" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.rest.BookEndpoint">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="25" end="135" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+    </Class>
+    <Method classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" name="listAll" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="98" end="109" startBytecode="0" endBytecode="207" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+    </Method>
+    <SourceLine classname="org.agoncal.application.cdbookstore.rest.BookEndpoint" start="98" end="98" startBytecode="4" endBytecode="4" sourcefile="BookEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/BookEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.rest.CDEndpoint">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="22" end="118" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+    </Class>
+    <Method classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" name="findById" signature="(Ljava/lang/Long;)Ljavax/ws/rs/core/Response;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="60" end="74" startBytecode="0" endBytecode="250" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+    </Method>
+    <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="60" end="60" startBytecode="4" endBytecode="4" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.cdbookstore.rest.CDEndpoint">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="22" end="118" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+    </Class>
+    <Method classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" name="listAll" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="81" end="92" startBytecode="0" endBytecode="207" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+    </Method>
+    <SourceLine classname="org.agoncal.application.cdbookstore.rest.CDEndpoint" start="81" end="81" startBytecode="4" endBytecode="4" sourcefile="CDEndpoint.java" sourcepath="org/agoncal/application/cdbookstore/rest/CDEndpoint.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.invoice.model.Invoice">
+      <SourceLine classname="org.agoncal.application.invoice.model.Invoice" start="88" end="328" sourcefile="Invoice.java" sourcepath="org/agoncal/application/invoice/model/Invoice.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.invoice.model.Invoice" name="invoiceLines" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.invoice.model.Invoice" sourcefile="Invoice.java" sourcepath="org/agoncal/application/invoice/model/Invoice.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="48">
+    <MissingClass>com.thedeanda.lorem.LoremIpsum</MissingClass>
+    <MissingClass>javax.batch.api.chunk.AbstractItemReader</MissingClass>
+    <MissingClass>javax.batch.api.chunk.AbstractItemWriter</MissingClass>
+    <MissingClass>javax.batch.api.chunk.ItemProcessor</MissingClass>
+    <MissingClass>javax.batch.operations.JobOperator</MissingClass>
+    <MissingClass>javax.batch.runtime.BatchRuntime</MissingClass>
+    <MissingClass>javax.ejb.SessionContext</MissingClass>
+    <MissingClass>javax.enterprise.context.Conversation</MissingClass>
+    <MissingClass>javax.enterprise.context.spi.AlterableContext</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeanManager</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.InjectionPoint</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.interceptor.InvocationContext</MissingClass>
+    <MissingClass>javax.jms.JMSContext</MissingClass>
+    <MissingClass>javax.jms.JMSProducer</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.MessageListener</MissingClass>
+    <MissingClass>javax.jms.Queue</MissingClass>
+    <MissingClass>javax.json.Json</MissingClass>
+    <MissingClass>javax.json.JsonArray</MissingClass>
+    <MissingClass>javax.json.JsonObject</MissingClass>
+    <MissingClass>javax.json.JsonReader</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.OptimisticLockException</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.websocket.RemoteEndpoint$Basic</MissingClass>
+    <MissingClass>javax.websocket.Session</MissingClass>
+    <MissingClass>javax.ws.rs.client.Client</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.client.Invocation$Builder</MissingClass>
+    <MissingClass>javax.ws.rs.client.WebTarget</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:25:52 +0000" total_classes="95" referenced_classes="204" total_bugs="9" total_size="3696" num_packages="16" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.81" clock_seconds="3.96" peak_mbytes="333.78" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="8" priority_1="1">
+    <PackageStats package="org.agoncal.application.cdbookstore.constraints" total_bugs="0" total_types="4" total_size="12">
+      <ClassStats class="org.agoncal.application.cdbookstore.constraints.Email" sourceFile="Email.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.constraints.Email$List" sourceFile="Email.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.constraints.NotEmpty" sourceFile="NotEmpty.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.constraints.NotEmpty$List" sourceFile="NotEmpty.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.model" total_bugs="4" total_types="21" total_size="829" priority_2="4">
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Address" sourceFile="Address.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Artist" sourceFile="Artist.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Author" sourceFile="Author.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Book" sourceFile="Book.java" interface="false" size="106" bugs="2" priority_2="2"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.CD" sourceFile="CD.java" interface="false" size="67" bugs="2" priority_2="2"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Category" sourceFile="Category.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Country" sourceFile="Country.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.CreditCard" sourceFile="CreditCard.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.CreditCardType" sourceFile="CreditCardType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Genre" sourceFile="Genre.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Item" sourceFile="Item.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.JPASchemaGen" sourceFile="JPASchemaGen.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Label" sourceFile="Label.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Language" sourceFile="Language.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.LanguageConverter" sourceFile="LanguageConverter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.LanguageConverter$1" sourceFile="LanguageConverter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Musician" sourceFile="Musician.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.Publisher" sourceFile="Publisher.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.User" sourceFile="User.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.UserRole" sourceFile="UserRole.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.model.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.rest" total_bugs="4" total_types="5" total_size="127" priority_2="4">
+      <ClassStats class="org.agoncal.application.cdbookstore.rest.BookEndpoint" sourceFile="BookEndpoint.java" interface="false" size="55" bugs="2" priority_2="2"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.rest.Books" sourceFile="Books.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.rest.CDEndpoint" sourceFile="CDEndpoint.java" interface="false" size="51" bugs="2" priority_2="2"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.rest.CDs" sourceFile="CDs.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.rest.RestApplication" sourceFile="RestApplication.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.util" total_bugs="0" total_types="11" total_size="54">
+      <ClassStats class="org.agoncal.application.cdbookstore.util.AuditInterceptor" sourceFile="AuditInterceptor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.Auditable" sourceFile="Auditable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.EightDigits" sourceFile="EightDigits.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.IsbnGenerator" sourceFile="IsbnGenerator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.IssnGenerator" sourceFile="IssnGenerator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.Loggable" sourceFile="Loggable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.LoggingInterceptor" sourceFile="LoggingInterceptor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.NumberGenerator" sourceFile="NumberGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.PasswordUtils" sourceFile="PasswordUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.ResourceProducer" sourceFile="ResourceProducer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.util.ThirteenDigits" sourceFile="ThirteenDigits.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.view.account" total_bugs="0" total_types="1" total_size="158">
+      <ClassStats class="org.agoncal.application.cdbookstore.view.account.AccountBean" sourceFile="AccountBean.java" interface="false" size="158" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.view.admin" total_bugs="0" total_types="22" total_size="1572">
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.AuthorBean" sourceFile="AuthorBean.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.AuthorBean$1" sourceFile="AuthorBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.BookBean" sourceFile="BookBean.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.BookBean$1" sourceFile="BookBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CDBean" sourceFile="CDBean.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CDBean$1" sourceFile="CDBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CategoryBean" sourceFile="CategoryBean.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CategoryBean$1" sourceFile="CategoryBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CountryBean" sourceFile="CountryBean.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.CountryBean$1" sourceFile="CountryBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.GenreBean" sourceFile="GenreBean.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.GenreBean$1" sourceFile="GenreBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.ItemBean" sourceFile="ItemBean.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.ItemBean$1" sourceFile="ItemBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.LabelBean" sourceFile="LabelBean.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.LabelBean$1" sourceFile="LabelBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.MusicianBean" sourceFile="MusicianBean.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.MusicianBean$1" sourceFile="MusicianBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.PublisherBean" sourceFile="PublisherBean.java" interface="false" size="124" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.PublisherBean$1" sourceFile="PublisherBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.UserBean" sourceFile="UserBean.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.admin.UserBean$1" sourceFile="UserBean.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.view.shopping" total_bugs="0" total_types="4" total_size="213">
+      <ClassStats class="org.agoncal.application.cdbookstore.view.shopping.CatalogBean" sourceFile="CatalogBean.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.shopping.RatedItemsBean" sourceFile="RatedItemsBean.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.shopping.ShoppingCartBean" sourceFile="ShoppingCartBean.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.shopping.ShoppingCartItem" sourceFile="ShoppingCartItem.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.view.util" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="org.agoncal.application.cdbookstore.view.util.CatchException" sourceFile="CatchException.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.util.CatchExceptionInterceptor" sourceFile="CatchExceptionInterceptor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.agoncal.application.cdbookstore.view.util.ViewUtils" sourceFile="ViewUtils.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.cdbookstore.websocket" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="org.agoncal.application.cdbookstore.websocket.ChatEndpoint" sourceFile="ChatEndpoint.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.batch" total_bugs="0" total_types="6" total_size="103">
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceJobServlet" sourceFile="InvoiceJobServlet.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceProcessor" sourceFile="InvoiceProcessor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceReader" sourceFile="InvoiceReader.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceSummaries" sourceFile="InvoiceSummaries.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceSummary" sourceFile="InvoiceSummary.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.batch.InvoiceWriter" sourceFile="InvoiceWriter.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.model" total_bugs="1" total_types="2" total_size="228" priority_1="1">
+      <ClassStats class="org.agoncal.application.invoice.model.Invoice" sourceFile="Invoice.java" interface="false" size="177" bugs="1" priority_1="1"/>
+      <ClassStats class="org.agoncal.application.invoice.model.InvoiceLine" sourceFile="InvoiceLine.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.service" total_bugs="0" total_types="2" total_size="59">
+      <ClassStats class="org.agoncal.application.invoice.service.InvoiceMDB" sourceFile="InvoiceMDB.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.service.InvoiceService" sourceFile="InvoiceService.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.util" total_bugs="0" total_types="4" total_size="17">
+      <ClassStats class="org.agoncal.application.invoice.util.Discount" sourceFile="Discount.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.util.RateProducer" sourceFile="RateProducer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.util.ResourceProducer" sourceFile="ResourceProducer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.util.Vat" sourceFile="Vat.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.view" total_bugs="0" total_types="3" total_size="182">
+      <ClassStats class="org.agoncal.application.invoice.view.InvoiceBean" sourceFile="InvoiceBean.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.view.InvoiceBean$1" sourceFile="InvoiceBean.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.invoice.view.ViewUtils" sourceFile="ViewUtils.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.invoice.web" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.agoncal.application.invoice.web.InvoiceServlet" sourceFile="InvoiceServlet.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.toprated" total_bugs="0" total_types="5" total_size="61">
+      <ClassStats class="org.agoncal.application.toprated.RatedItem" sourceFile="RatedItem.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.agoncal.application.toprated.RatedItems" sourceFile="RatedItems.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.agoncal.application.toprated.ResourceProducer" sourceFile="ResourceProducer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.agoncal.application.toprated.RestApplication" sourceFile="RestApplication.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.agoncal.application.toprated.TopRatedItemEndpoint" sourceFile="TopRatedItemEndpoint.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="299" invocations="940" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="30815" standardDeviationMicrosecondsPerInvocation="1200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="198" invocations="773" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="16167" standardDeviationMicrosecondsPerInvocation="1090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="180" invocations="771" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="12790" standardDeviationMicrosecondsPerInvocation="770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="163" invocations="773" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="22272" standardDeviationMicrosecondsPerInvocation="937"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="149" invocations="775" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="17095" standardDeviationMicrosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="131" invocations="773" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="15874" standardDeviationMicrosecondsPerInvocation="868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="120" invocations="775" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="7565" standardDeviationMicrosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="119" invocations="204" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="6174" standardDeviationMicrosecondsPerInvocation="1000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="119" invocations="204" avgMicrosecondsPerInvocation="584" maxMicrosecondsPerInvocation="8868" standardDeviationMicrosecondsPerInvocation="1192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="83" invocations="1076" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="6538" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="82" invocations="356" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="3494" standardDeviationMicrosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="74" invocations="949" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="3345" standardDeviationMicrosecondsPerInvocation="118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="58" invocations="760" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="5112" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="57" invocations="95" avgMicrosecondsPerInvocation="608" maxMicrosecondsPerInvocation="11229" standardDeviationMicrosecondsPerInvocation="1450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="56" invocations="782" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="24061" standardDeviationMicrosecondsPerInvocation="860"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="56" invocations="288" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="15529" standardDeviationMicrosecondsPerInvocation="974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="49" invocations="204" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="4812" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="45" invocations="204" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="25641" standardDeviationMicrosecondsPerInvocation="1795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="43" invocations="204" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="2148" standardDeviationMicrosecondsPerInvocation="375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="40" invocations="95" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="3074" standardDeviationMicrosecondsPerInvocation="574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="37" invocations="95" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="15947" standardDeviationMicrosecondsPerInvocation="1648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="36" invocations="10693" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="971" standardDeviationMicrosecondsPerInvocation="15"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="35" invocations="95" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="6546" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="34" invocations="773" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1723" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizeOnClassLiteralNotGetClass" totalMilliseconds="33" invocations="95" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="24853" standardDeviationMicrosecondsPerInvocation="2529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="31" invocations="204" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="4058" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="204" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2164" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="29" invocations="95" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="16689" standardDeviationMicrosecondsPerInvocation="1695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="204" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="8810" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="27" invocations="95" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="2433" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="26" invocations="95" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="1497" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="25" invocations="95" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="16653" standardDeviationMicrosecondsPerInvocation="1692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="25" invocations="771" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="1239" standardDeviationMicrosecondsPerInvocation="75"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="22" invocations="95" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="6390" standardDeviationMicrosecondsPerInvocation="662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="22" invocations="95" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="1362" standardDeviationMicrosecondsPerInvocation="316"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

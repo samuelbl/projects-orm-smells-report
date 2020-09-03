@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596958095000" analysisTimestamp="1596958096567" release="">
+  <Project projectName="repositorios/JordanEC_RestApiSpringBootExample">
+    <Jar>repositorios/JordanEC_RestApiSpringBootExample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.jordanec.restbootexample.repository.PlayerRepositoryImpl">
+      <SourceLine classname="com.jordanec.restbootexample.repository.PlayerRepositoryImpl" start="9" end="34" sourcefile="PlayerRepositoryImpl.java" sourcepath="com/jordanec/restbootexample/repository/PlayerRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.jordanec.restbootexample.repository.PlayerRepositoryImpl" name="getOlderThan" signature="(I)Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.jordanec.restbootexample.repository.PlayerRepositoryImpl" start="31" end="31" startBytecode="0" endBytecode="95" sourcefile="PlayerRepositoryImpl.java" sourcepath="com/jordanec/restbootexample/repository/PlayerRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.jordanec.restbootexample.repository.PlayerRepositoryImpl" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="PlayerRepositoryImpl.java" sourcepath="com/jordanec/restbootexample/repository/PlayerRepositoryImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module$Feature</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.squareup.okhttp.FormEncodingBuilder</MissingClass>
+    <MissingClass>com.squareup.okhttp.Interceptor</MissingClass>
+    <MissingClass>com.squareup.okhttp.Interceptor$Chain</MissingClass>
+    <MissingClass>com.squareup.okhttp.OkHttpClient</MissingClass>
+    <MissingClass>com.squareup.okhttp.Request</MissingClass>
+    <MissingClass>com.squareup.okhttp.Request$Builder</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>retrofit.JacksonConverterFactory</MissingClass>
+    <MissingClass>retrofit.Retrofit</MissingClass>
+    <MissingClass>retrofit.Retrofit$Builder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 07:28:15 +0000" total_classes="77" referenced_classes="184" total_bugs="1" total_size="1932" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.87" clock_seconds="3.29" peak_mbytes="337.22" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="1">
+    <PackageStats package="com.jordanec.restbootexample" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="com.jordanec.restbootexample.RestbootexampleApplication" sourceFile="RestbootexampleApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.WebConfiguration" sourceFile="WebConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.WebConfiguration$WebMvcConfiguration" sourceFile="WebConfiguration.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jordanec.restbootexample.api" total_bugs="0" total_types="6" total_size="198">
+      <ClassStats class="com.jordanec.restbootexample.api.ConfederationController" sourceFile="ConfederationController.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.api.CountryController" sourceFile="CountryController.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.api.PlayerController" sourceFile="PlayerController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.api.SponsorController" sourceFile="SponsorController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.api.StadiumController" sourceFile="StadiumController.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.api.TeamController" sourceFile="TeamController.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jordanec.restbootexample.client" total_bugs="0" total_types="11" total_size="139">
+      <ClassStats class="com.jordanec.restbootexample.client.ConfederationApi" sourceFile="ConfederationApi.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.CountryApi" sourceFile="CountryApi.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.PlayerApi" sourceFile="PlayerApi.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.ServiceGenerator" sourceFile="ServiceGenerator.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.ServiceGenerator$1" sourceFile="ServiceGenerator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.ServiceGenerator$2" sourceFile="ServiceGenerator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.ServiceGenerator$3" sourceFile="ServiceGenerator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.SponsorApi" sourceFile="SponsorApi.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.StadiumApi" sourceFile="StadiumApi.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.TeamApi" sourceFile="TeamApi.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.client.TokenApi" sourceFile="TokenApi.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jordanec.restbootexample.model" total_bugs="0" total_types="7" total_size="439">
+      <ClassStats class="com.jordanec.restbootexample.model.Confederation" sourceFile="Confederation.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Country" sourceFile="Country.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Player" sourceFile="Player.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Sponsor" sourceFile="Sponsor.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Stadium" sourceFile="Stadium.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Status" sourceFile="Status.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.model.Team" sourceFile="Team.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jordanec.restbootexample.repository" total_bugs="1" total_types="13" total_size="132" priority_2="1">
+      <ClassStats class="com.jordanec.restbootexample.repository.ConfederationRepository" sourceFile="ConfederationRepository.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.ConfederationRepositoryImpl" sourceFile="ConfederationRepositoryImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.CountryRepository" sourceFile="CountryRepository.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.CountryRepositoryImpl" sourceFile="CountryRepositoryImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.EntityRepositoryCustom" sourceFile="EntityRepositoryCustom.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.PlayerRepository" sourceFile="PlayerRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.PlayerRepositoryImpl" sourceFile="PlayerRepositoryImpl.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.SponsorRepository" sourceFile="SponsorRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.SponsorRepositoryImpl" sourceFile="SponsorRepositoryImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.StadiumRepository" sourceFile="StadiumRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.StadiumRepositoryImpl" sourceFile="StadiumRepositoryImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.TeamRepository" sourceFile="TeamRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jordanec.restbootexample.repository.TeamRepositoryImpl" sourceFile="TeamRepositoryImpl.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jordanec.restbootexample.util" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.jordanec.restbootexample.util.Constants" sourceFile="Constants.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="444">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="24" total_size="528">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="257" invocations="1039" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="12585" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="185" invocations="184" avgMicrosecondsPerInvocation="1006" maxMicrosecondsPerInvocation="30085" standardDeviationMicrosecondsPerInvocation="2634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="128" invocations="184" avgMicrosecondsPerInvocation="696" maxMicrosecondsPerInvocation="5639" standardDeviationMicrosecondsPerInvocation="1072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="117" invocations="421" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="8297" standardDeviationMicrosecondsPerInvocation="679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="111" invocations="863" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="2705" standardDeviationMicrosecondsPerInvocation="210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="111" invocations="425" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="7697" standardDeviationMicrosecondsPerInvocation="723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="103" invocations="425" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="9254" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="102" invocations="404" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="5362" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="90" invocations="420" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="7231" standardDeviationMicrosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="81" invocations="421" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="8059" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="81" invocations="1046" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="485" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="60" invocations="285" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="4326" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="52" invocations="505" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="23157" standardDeviationMicrosecondsPerInvocation="1029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="52" invocations="184" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="3060" standardDeviationMicrosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="51" invocations="259" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="13018" standardDeviationMicrosecondsPerInvocation="837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="46" invocations="184" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="12731" standardDeviationMicrosecondsPerInvocation="1072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="918" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="990" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="37" invocations="184" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="4713" standardDeviationMicrosecondsPerInvocation="504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="35" invocations="184" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="2108" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="34" invocations="77" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="8352" standardDeviationMicrosecondsPerInvocation="1412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="33" invocations="184" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="1915" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="33" invocations="184" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="2288" standardDeviationMicrosecondsPerInvocation="337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="32" invocations="184" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="9300" standardDeviationMicrosecondsPerInvocation="870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="28" invocations="421" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="1817" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="6356" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1216" standardDeviationMicrosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="25" invocations="51" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="3340" standardDeviationMicrosecondsPerInvocation="842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="77" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="1769" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="21" invocations="77" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="1750" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="20" invocations="30" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="2489" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="20" invocations="184" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="1321" standardDeviationMicrosecondsPerInvocation="198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="77" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="4420" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="19" invocations="184" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="2222" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="19" invocations="77" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="1782" standardDeviationMicrosecondsPerInvocation="379"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

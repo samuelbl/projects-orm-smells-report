@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597093464000" analysisTimestamp="1597093465890" release="">
+  <Project projectName="repositorios/vladmihalcea_vladmihalcea.wordpress.com">
+    <Jar>repositorios/vladmihalcea_vladmihalcea.wordpress.com</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.bag.Child">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.bag.Child" start="33" end="54" sourcefile="Child.java" sourcepath="com/vladmihalcea/hibernate/model/bag/Child.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.bag.Child" name="parent" signature="Lcom/vladmihalcea/hibernate/model/bag/Parent;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.bag.Child" sourcefile="Child.java" sourcepath="com/vladmihalcea/hibernate/model/bag/Child.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.baglist.BagBranch">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagBranch" start="34" end="121" sourcefile="BagBranch.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagBranch.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.baglist.BagBranch" name="tree" signature="Lcom/vladmihalcea/hibernate/model/baglist/BagTree;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagBranch" sourcefile="BagBranch.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagBranch.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.baglist.BagLeaf">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagLeaf" start="34" end="101" sourcefile="BagLeaf.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagLeaf.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.baglist.BagLeaf" name="branch" signature="Lcom/vladmihalcea/hibernate/model/baglist/BagBranch;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagLeaf" sourcefile="BagLeaf.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagLeaf.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.baglist.BagTree">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagTree" start="32" end="95" sourcefile="BagTree.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagTree.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.baglist.BagTree" name="forest" signature="Lcom/vladmihalcea/hibernate/model/baglist/BagForest;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.baglist.BagTree" sourcefile="BagTree.java" sourcepath="com/vladmihalcea/hibernate/model/baglist/BagTree.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.eagerset.SetChild">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.eagerset.SetChild" start="33" end="54" sourcefile="SetChild.java" sourcepath="com/vladmihalcea/hibernate/model/eagerset/SetChild.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.eagerset.SetChild" name="parent" signature="Lcom/vladmihalcea/hibernate/model/eagerset/SetParent;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.eagerset.SetChild" sourcefile="SetChild.java" sourcepath="com/vladmihalcea/hibernate/model/eagerset/SetChild.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.eagerset.SetParent">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.eagerset.SetParent" start="30" end="56" sourcefile="SetParent.java" sourcepath="com/vladmihalcea/hibernate/model/eagerset/SetParent.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.eagerset.SetParent" name="children" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.eagerset.SetParent" sourcefile="SetParent.java" sourcepath="com/vladmihalcea/hibernate/model/eagerset/SetParent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.fetch.FetchChild">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.fetch.FetchChild" start="19" end="40" sourcefile="FetchChild.java" sourcepath="com/vladmihalcea/hibernate/model/fetch/FetchChild.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.fetch.FetchChild" name="parent" signature="Lcom/vladmihalcea/hibernate/model/fetch/FetchParent;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.fetch.FetchChild" sourcefile="FetchChild.java" sourcepath="com/vladmihalcea/hibernate/model/fetch/FetchChild.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.fetch.FetchParent">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.fetch.FetchParent" start="13" end="35" sourcefile="FetchParent.java" sourcepath="com/vladmihalcea/hibernate/model/fetch/FetchParent.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.fetch.FetchParent" name="children" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.fetch.FetchParent" sourcefile="FetchParent.java" sourcepath="com/vladmihalcea/hibernate/model/fetch/FetchParent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.indexlist.Branch">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Branch" start="29" end="77" sourcefile="Branch.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Branch.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.indexlist.Branch" name="tree" signature="Lcom/vladmihalcea/hibernate/model/indexlist/Tree;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Branch" sourcefile="Branch.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Branch.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.indexlist.Leaf">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Leaf" start="27" end="57" sourcefile="Leaf.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Leaf.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.indexlist.Leaf" name="branch" signature="Lcom/vladmihalcea/hibernate/model/indexlist/Branch;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Leaf" sourcefile="Leaf.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Leaf.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.indexlist.Tree">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Tree" start="29" end="77" sourcefile="Tree.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Tree.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.indexlist.Tree" name="forest" signature="Lcom/vladmihalcea/hibernate/model/indexlist/Forest;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.indexlist.Tree" sourcefile="Tree.java" sourcepath="com/vladmihalcea/hibernate/model/indexlist/Tree.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.linkedset.LinkedChild">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.linkedset.LinkedChild" start="33" end="54" sourcefile="LinkedChild.java" sourcepath="com/vladmihalcea/hibernate/model/linkedset/LinkedChild.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.linkedset.LinkedChild" name="parent" signature="Lcom/vladmihalcea/hibernate/model/linkedset/LinkedParent;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.linkedset.LinkedChild" sourcefile="LinkedChild.java" sourcepath="com/vladmihalcea/hibernate/model/linkedset/LinkedChild.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.store.Product">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.Product" start="54" end="168" sourcefile="Product.java" sourcepath="com/vladmihalcea/hibernate/model/store/Product.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.store.Product" name="company" signature="Lcom/vladmihalcea/hibernate/model/store/Company;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.Product" sourcefile="Product.java" sourcepath="com/vladmihalcea/hibernate/model/store/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.store.SubVersion">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.SubVersion" start="26" end="83" sourcefile="SubVersion.java" sourcepath="com/vladmihalcea/hibernate/model/store/SubVersion.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.store.SubVersion" name="version" signature="Lcom/vladmihalcea/hibernate/model/store/Version;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.SubVersion" sourcefile="SubVersion.java" sourcepath="com/vladmihalcea/hibernate/model/store/SubVersion.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.store.Version">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.Version" start="28" end="110" sourcefile="Version.java" sourcepath="com/vladmihalcea/hibernate/model/store/Version.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.store.Version" name="image" signature="Lcom/vladmihalcea/hibernate/model/store/Image;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.Version" sourcefile="Version.java" sourcepath="com/vladmihalcea/hibernate/model/store/Version.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo" start="26" end="85" sourcefile="WarehouseProductInfo.java" sourcepath="com/vladmihalcea/hibernate/model/store/WarehouseProductInfo.java"/>
+    </Class>
+    <Field classname="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo" name="product" signature="Lcom/vladmihalcea/hibernate/model/store/Product;" isStatic="false">
+      <SourceLine classname="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo" sourcefile="WarehouseProductInfo.java" sourcepath="com/vladmihalcea/hibernate/model/store/WarehouseProductInfo.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringStyle</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.FindAndModifyOptions</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.MongoTemplate</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Criteria</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Query</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Update</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.repository.MongoRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:04:24 +0000" total_classes="81" referenced_classes="136" total_bugs="16" total_size="1326" num_packages="18" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.88" clock_seconds="2.55" peak_mbytes="196.20" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="14" priority_1="2">
+    <PackageStats package="com.vladmihalcea.cache" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="com.vladmihalcea.cache.InvocationContext" sourceFile="InvocationContext.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.cache.Memoize" sourceFile="Memoize.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.cache.MemoizerAspect" sourceFile="MemoizerAspect.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.cache.RequestScopeCache" sourceFile="RequestScopeCache.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.customerlock" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.vladmihalcea.customerlock.CallableException" sourceFile="CallableException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.customerlock.CustomerLockedExecution" sourceFile="CustomerLockedExecution.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.bag" total_bugs="1" total_types="4" total_size="52" priority_2="1">
+      <ClassStats class="com.vladmihalcea.hibernate.model.bag.Child" sourceFile="Child.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.bag.Child_" sourceFile="Child_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.bag.Parent" sourceFile="Parent.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.bag.Parent_" sourceFile="Parent_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.baglist" total_bugs="3" total_types="12" total_size="202" priority_2="3">
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagBranch" sourceFile="BagBranch.java" interface="false" size="49" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagBranch$1" sourceFile="BagBranch.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagBranch_" sourceFile="BagBranch_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagForest" sourceFile="BagForest.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagForest$1" sourceFile="BagForest.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagForest_" sourceFile="BagForest_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagLeaf" sourceFile="BagLeaf.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagLeaf$1" sourceFile="BagLeaf.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagLeaf_" sourceFile="BagLeaf_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagTree" sourceFile="BagTree.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagTree$1" sourceFile="BagTree.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.baglist.BagTree_" sourceFile="BagTree_.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.cache" total_bugs="0" total_types="6" total_size="79">
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Change" sourceFile="Change.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Change_" sourceFile="Change_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Commit" sourceFile="Commit.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Commit_" sourceFile="Commit_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Repository" sourceFile="Repository.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.cache.Repository_" sourceFile="Repository_.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.component" total_bugs="0" total_types="4" total_size="45">
+      <ClassStats class="com.vladmihalcea.hibernate.model.component.Comment" sourceFile="Comment.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.component.Comment_" sourceFile="Comment_.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.component.Post" sourceFile="Post.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.component.Post_" sourceFile="Post_.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.eagerset" total_bugs="2" total_types="4" total_size="52" priority_2="1" priority_1="1">
+      <ClassStats class="com.vladmihalcea.hibernate.model.eagerset.SetChild" sourceFile="SetChild.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.eagerset.SetChild_" sourceFile="SetChild_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.eagerset.SetParent" sourceFile="SetParent.java" interface="false" size="22" bugs="1" priority_1="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.eagerset.SetParent_" sourceFile="SetParent_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.fetch" total_bugs="2" total_types="4" total_size="45" priority_2="1" priority_1="1">
+      <ClassStats class="com.vladmihalcea.hibernate.model.fetch.FetchChild" sourceFile="FetchChild.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.fetch.FetchChild_" sourceFile="FetchChild_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.fetch.FetchParent" sourceFile="FetchParent.java" interface="false" size="15" bugs="1" priority_1="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.fetch.FetchParent_" sourceFile="FetchParent_.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.indexlist" total_bugs="3" total_types="8" total_size="118" priority_2="3">
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Branch" sourceFile="Branch.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Branch_" sourceFile="Branch_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Forest" sourceFile="Forest.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Forest_" sourceFile="Forest_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Leaf" sourceFile="Leaf.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Leaf_" sourceFile="Leaf_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Tree" sourceFile="Tree.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.indexlist.Tree_" sourceFile="Tree_.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.linkedset" total_bugs="1" total_types="4" total_size="49" priority_2="1">
+      <ClassStats class="com.vladmihalcea.hibernate.model.linkedset.LinkedChild" sourceFile="LinkedChild.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.linkedset.LinkedChild_" sourceFile="LinkedChild_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.linkedset.LinkedParent" sourceFile="LinkedParent.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.linkedset.LinkedParent_" sourceFile="LinkedParent_.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.store" total_bugs="4" total_types="15" total_size="390" priority_2="4">
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Company" sourceFile="Company.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Company_" sourceFile="Company_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Image" sourceFile="Image.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.ImageProductDTO" sourceFile="ImageProductDTO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Image_" sourceFile="Image_.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Importer" sourceFile="Importer.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Importer_" sourceFile="Importer_.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Product" sourceFile="Product.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Product_" sourceFile="Product_.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.SubVersion" sourceFile="SubVersion.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.SubVersion_" sourceFile="SubVersion_.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Version" sourceFile="Version.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.Version_" sourceFile="Version_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo" sourceFile="WarehouseProductInfo.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.store.WarehouseProductInfo_" sourceFile="WarehouseProductInfo_.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.hibernate.model.util" total_bugs="0" total_types="5" total_size="96">
+      <ClassStats class="com.vladmihalcea.hibernate.model.util.ClassId" sourceFile="ClassId.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.util.EntityContext" sourceFile="EntityContext.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.util.EntityGraphBuilder" sourceFile="EntityGraphBuilder.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.util.EntityVisitor" sourceFile="EntityVisitor.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.hibernate.model.util.Identifiable" sourceFile="Identifiable.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.converter" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="com.vladmihalcea.mongo.converter.BigDecimalToDoubleConverter" sourceFile="BigDecimalToDoubleConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.mongo.converter.DoubleToBigDecimalConverter" sourceFile="DoubleToBigDecimalConverter.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.dao" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="com.vladmihalcea.mongo.dao.ProductCustomRepository" sourceFile="ProductCustomRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.mongo.dao.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.dao.impl" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="com.vladmihalcea.mongo.dao.impl.ProductRepositoryImpl" sourceFile="ProductRepositoryImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.vladmihalcea.mongo.dao.impl.ProductRepositoryImpl$Properties" sourceFile="ProductRepositoryImpl.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.model" total_bugs="0" total_types="1" total_size="55">
+      <ClassStats class="com.vladmihalcea.mongo.model.Product" sourceFile="Product.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.vladmihalcea.mongo.service.ProductService" sourceFile="ProductService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmihalcea.mongo.service.impl" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.vladmihalcea.mongo.service.impl.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="246" invocations="702" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="12607" standardDeviationMicrosecondsPerInvocation="857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="174" invocations="136" avgMicrosecondsPerInvocation="1284" maxMicrosecondsPerInvocation="27504" standardDeviationMicrosecondsPerInvocation="3844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="124" invocations="635" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="8919" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="82" invocations="136" avgMicrosecondsPerInvocation="607" maxMicrosecondsPerInvocation="18486" standardDeviationMicrosecondsPerInvocation="1915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="706" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="481" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="58" invocations="341" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="7646" standardDeviationMicrosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="55" invocations="136" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="6474" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="55" invocations="341" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="9591" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="53" invocations="341" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="8210" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="51" invocations="330" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2257" standardDeviationMicrosecondsPerInvocation="261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="47" invocations="344" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="25173" standardDeviationMicrosecondsPerInvocation="1353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="341" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="8784" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="42" invocations="196" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="14700" standardDeviationMicrosecondsPerInvocation="1089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="136" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="5563" standardDeviationMicrosecondsPerInvocation="790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="136" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="8399" standardDeviationMicrosecondsPerInvocation="1037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="341" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="2529" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="602" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="1611" standardDeviationMicrosecondsPerInvocation="123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="35" invocations="136" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="7074" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="136" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="5256" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="29" invocations="136" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="5222" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="29" invocations="136" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="14744" standardDeviationMicrosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="183" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="1950" standardDeviationMicrosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="81" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="2263" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="22" invocations="2198" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1652" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="18" invocations="136" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="4284" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="18" invocations="81" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="2586" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="136" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="4994" standardDeviationMicrosecondsPerInvocation="478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="81" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="5414" standardDeviationMicrosecondsPerInvocation="600"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

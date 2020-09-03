@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597098632000" analysisTimestamp="1597098633695" release="">
+  <Project projectName="repositorios/jopss_exemplo-oauth2">
+    <Jar>repositorios/jopss_exemplo-oauth2</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.jopss.exemploauth.modelos.SegurancaAPI">
+      <SourceLine classname="com.jopss.exemploauth.modelos.SegurancaAPI" start="25" end="73" sourcefile="SegurancaAPI.java" sourcepath="com/jopss/exemploauth/modelos/SegurancaAPI.java"/>
+    </Class>
+    <Field classname="com.jopss.exemploauth.modelos.SegurancaAPI" name="usuario" signature="Lcom/jopss/exemploauth/modelos/Usuario;" isStatic="false">
+      <SourceLine classname="com.jopss.exemploauth.modelos.SegurancaAPI" sourcefile="SegurancaAPI.java" sourcepath="com/jopss/exemploauth/modelos/SegurancaAPI.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.jopss.exemploauth.modelos.Usuario">
+      <SourceLine classname="com.jopss.exemploauth.modelos.Usuario" start="45" end="90" sourcefile="Usuario.java" sourcepath="com/jopss/exemploauth/modelos/Usuario.java"/>
+    </Class>
+    <Field classname="com.jopss.exemploauth.modelos.Usuario" name="perfil" signature="Lcom/jopss/exemploauth/modelos/Perfil;" isStatic="false">
+      <SourceLine classname="com.jopss.exemploauth.modelos.Usuario" sourcefile="Usuario.java" sourcepath="com/jopss/exemploauth/modelos/Usuario.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository">
+      <SourceLine classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" sourcefile="SegurancaRepository.java" sourcepath="com/jopss/exemploauth/servicos/repositorio/SegurancaRepository.java"/>
+    </Class>
+    <Method classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" name="findByToken" signature="(Ljava/lang/String;)Lcom/jopss/exemploauth/modelos/SegurancaAPI;" isStatic="false"/>
+    <String value="Method: findByToken. Fields with EAGER without Join Fetch: usuario, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository">
+      <SourceLine classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" sourcefile="SegurancaRepository.java" sourcepath="com/jopss/exemploauth/servicos/repositorio/SegurancaRepository.java"/>
+    </Class>
+    <Method classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" name="findByToken" signature="(Ljava/lang/String;)Lcom/jopss/exemploauth/modelos/SegurancaAPI;" isStatic="false">
+      <SourceLine classname="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" sourcefile="SegurancaRepository.java" sourcepath="com/jopss/exemploauth/servicos/repositorio/SegurancaRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="37">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.codec.DecoderException</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Hex</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.as.issuer.MD5Generator</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.as.issuer.OAuthIssuerImpl</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.as.request.OAuthTokenRequest</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.as.response.OAuthASResponse</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.as.response.OAuthASResponse$OAuthTokenResponseBuilder</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.message.OAuthResponse</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.message.OAuthResponse$OAuthErrorResponseBuilder</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.message.types.ParameterStyle</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.rs.request.OAuthAccessResourceRequest</MissingClass>
+    <MissingClass>org.hibernate.Hibernate</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.joda.time.DateTime$Property</MissingClass>
+    <MissingClass>org.joda.time.DateTimeComparator</MissingClass>
+    <MissingClass>org.joda.time.Days</MissingClass>
+    <MissingClass>org.joda.time.DurationFieldType</MissingClass>
+    <MissingClass>org.joda.time.Hours</MissingClass>
+    <MissingClass>org.joda.time.LocalDate</MissingClass>
+    <MissingClass>org.joda.time.LocalDate$Property</MissingClass>
+    <MissingClass>org.joda.time.Months</MissingClass>
+    <MissingClass>org.joda.time.Years</MissingClass>
+    <MissingClass>org.springframework.beans.propertyeditors.CustomDateEditor</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.method.HandlerMethod</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:30:32 +0000" total_classes="23" referenced_classes="107" total_bugs="4" total_size="688" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.53" clock_seconds="2.15" peak_mbytes="198.38" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="4">
+    <PackageStats package="com.jopss.exemploauth.excecoes" total_bugs="0" total_types="5" total_size="39">
+      <ClassStats class="com.jopss.exemploauth.excecoes.ExemploOAuthException" sourceFile="ExemploOAuthException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.excecoes.TokenCriadoException" sourceFile="TokenCriadoException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.excecoes.TokenExpiradoException" sourceFile="TokenExpiradoException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.excecoes.TokenInvalidoException" sourceFile="TokenInvalidoException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.excecoes.UsuarioOuSenhaInvalidaException" sourceFile="UsuarioOuSenhaInvalidaException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.modelos" total_bugs="2" total_types="4" total_size="145" priority_2="2">
+      <ClassStats class="com.jopss.exemploauth.modelos.Perfil" sourceFile="Perfil.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.modelos.Permissao" sourceFile="Permissao.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.modelos.SegurancaAPI" sourceFile="SegurancaAPI.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="com.jopss.exemploauth.modelos.Usuario" sourceFile="Usuario.java" interface="false" size="40" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.modelos.enums" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.jopss.exemploauth.modelos.enums.RoleEnum" sourceFile="RoleEnum.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.servicos.repositorio" total_bugs="2" total_types="2" total_size="6" priority_2="2">
+      <ClassStats class="com.jopss.exemploauth.servicos.repositorio.SegurancaRepository" sourceFile="SegurancaRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+      <ClassStats class="com.jopss.exemploauth.servicos.repositorio.UsuarioRepository" sourceFile="UsuarioRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.servicos.seguranca" total_bugs="0" total_types="2" total_size="145">
+      <ClassStats class="com.jopss.exemploauth.servicos.seguranca.SegurancaInterceptor" sourceFile="SegurancaInterceptor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.servicos.seguranca.SegurancaServico" sourceFile="SegurancaServico.java" interface="false" size="122" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.servicos.seguranca.anotacoes" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="com.jopss.exemploauth.servicos.seguranca.anotacoes.Privado" sourceFile="Privado.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.servicos.seguranca.anotacoes.Publico" sourceFile="Publico.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.util" total_bugs="0" total_types="3" total_size="296">
+      <ClassStats class="com.jopss.exemploauth.util.DateUtils" sourceFile="DateUtils.java" interface="false" size="208" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.util.FormatadorUtil" sourceFile="FormatadorUtil.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.util.Modelos" sourceFile="Modelos.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.web" total_bugs="0" total_types="2" total_size="18">
+      <ClassStats class="com.jopss.exemploauth.web.HomeController" sourceFile="HomeController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.web.SegurancaController" sourceFile="SegurancaController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jopss.exemploauth.web.util" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.jopss.exemploauth.web.util.ExemploOAuthController" sourceFile="ExemploOAuthController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jopss.exemploauth.web.util.SegurancaAPIThreadLocal" sourceFile="SegurancaAPIThreadLocal.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="258" invocations="833" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="17442" standardDeviationMicrosecondsPerInvocation="894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="120" invocations="107" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="9356" standardDeviationMicrosecondsPerInvocation="2015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="97" invocations="107" avgMicrosecondsPerInvocation="913" maxMicrosecondsPerInvocation="8868" standardDeviationMicrosecondsPerInvocation="1572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="84" invocations="466" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="8445" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="70" invocations="837" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="2687" standardDeviationMicrosecondsPerInvocation="104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="147" avgMicrosecondsPerInvocation="430" maxMicrosecondsPerInvocation="14254" standardDeviationMicrosecondsPerInvocation="1361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="55" invocations="143" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="5253" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="143" avgMicrosecondsPerInvocation="354" maxMicrosecondsPerInvocation="9554" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="44" invocations="189" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="14189" standardDeviationMicrosecondsPerInvocation="1068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="703" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="1524" standardDeviationMicrosecondsPerInvocation="118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="40" invocations="107" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="3632" standardDeviationMicrosecondsPerInvocation="633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="38" invocations="143" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="2145" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="38" invocations="147" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="9810" standardDeviationMicrosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="149" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="25526" standardDeviationMicrosecondsPerInvocation="2078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="34" invocations="143" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="3192" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="107" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="4930" standardDeviationMicrosecondsPerInvocation="737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="28" invocations="107" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="3020" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="28" invocations="107" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="6526" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="106" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="4091" standardDeviationMicrosecondsPerInvocation="585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="107" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="2159" standardDeviationMicrosecondsPerInvocation="397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="107" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="2076" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="19" invocations="107" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="8009" standardDeviationMicrosecondsPerInvocation="924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="15" invocations="107" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="1735" standardDeviationMicrosecondsPerInvocation="260"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

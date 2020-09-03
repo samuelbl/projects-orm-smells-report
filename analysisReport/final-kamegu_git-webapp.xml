@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085108000" analysisTimestamp="1597085109612" release="">
+  <Project projectName="repositorios/kamegu_git-webapp">
+    <Jar>repositorios/kamegu_git-webapp</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="gw.model.Issue">
+      <SourceLine classname="gw.model.Issue" start="31" end="71" sourcefile="Issue.java" sourcepath="gw/model/Issue.java"/>
+    </Class>
+    <Field classname="gw.model.Issue" name="openedAccount" signature="Lgw/model/Account;" isStatic="false">
+      <SourceLine classname="gw.model.Issue" sourcefile="Issue.java" sourcepath="gw/model/Issue.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="gw.model.PullRequest">
+      <SourceLine classname="gw.model.PullRequest" start="28" end="84" sourcefile="PullRequest.java" sourcepath="gw/model/PullRequest.java"/>
+    </Class>
+    <Field classname="gw.model.PullRequest" name="issue" signature="Lgw/model/Issue;" isStatic="false">
+      <SourceLine classname="gw.model.PullRequest" sourcefile="PullRequest.java" sourcepath="gw/model/PullRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.IssueService">
+      <SourceLine classname="gw.service.IssueService" start="33" end="169" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+    </Class>
+    <Method classname="gw.service.IssueService" name="getComments" signature="(Lgw/model/pk/IssuePK;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.IssueService" start="61" end="61" startBytecode="0" endBytecode="98" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.IssueService" start="61" end="61" startBytecode="12" endBytecode="12" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.IssueService">
+      <SourceLine classname="gw.service.IssueService" start="33" end="169" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+    </Class>
+    <Method classname="gw.service.IssueService" name="getIssues" signature="(Lgw/model/pk/RepositoryPK;Lgw/dto/repository/IssueSearch;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.IssueService" start="49" end="57" startBytecode="0" endBytecode="196" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.IssueService" start="49" end="49" startBytecode="19" endBytecode="19" sourcefile="IssueService.java" sourcepath="gw/service/IssueService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.LabelService">
+      <SourceLine classname="gw.service.LabelService" start="22" end="115" sourcefile="LabelService.java" sourcepath="gw/service/LabelService.java"/>
+    </Class>
+    <Method classname="gw.service.LabelService" name="findLabels" signature="(Lgw/model/pk/RepositoryPK;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.LabelService" start="27" end="30" startBytecode="0" endBytecode="154" sourcefile="LabelService.java" sourcepath="gw/service/LabelService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.LabelService" start="27" end="27" startBytecode="12" endBytecode="12" sourcefile="LabelService.java" sourcepath="gw/service/LabelService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.PullRequestService">
+      <SourceLine classname="gw.service.PullRequestService" start="26" end="111" sourcefile="PullRequestService.java" sourcepath="gw/service/PullRequestService.java"/>
+    </Class>
+    <Method classname="gw.service.PullRequestService" name="lambda$updateFromPush$0" signature="(Lgw/model/pk/RepositoryPK;Ljava/lang/String;)Ljava/util/stream/Stream;" isStatic="false">
+      <SourceLine classname="gw.service.PullRequestService" start="57" end="57" startBytecode="0" endBytecode="147" sourcefile="PullRequestService.java" sourcepath="gw/service/PullRequestService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.PullRequestService" start="57" end="57" startBytecode="12" endBytecode="12" sourcefile="PullRequestService.java" sourcepath="gw/service/PullRequestService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.RepositoryService">
+      <SourceLine classname="gw.service.RepositoryService" start="22" end="100" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Class>
+    <Method classname="gw.service.RepositoryService" name="getCollaboratingList" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.RepositoryService" start="43" end="43" startBytecode="0" endBytecode="150" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.RepositoryService" start="43" end="43" startBytecode="12" endBytecode="12" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.RepositoryService">
+      <SourceLine classname="gw.service.RepositoryService" start="22" end="100" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Class>
+    <Method classname="gw.service.RepositoryService" name="getMyList" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.RepositoryService" start="35" end="35" startBytecode="0" endBytecode="113" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.RepositoryService" start="35" end="35" startBytecode="12" endBytecode="12" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="gw.service.RepositoryService">
+      <SourceLine classname="gw.service.RepositoryService" start="22" end="100" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Class>
+    <Method classname="gw.service.RepositoryService" name="getRecentList" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="gw.service.RepositoryService" start="28" end="28" startBytecode="0" endBytecode="91" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+    </Method>
+    <SourceLine classname="gw.service.RepositoryService" start="28" end="28" startBytecode="12" endBytecode="12" sourcefile="RepositoryService.java" sourcepath="gw/service/RepositoryService.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="113">
+    <MissingClass>com.google.inject.Guice</MissingClass>
+    <MissingClass>com.google.inject.Injector</MissingClass>
+    <MissingClass>com.google.inject.Provider</MissingClass>
+    <MissingClass>com.google.inject.binder.AnnotatedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.persist.jpa.JpaPersistModule</MissingClass>
+    <MissingClass>com.google.inject.servlet.GuiceServletContextListener</MissingClass>
+    <MissingClass>com.google.inject.servlet.ServletModule</MissingClass>
+    <MissingClass>com.google.inject.servlet.ServletModule$FilterKeyBindingBuilder</MissingClass>
+    <MissingClass>freemarker.cache.ClassTemplateLoader</MissingClass>
+    <MissingClass>freemarker.cache.MultiTemplateLoader</MissingClass>
+    <MissingClass>freemarker.cache.WebappTemplateLoader</MissingClass>
+    <MissingClass>freemarker.template.Configuration</MissingClass>
+    <MissingClass>freemarker.template.TemplateException</MissingClass>
+    <MissingClass>freemarker.template.TemplateExceptionHandler</MissingClass>
+    <MissingClass>javax.mail.Authenticator</MissingClass>
+    <MissingClass>javax.mail.BodyPart</MissingClass>
+    <MissingClass>javax.mail.Multipart</MissingClass>
+    <MissingClass>javax.mail.PasswordAuthentication</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeBodyPart</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage$RecipientType</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMultipart</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>javax.validation.ElementKind</MissingClass>
+    <MissingClass>javax.validation.Path</MissingClass>
+    <MissingClass>javax.ws.rs.Consumes</MissingClass>
+    <MissingClass>javax.ws.rs.ForbiddenException</MissingClass>
+    <MissingClass>javax.ws.rs.FormParam</MissingClass>
+    <MissingClass>javax.ws.rs.NotFoundException</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ResourceInfo</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ExceptionMapper</MissingClass>
+    <MissingClass>javax.ws.rs.ext.WriterInterceptor</MissingClass>
+    <MissingClass>javax.ws.rs.ext.WriterInterceptorContext</MissingClass>
+    <MissingClass>jersey.repackaged.com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>jersey.repackaged.com.google.common.collect.Lists</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.BooleanUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateUtils</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.DiffCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.FetchCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.Git</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.ListBranchCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.ListTagCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.LogCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.api.errors.GitAPIException</MissingClass>
+    <MissingClass>org.eclipse.jgit.diff.DiffEntry</MissingClass>
+    <MissingClass>org.eclipse.jgit.diff.DiffEntry$ChangeType</MissingClass>
+    <MissingClass>org.eclipse.jgit.diff.DiffFormatter</MissingClass>
+    <MissingClass>org.eclipse.jgit.diff.RawText</MissingClass>
+    <MissingClass>org.eclipse.jgit.errors.MissingObjectException</MissingClass>
+    <MissingClass>org.eclipse.jgit.errors.NoMergeBaseException</MissingClass>
+    <MissingClass>org.eclipse.jgit.errors.NoMergeBaseException$MergeBaseFailureReason</MissingClass>
+    <MissingClass>org.eclipse.jgit.errors.RevisionSyntaxException</MissingClass>
+    <MissingClass>org.eclipse.jgit.http.server.GitServlet</MissingClass>
+    <MissingClass>org.eclipse.jgit.internal.JGitText</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.AbbreviatedObjectId</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.CommitBuilder</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.ObjectId</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.ObjectInserter</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.ObjectLoader</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.PersonIdent</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.Ref</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.RefUpdate</MissingClass>
+    <MissingClass>org.eclipse.jgit.lib.Repository</MissingClass>
+    <MissingClass>org.eclipse.jgit.merge.MergeStrategy</MissingClass>
+    <MissingClass>org.eclipse.jgit.merge.ThreeWayMergeStrategy</MissingClass>
+    <MissingClass>org.eclipse.jgit.merge.ThreeWayMerger</MissingClass>
+    <MissingClass>org.eclipse.jgit.revwalk.RevCommit</MissingClass>
+    <MissingClass>org.eclipse.jgit.revwalk.RevWalk</MissingClass>
+    <MissingClass>org.eclipse.jgit.revwalk.filter.RevFilter</MissingClass>
+    <MissingClass>org.eclipse.jgit.storage.file.FileRepositoryBuilder</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.PostReceiveHook</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.ReceiveCommand</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.ReceivePack</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.RefSpec</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.resolver.FileResolver</MissingClass>
+    <MissingClass>org.eclipse.jgit.transport.resolver.ReceivePackFactory</MissingClass>
+    <MissingClass>org.eclipse.jgit.treewalk.CanonicalTreeParser</MissingClass>
+    <MissingClass>org.eclipse.jgit.treewalk.TreeWalk</MissingClass>
+    <MissingClass>org.flywaydb.core.Flyway</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.ServiceLocator</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ResourceConfig</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.model.Resource</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.mvc.Viewable</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.validation.internal.ValidationHelper</MissingClass>
+    <MissingClass>org.hibernate.validator.internal.engine.path.NodeImpl</MissingClass>
+    <MissingClass>org.jsoup.Jsoup</MissingClass>
+    <MissingClass>org.jsoup.safety.Whitelist</MissingClass>
+    <MissingClass>org.jvnet.hk2.guice.bridge.api.GuiceBridge</MissingClass>
+    <MissingClass>org.jvnet.hk2.guice.bridge.api.GuiceIntoHK2Bridge</MissingClass>
+    <MissingClass>org.pegdown.PegDownProcessor</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:45:08 +0000" total_classes="164" referenced_classes="315" total_bugs="9" total_size="3766" num_packages="29" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="17.83" clock_seconds="5.62" peak_mbytes="342.49" alloc_mbytes="3540.00" gc_seconds="0.28" priority_2="9">
+    <PackageStats package="gw.application" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="gw.application.ApiConfig" sourceFile="ApiConfig.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="gw.application.AppConfig" sourceFile="AppConfig.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.application.html" total_bugs="0" total_types="6" total_size="104">
+      <ClassStats class="gw.application.html.AdminHtmlResource" sourceFile="AdminHtmlResource.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="gw.application.html.RepositoryHtmlResource" sourceFile="RepositoryHtmlResource.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="gw.application.html.RepositoryHtmlResource$RepositoryKey" sourceFile="RepositoryHtmlResource.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="gw.application.html.SettingsHtmlResource" sourceFile="SettingsHtmlResource.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="gw.application.html.TopResource" sourceFile="TopResource.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="gw.application.html.UserHtmlResource" sourceFile="UserHtmlResource.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.application.html.repository" total_bugs="0" total_types="3" total_size="44">
+      <ClassStats class="gw.application.html.repository.CompareHtmlResource" sourceFile="CompareHtmlResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="gw.application.html.repository.IssueHtmlResource" sourceFile="IssueHtmlResource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.application.html.repository.SettingsHtmlResource" sourceFile="SettingsHtmlResource.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.application.rs" total_bugs="0" total_types="6" total_size="73">
+      <ClassStats class="gw.application.rs.AdminResource" sourceFile="AdminResource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.application.rs.ApiResource" sourceFile="ApiResource.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="gw.application.rs.LoginResource" sourceFile="LoginResource.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.application.rs.LoginResource$LoginForm" sourceFile="LoginResource.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.application.rs.RepositoryResource" sourceFile="RepositoryResource.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="gw.application.rs.RepositoryResource$RepositoryKey" sourceFile="RepositoryResource.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.application.rs.admin" total_bugs="0" total_types="5" total_size="67">
+      <ClassStats class="gw.application.rs.admin.GroupResource" sourceFile="GroupResource.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="gw.application.rs.admin.MailResource" sourceFile="MailResource.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.application.rs.admin.MailResource$TestMailJson" sourceFile="MailResource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.application.rs.admin.SystemResource" sourceFile="SystemResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="gw.application.rs.admin.UserResource" sourceFile="UserResource.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.application.rs.repository" total_bugs="0" total_types="8" total_size="166">
+      <ClassStats class="gw.application.rs.repository.CommentResource" sourceFile="CommentResource.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.CommentResource$CommentJson" sourceFile="CommentResource.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.GitResource" sourceFile="GitResource.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.GitResource$RefJson" sourceFile="GitResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.IssueResource" sourceFile="IssueResource.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.LabelResource" sourceFile="LabelResource.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.PullResource" sourceFile="PullResource.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="gw.application.rs.repository.SettingsResource" sourceFile="SettingsResource.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core" total_bugs="0" total_types="4" total_size="78">
+      <ClassStats class="gw.core.HttpCacheControlFilter" sourceFile="HttpCacheControlFilter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.core.LoginContext" sourceFile="LoginContext.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="gw.core.RepositoryContext" sourceFile="RepositoryContext.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="gw.core.SystemSetting" sourceFile="SystemSetting.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.action" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="gw.core.action.Result" sourceFile="Result.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.auth" total_bugs="0" total_types="7" total_size="53">
+      <ClassStats class="gw.core.auth.Admin" sourceFile="Admin.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="gw.core.auth.AdminNecessaryRequestFilter" sourceFile="AdminNecessaryRequestFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.core.auth.AuthenticationRequestFilter" sourceFile="AuthenticationRequestFilter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.core.auth.Login" sourceFile="Login.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="gw.core.auth.LoginRequiredException" sourceFile="LoginRequiredException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="gw.core.auth.Repo" sourceFile="Repo.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="gw.core.auth.RepositoryControllRequestFilter" sourceFile="RepositoryControllRequestFilter.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.jpa" total_bugs="0" total_types="5" total_size="56">
+      <ClassStats class="gw.core.jpa.EntityOperator" sourceFile="EntityOperator.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="gw.core.jpa.EntityOperatorProvider" sourceFile="EntityOperatorProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.core.jpa.EntityUpdateInfo" sourceFile="EntityUpdateInfo.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="gw.core.jpa.EntityUpdateInfoException" sourceFile="EntityUpdateInfoException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="gw.core.jpa.EntityUpdateInfoListener" sourceFile="EntityUpdateInfoListener.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.mvc" total_bugs="0" total_types="3" total_size="59">
+      <ClassStats class="gw.core.mvc.AttachContextInterceptor" sourceFile="AttachContextInterceptor.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="gw.core.mvc.AttachContextInterceptor$1" sourceFile="AttachContextInterceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="gw.core.mvc.MapViewable" sourceFile="MapViewable.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.mvc.freemarker" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="gw.core.mvc.freemarker.FlexibleConfiguration" sourceFile="FlexibleConfiguration.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.mvc.mapper.api" total_bugs="0" total_types="6" total_size="42">
+      <ClassStats class="gw.core.mvc.mapper.api.ApiForbiddenExceptionMapper" sourceFile="ApiForbiddenExceptionMapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gw.core.mvc.mapper.api.ApiForbiddenExceptionMapper$1" sourceFile="ApiForbiddenExceptionMapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.core.mvc.mapper.api.ApiLoginRequiredExceptionMapper" sourceFile="ApiLoginRequiredExceptionMapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gw.core.mvc.mapper.api.ApiLoginRequiredExceptionMapper$1" sourceFile="ApiLoginRequiredExceptionMapper.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.core.mvc.mapper.api.ApiNotFoundExceptionMapper" sourceFile="ApiNotFoundExceptionMapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gw.core.mvc.mapper.api.ApiNotFoundExceptionMapper$1" sourceFile="ApiNotFoundExceptionMapper.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.mvc.mapper.html" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="gw.core.mvc.mapper.html.HtmlLoginRequiredExceptionMapper" sourceFile="HtmlLoginRequiredExceptionMapper.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.util" total_bugs="0" total_types="4" total_size="88">
+      <ClassStats class="gw.core.util.ClassFinder" sourceFile="ClassFinder.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="gw.core.util.Markdown" sourceFile="Markdown.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="gw.core.util.RequestUtils" sourceFile="RequestUtils.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="gw.core.util.ResourceUtils" sourceFile="ResourceUtils.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.core.validation" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="gw.core.validation.AjaxValidationErrorExceptionMapper" sourceFile="AjaxValidationErrorExceptionMapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="gw.core.validation.ConstraintUtils" sourceFile="ConstraintUtils.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="gw.core.validation.PostErrorResponseFilter" sourceFile="PostErrorResponseFilter.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.dto" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="gw.dto.AccountDto" sourceFile="AccountDto.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.dto.admin" total_bugs="0" total_types="7" total_size="227">
+      <ClassStats class="gw.dto.admin.AccountJson" sourceFile="AccountJson.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="gw.dto.admin.GroupJson" sourceFile="GroupJson.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="gw.dto.admin.GroupJson$MemberJson" sourceFile="GroupJson.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="gw.dto.admin.MailJson" sourceFile="MailJson.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="gw.dto.admin.SystemJson" sourceFile="SystemJson.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="gw.dto.admin.UserFullJson" sourceFile="UserFullJson.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="gw.dto.admin.UserJson" sourceFile="UserJson.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.dto.form" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="gw.dto.form.RepositoryForm" sourceFile="RepositoryForm.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.dto.repository" total_bugs="0" total_types="9" total_size="212">
+      <ClassStats class="gw.dto.repository.CollaboratorJson" sourceFile="CollaboratorJson.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.dto.repository.CommentForm" sourceFile="CommentForm.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.dto.repository.IssueForm" sourceFile="IssueForm.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="gw.dto.repository.IssueJson" sourceFile="IssueJson.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="gw.dto.repository.IssueSearch" sourceFile="IssueSearch.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gw.dto.repository.LabelJson" sourceFile="LabelJson.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="gw.dto.repository.PullRequestEndpoint" sourceFile="PullRequestEndpoint.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="gw.dto.repository.PullRequestForm" sourceFile="PullRequestForm.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="gw.dto.repository.PullRequestJson" sourceFile="PullRequestJson.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.dto.result" total_bugs="0" total_types="6" total_size="45">
+      <ClassStats class="gw.dto.result.ErrorResult" sourceFile="ErrorResult.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="gw.dto.result.JsonResult" sourceFile="JsonResult.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="gw.dto.result.PostJsonResult" sourceFile="PostJsonResult.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.dto.result.SuccessResult" sourceFile="SuccessResult.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="gw.dto.result.ValidationErrorResult" sourceFile="ValidationErrorResult.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.dto.result.ValidationErrorResult$ValidationError" sourceFile="ValidationErrorResult.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.git" total_bugs="0" total_types="18" total_size="742">
+      <ClassStats class="gw.git.CommitDiffDto" sourceFile="CommitDiffDto.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.git.CompareResult" sourceFile="CompareResult.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.git.CustomDiffFormatter" sourceFile="CustomDiffFormatter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="gw.git.CustomDiffFormatter$DiffOutputStream" sourceFile="CustomDiffFormatter.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="gw.git.DiffBlock" sourceFile="DiffBlock.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="gw.git.DiffBlock$DiffLine" sourceFile="DiffBlock.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="gw.git.DiffInfo" sourceFile="DiffInfo.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="gw.git.FileContent" sourceFile="FileContent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.git.FileListDto" sourceFile="FileListDto.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="gw.git.FileListDto$CommitInfo" sourceFile="FileListDto.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="gw.git.FileListDto$FileInfo" sourceFile="FileListDto.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="gw.git.FileListDto$RefDto" sourceFile="FileListDto.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="gw.git.GitApi" sourceFile="GitApi.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="gw.git.GitConfig" sourceFile="GitConfig.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="gw.git.GitOperation" sourceFile="GitOperation.java" interface="false" size="276" bugs="0"/>
+      <ClassStats class="gw.git.JGitUtils" sourceFile="JGitUtils.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.git.RefPath" sourceFile="RefPath.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gw.git.RepositoryReader" sourceFile="RepositoryReader.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.model" total_bugs="2" total_types="12" total_size="398" priority_2="2">
+      <ClassStats class="gw.model.Account" sourceFile="Account.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="gw.model.AppProperty" sourceFile="AppProperty.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="gw.model.Collaborator" sourceFile="Collaborator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="gw.model.GroupMember" sourceFile="GroupMember.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="gw.model.Issue" sourceFile="Issue.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="gw.model.IssueComment" sourceFile="IssueComment.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="gw.model.IssueLabel" sourceFile="IssueLabel.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="gw.model.Label" sourceFile="Label.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gw.model.MergeableHistory" sourceFile="MergeableHistory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="gw.model.PullRequest" sourceFile="PullRequest.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="gw.model.Repository" sourceFile="Repository.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="gw.model.UserAccount" sourceFile="UserAccount.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.model.embed" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="gw.model.embed.UpdateInfo" sourceFile="UpdateInfo.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.model.pk" total_bugs="0" total_types="7" total_size="145">
+      <ClassStats class="gw.model.pk.CollaboratorPK" sourceFile="CollaboratorPK.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="gw.model.pk.GroupMemberPK" sourceFile="GroupMemberPK.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="gw.model.pk.IssueLabelPK" sourceFile="IssueLabelPK.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="gw.model.pk.IssuePK" sourceFile="IssuePK.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="gw.model.pk.LabelPK" sourceFile="LabelPK.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="gw.model.pk.MergeableHistoryPK" sourceFile="MergeableHistoryPK.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="gw.model.pk.RepositoryPK" sourceFile="RepositoryPK.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.service" total_bugs="7" total_types="19" total_size="710" priority_2="7">
+      <ClassStats class="gw.service.CollaboratorService" sourceFile="CollaboratorService.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="gw.service.IssueService" sourceFile="IssueService.java" interface="false" size="102" bugs="2" priority_2="2"/>
+      <ClassStats class="gw.service.LabelService" sourceFile="LabelService.java" interface="false" size="68" bugs="1" priority_2="1"/>
+      <ClassStats class="gw.service.LoginService" sourceFile="LoginService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.service.MailSender" sourceFile="MailSender.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="gw.service.MailSender$1" sourceFile="MailSender.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.service.MailSender$2" sourceFile="MailSender.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gw.service.MailSender$Sender" sourceFile="MailSender.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="gw.service.MailSender$SmtpSenderConfig" sourceFile="MailSender.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="gw.service.MailService" sourceFile="MailService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="gw.service.MergeService" sourceFile="MergeService.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="gw.service.NoticeService" sourceFile="NoticeService.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="gw.service.NoticeService$IssueMessageForm" sourceFile="NoticeService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.service.PullRequestService" sourceFile="PullRequestService.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="gw.service.RepositoryController" sourceFile="RepositoryController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="gw.service.RepositoryService" sourceFile="RepositoryService.java" interface="false" size="55" bugs="3" priority_2="3"/>
+      <ClassStats class="gw.service.RepositoryUpdateService" sourceFile="RepositoryUpdateService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gw.service.SystemService" sourceFile="SystemService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="gw.service.UserService" sourceFile="UserService.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.servlet" total_bugs="0" total_types="9" total_size="175">
+      <ClassStats class="gw.servlet.GitRepositoryServlet" sourceFile="GitRepositoryServlet.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="gw.servlet.GitRepositoryServlet$1" sourceFile="GitRepositoryServlet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="gw.servlet.GitRepositoryServlet$GitReceivePackFactory" sourceFile="GitRepositoryServlet.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gw.servlet.GuiceListener" sourceFile="GuiceListener.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.servlet.GuiceListener$1" sourceFile="GuiceListener.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gw.servlet.GwReceiveHook" sourceFile="GwReceiveHook.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="gw.servlet.GwReceiveHook$1" sourceFile="GwReceiveHook.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="gw.servlet.GwReceiveHook$Command" sourceFile="GwReceiveHook.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gw.servlet.PersistenceInitializeListener" sourceFile="PersistenceInitializeListener.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.types" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="gw.types.MergeableType" sourceFile="MergeableType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="gw.types.PasswordType" sourceFile="PasswordType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="gw.types.PasswordType$1" sourceFile="PasswordType.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gw.validator" total_bugs="0" total_types="6" total_size="41">
+      <ClassStats class="gw.validator.PasswordRequired" sourceFile="PasswordRequired.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="gw.validator.PasswordRequiredValidator" sourceFile="PasswordRequiredValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.validator.ReservedName" sourceFile="ReservedName.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="gw.validator.ReservedNameValidator" sourceFile="ReservedNameValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gw.validator.SmtpAuth" sourceFile="SmtpAuth.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="gw.validator.SmtpAuthValidator" sourceFile="SmtpAuthValidator.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="326" invocations="1240" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="13998" standardDeviationMicrosecondsPerInvocation="697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="220" invocations="1014" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="14803" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="208" invocations="1029" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="11442" standardDeviationMicrosecondsPerInvocation="747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="198" invocations="315" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="7774" standardDeviationMicrosecondsPerInvocation="1326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="192" invocations="1002" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="9458" standardDeviationMicrosecondsPerInvocation="552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="185" invocations="315" avgMicrosecondsPerInvocation="590" maxMicrosecondsPerInvocation="7216" standardDeviationMicrosecondsPerInvocation="1131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="174" invocations="1014" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="10714" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="162" invocations="1029" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="12767" standardDeviationMicrosecondsPerInvocation="677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="156" invocations="1014" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="11440" standardDeviationMicrosecondsPerInvocation="474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="148" invocations="1389" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="8533" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="129" invocations="164" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="23048" standardDeviationMicrosecondsPerInvocation="2760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="126" invocations="586" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="14117" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="113" invocations="1250" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="8182" standardDeviationMicrosecondsPerInvocation="247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="108" invocations="1030" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="43889" standardDeviationMicrosecondsPerInvocation="1389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="91" invocations="447" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="14110" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="83" invocations="315" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="38008" standardDeviationMicrosecondsPerInvocation="2208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="78" invocations="315" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="5475" standardDeviationMicrosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="73" invocations="984" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="18309" standardDeviationMicrosecondsPerInvocation="597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="65" invocations="1030" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="24495" standardDeviationMicrosecondsPerInvocation="889"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="63" invocations="11671" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="12290" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="57" invocations="1014" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="6087" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="53" invocations="315" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="2374" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="53" invocations="315" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="4763" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="49" invocations="315" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="3295" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="49" invocations="164" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="3529" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="46" invocations="164" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="7761" standardDeviationMicrosecondsPerInvocation="773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="45" invocations="164" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="4190" standardDeviationMicrosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="40" invocations="315" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="2610" standardDeviationMicrosecondsPerInvocation="310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="38" invocations="164" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="10173" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="36" invocations="164" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8603" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="36" invocations="164" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="3652" standardDeviationMicrosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="35" invocations="164" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="10987" standardDeviationMicrosecondsPerInvocation="920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="33" invocations="164" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="4427" standardDeviationMicrosecondsPerInvocation="491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Naming" totalMilliseconds="32" invocations="164" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="10191" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="31" invocations="941" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="5000" standardDeviationMicrosecondsPerInvocation="183"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

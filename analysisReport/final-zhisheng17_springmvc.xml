@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085334000" analysisTimestamp="1597085335903" release="">
+  <Project projectName="repositorios/zhisheng17_springmvc">
+    <Jar>repositorios/zhisheng17_springmvc</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="2" missingClasses="2">
+    <Error>
+      <ErrorMessage>Exception analyzing cn.zhisheng.model.BlogEntity using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing cn.zhisheng.model.BlogEntity using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:48:54 +0000" total_classes="6" referenced_classes="21" total_bugs="0" total_size="176" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.52" clock_seconds="1.37" peak_mbytes="186.21" alloc_mbytes="3540.00" gc_seconds="0.14">
+    <PackageStats package="cn.zhisheng.controller" total_bugs="0" total_types="2" total_size="68">
+      <ClassStats class="cn.zhisheng.controller.BlogController" sourceFile="BlogController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="cn.zhisheng.controller.IndexController" sourceFile="IndexController.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.zhisheng.model" total_bugs="0" total_types="2" total_size="104">
+      <ClassStats class="cn.zhisheng.model.BlogEntity" sourceFile="BlogEntity.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="cn.zhisheng.model.UserEntity" sourceFile="UserEntity.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.zhisheng.repository" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="cn.zhisheng.repository.BlogRepository" sourceFile="BlogRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.zhisheng.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="194" invocations="389" avgMicrosecondsPerInvocation="499" maxMicrosecondsPerInvocation="20917" standardDeviationMicrosecondsPerInvocation="1392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="127" invocations="6" avgMicrosecondsPerInvocation="21224" maxMicrosecondsPerInvocation="127022" standardDeviationMicrosecondsPerInvocation="47314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="21" avgMicrosecondsPerInvocation="2693" maxMicrosecondsPerInvocation="10321" standardDeviationMicrosecondsPerInvocation="3566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="391" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="2894" standardDeviationMicrosecondsPerInvocation="154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="107" avgMicrosecondsPerInvocation="391" maxMicrosecondsPerInvocation="10274" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="37" invocations="21" avgMicrosecondsPerInvocation="1771" maxMicrosecondsPerInvocation="7798" standardDeviationMicrosecondsPerInvocation="2334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="35" invocations="336" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="1467" standardDeviationMicrosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="29" invocations="47" avgMicrosecondsPerInvocation="636" maxMicrosecondsPerInvocation="24422" standardDeviationMicrosecondsPerInvocation="3509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="42" avgMicrosecondsPerInvocation="627" maxMicrosecondsPerInvocation="12236" standardDeviationMicrosecondsPerInvocation="1884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="24" invocations="45" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="5469" standardDeviationMicrosecondsPerInvocation="1052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="23" invocations="45" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="9725" standardDeviationMicrosecondsPerInvocation="1449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="22" invocations="45" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="10147" standardDeviationMicrosecondsPerInvocation="1505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="21" avgMicrosecondsPerInvocation="1071" maxMicrosecondsPerInvocation="9005" standardDeviationMicrosecondsPerInvocation="1942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="21" avgMicrosecondsPerInvocation="989" maxMicrosecondsPerInvocation="5698" standardDeviationMicrosecondsPerInvocation="1680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="20" invocations="45" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="2281" standardDeviationMicrosecondsPerInvocation="552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="19" invocations="45" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="3582" standardDeviationMicrosecondsPerInvocation="757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="19" invocations="45" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="8819" standardDeviationMicrosecondsPerInvocation="1298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="21" avgMicrosecondsPerInvocation="838" maxMicrosecondsPerInvocation="7335" standardDeviationMicrosecondsPerInvocation="1598"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

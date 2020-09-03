@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597102662000" analysisTimestamp="1597102663235" release="">
+  <Project projectName="repositorios/kickcodeman_spring-data-jpa">
+    <Jar>repositorios/kickcodeman_spring-data-jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.entity.Desk">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Desk" start="10" end="24" sourcefile="Desk.java" sourcepath="com/zempty/springbootjpa/entity/Desk.java"/>
+    </Class>
+    <Field classname="com.zempty.springbootjpa.entity.Desk" name="student" signature="Lcom/zempty/springbootjpa/entity/Student;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Desk" sourcefile="Desk.java" sourcepath="com/zempty/springbootjpa/entity/Desk.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.entity.Student">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Student" start="12" end="49" sourcefile="Student.java" sourcepath="com/zempty/springbootjpa/entity/Student.java"/>
+    </Class>
+    <Field classname="com.zempty.springbootjpa.entity.Student" name="classRoom" signature="Lcom/zempty/springbootjpa/entity/ClassRoom;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Student" sourcefile="Student.java" sourcepath="com/zempty/springbootjpa/entity/Student.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.entity.Student">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Student" start="12" end="49" sourcefile="Student.java" sourcepath="com/zempty/springbootjpa/entity/Student.java"/>
+    </Class>
+    <Field classname="com.zempty.springbootjpa.entity.Student" name="desk" signature="Lcom/zempty/springbootjpa/entity/Desk;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.entity.Student" sourcefile="Student.java" sourcepath="com/zempty/springbootjpa/entity/Student.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.repository.ClassRoomRepository">
+      <SourceLine classname="com.zempty.springbootjpa.repository.ClassRoomRepository" sourcefile="ClassRoomRepository.java" sourcepath="com/zempty/springbootjpa/repository/ClassRoomRepository.java"/>
+    </Class>
+    <Method classname="com.zempty.springbootjpa.repository.ClassRoomRepository" name="findClassRoom1" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.repository.ClassRoomRepository" sourcefile="ClassRoomRepository.java" sourcepath="com/zempty/springbootjpa/repository/ClassRoomRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.repository.TeacherRepositoty">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Class>
+    <Method classname="com.zempty.springbootjpa.repository.TeacherRepositoty" name="getPage" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.repository.TeacherRepositoty">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Class>
+    <Method classname="com.zempty.springbootjpa.repository.TeacherRepositoty" name="getTeacherNameAndAge" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zempty.springbootjpa.repository.TeacherRepositoty">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Class>
+    <Method classname="com.zempty.springbootjpa.repository.TeacherRepositoty" name="getTeachers" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Sort;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zempty.springbootjpa.repository.TeacherRepositoty" sourcefile="TeacherRepositoty.java" sourcepath="com/zempty/springbootjpa/repository/TeacherRepositoty.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="16">
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:37:42 +0000" total_classes="29" referenced_classes="58" total_bugs="7" total_size="386" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.03" clock_seconds="1.44" peak_mbytes="129.02" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="7">
+    <PackageStats package="com.zempty.springbootjpa" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.zempty.springbootjpa.SpringbootjpaApplication" sourceFile="SpringbootjpaApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.config" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.zempty.springbootjpa.config.Swagger2Config" sourceFile="Swagger2Config.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.controller" total_bugs="0" total_types="1" total_size="108">
+      <ClassStats class="com.zempty.springbootjpa.controller.TestController" sourceFile="TestController.java" interface="false" size="108" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.controller.inheritance" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="com.zempty.springbootjpa.controller.inheritance.JoinedController" sourceFile="JoinedController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.controller.inheritance.SingleController" sourceFile="SingleController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.entity" total_bugs="3" total_types="4" total_size="100" priority_2="3">
+      <ClassStats class="com.zempty.springbootjpa.entity.ClassRoom" sourceFile="ClassRoom.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.Desk" sourceFile="Desk.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.Student" sourceFile="Student.java" interface="false" size="44" bugs="2" priority_2="2"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.Teacher" sourceFile="Teacher.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.entity.inheritance.joined" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.joined.A2" sourceFile="A2.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.joined.B2" sourceFile="B2.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.joined.Group2" sourceFile="Group2.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.entity.inheritance.per_table" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.per_table.A3" sourceFile="A3.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.per_table.B3" sourceFile="B3.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.per_table.Group3" sourceFile="Group3.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.entity.inheritance.single_table" total_bugs="0" total_types="3" total_size="23">
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.single_table.A1" sourceFile="A1.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.single_table.B1" sourceFile="B1.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.entity.inheritance.single_table.Group1" sourceFile="Group1.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.repository" total_bugs="4" total_types="5" total_size="17" priority_2="4">
+      <ClassStats class="com.zempty.springbootjpa.repository.ClassRoomRepository" sourceFile="ClassRoomRepository.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.DeskRepository" sourceFile="DeskRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.StudentRepository" sourceFile="StudentRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.TeacherProjection" sourceFile="TeacherProjection.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.TeacherRepositoty" sourceFile="TeacherRepositoty.java" interface="true" size="4" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.repository.joined" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.zempty.springbootjpa.repository.joined.A2Repository" sourceFile="A2Repository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.joined.B2Repository" sourceFile="B2Repository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.repository.per_table" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.zempty.springbootjpa.repository.per_table.A3Repository" sourceFile="A3Repository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.per_table.B3Repository" sourceFile="B3Repository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zempty.springbootjpa.repository.single_table" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.zempty.springbootjpa.repository.single_table.A1Respository" sourceFile="A1Respository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zempty.springbootjpa.repository.single_table.B1Respository" sourceFile="B1Respository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="194" invocations="555" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="13903" standardDeviationMicrosecondsPerInvocation="916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="62" invocations="58" avgMicrosecondsPerInvocation="1075" maxMicrosecondsPerInvocation="10097" standardDeviationMicrosecondsPerInvocation="1835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="51" invocations="456" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="18677" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="48" invocations="58" avgMicrosecondsPerInvocation="843" maxMicrosecondsPerInvocation="5212" standardDeviationMicrosecondsPerInvocation="1330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="48" invocations="560" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="662" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="140" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="23958" standardDeviationMicrosecondsPerInvocation="2013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="109" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="10944" standardDeviationMicrosecondsPerInvocation="1081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="28" invocations="225" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="2861" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="28" invocations="128" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="4731" standardDeviationMicrosecondsPerInvocation="473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="24" invocations="128" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="6678" standardDeviationMicrosecondsPerInvocation="599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="58" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="3324" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="58" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="5803" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="23" invocations="128" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="7426" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="23" invocations="128" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="7504" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="22" invocations="128" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1221" standardDeviationMicrosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="20" invocations="128" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="2240" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="58" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="8400" standardDeviationMicrosecondsPerInvocation="1105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="58" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="2254" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="29" avgMicrosecondsPerInvocation="546" maxMicrosecondsPerInvocation="15589" standardDeviationMicrosecondsPerInvocation="2842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="58" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="2599" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="58" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="4275" standardDeviationMicrosecondsPerInvocation="600"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="11" invocations="29" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="7531" standardDeviationMicrosecondsPerInvocation="1386"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

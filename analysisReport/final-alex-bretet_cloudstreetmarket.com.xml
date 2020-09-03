@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114313000" analysisTimestamp="1597114314874" release="">
+  <Project projectName="repositorios/alex-bretet_cloudstreetmarket.com">
+    <Jar>repositorios/alex-bretet_cloudstreetmarket.com</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryJpa">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryJpa" start="33" end="33" sourcefile="IndexRepositoryJpa.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/daos/IndexRepositoryJpa.java"/>
+    </Class>
+    <Method classname="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryJpa" name="findByMarket" signature="(Ledu/zipcloud/cloudstreetmarket/core/entities/Market;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryJpa" sourcefile="IndexRepositoryJpa.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/daos/IndexRepositoryJpa.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.Action">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Action" start="75" end="121" sourcefile="Action.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Action.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.Action" name="user" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/User;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Action" sourcefile="Action.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Action.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.ChartIndex">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.ChartIndex" start="60" end="87" sourcefile="ChartIndex.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/ChartIndex.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.ChartIndex" name="index" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Index;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.ChartIndex" sourcefile="ChartIndex.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/ChartIndex.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.Exchange">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Exchange" start="57" end="109" sourcefile="Exchange.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Exchange.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.Exchange" name="market" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Market;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Exchange" sourcefile="Exchange.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Exchange.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.Index">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Index" start="85" end="193" sourcefile="Index.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Index.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.Index" name="exchange" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Exchange;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Index" sourcefile="Index.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Index.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.IndexQuote">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.IndexQuote" start="54" end="94" sourcefile="IndexQuote.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/IndexQuote.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.IndexQuote" name="index" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Index;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.IndexQuote" sourcefile="IndexQuote.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/IndexQuote.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.SocialEventAction">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.SocialEventAction" start="48" end="62" sourcefile="SocialEventAction.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/SocialEventAction.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.SocialEventAction" name="targetAction" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Action;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.SocialEventAction" sourcefile="SocialEventAction.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/SocialEventAction.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" start="75" end="222" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" name="exchange" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Exchange;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" start="75" end="222" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" name="industry" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/Industry;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" start="75" end="222" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" name="quote" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/StockQuote;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" sourcefile="StockProduct.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockProduct.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.StockQuote">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockQuote" start="73" end="177" sourcefile="StockQuote.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockQuote.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.StockQuote" name="stock" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/StockProduct;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.StockQuote" sourcefile="StockQuote.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/StockQuote.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.Transaction">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Transaction" start="54" end="175" sourcefile="Transaction.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Transaction.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.Transaction" name="quote" signature="Ledu/zipcloud/cloudstreetmarket/core/entities/StockQuote;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.Transaction" sourcefile="Transaction.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/Transaction.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="edu.zipcloud.cloudstreetmarket.core.entities.User">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.User" start="77" end="396" sourcefile="User.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/User.java"/>
+    </Class>
+    <Field classname="edu.zipcloud.cloudstreetmarket.core.entities.User" name="authorities" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="edu.zipcloud.cloudstreetmarket.core.entities.User" sourcefile="User.java" sourcepath="edu/zipcloud/cloudstreetmarket/core/entities/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="199">
+    <MissingClass>au.com.bytecode.opencsv.CSVReader</MissingClass>
+    <MissingClass>au.com.bytecode.opencsv.CSVWriter</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonTypeInfo$Id</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.Module$SetupContext</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializerProvider</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.cfg.MapperConfig</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.module.SimpleModule</MissingClass>
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Sets</MissingClass>
+    <MissingClass>com.jayway.restassured.RestAssured</MissingClass>
+    <MissingClass>com.jayway.restassured.response.Response</MissingClass>
+    <MissingClass>com.jayway.restassured.response.ResponseBody</MissingClass>
+    <MissingClass>com.jayway.restassured.specification.AuthenticationSpecification</MissingClass>
+    <MissingClass>com.jayway.restassured.specification.PreemptiveAuthSpec</MissingClass>
+    <MissingClass>com.jayway.restassured.specification.RequestSpecification</MissingClass>
+    <MissingClass>com.jayway.restassured.specification.ResponseLogSpecification</MissingClass>
+    <MissingClass>com.jayway.restassured.specification.ResponseSpecification</MissingClass>
+    <MissingClass>com.mangofactory.swagger.models.dto.ApiInfo</MissingClass>
+    <MissingClass>com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.converters.Converter</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.io.HierarchicalStreamWriter</MissingClass>
+    <MissingClass>javax.jms.Session</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.NoResultException</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.Validation</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.ValidatorFactory</MissingClass>
+    <MissingClass>net.sf.cglib.proxy.Enhancer</MissingClass>
+    <MissingClass>net.sf.cglib.proxy.Factory</MissingClass>
+    <MissingClass>net.sf.cglib.proxy.MethodInterceptor</MissingClass>
+    <MissingClass>org.apache.catalina.Container</MissingClass>
+    <MissingClass>org.apache.catalina.Context</MissingClass>
+    <MissingClass>org.apache.catalina.Lifecycle</MissingClass>
+    <MissingClass>org.apache.catalina.LifecycleException</MissingClass>
+    <MissingClass>org.apache.catalina.LifecycleState</MissingClass>
+    <MissingClass>org.apache.catalina.Loader</MissingClass>
+    <MissingClass>org.apache.catalina.Pipeline</MissingClass>
+    <MissingClass>org.apache.catalina.Session</MissingClass>
+    <MissingClass>org.apache.catalina.Valve</MissingClass>
+    <MissingClass>org.apache.catalina.connector.Request</MissingClass>
+    <MissingClass>org.apache.catalina.session.ManagerBase</MissingClass>
+    <MissingClass>org.apache.catalina.session.StandardSession</MissingClass>
+    <MissingClass>org.apache.catalina.util.CustomObjectInputStream</MissingClass>
+    <MissingClass>org.apache.catalina.util.LifecycleSupport</MissingClass>
+    <MissingClass>org.apache.catalina.valves.ValveBase</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.juli.logging.Log</MissingClass>
+    <MissingClass>org.apache.juli.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.apache.logging.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.logging.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.exception.ConstraintViolationException</MissingClass>
+    <MissingClass>org.imgscalr.Scalr</MissingClass>
+    <MissingClass>org.imgscalr.Scalr$Method</MissingClass>
+    <MissingClass>org.imgscalr.Scalr$Mode</MissingClass>
+    <MissingClass>org.scribe.up.profile.yahoo.YahooProfile</MissingClass>
+    <MissingClass>org.springframework.amqp.rabbit.core.RabbitTemplate</MissingClass>
+    <MissingClass>org.springframework.beans.propertyeditors.CustomDateEditor</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource$PropertiesHolder</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.InputStreamResource</MissingClass>
+    <MissingClass>org.springframework.dao.DataIntegrityViolationException</MissingClass>
+    <MissingClass>org.springframework.dao.IncorrectResultSizeDataAccessException</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specifications</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.rest.webmvc.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.springframework.data.web.PagedResourcesAssembler</MissingClass>
+    <MissingClass>org.springframework.hateoas.EntityLinks</MissingClass>
+    <MissingClass>org.springframework.hateoas.Identifiable</MissingClass>
+    <MissingClass>org.springframework.hateoas.Link</MissingClass>
+    <MissingClass>org.springframework.hateoas.Resource</MissingClass>
+    <MissingClass>org.springframework.hateoas.ResourceSupport</MissingClass>
+    <MissingClass>org.springframework.hateoas.mvc.ControllerLinkBuilder</MissingClass>
+    <MissingClass>org.springframework.hateoas.mvc.ResourceAssemblerSupport</MissingClass>
+    <MissingClass>org.springframework.http.HttpEntity</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpInputMessage</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpOutputMessage</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.client.ClientHttpRequestFactory</MissingClass>
+    <MissingClass>org.springframework.http.converter.AbstractHttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.jms.core.MessageCreator</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessagingTemplate</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.ChannelRegistration</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.MessageBrokerRegistry</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.TaskExecutorRegistration</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationDetailsSource</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.messaging.MessageSecurityMetadataSourceRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.messaging.MessageSecurityMetadataSourceRegistry$Constraint</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.socket.AbstractSecurityWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.crypto.encrypt.Encryptors</MissingClass>
+    <MissingClass>org.springframework.security.crypto.encrypt.TextEncryptor</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.NullRememberMeServices</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.RememberMeServices</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.WebAuthenticationDetailsSource</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.session.Session</MissingClass>
+    <MissingClass>org.springframework.session.web.http.MultiHttpSessionStrategy</MissingClass>
+    <MissingClass>org.springframework.session.web.socket.config.annotation.AbstractSessionWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.social.ApiBinding</MissingClass>
+    <MissingClass>org.springframework.social.NotAuthorizedException</MissingClass>
+    <MissingClass>org.springframework.social.ServiceProvider</MissingClass>
+    <MissingClass>org.springframework.social.connect.ApiAdapter</MissingClass>
+    <MissingClass>org.springframework.social.connect.Connection</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionData</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionFactoryLocator</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionKey</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionRepository</MissingClass>
+    <MissingClass>org.springframework.social.connect.DuplicateConnectionException</MissingClass>
+    <MissingClass>org.springframework.social.connect.NoSuchConnectionException</MissingClass>
+    <MissingClass>org.springframework.social.connect.NotConnectedException</MissingClass>
+    <MissingClass>org.springframework.social.connect.UserProfile</MissingClass>
+    <MissingClass>org.springframework.social.connect.UsersConnectionRepository</MissingClass>
+    <MissingClass>org.springframework.social.connect.support.OAuth2Connection</MissingClass>
+    <MissingClass>org.springframework.social.connect.support.OAuth2ConnectionFactory</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.ProviderSignInUtils</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.SignInAdapter</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.AbstractOAuth2ApiBinding</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.AbstractOAuth2ServiceProvider</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.AccessGrant</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.OAuth2Parameters</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.OAuth2Template</MissingClass>
+    <MissingClass>org.springframework.social.oauth2.OAuth2Version</MissingClass>
+    <MissingClass>org.springframework.social.support.ClientHttpRequestFactorySelector</MissingClass>
+    <MissingClass>org.springframework.social.support.URIBuilder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.LinkedMultiValueMap</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.ValidationUtils</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.client.DefaultResponseErrorHandler</MissingClass>
+    <MissingClass>org.springframework.web.client.ResourceAccessException</MissingClass>
+    <MissingClass>org.springframework.web.client.ResponseErrorHandler</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+    <MissingClass>org.springframework.web.context.WebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.WebContentInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.SockJsServiceRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompEndpointRegistry</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompWebSocketEndpointRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.WebSocketTransportRegistration</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:51:53 +0000" total_classes="616" referenced_classes="885" total_bugs="13" total_size="21966" num_packages="40" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="37.12" clock_seconds="11.00" peak_mbytes="888.19" alloc_mbytes="3540.00" gc_seconds="0.41" priority_2="12" priority_1="1">
+    <PackageStats package="edu.zipcloud.catalina.session" total_bugs="0" total_types="5" total_size="407">
+      <ClassStats class="edu.zipcloud.catalina.session.JavaSerializer" sourceFile="JavaSerializer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="edu.zipcloud.catalina.session.RedisSession" sourceFile="RedisSession.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="edu.zipcloud.catalina.session.RedisSessionHandlerValve" sourceFile="RedisSessionHandlerValve.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.zipcloud.catalina.session.RedisSessionManager" sourceFile="RedisSessionManager.java" interface="false" size="304" bugs="0"/>
+      <ClassStats class="edu.zipcloud.catalina.session.Serializer" sourceFile="Serializer.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.assemblers" total_bugs="0" total_types="9" total_size="131">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.CurrencyExchangeResourceAssembler" sourceFile="CurrencyExchangeResourceAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.ExchangeResourceAssembler" sourceFile="ExchangeResourceAssembler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.IndexResourceAssembler" sourceFile="IndexResourceAssembler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.IndustryResourceAssembler" sourceFile="IndustryResourceAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.LikeActionResourceAssembler" sourceFile="LikeActionResourceAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.MarketResourceAssembler" sourceFile="MarketResourceAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.StockProductResourceAssembler" sourceFile="StockProductResourceAssembler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.StockQuoteResourceAssembler" sourceFile="StockQuoteResourceAssembler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.assemblers.TransactionResourceAssembler" sourceFile="TransactionResourceAssembler.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.config" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.config.AnnotationConfig" sourceFile="AnnotationConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.config.WebSocketConfig" sourceFile="WebSocketConfig.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.controllers" total_bugs="0" total_types="23" total_size="424">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.AbstractProductController" sourceFile="AbstractProductController.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.AccountSummaryController" sourceFile="AccountSummaryController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.ActivityFeedController" sourceFile="ActivityFeedController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.ActivityFeedWSController" sourceFile="ActivityFeedWSController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.ChartIndexController" sourceFile="ChartIndexController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.ChartStockController" sourceFile="ChartStockController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.CloudstreetApiWCI" sourceFile="CloudstreetApiWCI.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.CloudstreetApiWCI$1" sourceFile="CloudstreetApiWCI.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.CurrencyExchangeController" sourceFile="CurrencyExchangeController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.ExchangeController" sourceFile="ExchangeController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.IndexController" sourceFile="IndexController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.IndustryController" sourceFile="IndustryController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.LikeActionController" sourceFile="LikeActionController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.MarketController" sourceFile="MarketController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.MonitoringController" sourceFile="MonitoringController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.OAuth2CloudstreetController" sourceFile="OAuth2CloudstreetController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.PropertiesController" sourceFile="PropertiesController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.SessionController" sourceFile="SessionController.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.StockProductController" sourceFile="StockProductController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.StockQuoteController" sourceFile="StockQuoteController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.TransactionController" sourceFile="TransactionController.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.UserImageController" sourceFile="UserImageController.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.controllers.UsersController" sourceFile="UsersController.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.exceptions" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.exceptions.ErrorInfo" sourceFile="ErrorInfo.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.exceptions.RestExceptionHandler" sourceFile="RestExceptionHandler.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.resources" total_bugs="0" total_types="10" total_size="75">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.ChartResource" sourceFile="ChartResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.CurrencyExchangeResource" sourceFile="CurrencyExchangeResource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.ExchangeResource" sourceFile="ExchangeResource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.IndexResource" sourceFile="IndexResource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.IndustryResource" sourceFile="IndustryResource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.LikeActionResource" sourceFile="LikeActionResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.MarketResource" sourceFile="MarketResource.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.StockProductResource" sourceFile="StockProductResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.StockQuoteResource" sourceFile="StockQuoteResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.resources.TransactionResource" sourceFile="TransactionResource.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.services" total_bugs="0" total_types="8" total_size="330">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.CurrencyExchangeServiceOnline" sourceFile="CurrencyExchangeServiceOnline.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.CurrencyExchangeServiceOnlineImpl" sourceFile="CurrencyExchangeServiceOnlineImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.IndexServiceOnline" sourceFile="IndexServiceOnline.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.IndexServiceOnlineImpl" sourceFile="IndexServiceOnlineImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.StockProductServiceOnline" sourceFile="StockProductServiceOnline.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.StockProductServiceOnlineImpl" sourceFile="StockProductServiceOnlineImpl.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.WalletServiceOnline" sourceFile="WalletServiceOnline.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.services.WalletServiceOnlineImpl" sourceFile="WalletServiceOnlineImpl.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.api.signin" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.api.signin.SignInAdapterImpl" sourceFile="SignInAdapterImpl.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.authentication" total_bugs="0" total_types="2" total_size="105">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.authentication.CustomBasicAuthenticationEntryPoint" sourceFile="CustomBasicAuthenticationEntryPoint.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.authentication.CustomOAuth2RequestFilter" sourceFile="CustomOAuth2RequestFilter.java" interface="false" size="86" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.converters" total_bugs="0" total_types="6" total_size="121">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.IdentifiableSerializer" sourceFile="IdentifiableSerializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.IdentifiableToIdConverter" sourceFile="IdentifiableToIdConverter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.YahooQuoteToCurrencyExchangeConverter" sourceFile="YahooQuoteToCurrencyExchangeConverter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.YahooQuoteToIndexConverter" sourceFile="YahooQuoteToIndexConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.YahooQuoteToStockProductConverter" sourceFile="YahooQuoteToStockProductConverter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.converters.YahooQuoteToStockQuoteConverter" sourceFile="YahooQuoteToStockQuoteConverter.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.daos" total_bugs="1" total_types="27" total_size="396" priority_2="1">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.ActionRepository" sourceFile="ActionRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.AuthorityRepository" sourceFile="AuthorityRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.ChartIndexRepository" sourceFile="ChartIndexRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.ChartStockRepository" sourceFile="ChartStockRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.CurrencyExchangeRepository" sourceFile="CurrencyExchangeRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.ExchangeRepository" sourceFile="ExchangeRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.IndexQuoteRepository" sourceFile="IndexQuoteRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepository" sourceFile="IndexRepository.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryImpl" sourceFile="IndexRepositoryImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.IndexRepositoryJpa" sourceFile="IndexRepositoryJpa.java" interface="true" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.IndustryRepository" sourceFile="IndustryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.LikeActionRepository" sourceFile="LikeActionRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.MarketRepository" sourceFile="MarketRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.QuoteRepository" sourceFile="QuoteRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialEventActionRepository" sourceFile="SocialEventActionRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserConnectionRepositoryImpl" sourceFile="SocialUserConnectionRepositoryImpl.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserConnectionRepositoryImpl$1" sourceFile="SocialUserConnectionRepositoryImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserConnectionRepositoryImpl$ServiceProviderConnectionMapper" sourceFile="SocialUserConnectionRepositoryImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserRepository" sourceFile="SocialUserRepository.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserRepositoryImpl" sourceFile="SocialUserRepositoryImpl.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.SocialUserRepositoryJpa" sourceFile="SocialUserRepositoryJpa.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.StockProductRepository" sourceFile="StockProductRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.StockQuoteRepository" sourceFile="StockQuoteRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.TransactionRepository" sourceFile="TransactionRepository.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.TransactionRepositoryImpl" sourceFile="TransactionRepositoryImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.TransactionRepositoryJpa" sourceFile="TransactionRepositoryJpa.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.daos.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.dtos" total_bugs="0" total_types="5" total_size="362">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.dtos.ActionDTO" sourceFile="ActionDTO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.dtos.MarketOverviewDTO" sourceFile="MarketOverviewDTO.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.dtos.UserActivityDTO" sourceFile="UserActivityDTO.java" interface="false" size="163" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.dtos.UserDTO" sourceFile="UserDTO.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.dtos.WalletItemDTO" sourceFile="WalletItemDTO.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.entities" total_bugs="12" total_types="34" total_size="1330" priority_2="11" priority_1="1">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.AbstractAutogeneratedId" sourceFile="AbstractAutogeneratedId.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.AbstractEnumId" sourceFile="AbstractEnumId.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.AbstractId" sourceFile="AbstractId.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.AbstractTableGeneratedId" sourceFile="AbstractTableGeneratedId.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.AccountActivity" sourceFile="AccountActivity.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Action" sourceFile="Action.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Authority" sourceFile="Authority.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Chart" sourceFile="Chart.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.ChartIndex" sourceFile="ChartIndex.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.ChartStock" sourceFile="ChartStock.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.CommentAction" sourceFile="CommentAction.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.CommentAction$Builder" sourceFile="CommentAction.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.CurrencyExchange" sourceFile="CurrencyExchange.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.CurrencyExchange$Builder" sourceFile="CurrencyExchange.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.CurrencyExchangeQuote" sourceFile="CurrencyExchangeQuote.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Exchange" sourceFile="Exchange.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Index" sourceFile="Index.java" interface="false" size="77" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.IndexQuote" sourceFile="IndexQuote.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Industry" sourceFile="Industry.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.LikeAction" sourceFile="LikeAction.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.LikeAction$Builder" sourceFile="LikeAction.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Market" sourceFile="Market.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Product" sourceFile="Product.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Quote" sourceFile="Quote.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.SocialAction" sourceFile="SocialAction.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.SocialEventAction" sourceFile="SocialEventAction.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.SocialUser" sourceFile="SocialUser.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct" sourceFile="StockProduct.java" interface="false" size="50" bugs="3" priority_2="3"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.StockProduct$Builder" sourceFile="StockProduct.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.StockQuote" sourceFile="StockQuote.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Transaction" sourceFile="Transaction.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.Transaction$Builder" sourceFile="Transaction.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.User" sourceFile="User.java" interface="false" size="149" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.entities.User$Builder" sourceFile="User.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.enums" total_bugs="0" total_types="8" total_size="135">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.MarketId" sourceFile="MarketId.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.MarketIdEditor" sourceFile="MarketIdEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.QuotesInterval" sourceFile="QuotesInterval.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.QuotesIntervalEditor" sourceFile="QuotesIntervalEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.Role" sourceFile="Role.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.SupportedCurrency" sourceFile="SupportedCurrency.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.SupportedLanguage" sourceFile="SupportedLanguage.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.enums.UserActivityType" sourceFile="UserActivityType.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.helpers" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.helpers.CommunityServiceHelper" sourceFile="CommunityServiceHelper.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.i18n" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.i18n.I18nKeys" sourceFile="I18nKeys.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.i18n.SerializableResourceBundleMessageSource" sourceFile="SerializableResourceBundleMessageSource.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.params" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.params.SortDirectionParam" sourceFile="SortDirectionParam.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.params.SortFieldParam" sourceFile="SortFieldParam.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.services" total_bugs="0" total_types="35" total_size="860">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ActionService" sourceFile="ActionService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.CommunityService" sourceFile="CommunityService.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.CommunityServiceImpl" sourceFile="CommunityServiceImpl.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.CurrencyExchangeServiceOffline" sourceFile="CurrencyExchangeServiceOffline.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.CurrencyExchangeServiceOfflineImpl" sourceFile="CurrencyExchangeServiceOfflineImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ExchangeService" sourceFile="ExchangeService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ExchangeServiceImpl" sourceFile="ExchangeServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.GenericActionService" sourceFile="GenericActionService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.GenericActionServiceImpl" sourceFile="GenericActionServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndexService" sourceFile="IndexService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndexServiceImpl" sourceFile="IndexServiceImpl.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndexServiceOffline" sourceFile="IndexServiceOffline.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndexServiceOfflineImpl" sourceFile="IndexServiceOfflineImpl.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndustryService" sourceFile="IndustryService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.IndustryServiceImpl" sourceFile="IndustryServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.LikeActionService" sourceFile="LikeActionService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.LikeActionServiceImpl" sourceFile="LikeActionServiceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.MarketService" sourceFile="MarketService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.MarketServiceImpl" sourceFile="MarketServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ProductService" sourceFile="ProductService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.QuoteService" sourceFile="QuoteService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ResourceBundleService" sourceFile="ResourceBundleService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.ResourceBundleServiceImpl" sourceFile="ResourceBundleServiceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.SocialUserService" sourceFile="SocialUserService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.SocialUserServiceImpl" sourceFile="SocialUserServiceImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockProductService" sourceFile="StockProductService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockProductServiceImpl" sourceFile="StockProductServiceImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockProductServiceOffline" sourceFile="StockProductServiceOffline.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockProductServiceOfflineImpl" sourceFile="StockProductServiceOfflineImpl.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockQuoteService" sourceFile="StockQuoteService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.StockQuoteServiceImpl" sourceFile="StockQuoteServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.TransactionService" sourceFile="TransactionService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.TransactionServiceImpl" sourceFile="TransactionServiceImpl.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.WalletServiceOffline" sourceFile="WalletServiceOffline.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.services.WalletServiceOfflineImpl" sourceFile="WalletServiceOfflineImpl.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.specifications" total_bugs="0" total_types="19" total_size="159">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications" sourceFile="ChartSpecifications.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$1" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$2" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$3" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$4" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$5" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$6" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$7" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ChartSpecifications$8" sourceFile="ChartSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications" sourceFile="ProductSpecifications.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$1" sourceFile="ProductSpecifications.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$2" sourceFile="ProductSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$3" sourceFile="ProductSpecifications.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$4" sourceFile="ProductSpecifications.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$5" sourceFile="ProductSpecifications.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$6" sourceFile="ProductSpecifications.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.ProductSpecifications$7" sourceFile="ProductSpecifications.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.UserSpecifications" sourceFile="UserSpecifications.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.specifications.UserSpecifications$1" sourceFile="UserSpecifications.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.tests" total_bugs="0" total_types="3" total_size="106">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.tests.AbstractCommonTestUser" sourceFile="AbstractCommonTestUser.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.tests.AbstractTestApi" sourceFile="AbstractTestApi.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.tests.AbstractTestCloudstreetMarket" sourceFile="AbstractTestCloudstreetMarket.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.util" total_bugs="0" total_types="8" total_size="297">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.AuthenticationUtil" sourceFile="AuthenticationUtil.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.Constants" sourceFile="Constants.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.OfflineUtil" sourceFile="OfflineUtil.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.RootPathCookieHttpSessionStrategy" sourceFile="RootPathCookieHttpSessionStrategy.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.RootPathCookieHttpSessionStrategy$MultiSessionHttpServletResponse" sourceFile="RootPathCookieHttpSessionStrategy.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.TransactionUtil" sourceFile="TransactionUtil.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.UserDetailsUtil" sourceFile="UserDetailsUtil.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.util.ValidatorUtil" sourceFile="ValidatorUtil.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.core.validators" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.validators.TransactionValidator" sourceFile="TransactionValidator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.core.validators.UserValidator" sourceFile="UserValidator.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.portal.controllers" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.portal.controllers.CloudstreetWebAppWCI" sourceFile="CloudstreetWebAppWCI.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.portal.controllers.DefaultController" sourceFile="DefaultController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.portal.controllers.InfoTagController" sourceFile="InfoTagController.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.ws.config" total_bugs="0" total_types="2" total_size="49">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.config.WebSocketConfig" sourceFile="WebSocketConfig.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.config.WebSocketSecurityConfig" sourceFile="WebSocketSecurityConfig.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.ws.controllers" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.controllers.ActivityFeedWSController" sourceFile="ActivityFeedWSController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.controllers.CloudstreetWebSocketWCI" sourceFile="CloudstreetWebSocketWCI.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.controllers.StockProductWSController" sourceFile="StockProductWSController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.cloudstreetmarket.ws.receivers" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="edu.zipcloud.cloudstreetmarket.ws.receivers.CSMReceiver" sourceFile="CSMReceiver.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.core.converters" total_bugs="0" total_types="5" total_size="200">
+      <ClassStats class="edu.zipcloud.core.converters.CsvHeader" sourceFile="CsvHeader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.converters.CsvRecord" sourceFile="CsvRecord.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.converters.YahooHistoMessageConverter" sourceFile="YahooHistoMessageConverter.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.converters.YahooIntraDayHistoMessageConverter" sourceFile="YahooIntraDayHistoMessageConverter.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.converters.YahooQuoteMessageConverter" sourceFile="YahooQuoteMessageConverter.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.zipcloud.core.util" total_bugs="0" total_types="5" total_size="72">
+      <ClassStats class="edu.zipcloud.core.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.util.ExceptionUtil" sourceFile="ExceptionUtil.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.util.ImageUtil" sourceFile="ImageUtil.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.util.SortUtil" sourceFile="SortUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.zipcloud.core.util.UserDetailsUtil" sourceFile="UserDetailsUtil.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.pool2" total_bugs="0" total_types="24" total_size="688">
+      <ClassStats class="org.apache.commons.pool2.BaseKeyedPooledObjectFactory" sourceFile="BaseKeyedPooledObjectFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.BaseObjectPool" sourceFile="BaseObjectPool.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.BasePooledObjectFactory" sourceFile="BasePooledObjectFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.KeyedObjectPool" sourceFile="KeyedObjectPool.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.KeyedPooledObjectFactory" sourceFile="KeyedPooledObjectFactory.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.ObjectPool" sourceFile="ObjectPool.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils" sourceFile="PoolUtils.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$ErodingFactor" sourceFile="PoolUtils.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$ErodingKeyedObjectPool" sourceFile="PoolUtils.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$ErodingObjectPool" sourceFile="PoolUtils.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$ErodingPerKeyKeyedObjectPool" sourceFile="PoolUtils.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$KeyedObjectPoolMinIdleTimerTask" sourceFile="PoolUtils.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$ObjectPoolMinIdleTimerTask" sourceFile="PoolUtils.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$SynchronizedKeyedObjectPool" sourceFile="PoolUtils.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$SynchronizedKeyedPooledObjectFactory" sourceFile="PoolUtils.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$SynchronizedObjectPool" sourceFile="PoolUtils.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$SynchronizedPooledObjectFactory" sourceFile="PoolUtils.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PoolUtils$TimerHolder" sourceFile="PoolUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PooledObject" sourceFile="PooledObject.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PooledObjectFactory" sourceFile="PooledObjectFactory.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.PooledObjectState" sourceFile="PooledObjectState.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.SwallowedExceptionListener" sourceFile="SwallowedExceptionListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.TrackedUse" sourceFile="TrackedUse.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.UsageTracking" sourceFile="UsageTracking.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.pool2.impl" total_bugs="0" total_types="33" total_size="2528">
+      <ClassStats class="org.apache.commons.pool2.impl.AbandonedConfig" sourceFile="AbandonedConfig.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.BaseGenericObjectPool" sourceFile="BaseGenericObjectPool.java" interface="false" size="301" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.BaseGenericObjectPool$Evictor" sourceFile="BaseGenericObjectPool.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.BaseObjectPoolConfig" sourceFile="BaseObjectPoolConfig.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.DefaultEvictionPolicy" sourceFile="DefaultEvictionPolicy.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.DefaultPooledObject" sourceFile="DefaultPooledObject.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.DefaultPooledObject$AbandonedObjectCreatedException" sourceFile="DefaultPooledObject.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.DefaultPooledObjectInfo" sourceFile="DefaultPooledObjectInfo.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.DefaultPooledObjectInfoMBean" sourceFile="DefaultPooledObjectInfoMBean.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionConfig" sourceFile="EvictionConfig.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionPolicy" sourceFile="EvictionPolicy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionTimer" sourceFile="EvictionTimer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionTimer$1" sourceFile="EvictionTimer.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionTimer$PrivilegedGetTccl" sourceFile="EvictionTimer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.EvictionTimer$PrivilegedSetTccl" sourceFile="EvictionTimer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericKeyedObjectPool" sourceFile="GenericKeyedObjectPool.java" interface="false" size="546" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericKeyedObjectPool$1" sourceFile="GenericKeyedObjectPool.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericKeyedObjectPool$ObjectDeque" sourceFile="GenericKeyedObjectPool.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig" sourceFile="GenericKeyedObjectPoolConfig.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericKeyedObjectPoolMXBean" sourceFile="GenericKeyedObjectPoolMXBean.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericObjectPool" sourceFile="GenericObjectPool.java" interface="false" size="408" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericObjectPoolConfig" sourceFile="GenericObjectPoolConfig.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.GenericObjectPoolMXBean" sourceFile="GenericObjectPoolMXBean.java" interface="true" size="36" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.InterruptibleReentrantLock" sourceFile="InterruptibleReentrantLock.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque" sourceFile="LinkedBlockingDeque.java" interface="false" size="372" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque$1" sourceFile="LinkedBlockingDeque.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque$AbstractItr" sourceFile="LinkedBlockingDeque.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque$DescendingItr" sourceFile="LinkedBlockingDeque.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque$Itr" sourceFile="LinkedBlockingDeque.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.LinkedBlockingDeque$Node" sourceFile="LinkedBlockingDeque.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.PoolImplUtils" sourceFile="PoolImplUtils.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.PooledSoftReference" sourceFile="PooledSoftReference.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.impl.SoftReferenceObjectPool" sourceFile="SoftReferenceObjectPool.java" interface="false" size="157" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.commons.pool2.proxy" total_bugs="0" total_types="8" total_size="151">
+      <ClassStats class="org.apache.commons.pool2.proxy.BaseProxyHandler" sourceFile="BaseProxyHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.CglibProxyHandler" sourceFile="CglibProxyHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.CglibProxySource" sourceFile="CglibProxySource.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.JdkProxyHandler" sourceFile="JdkProxyHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.JdkProxySource" sourceFile="JdkProxySource.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.ProxiedKeyedObjectPool" sourceFile="ProxiedKeyedObjectPool.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.ProxiedObjectPool" sourceFile="ProxiedObjectPool.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.commons.pool2.proxy.ProxySource" sourceFile="ProxySource.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.connect" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="org.springframework.social.connect.YahooUserProfile" sourceFile="YahooUserProfile.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.yahoo.api" total_bugs="0" total_types="5" total_size="37">
+      <ClassStats class="org.springframework.social.yahoo.api.ContactsOperations" sourceFile="ContactsOperations.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.FinancialOperations" sourceFile="FinancialOperations.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.ProfilesOperations" sourceFile="ProfilesOperations.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.Yahoo2" sourceFile="Yahoo2.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.YahooAPIType" sourceFile="YahooAPIType.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.yahoo.api.impl" total_bugs="0" total_types="5" total_size="154">
+      <ClassStats class="org.springframework.social.yahoo.api.impl.AbstractYahooOperations" sourceFile="AbstractYahooOperations.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.impl.ContactsTemplate" sourceFile="ContactsTemplate.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.impl.FinancialTemplate" sourceFile="FinancialTemplate.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.impl.ProfileTemplate" sourceFile="ProfileTemplate.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.api.impl.Yahoo2Template" sourceFile="Yahoo2Template.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.yahoo.connect" total_bugs="0" total_types="4" total_size="100">
+      <ClassStats class="org.springframework.social.yahoo.connect.YahooOAuth2Adapter" sourceFile="YahooOAuth2Adapter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.connect.YahooOAuth2ConnectionFactory" sourceFile="YahooOAuth2ConnectionFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.connect.YahooOAuth2ServiceProvider" sourceFile="YahooOAuth2ServiceProvider.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.connect.YahooOAuth2Template" sourceFile="YahooOAuth2Template.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.yahoo.filter" total_bugs="0" total_types="13" total_size="327">
+      <ClassStats class="org.springframework.social.yahoo.filter.ContactsFilter" sourceFile="ContactsFilter.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.ContactsRequestCustomizer" sourceFile="ContactsRequestCustomizer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.CustomizerToken" sourceFile="CustomizerToken.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.DisplayFilter" sourceFile="DisplayFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.DisplayFilter$Display" sourceFile="DisplayFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SearchFilter" sourceFile="SearchFilter.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SearchFilter$SearchFilterConstraint" sourceFile="SearchFilter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SearchFilter$SearchableField" sourceFile="SearchFilter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SortFields" sourceFile="SortFields.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SortFields$SortableField" sourceFile="SortFields.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SortOrder" sourceFile="SortOrder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.SortOrder$Order" sourceFile="SortOrder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.filter.TokenUtils" sourceFile="TokenUtils.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.yahoo.module" total_bugs="0" total_types="55" total_size="1096">
+      <ClassStats class="org.springframework.social.yahoo.module.AddressField" sourceFile="AddressField.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.AddressFieldValue" sourceFile="AddressFieldValue.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.AddressFieldValueMixin" sourceFile="AddressFieldValueMixin.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Categories" sourceFile="Categories.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.CategoriesMixin" sourceFile="CategoriesMixin.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.CategoriesWrapper" sourceFile="CategoriesWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.CategoriesWrapperMixin" sourceFile="CategoriesWrapperMixin.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Category" sourceFile="Category.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.CategoryMixin" sourceFile="CategoryMixin.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoMovingAverage" sourceFile="ChartHistoMovingAverage.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoMovingAverageEditor" sourceFile="ChartHistoMovingAverageEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoSize" sourceFile="ChartHistoSize.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoSizeEditor" sourceFile="ChartHistoSizeEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoTimeSpan" sourceFile="ChartHistoTimeSpan.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartHistoTimeSpanEditor" sourceFile="ChartHistoTimeSpanEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartType" sourceFile="ChartType.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ChartTypeEditor" sourceFile="ChartTypeEditor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Contact" sourceFile="Contact.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactFieldUtils" sourceFile="ContactFieldUtils.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactMixin" sourceFile="ContactMixin.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactWrapper" sourceFile="ContactWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactWrapperMixin" sourceFile="ContactWrapperMixin.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Contacts" sourceFile="Contacts.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactsMixin" sourceFile="ContactsMixin.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactsWrapper" sourceFile="ContactsWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.ContactsWrapperMixin" sourceFile="ContactsWrapperMixin.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.DateField" sourceFile="DateField.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.DateFieldValue" sourceFile="DateFieldValue.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.DateFieldValueMixin" sourceFile="DateFieldValueMixin.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Field" sourceFile="Field.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldFlag" sourceFile="FieldFlag.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldMixin" sourceFile="FieldMixin.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldType" sourceFile="FieldType.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldTypeDeserializer" sourceFile="FieldTypeDeserializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldValue" sourceFile="FieldValue.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.FieldValueMixin" sourceFile="FieldValueMixin.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Image" sourceFile="Image.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.NameField" sourceFile="NameField.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.NameFieldValue" sourceFile="NameFieldValue.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.NameFieldValueMixin" sourceFile="NameFieldValueMixin.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.Profile" sourceFile="Profile.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.QuoteWrapper" sourceFile="QuoteWrapper.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.SingleFieldValue" sourceFile="SingleFieldValue.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.SingleFieldValueMixin" sourceFile="SingleFieldValueMixin.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.SingleValueField" sourceFile="SingleValueField.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.TinyUserCardWrapper" sourceFile="TinyUserCardWrapper.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.TinyUsercard" sourceFile="TinyUsercard.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooAccessGrant" sourceFile="YahooAccessGrant.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooModule" sourceFile="YahooModule.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooObject" sourceFile="YahooObject.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooObjectMixin" sourceFile="YahooObjectMixin.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooQuote" sourceFile="YahooQuote.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooQuote$Builder" sourceFile="YahooQuote.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooTypeIdResolver" sourceFile="YahooTypeIdResolver.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.springframework.social.yahoo.module.YahooTypeResolver" sourceFile="YahooTypeResolver.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.jedis" total_bugs="0" total_types="211" total_size="10304">
+      <ClassStats class="redis.clients.jedis.AdvancedBinaryJedisCommands" sourceFile="AdvancedBinaryJedisCommands.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.AdvancedJedisCommands" sourceFile="AdvancedJedisCommands.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BasicCommands" sourceFile="BasicCommands.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BasicRedisPipeline" sourceFile="BasicRedisPipeline.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryClient" sourceFile="BinaryClient.java" interface="false" size="853" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryClient$1" sourceFile="BinaryClient.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryClient$LIST_POSITION" sourceFile="BinaryClient.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedis" sourceFile="BinaryJedis.java" interface="false" size="928" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedisCommands" sourceFile="BinaryJedisCommands.java" interface="true" size="102" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryJedisPubSub" sourceFile="BinaryJedisPubSub.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryRedisPipeline" sourceFile="BinaryRedisPipeline.java" interface="true" size="98" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryScriptingCommands" sourceFile="BinaryScriptingCommands.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BinaryShardedJedis" sourceFile="BinaryShardedJedis.java" interface="false" size="341" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BitOP" sourceFile="BitOP.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BitPosParams" sourceFile="BitPosParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Builder" sourceFile="Builder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory" sourceFile="BuilderFactory.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$1" sourceFile="BuilderFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$10" sourceFile="BuilderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$11" sourceFile="BuilderFactory.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$12" sourceFile="BuilderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$13" sourceFile="BuilderFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$14" sourceFile="BuilderFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$2" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$3" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$4" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$5" sourceFile="BuilderFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$6" sourceFile="BuilderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$7" sourceFile="BuilderFactory.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$8" sourceFile="BuilderFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.BuilderFactory$9" sourceFile="BuilderFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Client" sourceFile="Client.java" interface="false" size="685" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ClusterCommands" sourceFile="ClusterCommands.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ClusterPipeline" sourceFile="ClusterPipeline.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Commands" sourceFile="Commands.java" interface="true" size="144" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Connection" sourceFile="Connection.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.DebugParams" sourceFile="DebugParams.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.HostAndPort" sourceFile="HostAndPort.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Jedis" sourceFile="Jedis.java" interface="false" size="981" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster" sourceFile="JedisCluster.java" interface="false" size="273" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$1" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$10" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$100" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$101" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$102" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$103" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$104" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$105" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$106" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$107" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$108" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$109" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$11" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$110" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$111" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$112" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$113" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$114" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$115" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$116" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$117" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$118" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$119" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$12" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$120" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$121" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$122" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$123" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$124" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$125" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$13" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$14" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$15" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$16" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$17" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$18" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$19" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$2" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$20" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$21" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$22" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$23" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$24" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$25" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$26" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$27" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$28" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$29" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$3" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$30" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$31" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$32" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$33" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$34" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$35" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$36" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$37" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$38" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$39" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$4" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$40" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$41" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$42" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$43" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$44" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$45" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$46" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$47" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$48" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$49" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$5" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$50" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$51" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$52" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$53" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$54" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$55" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$56" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$57" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$58" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$59" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$6" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$60" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$61" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$62" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$63" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$64" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$65" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$66" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$67" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$68" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$69" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$7" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$70" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$71" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$72" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$73" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$74" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$75" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$76" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$77" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$78" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$79" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$8" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$80" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$81" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$82" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$83" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$84" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$85" sourceFile="JedisCluster.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$86" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$87" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$88" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$89" sourceFile="JedisCluster.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$9" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$90" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$91" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$92" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$93" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$94" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$95" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$96" sourceFile="JedisCluster.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$97" sourceFile="JedisCluster.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$98" sourceFile="JedisCluster.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCluster$99" sourceFile="JedisCluster.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisClusterCommand" sourceFile="JedisClusterCommand.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisClusterConnectionHandler" sourceFile="JedisClusterConnectionHandler.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisCommands" sourceFile="JedisCommands.java" interface="true" size="107" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisFactory" sourceFile="JedisFactory.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisMonitor" sourceFile="JedisMonitor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPool" sourceFile="JedisPool.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPoolConfig" sourceFile="JedisPoolConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisPubSub" sourceFile="JedisPubSub.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisRandomConnectionHandler" sourceFile="JedisRandomConnectionHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisSentinelPool" sourceFile="JedisSentinelPool.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisSentinelPool$JedisPubSubAdapter" sourceFile="JedisSentinelPool.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisSentinelPool$MasterListener" sourceFile="JedisSentinelPool.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisSentinelPool$MasterListener$1" sourceFile="JedisSentinelPool.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisShardInfo" sourceFile="JedisShardInfo.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.JedisSlotBasedConnectionHandler" sourceFile="JedisSlotBasedConnectionHandler.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.MultiKeyBinaryCommands" sourceFile="MultiKeyBinaryCommands.java" interface="true" size="36" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.MultiKeyBinaryRedisPipeline" sourceFile="MultiKeyBinaryRedisPipeline.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.MultiKeyCommands" sourceFile="MultiKeyCommands.java" interface="true" size="38" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.MultiKeyCommandsPipeline" sourceFile="MultiKeyCommandsPipeline.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.MultiKeyPipelineBase" sourceFile="MultiKeyPipelineBase.java" interface="false" size="275" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline" sourceFile="Pipeline.java" interface="false" size="382" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline$1" sourceFile="Pipeline.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Pipeline$MultiResponseBuilder" sourceFile="Pipeline.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.PipelineBase" sourceFile="PipelineBase.java" interface="false" size="712" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.PipelineBlock" sourceFile="PipelineBlock.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol" sourceFile="Protocol.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol$Command" sourceFile="Protocol.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Protocol$Keyword" sourceFile="Protocol.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Queable" sourceFile="Queable.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.RedisPipeline" sourceFile="RedisPipeline.java" interface="true" size="90" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Response" sourceFile="Response.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ScanParams" sourceFile="ScanParams.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ScanResult" sourceFile="ScanResult.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ScriptingCommands" sourceFile="ScriptingCommands.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.SentinelCommands" sourceFile="SentinelCommands.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedis" sourceFile="ShardedJedis.java" interface="false" size="361" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPipeline" sourceFile="ShardedJedisPipeline.java" interface="false" size="277" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPipeline$FutureResult" sourceFile="ShardedJedisPipeline.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPool" sourceFile="ShardedJedisPool.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ShardedJedisPool$ShardedJedisFactory" sourceFile="ShardedJedisPool.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.SortingParams" sourceFile="SortingParams.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Transaction" sourceFile="Transaction.java" interface="false" size="372" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.TransactionBlock" sourceFile="TransactionBlock.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.Tuple" sourceFile="Tuple.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ZParams" sourceFile="ZParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.ZParams$Aggregate" sourceFile="ZParams.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.jedis.exceptions" total_bugs="0" total_types="8" total_size="100">
+      <ClassStats class="redis.clients.jedis.exceptions.JedisAskDataException" sourceFile="JedisAskDataException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisClusterException" sourceFile="JedisClusterException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisClusterMaxRedirectionsException" sourceFile="JedisClusterMaxRedirectionsException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisConnectionException" sourceFile="JedisConnectionException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisDataException" sourceFile="JedisDataException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisException" sourceFile="JedisException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisMovedDataException" sourceFile="JedisMovedDataException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="redis.clients.jedis.exceptions.JedisRedirectionException" sourceFile="JedisRedirectionException.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="redis.clients.util" total_bugs="0" total_types="16" total_size="638">
+      <ClassStats class="redis.clients.util.ClusterNodeInformation" sourceFile="ClusterNodeInformation.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="redis.clients.util.ClusterNodeInformationParser" sourceFile="ClusterNodeInformationParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="redis.clients.util.Hashing" sourceFile="Hashing.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="redis.clients.util.Hashing$1" sourceFile="Hashing.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap" sourceFile="JedisByteHashMap.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap$ByteArrayWrapper" sourceFile="JedisByteHashMap.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisByteHashMap$JedisByteEntry" sourceFile="JedisByteHashMap.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="redis.clients.util.JedisClusterCRC16" sourceFile="JedisClusterCRC16.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="redis.clients.util.MurmurHash" sourceFile="MurmurHash.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="redis.clients.util.Pool" sourceFile="Pool.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="redis.clients.util.RedisInputStream" sourceFile="RedisInputStream.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="redis.clients.util.RedisOutputStream" sourceFile="RedisOutputStream.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="redis.clients.util.SafeEncoder" sourceFile="SafeEncoder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="redis.clients.util.ShardInfo" sourceFile="ShardInfo.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="redis.clients.util.Sharded" sourceFile="Sharded.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="redis.clients.util.Slowlog" sourceFile="Slowlog.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="546" invocations="4407" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="6983" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="522" invocations="5513" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="6006" standardDeviationMicrosecondsPerInvocation="225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="452" invocations="5545" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="7279" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="443" invocations="5462" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="5105" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="409" invocations="7115" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="8266" standardDeviationMicrosecondsPerInvocation="186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="408" invocations="2400" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="39918" standardDeviationMicrosecondsPerInvocation="891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="367" invocations="5514" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="8835" standardDeviationMicrosecondsPerInvocation="148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="319" invocations="885" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="32190" standardDeviationMicrosecondsPerInvocation="1299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="303" invocations="4676" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="2687" standardDeviationMicrosecondsPerInvocation="141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="276" invocations="885" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="7395" standardDeviationMicrosecondsPerInvocation="761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="229" invocations="6401" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="2890" standardDeviationMicrosecondsPerInvocation="103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="170" invocations="616" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="13138" standardDeviationMicrosecondsPerInvocation="1307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="167" invocations="83214" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1069" standardDeviationMicrosecondsPerInvocation="8"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="157" invocations="2417" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="16514" standardDeviationMicrosecondsPerInvocation="338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="141" invocations="6643" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="21963" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="125" invocations="616" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="5926" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="124" invocations="616" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="7339" standardDeviationMicrosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="121" invocations="616" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="5135" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="121" invocations="5513" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="1614" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="119" invocations="616" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="4103" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="107" invocations="1121" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="13299" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="107" invocations="885" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2046" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="105" invocations="616" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="34896" standardDeviationMicrosecondsPerInvocation="1425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="97" invocations="616" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="39892" standardDeviationMicrosecondsPerInvocation="1618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="96" invocations="885" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="3893" standardDeviationMicrosecondsPerInvocation="271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="86" invocations="616" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="3239" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="83" invocations="885" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="2207" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="77" invocations="4407" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="1475" standardDeviationMicrosecondsPerInvocation="37"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="75" invocations="616" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="15493" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="74" invocations="616" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="4939" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="71" invocations="885" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="3020" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="69" invocations="616" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="2341" standardDeviationMicrosecondsPerInvocation="234"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="69" invocations="616" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="3013" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="68" invocations="885" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="4050" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="67" invocations="616" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="2661" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="66" invocations="616" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="2357" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="65" invocations="4344" avgMicrosecondsPerInvocation="15" maxMicrosecondsPerInvocation="810" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="62" invocations="885" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="7000" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="61" invocations="616" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="2161" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="60" invocations="616" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="5906" standardDeviationMicrosecondsPerInvocation="263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="60" invocations="1960" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="2698" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessControlFlow" totalMilliseconds="59" invocations="616" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="46896" standardDeviationMicrosecondsPerInvocation="1887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonnullReturnValues" totalMilliseconds="56" invocations="616" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="4404" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="55" invocations="616" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2161" standardDeviationMicrosecondsPerInvocation="230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="55" invocations="616" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2357" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="54" invocations="616" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="2162" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="54" invocations="616" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="2021" standardDeviationMicrosecondsPerInvocation="201"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

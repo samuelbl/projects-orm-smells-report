@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092955000" analysisTimestamp="1597092957119" release="">
+  <Project projectName="repositorios/cdue_tv-shows-rest-vs-graphql-api">
+    <Jar>repositorios/cdue_tv-shows-rest-vs-graphql-api</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="44">
+    <MissingClass>com.coxautodev.graphql.tools.GraphQLMutationResolver</MissingClass>
+    <MissingClass>com.coxautodev.graphql.tools.GraphQLQueryResolver</MissingClass>
+    <MissingClass>com.coxautodev.graphql.tools.GraphQLResolver</MissingClass>
+    <MissingClass>com.coxautodev.graphql.tools.SchemaParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.type.TypeFactory</MissingClass>
+    <MissingClass>com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>graphql.ExecutionInput</MissingClass>
+    <MissingClass>graphql.ExecutionInput$Builder</MissingClass>
+    <MissingClass>graphql.ExecutionResult</MissingClass>
+    <MissingClass>graphql.GraphQL</MissingClass>
+    <MissingClass>graphql.GraphQL$Builder</MissingClass>
+    <MissingClass>graphql.GraphQLError</MissingClass>
+    <MissingClass>graphql.GraphQLException</MissingClass>
+    <MissingClass>graphql.Scalars</MissingClass>
+    <MissingClass>graphql.execution.instrumentation.ChainedInstrumentation</MissingClass>
+    <MissingClass>graphql.execution.instrumentation.tracing.TracingInstrumentation</MissingClass>
+    <MissingClass>graphql.schema.DataFetchingEnvironment</MissingClass>
+    <MissingClass>graphql.schema.GraphQLArgument</MissingClass>
+    <MissingClass>graphql.schema.GraphQLFieldDefinition$Builder</MissingClass>
+    <MissingClass>graphql.schema.GraphQLObjectType</MissingClass>
+    <MissingClass>graphql.schema.GraphQLObjectType$Builder</MissingClass>
+    <MissingClass>graphql.schema.GraphQLSchema</MissingClass>
+    <MissingClass>graphql.schema.GraphQLSchema$Builder</MissingClass>
+    <MissingClass>graphql.servlet.DefaultGraphQLErrorHandler</MissingClass>
+    <MissingClass>graphql.servlet.GenericGraphQLError</MissingClass>
+    <MissingClass>io.reactivex.BackpressureStrategy</MissingClass>
+    <MissingClass>io.reactivex.Observable</MissingClass>
+    <MissingClass>io.reactivex.ObservableEmitter</MissingClass>
+    <MissingClass>io.reactivex.observables.ConnectableObservable</MissingClass>
+    <MissingClass>org.reactivestreams.Publisher</MissingClass>
+    <MissingClass>org.reactivestreams.Subscriber</MissingClass>
+    <MissingClass>org.reactivestreams.Subscription</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessageHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessageSendingOperations</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.MessageBrokerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompEndpointRegistry</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompWebSocketEndpointRegistration</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:55:55 +0000" total_classes="59" referenced_classes="179" total_bugs="0" total_size="1506" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.16" clock_seconds="3.11" peak_mbytes="301.32" alloc_mbytes="3540.00" gc_seconds="0.15">
+    <PackageStats package="com.cdue.tvshows" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.cdue.tvshows.TvShowsRestVsGraphQlApiApplication" sourceFile="TvShowsRestVsGraphQlApiApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.graphql" total_bugs="0" total_types="2" total_size="59">
+      <ClassStats class="com.cdue.tvshows.graphql.SchemaBuilder" sourceFile="SchemaBuilder.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.WebSocketConfig" sourceFile="WebSocketConfig.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.graphql.controller" total_bugs="0" total_types="2" total_size="51">
+      <ClassStats class="com.cdue.tvshows.graphql.controller.SubscriptionWebSocketController" sourceFile="SubscriptionWebSocketController.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.controller.SubscriptionWebSocketController$1" sourceFile="SubscriptionWebSocketController.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.graphql.error" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.cdue.tvshows.graphql.error.CustomGraphQLErrorHandler" sourceFile="CustomGraphQLErrorHandler.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.graphql.resolvers" total_bugs="0" total_types="5" total_size="56">
+      <ClassStats class="com.cdue.tvshows.graphql.resolvers.EpisodeResolver" sourceFile="EpisodeResolver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.resolvers.MutationResolver" sourceFile="MutationResolver.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.resolvers.QueryResolver" sourceFile="QueryResolver.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.resolvers.SeasonResolver" sourceFile="SeasonResolver.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.graphql.resolvers.TvShowResolver" sourceFile="TvShowResolver.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.graphql.util" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="com.cdue.tvshows.graphql.util.GraphqlUtils" sourceFile="GraphqlUtils.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.model" total_bugs="0" total_types="6" total_size="255">
+      <ClassStats class="com.cdue.tvshows.model.Actor" sourceFile="Actor.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.model.AverageRating" sourceFile="AverageRating.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.model.Episode" sourceFile="Episode.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.model.Season" sourceFile="Season.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.model.TvShow" sourceFile="TvShow.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.model.Vote" sourceFile="Vote.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.repository" total_bugs="0" total_types="5" total_size="14">
+      <ClassStats class="com.cdue.tvshows.repository.ActorRepository" sourceFile="ActorRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.repository.EpisodeRepository" sourceFile="EpisodeRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.repository.SeasonRepository" sourceFile="SeasonRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.repository.TvShowRepository" sourceFile="TvShowRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.repository.VoteRepository" sourceFile="VoteRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cdue.tvshows.rest.controller" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.cdue.tvshows.rest.controller.ActorController" sourceFile="ActorController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cdue.tvshows.rest.controller.TvShowController" sourceFile="TvShowController.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="284" invocations="1095" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="25834" standardDeviationMicrosecondsPerInvocation="960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="144" invocations="179" avgMicrosecondsPerInvocation="806" maxMicrosecondsPerInvocation="10714" standardDeviationMicrosecondsPerInvocation="1500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="115" invocations="179" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="5082" standardDeviationMicrosecondsPerInvocation="1022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="113" invocations="340" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="8376" standardDeviationMicrosecondsPerInvocation="913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="110" invocations="336" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="7148" standardDeviationMicrosecondsPerInvocation="733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="100" invocations="791" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="2586" standardDeviationMicrosecondsPerInvocation="198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="99" invocations="341" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="9089" standardDeviationMicrosecondsPerInvocation="875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="93" invocations="330" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="5559" standardDeviationMicrosecondsPerInvocation="524"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="88" invocations="335" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="6864" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="86" invocations="1104" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="688" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="77" invocations="336" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="9128" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="64" invocations="226" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="5820" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="267" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="14071" standardDeviationMicrosecondsPerInvocation="886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="52" invocations="362" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="26556" standardDeviationMicrosecondsPerInvocation="1392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="47" invocations="179" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="2665" standardDeviationMicrosecondsPerInvocation="460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="946" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="980" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="179" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="4465" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="33" invocations="179" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="15193" standardDeviationMicrosecondsPerInvocation="1141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="32" invocations="179" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="1788" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="31" invocations="179" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="5548" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="179" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2088" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="179" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2027" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="28" invocations="179" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="7285" standardDeviationMicrosecondsPerInvocation="748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="27" invocations="336" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="1691" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="25" invocations="59" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="6297" standardDeviationMicrosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="23" invocations="4961" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1017" standardDeviationMicrosecondsPerInvocation="22"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="22" invocations="51" avgMicrosecondsPerInvocation="449" maxMicrosecondsPerInvocation="3095" standardDeviationMicrosecondsPerInvocation="721"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="20" invocations="25" avgMicrosecondsPerInvocation="818" maxMicrosecondsPerInvocation="2419" standardDeviationMicrosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="59" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="1669" standardDeviationMicrosecondsPerInvocation="393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="19" invocations="59" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="3172" standardDeviationMicrosecondsPerInvocation="436"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

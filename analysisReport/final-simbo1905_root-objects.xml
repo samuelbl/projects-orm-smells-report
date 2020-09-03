@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597094078000" analysisTimestamp="1597094079288" release="">
+  <Project projectName="repositorios/simbo1905_root-objects">
+    <Jar>repositorios/simbo1905_root-objects</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.ContractRespository">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.ContractRespository" sourcefile="ContractRespository.java" sourcepath="com/github/simbo1905/rootobjects/contract/ContractRespository.java"/>
+    </Class>
+    <Method classname="com.github.simbo1905.rootobjects.contract.ContractRespository" name="findByName" signature="(Ljava/lang/String;)Lcom/github/simbo1905/rootobjects/contract/Contract;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.ContractRespository" sourcefile="ContractRespository.java" sourcepath="com/github/simbo1905/rootobjects/contract/ContractRespository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.Delivery">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.Delivery" start="23" end="71" sourcefile="Delivery.java" sourcepath="com/github/simbo1905/rootobjects/contract/Delivery.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.Delivery" name="contract" signature="Lcom/github/simbo1905/rootobjects/contract/Contract;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.Delivery" sourcefile="Delivery.java" sourcepath="com/github/simbo1905/rootobjects/contract/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" start="26" end="47" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" name="contract" signature="Lcom/github/simbo1905/rootobjects/contract/Contract;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" start="26" end="47" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" name="delivery" signature="Lcom/github/simbo1905/rootobjects/contract/Delivery;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" start="26" end="47" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" name="lineItem" signature="Lcom/github/simbo1905/rootobjects/contract/LineItem;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" sourcefile="DeliveryLineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/DeliveryLineItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.LineItem">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.LineItem" start="24" end="66" sourcefile="LineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/LineItem.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.LineItem" name="contract" signature="Lcom/github/simbo1905/rootobjects/contract/Contract;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.LineItem" sourcefile="LineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/LineItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.contract.LineItem">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.LineItem" start="24" end="66" sourcefile="LineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/LineItem.java"/>
+    </Class>
+    <Field classname="com.github.simbo1905.rootobjects.contract.LineItem" name="product" signature="Lcom/github/simbo1905/rootobjects/product/Product;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.contract.LineItem" sourcefile="LineItem.java" sourcepath="com/github/simbo1905/rootobjects/contract/LineItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.github.simbo1905.rootobjects.product.ProductRespository">
+      <SourceLine classname="com.github.simbo1905.rootobjects.product.ProductRespository" sourcefile="ProductRespository.java" sourcepath="com/github/simbo1905/rootobjects/product/ProductRespository.java"/>
+    </Class>
+    <Method classname="com.github.simbo1905.rootobjects.product.ProductRespository" name="findBySku" signature="(Ljava/lang/String;)Lcom/github/simbo1905/rootobjects/product/Product;" isStatic="false">
+      <SourceLine classname="com.github.simbo1905.rootobjects.product.ProductRespository" sourcefile="ProductRespository.java" sourcepath="com/github/simbo1905/rootobjects/product/ProductRespository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:14:38 +0000" total_classes="10" referenced_classes="36" total_bugs="8" total_size="253" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.29" clock_seconds="1.50" peak_mbytes="191.68" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="8">
+    <PackageStats package="com.github.simbo1905.rootobjects" total_bugs="0" total_types="1" total_size="40">
+      <ClassStats class="com.github.simbo1905.rootobjects.Money" sourceFile="Money.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.simbo1905.rootobjects.contract" total_bugs="7" total_types="6" total_size="178" priority_2="7">
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.Contract" sourceFile="Contract.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.ContractRespository" sourceFile="ContractRespository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.ContractService" sourceFile="ContractService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.Delivery" sourceFile="Delivery.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.DeliveryLineItem" sourceFile="DeliveryLineItem.java" interface="false" size="21" bugs="3" priority_2="3"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.contract.LineItem" sourceFile="LineItem.java" interface="false" size="30" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.github.simbo1905.rootobjects.product" total_bugs="1" total_types="3" total_size="35" priority_2="1">
+      <ClassStats class="com.github.simbo1905.rootobjects.product.Product" sourceFile="Product.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.product.ProductRespository" sourceFile="ProductRespository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.github.simbo1905.rootobjects.product.ProductService" sourceFile="ProductService.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="236" invocations="507" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="21208" standardDeviationMicrosecondsPerInvocation="1325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="36" avgMicrosecondsPerInvocation="2251" maxMicrosecondsPerInvocation="12000" standardDeviationMicrosecondsPerInvocation="3011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="56" invocations="508" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="2736" standardDeviationMicrosecondsPerInvocation="130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="55" invocations="198" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="4122" standardDeviationMicrosecondsPerInvocation="467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="36" avgMicrosecondsPerInvocation="1445" maxMicrosecondsPerInvocation="5443" standardDeviationMicrosecondsPerInvocation="1632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="451" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2434" standardDeviationMicrosecondsPerInvocation="188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="64" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="14506" standardDeviationMicrosecondsPerInvocation="1842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="67" avgMicrosecondsPerInvocation="485" maxMicrosecondsPerInvocation="26043" standardDeviationMicrosecondsPerInvocation="3146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="36" avgMicrosecondsPerInvocation="824" maxMicrosecondsPerInvocation="6022" standardDeviationMicrosecondsPerInvocation="1307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="36" avgMicrosecondsPerInvocation="766" maxMicrosecondsPerInvocation="6766" standardDeviationMicrosecondsPerInvocation="1240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="27" invocations="65" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="4822" standardDeviationMicrosecondsPerInvocation="705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="25" invocations="65" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="3331" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="23" invocations="66" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="9089" standardDeviationMicrosecondsPerInvocation="1102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="23" invocations="65" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="9127" standardDeviationMicrosecondsPerInvocation="1114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="23" invocations="66" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="8224" standardDeviationMicrosecondsPerInvocation="1001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="36" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="9471" standardDeviationMicrosecondsPerInvocation="1563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="20" invocations="65" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="2371" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="36" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="2493" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="36" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="5537" standardDeviationMicrosecondsPerInvocation="930"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

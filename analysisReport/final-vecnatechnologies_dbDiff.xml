@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596950244000" analysisTimestamp="1596950245700" release="">
+  <Project projectName="repositorios/vecnatechnologies_dbDiff">
+    <Jar>repositorios/vecnatechnologies_dbDiff</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>com.google.common.base.Function</MissingClass>
+    <MissingClass>com.google.common.base.Joiner</MissingClass>
+    <MissingClass>com.google.common.base.Objects</MissingClass>
+    <MissingClass>com.google.common.collect.ArrayListMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.Collections2</MissingClass>
+    <MissingClass>com.google.common.collect.HashMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableListMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableListMultimap$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMultimap$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableSet</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Multimap</MissingClass>
+    <MissingClass>com.google.common.collect.SetMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.Sets</MissingClass>
+    <MissingClass>org.apache.commons.collections.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.dialect.Dialect</MissingClass>
+    <MissingClass>org.hibernate.mapping.Column</MissingClass>
+    <MissingClass>org.hibernate.mapping.Constraint</MissingClass>
+    <MissingClass>org.hibernate.mapping.ForeignKey</MissingClass>
+    <MissingClass>org.hibernate.mapping.Index</MissingClass>
+    <MissingClass>org.hibernate.mapping.PrimaryKey</MissingClass>
+    <MissingClass>org.hibernate.mapping.Table</MissingClass>
+    <MissingClass>org.hibernate.mapping.Value</MissingClass>
+    <MissingClass>org.hibernate.type.BooleanType</MissingClass>
+    <MissingClass>org.hibernate.type.Type</MissingClass>
+    <MissingClass>org.hibernate.type.descriptor.sql.BitTypeDescriptor</MissingClass>
+    <MissingClass>org.hibernate.type.descriptor.sql.BooleanTypeDescriptor</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:17:24 +0000" total_classes="39" referenced_classes="120" total_bugs="0" total_size="1089" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.62" clock_seconds="2.65" peak_mbytes="293.00" alloc_mbytes="3540.00" gc_seconds="0.14">
+    <PackageStats package="com.vecna.dbDiff.builder" total_bugs="0" total_types="5" total_size="147">
+      <ClassStats class="com.vecna.dbDiff.builder.RelationalDatabaseBuilder" sourceFile="RelationalDatabaseBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.builder.RelationalDatabaseBuilderImpl" sourceFile="RelationalDatabaseBuilderImpl.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.builder.RelationalDatabaseBuilderImpl$1" sourceFile="RelationalDatabaseBuilderImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.builder.RelationalDatabaseBuilderImpl$1$1" sourceFile="RelationalDatabaseBuilderImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.builder.RelationalDatabaseReadException" sourceFile="RelationalDatabaseReadException.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.business.catalogSchema" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.vecna.dbDiff.business.catalogSchema.CatalogSchemaResolver" sourceFile="CatalogSchemaResolver.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.business.catalogSchema.impl" total_bugs="0" total_types="4" total_size="37">
+      <ClassStats class="com.vecna.dbDiff.business.catalogSchema.impl.DefaultCatalogSchemaResolverFactory" sourceFile="DefaultCatalogSchemaResolverFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.catalogSchema.impl.DelegatingByDriverCatalogSchemaResolverImpl" sourceFile="DelegatingByDriverCatalogSchemaResolverImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.catalogSchema.impl.SQLServerCatalogSchemaResolver" sourceFile="SQLServerCatalogSchemaResolver.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.catalogSchema.impl.SimpleCatalogSchemaResolver" sourceFile="SimpleCatalogSchemaResolver.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.business.dbCompare.impl" total_bugs="0" total_types="8" total_size="300">
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.ForeignKeyCompareError" sourceFile="ForeignKeyCompareError.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbCompareError" sourceFile="RdbCompareError.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbCompareErrorType" sourceFile="RdbCompareErrorType.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbDiffEngine" sourceFile="RdbDiffEngine.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbDiffEngine$1" sourceFile="RdbDiffEngine.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbDiffEngine$2" sourceFile="RdbDiffEngine.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbDiffEngine$3" sourceFile="RdbDiffEngine.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.business.dbCompare.impl.RdbFoundOnSide" sourceFile="RdbFoundOnSide.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.hibernate" total_bugs="0" total_types="7" total_size="240">
+      <ClassStats class="com.vecna.dbDiff.hibernate.DbNameTruncateInfo" sourceFile="DbNameTruncateInfo.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.DbSpecificMappingInfo" sourceFile="DbSpecificMappingInfo.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.HibernateMappingsConverter" sourceFile="HibernateMappingsConverter.java" interface="false" size="159" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.HibernateSchemaValidator" sourceFile="HibernateSchemaValidator.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.HibernateSqlTypeMapper" sourceFile="HibernateSqlTypeMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.NoopSqlTypeMapper" sourceFile="NoopSqlTypeMapper.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.hibernate.PostgreSqlTypeMapper" sourceFile="PostgreSqlTypeMapper.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.jdbc" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.vecna.dbDiff.jdbc.MetadataFactory" sourceFile="MetadataFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.jdbc.ThreadLocalMetadataFactory" sourceFile="ThreadLocalMetadataFactory.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.jdbc.ThreadLocalMetadataFactory$1" sourceFile="ThreadLocalMetadataFactory.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.model" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="com.vecna.dbDiff.model.CatalogSchema" sourceFile="CatalogSchema.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.ColumnType" sourceFile="ColumnType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.TableType" sourceFile="TableType.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.model.db" total_bugs="0" total_types="2" total_size="132">
+      <ClassStats class="com.vecna.dbDiff.model.db.Column" sourceFile="Column.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.db.ForeignKey" sourceFile="ForeignKey.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vecna.dbDiff.model.relationalDb" total_bugs="0" total_types="6" total_size="128">
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.BaseColumnContainer" sourceFile="BaseColumnContainer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.InconsistentSchemaException" sourceFile="InconsistentSchemaException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.NamedSchemaItem" sourceFile="NamedSchemaItem.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.RelationalDatabase" sourceFile="RelationalDatabase.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.RelationalIndex" sourceFile="RelationalIndex.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vecna.dbDiff.model.relationalDb.RelationalTable" sourceFile="RelationalTable.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="227" invocations="781" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="19264" standardDeviationMicrosecondsPerInvocation="905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="121" invocations="197" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="12450" standardDeviationMicrosecondsPerInvocation="1548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="113" invocations="195" avgMicrosecondsPerInvocation="582" maxMicrosecondsPerInvocation="17431" standardDeviationMicrosecondsPerInvocation="1924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="106" invocations="200" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="11470" standardDeviationMicrosecondsPerInvocation="1390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="102" invocations="201" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="13357" standardDeviationMicrosecondsPerInvocation="1554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="97" invocations="551" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="4772" standardDeviationMicrosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="97" invocations="190" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="14380" standardDeviationMicrosecondsPerInvocation="1401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="95" invocations="120" avgMicrosecondsPerInvocation="792" maxMicrosecondsPerInvocation="9331" standardDeviationMicrosecondsPerInvocation="1737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="120" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="7801" standardDeviationMicrosecondsPerInvocation="1314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="66" invocations="141" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="6560" standardDeviationMicrosecondsPerInvocation="981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="65" invocations="197" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="9730" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="785" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="457" standardDeviationMicrosecondsPerInvocation="46"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="201" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="23119" standardDeviationMicrosecondsPerInvocation="1624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="189" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="13962" standardDeviationMicrosecondsPerInvocation="1055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="120" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="4242" standardDeviationMicrosecondsPerInvocation="720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="705" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="1572" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="29" invocations="197" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="2178" standardDeviationMicrosecondsPerInvocation="337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="26" invocations="120" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2063" standardDeviationMicrosecondsPerInvocation="372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="120" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="1790" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="120" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="7353" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="22" invocations="4625" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1132" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="120" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="2817" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="19" invocations="120" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="3885" standardDeviationMicrosecondsPerInvocation="468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="39" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="4089" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="16" invocations="39" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="3951" standardDeviationMicrosecondsPerInvocation="871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="15" invocations="181" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="1575" standardDeviationMicrosecondsPerInvocation="196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="14" invocations="120" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="1316" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="14" invocations="39" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="2440" standardDeviationMicrosecondsPerInvocation="550"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

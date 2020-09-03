@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086126000" analysisTimestamp="1597086127853" release="">
+  <Project projectName="repositorios/deyvid5_nestedset-java-spring">
+    <Jar>repositorios/deyvid5_nestedset-java-spring</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findAllLeafNodes" signature="(Lcom/deyvid/spring/model/Node;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="37" end="41" startBytecode="0" endBytecode="173" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="38" end="38" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    <String value="Method: findAllLeafNodes. Fields with EAGER without Join Fetch: parent, children, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findRoot" signature="()Lcom/deyvid/spring/model/Node;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="86" end="88" startBytecode="0" endBytecode="98" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="87" end="87" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    <String value="Method: findRoot. Fields with EAGER without Join Fetch: parent, children, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findWholeTree" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="432" end="434" startBytecode="0" endBytecode="95" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="433" end="433" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    <String value="Method: findWholeTree. Fields with EAGER without Join Fetch: parent, children, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findAllLeafNodes" signature="(Lcom/deyvid/spring/model/Node;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="37" end="41" startBytecode="0" endBytecode="173" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="38" end="38" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findRoot" signature="()Lcom/deyvid/spring/model/Node;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="86" end="88" startBytecode="0" endBytecode="98" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="87" end="87" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.dao.NodeDAOImpl">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="22" end="550" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Class>
+    <Method classname="com.deyvid.spring.dao.NodeDAOImpl" name="findWholeTree" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="432" end="434" startBytecode="0" endBytecode="95" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.deyvid.spring.dao.NodeDAOImpl" start="433" end="433" startBytecode="11" endBytecode="11" sourcefile="NodeDAOImpl.java" sourcepath="com/deyvid/spring/dao/NodeDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.model.Node">
+      <SourceLine classname="com.deyvid.spring.model.Node" start="9" end="209" sourcefile="Node.java" sourcepath="com/deyvid/spring/model/Node.java"/>
+    </Class>
+    <Field classname="com.deyvid.spring.model.Node" name="children" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.model.Node" sourcefile="Node.java" sourcepath="com/deyvid/spring/model/Node.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.deyvid.spring.model.Node">
+      <SourceLine classname="com.deyvid.spring.model.Node" start="9" end="209" sourcefile="Node.java" sourcepath="com/deyvid/spring/model/Node.java"/>
+    </Class>
+    <Field classname="com.deyvid.spring.model.Node" name="parent" signature="Lcom/deyvid/spring/model/Node;" isStatic="false">
+      <SourceLine classname="com.deyvid.spring.model.Node" sourcefile="Node.java" sourcepath="com/deyvid/spring/model/Node.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.junit.Assert</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:02:06 +0000" total_classes="8" referenced_classes="24" total_bugs="8" total_size="621" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.25" clock_seconds="1.68" peak_mbytes="145.35" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="7" priority_1="1">
+    <PackageStats package="com.deyvid.spring" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.deyvid.spring.HomeController" sourceFile="HomeController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.deyvid.spring.NodeController" sourceFile="NodeController.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.deyvid.spring.dao" total_bugs="6" total_types="2" total_size="262" priority_2="6">
+      <ClassStats class="com.deyvid.spring.dao.NodeDAO" sourceFile="NodeDAO.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="com.deyvid.spring.dao.NodeDAOImpl" sourceFile="NodeDAOImpl.java" interface="false" size="231" bugs="6" priority_2="6"/>
+    </PackageStats>
+    <PackageStats package="com.deyvid.spring.model" total_bugs="2" total_types="1" total_size="109" priority_2="1" priority_1="1">
+      <ClassStats class="com.deyvid.spring.model.Node" sourceFile="Node.java" interface="false" size="109" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.deyvid.spring.service" total_bugs="0" total_types="2" total_size="121">
+      <ClassStats class="com.deyvid.spring.service.NodeService" sourceFile="NodeService.java" interface="true" size="26" bugs="0"/>
+      <ClassStats class="com.deyvid.spring.service.NodeServiceImpl" sourceFile="NodeServiceImpl.java" interface="false" size="95" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="test" total_bugs="0" total_types="1" total_size="99">
+      <ClassStats class="test.NodesTest" sourceFile="NodesTest.java" interface="false" size="99" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="198" invocations="402" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="18062" standardDeviationMicrosecondsPerInvocation="1436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="65" invocations="109" avgMicrosecondsPerInvocation="604" maxMicrosecondsPerInvocation="11353" standardDeviationMicrosecondsPerInvocation="1306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="55" invocations="109" avgMicrosecondsPerInvocation="509" maxMicrosecondsPerInvocation="5283" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="50" invocations="24" avgMicrosecondsPerInvocation="2119" maxMicrosecondsPerInvocation="12595" standardDeviationMicrosecondsPerInvocation="3107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="46" invocations="109" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="9676" standardDeviationMicrosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="193" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="5558" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="405" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="1159" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="40" invocations="109" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="9920" standardDeviationMicrosecondsPerInvocation="972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="325" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="6152" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="39" invocations="109" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="3208" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="38" invocations="109" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="9648" standardDeviationMicrosecondsPerInvocation="930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="38" invocations="164" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="26370" standardDeviationMicrosecondsPerInvocation="2055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="35" invocations="24" avgMicrosecondsPerInvocation="1467" maxMicrosecondsPerInvocation="6405" standardDeviationMicrosecondsPerInvocation="1666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="58" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="11242" standardDeviationMicrosecondsPerInvocation="1499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="22" invocations="8" avgMicrosecondsPerInvocation="2774" maxMicrosecondsPerInvocation="18123" standardDeviationMicrosecondsPerInvocation="5817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="21" invocations="92" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="1168" standardDeviationMicrosecondsPerInvocation="243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="24" avgMicrosecondsPerInvocation="879" maxMicrosecondsPerInvocation="12871" standardDeviationMicrosecondsPerInvocation="2546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="24" avgMicrosecondsPerInvocation="850" maxMicrosecondsPerInvocation="6707" standardDeviationMicrosecondsPerInvocation="1416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="24" avgMicrosecondsPerInvocation="748" maxMicrosecondsPerInvocation="4378" standardDeviationMicrosecondsPerInvocation="1283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="14" invocations="8" avgMicrosecondsPerInvocation="1829" maxMicrosecondsPerInvocation="9233" standardDeviationMicrosecondsPerInvocation="2873"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="8" avgMicrosecondsPerInvocation="1778" maxMicrosecondsPerInvocation="9169" standardDeviationMicrosecondsPerInvocation="2872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="13" invocations="1889" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="1291" standardDeviationMicrosecondsPerInvocation="38"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="13" invocations="8" avgMicrosecondsPerInvocation="1727" maxMicrosecondsPerInvocation="3458" standardDeviationMicrosecondsPerInvocation="1255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="24" avgMicrosecondsPerInvocation="571" maxMicrosecondsPerInvocation="3038" standardDeviationMicrosecondsPerInvocation="799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="13" invocations="24" avgMicrosecondsPerInvocation="546" maxMicrosecondsPerInvocation="5798" standardDeviationMicrosecondsPerInvocation="1474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="24" avgMicrosecondsPerInvocation="542" maxMicrosecondsPerInvocation="2838" standardDeviationMicrosecondsPerInvocation="619"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

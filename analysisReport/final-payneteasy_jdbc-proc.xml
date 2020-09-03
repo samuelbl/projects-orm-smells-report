@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597082839000" analysisTimestamp="1597082840671" release="">
+  <Project projectName="repositorios/payneteasy_jdbc-proc">
+    <Jar>repositorios/payneteasy_jdbc-proc</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="22">
+    <MissingClass>com.google.inject.AbstractModule</MissingClass>
+    <MissingClass>com.google.inject.Provider</MissingClass>
+    <MissingClass>com.google.inject.binder.AnnotatedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.ScopedBindingBuilder</MissingClass>
+    <MissingClass>com.mchange.v2.c3p0.C3P0ProxyConnection</MissingClass>
+    <MissingClass>com.mchange.v2.c3p0.QueryConnectionTester</MissingClass>
+    <MissingClass>javax.persistence.Column</MissingClass>
+    <MissingClass>javax.persistence.Entity</MissingClass>
+    <MissingClass>javax.persistence.JoinColumn</MissingClass>
+    <MissingClass>org.jboss.resource.adapter.jdbc.ValidConnectionChecker</MissingClass>
+    <MissingClass>org.jboss.resource.adapter.jdbc.vendor.MySQLExceptionSorter</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.FactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.dao.DataAccessException</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.CallableStatementCallback</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.JdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.StatementCallback</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DataSourceUtils</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:07:19 +0000" total_classes="403" referenced_classes="789" total_bugs="0" total_size="43983" num_packages="27" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="61.28" clock_seconds="19.43" peak_mbytes="1474.14" alloc_mbytes="3540.00" gc_seconds="1.08">
+    <PackageStats package="com.googlecode.jdbcproc.daofactory" total_bugs="0" total_types="5" total_size="126">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.CloseableIterator" sourceFile="CloseableIterator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.DAOMethodInfo" sourceFile="DAOMethodInfo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.DaoMethodInfoFactory" sourceFile="DaoMethodInfoFactory.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.IMetaLoginInfoService" sourceFile="IMetaLoginInfoService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.StoredProcedureDaoFactoryBean" sourceFile="StoredProcedureDaoFactoryBean.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.annotation" total_bugs="0" total_types="3" total_size="4">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.annotation.AConsumerKey" sourceFile="AConsumerKey.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.annotation.AMetaLoginInfo" sourceFile="AMetaLoginInfo.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.annotation.AStoredProcedure" sourceFile="AStoredProcedure.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.guice" total_bugs="0" total_types="3" total_size="119">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.guice.DaoMethodInfoGuice" sourceFile="DaoMethodInfoGuice.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.guice.InitJdbcProcModule" sourceFile="InitJdbcProcModule.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.guice.StoredProcedureDaoProvider" sourceFile="StoredProcedureDaoProvider.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl" total_bugs="0" total_types="8" total_size="261">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.AppendableLogInvocationHandler" sourceFile="AppendableLogInvocationHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.DaoMethodInvoker" sourceFile="DaoMethodInvoker.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.DaoMethodInvoker$1" sourceFile="DaoMethodInvoker.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.DaoMethodInvoker$2" sourceFile="DaoMethodInvoker.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.DaoMethodInvoker$2$1" sourceFile="DaoMethodInvoker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.DebugLogInvocationHandler" sourceFile="DebugLogInvocationHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.StoredProcedureDaoInvocationHandler" sourceFile="StoredProcedureDaoInvocationHandler.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.TypeNameUtil" sourceFile="TypeNameUtil.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.block" total_bugs="0" total_types="7" total_size="89">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.BlockFactoryUtils" sourceFile="BlockFactoryUtils.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.ICallableStatementExecutorBlock" sourceFile="ICallableStatementExecutorBlock.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.ICleanable" sourceFile="ICleanable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.IOutputParametersGetterBlock" sourceFile="IOutputParametersGetterBlock.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.IParametersSetterBlock" sourceFile="IParametersSetterBlock.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.IRegisterOutParametersBlock" sourceFile="IRegisterOutParametersBlock.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.IResultSetConverterBlock" sourceFile="IResultSetConverterBlock.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.block.impl" total_bugs="0" total_types="36" total_size="813">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ArgumentGetter" sourceFile="ArgumentGetter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.CallableStatementExecutorBlockExecute" sourceFile="CallableStatementExecutorBlockExecute.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.CloseableIteratorImpl" sourceFile="CloseableIteratorImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.EntityArgumentGetter" sourceFile="EntityArgumentGetter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.EntityArgumentGetterOneToOne" sourceFile="EntityArgumentGetterOneToOne.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.EntityArgumentGetterOneToOneJoinColumn" sourceFile="EntityArgumentGetterOneToOneJoinColumn.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.EntityPropertySetter" sourceFile="EntityPropertySetter.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.IEntityArgumentGetter" sourceFile="IEntityArgumentGetter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.IndexDataTypePair" sourceFile="IndexDataTypePair.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.OneToManyLink" sourceFile="OneToManyLink.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.OneToOneLink" sourceFile="OneToOneLink.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.OutputParametersGetterBlockEntity" sourceFile="OutputParametersGetterBlockEntity.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.OutputParametersGetterHasReturnBlock" sourceFile="OutputParametersGetterHasReturnBlock.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockArgument" sourceFile="ParametersSetterBlockArgument.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockArguments" sourceFile="ParametersSetterBlockArguments.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockEntity" sourceFile="ParametersSetterBlockEntity.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockList" sourceFile="ParametersSetterBlockList.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockListAggregator" sourceFile="ParametersSetterBlockListAggregator.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockMetaLoginInfo" sourceFile="ParametersSetterBlockMetaLoginInfo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockNull1" sourceFile="ParametersSetterBlockNull1.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ParametersSetterBlockOrder" sourceFile="ParametersSetterBlockOrder.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.RegisterOutParametersBlockImpl" sourceFile="RegisterOutParametersBlockImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntity" sourceFile="ResultSetConverterBlockEntity.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityIterator" sourceFile="ResultSetConverterBlockEntityIterator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityIterator$1" sourceFile="ResultSetConverterBlockEntityIterator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityList" sourceFile="ResultSetConverterBlockEntityList.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityOneToMany" sourceFile="ResultSetConverterBlockEntityOneToMany.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityOneToMany2x" sourceFile="ResultSetConverterBlockEntityOneToMany2x.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityOneToMany2xList" sourceFile="ResultSetConverterBlockEntityOneToMany2xList.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityOneToMany2xList$Holder" sourceFile="ResultSetConverterBlockEntityOneToMany2xList.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockEntityOneToManyList" sourceFile="ResultSetConverterBlockEntityOneToManyList.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockSimpleType" sourceFile="ResultSetConverterBlockSimpleType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockSimpleTypeIterator" sourceFile="ResultSetConverterBlockSimpleTypeIterator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockSimpleTypeIterator$1" sourceFile="ResultSetConverterBlockSimpleTypeIterator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockSimpleTypeList" sourceFile="ResultSetConverterBlockSimpleTypeList.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.impl.ResultSetConverterBlockUtil" sourceFile="ResultSetConverterBlockUtil.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.block.service" total_bugs="0" total_types="11" total_size="597">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.CallableStatementExecutorBlockService" sourceFile="CallableStatementExecutorBlockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.CallableStatementExecutorBlockServiceImpl" sourceFile="CallableStatementExecutorBlockServiceImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.OutputParametersGetterBlockService" sourceFile="OutputParametersGetterBlockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.OutputParametersGetterBlockServiceImpl" sourceFile="OutputParametersGetterBlockServiceImpl.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.ParametersSetterBlockService" sourceFile="ParametersSetterBlockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.ParametersSetterBlockServiceImpl" sourceFile="ParametersSetterBlockServiceImpl.java" interface="false" size="356" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.ParametersSetterBlockServiceImpl$1" sourceFile="ParametersSetterBlockServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.RegisterOutParametersBlockService" sourceFile="RegisterOutParametersBlockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.RegisterOutParametersBlockServiceImpl" sourceFile="RegisterOutParametersBlockServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.ResultSetConverterBlockService" sourceFile="ResultSetConverterBlockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.block.service.ResultSetConverterBlockServiceImpl" sourceFile="ResultSetConverterBlockServiceImpl.java" interface="false" size="133" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.dbstrategy" total_bugs="0" total_types="5" total_size="39">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.ICallableStatementGetStrategy" sourceFile="ICallableStatementGetStrategy.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.ICallableStatementGetStrategyFactory" sourceFile="ICallableStatementGetStrategyFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.ICallableStatementSetStrategy" sourceFile="ICallableStatementSetStrategy.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.ICallableStatementSetStrategyFactory" sourceFile="ICallableStatementSetStrategyFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.StatementArgument" sourceFile="StatementArgument.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl" total_bugs="0" total_types="8" total_size="148">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementGetStrategyFactoryIndexImpl" sourceFile="CallableStatementGetStrategyFactoryIndexImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementGetStrategyFactoryNameImpl" sourceFile="CallableStatementGetStrategyFactoryNameImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementSetStrategyFactoryIndexImpl" sourceFile="CallableStatementSetStrategyFactoryIndexImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementSetStrategyFactoryNameImpl" sourceFile="CallableStatementSetStrategyFactoryNameImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementSetStrategyIndexImpl" sourceFile="CallableStatementSetStrategyIndexImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementSetStrategyNameImpl" sourceFile="CallableStatementSetStrategyNameImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementStrategyIndexImpl" sourceFile="CallableStatementStrategyIndexImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.dbstrategy.impl.CallableStatementStrategyNameImpl" sourceFile="CallableStatementStrategyNameImpl.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.parameterconverter" total_bugs="0" total_types="39" total_size="890">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.IParameterConverter" sourceFile="IParameterConverter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.IParameterConverter$Type" sourceFile="IParameterConverter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverterService" sourceFile="ParameterConverterService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverterServiceImpl" sourceFile="ParameterConverterServiceImpl.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_BIGINT_BigInteger" sourceFile="ParameterConverter_BIGINT_BigInteger.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_BIGINT_langLong" sourceFile="ParameterConverter_BIGINT_langLong.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_BIGINT_long" sourceFile="ParameterConverter_BIGINT_long.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_BINARY_byteArray" sourceFile="ParameterConverter_BINARY_byteArray.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_CHAR_String" sourceFile="ParameterConverter_CHAR_String.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_CHAR_boolean" sourceFile="ParameterConverter_CHAR_boolean.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_CHAR_langBoolean" sourceFile="ParameterConverter_CHAR_langBoolean.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DATE_sqlDate" sourceFile="ParameterConverter_DATE_sqlDate.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DATE_utilDate" sourceFile="ParameterConverter_DATE_utilDate.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DECIMAL_BigDecimal" sourceFile="ParameterConverter_DECIMAL_BigDecimal.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DECIMAL_double" sourceFile="ParameterConverter_DECIMAL_double.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DECIMAL_langDouble" sourceFile="ParameterConverter_DECIMAL_langDouble.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DOUBLE_double" sourceFile="ParameterConverter_DOUBLE_double.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_DOUBLE_langDouble" sourceFile="ParameterConverter_DOUBLE_langDouble.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_INTEGER_boolean" sourceFile="ParameterConverter_INTEGER_boolean.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_INTEGER_int" sourceFile="ParameterConverter_INTEGER_int.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_INTEGER_langInteger" sourceFile="ParameterConverter_INTEGER_langInteger.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_INTEGER_langLong" sourceFile="ParameterConverter_INTEGER_langLong.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_INTEGER_long" sourceFile="ParameterConverter_INTEGER_long.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_LONGVARBINARY_byteArray" sourceFile="ParameterConverter_LONGVARBINARY_byteArray.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_LONGVARCHAR_String" sourceFile="ParameterConverter_LONGVARCHAR_String.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_NUMERIC_BigDecimal" sourceFile="ParameterConverter_NUMERIC_BigDecimal.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_NUMERIC_double" sourceFile="ParameterConverter_NUMERIC_double.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_NUMERIC_langDouble" sourceFile="ParameterConverter_NUMERIC_langDouble.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_REAL_BigDecimal" sourceFile="ParameterConverter_REAL_BigDecimal.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_REAL_double" sourceFile="ParameterConverter_REAL_double.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_REAL_langDouble" sourceFile="ParameterConverter_REAL_langDouble.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_TIMESTAMP_Timestamp" sourceFile="ParameterConverter_TIMESTAMP_Timestamp.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_TIMESTAMP_utilDate" sourceFile="ParameterConverter_TIMESTAMP_utilDate.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_TIME_Time" sourceFile="ParameterConverter_TIME_Time.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_TIME_utilDate" sourceFile="ParameterConverter_TIME_utilDate.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_VARBINARY_byteArray" sourceFile="ParameterConverter_VARBINARY_byteArray.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_VARCHAR_String" sourceFile="ParameterConverter_VARCHAR_String.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_VARCHAR_boolean" sourceFile="ParameterConverter_VARCHAR_boolean.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.parameterconverter.ParameterConverter_VARCHAR_langBoolean" sourceFile="ParameterConverter_VARCHAR_langBoolean.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.impl.procedureinfo" total_bugs="0" total_types="7" total_size="315">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.AbstractStoredProcedureInfoManager" sourceFile="AbstractStoredProcedureInfoManager.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.IStoredProcedureInfoManager" sourceFile="IStoredProcedureInfoManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.ResultSetColumnInfo" sourceFile="ResultSetColumnInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.StoredProcedureArgumentInfo" sourceFile="StoredProcedureArgumentInfo.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.StoredProcedureInfo" sourceFile="StoredProcedureInfo.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.StoredProcedureInfoManagerInitOnStartup" sourceFile="StoredProcedureInfoManagerInitOnStartup.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.impl.procedureinfo.StoredProcedureInfoManagerOnDemand" sourceFile="StoredProcedureInfoManagerOnDemand.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.daofactory.internal" total_bugs="0" total_types="6" total_size="219">
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.ResultSetConverterRowIterator" sourceFile="ResultSetConverterRowIterator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.Row" sourceFile="Row.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.RowImpl" sourceFile="RowImpl.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.RowImpl$Indexer" sourceFile="RowImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.RowIterator" sourceFile="RowIterator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.googlecode.jdbcproc.daofactory.internal.RowIteratorImpl" sourceFile="RowIteratorImpl.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.googlecode.jdbcproc.integrationtest" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.googlecode.jdbcproc.integrationtest.Dummy" sourceFile="Dummy.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc" total_bugs="0" total_types="184" total_size="34352">
+      <ClassStats class="com.mysql.jdbc.AssertionFailedException" sourceFile="AssertionFailedException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.AuthenticationPlugin" sourceFile="AuthenticationPlugin.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.BalanceStrategy" sourceFile="BalanceStrategy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.BestResponseTimeBalanceStrategy" sourceFile="BestResponseTimeBalanceStrategy.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Blob" sourceFile="Blob.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.BlobFromLocator" sourceFile="BlobFromLocator.java" interface="false" size="255" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.BlobFromLocator$LocatorInputStream" sourceFile="BlobFromLocator.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Buffer" sourceFile="Buffer.java" interface="false" size="340" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.BufferRow" sourceFile="BufferRow.java" interface="false" size="301" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ByteArrayRow" sourceFile="ByteArrayRow.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CacheAdapter" sourceFile="CacheAdapter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CacheAdapterFactory" sourceFile="CacheAdapterFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CachedResultSetMetaData" sourceFile="CachedResultSetMetaData.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CallableStatement" sourceFile="CallableStatement.java" interface="false" size="1007" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CallableStatement$CallableStatementParam" sourceFile="CallableStatement.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CallableStatement$CallableStatementParamInfo" sourceFile="CallableStatement.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CallableStatement$CallableStatementParamInfoJDBC3" sourceFile="CallableStatement.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CharsetMapping" sourceFile="CharsetMapping.java" interface="false" size="573" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Clob" sourceFile="Clob.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Collation" sourceFile="CharsetMapping.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CommunicationsException" sourceFile="CommunicationsException.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.CompressedInputStream" sourceFile="CompressedInputStream.java" interface="false" size="124" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Connection" sourceFile="Connection.java" interface="true" size="53" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionFeatureNotAvailableException" sourceFile="ConnectionFeatureNotAvailableException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionGroup" sourceFile="ConnectionGroup.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionGroupManager" sourceFile="ConnectionGroupManager.java" interface="false" size="124" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl" sourceFile="ConnectionImpl.java" interface="false" size="2254" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$1" sourceFile="ConnectionImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$10" sourceFile="ConnectionImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$11" sourceFile="ConnectionImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$2" sourceFile="ConnectionImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$3" sourceFile="ConnectionImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$4" sourceFile="ConnectionImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$5" sourceFile="ConnectionImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$6" sourceFile="ConnectionImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$7" sourceFile="ConnectionImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$8" sourceFile="ConnectionImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$9" sourceFile="ConnectionImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$CompoundCacheKey" sourceFile="ConnectionImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionImpl$ExceptionInterceptorChain" sourceFile="ConnectionImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionLifecycleInterceptor" sourceFile="ConnectionLifecycleInterceptor.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionProperties" sourceFile="ConnectionProperties.java" interface="true" size="394" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="1619" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$1" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$BooleanConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$ConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$IntegerConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$LongConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$MemorySizeConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$StringConnectionProperty" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesImpl$XmlMap" sourceFile="ConnectionPropertiesImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ConnectionPropertiesTransform" sourceFile="ConnectionPropertiesTransform.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Constants" sourceFile="Constants.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData" sourceFile="DatabaseMetaData.java" interface="false" size="2451" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$1" sourceFile="DatabaseMetaData.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$10" sourceFile="DatabaseMetaData.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$2" sourceFile="DatabaseMetaData.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$3" sourceFile="DatabaseMetaData.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$4" sourceFile="DatabaseMetaData.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$5" sourceFile="DatabaseMetaData.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$6" sourceFile="DatabaseMetaData.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$7" sourceFile="DatabaseMetaData.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$8" sourceFile="DatabaseMetaData.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$9" sourceFile="DatabaseMetaData.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$IteratorWithCleanup" sourceFile="DatabaseMetaData.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$LocalAndReferencedColumns" sourceFile="DatabaseMetaData.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$ResultSetIterator" sourceFile="DatabaseMetaData.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$SingleStringIterator" sourceFile="DatabaseMetaData.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaData$TypeDescriptor" sourceFile="DatabaseMetaData.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DatabaseMetaDataUsingInfoSchema" sourceFile="DatabaseMetaDataUsingInfoSchema.java" interface="false" size="356" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.DocsConnectionPropsHelper" sourceFile="DocsConnectionPropsHelper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Driver" sourceFile="Driver.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.EscapeProcessor" sourceFile="EscapeProcessor.java" interface="false" size="282" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.EscapeProcessorResult" sourceFile="EscapeProcessorResult.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.EscapeTokenizer" sourceFile="EscapeTokenizer.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ExceptionInterceptor" sourceFile="ExceptionInterceptor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ExportControlled" sourceFile="ExportControlled.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ExportControlled$1" sourceFile="ExportControlled.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Extension" sourceFile="Extension.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.FailoverConnectionProxy" sourceFile="FailoverConnectionProxy.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.FailoverConnectionProxy$FailoverInvocationHandler" sourceFile="FailoverConnectionProxy.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Field" sourceFile="Field.java" interface="false" size="472" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.IterateBlock" sourceFile="IterateBlock.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4CallableStatement" sourceFile="JDBC4CallableStatement.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4ClientInfoProvider" sourceFile="JDBC4ClientInfoProvider.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4ClientInfoProviderSP" sourceFile="JDBC4ClientInfoProviderSP.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4CommentClientInfoProvider" sourceFile="JDBC4CommentClientInfoProvider.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4Connection" sourceFile="JDBC4Connection.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4DatabaseMetaData" sourceFile="JDBC4DatabaseMetaData.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4DatabaseMetaDataUsingInfoSchema" sourceFile="JDBC4DatabaseMetaDataUsingInfoSchema.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4LoadBalancedMySQLConnection" sourceFile="JDBC4LoadBalancedMySQLConnection.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4MySQLConnection" sourceFile="JDBC4MySQLConnection.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4MysqlSQLXML" sourceFile="JDBC4MysqlSQLXML.java" interface="false" size="221" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4MysqlSQLXML$SimpleSaxToReader" sourceFile="JDBC4MysqlSQLXML.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4NClob" sourceFile="JDBC4NClob.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4PreparedStatement" sourceFile="JDBC4PreparedStatement.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4PreparedStatementHelper" sourceFile="JDBC4PreparedStatementHelper.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4ResultSet" sourceFile="JDBC4ResultSet.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4ServerPreparedStatement" sourceFile="JDBC4ServerPreparedStatement.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.JDBC4UpdatableResultSet" sourceFile="JDBC4UpdatableResultSet.java" interface="false" size="192" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LicenseConfiguration" sourceFile="LicenseConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LoadBalanceExceptionChecker" sourceFile="LoadBalanceExceptionChecker.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LoadBalancedAutoCommitInterceptor" sourceFile="LoadBalancedAutoCommitInterceptor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LoadBalancedMySQLConnection" sourceFile="LoadBalancedMySQLConnection.java" interface="false" size="1352" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LoadBalancingConnectionProxy" sourceFile="LoadBalancingConnectionProxy.java" interface="false" size="477" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.LoadBalancingConnectionProxy$ConnectionErrorFiringInvocationHandler" sourceFile="LoadBalancingConnectionProxy.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Messages" sourceFile="Messages.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MiniAdmin" sourceFile="MiniAdmin.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MySQLConnection" sourceFile="MySQLConnection.java" interface="true" size="81" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlDataTruncation" sourceFile="MysqlDataTruncation.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlDefs" sourceFile="MysqlDefs.java" interface="false" size="279" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlErrorNumbers" sourceFile="MysqlErrorNumbers.java" interface="false" size="711" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlIO" sourceFile="MysqlIO.java" interface="false" size="2297" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlParameterMetadata" sourceFile="MysqlParameterMetadata.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.MysqlSavepoint" sourceFile="MysqlSavepoint.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NamedPipeSocketFactory" sourceFile="NamedPipeSocketFactory.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NamedPipeSocketFactory$NamedPipeSocket" sourceFile="NamedPipeSocketFactory.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NamedPipeSocketFactory$RandomAccessFileInputStream" sourceFile="NamedPipeSocketFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NamedPipeSocketFactory$RandomAccessFileOutputStream" sourceFile="NamedPipeSocketFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NdbLoadBalanceExceptionChecker" sourceFile="NdbLoadBalanceExceptionChecker.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NetworkResources" sourceFile="NetworkResources.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NoSubInterceptorWrapper" sourceFile="NoSubInterceptorWrapper.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NonRegisteringDriver" sourceFile="NonRegisteringDriver.java" interface="false" size="311" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NonRegisteringDriver$1" sourceFile="NonRegisteringDriver.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NonRegisteringDriver$ConnectionPhantomReference" sourceFile="NonRegisteringDriver.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NonRegisteringReplicationDriver" sourceFile="NonRegisteringReplicationDriver.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NotImplemented" sourceFile="NotImplemented.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.NotUpdatable" sourceFile="NotUpdatable.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.OperationNotSupportedException" sourceFile="OperationNotSupportedException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.OutputStreamWatcher" sourceFile="OutputStreamWatcher.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PacketTooBigException" sourceFile="PacketTooBigException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ParameterBindings" sourceFile="ParameterBindings.java" interface="true" size="26" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PerConnectionLRUFactory" sourceFile="PerConnectionLRUFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PerConnectionLRUFactory$PerConnectionLRU" sourceFile="PerConnectionLRUFactory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PingTarget" sourceFile="PingTarget.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement" sourceFile="PreparedStatement.java" interface="false" size="2021" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$AppendingBatchVisitor" sourceFile="PreparedStatement.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$BatchParams" sourceFile="PreparedStatement.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$BatchVisitor" sourceFile="PreparedStatement.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$EmulatedPreparedStatementBindings" sourceFile="PreparedStatement.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$EndPoint" sourceFile="PreparedStatement.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.PreparedStatement$ParseInfo" sourceFile="PreparedStatement.java" interface="false" size="257" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ProfilerEventHandlerFactory" sourceFile="ProfilerEventHandlerFactory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RandomBalanceStrategy" sourceFile="RandomBalanceStrategy.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ReflectiveStatementInterceptorAdapter" sourceFile="ReflectiveStatementInterceptorAdapter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ReplicationConnection" sourceFile="ReplicationConnection.java" interface="false" size="1132" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ReplicationDriver" sourceFile="ReplicationDriver.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ResultSetImpl" sourceFile="ResultSetImpl.java" interface="false" size="2751" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ResultSetInternalMethods" sourceFile="ResultSetInternalMethods.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ResultSetMetaData" sourceFile="ResultSetMetaData.java" interface="false" size="198" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ResultSetRow" sourceFile="ResultSetRow.java" interface="false" size="497" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RowData" sourceFile="RowData.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RowDataCursor" sourceFile="RowDataCursor.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RowDataDynamic" sourceFile="RowDataDynamic.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RowDataDynamic$OperationNotSupportedException" sourceFile="RowDataDynamic.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.RowDataStatic" sourceFile="RowDataStatic.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.SQLError" sourceFile="SQLError.java" interface="false" size="517" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Security" sourceFile="Security.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.SequentialBalanceStrategy" sourceFile="SequentialBalanceStrategy.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ServerPreparedStatement" sourceFile="ServerPreparedStatement.java" interface="false" size="1295" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ServerPreparedStatement$BatchedBindValues" sourceFile="ServerPreparedStatement.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.ServerPreparedStatement$BindValue" sourceFile="ServerPreparedStatement.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.SingleByteCharsetConverter" sourceFile="SingleByteCharsetConverter.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.SocketFactory" sourceFile="SocketFactory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.SocketMetadata" sourceFile="SocketMetadata.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StandardLoadBalanceExceptionChecker" sourceFile="StandardLoadBalanceExceptionChecker.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StandardSocketFactory" sourceFile="StandardSocketFactory.java" interface="false" size="174" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Statement" sourceFile="Statement.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StatementImpl" sourceFile="StatementImpl.java" interface="false" size="1194" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StatementImpl$CancelTask" sourceFile="StatementImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StatementImpl$CancelTask$1" sourceFile="StatementImpl.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StatementInterceptor" sourceFile="StatementInterceptor.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StatementInterceptorV2" sourceFile="StatementInterceptorV2.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StreamingNotifiable" sourceFile="StreamingNotifiable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.StringUtils" sourceFile="StringUtils.java" interface="false" size="758" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.TimeUtil" sourceFile="TimeUtil.java" interface="false" size="675" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.UpdatableResultSet" sourceFile="UpdatableResultSet.java" interface="false" size="861" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Util" sourceFile="Util.java" interface="false" size="263" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.Util$RandStructcture" sourceFile="Util.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.V1toV2StatementInterceptorAdapter" sourceFile="V1toV2StatementInterceptorAdapter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.VersionedStringProperty" sourceFile="CharsetMapping.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.WatchableOutputStream" sourceFile="WatchableOutputStream.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.WatchableWriter" sourceFile="WatchableWriter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.WriterWatcher" sourceFile="WriterWatcher.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.authentication" total_bugs="0" total_types="4" total_size="132">
+      <ClassStats class="com.mysql.jdbc.authentication.MysqlClearPasswordPlugin" sourceFile="MysqlClearPasswordPlugin.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.authentication.MysqlNativePasswordPlugin" sourceFile="MysqlNativePasswordPlugin.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.authentication.MysqlOldPasswordPlugin" sourceFile="MysqlOldPasswordPlugin.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.authentication.Sha256PasswordPlugin" sourceFile="Sha256PasswordPlugin.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.cache" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="com.mysql.jdbc.cache.CallableStatementInfo" sourceFile="CallableStatementInfo.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.cache.CallableStatementKey" sourceFile="CallableStatementKey.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.exceptions" total_bugs="0" total_types="12" total_size="155">
+      <ClassStats class="com.mysql.jdbc.exceptions.DeadlockTimeoutRollbackMarker" sourceFile="DeadlockTimeoutRollbackMarker.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLDataException" sourceFile="MySQLDataException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException" sourceFile="MySQLIntegrityConstraintViolationException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLInvalidAuthorizationSpecException" sourceFile="MySQLInvalidAuthorizationSpecException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException" sourceFile="MySQLNonTransientConnectionException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLNonTransientException" sourceFile="MySQLNonTransientException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLStatementCancelledException" sourceFile="MySQLStatementCancelledException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLSyntaxErrorException" sourceFile="MySQLSyntaxErrorException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLTimeoutException" sourceFile="MySQLTimeoutException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLTransactionRollbackException" sourceFile="MySQLTransactionRollbackException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLTransientConnectionException" sourceFile="MySQLTransientConnectionException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.MySQLTransientException" sourceFile="MySQLTransientException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.exceptions.jdbc4" total_bugs="0" total_types="11" total_size="149">
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.CommunicationsException" sourceFile="CommunicationsException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLDataException" sourceFile="MySQLDataException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException" sourceFile="MySQLIntegrityConstraintViolationException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLInvalidAuthorizationSpecException" sourceFile="MySQLInvalidAuthorizationSpecException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException" sourceFile="MySQLNonTransientConnectionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientException" sourceFile="MySQLNonTransientException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException" sourceFile="MySQLSyntaxErrorException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLTimeoutException" sourceFile="MySQLTimeoutException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException" sourceFile="MySQLTransactionRollbackException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLTransientConnectionException" sourceFile="MySQLTransientConnectionException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.exceptions.jdbc4.MySQLTransientException" sourceFile="MySQLTransientException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.integration.c3p0" total_bugs="0" total_types="1" total_size="38">
+      <ClassStats class="com.mysql.jdbc.integration.c3p0.MysqlConnectionTester" sourceFile="MysqlConnectionTester.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.integration.jboss" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.mysql.jdbc.integration.jboss.ExtendedMysqlExceptionSorter" sourceFile="ExtendedMysqlExceptionSorter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.integration.jboss.MysqlValidConnectionChecker" sourceFile="MysqlValidConnectionChecker.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.interceptors" total_bugs="0" total_types="4" total_size="107">
+      <ClassStats class="com.mysql.jdbc.interceptors.ResultSetScannerInterceptor" sourceFile="ResultSetScannerInterceptor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.interceptors.ResultSetScannerInterceptor$1" sourceFile="ResultSetScannerInterceptor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.interceptors.ServerStatusDiffInterceptor" sourceFile="ServerStatusDiffInterceptor.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.interceptors.SessionAssociationInterceptor" sourceFile="SessionAssociationInterceptor.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.jdbc2.optional" total_bugs="0" total_types="22" total_size="4250">
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.CallableStatementWrapper" sourceFile="CallableStatementWrapper.java" interface="false" size="605" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.ConnectionWrapper" sourceFile="ConnectionWrapper.java" interface="false" size="1454" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4CallableStatementWrapper" sourceFile="JDBC4CallableStatementWrapper.java" interface="false" size="439" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4ConnectionWrapper" sourceFile="JDBC4ConnectionWrapper.java" interface="false" size="104" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4MysqlPooledConnection" sourceFile="JDBC4MysqlPooledConnection.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4MysqlXAConnection" sourceFile="JDBC4MysqlXAConnection.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4PreparedStatementWrapper" sourceFile="JDBC4PreparedStatementWrapper.java" interface="false" size="207" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4StatementWrapper" sourceFile="JDBC4StatementWrapper.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.JDBC4SuspendableXAConnection" sourceFile="JDBC4SuspendableXAConnection.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource" sourceFile="MysqlConnectionPoolDataSource.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" sourceFile="MysqlDataSource.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlDataSourceFactory" sourceFile="MysqlDataSourceFactory.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlPooledConnection" sourceFile="MysqlPooledConnection.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlXAConnection" sourceFile="MysqlXAConnection.java" interface="false" size="198" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource" sourceFile="MysqlXADataSource.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlXAException" sourceFile="MysqlXAException.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.MysqlXid" sourceFile="MysqlXid.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.PreparedStatementWrapper" sourceFile="PreparedStatementWrapper.java" interface="false" size="314" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.StatementWrapper" sourceFile="StatementWrapper.java" interface="false" size="307" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.SuspendableXAConnection" sourceFile="SuspendableXAConnection.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.WrapperBase" sourceFile="WrapperBase.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jdbc2.optional.WrapperBase$ConnectionErrorFiringInvocationHandler" sourceFile="WrapperBase.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.jmx" total_bugs="0" total_types="2" total_size="60">
+      <ClassStats class="com.mysql.jdbc.jmx.LoadBalanceConnectionGroupManager" sourceFile="LoadBalanceConnectionGroupManager.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.jmx.LoadBalanceConnectionGroupManagerMBean" sourceFile="LoadBalanceConnectionGroupManagerMBean.java" interface="true" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.log" total_bugs="0" total_types="7" total_size="428">
+      <ClassStats class="com.mysql.jdbc.log.Jdk14Logger" sourceFile="Jdk14Logger.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.Log" sourceFile="Log.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.LogFactory" sourceFile="LogFactory.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.LogUtils" sourceFile="LogUtils.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.NullLogger" sourceFile="NullLogger.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.Slf4JLogger" sourceFile="Slf4JLogger.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.log.StandardLogger" sourceFile="StandardLogger.java" interface="false" size="107" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.profiler" total_bugs="0" total_types="3" total_size="206">
+      <ClassStats class="com.mysql.jdbc.profiler.LoggingProfilerEventHandler" sourceFile="LoggingProfilerEventHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.profiler.ProfilerEvent" sourceFile="ProfilerEvent.java" interface="false" size="189" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.profiler.ProfilerEventHandler" sourceFile="ProfilerEventHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mysql.jdbc.util" total_bugs="0" total_types="9" total_size="421">
+      <ClassStats class="com.mysql.jdbc.util.BaseBugReport" sourceFile="BaseBugReport.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.ErrorMappingsDocGenerator" sourceFile="ErrorMappingsDocGenerator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.LRUCache" sourceFile="LRUCache.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.PropertiesDocGenerator" sourceFile="PropertiesDocGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.ReadAheadInputStream" sourceFile="ReadAheadInputStream.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.ResultSetUtil" sourceFile="ResultSetUtil.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.ServerController" sourceFile="ServerController.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.TimezoneDump" sourceFile="TimezoneDump.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.mysql.jdbc.util.VersionFSHierarchyMaker" sourceFile="VersionFSHierarchyMaker.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gjt.mm.mysql" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.gjt.mm.mysql.Driver" sourceFile="Driver.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="1611" invocations="16882" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="82706" standardDeviationMicrosecondsPerInvocation="1009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="1181" invocations="5892" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="25057" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="1144" invocations="8270" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="86911" standardDeviationMicrosecondsPerInvocation="1058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="1108" invocations="6384" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="28568" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="986" invocations="6029" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="16664" standardDeviationMicrosecondsPerInvocation="682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="644" invocations="6027" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="87163" standardDeviationMicrosecondsPerInvocation="1154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="540" invocations="5132" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="20014" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="521" invocations="7114" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="52251" standardDeviationMicrosecondsPerInvocation="690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSpinLoop" totalMilliseconds="498" invocations="403" avgMicrosecondsPerInvocation="1236" maxMicrosecondsPerInvocation="474585" standardDeviationMicrosecondsPerInvocation="23609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="493" invocations="1867" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="18662" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="405" invocations="789" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="14267" standardDeviationMicrosecondsPerInvocation="1339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="397" invocations="789" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="12541" standardDeviationMicrosecondsPerInvocation="1263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="383" invocations="403" avgMicrosecondsPerInvocation="952" maxMicrosecondsPerInvocation="39196" standardDeviationMicrosecondsPerInvocation="3353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="337" invocations="1876" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="129485" standardDeviationMicrosecondsPerInvocation="3048"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="298" invocations="4313" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="10920" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="267" invocations="6022" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="16139" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="211" invocations="403" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="18291" standardDeviationMicrosecondsPerInvocation="1631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="203" invocations="403" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="19590" standardDeviationMicrosecondsPerInvocation="1717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="178" invocations="6830" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="24028" standardDeviationMicrosecondsPerInvocation="305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="169" invocations="403" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="19124" standardDeviationMicrosecondsPerInvocation="1494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="167" invocations="124554" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="8160" standardDeviationMicrosecondsPerInvocation="28"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="163" invocations="5892" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="4211" standardDeviationMicrosecondsPerInvocation="109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="153" invocations="403" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="13424" standardDeviationMicrosecondsPerInvocation="1294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="151" invocations="403" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="10187" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="146" invocations="5875" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="12291" standardDeviationMicrosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="132" invocations="789" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="4633" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="122" invocations="6830" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="3828" standardDeviationMicrosecondsPerInvocation="103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="118" invocations="403" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="8859" standardDeviationMicrosecondsPerInvocation="847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="116" invocations="403" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="20729" standardDeviationMicrosecondsPerInvocation="1408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="114" invocations="789" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="5541" standardDeviationMicrosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="113" invocations="789" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="7690" standardDeviationMicrosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="111" invocations="403" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="9929" standardDeviationMicrosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="111" invocations="403" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="21828" standardDeviationMicrosecondsPerInvocation="1273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="109" invocations="403" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="9420" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="109" invocations="403" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="9050" standardDeviationMicrosecondsPerInvocation="947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="107" invocations="789" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="22284" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="105" invocations="403" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="8038" standardDeviationMicrosecondsPerInvocation="774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="102" invocations="403" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="21380" standardDeviationMicrosecondsPerInvocation="1247"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

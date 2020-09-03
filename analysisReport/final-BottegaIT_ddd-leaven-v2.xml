@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597081133000" analysisTimestamp="1597081136643" release="">
+  <Project projectName="repositorios/BottegaIT_ddd-leaven-v2">
+    <Jar>repositorios/BottegaIT_ddd-leaven-v2</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager">
+      <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="31" end="75" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+    </Class>
+    <Method classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" name="findByOrderId" signature="(Lpl/com/bottega/ecommerce/canonicalmodel/publishedlanguage/AggregateId;)Lpl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerData;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="54" end="56" startBytecode="0" endBytecode="99" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+    </Method>
+    <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="54" end="54" startBytecode="4" endBytecode="4" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager">
+      <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="31" end="75" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+    </Class>
+    <Method classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" name="findByShipmentId" signature="(Lpl/com/bottega/ecommerce/canonicalmodel/publishedlanguage/AggregateId;)Lpl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerData;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="60" end="62" startBytecode="0" endBytecode="99" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+    </Method>
+    <SourceLine classname="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" start="60" end="60" startBytecode="4" endBytecode="4" sourcefile="OrderShipmentStatusTrackerSagaManager.java" sourcepath="pl/com/bottega/ecommerce/businessprocess/ordertracking/OrderShipmentStatusTrackerSagaManager.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.sales.domain.invoicing.Invoice">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.invoicing.Invoice" start="70" end="109" sourcefile="Invoice.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/invoicing/Invoice.java"/>
+    </Class>
+    <Field classname="pl.com.bottega.ecommerce.sales.domain.invoicing.Invoice" name="items" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.invoicing.Invoice" sourcefile="Invoice.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/invoicing/Invoice.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.sales.domain.purchase.Purchase">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.purchase.Purchase" start="69" end="103" sourcefile="Purchase.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/purchase/Purchase.java"/>
+    </Class>
+    <Field classname="pl.com.bottega.ecommerce.sales.domain.purchase.Purchase" name="items" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.purchase.Purchase" sourcefile="Purchase.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/purchase/Purchase.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation" start="83" end="196" sourcefile="Reservation.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/reservation/Reservation.java"/>
+    </Class>
+    <Field classname="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation" name="items" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation" sourcefile="Reservation.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/reservation/Reservation.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationItem">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationItem" start="34" end="53" sourcefile="ReservationItem.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/reservation/ReservationItem.java"/>
+    </Class>
+    <Field classname="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationItem" name="product" signature="Lpl/com/bottega/ecommerce/sales/domain/productscatalog/Product;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationItem" sourcefile="ReservationItem.java" sourcepath="pl/com/bottega/ecommerce/sales/domain/reservation/ReservationItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository" start="25" end="32" sourcefile="JpaProductRepository.java" sourcepath="pl/com/bottega/ecommerce/sales/infrastructure/repo/impl/JpaProductRepository.java"/>
+    </Class>
+    <Method classname="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository" name="findProductWhereBestBeforeExpiredIn" signature="(I)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository" start="32" end="32" startBytecode="0" endBytecode="68" sourcefile="JpaProductRepository.java" sourcepath="pl/com/bottega/ecommerce/sales/infrastructure/repo/impl/JpaProductRepository.java"/>
+    </Method>
+    <SourceLine classname="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="JpaProductRepository.java" sourcepath="pl/com/bottega/ecommerce/sales/infrastructure/repo/impl/JpaProductRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="20">
+    <MissingClass>com.google.common.base.Function</MissingClass>
+    <MissingClass>com.google.common.collect.HashMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Multimap</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.LockModeType</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.fest.util.Objects</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactoryAware</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.AutowireCapableBeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanPostProcessor</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.ConfigurableListableBeanFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 17:38:53 +0000" total_classes="170" referenced_classes="276" total_bugs="7" total_size="2169" num_packages="60" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.88" clock_seconds="4.29" peak_mbytes="202.28" alloc_mbytes="3540.00" gc_seconds="0.19" priority_2="4" priority_1="3">
+    <PackageStats package="pl.com.bottega.cqrs.annotations" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="pl.com.bottega.cqrs.annotations.Command" sourceFile="Command.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.annotations.CommandHandlerAnnotation" sourceFile="CommandHandlerAnnotation.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.cqrs.command" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="pl.com.bottega.cqrs.command.Gate" sourceFile="Gate.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.cqrs.command.handler" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="pl.com.bottega.cqrs.command.handler.CommandHandler" sourceFile="CommandHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.cqrs.command.handler.spring" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="pl.com.bottega.cqrs.command.handler.spring.SpringHandlersProvider" sourceFile="SpringHandlersProvider.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.cqrs.command.impl" total_bugs="0" total_types="6" total_size="82">
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.GateHistory" sourceFile="GateHistory.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.GateHistory$1" sourceFile="GateHistory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.GateHistory$CommandExecutionsMap" sourceFile="GateHistory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.RunEnvironment" sourceFile="RunEnvironment.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.RunEnvironment$HandlersProvider" sourceFile="RunEnvironment.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.cqrs.command.impl.StandardGate" sourceFile="StandardGate.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.cqrs.query" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="pl.com.bottega.cqrs.query.PaginatedResult" sourceFile="PaginatedResult.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ddd.annotations.application" total_bugs="0" total_types="3" total_size="3">
+      <ClassStats class="pl.com.bottega.ddd.annotations.application.ApplicationService" sourceFile="ApplicationService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.application.Finder" sourceFile="Finder.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.application.InternalApplicationService" sourceFile="InternalApplicationService.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ddd.annotations.domain" total_bugs="0" total_types="13" total_size="15">
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.AggregateRoot" sourceFile="AggregateRoot.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainFactory" sourceFile="DomainFactory.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainPolicy" sourceFile="DomainPolicy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainPolicyImpl" sourceFile="DomainPolicyImpl.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainRepository" sourceFile="DomainRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainRepositoryImpl" sourceFile="DomainRepositoryImpl.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.DomainService" sourceFile="DomainService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.FinderImpl" sourceFile="FinderImpl.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.Function" sourceFile="Function.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.Invariant" sourceFile="Invariant.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.InvariantsList" sourceFile="InvariantsList.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.PublishedLanguage" sourceFile="PublishedLanguage.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.domain.ValueObject" sourceFile="ValueObject.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ddd.annotations.event" total_bugs="0" total_types="3" total_size="4">
+      <ClassStats class="pl.com.bottega.ddd.annotations.event.Event" sourceFile="Event.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.event.EventListener" sourceFile="EventListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.annotations.event.EventListeners" sourceFile="EventListeners.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ddd.support.domain" total_bugs="0" total_types="4" total_size="48">
+      <ClassStats class="pl.com.bottega.ddd.support.domain.BaseAggregateRoot" sourceFile="BaseAggregateRoot.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.support.domain.BaseAggregateRoot$AggregateStatus" sourceFile="BaseAggregateRoot.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.support.domain.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ddd.support.domain.DomainEventPublisher" sourceFile="DomainEventPublisher.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ddd.support.infrastructure.repository.jpa" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="pl.com.bottega.ddd.support.infrastructure.repository.jpa.GenericJpaRepository" sourceFile="GenericJpaRepository.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.businessprocess.ordertracking" total_bugs="2" total_types="3" total_size="74" priority_2="2">
+      <ClassStats class="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerData" sourceFile="OrderShipmentStatusTrackerData.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSaga" sourceFile="OrderShipmentStatusTrackerSaga.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.businessprocess.ordertracking.OrderShipmentStatusTrackerSagaManager" sourceFile="OrderShipmentStatusTrackerSagaManager.java" interface="false" size="29" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.canonicalmodel.events" total_bugs="0" total_types="4" total_size="44">
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.events.ClientPaidEvent" sourceFile="ClientPaidEvent.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.events.CustomerStatusChangedEvent" sourceFile="CustomerStatusChangedEvent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.events.OrderSubmittedEvent" sourceFile="OrderSubmittedEvent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.events.PaymentRolledBackEvent" sourceFile="PaymentRolledBackEvent.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.AggregateId" sourceFile="AggregateId.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.ClientData" sourceFile="ClientData.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.crm.application.commands" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="pl.com.bottega.ecommerce.crm.application.commands.ChangeCustomerStatusCommand" sourceFile="ChangeCustomerStatusCommand.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.crm.application.commands.handlers" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="pl.com.bottega.ecommerce.crm.application.commands.handlers.ChangeCustomerStatusCommandHandler" sourceFile="ChangeCustomerStatusCommandHandler.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.crm.domain" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="pl.com.bottega.ecommerce.crm.domain.Customer" sourceFile="Customer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.crm.domain.Customer$CustomerStatus" sourceFile="Customer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.crm.domain.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.crm.infrastructure.repositories.jpa" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="pl.com.bottega.ecommerce.crm.infrastructure.repositories.jpa.JpaCustomerRepository" sourceFile="JpaCustomerRepository.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.api.command" total_bugs="0" total_types="5" total_size="91">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.command.AddProdctCommand" sourceFile="AddProdctCommand.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.command.OrderDetailsCommand" sourceFile="OrderDetailsCommand.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.command.SetNewShippingAddressForOrderCommand" sourceFile="SetNewShippingAddressForOrderCommand.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.command.SetOrderDetailsCommand" sourceFile="SetOrderDetailsCommand.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.command.UseExistingShippingAddressForPurchaseCommand" sourceFile="UseExistingShippingAddressForPurchaseCommand.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.api.handler" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.handler.AddProdctCommandHandler" sourceFile="AddProdctCommandHandler.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.api.service" total_bugs="0" total_types="3" total_size="23">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.service.OfferChangedExcpetion" sourceFile="OfferChangedExcpetion.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.service.OrderingService" sourceFile="OrderingService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.api.service.ShoppingCart" sourceFile="ShoppingCart.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.impl" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.impl.OrderingServiceImpl" sourceFile="OrderingServiceImpl.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.internal.bookkeeping" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.internal.bookkeeping.BookKeepingListener" sourceFile="BookKeepingListener.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.internal.discounts" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.internal.discounts.DiscountingService" sourceFile="DiscountingService.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.internal.shoppingcart" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.internal.shoppingcart.ShoppingCartImpl" sourceFile="ShoppingCartImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.internal.shoppingcart.ShoppingCartModel" sourceFile="ShoppingCartModel.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.application.listeners" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.application.listeners.ClientStatusChangedListener" sourceFile="ClientStatusChangedListener.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.client" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.client.Client" sourceFile="Client.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.client.ClientRepository" sourceFile="ClientRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.equivalent" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.equivalent.ProductSpecificationFactory" sourceFile="ProductSpecificationFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.equivalent.SuggestionService" sourceFile="SuggestionService.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.equivalent.specification" total_bugs="0" total_types="3" total_size="32">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.equivalent.specification.SameCategory" sourceFile="SameCategory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.equivalent.specification.SimilarName" sourceFile="SimilarName.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.equivalent.specification.SimilarPrice" sourceFile="SimilarPrice.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.invoicing" total_bugs="1" total_types="11" total_size="144" priority_1="1">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.BookKeeper" sourceFile="BookKeeper.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.Invoice" sourceFile="Invoice.java" interface="false" size="28" bugs="1" priority_1="1"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.InvoiceFactory" sourceFile="InvoiceFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.InvoiceLine" sourceFile="InvoiceLine.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.InvoiceRepository" sourceFile="InvoiceRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.InvoiceRequest" sourceFile="InvoiceRequest.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.InvoiceRequestFactory" sourceFile="InvoiceRequestFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.RequestItem" sourceFile="RequestItem.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.Tax" sourceFile="Tax.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.TaxAdvisor" sourceFile="TaxAdvisor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.TaxPolicy" sourceFile="TaxPolicy.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.invoicing.tax" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.tax.CrysisTaxPolicy" sourceFile="CrysisTaxPolicy.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.tax.DefaultTaxPolicy" sourceFile="DefaultTaxPolicy.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.invoicing.tax.DefaultTaxPolicy$1" sourceFile="DefaultTaxPolicy.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.offer" total_bugs="0" total_types="5" total_size="171">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.Discount" sourceFile="Discount.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.DiscountFactory" sourceFile="DiscountFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.DiscountPolicy" sourceFile="DiscountPolicy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.Offer" sourceFile="Offer.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.OfferItem" sourceFile="OfferItem.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.offer.discounts" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.offer.discounts.QuantityDiscount" sourceFile="QuantityDiscount.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.payment" total_bugs="0" total_types="3" total_size="26">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.payment.Payment" sourceFile="Payment.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.payment.PaymentFactory" sourceFile="PaymentFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.payment.PaymentRepository" sourceFile="PaymentRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.productscatalog" total_bugs="0" total_types="4" total_size="98">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.productscatalog.Product" sourceFile="Product.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.productscatalog.ProductData" sourceFile="ProductData.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.productscatalog.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.productscatalog.ProductType" sourceFile="ProductType.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.purchase" total_bugs="1" total_types="4" total_size="71" priority_1="1">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.purchase.Purchase" sourceFile="Purchase.java" interface="false" size="31" bugs="1" priority_1="1"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.purchase.PurchaseFactory" sourceFile="PurchaseFactory.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.purchase.PurchaseItem" sourceFile="PurchaseItem.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.purchase.PurchaseRepository" sourceFile="PurchaseRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.domain.reservation" total_bugs="2" total_types="6" total_size="143" priority_2="1" priority_1="1">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation" sourceFile="Reservation.java" interface="false" size="75" bugs="1" priority_1="1"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.Reservation$ReservationStatus" sourceFile="Reservation.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationFactory" sourceFile="ReservationFactory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationItem" sourceFile="ReservationItem.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.ReservationRepository" sourceFile="ReservationRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.domain.reservation.ReservedProduct" sourceFile="ReservedProduct.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl" total_bugs="1" total_types="6" total_size="36" priority_2="1">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaClientRepository" sourceFile="JpaClientRepository.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaInvoiceRepository" sourceFile="JpaInvoiceRepository.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaPaymentRepository" sourceFile="JpaPaymentRepository.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaProductRepository" sourceFile="JpaProductRepository.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaPurchaseRepository" sourceFile="JpaPurchaseRepository.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.infrastructure.repo.impl.JpaReservationRepository" sourceFile="JpaReservationRepository.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.readmodel.impl" total_bugs="0" total_types="3" total_size="39">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.impl.JpaOfferFinder" sourceFile="JpaOfferFinder.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.impl.JpaOrderFinder" sourceFile="JpaOrderFinder.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.impl.JpaOrderFinder$1" sourceFile="JpaOrderFinder.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.readmodel.offer" total_bugs="0" total_types="3" total_size="10">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.offer.Offer" sourceFile="Offer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.offer.OfferQuery" sourceFile="OfferQuery.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.offer.OfferedProductDto" sourceFile="OfferedProductDto.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sales.readmodel.orders" total_bugs="0" total_types="5" total_size="61">
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.orders.OrderDto" sourceFile="OrderDto.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.orders.OrderFinder" sourceFile="OrderFinder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.orders.OrderQuery" sourceFile="OrderQuery.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.orders.OrderStatus" sourceFile="OrderStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sales.readmodel.orders.OrderedProductDto" sourceFile="OrderedProductDto.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sharedkernel" total_bugs="0" total_types="1" total_size="77">
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.Money" sourceFile="Money.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sharedkernel.exceptions" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.exceptions.DomainOperationException" sourceFile="DomainOperationException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.sharedkernel.specification" total_bugs="0" total_types="8" total_size="81">
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.AndSpecification" sourceFile="AndSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.CompositeSpecification" sourceFile="CompositeSpecification.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.Conjunction" sourceFile="Conjunction.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.ConjunctionSpecification" sourceFile="ConjunctionSpecification.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.DisjunctionSpecification" sourceFile="DisjunctionSpecification.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.NotSpecification" sourceFile="NotSpecification.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.OrSpecification" sourceFile="OrSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.sharedkernel.specification.Specification" sourceFile="Specification.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.application.commands" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.application.commands.DeliverShipmentCommand" sourceFile="DeliverShipmentCommand.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.application.commands.SendShipmentCommand" sourceFile="SendShipmentCommand.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.application.commands.handlers" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.application.commands.handlers.DeliverShipmentCommandHandler" sourceFile="DeliverShipmentCommandHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.application.commands.handlers.ShipOrderCommandHandler" sourceFile="ShipOrderCommandHandler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.application.listeners" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.application.listeners.OrderSubmittedForShippingListener" sourceFile="OrderSubmittedForShippingListener.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.domain" total_bugs="0" total_types="4" total_size="47">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.Shipment" sourceFile="Shipment.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.ShipmentFactory" sourceFile="ShipmentFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.ShipmentRepository" sourceFile="ShipmentRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.ShippingStatus" sourceFile="ShippingStatus.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.domain.events" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.events.OrderShippedEvent" sourceFile="OrderShippedEvent.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.domain.events.ShipmentDeliveredEvent" sourceFile="ShipmentDeliveredEvent.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.intrastructure" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.intrastructure.JpaShipmentRepository" sourceFile="JpaShipmentRepository.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.readmodel" total_bugs="0" total_types="2" total_size="18">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.readmodel.ShipmentDto" sourceFile="ShipmentDto.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.readmodel.ShipmentFinder" sourceFile="ShipmentFinder.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.readmodel.impl" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.readmodel.impl.JpaShipmentFinder" sourceFile="JpaShipmentFinder.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.shipping.webui" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="pl.com.bottega.ecommerce.shipping.webui.ShipmentsListController" sourceFile="ShipmentsListController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.application" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="pl.com.bottega.ecommerce.system.application.SystemContext" sourceFile="SystemContext.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.application.SystemUser" sourceFile="SystemUser.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.infrastructure.events" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="pl.com.bottega.ecommerce.system.infrastructure.events.SimpleEventPublisher" sourceFile="SimpleEventPublisher.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.infrastructure.events.impl" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="pl.com.bottega.ecommerce.system.infrastructure.events.impl.EventListenerBeanPostProcessor" sourceFile="EventListenerBeanPostProcessor.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.infrastructure.events.impl.handlers" total_bugs="0" total_types="3" total_size="28">
+      <ClassStats class="pl.com.bottega.ecommerce.system.infrastructure.events.impl.handlers.AsynchronousEventHandler" sourceFile="AsynchronousEventHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.infrastructure.events.impl.handlers.EventHandler" sourceFile="EventHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.infrastructure.events.impl.handlers.SpringEventHandler" sourceFile="SpringEventHandler.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.saga" total_bugs="0" total_types="3" total_size="20">
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.SagaEngine" sourceFile="SagaEngine.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.SagaInstance" sourceFile="SagaInstance.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.SagaManager" sourceFile="SagaManager.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.saga.annotations" total_bugs="0" total_types="3" total_size="3">
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.annotations.LoadSaga" sourceFile="LoadSaga.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.annotations.Saga" sourceFile="Saga.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.annotations.SagaAction" sourceFile="SagaAction.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.com.bottega.ecommerce.system.saga.impl" total_bugs="0" total_types="4" total_size="108">
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.impl.SagaRegistry" sourceFile="SagaRegistry.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.impl.SimpleSagaEngine" sourceFile="SimpleSagaEngine.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.impl.SimpleSagaEngine$SagaEventHandler" sourceFile="SimpleSagaEngine.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="pl.com.bottega.ecommerce.system.saga.impl.SpringSagaRegistry" sourceFile="SpringSagaRegistry.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="265" invocations="954" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="9511" standardDeviationMicrosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="136" invocations="276" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="15201" standardDeviationMicrosecondsPerInvocation="1642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="126" invocations="813" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="6073" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="118" invocations="486" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="10027" standardDeviationMicrosecondsPerInvocation="706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="118" invocations="966" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="16939" standardDeviationMicrosecondsPerInvocation="647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="116" invocations="486" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="5444" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="113" invocations="460" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="10345" standardDeviationMicrosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="111" invocations="488" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="8700" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="104" invocations="276" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="10728" standardDeviationMicrosecondsPerInvocation="993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="101" invocations="485" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="5386" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="97" invocations="489" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="9806" standardDeviationMicrosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="79" invocations="377" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="34098" standardDeviationMicrosecondsPerInvocation="1781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="71" invocations="347" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="13846" standardDeviationMicrosecondsPerInvocation="771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="534" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="26404" standardDeviationMicrosecondsPerInvocation="1178"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="59" invocations="276" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="15611" standardDeviationMicrosecondsPerInvocation="1312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="276" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="8290" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="42" invocations="276" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="7201" standardDeviationMicrosecondsPerInvocation="681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="40" invocations="170" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="5145" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="847" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1089" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="35" invocations="170" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="4573" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="33" invocations="276" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="9634" standardDeviationMicrosecondsPerInvocation="914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="276" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="2642" standardDeviationMicrosecondsPerInvocation="265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="32" invocations="5289" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1067" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteSuppressedWarnings" totalMilliseconds="31" invocations="276" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="18117" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="31" invocations="170" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="7746" standardDeviationMicrosecondsPerInvocation="779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="27" invocations="276" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="2612" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="486" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="1494" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="24" invocations="21398" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="497" standardDeviationMicrosecondsPerInvocation="5"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Naming" totalMilliseconds="23" invocations="170" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="6063" standardDeviationMicrosecondsPerInvocation="466"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="22" invocations="170" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="4349" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="22" invocations="170" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="5316" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="22" invocations="170" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="993" standardDeviationMicrosecondsPerInvocation="180"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="21" invocations="170" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="7900" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="20" invocations="170" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2531" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="20" invocations="458" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="5831" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="20" invocations="170" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="1017" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="20" invocations="170" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="1894" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="18" invocations="170" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2880" standardDeviationMicrosecondsPerInvocation="271"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

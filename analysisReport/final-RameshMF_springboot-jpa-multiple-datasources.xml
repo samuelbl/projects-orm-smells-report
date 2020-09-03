@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086252000" analysisTimestamp="1597086254152" release="">
+  <Project projectName="repositorios/RameshMF_springboot-jpa-multiple-datasources">
+    <Jar>repositorios/RameshMF_springboot-jpa-multiple-datasources</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.guides.springboot.springbootmultipledatasources.orders.entities.OrderItem">
+      <SourceLine classname="net.guides.springboot.springbootmultipledatasources.orders.entities.OrderItem" start="18" end="59" sourcefile="OrderItem.java" sourcepath="net/guides/springboot/springbootmultipledatasources/orders/entities/OrderItem.java"/>
+    </Class>
+    <Field classname="net.guides.springboot.springbootmultipledatasources.orders.entities.OrderItem" name="order" signature="Lnet/guides/springboot/springbootmultipledatasources/orders/entities/Order;" isStatic="false">
+      <SourceLine classname="net.guides.springboot.springbootmultipledatasources.orders.entities.OrderItem" sourcefile="OrderItem.java" sourcepath="net/guides/springboot/springbootmultipledatasources/orders/entities/OrderItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.guides.springboot.springbootmultipledatasources.security.entities.Address">
+      <SourceLine classname="net.guides.springboot.springbootmultipledatasources.security.entities.Address" start="19" end="52" sourcefile="Address.java" sourcepath="net/guides/springboot/springbootmultipledatasources/security/entities/Address.java"/>
+    </Class>
+    <Field classname="net.guides.springboot.springbootmultipledatasources.security.entities.Address" name="user" signature="Lnet/guides/springboot/springbootmultipledatasources/security/entities/User;" isStatic="false">
+      <SourceLine classname="net.guides.springboot.springbootmultipledatasources.security.entities.Address" sourcefile="Address.java" sourcepath="net/guides/springboot/springbootmultipledatasources/security/entities/Address.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.jdbc.DataSourceProperties</MissingClass>
+    <MissingClass>org.springframework.boot.jdbc.DataSourceBuilder</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.init.DataSourceInitializer</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.init.ResourceDatabasePopulator</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:04:12 +0000" total_classes="12" referenced_classes="26" total_bugs="2" total_size="228" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.03" clock_seconds="1.16" peak_mbytes="122.21" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="2">
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.SpringbootMultipleDatasourcesApplication" sourceFile="SpringbootMultipleDatasourcesApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.config" total_bugs="0" total_types="3" total_size="81">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.config.OrdersDataSourceConfig" sourceFile="OrdersDataSourceConfig.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.config.SecurityDataSourceConfig" sourceFile="SecurityDataSourceConfig.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.config.WebMvcConfig" sourceFile="WebMvcConfig.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.controllers" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.controllers.HomeController" sourceFile="HomeController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.orders.entities" total_bugs="1" total_types="2" total_size="54" priority_2="1">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.orders.entities.Order" sourceFile="Order.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.orders.entities.OrderItem" sourceFile="OrderItem.java" interface="false" size="27" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.orders.repositories" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.orders.repositories.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.security.entities" total_bugs="1" total_types="2" total_size="68" priority_2="1">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.security.entities.Address" sourceFile="Address.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.security.entities.User" sourceFile="User.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.security.repositories" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.security.repositories.UserRepository" sourceFile="UserRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.guides.springboot.springbootmultipledatasources.services" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="net.guides.springboot.springbootmultipledatasources.services.UserOrdersService" sourceFile="UserOrdersService.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="158" invocations="385" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="12382" standardDeviationMicrosecondsPerInvocation="1061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="63" invocations="12" avgMicrosecondsPerInvocation="5275" maxMicrosecondsPerInvocation="60438" standardDeviationMicrosecondsPerInvocation="16640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="39" invocations="26" avgMicrosecondsPerInvocation="1532" maxMicrosecondsPerInvocation="11203" standardDeviationMicrosecondsPerInvocation="2623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="391" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="494" standardDeviationMicrosecondsPerInvocation="54"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="33" invocations="128" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="3455" standardDeviationMicrosecondsPerInvocation="466"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="29" invocations="26" avgMicrosecondsPerInvocation="1130" maxMicrosecondsPerInvocation="6618" standardDeviationMicrosecondsPerInvocation="1754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="60" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="22683" standardDeviationMicrosecondsPerInvocation="2893"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="26" invocations="313" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="1273" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="24" invocations="60" avgMicrosecondsPerInvocation="408" maxMicrosecondsPerInvocation="7699" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="62" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="11695" standardDeviationMicrosecondsPerInvocation="1502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="19" invocations="60" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="7592" standardDeviationMicrosecondsPerInvocation="972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="19" invocations="60" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="8077" standardDeviationMicrosecondsPerInvocation="1035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="18" invocations="60" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="8238" standardDeviationMicrosecondsPerInvocation="1047"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="17" invocations="60" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="2200" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="26" avgMicrosecondsPerInvocation="653" maxMicrosecondsPerInvocation="6768" standardDeviationMicrosecondsPerInvocation="1346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="15" invocations="60" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="1986" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="562" maxMicrosecondsPerInvocation="7722" standardDeviationMicrosecondsPerInvocation="1501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="3993" standardDeviationMicrosecondsPerInvocation="1066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="5027" standardDeviationMicrosecondsPerInvocation="1030"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

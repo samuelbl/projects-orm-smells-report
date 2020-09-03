@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597104360000" analysisTimestamp="1597104361605" release="">
+  <Project projectName="repositorios/akquinet_needle">
+    <Jar>repositorios/akquinet_needle</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3">
+      <SourceLine classname="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3" start="79" end="88" sourcefile="TransactionHelper.java" sourcepath="de/akquinet/jbosscc/needle/db/transaction/TransactionHelper.java"/>
+    </Class>
+    <Method classname="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3" name="run" signature="(Ljavax/persistence/EntityManager;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3" start="84" end="87" startBytecode="0" endBytecode="189" sourcefile="TransactionHelper.java" sourcepath="de/akquinet/jbosscc/needle/db/transaction/TransactionHelper.java"/>
+    </Method>
+    <SourceLine classname="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3" start="87" end="87" startBytecode="48" endBytecode="48" sourcefile="TransactionHelper.java" sourcepath="de/akquinet/jbosscc/needle/db/transaction/TransactionHelper.java"/>
+  </BugInstance>
+  <Errors errors="1" missingClasses="17">
+    <Error>
+      <ErrorMessage>Exception analyzing de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3 using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.inject.Named</MissingClass>
+    <MissingClass>javax.persistence.Entity</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.easymock.EasyMock</MissingClass>
+    <MissingClass>org.easymock.EasyMockSupport</MissingClass>
+    <MissingClass>org.hibernate.ejb.Ejb3Configuration</MissingClass>
+    <MissingClass>org.junit.rules.MethodRule</MissingClass>
+    <MissingClass>org.junit.rules.RuleChain</MissingClass>
+    <MissingClass>org.junit.rules.TestRule</MissingClass>
+    <MissingClass>org.junit.runners.model.Statement</MissingClass>
+    <MissingClass>org.mockito.Mockito</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:06:00 +0000" total_classes="102" referenced_classes="220" total_bugs="1" total_size="2300" num_packages="19" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.96" clock_seconds="3.31" peak_mbytes="334.70" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="1">
+    <PackageStats package="de.akquinet.jbosscc.needle" total_bugs="0" total_types="6" total_size="219">
+      <ClassStats class="de.akquinet.jbosscc.needle.NeedleContext" sourceFile="NeedleContext.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.NeedleTestcase" sourceFile="NeedleTestcase.java" interface="false" size="147" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.NeedleTestcase$1" sourceFile="NeedleTestcase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.NeedleTestcase$2" sourceFile="NeedleTestcase.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.NeedleTestcase$InjectionTargetInformationFactory" sourceFile="NeedleTestcase.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.ObjectUnderTestInstantiationException" sourceFile="ObjectUnderTestInstantiationException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.annotation" total_bugs="0" total_types="4" total_size="10">
+      <ClassStats class="de.akquinet.jbosscc.needle.annotation.InjectInto" sourceFile="InjectInto.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.annotation.InjectIntoMany" sourceFile="InjectIntoMany.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.annotation.Mock" sourceFile="Mock.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.annotation.ObjectUnderTest" sourceFile="ObjectUnderTest.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.common" total_bugs="0" total_types="4" total_size="38">
+      <ClassStats class="de.akquinet.jbosscc.needle.common.Annotations" sourceFile="Annotations.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.common.Builder" sourceFile="Builder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.common.MapEntry" sourceFile="MapEntry.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.common.Preconditions" sourceFile="Preconditions.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.configuration" total_bugs="0" total_types="5" total_size="228">
+      <ClassStats class="de.akquinet.jbosscc.needle.configuration.ConfigurationLoader" sourceFile="ConfigurationLoader.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.configuration.ConfigurationProperties" sourceFile="ConfigurationProperties.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.configuration.LookupCustomClasses" sourceFile="LookupCustomClasses.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.configuration.NeedleConfiguration" sourceFile="NeedleConfiguration.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.configuration.PropertyBasedConfigurationFactory" sourceFile="PropertyBasedConfigurationFactory.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db" total_bugs="0" total_types="8" total_size="204">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.DatabaseTestcase" sourceFile="DatabaseTestcase.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.DatabaseTestcaseConfiguration" sourceFile="DatabaseTestcaseConfiguration.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.EntityManagerFactoryProvider" sourceFile="EntityManagerFactoryProvider.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.EntityManagerFactoryProvider$1" sourceFile="EntityManagerFactoryProvider.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.EntityManagerProvider" sourceFile="EntityManagerProvider.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.EntityManagerProvider$1" sourceFile="EntityManagerProvider.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.EntityTransactionProvider" sourceFile="EntityTransactionProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.TransactionHelperProvider" sourceFile="TransactionHelperProvider.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.configuration" total_bugs="0" total_types="6" total_size="107">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.EJB3Configuration" sourceFile="EJB3Configuration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.EntityManagerProxyFactory" sourceFile="EntityManagerProxyFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.EntityManagerProxyFactory$1" sourceFile="EntityManagerProxyFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.PersistenceConfiguration" sourceFile="PersistenceConfiguration.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.PersistenceConfigurationFactory" sourceFile="PersistenceConfigurationFactory.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.configuration.PersistenceUnitConfiguration" sourceFile="PersistenceUnitConfiguration.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.operation" total_bugs="0" total_types="4" total_size="143">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.AbstractDBOperation" sourceFile="AbstractDBOperation.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.DBOperation" sourceFile="DBOperation.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.ExecuteScriptOperation" sourceFile="ExecuteScriptOperation.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.JdbcConfiguration" sourceFile="JdbcConfiguration.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.operation.h2" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.h2.H2DeleteOperation" sourceFile="H2DeleteOperation.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.operation.hsql" total_bugs="0" total_types="1" total_size="62">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.operation.hsql.HSQLDeleteOperation" sourceFile="HSQLDeleteOperation.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.testdata" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.testdata.AbstractTestdataBuilder" sourceFile="AbstractTestdataBuilder.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.testdata.TestdataBuilder" sourceFile="TestdataBuilder.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.db.transaction" total_bugs="1" total_types="6" total_size="73" priority_2="1">
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.Runnable" sourceFile="Runnable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper" sourceFile="TransactionHelper.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$1" sourceFile="TransactionHelper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$2" sourceFile="TransactionHelper.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.TransactionHelper$3" sourceFile="TransactionHelper.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.db.transaction.VoidRunnable" sourceFile="VoidRunnable.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.injection" total_bugs="0" total_types="19" total_size="440">
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.CDIInstanceInjectionProvider" sourceFile="CDIInstanceInjectionProvider.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.DefaultMockInjectionProvider" sourceFile="DefaultMockInjectionProvider.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionAnnotationProcessor" sourceFile="InjectionAnnotationProcessor.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionConfiguration" sourceFile="InjectionConfiguration.java" interface="false" size="152" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProvider" sourceFile="InjectionProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviderInstancesSupplier" sourceFile="InjectionProviderInstancesSupplier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders" sourceFile="InjectionProviders.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$1" sourceFile="InjectionProviders.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$2" sourceFile="InjectionProviders.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$3" sourceFile="InjectionProviders.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$DefaultInstanceInjectionProvider" sourceFile="InjectionProviders.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$InstanceInjectionProvider" sourceFile="InjectionProviders.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$NamedInstanceInjectionProvider" sourceFile="InjectionProviders.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionProviders$QualifiedInstanceInjectionProvider" sourceFile="InjectionProviders.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionTargetInformation" sourceFile="InjectionTargetInformation.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.InjectionVerifier" sourceFile="InjectionVerifier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.MockProviderInjectionProvider" sourceFile="MockProviderInjectionProvider.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.ResourceMockInjectionProvider" sourceFile="ResourceMockInjectionProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.injection.TestcaseInjectionProcessor" sourceFile="TestcaseInjectionProcessor.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.junit" total_bugs="0" total_types="10" total_size="220">
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.AbstractDatabaseRuleBuilder" sourceFile="AbstractDatabaseRuleBuilder.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.AbstractNeedleRuleBuilder" sourceFile="AbstractNeedleRuleBuilder.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.AbstractRuleBuilder" sourceFile="AbstractRuleBuilder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.DatabaseRule" sourceFile="DatabaseRule.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.DatabaseRule$1" sourceFile="DatabaseRule.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.DatabaseRuleBuilder" sourceFile="DatabaseRuleBuilder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.NeedleBuilders" sourceFile="NeedleBuilders.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.NeedleRule" sourceFile="NeedleRule.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.NeedleRule$1" sourceFile="NeedleRule.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.NeedleRuleBuilder" sourceFile="NeedleRuleBuilder.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.junit.testrule" total_bugs="0" total_types="6" total_size="71">
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.DatabaseTestRule" sourceFile="DatabaseTestRule.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.DatabaseTestRule$1" sourceFile="DatabaseTestRule.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.DatabaseTestRuleBuilder" sourceFile="DatabaseTestRuleBuilder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.NeedleTestRule" sourceFile="NeedleTestRule.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.NeedleTestRule$1" sourceFile="NeedleTestRule.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.junit.testrule.NeedleTestRuleBuilder" sourceFile="NeedleTestRuleBuilder.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.mock" total_bugs="0" total_types="6" total_size="92">
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.EasyMockProvider" sourceFile="EasyMockProvider.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.MockAnnotationProcessor" sourceFile="MockAnnotationProcessor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.MockProvider" sourceFile="MockProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.MockitoProvider" sourceFile="MockitoProvider.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.SpyProvider" sourceFile="SpyProvider.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.mock.SpyProvider$1" sourceFile="SpyProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.postconstruct" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="de.akquinet.jbosscc.needle.postconstruct.PostConstructProcessor" sourceFile="PostConstructProcessor.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.processor" total_bugs="0" total_types="3" total_size="28">
+      <ClassStats class="de.akquinet.jbosscc.needle.processor.AbstractNeedleProcessor" sourceFile="AbstractNeedleProcessor.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.processor.ChainedNeedleProcessor" sourceFile="ChainedNeedleProcessor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.processor.NeedleProcessor" sourceFile="NeedleProcessor.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.reflection" total_bugs="0" total_types="8" total_size="247">
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.DerivedClassIterator" sourceFile="DerivedClassIterator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil" sourceFile="ReflectionUtil.java" interface="false" size="170" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$1" sourceFile="ReflectionUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$2" sourceFile="ReflectionUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$3" sourceFile="ReflectionUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$4" sourceFile="ReflectionUtil.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$5" sourceFile="ReflectionUtil.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.reflection.ReflectionUtil$6" sourceFile="ReflectionUtil.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.akquinet.jbosscc.needle.testng" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="de.akquinet.jbosscc.needle.testng.AbstractNeedleTestcase" sourceFile="AbstractNeedleTestcase.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.akquinet.jbosscc.needle.testng.DatabaseTestcase" sourceFile="DatabaseTestcase.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="265" invocations="886" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="9997" standardDeviationMicrosecondsPerInvocation="597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="129" invocations="483" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="5885" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="122" invocations="489" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="8417" standardDeviationMicrosecondsPerInvocation="540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="118" invocations="470" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="4815" standardDeviationMicrosecondsPerInvocation="411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="115" invocations="220" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="8786" standardDeviationMicrosecondsPerInvocation="1088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="106" invocations="482" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="3648" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="101" invocations="490" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="9348" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="100" invocations="220" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="4746" standardDeviationMicrosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="96" invocations="401" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="20237" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="95" invocations="483" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="10153" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="78" invocations="825" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="1548" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="283" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="23904" standardDeviationMicrosecondsPerInvocation="1678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="69" invocations="890" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="950" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="60" invocations="512" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="26465" standardDeviationMicrosecondsPerInvocation="1167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="43" invocations="220" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="19975" standardDeviationMicrosecondsPerInvocation="1363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="42" invocations="220" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="2622" standardDeviationMicrosecondsPerInvocation="362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="815" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1063" standardDeviationMicrosecondsPerInvocation="86"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="39" invocations="220" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="2626" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="220" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="6839" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="28" invocations="483" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="1420" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="220" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="3565" standardDeviationMicrosecondsPerInvocation="327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="27" invocations="220" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="1269" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="26" invocations="102" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2389" standardDeviationMicrosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="25" invocations="102" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="1985" standardDeviationMicrosecondsPerInvocation="366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="6752" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="564" standardDeviationMicrosecondsPerInvocation="14"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="23" invocations="102" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="9037" standardDeviationMicrosecondsPerInvocation="913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="102" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="2040" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="22" invocations="102" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2009" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="21" invocations="102" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="5852" standardDeviationMicrosecondsPerInvocation="584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="20" invocations="102" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="3194" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="19" invocations="102" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="1357" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="19" invocations="470" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="905" standardDeviationMicrosecondsPerInvocation="66"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="18" invocations="102" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="2757" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="18" invocations="102" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="2099" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="18" invocations="102" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="2227" standardDeviationMicrosecondsPerInvocation="317"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

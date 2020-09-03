@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597103458000" analysisTimestamp="1597103460229" release="">
+  <Project projectName="repositorios/chocotan_lolibox">
+    <Jar>repositorios/chocotan_lolibox</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="io.loli.box.entity.ImgFile">
+      <SourceLine classname="io.loli.box.entity.ImgFile" start="10" end="112" sourcefile="ImgFile.java" sourcepath="io/loli/box/entity/ImgFile.java"/>
+    </Class>
+    <Field classname="io.loli.box.entity.ImgFile" name="user" signature="Lio/loli/box/entity/User;" isStatic="false">
+      <SourceLine classname="io.loli.box.entity.ImgFile" sourcefile="ImgFile.java" sourcepath="io/loli/box/entity/ImgFile.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="io.loli.box.entity.InvitationCode">
+      <SourceLine classname="io.loli.box.entity.InvitationCode" start="7" end="74" sourcefile="InvitationCode.java" sourcepath="io/loli/box/entity/InvitationCode.java"/>
+    </Class>
+    <Field classname="io.loli.box.entity.InvitationCode" name="createUser" signature="Lio/loli/box/entity/User;" isStatic="false">
+      <SourceLine classname="io.loli.box.entity.InvitationCode" sourcefile="InvitationCode.java" sourcepath="io/loli/box/entity/InvitationCode.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="findUsersConnectedTo" signature="(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="53" end="67" startBytecode="0" endBytecode="376" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="53" end="53" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="get" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="156" end="159" startBytecode="0" endBytecode="179" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="156" end="156" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="get" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/social/connect/jpa/RemoteUser;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="139" end="147" startBytecode="0" endBytecode="291" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="139" end="139" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="getAll" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="118" end="120" startBytecode="0" endBytecode="143" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="118" end="118" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="getAll" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="128" end="131" startBytecode="0" endBytecode="179" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="128" end="128" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="getAll" signature="(Ljava/lang/String;Lorg/springframework/util/MultiValueMap;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="98" end="110" startBytecode="0" endBytecode="358" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="103" end="103" startBytecode="54" endBytecode="54" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="29" end="231" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Class>
+    <Method classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" name="getPrimary" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="75" end="78" startBytecode="0" endBytecode="179" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" start="75" end="75" startBytecode="11" endBytecode="11" sourcefile="AbstractUserConnectionJpaDao.java" sourcepath="org/springframework/social/connect/jpa/hibernate/AbstractUserConnectionJpaDao.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="106">
+    <MissingClass>com.aliyun.openservices.oss.OSSClient</MissingClass>
+    <MissingClass>com.aliyun.openservices.oss.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.aliyuncs.DefaultAcsClient</MissingClass>
+    <MissingClass>com.aliyuncs.IAcsClient</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageDetectionRequest</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageDetectionResponse</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageDetectionResponse$ImageResult</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageResultRequest</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageResultResponse</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageResultResponse$ImageResult</MissingClass>
+    <MissingClass>com.aliyuncs.green.model.v20160621.ImageResultResponse$ImageResult$PornResult</MissingClass>
+    <MissingClass>com.aliyuncs.profile.DefaultProfile</MissingClass>
+    <MissingClass>com.aliyuncs.profile.IClientProfile</MissingClass>
+    <MissingClass>com.baidubce.auth.DefaultBceCredentials</MissingClass>
+    <MissingClass>com.baidubce.services.bos.BosClient</MissingClass>
+    <MissingClass>com.baidubce.services.bos.BosClientConfiguration</MissingClass>
+    <MissingClass>com.baidubce.services.bos.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.qcloud.cos.COSClient</MissingClass>
+    <MissingClass>com.qcloud.cos.ClientConfig</MissingClass>
+    <MissingClass>com.qcloud.cos.auth.BasicCOSCredentials</MissingClass>
+    <MissingClass>com.qcloud.cos.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.qcloud.cos.region.Region</MissingClass>
+    <MissingClass>com.qiniu.api.auth.AuthException</MissingClass>
+    <MissingClass>com.qiniu.api.auth.digest.Mac</MissingClass>
+    <MissingClass>com.qiniu.api.io.IoApi</MissingClass>
+    <MissingClass>com.qiniu.api.io.PutExtra</MissingClass>
+    <MissingClass>com.qiniu.api.rs.PutPolicy</MissingClass>
+    <MissingClass>com.qiniu.api.rs.RSClient</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.hashids.Hashids</MissingClass>
+    <MissingClass>org.json.JSONException</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.web.ErrorAttributes</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.web.ErrorController</MissingClass>
+    <MissingClass>org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</MissingClass>
+    <MissingClass>org.springframework.dao.EmptyResultDataAccessException</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.CacheControl</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.dao.DaoAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.RememberMeConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.encrypt.Encryptors</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder$ClientBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.JdbcTokenStore</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.rememberme.PersistentRememberMeToken</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.HttpSessionRequestCache</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.RequestCache</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.SavedRequest</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.social.config.annotation.SocialConfigurer</MissingClass>
+    <MissingClass>org.springframework.social.connect.ConnectionKey</MissingClass>
+    <MissingClass>org.springframework.social.connect.DuplicateConnectionException</MissingClass>
+    <MissingClass>org.springframework.social.connect.jpa.JpaTemplate</MissingClass>
+    <MissingClass>org.springframework.social.connect.jpa.JpaUsersConnectionRepository</MissingClass>
+    <MissingClass>org.springframework.social.connect.jpa.RemoteUser</MissingClass>
+    <MissingClass>org.springframework.social.connect.jpa.hibernate.AbstractUserConnection</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.ProviderSignInController</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.SignInAdapter</MissingClass>
+    <MissingClass>org.springframework.social.security.SocialUser</MissingClass>
+    <MissingClass>org.springframework.social.weibo.api.TokenOperations</MissingClass>
+    <MissingClass>org.springframework.social.weibo.api.Weibo</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:50:58 +0000" total_classes="62" referenced_classes="157" total_bugs="9" total_size="1639" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.52" clock_seconds="2.91" peak_mbytes="278.80" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="9">
+    <PackageStats package="io.loli.box" total_bugs="0" total_types="6" total_size="111">
+      <ClassStats class="io.loli.box.AdminProperties" sourceFile="AdminProperties.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="io.loli.box.CustomNamingStrategy" sourceFile="CustomNamingStrategy.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.loli.box.LoliboxApplication" sourceFile="LoliboxApplication.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.loli.box.MvcConfig" sourceFile="MvcConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.loli.box.ReverseProxyApplication" sourceFile="ReverseProxyApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.loli.box.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.controller" total_bugs="0" total_types="11" total_size="231">
+      <ClassStats class="io.loli.box.controller.AdminController" sourceFile="AdminController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.AdminController$1" sourceFile="AdminController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.ErrorJson" sourceFile="JsonErrorController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.ImageController" sourceFile="ImageController.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.IndexController" sourceFile="IndexController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.InvitesController" sourceFile="InvitesController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.JsonErrorController" sourceFile="JsonErrorController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.LoginController" sourceFile="LoginController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.RegisterDto" sourceFile="LoginController.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.UserController" sourceFile="UserController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="io.loli.box.controller.WeiboController" sourceFile="WeiboController.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.dao" total_bugs="0" total_types="5" total_size="48">
+      <ClassStats class="io.loli.box.dao.IdSeqRepository" sourceFile="IdSeqRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="io.loli.box.dao.ImgFileRepository" sourceFile="ImgFileRepository.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="io.loli.box.dao.InvitationCodeRepository" sourceFile="InvitationCodeRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="io.loli.box.dao.JpaReMemberMeRepository" sourceFile="JpaReMemberMeRepository.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="io.loli.box.dao.UserRepository" sourceFile="UserRepository.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.entity" total_bugs="2" total_types="6" total_size="208" priority_2="2">
+      <ClassStats class="io.loli.box.entity.IdSeq" sourceFile="IdSeq.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.loli.box.entity.ImgFile" sourceFile="ImgFile.java" interface="false" size="64" bugs="1" priority_2="1"/>
+      <ClassStats class="io.loli.box.entity.InvitationCode" sourceFile="InvitationCode.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="io.loli.box.entity.PersistentLogins" sourceFile="PersistentLogins.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="io.loli.box.entity.Role" sourceFile="Role.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="io.loli.box.entity.User" sourceFile="User.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.exception" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="io.loli.box.exception.UserExistsException" sourceFile="UserExistsException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.green" total_bugs="0" total_types="4" total_size="121">
+      <ClassStats class="io.loli.box.green.AliGreenConfiguration" sourceFile="AliGreenConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.loli.box.green.AliGreenConfiguration$1" sourceFile="AliGreenConfiguration.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="io.loli.box.green.AliGreenService" sourceFile="AliGreenService.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="io.loli.box.green.GreenService" sourceFile="GreenService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.oauth2" total_bugs="0" total_types="8" total_size="233">
+      <ClassStats class="io.loli.box.oauth2.AuthorizationServerConfiguration" sourceFile="AuthorizationServerConfiguration.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.AuthorizationServerConfiguration$OauthClient" sourceFile="AuthorizationServerConfiguration.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.OauthAccessToken" sourceFile="OauthAccessToken.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.OauthClientDetails" sourceFile="OauthClientDetails.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.OauthClientToken" sourceFile="OauthClientToken.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.OauthConfig" sourceFile="OauthConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.OauthRefreshToken" sourceFile="OauthRefreshToken.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.loli.box.oauth2.ResourceServer" sourceFile="ResourceServer.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.service" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="io.loli.box.service.AbstractStorageService" sourceFile="AbstractStorageService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.loli.box.service.StorageService" sourceFile="StorageService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.service.impl" total_bugs="0" total_types="6" total_size="268">
+      <ClassStats class="io.loli.box.service.impl.AliStorageService" sourceFile="AliStorageService.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="io.loli.box.service.impl.BaiduStorageService" sourceFile="BaiduStorageService.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="io.loli.box.service.impl.CosStorageService" sourceFile="CosStorageService.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="io.loli.box.service.impl.FileSystemStorageService" sourceFile="FileSystemStorageService.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="io.loli.box.service.impl.QiniuStorageService" sourceFile="QiniuStorageService.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="io.loli.box.service.impl.UserService" sourceFile="UserService.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.social" total_bugs="0" total_types="7" total_size="140">
+      <ClassStats class="io.loli.box.social.RepositoryUserDetailsService" sourceFile="RepositoryUserDetailsService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SignInUtils" sourceFile="SignInUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SimpleSignInAdapter" sourceFile="SimpleSignInAdapter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SocialConfig" sourceFile="SocialConfig.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SocialMediaService" sourceFile="SocialMediaService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SocialUserDetails" sourceFile="SocialUserDetails.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.loli.box.social.SocialUserDetails$Builder" sourceFile="SocialUserDetails.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.loli.box.util" total_bugs="0" total_types="5" total_size="144">
+      <ClassStats class="io.loli.box.util.FileBean" sourceFile="FileBean.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="io.loli.box.util.FileUtil" sourceFile="FileUtil.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="io.loli.box.util.FinalValueHolder" sourceFile="FinalValueHolder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.loli.box.util.StatusBean" sourceFile="StatusBean.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.loli.box.util.SuffixBean" sourceFile="SuffixBean.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.social.connect.jpa.hibernate" total_bugs="7" total_types="1" total_size="112" priority_2="7">
+      <ClassStats class="org.springframework.social.connect.jpa.hibernate.AbstractUserConnectionJpaDao" sourceFile="AbstractUserConnectionJpaDao.java" interface="false" size="112" bugs="7" priority_2="7"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="319" invocations="1038" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="29509" standardDeviationMicrosecondsPerInvocation="1184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="134" invocations="157" avgMicrosecondsPerInvocation="858" maxMicrosecondsPerInvocation="11117" standardDeviationMicrosecondsPerInvocation="1727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="120" invocations="157" avgMicrosecondsPerInvocation="765" maxMicrosecondsPerInvocation="9586" standardDeviationMicrosecondsPerInvocation="1436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="92" invocations="390" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="5595" standardDeviationMicrosecondsPerInvocation="514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="90" invocations="387" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="4928" standardDeviationMicrosecondsPerInvocation="501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="82" invocations="1057" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="625" standardDeviationMicrosecondsPerInvocation="54"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="80" invocations="391" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="7899" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="73" invocations="391" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="10403" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="73" invocations="390" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="8761" standardDeviationMicrosecondsPerInvocation="515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="68" invocations="654" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="3183" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="66" invocations="390" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="2964" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="50" invocations="415" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="25102" standardDeviationMicrosecondsPerInvocation="1229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="48" invocations="293" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="14832" standardDeviationMicrosecondsPerInvocation="894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="46" invocations="795" avgMicrosecondsPerInvocation="58" maxMicrosecondsPerInvocation="1811" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="45" invocations="157" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="5652" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="45" invocations="166" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="2578" standardDeviationMicrosecondsPerInvocation="411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="157" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="5389" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="38" invocations="62" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="17301" standardDeviationMicrosecondsPerInvocation="2389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="32" invocations="157" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="2682" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="32" invocations="3842" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="989" standardDeviationMicrosecondsPerInvocation="34"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="32" invocations="157" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="1840" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="157" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="9924" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="62" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="3619" standardDeviationMicrosecondsPerInvocation="504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="157" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="2312" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="22" invocations="62" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="2608" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="62" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="8526" standardDeviationMicrosecondsPerInvocation="1073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="390" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1471" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="18" invocations="62" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="5737" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="18" invocations="62" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="3308" standardDeviationMicrosecondsPerInvocation="480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="16" invocations="157" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="3695" standardDeviationMicrosecondsPerInvocation="479"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

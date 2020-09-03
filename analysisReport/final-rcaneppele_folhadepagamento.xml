@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597103187000" analysisTimestamp="1597103189273" release="">
+  <Project projectName="repositorios/rcaneppele_folhadepagamento">
+    <Jar>repositorios/rcaneppele_folhadepagamento</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="20" end="62" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" name="buscaPorNome" signature="(Ljava/lang/String;)Lbr/com/rcaneppele/folhadepagamento/cargo/Cargo;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="38" end="44" startBytecode="0" endBytecode="191" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="38" end="38" startBytecode="7" endBytecode="7" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="20" end="62" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" name="buscaTodosOrdenadosPeloNome" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="33" end="34" startBytecode="0" endBytecode="102" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" start="33" end="33" startBytecode="7" endBytecode="7" sourcefile="CargoRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/cargo/CargoRepository.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.DadosProfissionais">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.DadosProfissionais" start="15" end="56" sourcefile="DadosProfissionais.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/DadosProfissionais.java"/>
+    </Class>
+    <Field classname="br.com.rcaneppele.folhadepagamento.funcionario.DadosProfissionais" name="cargo" signature="Lbr/com/rcaneppele/folhadepagamento/cargo/Cargo;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.DadosProfissionais" sourcefile="DadosProfissionais.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/DadosProfissionais.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="22" end="95" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" name="buscaPorCPF" signature="(Ljava/lang/String;)Lbr/com/rcaneppele/folhadepagamento/funcionario/Funcionario;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="63" end="69" startBytecode="0" endBytecode="191" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="63" end="63" startBytecode="7" endBytecode="7" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="22" end="95" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" name="buscaPorMatricula" signature="(Ljava/lang/String;)Lbr/com/rcaneppele/folhadepagamento/funcionario/Funcionario;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="74" end="80" startBytecode="0" endBytecode="191" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="74" end="74" startBytecode="7" endBytecode="7" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="22" end="95" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" name="buscaTodosOrdenadosPeloNome" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="58" end="59" startBytecode="0" endBytecode="102" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="58" end="58" startBytecode="7" endBytecode="7" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="22" end="95" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" name="buscaTodosQueForamContratadosAntesDe" signature="(Ljava/time/LocalDate;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="92" end="93" startBytecode="0" endBytecode="132" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="92" end="92" startBytecode="7" endBytecode="7" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="22" end="95" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Class>
+    <Method classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" name="carregaFuncionarioComReajustes" signature="(Ljava/lang/Long;)Lbr/com/rcaneppele/folhadepagamento/funcionario/Funcionario;" isStatic="false">
+      <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="51" end="52" startBytecode="0" endBytecode="135" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+    </Method>
+    <SourceLine classname="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" start="51" end="51" startBytecode="7" endBytecode="7" sourcefile="FuncionarioRepository.java" sourcepath="br/com/rcaneppele/folhadepagamento/funcionario/FuncionarioRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.context.Flash</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:46:27 +0000" total_classes="33" referenced_classes="90" total_bugs="8" total_size="685" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.12" clock_seconds="2.20" peak_mbytes="172.54" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="8">
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.calculofolhamensal" total_bugs="0" total_types="3" total_size="69">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.calculofolhamensal.CalculadorFolhaDePagamento" sourceFile="CalculadorFolhaDePagamento.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.calculofolhamensal.FolhaDePagamentoMB" sourceFile="FolhaDePagamentoMB.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.calculofolhamensal.FolhadePagamento" sourceFile="FolhadePagamento.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.cargo" total_bugs="2" total_types="4" total_size="166" priority_2="2">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.Cargo" sourceFile="Cargo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.CargoMB" sourceFile="CargoMB.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.CargoRepository" sourceFile="CargoRepository.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.FaixaSalarial" sourceFile="FaixaSalarial.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.cargo.validacao" total_bugs="0" total_types="3" total_size="22">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.validacao.ValidadorCadastroCargo" sourceFile="ValidadorCadastroCargo.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.validacao.ValidadorCargoExistente" sourceFile="ValidadorCargoExistente.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.cargo.validacao.ValidadorValoresDaFaixaSalarial" sourceFile="ValidadorValoresDaFaixaSalarial.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.funcionario" total_bugs="6" total_types="5" total_size="220" priority_2="6">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.DadosPessoais" sourceFile="DadosPessoais.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.DadosProfissionais" sourceFile="DadosProfissionais.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.Funcionario" sourceFile="Funcionario.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioMB" sourceFile="FuncionarioMB.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.FuncionarioRepository" sourceFile="FuncionarioRepository.java" interface="false" size="56" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.funcionario.validacao" total_bugs="0" total_types="4" total_size="34">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.validacao.ValidadorCPFUnico" sourceFile="ValidadorCPFUnico.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.validacao.ValidadorCadastroFuncionario" sourceFile="ValidadorCadastroFuncionario.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.validacao.ValidadorMatriculaUnica" sourceFile="ValidadorMatriculaUnica.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.funcionario.validacao.ValidadorSalarioCompativelComCargo" sourceFile="ValidadorSalarioCompativelComCargo.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.reajustesalarial" total_bugs="0" total_types="2" total_size="58">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.Reajuste" sourceFile="Reajuste.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.ReajusteMB" sourceFile="ReajusteMB.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao" total_bugs="0" total_types="5" total_size="38">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao.ValidadorCadastroReajuste" sourceFile="ValidadorCadastroReajuste.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao.ValidadorPercentualDoReajuste" sourceFile="ValidadorPercentualDoReajuste.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao.ValidadorPeriodicidadeEntreReajustes" sourceFile="ValidadorPeriodicidadeEntreReajustes.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao.ValidadorPeriodoDeExperiencia" sourceFile="ValidadorPeriodoDeExperiencia.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.reajustesalarial.validacao.ValidadorReajusteNaoUltrapassaFaixaSalarialDoCargo" sourceFile="ValidadorReajusteNaoUltrapassaFaixaSalarialDoCargo.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.util" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.ValidacaoException" sourceFile="ValidacaoException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.util.jpa" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jpa.EntityManagerProducer" sourceFile="EntityManagerProducer.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="br.com.rcaneppele.folhadepagamento.util.jsf" total_bugs="0" total_types="5" total_size="64">
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jsf.CargoConverter" sourceFile="CargoConverter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jsf.CustomBigDecimalConverter" sourceFile="CustomBigDecimalConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jsf.FacesContextProducer" sourceFile="FacesContextProducer.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jsf.LocalDateConverter" sourceFile="LocalDateConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="br.com.rcaneppele.folhadepagamento.util.jsf.MensagensJSF" sourceFile="MensagensJSF.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="269" invocations="717" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="16651" standardDeviationMicrosecondsPerInvocation="1130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="132" invocations="90" avgMicrosecondsPerInvocation="1476" maxMicrosecondsPerInvocation="15246" standardDeviationMicrosecondsPerInvocation="2936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="92" invocations="90" avgMicrosecondsPerInvocation="1029" maxMicrosecondsPerInvocation="12117" standardDeviationMicrosecondsPerInvocation="2140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="76" invocations="721" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="3086" standardDeviationMicrosecondsPerInvocation="179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="74" invocations="358" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="4389" standardDeviationMicrosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="52" invocations="90" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="10964" standardDeviationMicrosecondsPerInvocation="1456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="637" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="7169" standardDeviationMicrosecondsPerInvocation="313"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="47" invocations="167" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="6696" standardDeviationMicrosecondsPerInvocation="600"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="46" invocations="157" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="14631" standardDeviationMicrosecondsPerInvocation="1241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="41" invocations="167" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="7868" standardDeviationMicrosecondsPerInvocation="639"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="167" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="8665" standardDeviationMicrosecondsPerInvocation="673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="39" invocations="170" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="26406" standardDeviationMicrosecondsPerInvocation="2014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="39" invocations="167" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="2043" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="37" invocations="167" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="10105" standardDeviationMicrosecondsPerInvocation="790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="37" invocations="90" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="5343" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="32" invocations="167" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="2242" standardDeviationMicrosecondsPerInvocation="283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="90" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="2352" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="25" invocations="90" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="2819" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="90" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="6104" standardDeviationMicrosecondsPerInvocation="715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="90" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="4353" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="21" invocations="112" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="919" standardDeviationMicrosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="20" invocations="90" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="7511" standardDeviationMicrosecondsPerInvocation="821"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

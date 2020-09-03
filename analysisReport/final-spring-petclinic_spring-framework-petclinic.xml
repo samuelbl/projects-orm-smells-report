@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597099878000" analysisTimestamp="1597099880864" release="">
+  <Project projectName="repositorios/spring-petclinic_spring-framework-petclinic">
+    <Jar>repositorios/spring-petclinic_spring-framework-petclinic</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.model.Pet">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" start="47" end="109" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.springframework.samples.petclinic.model.Pet" name="visits" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.model.Pet">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" start="47" end="109" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.springframework.samples.petclinic.model.Pet" name="owner" signature="Lorg/springframework/samples/petclinic/model/Owner;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.model.Pet">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" start="47" end="109" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Class>
+    <Field classname="org.springframework.samples.petclinic.model.Pet" name="type" signature="Lorg/springframework/samples/petclinic/model/PetType;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Pet" sourcefile="Pet.java" sourcepath="org/springframework/samples/petclinic/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.model.Vet">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Vet" start="45" end="76" sourcefile="Vet.java" sourcepath="org/springframework/samples/petclinic/model/Vet.java"/>
+    </Class>
+    <Field classname="org.springframework.samples.petclinic.model.Vet" name="specialties" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Vet" sourcefile="Vet.java" sourcepath="org/springframework/samples/petclinic/model/Vet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.model.Visit">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Visit" start="62" end="119" sourcefile="Visit.java" sourcepath="org/springframework/samples/petclinic/model/Visit.java"/>
+    </Class>
+    <Field classname="org.springframework.samples.petclinic.model.Visit" name="pet" signature="Lorg/springframework/samples/petclinic/model/Pet;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.model.Visit" sourcefile="Visit.java" sourcepath="org/springframework/samples/petclinic/model/Visit.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl">
+      <SourceLine classname="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl" start="40" end="61" sourcefile="JpaVisitRepositoryImpl.java" sourcepath="org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.java"/>
+    </Class>
+    <Method classname="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl" name="findByPetId" signature="(Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl" start="59" end="61" startBytecode="0" endBytecode="98" sourcefile="JpaVisitRepositoryImpl.java" sourcepath="org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="JpaVisitRepositoryImpl.java" sourcepath="org/springframework/samples/petclinic/repository/jpa/JpaVisitRepositoryImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="32">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.springframework.beans.support.MutableSortDefinition</MissingClass>
+    <MissingClass>org.springframework.beans.support.PropertyComparator</MissingClass>
+    <MissingClass>org.springframework.core.env.ConfigurableEnvironment</MissingClass>
+    <MissingClass>org.springframework.core.style.ToStringCreator</MissingClass>
+    <MissingClass>org.springframework.dao.IncorrectResultSizeDataAccessException</MissingClass>
+    <MissingClass>org.springframework.data.repository.Repository</MissingClass>
+    <MissingClass>org.springframework.format.Formatter</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.BeanPropertyRowMapper</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.JdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.ResultSetExtractor</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.RowMapper</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.namedparam.MapSqlParameterSource</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.simple.SimpleJdbcInsert</MissingClass>
+    <MissingClass>org.springframework.orm.ObjectRetrievalFailureException</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.StopWatch</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.context.support.XmlWebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.filter.CharacterEncodingFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.AbstractDispatcherServletInitializer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:51:18 +0000" total_classes="81" referenced_classes="200" total_bugs="6" total_size="1837" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.91" clock_seconds="7.10" peak_mbytes="338.84" alloc_mbytes="3540.00" gc_seconds="0.37" priority_2="4" priority_1="2">
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="13" total_size="512">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="org.springframework.samples.petclinic.PetclinicInitializer" sourceFile="PetclinicInitializer.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.model" total_bugs="5" total_types="10" total_size="190" priority_2="3" priority_1="2">
+      <ClassStats class="org.springframework.samples.petclinic.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.NamedEntity" sourceFile="NamedEntity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Owner" sourceFile="Owner.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Person" sourceFile="Person.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Pet" sourceFile="Pet.java" interface="false" size="37" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.PetType" sourceFile="PetType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Specialty" sourceFile="Specialty.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Vet" sourceFile="Vet.java" interface="false" size="20" bugs="1" priority_1="1"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Vets" sourceFile="Vets.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.model.Visit" sourceFile="Visit.java" interface="false" size="23" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.repository" total_bugs="0" total_types="4" total_size="13">
+      <ClassStats class="org.springframework.samples.petclinic.repository.OwnerRepository" sourceFile="OwnerRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.PetRepository" sourceFile="PetRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.VetRepository" sourceFile="VetRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.VisitRepository" sourceFile="VisitRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.repository.jdbc" total_bugs="0" total_types="11" total_size="271">
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcOwnerRepositoryImpl" sourceFile="JdbcOwnerRepositoryImpl.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcPet" sourceFile="JdbcPet.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcPetRepositoryImpl" sourceFile="JdbcPetRepositoryImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcPetRowMapper" sourceFile="JdbcPetRowMapper.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcPetVisitExtractor" sourceFile="JdbcPetVisitExtractor.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl" sourceFile="JdbcVetRepositoryImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcVetRepositoryImpl$1" sourceFile="JdbcVetRepositoryImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRepositoryImpl" sourceFile="JdbcVisitRepositoryImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.JdbcVisitRowMapper" sourceFile="JdbcVisitRowMapper.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.OneToManyResultSetExtractor" sourceFile="OneToManyResultSetExtractor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jdbc.OneToManyResultSetExtractor$ExpectedResults" sourceFile="OneToManyResultSetExtractor.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.repository.jpa" total_bugs="1" total_types="4" total_size="49" priority_2="1">
+      <ClassStats class="org.springframework.samples.petclinic.repository.jpa.JpaOwnerRepositoryImpl" sourceFile="JpaOwnerRepositoryImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jpa.JpaPetRepositoryImpl" sourceFile="JpaPetRepositoryImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jpa.JpaVetRepositoryImpl" sourceFile="JpaVetRepositoryImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.jpa.JpaVisitRepositoryImpl" sourceFile="JpaVisitRepositoryImpl.java" interface="false" size="13" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.repository.springdatajpa" total_bugs="0" total_types="4" total_size="7">
+      <ClassStats class="org.springframework.samples.petclinic.repository.springdatajpa.SpringDataOwnerRepository" sourceFile="SpringDataOwnerRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.springdatajpa.SpringDataPetRepository" sourceFile="SpringDataPetRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVetRepository" sourceFile="SpringDataVetRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.repository.springdatajpa.SpringDataVisitRepository" sourceFile="SpringDataVisitRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.service" total_bugs="0" total_types="2" total_size="43">
+      <ClassStats class="org.springframework.samples.petclinic.service.ClinicService" sourceFile="ClinicService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.service.ClinicServiceImpl" sourceFile="ClinicServiceImpl.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.util" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="org.springframework.samples.petclinic.util.CallMonitoringAspect" sourceFile="CallMonitoringAspect.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.util.EntityUtils" sourceFile="EntityUtils.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.springframework.samples.petclinic.web" total_bugs="0" total_types="7" total_size="168">
+      <ClassStats class="org.springframework.samples.petclinic.web.CrashController" sourceFile="CrashController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.OwnerController" sourceFile="OwnerController.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.PetController" sourceFile="PetController.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.PetTypeFormatter" sourceFile="PetTypeFormatter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.PetValidator" sourceFile="PetValidator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.VetController" sourceFile="VetController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.springframework.samples.petclinic.web.VisitController" sourceFile="VisitController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="658" invocations="1104" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="39826" standardDeviationMicrosecondsPerInvocation="2319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="241" invocations="200" avgMicrosecondsPerInvocation="1209" maxMicrosecondsPerInvocation="21160" standardDeviationMicrosecondsPerInvocation="3140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="239" invocations="1113" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="38784" standardDeviationMicrosecondsPerInvocation="1713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="239" invocations="357" avgMicrosecondsPerInvocation="670" maxMicrosecondsPerInvocation="38787" standardDeviationMicrosecondsPerInvocation="2732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="226" invocations="371" avgMicrosecondsPerInvocation="609" maxMicrosecondsPerInvocation="29832" standardDeviationMicrosecondsPerInvocation="2523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="222" invocations="979" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="56321" standardDeviationMicrosecondsPerInvocation="2275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="212" invocations="375" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="18021" standardDeviationMicrosecondsPerInvocation="2106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="193" invocations="200" avgMicrosecondsPerInvocation="967" maxMicrosecondsPerInvocation="14795" standardDeviationMicrosecondsPerInvocation="2199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="189" invocations="375" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="20151" standardDeviationMicrosecondsPerInvocation="1866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="176" invocations="821" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="12734" standardDeviationMicrosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="176" invocations="286" avgMicrosecondsPerInvocation="616" maxMicrosecondsPerInvocation="24554" standardDeviationMicrosecondsPerInvocation="2467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="140" invocations="371" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="13530" standardDeviationMicrosecondsPerInvocation="1238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="135" invocations="370" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="10460" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="110" invocations="412" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="27800" standardDeviationMicrosecondsPerInvocation="1558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="108" invocations="200" avgMicrosecondsPerInvocation="540" maxMicrosecondsPerInvocation="25427" standardDeviationMicrosecondsPerInvocation="2379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="95" invocations="279" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="28127" standardDeviationMicrosecondsPerInvocation="1929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="92" invocations="200" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="11244" standardDeviationMicrosecondsPerInvocation="1396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="89" invocations="200" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="18362" standardDeviationMicrosecondsPerInvocation="1513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="74" invocations="371" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="16598" standardDeviationMicrosecondsPerInvocation="1213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="70" invocations="200" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="17880" standardDeviationMicrosecondsPerInvocation="1851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="67" invocations="5649" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="13463" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="62" invocations="200" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="8498" standardDeviationMicrosecondsPerInvocation="908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="55" invocations="200" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="15127" standardDeviationMicrosecondsPerInvocation="1319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="51" invocations="200" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="15394" standardDeviationMicrosecondsPerInvocation="1509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="51" invocations="81" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="20465" standardDeviationMicrosecondsPerInvocation="2762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="49" invocations="75" avgMicrosecondsPerInvocation="656" maxMicrosecondsPerInvocation="10996" standardDeviationMicrosecondsPerInvocation="1785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="47" invocations="81" avgMicrosecondsPerInvocation="585" maxMicrosecondsPerInvocation="18774" standardDeviationMicrosecondsPerInvocation="2301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="45" invocations="200" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="9307" standardDeviationMicrosecondsPerInvocation="840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="43" invocations="81" avgMicrosecondsPerInvocation="533" maxMicrosecondsPerInvocation="13255" standardDeviationMicrosecondsPerInvocation="2088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="42" invocations="81" avgMicrosecondsPerInvocation="520" maxMicrosecondsPerInvocation="10820" standardDeviationMicrosecondsPerInvocation="1479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDerefsInvolvingNonShortCircuitEvaluation" totalMilliseconds="42" invocations="81" avgMicrosecondsPerInvocation="519" maxMicrosecondsPerInvocation="33111" standardDeviationMicrosecondsPerInvocation="3666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="40" invocations="81" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="14275" standardDeviationMicrosecondsPerInvocation="1658"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596941801000" analysisTimestamp="1596941802744" release="">
+  <Project projectName="repositorios/Canadensys_canadensys-data-access">
+    <Jar>repositorios/Canadensys_canadensys-data-access</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="6" missingClasses="69">
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.TaxonModel using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.TaxonModel using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.VernacularNameModel using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.VernacularNameModel using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.DistributionModel using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing net.canadensys.dataportal.vascan.model.DistributionModel using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>javax.persistence.Table</MissingClass>
+    <MissingClass>net.canadensys.utils.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.PropertyUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.BooleanUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.tuple.Pair</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.elasticsearch.action.ListenableActionFuture</MissingClass>
+    <MissingClass>org.elasticsearch.action.index.IndexRequestBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.action.index.IndexResponse</MissingClass>
+    <MissingClass>org.elasticsearch.action.search.SearchRequestBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.action.search.SearchResponse</MissingClass>
+    <MissingClass>org.elasticsearch.action.search.SearchType</MissingClass>
+    <MissingClass>org.elasticsearch.client.Client</MissingClass>
+    <MissingClass>org.elasticsearch.client.transport.TransportClient</MissingClass>
+    <MissingClass>org.elasticsearch.common.settings.ImmutableSettings</MissingClass>
+    <MissingClass>org.elasticsearch.common.settings.ImmutableSettings$Builder</MissingClass>
+    <MissingClass>org.elasticsearch.common.transport.InetSocketTransportAddress</MissingClass>
+    <MissingClass>org.elasticsearch.index.query.BoolQueryBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.index.query.ConstantScoreQueryBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.index.query.DisMaxQueryBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.index.query.QueryBuilders</MissingClass>
+    <MissingClass>org.elasticsearch.search.SearchHit</MissingClass>
+    <MissingClass>org.elasticsearch.search.SearchHits</MissingClass>
+    <MissingClass>org.elasticsearch.search.sort.FieldSortBuilder</MissingClass>
+    <MissingClass>org.elasticsearch.search.sort.SortBuilders</MissingClass>
+    <MissingClass>org.elasticsearch.search.sort.SortOrder</MissingClass>
+    <MissingClass>org.hibernate.CacheMode</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.FetchMode</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.NullPrecedence</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.SQLQuery</MissingClass>
+    <MissingClass>org.hibernate.ScrollMode</MissingClass>
+    <MissingClass>org.hibernate.ScrollableResults</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Conjunction</MissingClass>
+    <MissingClass>org.hibernate.criterion.Criterion</MissingClass>
+    <MissingClass>org.hibernate.criterion.Disjunction</MissingClass>
+    <MissingClass>org.hibernate.criterion.Example</MissingClass>
+    <MissingClass>org.hibernate.criterion.LogicalExpression</MissingClass>
+    <MissingClass>org.hibernate.criterion.MatchMode</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.ProjectionList</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.hibernate.criterion.SimpleExpression</MissingClass>
+    <MissingClass>org.hibernate.transform.Transformers</MissingClass>
+    <MissingClass>org.hibernate.type.BigIntegerType</MissingClass>
+    <MissingClass>org.hibernate.type.BooleanType</MissingClass>
+    <MissingClass>org.hibernate.type.CalendarType</MissingClass>
+    <MissingClass>org.hibernate.type.IntegerType</MissingClass>
+    <MissingClass>org.hibernate.type.StringType</MissingClass>
+    <MissingClass>org.hibernate.usertype.UserType</MissingClass>
+    <MissingClass>org.jooq.Condition</MissingClass>
+    <MissingClass>org.jooq.DSLContext</MissingClass>
+    <MissingClass>org.jooq.Field</MissingClass>
+    <MissingClass>org.jooq.SQLDialect</MissingClass>
+    <MissingClass>org.jooq.SelectJoinStep</MissingClass>
+    <MissingClass>org.jooq.SelectSelectStep</MissingClass>
+    <MissingClass>org.jooq.Table</MissingClass>
+    <MissingClass>org.jooq.WindowSpecificationRowsStep</MissingClass>
+    <MissingClass>org.jooq.impl.DSL</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 02:56:41 +0000" total_classes="94" referenced_classes="196" total_bugs="0" total_size="5878" num_packages="15" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="16.10" clock_seconds="4.48" peak_mbytes="345.76" alloc_mbytes="3540.00" gc_seconds="0.24">
+    <PackageStats package="net.canadensys.databaseutils" total_bugs="0" total_types="8" total_size="342">
+      <ClassStats class="net.canadensys.databaseutils.DarwinCoreTermUtils" sourceFile="DarwinCoreTermUtils.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.ElasticSearchUtils" sourceFile="ElasticSearchUtils.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.H2Decode" sourceFile="H2Decode.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.PostgisUtils" sourceFile="PostgisUtils.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.PostgresUtils" sourceFile="PostgresUtils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.SQLHelper" sourceFile="SQLHelper.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.SQLStatementBuilder" sourceFile="SQLStatementBuilder.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="net.canadensys.databaseutils.ScrollableResultsIteratorWrapper" sourceFile="ScrollableResultsIteratorWrapper.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.databaseutils.hibernate" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="net.canadensys.databaseutils.hibernate.KeyValueType" sourceFile="KeyValueType.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.occurrence.dao" total_bugs="0" total_types="3" total_size="25">
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.OccurrenceAutoCompleteDAO" sourceFile="OccurrenceAutoCompleteDAO.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.OccurrenceDAO" sourceFile="OccurrenceDAO.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.OccurrenceExtensionDAO" sourceFile="OccurrenceExtensionDAO.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.occurrence.dao.impl" total_bugs="0" total_types="7" total_size="326">
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.ElasticSearchOccurrenceAutoCompleteDAO" sourceFile="ElasticSearchOccurrenceAutoCompleteDAO.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceAutoCompleteDAO" sourceFile="HibernateOccurrenceAutoCompleteDAO.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceAutoCompleteDAO$1" sourceFile="HibernateOccurrenceAutoCompleteDAO.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceAutoCompleteDAO$Wrapper" sourceFile="HibernateOccurrenceAutoCompleteDAO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceDAO" sourceFile="HibernateOccurrenceDAO.java" interface="false" size="212" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceDAO$1" sourceFile="HibernateOccurrenceDAO.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.dao.impl.HibernateOccurrenceExtensionDAO" sourceFile="HibernateOccurrenceExtensionDAO.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.occurrence.map" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="net.canadensys.dataportal.occurrence.map.MapServerAccess" sourceFile="MapServerAccess.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.map.MapUtils" sourceFile="MapUtils.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.occurrence.map.impl" total_bugs="0" total_types="1" total_size="101">
+      <ClassStats class="net.canadensys.dataportal.occurrence.map.impl.WindshaftMapServerAccess" sourceFile="WindshaftMapServerAccess.java" interface="false" size="101" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.occurrence.model" total_bugs="0" total_types="8" total_size="1543">
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.MapInfoModel" sourceFile="MapInfoModel.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.OccurrenceExtensionModel" sourceFile="OccurrenceExtensionModel.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.OccurrenceFieldConstants" sourceFile="OccurrenceFieldConstants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.OccurrenceModel" sourceFile="OccurrenceModel.java" interface="false" size="345" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.OccurrenceRawModel" sourceFile="OccurrenceRawModel.java" interface="false" size="981" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.ResourceContactModel" sourceFile="ResourceContactModel.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.ResourceModel" sourceFile="ResourceModel.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.occurrence.model.UniqueValuesModel" sourceFile="UniqueValuesModel.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.vascan.dao" total_bugs="0" total_types="7" total_size="79">
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.DistributionDAO" sourceFile="DistributionDAO.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.HybridDAO" sourceFile="HybridDAO.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.NameDAO" sourceFile="NameDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.RegionDAO" sourceFile="RegionDAO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.TaxonDAO" sourceFile="TaxonDAO.java" interface="true" size="34" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.TaxonomyDAO" sourceFile="TaxonomyDAO.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.VernacularNameDAO" sourceFile="VernacularNameDAO.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.vascan.dao.impl" total_bugs="0" total_types="9" total_size="726">
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.ElasticSearchNameDAO" sourceFile="ElasticSearchNameDAO.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateDistributionDAO" sourceFile="HibernateDistributionDAO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateHybridDAO" sourceFile="HibernateHybridDAO.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateRegionDAO" sourceFile="HibernateRegionDAO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateTaxonDAO" sourceFile="HibernateTaxonDAO.java" interface="false" size="361" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateTaxonDAO$1" sourceFile="HibernateTaxonDAO.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateTaxonDAO$RegionCriterionOperatorEnum" sourceFile="HibernateTaxonDAO.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateTaxonomyDAO" sourceFile="HibernateTaxonomyDAO.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.impl.HibernateVernacularNameDAO" sourceFile="HibernateVernacularNameDAO.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.vascan.dao.query" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.query.RegionQueryPart" sourceFile="RegionQueryPart.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.dao.query.RegionQueryPart$RegionSelector" sourceFile="RegionQueryPart.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.dataportal.vascan.model" total_bugs="0" total_types="16" total_size="887">
+      <ClassStats class="net.canadensys.dataportal.vascan.model.DistributionModel" sourceFile="DistributionModel.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.DistributionStatusModel" sourceFile="DistributionStatusModel.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.ExcludedCodeModel" sourceFile="ExcludedCodeModel.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.HabitModel" sourceFile="HabitModel.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.NameConceptModelIF" sourceFile="NameConceptModelIF.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.NameConceptTaxonModel" sourceFile="NameConceptTaxonModel.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.NameConceptVernacularNameModel" sourceFile="NameConceptVernacularNameModel.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.NestedSet" sourceFile="NestedSet.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.RankModel" sourceFile="RankModel.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.ReferenceModel" sourceFile="ReferenceModel.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.RegionModel" sourceFile="RegionModel.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.StatusModel" sourceFile="StatusModel.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.TaxonLookupModel" sourceFile="TaxonLookupModel.java" interface="false" size="254" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.TaxonModel" sourceFile="TaxonModel.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.TaxonModel$CompareLookup" sourceFile="TaxonModel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.canadensys.dataportal.vascan.model.VernacularNameModel" sourceFile="VernacularNameModel.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.query" total_bugs="0" total_types="8" total_size="261">
+      <ClassStats class="net.canadensys.query.LimitedResult" sourceFile="LimitedResult.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.canadensys.query.OrderEnum" sourceFile="OrderEnum.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.canadensys.query.QueryOperatorEnum" sourceFile="QueryOperatorEnum.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.canadensys.query.SearchQueryPart" sourceFile="SearchQueryPart.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="net.canadensys.query.SearchQueryPartUtils" sourceFile="SearchQueryPartUtils.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.canadensys.query.SearchQueryPartValidator" sourceFile="SearchQueryPartValidator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.canadensys.query.SearchableField" sourceFile="SearchableField.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.canadensys.query.SearchableFieldTypeEnum" sourceFile="SearchableFieldTypeEnum.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.query.interpreter" total_bugs="0" total_types="12" total_size="386">
+      <ClassStats class="net.canadensys.query.interpreter.InsideEnvelopeFieldInterpreter" sourceFile="InsideEnvelopeFieldInterpreter.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.InsidePolygonFieldInterpreter" sourceFile="InsidePolygonFieldInterpreter.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.MinMaxNumberFieldInterpreter" sourceFile="MinMaxNumberFieldInterpreter.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.MinMaxNumberFieldInterpreter$1" sourceFile="MinMaxNumberFieldInterpreter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.QueryPartInterpreter" sourceFile="QueryPartInterpreter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.QueryPartInterpreterResolver" sourceFile="QueryPartInterpreterResolver.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.QueryPartInterpreterResolver$1" sourceFile="QueryPartInterpreterResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.SingleValueFieldInterpreter" sourceFile="SingleValueFieldInterpreter.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.SingleValueFieldInterpreter$1" sourceFile="SingleValueFieldInterpreter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.StartEndDateFieldInterpreter" sourceFile="StartEndDateFieldInterpreter.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.StartEndDateFieldInterpreter$1" sourceFile="StartEndDateFieldInterpreter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.canadensys.query.interpreter.WithinRadiusFieldInterpreter" sourceFile="WithinRadiusFieldInterpreter.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.canadensys.query.sort" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="net.canadensys.query.sort.SearchSortPart" sourceFile="SearchSortPart.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.json" total_bugs="0" total_types="9" total_size="1082">
+      <ClassStats class="org.json.JSONArray" sourceFile="JSONArray.java" interface="false" size="242" bugs="0"/>
+      <ClassStats class="org.json.JSONException" sourceFile="JSONException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.json.JSONObject" sourceFile="JSONObject.java" interface="false" size="542" bugs="0"/>
+      <ClassStats class="org.json.JSONObject$1" sourceFile="JSONObject.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.json.JSONObject$Null" sourceFile="JSONObject.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.json.JSONString" sourceFile="JSONString.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.json.JSONStringer" sourceFile="JSONStringer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.json.JSONTokener" sourceFile="JSONTokener.java" interface="false" size="168" bugs="0"/>
+      <ClassStats class="org.json.JSONWriter" sourceFile="JSONWriter.java" interface="false" size="99" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="303" invocations="950" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="17992" standardDeviationMicrosecondsPerInvocation="888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="222" invocations="1270" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="30404" standardDeviationMicrosecondsPerInvocation="908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="186" invocations="1271" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="8353" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="174" invocations="1278" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="13107" standardDeviationMicrosecondsPerInvocation="528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="165" invocations="2168" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="9347" standardDeviationMicrosecondsPerInvocation="290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="162" invocations="1271" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="5546" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="156" invocations="196" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="11047" standardDeviationMicrosecondsPerInvocation="1605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="128" invocations="1690" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="11311" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="122" invocations="1271" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="9182" standardDeviationMicrosecondsPerInvocation="294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="121" invocations="196" avgMicrosecondsPerInvocation="622" maxMicrosecondsPerInvocation="5360" standardDeviationMicrosecondsPerInvocation="1020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="116" invocations="461" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="25854" standardDeviationMicrosecondsPerInvocation="1238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="80" invocations="196" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="27339" standardDeviationMicrosecondsPerInvocation="2033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="75" invocations="958" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="1477" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="66" invocations="1349" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="27113" standardDeviationMicrosecondsPerInvocation="738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="55" invocations="306" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="14389" standardDeviationMicrosecondsPerInvocation="846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="51" invocations="94" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="12456" standardDeviationMicrosecondsPerInvocation="1373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="48" invocations="196" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="5332" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="48" invocations="196" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="3761" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="45" invocations="1271" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="1588" standardDeviationMicrosecondsPerInvocation="89"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="44" invocations="16432" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1198" standardDeviationMicrosecondsPerInvocation="13"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="781" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1156" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="39" invocations="196" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="9058" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="38" invocations="196" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="4169" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="36" invocations="94" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="4459" standardDeviationMicrosecondsPerInvocation="651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="36" invocations="94" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="6649" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="35" invocations="196" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="4502" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="35" invocations="94" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="4769" standardDeviationMicrosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="35" invocations="94" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="11029" standardDeviationMicrosecondsPerInvocation="1492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="30" invocations="94" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="8129" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="30" invocations="94" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="3007" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="29" invocations="1270" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="1069" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="28" invocations="94" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="6148" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="26" invocations="1268" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="787" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="26" invocations="94" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="2216" standardDeviationMicrosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="26" invocations="1349" avgMicrosecondsPerInvocation="19" maxMicrosecondsPerInvocation="1889" standardDeviationMicrosecondsPerInvocation="85"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="25" invocations="196" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="10875" standardDeviationMicrosecondsPerInvocation="875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="24" invocations="160" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="1501" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="23" invocations="94" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="3304" standardDeviationMicrosecondsPerInvocation="495"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

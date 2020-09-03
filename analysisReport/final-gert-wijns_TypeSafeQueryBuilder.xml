@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596941251000" analysisTimestamp="1596941252528" release="">
+  <Project projectName="repositorios/gert-wijns_TypeSafeQueryBuilder">
+    <Jar>repositorios/gert-wijns_TypeSafeQueryBuilder</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>javassist.util.proxy.MethodHandler</MissingClass>
+    <MissingClass>javassist.util.proxy.ProxyFactory</MissingClass>
+    <MissingClass>javassist.util.proxy.ProxyObject</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.TypeHelper</MissingClass>
+    <MissingClass>org.hibernate.engine.jdbc.internal.BasicFormatterImpl</MissingClass>
+    <MissingClass>org.hibernate.metadata.ClassMetadata</MissingClass>
+    <MissingClass>org.hibernate.metadata.CollectionMetadata</MissingClass>
+    <MissingClass>org.hibernate.metamodel.spi.MetamodelImplementor</MissingClass>
+    <MissingClass>org.hibernate.persister.collection.OneToManyPersister</MissingClass>
+    <MissingClass>org.hibernate.proxy.HibernateProxy</MissingClass>
+    <MissingClass>org.hibernate.proxy.LazyInitializer</MissingClass>
+    <MissingClass>org.hibernate.query.Query</MissingClass>
+    <MissingClass>org.hibernate.transform.BasicTransformerAdapter</MissingClass>
+    <MissingClass>org.hibernate.transform.ResultTransformer</MissingClass>
+    <MissingClass>org.hibernate.type.BasicType</MissingClass>
+    <MissingClass>org.hibernate.type.CollectionType</MissingClass>
+    <MissingClass>org.hibernate.type.StringRepresentableType</MissingClass>
+    <MissingClass>org.hibernate.type.Type</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 02:47:31 +0000" total_classes="193" referenced_classes="281" total_bugs="0" total_size="5407" num_packages="23" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="16.02" clock_seconds="4.46" peak_mbytes="341.75" alloc_mbytes="3540.00" gc_seconds="0.20">
+    <PackageStats package="be.shad.tsqb" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="be.shad.tsqb.CollectionNamedParameter" sourceFile="CollectionNamedParameter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.NamedParameter" sourceFile="NamedParameter.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.dao" total_bugs="0" total_types="4" total_size="163">
+      <ClassStats class="be.shad.tsqb.dao.HibernateQueryConfigurer" sourceFile="HibernateQueryConfigurer.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.dao.HibernateQueryConfigurerAdapter" sourceFile="HibernateQueryConfigurerAdapter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.dao.TypeSafeQueryDao" sourceFile="TypeSafeQueryDao.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.dao.TypeSafeQueryDaoImpl" sourceFile="TypeSafeQueryDaoImpl.java" interface="false" size="132" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.dao.result" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="be.shad.tsqb.dao.result.QueryResult" sourceFile="QueryResult.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.data" total_bugs="0" total_types="6" total_size="416">
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQueryFrom" sourceFile="TypeSafeQueryFrom.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQueryFrom$1" sourceFile="TypeSafeQueryFrom.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQueryProxyData" sourceFile="TypeSafeQueryProxyData.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQueryProxyData$1" sourceFile="TypeSafeQueryProxyData.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQueryProxyDataTree" sourceFile="TypeSafeQueryProxyDataTree.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.data.TypeSafeQuerySelectionProxyData" sourceFile="TypeSafeQuerySelectionProxyData.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.exceptions" total_bugs="0" total_types="5" total_size="30">
+      <ClassStats class="be.shad.tsqb.exceptions.EqualsNotAllowedException" sourceFile="EqualsNotAllowedException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.exceptions.FromAlreadyExistsException" sourceFile="FromAlreadyExistsException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.exceptions.JoinException" sourceFile="JoinException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.exceptions.SelectException" sourceFile="SelectException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.exceptions.ValueNotInScopeException" sourceFile="ValueNotInScopeException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.grouping" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="be.shad.tsqb.grouping.TypeSafeQueryGroupBys" sourceFile="TypeSafeQueryGroupBys.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.helper" total_bugs="0" total_types="6" total_size="346">
+      <ClassStats class="be.shad.tsqb.helper.ConcreteDtoClassResolver" sourceFile="ConcreteDtoClassResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.helper.ConcreteDtoClassResolverImpl" sourceFile="ConcreteDtoClassResolverImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.helper.EntityProxyMethodHandler" sourceFile="EntityProxyMethodHandler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.helper.SelectionDtoMethodHandler" sourceFile="SelectionDtoMethodHandler.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.helper.TypeSafeQueryHelper" sourceFile="TypeSafeQueryHelper.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.helper.TypeSafeQueryHelperImpl" sourceFile="TypeSafeQueryHelperImpl.java" interface="false" size="218" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.hql" total_bugs="0" total_types="2" total_size="91">
+      <ClassStats class="be.shad.tsqb.hql.HqlQuery" sourceFile="HqlQuery.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.hql.HqlQueryBuilder" sourceFile="HqlQueryBuilder.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.joins" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="be.shad.tsqb.joins.TypeSafeQueryJoin" sourceFile="TypeSafeQueryJoin.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.ordering" total_bugs="0" total_types="5" total_size="154">
+      <ClassStats class="be.shad.tsqb.ordering.OnGoingOrderBy" sourceFile="OnGoingOrderBy.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.ordering.OrderBy" sourceFile="OrderBy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.ordering.OrderByImpl" sourceFile="OrderByImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.ordering.OrderByProjection" sourceFile="OrderByProjection.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.ordering.TypeSafeQueryOrderBys" sourceFile="TypeSafeQueryOrderBys.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.proxy" total_bugs="0" total_types="4" total_size="75">
+      <ClassStats class="be.shad.tsqb.proxy.TypeSafeQueryProxy" sourceFile="TypeSafeQueryProxy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.proxy.TypeSafeQueryProxyFactory" sourceFile="TypeSafeQueryProxyFactory.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.proxy.TypeSafeQueryProxyType" sourceFile="TypeSafeQueryProxyType.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.proxy.TypeSafeQuerySelectionProxy" sourceFile="TypeSafeQuerySelectionProxy.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.query" total_bugs="0" total_types="25" total_size="923">
+      <ClassStats class="be.shad.tsqb.query.AbstractTypeSafeQuery" sourceFile="AbstractTypeSafeQuery.java" interface="false" size="305" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.AbstractTypeSafeQuery$1" sourceFile="AbstractTypeSafeQuery.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.ClassJoinType" sourceFile="ClassJoinType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.JoinType" sourceFile="JoinType.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeBaseQuery" sourceFile="TypeSafeBaseQuery.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeDeleteQuery" sourceFile="TypeSafeDeleteQuery.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeDeleteQueryImpl" sourceFile="TypeSafeDeleteQueryImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeNameds" sourceFile="TypeSafeNameds.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeNamedsImpl" sourceFile="TypeSafeNamedsImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQuery" sourceFile="TypeSafeQuery.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQueryInternal" sourceFile="TypeSafeQueryInternal.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQueryJoin" sourceFile="TypeSafeQueryJoin.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQueryMultiJoin" sourceFile="TypeSafeQueryMultiJoin.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQueryScopeValidator" sourceFile="TypeSafeQueryScopeValidator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeQueryScopeValidatorImpl" sourceFile="TypeSafeQueryScopeValidatorImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeRootQuery" sourceFile="TypeSafeRootQuery.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeRootQueryImpl" sourceFile="TypeSafeRootQueryImpl.java" interface="false" size="186" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeRootQueryInternal" sourceFile="TypeSafeRootQueryInternal.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeSubQuery" sourceFile="TypeSafeSubQuery.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeSubQueryImpl" sourceFile="TypeSafeSubQueryImpl.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeUpdateQuery" sourceFile="TypeSafeUpdateQuery.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeUpdateQueryImpl" sourceFile="TypeSafeUpdateQueryImpl.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeUpdateQueryImpl$1" sourceFile="TypeSafeUpdateQueryImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeUpdateQueryImpl$TypeSafeUpdate" sourceFile="TypeSafeUpdateQueryImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.TypeSafeUpdateQueryInternal" sourceFile="TypeSafeUpdateQueryInternal.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.query.copy" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="be.shad.tsqb.query.copy.CopyContext" sourceFile="CopyContext.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.copy.Copyable" sourceFile="Copyable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.query.copy.Stateless" sourceFile="Stateless.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.restrictions" total_bugs="0" total_types="43" total_size="1192">
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingBooleanRestriction" sourceFile="ContinuedOnGoingBooleanRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingDateRestriction" sourceFile="ContinuedOnGoingDateRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingEnumRestriction" sourceFile="ContinuedOnGoingEnumRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingNumberRestriction" sourceFile="ContinuedOnGoingNumberRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingObjectRestriction" sourceFile="ContinuedOnGoingObjectRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingRestriction" sourceFile="ContinuedOnGoingRestriction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedOnGoingTextRestriction" sourceFile="ContinuedOnGoingTextRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.ContinuedRestrictionChainable" sourceFile="ContinuedRestrictionChainable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.DirectValueProvider" sourceFile="DirectValueProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.HavingRestrictions" sourceFile="HavingRestrictions.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingBooleanRestriction" sourceFile="OnGoingBooleanRestriction.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingBooleanRestrictionImpl" sourceFile="OnGoingBooleanRestrictionImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingDateRestriction" sourceFile="OnGoingDateRestriction.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingDateRestrictionImpl" sourceFile="OnGoingDateRestrictionImpl.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingEnumRestriction" sourceFile="OnGoingEnumRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingEnumRestrictionImpl" sourceFile="OnGoingEnumRestrictionImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingNumberRestriction" sourceFile="OnGoingNumberRestriction.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingNumberRestrictionImpl" sourceFile="OnGoingNumberRestrictionImpl.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingObjectRestriction" sourceFile="OnGoingObjectRestriction.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingObjectRestrictionImpl" sourceFile="OnGoingObjectRestrictionImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingRestriction" sourceFile="OnGoingRestriction.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingRestrictionImpl" sourceFile="OnGoingRestrictionImpl.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingTextRestriction" sourceFile="OnGoingTextRestriction.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.OnGoingTextRestrictionImpl" sourceFile="OnGoingTextRestrictionImpl.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.Restriction" sourceFile="Restriction.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionAndChainable" sourceFile="RestrictionAndChainable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionChainable" sourceFile="RestrictionChainable.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionChainableDelegatingImpl" sourceFile="RestrictionChainableDelegatingImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionChainableImpl" sourceFile="RestrictionChainableImpl.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionHolder" sourceFile="RestrictionHolder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionImpl" sourceFile="RestrictionImpl.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionNode" sourceFile="RestrictionNode.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionNodeType" sourceFile="RestrictionNodeType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionOperator" sourceFile="RestrictionOperator.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroup" sourceFile="RestrictionsGroup.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroup$RestrictionsGroupBracketsPolicy" sourceFile="RestrictionsGroup.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupBuilder" sourceFile="RestrictionsGroupBuilder.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupFactory" sourceFile="RestrictionsGroupFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupFactoryImpl" sourceFile="RestrictionsGroupFactoryImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupImpl" sourceFile="RestrictionsGroupImpl.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupImpl$1" sourceFile="RestrictionsGroupImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.RestrictionsGroupInternal" sourceFile="RestrictionsGroupInternal.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.WhereRestrictions" sourceFile="WhereRestrictions.java" interface="true" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.restrictions.named" total_bugs="0" total_types="3" total_size="25">
+      <ClassStats class="be.shad.tsqb.restrictions.named.CollectionNamedParameterBinder" sourceFile="CollectionNamedParameterBinder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.named.NamedParameterBinderImpl" sourceFile="NamedParameterBinderImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.named.SingleNamedParameterBinder" sourceFile="SingleNamedParameterBinder.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.restrictions.predicate" total_bugs="0" total_types="8" total_size="80">
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.AbstractDirectValueRestrictionPredicate" sourceFile="AbstractDirectValueRestrictionPredicate.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.CompositeRestrictionValuePredicate" sourceFile="CompositeRestrictionValuePredicate.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.IgnoreDirectEmptyStringPredicate" sourceFile="IgnoreDirectEmptyStringPredicate.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.IgnoreDirectNullPredicate" sourceFile="IgnoreDirectNullPredicate.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.IgnoreEmptyCollectionPredicate" sourceFile="IgnoreEmptyCollectionPredicate.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.IgnoreNeverPredicate" sourceFile="IgnoreNeverPredicate.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.RestrictionGuard" sourceFile="RestrictionGuard.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.restrictions.predicate.RestrictionPredicate" sourceFile="RestrictionPredicate.java" interface="true" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.selection" total_bugs="0" total_types="13" total_size="433">
+      <ClassStats class="be.shad.tsqb.selection.ResultEntry" sourceFile="ResultEntry.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.ResultEntryKeySelector" sourceFile="ResultEntryKeySelector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionIdentityTree" sourceFile="SelectionIdentityTree.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionTree" sourceFile="SelectionTree.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionTreeData" sourceFile="SelectionTreeData.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionTreeValue" sourceFile="SelectionTreeValue.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionValueTransformer" sourceFile="SelectionValueTransformer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.SelectionValueTransformerException" sourceFile="SelectionValueTransformerException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.TypeSafeQueryProjections" sourceFile="TypeSafeQueryProjections.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.TypeSafeQueryResultTransformer" sourceFile="TypeSafeQueryResultTransformer.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.TypeSafeQueryResultTransformer$1" sourceFile="TypeSafeQueryResultTransformer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.TypeSafeValueProjection" sourceFile="TypeSafeValueProjection.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.WithoutAliasesQueryResultTransformer" sourceFile="WithoutAliasesQueryResultTransformer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.selection.collection" total_bugs="0" total_types="3" total_size="11">
+      <ClassStats class="be.shad.tsqb.selection.collection.IdentityFieldProvider" sourceFile="IdentityFieldProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.collection.ResultIdentifierBinder" sourceFile="ResultIdentifierBinder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.collection.ResultIdentifierBinding" sourceFile="ResultIdentifierBinding.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.selection.group" total_bugs="0" total_types="5" total_size="237">
+      <ClassStats class="be.shad.tsqb.selection.group.SelectionTreeGroup" sourceFile="SelectionTreeGroup.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.group.SelectionTreeGroup$SelectionTreeField" sourceFile="SelectionTreeGroup.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.group.SelectionTreeGroup$SubtreeField" sourceFile="SelectionTreeGroup.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.group.TypeSafeQuerySelectionGroup" sourceFile="TypeSafeQuerySelectionGroup.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.group.TypeSafeQuerySelectionGroupImpl" sourceFile="TypeSafeQuerySelectionGroupImpl.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.selection.parallel" total_bugs="0" total_types="8" total_size="103">
+      <ClassStats class="be.shad.tsqb.selection.parallel.MapSelectionMerger" sourceFile="MapSelectionMerger.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectPair" sourceFile="SelectPair.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectTriplet" sourceFile="SelectTriplet.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectValue" sourceFile="SelectValue.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectionMerger" sourceFile="SelectionMerger.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectionMerger1" sourceFile="SelectionMerger1.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectionMerger2" sourceFile="SelectionMerger2.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.selection.parallel.SelectionMerger3" sourceFile="SelectionMerger3.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.values" total_bugs="0" total_types="39" total_size="905">
+      <ClassStats class="be.shad.tsqb.values.CaseTypeSafeValue" sourceFile="CaseTypeSafeValue.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CastTypeSafeValue" sourceFile="CastTypeSafeValue.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CoalesceTypeSafeValue" sourceFile="CoalesceTypeSafeValue.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CollectionTypeSafeValue" sourceFile="CollectionTypeSafeValue.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CollectionTypeSafeValue$1" sourceFile="CollectionTypeSafeValue.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.ConcatTypeSafeValue" sourceFile="ConcatTypeSafeValue.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CountTypeSafeValue" sourceFile="CountTypeSafeValue.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.CustomTypeSafeValue" sourceFile="CustomTypeSafeValue.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.DirectTypeSafeStringValue" sourceFile="DirectTypeSafeStringValue.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.DirectTypeSafeStringValue$1" sourceFile="DirectTypeSafeStringValue.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.DirectTypeSafeValue" sourceFile="DirectTypeSafeValue.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.DirectTypeSafeValueWrapper" sourceFile="DirectTypeSafeValueWrapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.DistinctTypeSafeValue" sourceFile="DistinctTypeSafeValue.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.EntityTypeSafeValue" sourceFile="EntityTypeSafeValue.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.FunctionTypeSafeValue" sourceFile="FunctionTypeSafeValue.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.HqlQueryBuilderParams" sourceFile="HqlQueryBuilderParams.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.HqlQueryBuilderParamsImpl" sourceFile="HqlQueryBuilderParamsImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.HqlQueryValue" sourceFile="HqlQueryValue.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.HqlQueryValueBuilder" sourceFile="HqlQueryValueBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.HqlQueryValueImpl" sourceFile="HqlQueryValueImpl.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.IsMaybeDistinct" sourceFile="IsMaybeDistinct.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.NamedValueEnabled" sourceFile="NamedValueEnabled.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.NullIfTypeSafeValue" sourceFile="NullIfTypeSafeValue.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.NullTypeSafeValue" sourceFile="NullTypeSafeValue.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OnGoingCase" sourceFile="OnGoingCase.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OnGoingCaseImpl" sourceFile="OnGoingCaseImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OnGoingCaseWhen" sourceFile="OnGoingCaseWhen.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OperationTypeSafeValue" sourceFile="OperationTypeSafeValue.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OperationTypeSafeValue$1" sourceFile="OperationTypeSafeValue.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OperationTypeSafeValue$OperationTypeSafeValueBracketsPolicy" sourceFile="OperationTypeSafeValue.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.OperatorAwareValue" sourceFile="OperatorAwareValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.ProjectionTypeSafeValue" sourceFile="ProjectionTypeSafeValue.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.ReferenceTypeSafeValue" sourceFile="ReferenceTypeSafeValue.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.RestrictionTypeSafeValue" sourceFile="RestrictionTypeSafeValue.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.TypeSafeValue" sourceFile="TypeSafeValue.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.TypeSafeValueContainer" sourceFile="TypeSafeValueContainer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.TypeSafeValueFunctions" sourceFile="TypeSafeValueFunctions.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.TypeSafeValueImpl" sourceFile="TypeSafeValueImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.WrappedTypeSafeValue" sourceFile="WrappedTypeSafeValue.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.values.arithmetic" total_bugs="0" total_types="5" total_size="99">
+      <ClassStats class="be.shad.tsqb.values.arithmetic.ArithmeticGroupFunctions" sourceFile="ArithmeticGroupFunctions.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.arithmetic.ArithmeticTypeSafeValue" sourceFile="ArithmeticTypeSafeValue.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.arithmetic.ArithmeticTypeSafeValueFactory" sourceFile="ArithmeticTypeSafeValueFactory.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.arithmetic.ArithmeticTypeSafeValueFactoryImpl" sourceFile="ArithmeticTypeSafeValueFactoryImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="be.shad.tsqb.values.arithmetic.ArithmeticTypeSafeValueImpl" sourceFile="ArithmeticTypeSafeValueImpl.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="be.shad.tsqb.values.partial" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="be.shad.tsqb.values.partial.PartialNullIf" sourceFile="PartialNullIf.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="238" invocations="855" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="11215" standardDeviationMicrosecondsPerInvocation="576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="213" invocations="1177" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="6097" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="208" invocations="1136" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="5416" standardDeviationMicrosecondsPerInvocation="355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="194" invocations="1183" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="8675" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="185" invocations="1167" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="4097" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="167" invocations="281" avgMicrosecondsPerInvocation="597" maxMicrosecondsPerInvocation="45221" standardDeviationMicrosecondsPerInvocation="2809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="164" invocations="1190" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="9520" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="136" invocations="1177" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="10136" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="131" invocations="281" avgMicrosecondsPerInvocation="468" maxMicrosecondsPerInvocation="8575" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="124" invocations="1013" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="3822" standardDeviationMicrosecondsPerInvocation="239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="90" invocations="1450" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="2821" standardDeviationMicrosecondsPerInvocation="158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="71" invocations="1613" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="24357" standardDeviationMicrosecondsPerInvocation="608"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="68" invocations="1177" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="18107" standardDeviationMicrosecondsPerInvocation="536"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="65" invocations="859" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="1083" standardDeviationMicrosecondsPerInvocation="58"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="55" invocations="19271" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="2206" standardDeviationMicrosecondsPerInvocation="21"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="349" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="14807" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="47" invocations="281" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="5640" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="43" invocations="281" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="2394" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="773" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="1019" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="40" invocations="193" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="2781" standardDeviationMicrosecondsPerInvocation="336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="281" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="8153" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="37" invocations="193" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="1846" standardDeviationMicrosecondsPerInvocation="277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="36" invocations="193" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="5816" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="281" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="4500" standardDeviationMicrosecondsPerInvocation="375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="34" invocations="193" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1680" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="34" invocations="193" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="1104" standardDeviationMicrosecondsPerInvocation="204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="34" invocations="1136" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="1129" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="34" invocations="193" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="1263" standardDeviationMicrosecondsPerInvocation="242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="31" invocations="193" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="3133" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="281" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1908" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="30" invocations="1125" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="836" standardDeviationMicrosecondsPerInvocation="57"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="30" invocations="193" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="6699" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="29" invocations="193" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="3926" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="27" invocations="193" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2202" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="27" invocations="193" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="7794" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="26" invocations="193" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="921" standardDeviationMicrosecondsPerInvocation="160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="281" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="2476" standardDeviationMicrosecondsPerInvocation="218"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

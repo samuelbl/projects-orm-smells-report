@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596944949000" analysisTimestamp="1596944950806" release="">
+  <Project projectName="repositorios/nicmarti_hotel-quarkus-demo">
+    <Jar>repositorios/nicmarti_hotel-quarkus-demo</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.lunatech.models.Booking">
+      <SourceLine classname="org.lunatech.models.Booking" start="45" end="65" sourcefile="Booking.java" sourcepath="org/lunatech/models/Booking.java"/>
+    </Class>
+    <Field classname="org.lunatech.models.Booking" name="hotel" signature="Lorg/lunatech/models/Hotel;" isStatic="false">
+      <SourceLine classname="org.lunatech.models.Booking" sourcefile="Booking.java" sourcepath="org/lunatech/models/Booking.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>io.quarkus.hibernate.orm.panache.PanacheEntity</MissingClass>
+    <MissingClass>io.quarkus.hibernate.orm.panache.PanacheQuery</MissingClass>
+    <MissingClass>io.quarkus.panache.common.Sort</MissingClass>
+    <MissingClass>io.vavr.control.Either</MissingClass>
+    <MissingClass>javax.json.Json</MissingClass>
+    <MissingClass>javax.json.JsonObjectBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ExceptionMapper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:49:09 +0000" total_classes="8" referenced_classes="40" total_bugs="1" total_size="143" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.13" clock_seconds="1.45" peak_mbytes="142.80" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="1">
+    <PackageStats package="org.lunatech.dto" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="org.lunatech.dto.BookingRequest" sourceFile="BookingRequest.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.lunatech.filter" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="org.lunatech.filter.CORSFilter" sourceFile="CORSFilter.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.lunatech.models" total_bugs="1" total_types="2" total_size="34" priority_2="1">
+      <ClassStats class="org.lunatech.models.Booking" sourceFile="Booking.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="org.lunatech.models.Hotel" sourceFile="Hotel.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.lunatech.readers" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="org.lunatech.readers.BookingResource" sourceFile="BookingResource.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.lunatech.readers.HotelResource" sourceFile="HotelResource.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.lunatech.service" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="org.lunatech.service.BookingService" sourceFile="BookingService.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.lunatech.service.BookingService$ErrorMapper" sourceFile="BookingService.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="222" invocations="571" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="11159" standardDeviationMicrosecondsPerInvocation="863"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="82" invocations="40" avgMicrosecondsPerInvocation="2061" maxMicrosecondsPerInvocation="13287" standardDeviationMicrosecondsPerInvocation="2809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="70" invocations="40" avgMicrosecondsPerInvocation="1768" maxMicrosecondsPerInvocation="23242" standardDeviationMicrosecondsPerInvocation="3688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="56" invocations="574" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="2874" standardDeviationMicrosecondsPerInvocation="126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="40" invocations="135" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="4083" standardDeviationMicrosecondsPerInvocation="544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="499" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1063" standardDeviationMicrosecondsPerInvocation="122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="84" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="13265" standardDeviationMicrosecondsPerInvocation="1477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="31" avgMicrosecondsPerInvocation="1004" maxMicrosecondsPerInvocation="26554" standardDeviationMicrosecondsPerInvocation="4666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="40" avgMicrosecondsPerInvocation="750" maxMicrosecondsPerInvocation="4970" standardDeviationMicrosecondsPerInvocation="1172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="40" avgMicrosecondsPerInvocation="716" maxMicrosecondsPerInvocation="7208" standardDeviationMicrosecondsPerInvocation="1223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="24" invocations="31" avgMicrosecondsPerInvocation="795" maxMicrosecondsPerInvocation="8376" standardDeviationMicrosecondsPerInvocation="1469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="21" invocations="31" avgMicrosecondsPerInvocation="701" maxMicrosecondsPerInvocation="8659" standardDeviationMicrosecondsPerInvocation="1510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="40" avgMicrosecondsPerInvocation="536" maxMicrosecondsPerInvocation="9086" standardDeviationMicrosecondsPerInvocation="1438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="20" invocations="31" avgMicrosecondsPerInvocation="676" maxMicrosecondsPerInvocation="9464" standardDeviationMicrosecondsPerInvocation="1640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="20" invocations="31" avgMicrosecondsPerInvocation="668" maxMicrosecondsPerInvocation="10161" standardDeviationMicrosecondsPerInvocation="1753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="40" avgMicrosecondsPerInvocation="480" maxMicrosecondsPerInvocation="3075" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="40" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="3288" standardDeviationMicrosecondsPerInvocation="650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="17" invocations="31" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="3602" standardDeviationMicrosecondsPerInvocation="695"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596938072000" analysisTimestamp="1596938073263" release="">
+  <Project projectName="repositorios/oleksiiBobko_web-storage">
+    <Jar>repositorios/oleksiiBobko_web-storage</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bobko.storage.domain.ActivationToken">
+      <SourceLine classname="com.bobko.storage.domain.ActivationToken" start="47" end="108" sourcefile="ActivationToken.java" sourcepath="com/bobko/storage/domain/ActivationToken.java"/>
+    </Class>
+    <Field classname="com.bobko.storage.domain.ActivationToken" name="user" signature="Lcom/bobko/storage/domain/UserEntity;" isStatic="false">
+      <SourceLine classname="com.bobko.storage.domain.ActivationToken" sourcefile="ActivationToken.java" sourcepath="com/bobko/storage/domain/ActivationToken.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bobko.storage.domain.Document">
+      <SourceLine classname="com.bobko.storage.domain.Document" start="24" end="131" sourcefile="Document.java" sourcepath="com/bobko/storage/domain/Document.java"/>
+    </Class>
+    <Field classname="com.bobko.storage.domain.Document" name="user" signature="Lcom/bobko/storage/domain/UserEntity;" isStatic="false">
+      <SourceLine classname="com.bobko.storage.domain.Document" sourcefile="Document.java" sourcepath="com/bobko/storage/domain/Document.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bobko.storage.domain.Topic">
+      <SourceLine classname="com.bobko.storage.domain.Topic" start="18" end="82" sourcefile="Topic.java" sourcepath="com/bobko/storage/domain/Topic.java"/>
+    </Class>
+    <Field classname="com.bobko.storage.domain.Topic" name="user" signature="Lcom/bobko/storage/domain/UserEntity;" isStatic="false">
+      <SourceLine classname="com.bobko.storage.domain.Topic" sourcefile="Topic.java" sourcepath="com/bobko/storage/domain/Topic.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bobko.storage.domain.UserEntity">
+      <SourceLine classname="com.bobko.storage.domain.UserEntity" start="32" end="181" sourcefile="UserEntity.java" sourcepath="com/bobko/storage/domain/UserEntity.java"/>
+    </Class>
+    <Field classname="com.bobko.storage.domain.UserEntity" name="token" signature="Lcom/bobko/storage/domain/ActivationToken;" isStatic="false">
+      <SourceLine classname="com.bobko.storage.domain.UserEntity" sourcefile="UserEntity.java" sourcepath="com/bobko/storage/domain/UserEntity.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="35">
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.apache.logging.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.logging.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisher</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.mail.MailSender</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.Md5PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerMapping</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.InternalResourceViewResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 01:54:32 +0000" total_classes="49" referenced_classes="134" total_bugs="4" total_size="1156" num_packages="14" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.32" clock_seconds="2.65" peak_mbytes="222.07" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="4">
+    <PackageStats package="com.bobko.storage.common" total_bugs="0" total_types="5" total_size="44">
+      <ClassStats class="com.bobko.storage.common.Main" sourceFile="Main.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.bobko.storage.common.StorageConst" sourceFile="StorageConst.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.bobko.storage.common.TestClass" sourceFile="TestClass.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.bobko.storage.common.UserRolesTypes" sourceFile="UserRolesTypes.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.bobko.storage.common.UserRolesTypes$1" sourceFile="UserRolesTypes.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.component" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.bobko.storage.component.LogoutSuccessHandler" sourceFile="LogoutSuccessHandler.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.dao" total_bugs="0" total_types="4" total_size="55">
+      <ClassStats class="com.bobko.storage.dao.ActivationTokenDao" sourceFile="ActivationTokenDao.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.PageHolderDao" sourceFile="PageHolderDao.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.PictureDao" sourceFile="PictureDao.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.UserDao" sourceFile="UserDao.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.dao.base" total_bugs="0" total_types="2" total_size="51">
+      <ClassStats class="com.bobko.storage.dao.base.HibernateDao" sourceFile="HibernateDao.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.base.IGenericDao" sourceFile="IGenericDao.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.dao.interfaces" total_bugs="0" total_types="4" total_size="15">
+      <ClassStats class="com.bobko.storage.dao.interfaces.IActivationTokenDao" sourceFile="IActivationTokenDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.interfaces.IPagesHolderDao" sourceFile="IPagesHolderDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.interfaces.IPictureDao" sourceFile="IPictureDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.bobko.storage.dao.interfaces.IUserDao" sourceFile="IUserDao.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.domain" total_bugs="4" total_types="6" total_size="260" priority_2="4">
+      <ClassStats class="com.bobko.storage.domain.ActivationToken" sourceFile="ActivationToken.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bobko.storage.domain.Document" sourceFile="Document.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bobko.storage.domain.IncomingURL" sourceFile="IncomingURL.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.bobko.storage.domain.StoragePage" sourceFile="StoragePage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.bobko.storage.domain.Topic" sourceFile="Topic.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bobko.storage.domain.UserEntity" sourceFile="UserEntity.java" interface="false" size="82" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.events" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.bobko.storage.events.OnPasswordResetEvent" sourceFile="OnPasswordResetEvent.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.bobko.storage.events.OnRegistrationInitiatedEvent" sourceFile="OnRegistrationInitiatedEvent.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.exceptions" total_bugs="0" total_types="4" total_size="16">
+      <ClassStats class="com.bobko.storage.exceptions.TokenExpiredException" sourceFile="TokenExpiredException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.bobko.storage.exceptions.TokenVerifyedException" sourceFile="TokenVerifyedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.bobko.storage.exceptions.UserActivationException" sourceFile="UserActivationException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.bobko.storage.exceptions.UserNotFoundException" sourceFile="UserNotFoundException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.init" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.bobko.storage.init.WebStorageInitializer" sourceFile="WebStorageInitializer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.listeners" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="com.bobko.storage.listeners.RegistrationInitiateListener" sourceFile="RegistrationInitiateListener.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.bobko.storage.listeners.ResetPasswordListener" sourceFile="ResetPasswordListener.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.service" total_bugs="0" total_types="6" total_size="327">
+      <ClassStats class="com.bobko.storage.service.MailService" sourceFile="MailService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.PagesService" sourceFile="PagesService.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.PictureGrabber" sourceFile="PictureGrabber.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.PictureService" sourceFile="PictureService.java" interface="false" size="149" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.StorageUserDetailsService" sourceFile="StorageUserDetailsService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.UserService" sourceFile="UserService.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.service.interfaces" total_bugs="0" total_types="5" total_size="28">
+      <ClassStats class="com.bobko.storage.service.interfaces.IMailService" sourceFile="IMailService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.interfaces.IPagesService" sourceFile="IPagesService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.interfaces.IPictureGrabber" sourceFile="IPictureGrabber.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.interfaces.IPictureService" sourceFile="IPictureService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.bobko.storage.service.interfaces.IUserService" sourceFile="IUserService.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.util" total_bugs="0" total_types="1" total_size="57">
+      <ClassStats class="com.bobko.storage.util.AlbumUtils" sourceFile="AlbumUtils.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bobko.storage.web" total_bugs="0" total_types="6" total_size="195">
+      <ClassStats class="com.bobko.storage.web.DataController" sourceFile="DataController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.bobko.storage.web.ErrorController" sourceFile="ErrorController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.bobko.storage.web.MainController" sourceFile="MainController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.bobko.storage.web.MainRestController" sourceFile="MainRestController.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.bobko.storage.web.RegistrationController" sourceFile="RegistrationController.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.bobko.storage.web.UploadController" sourceFile="UploadController.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="296" invocations="970" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="23627" standardDeviationMicrosecondsPerInvocation="1079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="124" invocations="134" avgMicrosecondsPerInvocation="925" maxMicrosecondsPerInvocation="10448" standardDeviationMicrosecondsPerInvocation="1769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="549" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="10307" standardDeviationMicrosecondsPerInvocation="515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="95" invocations="134" avgMicrosecondsPerInvocation="710" maxMicrosecondsPerInvocation="6498" standardDeviationMicrosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="79" invocations="219" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="10057" standardDeviationMicrosecondsPerInvocation="1001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="79" invocations="218" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="27669" standardDeviationMicrosecondsPerInvocation="2136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="978" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="3506" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="69" invocations="222" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="9496" standardDeviationMicrosecondsPerInvocation="966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="64" invocations="216" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="8448" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="56" invocations="223" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="9562" standardDeviationMicrosecondsPerInvocation="922"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="219" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="8843" standardDeviationMicrosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="52" invocations="219" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="9640" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="51" invocations="134" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="30830" standardDeviationMicrosecondsPerInvocation="2720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="846" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="7061" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="45" invocations="259" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="28091" standardDeviationMicrosecondsPerInvocation="1740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="40" invocations="134" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="9053" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="40" invocations="134" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="4733" standardDeviationMicrosecondsPerInvocation="568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="39" invocations="134" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="10280" standardDeviationMicrosecondsPerInvocation="967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="39" invocations="134" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="8549" standardDeviationMicrosecondsPerInvocation="987"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="29" invocations="134" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="10160" standardDeviationMicrosecondsPerInvocation="1067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="28" invocations="134" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="1865" standardDeviationMicrosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="134" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="8254" standardDeviationMicrosecondsPerInvocation="730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="24" invocations="8" avgMicrosecondsPerInvocation="3013" maxMicrosecondsPerInvocation="3939" standardDeviationMicrosecondsPerInvocation="1095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="22" invocations="134" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="1840" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="21" invocations="134" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="5703" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="49" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="10313" standardDeviationMicrosecondsPerInvocation="1626"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

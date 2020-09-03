@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597097792000" analysisTimestamp="1597097793647" release="">
+  <Project projectName="repositorios/olavloite_spanner-jpa-example">
+    <Jar>repositorios/olavloite_spanner-jpa-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="nl.topicus.spanner.jpa.entities.CustomerRepository">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.CustomerRepository" sourcefile="CustomerRepository.java" sourcepath="nl/topicus/spanner/jpa/entities/CustomerRepository.java"/>
+    </Class>
+    <Method classname="nl.topicus.spanner.jpa.entities.CustomerRepository" name="findCustomer" signature="(Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.CustomerRepository" sourcefile="CustomerRepository.java" sourcepath="nl/topicus/spanner/jpa/entities/CustomerRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="nl.topicus.spanner.jpa.entities.CustomerRepository">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.CustomerRepository" sourcefile="CustomerRepository.java" sourcepath="nl/topicus/spanner/jpa/entities/CustomerRepository.java"/>
+    </Class>
+    <Method classname="nl.topicus.spanner.jpa.entities.CustomerRepository" name="findCustomerByConcatFullName" signature="(Lorg/springframework/data/domain/Pageable;Ljava/lang/String;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.CustomerRepository" sourcefile="CustomerRepository.java" sourcepath="nl/topicus/spanner/jpa/entities/CustomerRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="nl.topicus.spanner.jpa.entities.Invoice">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.Invoice" start="34" end="88" sourcefile="Invoice.java" sourcepath="nl/topicus/spanner/jpa/entities/Invoice.java"/>
+    </Class>
+    <Field classname="nl.topicus.spanner.jpa.entities.Invoice" name="customer" signature="Lnl/topicus/spanner/jpa/entities/Customer;" isStatic="false">
+      <SourceLine classname="nl.topicus.spanner.jpa.entities.Invoice" sourcefile="Invoice.java" sourcepath="nl/topicus/spanner/jpa/entities/Invoice.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>com.fasterxml.uuid.Generators</MissingClass>
+    <MissingClass>com.fasterxml.uuid.NoArgGenerator</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>nl.topicus.jdbc.CloudSpannerDriver</MissingClass>
+    <MissingClass>nl.topicus.jdbc.statement.CloudSpannerPreparedStatement</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:16:32 +0000" total_classes="11" referenced_classes="53" total_bugs="3" total_size="305" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.01" clock_seconds="1.69" peak_mbytes="195.41" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="3">
+    <PackageStats package="nl.topicus.spanner.jpa" total_bugs="0" total_types="1" total_size="104">
+      <ClassStats class="nl.topicus.spanner.jpa.Application" sourceFile="Application.java" interface="false" size="104" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="nl.topicus.spanner.jpa.entities" total_bugs="3" total_types="9" total_size="166" priority_2="3">
+      <ClassStats class="nl.topicus.spanner.jpa.entities.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.CommitTimestampAttributeConverter" sourceFile="CommitTimestampAttributeConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.Customer" sourceFile="Customer.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="7" bugs="2" priority_2="2"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.FormattedCustomerProjection" sourceFile="FormattedCustomerProjection.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.Invoice" sourceFile="Invoice.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.InvoiceRepository" sourceFile="InvoiceRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.Phone" sourceFile="Phone.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="nl.topicus.spanner.jpa.entities.PhoneRepository" sourceFile="PhoneRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="nl.topicus.spanner.jpa.service" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="nl.topicus.spanner.jpa.service.EntityService" sourceFile="EntityService.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="212" invocations="629" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="12988" standardDeviationMicrosecondsPerInvocation="778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="53" avgMicrosecondsPerInvocation="1538" maxMicrosecondsPerInvocation="8347" standardDeviationMicrosecondsPerInvocation="2145"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="81" invocations="280" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="18712" standardDeviationMicrosecondsPerInvocation="1190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="60" invocations="634" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="2639" standardDeviationMicrosecondsPerInvocation="113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="59" invocations="53" avgMicrosecondsPerInvocation="1121" maxMicrosecondsPerInvocation="7765" standardDeviationMicrosecondsPerInvocation="1494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="48" invocations="59" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="24456" standardDeviationMicrosecondsPerInvocation="3187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="46" invocations="59" avgMicrosecondsPerInvocation="787" maxMicrosecondsPerInvocation="23081" standardDeviationMicrosecondsPerInvocation="3179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="553" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="1687" standardDeviationMicrosecondsPerInvocation="148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="42" invocations="59" avgMicrosecondsPerInvocation="725" maxMicrosecondsPerInvocation="21883" standardDeviationMicrosecondsPerInvocation="2836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="39" invocations="59" avgMicrosecondsPerInvocation="676" maxMicrosecondsPerInvocation="18393" standardDeviationMicrosecondsPerInvocation="2610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="38" invocations="114" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="13874" standardDeviationMicrosecondsPerInvocation="1348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="68" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="27508" standardDeviationMicrosecondsPerInvocation="3314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="53" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="4528" standardDeviationMicrosecondsPerInvocation="971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="57" avgMicrosecondsPerInvocation="527" maxMicrosecondsPerInvocation="11888" standardDeviationMicrosecondsPerInvocation="1570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="59" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="10045" standardDeviationMicrosecondsPerInvocation="1518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="25" invocations="53" avgMicrosecondsPerInvocation="486" maxMicrosecondsPerInvocation="4269" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="53" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="7738" standardDeviationMicrosecondsPerInvocation="1109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="53" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="2784" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="53" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="1931" standardDeviationMicrosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="53" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="4238" standardDeviationMicrosecondsPerInvocation="696"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595991439000" analysisTimestamp="1595991440319" release="">
+  <Project projectName="repositorios/koldovsky_kids-room">
+    <Jar>repositorios/koldovsky_kids-room</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.BaseDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.BaseDaoImpl" start="29" end="154" sourcefile="BaseDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/BaseDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.BaseDaoImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.BaseDaoImpl" start="34" end="34" startBytecode="0" endBytecode="128" sourcefile="BaseDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/BaseDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.BaseDaoImpl" start="34" end="34" startBytecode="11" endBytecode="11" sourcefile="BaseDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/BaseDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="17" end="48" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" name="findByToken" signature="(Ljava/lang/String;)Lua/softserveinc/tc/entity/Token;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="41" end="44" startBytecode="0" endBytecode="149" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="41" end="41" startBytecode="4" endBytecode="4" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    <String value="Method: findByToken. Fields with EAGER without Join Fetch: user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="17" end="48" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" name="findByToken" signature="(Ljava/lang/String;)Lua/softserveinc/tc/entity/Token;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="41" end="44" startBytecode="0" endBytecode="149" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="41" end="41" startBytecode="4" endBytecode="4" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="17" end="48" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" name="findByUser" signature="(Lua/softserveinc/tc/entity/User;)Lua/softserveinc/tc/entity/Token;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="33" end="36" startBytecode="0" endBytecode="104" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.TokenDaoImpl" start="33" end="33" startBytecode="4" endBytecode="4" sourcefile="TokenDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/TokenDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.UserDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="20" end="123" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" name="findAllUsersByRole" signature="(Lua/softserveinc/tc/entity/Role;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="31" end="31" startBytecode="0" endBytecode="106" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="31" end="31" startBytecode="11" endBytecode="11" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    <String value="Method: findAllUsersByRole. Fields with EAGER without Join Fetch: children, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.UserDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="20" end="123" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" name="findUserById" signature="(Ljava/lang/Long;)Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="44" end="45" startBytecode="0" endBytecode="106" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="44" end="44" startBytecode="11" endBytecode="11" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    <String value="Method: findUserById. Fields with EAGER without Join Fetch: children, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.UserDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="20" end="123" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" name="findAll" signature="(Ljava/util/List;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="101" end="108" startBytecode="0" endBytecode="235" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="104" end="104" startBytecode="39" endBytecode="39" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.UserDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="20" end="123" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" name="findAllUsersByRole" signature="(Lua/softserveinc/tc/entity/Role;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="31" end="31" startBytecode="0" endBytecode="106" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="31" end="31" startBytecode="11" endBytecode="11" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.dao.impl.UserDaoImpl">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="20" end="123" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" name="findUserById" signature="(Ljava/lang/Long;)Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="44" end="45" startBytecode="0" endBytecode="106" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="ua.softserveinc.tc.dao.impl.UserDaoImpl" start="44" end="44" startBytecode="11" endBytecode="11" sourcefile="UserDaoImpl.java" sourcepath="ua/softserveinc/tc/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.AbonnementUsage">
+      <SourceLine classname="ua.softserveinc.tc.entity.AbonnementUsage" start="30" end="86" sourcefile="AbonnementUsage.java" sourcepath="ua/softserveinc/tc/entity/AbonnementUsage.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.AbonnementUsage" name="assignment" signature="Lua/softserveinc/tc/entity/SubscriptionAssignment;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.AbonnementUsage" sourcefile="AbonnementUsage.java" sourcepath="ua/softserveinc/tc/entity/AbonnementUsage.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Booking">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" start="57" end="216" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Booking" name="child" signature="Lua/softserveinc/tc/entity/Child;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Booking">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" start="57" end="216" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Booking" name="room" signature="Lua/softserveinc/tc/entity/Room;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Booking">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" start="57" end="216" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Booking" name="user" signature="Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Booking" sourcefile="Booking.java" sourcepath="ua/softserveinc/tc/entity/Booking.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Child">
+      <SourceLine classname="ua.softserveinc.tc.entity.Child" start="15" end="216" sourcefile="Child.java" sourcepath="ua/softserveinc/tc/entity/Child.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Child" name="parentId" signature="Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Child" sourcefile="Child.java" sourcepath="ua/softserveinc/tc/entity/Child.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Rate">
+      <SourceLine classname="ua.softserveinc.tc.entity.Rate" start="15" end="97" sourcefile="Rate.java" sourcepath="ua/softserveinc/tc/entity/Rate.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Rate" name="room" signature="Lua/softserveinc/tc/entity/Room;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Rate" sourcefile="Rate.java" sourcepath="ua/softserveinc/tc/entity/Rate.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.SubscriptionAssignment">
+      <SourceLine classname="ua.softserveinc.tc.entity.SubscriptionAssignment" start="43" end="136" sourcefile="SubscriptionAssignment.java" sourcepath="ua/softserveinc/tc/entity/SubscriptionAssignment.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.SubscriptionAssignment" name="abonnement" signature="Lua/softserveinc/tc/entity/Abonnement;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.SubscriptionAssignment" sourcefile="SubscriptionAssignment.java" sourcepath="ua/softserveinc/tc/entity/SubscriptionAssignment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.SubscriptionAssignment">
+      <SourceLine classname="ua.softserveinc.tc.entity.SubscriptionAssignment" start="43" end="136" sourcefile="SubscriptionAssignment.java" sourcepath="ua/softserveinc/tc/entity/SubscriptionAssignment.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.SubscriptionAssignment" name="user" signature="Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.SubscriptionAssignment" sourcefile="SubscriptionAssignment.java" sourcepath="ua/softserveinc/tc/entity/SubscriptionAssignment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.Token">
+      <SourceLine classname="ua.softserveinc.tc.entity.Token" start="25" end="56" sourcefile="Token.java" sourcepath="ua/softserveinc/tc/entity/Token.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.Token" name="user" signature="Lua/softserveinc/tc/entity/User;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.Token" sourcefile="Token.java" sourcepath="ua/softserveinc/tc/entity/Token.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ua.softserveinc.tc.entity.User">
+      <SourceLine classname="ua.softserveinc.tc.entity.User" start="38" end="233" sourcefile="User.java" sourcepath="ua/softserveinc/tc/entity/User.java"/>
+    </Class>
+    <Field classname="ua.softserveinc.tc.entity.User" name="children" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="ua.softserveinc.tc.entity.User" sourcefile="User.java" sourcepath="ua/softserveinc/tc/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="2" missingClasses="194">
+    <Error>
+      <ErrorMessage>Exception analyzing ua.softserveinc.tc.dao.impl.BaseDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing ua.softserveinc.tc.dao.impl.BookingDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>com.google.common.cache.CacheBuilder</MissingClass>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder$Case</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaDelete</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaUpdate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Expression</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.JoinType</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Predicate</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.FilterRegistration$Dynamic</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletRegistration$Dynamic</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.MultiThreadedHttpConnectionManager</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.protocol.Protocol</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Cell</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.CellStyle</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Font</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Row</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Sheet</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Workbook</MissingClass>
+    <MissingClass>org.apache.poi.ss.util.CellRangeAddress</MissingClass>
+    <MissingClass>org.hibernate.search.SearchFactory</MissingClass>
+    <MissingClass>org.hibernate.search.jpa.FullTextEntityManager</MissingClass>
+    <MissingClass>org.hibernate.search.jpa.Search</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.EntityContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.QueryBuilder</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.QueryContextBuilder</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermMatchingContext</MissingClass>
+    <MissingClass>org.hibernate.search.query.dsl.TermTermination</MissingClass>
+    <MissingClass>org.modelmapper.ModelMapper</MissingClass>
+    <MissingClass>org.opensaml.saml2.core.Attribute</MissingClass>
+    <MissingClass>org.opensaml.saml2.metadata.provider.HTTPMetadataProvider</MissingClass>
+    <MissingClass>org.opensaml.saml2.metadata.provider.ResourceBackedMetadataProvider</MissingClass>
+    <MissingClass>org.opensaml.util.resource.ClasspathResource</MissingClass>
+    <MissingClass>org.opensaml.xml.parse.StaticBasicParserPool</MissingClass>
+    <MissingClass>org.opensaml.xml.schema.impl.XSAnyImpl</MissingClass>
+    <MissingClass>org.quartz.JobDetail</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanPostProcessor</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.MethodInvokingFactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.propertyeditors.CustomDateEditor</MissingClass>
+    <MissingClass>org.springframework.cache.guava.GuavaCache</MissingClass>
+    <MissingClass>org.springframework.cache.support.SimpleCacheManager</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.context.support.PropertySourcesPlaceholderConfigurer</MissingClass>
+    <MissingClass>org.springframework.context.support.ResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.core.GenericTypeResolver</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.DefaultResourceLoader</MissingClass>
+    <MissingClass>org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.scheduling.quartz.CronTriggerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean</MissingClass>
+    <MissingClass>org.springframework.scheduling.quartz.SchedulerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.RememberMeConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLBootstrap</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLCredential</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLDiscovery</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLLogoutFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLLogoutProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.SAMLWebSSOHoKProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.context.SAMLContextProviderImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.key.JKSKeyManager</MissingClass>
+    <MissingClass>org.springframework.security.saml.log.SAMLDefaultLogger</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.CachingMetadataManager</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.ExtendedMetadata</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.ExtendedMetadataDelegate</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.MetadataDisplayFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.MetadataGenerator</MissingClass>
+    <MissingClass>org.springframework.security.saml.metadata.MetadataGeneratorFilter</MissingClass>
+    <MissingClass>org.springframework.security.saml.parser.ParserPoolHolder</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.HTTPArtifactBinding</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.HTTPPAOS11Binding</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.HTTPPostBinding</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.HTTPRedirectDeflateBinding</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.HTTPSOAP11Binding</MissingClass>
+    <MissingClass>org.springframework.security.saml.processor.SAMLProcessorImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.trust.httpclient.TLSProtocolConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.saml.trust.httpclient.TLSProtocolSocketFactory</MissingClass>
+    <MissingClass>org.springframework.security.saml.userdetails.SAMLUserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.saml.util.VelocityFactory</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.ArtifactResolutionProfile</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.ArtifactResolutionProfileImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.SingleLogoutProfileImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.WebSSOProfileConsumerImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.WebSSOProfileECPImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.WebSSOProfileImpl</MissingClass>
+    <MissingClass>org.springframework.security.saml.websso.WebSSOProfileOptions</MissingClass>
+    <MissingClass>org.springframework.security.web.DefaultSecurityFilterChain</MissingClass>
+    <MissingClass>org.springframework.security.web.FilterChainProxy</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.rememberme.PersistentRememberMeToken</MissingClass>
+    <MissingClass>org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.ui.velocity.VelocityEngineFactory</MissingClass>
+    <MissingClass>org.springframework.ui.velocity.VelocityEngineUtils</MissingClass>
+    <MissingClass>org.springframework.util.DefaultPropertiesPersister</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.ValidationUtils</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+    <MissingClass>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.filter.CharacterEncodingFilter</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.commons.CommonsMultipartResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.DispatcherServlet</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.LocaleChangeInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.SessionLocaleResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.document.AbstractXlsView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.tiles3.TilesConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.tiles3.TilesViewResolver</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 02:57:19 +0000" total_classes="303" referenced_classes="444" total_bugs="19" total_size="9824" num_packages="27" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="24.26" clock_seconds="7.14" peak_mbytes="596.86" alloc_mbytes="3540.00" gc_seconds="0.26" priority_2="18" priority_1="1">
+    <PackageStats package="ua.softserveinc.tc.config" total_bugs="0" total_types="6" total_size="488">
+      <ClassStats class="ua.softserveinc.tc.config.AppConfig" sourceFile="AppConfig.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.config.QuartzConfig" sourceFile="QuartzConfig.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="287" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.config.SecurityWebAppInit" sourceFile="SecurityWebAppInit.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.config.WebAppConfig" sourceFile="WebAppConfig.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.config.WebAppInit" sourceFile="WebAppInit.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.constants" total_bugs="0" total_types="63" total_size="871">
+      <ClassStats class="ua.softserveinc.tc.constants.AbonnementConstants" sourceFile="AbonnementConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AbonnementConstants$Alias" sourceFile="AbonnementConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AbonnementConstants$Entity" sourceFile="AbonnementConstants.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AbonnementConstants$Hibernate" sourceFile="AbonnementConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AdminConstants" sourceFile="AdminConstants.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AdminConstants$AdminModel" sourceFile="AdminConstants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.AdminConstants$ViewNames" sourceFile="AdminConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ApiConstants" sourceFile="ApiConstants.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants" sourceFile="BookingConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants$DB" sourceFile="BookingConstants.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants$Entity" sourceFile="BookingConstants.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants$Model" sourceFile="BookingConstants.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants$States" sourceFile="BookingConstants.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.BookingConstants$View" sourceFile="BookingConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ChildConstants" sourceFile="ChildConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ChildConstants$View" sourceFile="ChildConstants.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DateConstants" sourceFile="DateConstants.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DateConstants$DaysOfWeek" sourceFile="DateConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DateConstants$EventColors" sourceFile="DateConstants.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DateConstants$ListDaysOfWeek" sourceFile="DateConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DayOffConstants" sourceFile="DayOffConstants.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DayOffConstants$DB" sourceFile="DayOffConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DayOffConstants$Entity" sourceFile="DayOffConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DayOffConstants$Event" sourceFile="DayOffConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DayOffConstants$Mail" sourceFile="DayOffConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DiscountConstants" sourceFile="DiscountConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.DiscountConstants$Entity" sourceFile="DiscountConstants.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EntryConstants" sourceFile="EntryConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ErrorConstants" sourceFile="ErrorConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants" sourceFile="EventConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants$Entity" sourceFile="EventConstants.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants$EntityClass" sourceFile="EventConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants$Messages" sourceFile="EventConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants$TypeOfRecurentEvent" sourceFile="EventConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.EventConstants$View" sourceFile="EventConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ExcelConstants" sourceFile="ExcelConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ExcelConstants$Fields" sourceFile="ExcelConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ExcelConstants$Headers" sourceFile="ExcelConstants.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ExcelConstants$Other" sourceFile="ExcelConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.GenericConstants" sourceFile="GenericConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ImageConstants" sourceFile="ImageConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.LocaleConstants" sourceFile="LocaleConstants.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.MailConstants" sourceFile="MailConstants.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ManagerConstants" sourceFile="ManagerConstants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ManagerConstants$ManagerViewNames" sourceFile="ManagerConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.QuartzConstants" sourceFile="QuartzConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.RateConstants" sourceFile="RateConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ReportConstants" sourceFile="ReportConstants.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.RoomConstants" sourceFile="RoomConstants.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.SQLConstants" sourceFile="SQLConstants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.SearchConstants" sourceFile="SearchConstants.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.SecurityConstants" sourceFile="SecurityConstants.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.SecurityConstants$Authentication" sourceFile="SecurityConstants.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.TokenConstants" sourceFile="TokenConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.URIConstants" sourceFile="URIConstants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UserConstants" sourceFile="UserConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UserConstants$Entity" sourceFile="UserConstants.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UserConstants$Model" sourceFile="UserConstants.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UserConstants$Role" sourceFile="UserConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UserConstants$UserViewNames" sourceFile="UserConstants.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.UtilConstants" sourceFile="UtilConstants.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ValidationConstants" sourceFile="ValidationConstants.java" interface="false" size="185" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.constants.ValidationConstants$ConfigFields" sourceFile="ValidationConstants.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller" total_bugs="0" total_types="2" total_size="78">
+      <ClassStats class="ua.softserveinc.tc.controller.ViewEventController" sourceFile="ViewEventController.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.ViewEventController$1" sourceFile="ViewEventController.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.admin" total_bugs="0" total_types="10" total_size="196">
+      <ClassStats class="ua.softserveinc.tc.controller.admin.AbonnementsController" sourceFile="AbonnementsController.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.AddManagerController" sourceFile="AddManagerController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.AdminMappingController" sourceFile="AdminMappingController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.ConfigurationController" sourceFile="ConfigurationController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.ConfirmManagerController" sourceFile="ConfirmManagerController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.DayOffController" sourceFile="DayOffController.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.DayOffPageController" sourceFile="DayOffPageController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.EditManagerController" sourceFile="EditManagerController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.RoomController" sourceFile="RoomController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.StatisticsController" sourceFile="StatisticsController.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.admin.restful" total_bugs="0" total_types="2" total_size="107">
+      <ClassStats class="ua.softserveinc.tc.controller.admin.restful.AdminDiscountController" sourceFile="AdminDiscountController.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.admin.restful.AdminRoomController" sourceFile="AdminRoomController.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.manager" total_bugs="0" total_types="1" total_size="72">
+      <ClassStats class="ua.softserveinc.tc.controller.manager.ManagerMappingController" sourceFile="ManagerMappingController.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.manager.restful" total_bugs="0" total_types="2" total_size="84">
+      <ClassStats class="ua.softserveinc.tc.controller.manager.restful.ManagerBookingController" sourceFile="ManagerBookingController.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.manager.restful.ManagerReportController" sourceFile="ManagerReportController.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.user" total_bugs="0" total_types="7" total_size="203">
+      <ClassStats class="ua.softserveinc.tc.controller.user.AbonnementController" sourceFile="AbonnementController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.CRUDBookingsController" sourceFile="CRUDBookingsController.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.EditMyKidPageController" sourceFile="EditMyKidPageController.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.MyBookingsController" sourceFile="MyBookingsController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.MyKidsPageController" sourceFile="MyKidsPageController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.RegisterNewKidController" sourceFile="RegisterNewKidController.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.user.UserMappingController" sourceFile="UserMappingController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.controller.util" total_bugs="0" total_types="12" total_size="413">
+      <ClassStats class="ua.softserveinc.tc.controller.util.ApiController" sourceFile="ApiController.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.DiscountController" sourceFile="DiscountController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.ExcelController" sourceFile="ExcelController.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.ExceptionHandlingControllerAdvice" sourceFile="ExceptionHandlingControllerAdvice.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.ImagesController" sourceFile="ImagesController.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.KidsProfileController" sourceFile="KidsProfileController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.SearchController" sourceFile="SearchController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.UserChangePasswordController" sourceFile="UserChangePasswordController.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.UserController" sourceFile="UserController.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.UserController$1" sourceFile="UserController.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.UserRegistrationController" sourceFile="UserRegistrationController.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.controller.util.UserResendConfirmation" sourceFile="UserResendConfirmation.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.dao" total_bugs="0" total_types="14" total_size="75">
+      <ClassStats class="ua.softserveinc.tc.dao.AbonnementDao" sourceFile="AbonnementDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.AbonnementUsageDao" sourceFile="AbonnementUsageDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.BaseDao" sourceFile="BaseDao.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.BookingDao" sourceFile="BookingDao.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.ChildDao" sourceFile="ChildDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.DayDiscountDao" sourceFile="DayDiscountDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.DayOffDao" sourceFile="DayOffDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.EventDao" sourceFile="EventDao.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.PersonalDiscountDao" sourceFile="PersonalDiscountDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.RateDao" sourceFile="RateDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.RoomDao" sourceFile="RoomDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.SubscriptionAssignmentDao" sourceFile="SubscriptionAssignmentDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.TokenDao" sourceFile="TokenDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.UserDao" sourceFile="UserDao.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.dao.impl" total_bugs="9" total_types="14" total_size="659" priority_2="9">
+      <ClassStats class="ua.softserveinc.tc.dao.impl.AbonnementDaoImpl" sourceFile="AbonnementDaoImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.AbonnementUsageDaoImpl" sourceFile="AbonnementUsageDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.BaseDaoImpl" sourceFile="BaseDaoImpl.java" interface="false" size="83" bugs="1" priority_2="1"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.BookingDaoImpl" sourceFile="BookingDaoImpl.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.ChildDaoImpl" sourceFile="ChildDaoImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.DayDiscountDaoImp" sourceFile="DayDiscountDaoImp.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.DayOffDaoImpl" sourceFile="DayOffDaoImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.EventDaoImpl" sourceFile="EventDaoImpl.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.PersonalDiscountDaoImp" sourceFile="PersonalDiscountDaoImp.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.RateDaoImpl" sourceFile="RateDaoImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.RoomDaoImpl" sourceFile="RoomDaoImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.SubscriptionAssignmentDaoImpl" sourceFile="SubscriptionAssignmentDaoImpl.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.TokenDaoImpl" sourceFile="TokenDaoImpl.java" interface="false" size="21" bugs="3" priority_2="3"/>
+      <ClassStats class="ua.softserveinc.tc.dao.impl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="64" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.dto" total_bugs="0" total_types="25" total_size="1659">
+      <ClassStats class="ua.softserveinc.tc.dto.AbonnementDto" sourceFile="AbonnementDto.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.BookingDto" sourceFile="BookingDto.java" interface="false" size="406" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.ChildDto" sourceFile="ChildDto.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.ConfigurationDto" sourceFile="ConfigurationDto.java" interface="false" size="174" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.DayDiscountDTO" sourceFile="DayDiscountDTO.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.DeactivateRoomDto" sourceFile="DeactivateRoomDto.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.EventDto" sourceFile="EventDto.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.EventsCreatingResultsDto" sourceFile="EventsCreatingResultsDto.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.InfoDeactivateRoomDto" sourceFile="InfoDeactivateRoomDto.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.ManagerBookingDTO" sourceFile="ManagerBookingDTO.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.ManagerBookingDTO$1" sourceFile="ManagerBookingDTO.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.ManagerBookingDTO$Builder" sourceFile="ManagerBookingDTO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.MonthlyEventDto" sourceFile="MonthlyEventDto.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.PersonalDiscountDTO" sourceFile="PersonalDiscountDTO.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.RateDto" sourceFile="RateDto.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.RecurrentEventDto" sourceFile="RecurrentEventDto.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.RoomDto" sourceFile="RoomDto.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.RoomReportValuesDto" sourceFile="RoomReportValuesDto.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.SubscriptionAssignmentDto" sourceFile="SubscriptionAssignmentDto.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.SubscriptionsUsedHoursDto" sourceFile="SubscriptionsUsedHoursDto.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.UserAbonnementInfoDto" sourceFile="UserAbonnementInfoDto.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.UserAbonnementsDto" sourceFile="UserAbonnementsDto.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.UserAssigmentDto" sourceFile="UserAssigmentDto.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.UserDto" sourceFile="UserDto.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.dto.UsersAbonnementAssignmentDto" sourceFile="UsersAbonnementAssignmentDto.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.entity" total_bugs="10" total_types="19" total_size="1092" priority_2="9" priority_1="1">
+      <ClassStats class="ua.softserveinc.tc.entity.Abonnement" sourceFile="Abonnement.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.AbonnementUsage" sourceFile="AbonnementUsage.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Booking" sourceFile="Booking.java" interface="false" size="111" bugs="3" priority_2="3"/>
+      <ClassStats class="ua.softserveinc.tc.entity.BookingState" sourceFile="BookingState.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Child" sourceFile="Child.java" interface="false" size="111" bugs="1" priority_2="1"/>
+      <ClassStats class="ua.softserveinc.tc.entity.DayDiscount" sourceFile="DayDiscount.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.DayOff" sourceFile="DayOff.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Event" sourceFile="Event.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Event$EventBuilder" sourceFile="Event.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Gender" sourceFile="Gender.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.PersonalDiscount" sourceFile="PersonalDiscount.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Rate" sourceFile="Rate.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="ua.softserveinc.tc.entity.RememberMeToken" sourceFile="RememberMeToken.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.ResponseWithErrors" sourceFile="ResponseWithErrors.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Role" sourceFile="Role.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Room" sourceFile="Room.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.SubscriptionAssignment" sourceFile="SubscriptionAssignment.java" interface="false" size="75" bugs="2" priority_2="2"/>
+      <ClassStats class="ua.softserveinc.tc.entity.Token" sourceFile="Token.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="ua.softserveinc.tc.entity.User" sourceFile="User.java" interface="false" size="102" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.entity.converter" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="ua.softserveinc.tc.entity.converter.LocalDateAttributeConverter" sourceFile="LocalDateAttributeConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.converter.LocalDateTimeAttributeConverter" sourceFile="LocalDateTimeAttributeConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.converter.LocalTimeAttributeConverter" sourceFile="LocalTimeAttributeConverter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.entity.pagination" total_bugs="0" total_types="6" total_size="133">
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.DataTableOutput" sourceFile="DataTableOutput.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.DataTableOutput$View" sourceFile="DataTableOutput.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.SortingPagination" sourceFile="SortingPagination.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.SortingPagination$Pagination" sourceFile="SortingPagination.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.SortingPagination$Search" sourceFile="SortingPagination.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.entity.pagination.SortingPagination$Sorting" sourceFile="SortingPagination.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.mapper" total_bugs="0" total_types="4" total_size="77">
+      <ClassStats class="ua.softserveinc.tc.mapper.AbonnementMapper" sourceFile="AbonnementMapper.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.mapper.EventMapper" sourceFile="EventMapper.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.mapper.GenericMapper" sourceFile="GenericMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.mapper.PaginationMapper" sourceFile="PaginationMapper.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.quartz" total_bugs="0" total_types="5" total_size="87">
+      <ClassStats class="ua.softserveinc.tc.quartz.CalculateSumJob" sourceFile="CalculateSumJob.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.quartz.CleanUpBookingsJob" sourceFile="CleanUpBookingsJob.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.quartz.SendDayOffReminderInfo" sourceFile="SendDayOffReminderInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.quartz.SendPaymentInfoJob" sourceFile="SendPaymentInfoJob.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.quartz.SendReminderJob" sourceFile="SendReminderJob.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.search" total_bugs="0" total_types="4" total_size="41">
+      <ClassStats class="ua.softserveinc.tc.search.BaseSearch" sourceFile="BaseSearch.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.search.BookingSearch" sourceFile="BookingSearch.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.search.ChildSearch" sourceFile="ChildSearch.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.search.UserSearch" sourceFile="UserSearch.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.server.exception" total_bugs="0" total_types="6" total_size="76">
+      <ClassStats class="ua.softserveinc.tc.server.exception.BadUploadException" sourceFile="BadUploadException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.server.exception.NoSuchRowException" sourceFile="NoSuchRowException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.server.exception.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.server.exception.ResponseException" sourceFile="ResponseException.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.server.exception.TokenInvalidException" sourceFile="TokenInvalidException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.server.exception.UserInputException" sourceFile="UserInputException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.service" total_bugs="0" total_types="15" total_size="158">
+      <ClassStats class="ua.softserveinc.tc.service.AbonnementUsageService" sourceFile="AbonnementUsageService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.AbonnementsService" sourceFile="AbonnementsService.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.BaseService" sourceFile="BaseService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.BookingService" sourceFile="BookingService.java" interface="true" size="36" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.CalendarService" sourceFile="CalendarService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.ChildService" sourceFile="ChildService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.DayDiscountService" sourceFile="DayDiscountService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.DayOffService" sourceFile="DayOffService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.EventService" sourceFile="EventService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.MailService" sourceFile="MailService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.PersonalDiscountService" sourceFile="PersonalDiscountService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.RateService" sourceFile="RateService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.RoomService" sourceFile="RoomService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.TokenService" sourceFile="TokenService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.UserService" sourceFile="UserService.java" interface="true" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.service.impl" total_bugs="0" total_types="19" total_size="1453">
+      <ClassStats class="ua.softserveinc.tc.service.impl.AbonnementServiceImpl" sourceFile="AbonnementServiceImpl.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.AbonnementUsageServiceImpl" sourceFile="AbonnementUsageServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.BaseServiceImpl" sourceFile="BaseServiceImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.BookingServiceImpl" sourceFile="BookingServiceImpl.java" interface="false" size="467" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.BookingServiceImpl$DailyBookingsMapTransformer" sourceFile="BookingServiceImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.BookingServiceImpl$DailyBookingsMapTransformer$BookingsDatesIterator" sourceFile="BookingServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.CalendarServiceImpl" sourceFile="CalendarServiceImpl.java" interface="false" size="170" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.ChildServiceImpl" sourceFile="ChildServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.DayDiscountServiceImpl" sourceFile="DayDiscountServiceImpl.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.DayOffServiceImpl" sourceFile="DayOffServiceImpl.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.EventServiceImpl" sourceFile="EventServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.MailServiceImpl" sourceFile="MailServiceImpl.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.PersonalDiscountServiceImpl" sourceFile="PersonalDiscountServiceImpl.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.RateServiceImpl" sourceFile="RateServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.RoomServiceImpl" sourceFile="RoomServiceImpl.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.SAMLUserDetailsServiceImpl" sourceFile="SAMLUserDetailsServiceImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.TokenServiceImpl" sourceFile="TokenServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="115" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.service.impl.cache" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="ua.softserveinc.tc.service.impl.cache.DayDiscountCache" sourceFile="DayDiscountCache.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.util" total_bugs="0" total_types="27" total_size="858">
+      <ClassStats class="ua.softserveinc.tc.util.ADFSParser" sourceFile="ADFSParser.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ApplicationConfigurator" sourceFile="ApplicationConfigurator.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ApplicationConfiguratorPropertiesBased" sourceFile="ApplicationConfiguratorPropertiesBased.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.BookingUtil" sourceFile="BookingUtil.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.BookingsCharacteristics" sourceFile="BookingsCharacteristics.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.BookingsCharacteristics$1" sourceFile="BookingsCharacteristics.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.BookingsCharacteristics$Builder" sourceFile="BookingsCharacteristics.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.BookingsHolder" sourceFile="BookingsHolder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.CurrencyConverter" sourceFile="CurrencyConverter.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.DateTwoTuple" sourceFile="DateTwoTuple.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.Discount" sourceFile="Discount.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.EventBuilder" sourceFile="EventBuilder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.EventBuilder$1" sourceFile="EventBuilder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.EventBuilder$Builder" sourceFile="EventBuilder.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ExcelData" sourceFile="ExcelData.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ExcelDocument" sourceFile="ExcelDocument.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ExcelRoomBooking" sourceFile="ExcelRoomBooking.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ExcelUserBooking" sourceFile="ExcelUserBooking.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.FileUploadFormObject" sourceFile="FileUploadFormObject.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.ImagesHolderUtil" sourceFile="ImagesHolderUtil.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.JsonUtil" sourceFile="JsonUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.LocalDateUtil" sourceFile="LocalDateUtil.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.Log" sourceFile="Log.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.LogInjector" sourceFile="LogInjector.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.PaginationCharacteristics" sourceFile="PaginationCharacteristics.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.TwoTuple" sourceFile="TwoTuple.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.util.serializers" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="ua.softserveinc.tc.util.serializers.LocalDateDeserializer" sourceFile="LocalDateDeserializer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.serializers.LocalDateSerializer" sourceFile="LocalDateSerializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.serializers.SimpleRoomSerializer" sourceFile="SimpleRoomSerializer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.util.serializers.SimpleRoomSerializer$SimpleRoom" sourceFile="SimpleRoomSerializer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.validator" total_bugs="0" total_types="27" total_size="807">
+      <ClassStats class="ua.softserveinc.tc.validator.AbonnementsValidator" sourceFile="AbonnementsValidator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.AbonnementsValidatorImpl" sourceFile="AbonnementsValidatorImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.BookingValidator" sourceFile="BookingValidator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.BookingValidatorImpl" sourceFile="BookingValidatorImpl.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.ChildValidator" sourceFile="ChildValidator.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.ConfigValidator" sourceFile="ConfigValidator.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.DayDiscountValidate" sourceFile="DayDiscountValidate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.DayDiscountValidateImpl" sourceFile="DayDiscountValidateImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.EventValidator" sourceFile="EventValidator.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.EventValidatorImpl" sourceFile="EventValidatorImpl.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.InputDateTimeValidator" sourceFile="InputDateTimeValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.InputDateTimeValidatorImpl" sourceFile="InputDateTimeValidatorImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.KidProfileImageValidator" sourceFile="KidProfileImageValidator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.KidProfileImageValidatorIml" sourceFile="KidProfileImageValidatorIml.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.LogicalRequestsValidator" sourceFile="LogicalRequestsValidator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.NumberRequestValidator" sourceFile="NumberRequestValidator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.NumberRequestValidatorImpl" sourceFile="NumberRequestValidatorImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.PersonalDiscountValidate" sourceFile="PersonalDiscountValidate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.PersonalDiscountValidateImpl" sourceFile="PersonalDiscountValidateImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.RecurrentBookingValidator" sourceFile="RecurrentBookingValidator.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.RecurrentBookingValidatorImpl" sourceFile="RecurrentBookingValidatorImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.RoomValidator" sourceFile="RoomValidator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.RoomValidatorImpl" sourceFile="RoomValidatorImpl.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.TimeValidator" sourceFile="TimeValidator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.TimeValidatorImpl" sourceFile="TimeValidatorImpl.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.UserValidator" sourceFile="UserValidator.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.UserValidatorImpl" sourceFile="UserValidatorImpl.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.validator.annotation" total_bugs="0" total_types="4" total_size="46">
+      <ClassStats class="ua.softserveinc.tc.validator.annotation.RateValidation" sourceFile="RateValidation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.annotation.RateValidationImpl" sourceFile="RateValidationImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.annotation.UniqueManagerValidation" sourceFile="UniqueManagerValidation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ua.softserveinc.tc.validator.annotation.UniqueManagerValidationImpl" sourceFile="UniqueManagerValidationImpl.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ua.softserveinc.tc.validator.util" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="ua.softserveinc.tc.validator.util.ShowUserInputErrors" sourceFile="ShowUserInputErrors.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="367" invocations="1769" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="33158" standardDeviationMicrosecondsPerInvocation="914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="334" invocations="1828" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="5970" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="325" invocations="1855" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="10632" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="296" invocations="1854" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="14923" standardDeviationMicrosecondsPerInvocation="506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="260" invocations="1786" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="35766" standardDeviationMicrosecondsPerInvocation="1310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="259" invocations="1870" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="8501" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="256" invocations="444" avgMicrosecondsPerInvocation="578" maxMicrosecondsPerInvocation="27661" standardDeviationMicrosecondsPerInvocation="1595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="242" invocations="444" avgMicrosecondsPerInvocation="546" maxMicrosecondsPerInvocation="17546" standardDeviationMicrosecondsPerInvocation="1339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="219" invocations="1870" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="11528" standardDeviationMicrosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="198" invocations="1855" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="10091" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="170" invocations="1214" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="5260" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="153" invocations="303" avgMicrosecondsPerInvocation="507" maxMicrosecondsPerInvocation="29855" standardDeviationMicrosecondsPerInvocation="2689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="145" invocations="2333" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="3134" standardDeviationMicrosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="99" invocations="2117" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="28691" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="88" invocations="444" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="4872" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="84" invocations="673" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="14075" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="79" invocations="303" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="4924" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="76" invocations="444" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="4706" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="72" invocations="1855" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="1868" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="71" invocations="25389" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1371" standardDeviationMicrosecondsPerInvocation="14"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="71" invocations="303" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="2389" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="66" invocations="444" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2018" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="66" invocations="303" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="3847" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="64" invocations="444" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="5056" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="63" invocations="303" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="30129" standardDeviationMicrosecondsPerInvocation="1731"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="58" invocations="303" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2828" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="1362" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="2142" standardDeviationMicrosecondsPerInvocation="113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="55" invocations="444" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="9352" standardDeviationMicrosecondsPerInvocation="473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="50" invocations="303" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="2936" standardDeviationMicrosecondsPerInvocation="314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="49" invocations="1828" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="1608" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="47" invocations="303" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="16420" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="43" invocations="444" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="3288" standardDeviationMicrosecondsPerInvocation="265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="40" invocations="303" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="2166" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="40" invocations="1749" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="726" standardDeviationMicrosecondsPerInvocation="41"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="39" invocations="303" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="5477" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="37" invocations="303" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="3110" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="37" invocations="303" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="2098" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="36" invocations="303" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2477" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="36" invocations="37995" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="889" standardDeviationMicrosecondsPerInvocation="4"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

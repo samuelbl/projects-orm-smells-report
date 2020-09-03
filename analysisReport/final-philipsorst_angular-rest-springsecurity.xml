@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114407000" analysisTimestamp="1597114408433" release="">
+  <Project projectName="repositorios/philipsorst_angular-rest-springsecurity">
+    <Jar>repositorios/philipsorst_angular-rest-springsecurity</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.dontdrinkandroot.example.angularrestspringsecurity.entity.AccessToken">
+      <SourceLine classname="net.dontdrinkandroot.example.angularrestspringsecurity.entity.AccessToken" start="29" end="72" sourcefile="AccessToken.java" sourcepath="net/dontdrinkandroot/example/angularrestspringsecurity/entity/AccessToken.java"/>
+    </Class>
+    <Field classname="net.dontdrinkandroot.example.angularrestspringsecurity.entity.AccessToken" name="user" signature="Lnet/dontdrinkandroot/example/angularrestspringsecurity/entity/User;" isStatic="false">
+      <SourceLine classname="net.dontdrinkandroot.example.angularrestspringsecurity.entity.AccessToken" sourcefile="AccessToken.java" sourcepath="net/dontdrinkandroot/example/angularrestspringsecurity/entity/AccessToken.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="27">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectWriter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:53:27 +0000" total_classes="25" referenced_classes="57" total_bugs="1" total_size="387" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.11" clock_seconds="1.48" peak_mbytes="190.06" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity" total_bugs="0" total_types="3" total_size="9">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.JsonViews" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.JsonViews$Admin" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.JsonViews$User" sourceFile="JsonViews.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.dao" total_bugs="0" total_types="3" total_size="68">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.Dao" sourceFile="Dao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.DataBaseInitializer" sourceFile="DataBaseInitializer.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.JpaDao" sourceFile="JpaDao.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.dao.accesstoken" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.accesstoken.AccessTokenDao" sourceFile="AccessTokenDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.accesstoken.JpaAccessTokenDao" sourceFile="JpaAccessTokenDao.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.dao.blogpost" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.blogpost.BlogPostDao" sourceFile="BlogPostDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.blogpost.JpaBlogPostDao" sourceFile="JpaBlogPostDao.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.dao.user" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.user.JpaUserDao" sourceFile="JpaUserDao.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.dao.user.UserDao" sourceFile="UserDao.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.entity" total_bugs="1" total_types="5" total_size="119" priority_2="1">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.entity.AccessToken" sourceFile="AccessToken.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.entity.BlogPost" sourceFile="BlogPost.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.entity.Entity" sourceFile="Entity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.entity.Role" sourceFile="Role.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.entity.User" sourceFile="User.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.rest" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.rest.AuthenticationTokenProcessingFilter" sourceFile="AuthenticationTokenProcessingFilter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.rest.UnauthorizedEntryPoint" sourceFile="UnauthorizedEntryPoint.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.rest.resources" total_bugs="0" total_types="2" total_size="63">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.rest.resources.BlogPostResource" sourceFile="BlogPostResource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.rest.resources.UserResource" sourceFile="UserResource.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.service" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.service.DaoUserService" sourceFile="DaoUserService.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.dontdrinkandroot.example.angularrestspringsecurity.transfer" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.transfer.TokenTransfer" sourceFile="TokenTransfer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.dontdrinkandroot.example.angularrestspringsecurity.transfer.UserTransfer" sourceFile="UserTransfer.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="166" invocations="481" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="11053" standardDeviationMicrosecondsPerInvocation="749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="59" invocations="390" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="27304" standardDeviationMicrosecondsPerInvocation="1384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="53" invocations="57" avgMicrosecondsPerInvocation="946" maxMicrosecondsPerInvocation="10812" standardDeviationMicrosecondsPerInvocation="1913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="44" invocations="485" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="1394" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="40" invocations="176" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="4225" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="57" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="4629" standardDeviationMicrosecondsPerInvocation="982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="35" invocations="85" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="3229" standardDeviationMicrosecondsPerInvocation="551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="34" invocations="85" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="4954" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="96" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="23749" standardDeviationMicrosecondsPerInvocation="2409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="85" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="7615" standardDeviationMicrosecondsPerInvocation="879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="30" invocations="86" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="8432" standardDeviationMicrosecondsPerInvocation="959"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="99" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="14011" standardDeviationMicrosecondsPerInvocation="1426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="28" invocations="85" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="2667" standardDeviationMicrosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="26" invocations="85" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="8326" standardDeviationMicrosecondsPerInvocation="892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="57" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="7250" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="57" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="8423" standardDeviationMicrosecondsPerInvocation="1136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="57" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="3966" standardDeviationMicrosecondsPerInvocation="771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="57" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="2595" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="57" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="1586" standardDeviationMicrosecondsPerInvocation="285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="57" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="5183" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="57" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="2074" standardDeviationMicrosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="11" invocations="896" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="864" standardDeviationMicrosecondsPerInvocation="50"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

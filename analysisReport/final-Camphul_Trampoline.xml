@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597099420000" analysisTimestamp="1597099422325" release="">
+  <Project projectName="repositorios/Camphul_Trampoline">
+    <Jar>repositorios/Camphul_Trampoline</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lucadev.trampoline.security.persistence.entity.Role">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.entity.Role" start="30" end="63" sourcefile="Role.java" sourcepath="com/lucadev/trampoline/security/persistence/entity/Role.java"/>
+    </Class>
+    <Field classname="com.lucadev.trampoline.security.persistence.entity.Role" name="privileges" signature="Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.entity.Role" sourcefile="Role.java" sourcepath="com/lucadev/trampoline/security/persistence/entity/Role.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lucadev.trampoline.security.persistence.entity.User">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.entity.User" start="41" end="157" sourcefile="User.java" sourcepath="com/lucadev/trampoline/security/persistence/entity/User.java"/>
+    </Class>
+    <Field classname="com.lucadev.trampoline.security.persistence.entity.User" name="roles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.entity.User" sourcefile="User.java" sourcepath="com/lucadev/trampoline/security/persistence/entity/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lucadev.trampoline.security.persistence.repository.UserRepository">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/lucadev/trampoline/security/persistence/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.lucadev.trampoline.security.persistence.repository.UserRepository" name="findOneByUsernameOrEmail" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.lucadev.trampoline.security.persistence.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/lucadev/trampoline/security/persistence/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="159">
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.ObjectCodec</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.deser.std.StdDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.module.SimpleModule</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.security.Keys</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInterceptor</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInvocation</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.h2.server.web.WebServlet</MissingClass>
+    <MissingClass>org.hibernate.event.service.spi.EventListenerRegistry</MissingClass>
+    <MissingClass>org.hibernate.event.spi.EventType</MissingClass>
+    <MissingClass>org.hibernate.event.spi.PreInsertEvent</MissingClass>
+    <MissingClass>org.hibernate.event.spi.PreLoadEvent</MissingClass>
+    <MissingClass>org.hibernate.event.spi.PreLoadEventListener</MissingClass>
+    <MissingClass>org.hibernate.event.spi.PreUpdateEvent</MissingClass>
+    <MissingClass>org.hibernate.internal.SessionFactoryImpl</MissingClass>
+    <MissingClass>org.hibernate.persister.entity.EntityPersister</MissingClass>
+    <MissingClass>org.hibernate.service.spi.ServiceRegistryImplementor</MissingClass>
+    <MissingClass>org.hibernate.validator.internal.engine.path.NodeImpl</MissingClass>
+    <MissingClass>org.hibernate.validator.internal.engine.path.PathImpl</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.aop.aspectj.AspectJExpressionPointcut</MissingClass>
+    <MissingClass>org.springframework.aop.framework.ProxyFactory</MissingClass>
+    <MissingClass>org.springframework.aop.support.DefaultPointcutAdvisor</MissingClass>
+    <MissingClass>org.springframework.beans.TypeMismatchException</MissingClass>
+    <MissingClass>org.springframework.beans.factory.FactoryBean</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.env.EnvironmentPostProcessor</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.ServletRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisher</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.expression.MapAccessor</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationUtils</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.core.env.ConfigurableEnvironment</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.env.MapPropertySource</MissingClass>
+    <MissingClass>org.springframework.core.env.MutablePropertySources</MissingClass>
+    <MissingClass>org.springframework.core.env.PropertySource</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.core.io.FileSystemResource</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.RepositoryInformation</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryFactorySupport</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.support.RepositoryProxyPostProcessor</MissingClass>
+    <MissingClass>org.springframework.data.util.Streamable</MissingClass>
+    <MissingClass>org.springframework.expression.Expression</MissingClass>
+    <MissingClass>org.springframework.expression.ExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.SpelCompilerMode</MissingClass>
+    <MissingClass>org.springframework.expression.spel.SpelParserConfiguration</MissingClass>
+    <MissingClass>org.springframework.expression.spel.standard.SpelExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.support.StandardEvaluationContext</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpOutputMessage</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.converter.HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.Jackson2ObjectMapperBuilder</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.access.PermissionEvaluator</MissingClass>
+    <MissingClass>org.springframework.security.access.expression.SecurityExpressionRoot</MissingClass>
+    <MissingClass>org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AbstractAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AccountStatusUserDetailsChecker</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationCredentialsNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.event.AuthenticationSuccessEvent</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.AuthorityUtils</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.AuthenticationUserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsChecker</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.util.ClassUtils</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindException</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.web.HttpMediaTypeNotSupportedException</MissingClass>
+    <MissingClass>org.springframework.web.HttpRequestMethodNotSupportedException</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>org.springframework.web.bind.MissingServletRequestParameterException</MissingClass>
+    <MissingClass>org.springframework.web.bind.annotation.RequestMethod</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.method.HandlerMethod</MissingClass>
+    <MissingClass>org.springframework.web.method.annotation.MethodArgumentTypeMismatchException</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodArgumentResolver</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.support.MissingServletRequestPartException</MissingClass>
+    <MissingClass>org.springframework.web.server.ResponseStatusException</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerMapping</MissingClass>
+    <MissingClass>org.springframework.web.servlet.NoHandlerFoundException</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.PatternsRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.RequestMappingInfo</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</MissingClass>
+    <MissingClass>org.thymeleaf.TemplateEngine</MissingClass>
+    <MissingClass>org.thymeleaf.context.Context</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:43:40 +0000" total_classes="259" referenced_classes="407" total_bugs="3" total_size="4588" num_packages="78" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="19.03" clock_seconds="5.46" peak_mbytes="506.59" alloc_mbytes="3540.00" gc_seconds="0.20" priority_2="1" priority_1="2">
+    <PackageStats package="com.lucadev.trampoline" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.lucadev.trampoline.EnableTrampoline" sourceFile="EnableTrampoline.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.TrampolineConfiguration" sourceFile="TrampolineConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore" total_bugs="0" total_types="6" total_size="90">
+      <ClassStats class="com.lucadev.trampoline.assetstore.AbstractAssetStore" sourceFile="AbstractAssetStore.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.Asset" sourceFile="Asset.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.AssetMetaData" sourceFile="AssetMetaData.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.AssetMetaDataBuilder" sourceFile="AssetMetaDataBuilder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.AssetStore" sourceFile="AssetStore.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.AssetStoreFactory" sourceFile="AssetStoreFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.autoconfigure" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.lucadev.trampoline.assetstore.autoconfigure.AssetEventPublisherAutConfiguration" sourceFile="AssetEventPublisherAutConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.autoconfigure.AssetStoreAutoConfiguration" sourceFile="AssetStoreAutoConfiguration.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.autoconfigure.AssetStoreWebAutoConfiguration" sourceFile="AssetStoreWebAutoConfiguration.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.configuration" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.lucadev.trampoline.assetstore.configuration.AssetStoreConfigurationProperties" sourceFile="AssetStoreConfigurationProperties.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.event" total_bugs="0" total_types="6" total_size="63">
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.AssetEvent" sourceFile="AssetEvent.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.AssetEvent$Action" sourceFile="AssetEvent.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.AssetEvent$Put" sourceFile="AssetEvent.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.AssetEvent$Remove" sourceFile="AssetEvent.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.AssetEventPublisher" sourceFile="AssetEventPublisher.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.DefaultAssetEventPublisher" sourceFile="DefaultAssetEventPublisher.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.event.listener" total_bugs="0" total_types="4" total_size="20">
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.listener.AssetEventListener" sourceFile="AssetEventListener.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.listener.AssetEventListener$1" sourceFile="AssetEventListener.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.listener.AssetPutEventListener" sourceFile="AssetPutEventListener.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.event.listener.AssetRemoveEventListener" sourceFile="AssetRemoveEventListener.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.provider.local" total_bugs="0" total_types="3" total_size="82">
+      <ClassStats class="com.lucadev.trampoline.assetstore.provider.local.LocalAssetStore" sourceFile="LocalAssetStore.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.provider.local.LocalAssetStoreConfigurationProperties" sourceFile="LocalAssetStoreConfigurationProperties.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.assetstore.provider.local.LocalAssetStoreFactory" sourceFile="LocalAssetStoreFactory.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.repository" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.lucadev.trampoline.assetstore.repository.AssetMetaDataRepository" sourceFile="AssetMetaDataRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.web" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.lucadev.trampoline.assetstore.web.AssetResponse" sourceFile="AssetResponse.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.assetstore.web.converter" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.lucadev.trampoline.assetstore.web.converter.AssetResponseHttpMessageConverter" sourceFile="AssetResponseHttpMessageConverter.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.autoconfigure" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="com.lucadev.trampoline.autoconfigure.TimeProviderAutoConfiguration" sourceFile="TimeProviderAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.autoconfigure.TrampolineEnvironmentPostProcessor" sourceFile="TrampolineEnvironmentPostProcessor.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="com.lucadev.trampoline.data.MappedPage" sourceFile="MappedPage.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.autoconfigure" total_bugs="0" total_types="3" total_size="82">
+      <ClassStats class="com.lucadev.trampoline.data.autoconfigure.TrampolineDataAutoConfiguration" sourceFile="TrampolineDataAutoConfiguration.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.autoconfigure.TrampolineFlywayEnvironmentPostProcessor" sourceFile="TrampolineFlywayEnvironmentPostProcessor.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.autoconfigure.TrampolineObjectMapperAutoConfiguration" sourceFile="TrampolineObjectMapperAutoConfiguration.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.entity" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.lucadev.trampoline.data.entity.TrampolineEntity" sourceFile="TrampolineEntity.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.gdpr" total_bugs="0" total_types="4" total_size="62">
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.EnableGdprCompliance" sourceFile="EnableGdprCompliance.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.GdprComplianceConfiguration" sourceFile="GdprComplianceConfiguration.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.PersonalData" sourceFile="PersonalData.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.PersonalDataEntityListener" sourceFile="PersonalDataEntityListener.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.gdpr.configuration" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.configuration.CryptoConfigurationProperties" sourceFile="CryptoConfigurationProperties.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.gdpr.crypto" total_bugs="0" total_types="5" total_size="85">
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.crypto.CipherProvider" sourceFile="CipherProvider.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.crypto.EncryptionUtils" sourceFile="EncryptionUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.crypto.FieldDecrypter" sourceFile="FieldDecrypter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.crypto.FieldEncrypter" sourceFile="FieldEncrypter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.crypto.StringCrypto" sourceFile="StringCrypto.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.gdpr.repository" total_bugs="0" total_types="3" total_size="75">
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.repository.CompliantJpaRepositoryFactoryBean" sourceFile="CompliantJpaRepositoryFactoryBean.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.repository.CompliantRepositoryMethodInterceptor" sourceFile="CompliantRepositoryMethodInterceptor.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.gdpr.repository.CompliantRepositoryProxyPostProcessor" sourceFile="CompliantRepositoryProxyPostProcessor.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.repository" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.lucadev.trampoline.data.repository.TrampolineRepository" sourceFile="TrampolineRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.web" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="com.lucadev.trampoline.data.web.FindByIdMethodArgumentResolver" sourceFile="FindByIdMethodArgumentResolver.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.web.PrimaryKeyMapper" sourceFile="PrimaryKeyMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.web.UUIDPrimaryKeyMapper" sourceFile="UUIDPrimaryKeyMapper.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.web.annotation" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.lucadev.trampoline.data.web.annotation.FindById" sourceFile="FindById.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.data.web.autoconfig" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.lucadev.trampoline.data.web.autoconfig.TrampolineDataWebAutoConfiguration" sourceFile="TrampolineDataWebAutoConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.data.web.autoconfig.TrampolineDataWebMvcAutoConfiguration" sourceFile="TrampolineDataWebMvcAutoConfiguration.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.notify.autoconfigure" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="com.lucadev.trampoline.notify.autoconfigure.EmailServiceAutoConfiguration" sourceFile="EmailServiceAutoConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.autoconfigure.EmailTemplateParserAutoConfiguration" sourceFile="EmailTemplateParserAutoConfiguration.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.notify.email" total_bugs="0" total_types="5" total_size="113">
+      <ClassStats class="com.lucadev.trampoline.notify.email.EmailBuilder" sourceFile="EmailBuilder.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.email.EmailService" sourceFile="EmailService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.email.EmailTemplateParser" sourceFile="EmailTemplateParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.email.ThymeleafEmailTemplateParser" sourceFile="ThymeleafEmailTemplateParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.email.TrampolineEmailService" sourceFile="TrampolineEmailService.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.notify.email.configuration" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="com.lucadev.trampoline.notify.email.configuration.EmailConfigurationProperties" sourceFile="EmailConfigurationProperties.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.notify.email.configuration.EmailConfigurationProperties$Defaults" sourceFile="EmailConfigurationProperties.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.reflect" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="com.lucadev.trampoline.reflect.MethodReflectionUtils" sourceFile="MethodReflectionUtils.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.reflect.ParameterCallback" sourceFile="ParameterCallback.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.lucadev.trampoline.security.CurrentUserNotFoundException" sourceFile="CurrentUserNotFoundException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac" total_bugs="0" total_types="4" total_size="20">
+      <ClassStats class="com.lucadev.trampoline.security.abac.AbacPermissionEvaluator" sourceFile="AbacPermissionEvaluator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.AbstractAbacPermissionEvaluator" sourceFile="AbstractAbacPermissionEvaluator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.PolicyContainer" sourceFile="PolicyContainer.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.PolicyEnforcement" sourceFile="PolicyEnforcement.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.access" total_bugs="0" total_types="3" total_size="71">
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.PolicyMethodSecurityAspect" sourceFile="PolicyMethodSecurityAspect.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.PolicyMethodSecurityHandler" sourceFile="PolicyMethodSecurityHandler.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.TransactionalPolicyMethodSecurityHandler" sourceFile="TransactionalPolicyMethodSecurityHandler.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.access.annotation" total_bugs="0" total_types="4" total_size="6">
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.annotation.EnablePrePostPolicy" sourceFile="EnablePrePostPolicy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.annotation.PolicyResource" sourceFile="PolicyResource.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.annotation.PostPolicy" sourceFile="PostPolicy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.annotation.PrePolicy" sourceFile="PrePolicy.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.access.method" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.method.AspectJSecuredMethodInvocationIntercept" sourceFile="AspectJSecuredMethodInvocationIntercept.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.access.method.SecuredMethodInvocationIntercept" sourceFile="SecuredMethodInvocationIntercept.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.autoconfigure" total_bugs="0" total_types="7" total_size="87">
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.AbacPermissionEvaluatorAutoConfiguration" sourceFile="AbacPermissionEvaluatorAutoConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.AbacSecurityAutoConfiguration" sourceFile="AbacSecurityAutoConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.GlobalAbacMethodSecurityAutoConfiguration" sourceFile="GlobalAbacMethodSecurityAutoConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.PolicyContainerAutoConfiguration" sourceFile="PolicyContainerAutoConfiguration.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.PolicyEnforcementAutoConfiguration" sourceFile="PolicyEnforcementAutoConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.PolicyEnvironmentDecoratorAutoConfiguration" sourceFile="PolicyEnvironmentDecoratorAutoConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.autoconfigure.SecurityAccessContextFactoryAutoConfiguration" sourceFile="SecurityAccessContextFactoryAutoConfiguration.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.configuration" total_bugs="0" total_types="4" total_size="56">
+      <ClassStats class="com.lucadev.trampoline.security.abac.configuration.AbacSecurityConfigurationProperties" sourceFile="AbacSecurityConfigurationProperties.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.configuration.AbacSecurityConfigurationProperties$JpaPolicyContainerProperties" sourceFile="AbacSecurityConfigurationProperties.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.configuration.AbacSecurityConfigurationProperties$JsonPolicyContainerProperties" sourceFile="AbacSecurityConfigurationProperties.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.configuration.AbacSecurityConfigurationProperties$PolicyContainerProperties" sourceFile="AbacSecurityConfigurationProperties.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.decorator" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="com.lucadev.trampoline.security.abac.decorator.PolicyEnvironmentDecorator" sourceFile="PolicyEnvironmentDecorator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.decorator.TimePolicyEnvironmentDecorator" sourceFile="TimePolicyEnvironmentDecorator.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.impl" total_bugs="0" total_types="5" total_size="161">
+      <ClassStats class="com.lucadev.trampoline.security.abac.impl.JpaPolicyContainer" sourceFile="JpaPolicyContainer.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.impl.JsonFilePolicyContainer" sourceFile="JsonFilePolicyContainer.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.impl.JsonFilePolicyContainer$JsonPolicyFileModel" sourceFile="JsonFilePolicyContainer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.impl.TrampolineAbacPermissionEvaluator" sourceFile="TrampolineAbacPermissionEvaluator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.impl.TrampolinePolicyEnforcement" sourceFile="TrampolinePolicyEnforcement.java" interface="false" size="60" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.persistence.entity" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="com.lucadev.trampoline.security.abac.persistence.entity.PolicyRule" sourceFile="PolicyRule.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.persistence.repository" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.lucadev.trampoline.security.abac.persistence.repository.PolicyRuleRepository" sourceFile="PolicyRuleRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.spel" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.SpelAttributeConverter" sourceFile="SpelAttributeConverter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.SpelDeserializer" sourceFile="SpelDeserializer.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.spel.context" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.context.SecurityAccessContext" sourceFile="SecurityAccessContext.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.context.SecurityAccessContextFactory" sourceFile="SecurityAccessContextFactory.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.abac.spel.context.impl" total_bugs="0" total_types="2" total_size="51">
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.context.impl.TrampolineSecurityAccessContext" sourceFile="TrampolineSecurityAccessContext.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.abac.spel.context.impl.TrampolineSecurityAccessContextFactory" sourceFile="TrampolineSecurityAccessContextFactory.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.authentication" total_bugs="0" total_types="3" total_size="48">
+      <ClassStats class="com.lucadev.trampoline.security.authentication.IdentificationField" sourceFile="IdentificationField.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.authentication.PersistentUserDetails" sourceFile="PersistentUserDetails.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.authentication.SystemAuthentication" sourceFile="SystemAuthentication.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.authentication.builder" total_bugs="0" total_types="2" total_size="120">
+      <ClassStats class="com.lucadev.trampoline.security.authentication.builder.AuthorizationRoleBuilder" sourceFile="AuthorizationRoleBuilder.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.authentication.builder.AuthorizationSchemeBuilder" sourceFile="AuthorizationSchemeBuilder.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.authentication.listener" total_bugs="0" total_types="2" total_size="27">
+      <ClassStats class="com.lucadev.trampoline.security.authentication.listener.AuthenticationSuccessListener" sourceFile="AuthenticationSuccessListener.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.authentication.listener.LastSeenUpdateHandler" sourceFile="LastSeenUpdateHandler.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.autoconfigure" total_bugs="0" total_types="10" total_size="93">
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.AuthorizationSchemeServiceAutoConfiguration" sourceFile="AuthorizationSchemeServiceAutoConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.PasswordEncoderAutoConfiguration" sourceFile="PasswordEncoderAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.PersistentUserDetailsServiceAutoConfiguration" sourceFile="PersistentUserDetailsServiceAutoConfiguration.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.PrivilegeServiceAutoConfiguration" sourceFile="PrivilegeServiceAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.RoleServiceAutoConfiguration" sourceFile="RoleServiceAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.TrampolineSecurityAutoConfiguration" sourceFile="TrampolineSecurityAutoConfiguration.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.TrampolineWebSecurityAutoConfiguration" sourceFile="TrampolineWebSecurityAutoConfiguration.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.TrampolineWebSecurityDevelopmentAutoConfiguration" sourceFile="TrampolineWebSecurityDevelopmentAutoConfiguration.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.UserAuthenticationServiceAutoConfiguration" sourceFile="UserAuthenticationServiceAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.autoconfigure.UserServiceAutoConfiguration" sourceFile="UserServiceAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.configuration" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.lucadev.trampoline.security.configuration.AuthorizationSchemeConfiguration" sourceFile="AuthorizationSchemeConfiguration.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.configuration.SecurityConfigurationProperties" sourceFile="SecurityConfigurationProperties.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt" total_bugs="0" total_types="3" total_size="132">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.JwtTokenService" sourceFile="JwtTokenService.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.TokenPayload" sourceFile="TokenPayload.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.TokenService" sourceFile="TokenService.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.adapter.security" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.EnableJwtSecurityAdapter" sourceFile="EnableJwtSecurityAdapter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.JwtSecuritySupportConfiguration" sourceFile="JwtSecuritySupportConfiguration.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.adapter.security.provider" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.provider.UserDetailsTokenAuthenticationProvider" sourceFile="UserDetailsTokenAuthenticationProvider.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.provider.UserIdTokenDecorator" sourceFile="UserIdTokenDecorator.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.adapter.security.web.configuration" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.web.configuration.JwtWebConfigurationProperties" sourceFile="JwtWebConfigurationProperties.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.adapter.security.web.controller" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.web.controller.AuthenticationController" sourceFile="AuthenticationController.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.web.controller.JwtAuthenticationController" sourceFile="JwtAuthenticationController.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.adapter.security.web.model" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.web.model.TokenAuthenticationResponse" sourceFile="TokenAuthenticationResponse.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.adapter.security.web.model.UserAuthenticationRequest" sourceFile="UserAuthenticationRequest.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.authentication" total_bugs="0" total_types="5" total_size="56">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.AbstractTokenPreAuthenticatedProcessingFilter" sourceFile="AbstractTokenPreAuthenticatedProcessingFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.StatelessAuthenticationToken" sourceFile="StatelessAuthenticationToken.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.TokenAuthenticationEntryPoint" sourceFile="TokenAuthenticationEntryPoint.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.TokenAuthenticationFilter" sourceFile="TokenAuthenticationFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.TokenAuthenticationProvider" sourceFile="TokenAuthenticationProvider.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.authentication.user" total_bugs="0" total_types="2" total_size="45">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.user.StatelessUserDetails" sourceFile="StatelessUserDetails.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.authentication.user.StatelessUserDetailsService" sourceFile="StatelessUserDetailsService.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.autoconfigure" total_bugs="0" total_types="5" total_size="71">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.autoconfigure.JwtAutoConfiguration" sourceFile="JwtAutoConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.autoconfigure.JwtWebSecurityAutoConfiguration" sourceFile="JwtWebSecurityAutoConfiguration.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.autoconfigure.StatelessUserDetailsServiceAutoConfiguration" sourceFile="StatelessUserDetailsServiceAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.autoconfigure.TokenDecoratorAutoConfiguration" sourceFile="TokenDecoratorAutoConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.autoconfigure.TokenServiceAutoConfiguration" sourceFile="TokenServiceAutoConfiguration.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.configuration" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.configuration.JwtSecurityConfigurationProperties" sourceFile="JwtSecurityConfigurationProperties.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.configuration.JwtSecurityConfigurationProperties$ClaimsConfigurationProperties" sourceFile="JwtSecurityConfigurationProperties.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.jwt.decorator" total_bugs="0" total_types="3" total_size="23">
+      <ClassStats class="com.lucadev.trampoline.security.jwt.decorator.AuthoritiesTokenDecorator" sourceFile="AuthoritiesTokenDecorator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.decorator.TokenDecorator" sourceFile="TokenDecorator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.jwt.decorator.UsernameTokenDecorator" sourceFile="UsernameTokenDecorator.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.logging" total_bugs="0" total_types="6" total_size="54">
+      <ClassStats class="com.lucadev.trampoline.security.logging.ActingUpon" sourceFile="ActingUpon.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.EnableUserActivityLogging" sourceFile="EnableUserActivityLogging.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.LogUserActivity" sourceFile="LogUserActivity.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.UserActivity" sourceFile="UserActivity.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.UserActivityInvocationContext" sourceFile="UserActivityInvocationContext.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.UserActivityLoggingConfiguration" sourceFile="UserActivityLoggingConfiguration.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.logging.aop" total_bugs="0" total_types="2" total_size="94">
+      <ClassStats class="com.lucadev.trampoline.security.logging.aop.ActivityMethodInvocationResult" sourceFile="ActivityMethodInvocationResult.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.aop.UserActivityMethodInterceptor" sourceFile="UserActivityMethodInterceptor.java" interface="false" size="79" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.logging.autoconfig" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="com.lucadev.trampoline.security.logging.autoconfig.UserActivityHandlerAutoConfiguration" sourceFile="UserActivityHandlerAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.logging.handler" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.lucadev.trampoline.security.logging.handler.UserActivityHandler" sourceFile="UserActivityHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.logging.handler.event" total_bugs="0" total_types="3" total_size="57">
+      <ClassStats class="com.lucadev.trampoline.security.logging.handler.event.UserActivityEvent" sourceFile="UserActivityEvent.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.handler.event.UserActivityEventListener" sourceFile="UserActivityEventListener.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.logging.handler.event.UserActivityEventPublisher" sourceFile="UserActivityEventPublisher.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.persistence.entity" total_bugs="2" total_types="3" total_size="122" priority_1="2">
+      <ClassStats class="com.lucadev.trampoline.security.persistence.entity.Privilege" sourceFile="Privilege.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.persistence.entity.Role" sourceFile="Role.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="com.lucadev.trampoline.security.persistence.entity.User" sourceFile="User.java" interface="false" size="81" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.persistence.repository" total_bugs="1" total_types="3" total_size="9" priority_2="1">
+      <ClassStats class="com.lucadev.trampoline.security.persistence.repository.PrivilegeRepository" sourceFile="PrivilegeRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.persistence.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.persistence.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.service" total_bugs="0" total_types="6" total_size="49">
+      <ClassStats class="com.lucadev.trampoline.security.service.AuthorizationSchemeService" sourceFile="AuthorizationSchemeService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.PersistentUserDetailsService" sourceFile="PersistentUserDetailsService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.PrivilegeService" sourceFile="PrivilegeService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.RoleService" sourceFile="RoleService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.UserAuthenticationService" sourceFile="UserAuthenticationService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.UserService" sourceFile="UserService.java" interface="true" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.service.impl" total_bugs="0" total_types="5" total_size="136">
+      <ClassStats class="com.lucadev.trampoline.security.service.impl.TrampolineAuthorizationSchemeService" sourceFile="TrampolineAuthorizationSchemeService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.impl.TrampolinePrivilegeService" sourceFile="TrampolinePrivilegeService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.impl.TrampolineRoleService" sourceFile="TrampolineRoleService.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.impl.TrampolineUserAuthenticationService" sourceFile="TrampolineUserAuthenticationService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.service.impl.TrampolineUserService" sourceFile="TrampolineUserService.java" interface="false" size="73" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.web.annotation" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.lucadev.trampoline.security.web.annotation.EnableIgnoreSecurity" sourceFile="EnableIgnoreSecurity.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.annotation.IgnoreSecurity" sourceFile="IgnoreSecurity.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.web.configuration" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="com.lucadev.trampoline.security.web.configuration.IgnoreSecurityWebSecurityConfiguration" sourceFile="IgnoreSecurityWebSecurityConfiguration.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.configuration.WebSecurityMapperConfiguration" sourceFile="WebSecurityMapperConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.web.model" total_bugs="0" total_types="6" total_size="126">
+      <ClassStats class="com.lucadev.trampoline.security.web.model.EmbeddedUser" sourceFile="EmbeddedUser.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.PrivilegeDto" sourceFile="PrivilegeDto.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.RoleDto" sourceFile="RoleDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.RoleSummaryDto" sourceFile="RoleSummaryDto.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.UserDto" sourceFile="UserDto.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.UserSummaryDto" sourceFile="UserSummaryDto.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.security.web.model.mapper" total_bugs="0" total_types="8" total_size="147">
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.GrantedAuthorityMapper" sourceFile="GrantedAuthorityMapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.GrantedAuthorityMapperImpl" sourceFile="GrantedAuthorityMapperImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.PrivilegeMapper" sourceFile="PrivilegeMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.PrivilegeMapperImpl" sourceFile="PrivilegeMapperImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.RoleMapper" sourceFile="RoleMapper.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.RoleMapperImpl" sourceFile="RoleMapperImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.UserMapper" sourceFile="UserMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.security.web.model.mapper.UserMapperImpl" sourceFile="UserMapperImpl.java" interface="false" size="64" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.service.time" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="com.lucadev.trampoline.service.time.SystemTimeProvider" sourceFile="SystemTimeProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.service.time.TimeProvider" sourceFile="TimeProvider.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.lucadev.trampoline.web.BusinessRuleViolationException" sourceFile="BusinessRuleViolationException.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web.autoconfigure" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="com.lucadev.trampoline.web.autoconfigure.ResponseEntityExceptionHandlerAutoConfiguration" sourceFile="ResponseEntityExceptionHandlerAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.autoconfigure.UUIDConverterAutoConfiguration" sourceFile="UUIDConverterAutoConfiguration.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web.converter" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.lucadev.trampoline.web.converter.UUIDConverter" sourceFile="UUIDConverter.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web.error" total_bugs="0" total_types="2" total_size="119">
+      <ClassStats class="com.lucadev.trampoline.web.error.AbstractResponseEntityExceptionHandler" sourceFile="AbstractResponseEntityExceptionHandler.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.error.TrampolineResponseEntityExceptionHandler" sourceFile="TrampolineResponseEntityExceptionHandler.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web.model" total_bugs="0" total_types="11" total_size="175">
+      <ClassStats class="com.lucadev.trampoline.web.model.BigDecimalValueDto" sourceFile="BigDecimalValueDto.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.BigIntegerValueDto" sourceFile="BigIntegerValueDto.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.BooleanValueDto" sourceFile="BooleanValueDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.DataResponse" sourceFile="DataResponse.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.DoubleValueDto" sourceFile="DoubleValueDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.IntValueDto" sourceFile="IntValueDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.ListResponse" sourceFile="ListResponse.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.MessageResponse" sourceFile="MessageResponse.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.StringValueDto" sourceFile="StringValueDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.SuccessResponse" sourceFile="SuccessResponse.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.UUIDDto" sourceFile="UUIDDto.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lucadev.trampoline.web.model.error" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.lucadev.trampoline.web.model.error.ApiErrorResponse" sourceFile="ApiErrorResponse.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lucadev.trampoline.web.model.error.ApiFieldConstraintError" sourceFile="ApiFieldConstraintError.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="464">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="388" invocations="1630" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="25833" standardDeviationMicrosecondsPerInvocation="1124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="236" invocations="1245" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="6874" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="220" invocations="1222" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="3581" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="204" invocations="1251" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="8762" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="199" invocations="1243" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="10239" standardDeviationMicrosecondsPerInvocation="429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="186" invocations="407" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="9851" standardDeviationMicrosecondsPerInvocation="1170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="172" invocations="1251" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="9861" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="162" invocations="407" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="7880" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="159" invocations="1245" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="10337" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="134" invocations="1756" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="3079" standardDeviationMicrosecondsPerInvocation="179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="129" invocations="883" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="4099" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="111" invocations="1640" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="2154" standardDeviationMicrosecondsPerInvocation="74"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="77" invocations="1393" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="24224" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="74" invocations="624" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="13746" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="61" invocations="407" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="4245" standardDeviationMicrosecondsPerInvocation="362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="60" invocations="1245" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2192" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="58" invocations="14467" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1237" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="57" invocations="1297" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="1104" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="53" invocations="259" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="7985" standardDeviationMicrosecondsPerInvocation="815"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="51" invocations="407" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="5045" standardDeviationMicrosecondsPerInvocation="419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="51" invocations="407" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="1705" standardDeviationMicrosecondsPerInvocation="202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="49" invocations="407" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="2343" standardDeviationMicrosecondsPerInvocation="242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="48" invocations="259" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="5502" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="47" invocations="259" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="2049" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="45" invocations="259" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="1465" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="45" invocations="407" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="6509" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="43" invocations="259" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="2961" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="43" invocations="259" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1356" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="38" invocations="407" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="4194" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="37" invocations="259" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="7101" standardDeviationMicrosecondsPerInvocation="471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="36" invocations="259" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="1780" standardDeviationMicrosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="36" invocations="1222" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="821" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="36" invocations="259" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="4156" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="35" invocations="259" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="6065" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="34" invocations="32560" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="684" standardDeviationMicrosecondsPerInvocation="4"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="33" invocations="259" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="16909" standardDeviationMicrosecondsPerInvocation="1054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="32" invocations="1179" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="1998" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="29" invocations="259" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="1696" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="27" invocations="259" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="1081" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="27" invocations="407" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="1188" standardDeviationMicrosecondsPerInvocation="137"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

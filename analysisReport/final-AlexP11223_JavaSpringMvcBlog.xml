@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596952079000" analysisTimestamp="1596952081114" release="">
+  <Project projectName="repositorios/AlexP11223_JavaSpringMvcBlog">
+    <Jar>repositorios/AlexP11223_JavaSpringMvcBlog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.model.Comment">
+      <SourceLine classname="alexp.blog.model.Comment" start="16" end="189" sourcefile="Comment.java" sourcepath="alexp/blog/model/Comment.java"/>
+    </Class>
+    <Field classname="alexp.blog.model.Comment" name="parentComment" signature="Lalexp/blog/model/Comment;" isStatic="false">
+      <SourceLine classname="alexp.blog.model.Comment" sourcefile="Comment.java" sourcepath="alexp/blog/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.model.Comment">
+      <SourceLine classname="alexp.blog.model.Comment" start="16" end="189" sourcefile="Comment.java" sourcepath="alexp/blog/model/Comment.java"/>
+    </Class>
+    <Field classname="alexp.blog.model.Comment" name="user" signature="Lalexp/blog/model/User;" isStatic="false">
+      <SourceLine classname="alexp.blog.model.Comment" sourcefile="Comment.java" sourcepath="alexp/blog/model/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.model.User">
+      <SourceLine classname="alexp.blog.model.User" start="19" end="202" sourcefile="User.java" sourcepath="alexp/blog/model/User.java"/>
+    </Class>
+    <Field classname="alexp.blog.model.User" name="roles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="alexp.blog.model.User" sourcefile="User.java" sourcepath="alexp/blog/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.repository.CommentRatingRepository">
+      <SourceLine classname="alexp.blog.repository.CommentRatingRepository" sourcefile="CommentRatingRepository.java" sourcepath="alexp/blog/repository/CommentRatingRepository.java"/>
+    </Class>
+    <Method classname="alexp.blog.repository.CommentRatingRepository" name="findUserRating" signature="(Ljava/lang/Long;Ljava/lang/Long;)Lalexp/blog/model/CommentRating;" isStatic="false">
+      <SourceLine classname="alexp.blog.repository.CommentRatingRepository" sourcefile="CommentRatingRepository.java" sourcepath="alexp/blog/repository/CommentRatingRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.repository.PostRatingRepository">
+      <SourceLine classname="alexp.blog.repository.PostRatingRepository" sourcefile="PostRatingRepository.java" sourcepath="alexp/blog/repository/PostRatingRepository.java"/>
+    </Class>
+    <Method classname="alexp.blog.repository.PostRatingRepository" name="findUserRating" signature="(Ljava/lang/Long;Ljava/lang/Long;)Lalexp/blog/model/PostRating;" isStatic="false">
+      <SourceLine classname="alexp.blog.repository.PostRatingRepository" sourcefile="PostRatingRepository.java" sourcepath="alexp/blog/repository/PostRatingRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.repository.PostRepository">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Class>
+    <Method classname="alexp.blog.repository.PostRepository" name="findByTags" signature="(Ljava/util/Collection;Ljava/lang/Long;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.repository.PostRepository">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Class>
+    <Method classname="alexp.blog.repository.PostRepository" name="findByTagsAndNotHidden" signature="(Ljava/util/Collection;Ljava/lang/Long;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="alexp.blog.repository.PostRepository">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Class>
+    <Method classname="alexp.blog.repository.PostRepository" name="findTopPosts" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="alexp.blog.repository.PostRepository" sourcefile="PostRepository.java" sourcepath="alexp/blog/repository/PostRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>com.github.rjeschke.txtmark.Processor</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.io.FilenameUtils</MissingClass>
+    <MissingClass>org.imgscalr.Scalr</MissingClass>
+    <MissingClass>org.imgscalr.Scalr$Mode</MissingClass>
+    <MissingClass>org.jsoup.Jsoup</MissingClass>
+    <MissingClass>org.jsoup.safety.Whitelist</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:47:59 +0000" total_classes="47" referenced_classes="119" total_bugs="8" total_size="1116" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.54" clock_seconds="2.37" peak_mbytes="218.06" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="7" priority_1="1">
+    <PackageStats package="alexp.blog.controller" total_bugs="0" total_types="7" total_size="286">
+      <ClassStats class="alexp.blog.controller.CommentController" sourceFile="CommentController.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.ExceptionController" sourceFile="ExceptionController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.ForbiddenException" sourceFile="ForbiddenException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.LoginController" sourceFile="LoginController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.PostsController" sourceFile="PostsController.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="alexp.blog.controller.UsersController" sourceFile="UsersController.java" interface="false" size="95" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="alexp.blog.model" total_bugs="3" total_types="13" total_size="414" priority_2="2" priority_1="1">
+      <ClassStats class="alexp.blog.model.Comment" sourceFile="Comment.java" interface="false" size="94" bugs="2" priority_2="2"/>
+      <ClassStats class="alexp.blog.model.CommentRating" sourceFile="CommentRating.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="alexp.blog.model.Post" sourceFile="Post.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="alexp.blog.model.PostEditDto" sourceFile="PostEditDto.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="alexp.blog.model.PostRating" sourceFile="PostRating.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="alexp.blog.model.Rating" sourceFile="Rating.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="alexp.blog.model.Role" sourceFile="Role.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="alexp.blog.model.Tag" sourceFile="Tag.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="alexp.blog.model.User" sourceFile="User.java" interface="false" size="91" bugs="1" priority_1="1"/>
+      <ClassStats class="alexp.blog.model.User$ChangeEmailValidationGroup" sourceFile="User.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="alexp.blog.model.User$ChangePasswordValidationGroup" sourceFile="User.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="alexp.blog.model.User$CreateValidationGroup" sourceFile="User.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="alexp.blog.model.User$ProfileInfoValidationGroup" sourceFile="User.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="alexp.blog.repository" total_bugs="5" total_types="7" total_size="19" priority_2="5">
+      <ClassStats class="alexp.blog.repository.CommentRatingRepository" sourceFile="CommentRatingRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="alexp.blog.repository.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="alexp.blog.repository.PostRatingRepository" sourceFile="PostRatingRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="alexp.blog.repository.PostRepository" sourceFile="PostRepository.java" interface="true" size="6" bugs="3" priority_2="3"/>
+      <ClassStats class="alexp.blog.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="alexp.blog.repository.TagRepository" sourceFile="TagRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="alexp.blog.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="alexp.blog.service" total_bugs="0" total_types="16" total_size="347">
+      <ClassStats class="alexp.blog.service.ActionExpiredException" sourceFile="ActionExpiredException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="alexp.blog.service.AlreadyVotedException" sourceFile="AlreadyVotedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="alexp.blog.service.AuthException" sourceFile="AuthException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="alexp.blog.service.AvatarService" sourceFile="AvatarService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="alexp.blog.service.AvatarServiceImpl" sourceFile="AvatarServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="alexp.blog.service.CommentService" sourceFile="CommentService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="alexp.blog.service.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="alexp.blog.service.FileNameGenerator" sourceFile="FileNameGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="alexp.blog.service.FileNameGeneratorImpl" sourceFile="FileNameGeneratorImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="alexp.blog.service.MarkdownConverter" sourceFile="MarkdownConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="alexp.blog.service.PostService" sourceFile="PostService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="alexp.blog.service.PostServiceImpl" sourceFile="PostServiceImpl.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="alexp.blog.service.UnsupportedFormatException" sourceFile="UnsupportedFormatException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="alexp.blog.service.UploadedAvatarInfo" sourceFile="UploadedAvatarInfo.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="alexp.blog.service.UserService" sourceFile="UserService.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="alexp.blog.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="86" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="alexp.blog.utils" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="alexp.blog.utils.JsonUtils" sourceFile="JsonUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="alexp.blog.utils.LocalDatePersistenceConverter" sourceFile="LocalDatePersistenceConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="alexp.blog.utils.LocalDateTimePersistenceConverter" sourceFile="LocalDateTimePersistenceConverter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="alexp.blog.validator" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="alexp.blog.validator.UserValidator" sourceFile="UserValidator.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="293" invocations="938" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="14568" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="101" invocations="119" avgMicrosecondsPerInvocation="849" maxMicrosecondsPerInvocation="22400" standardDeviationMicrosecondsPerInvocation="2256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="100" invocations="119" avgMicrosecondsPerInvocation="844" maxMicrosecondsPerInvocation="9205" standardDeviationMicrosecondsPerInvocation="1516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="71" invocations="943" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="449" standardDeviationMicrosecondsPerInvocation="40"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="68" invocations="255" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="5199" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="61" invocations="533" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="2873" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="58" invocations="119" avgMicrosecondsPerInvocation="492" maxMicrosecondsPerInvocation="22150" standardDeviationMicrosecondsPerInvocation="2082"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="56" invocations="251" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="1894" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="55" invocations="258" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="8689" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="51" invocations="255" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="9650" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="47" invocations="259" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="9456" standardDeviationMicrosecondsPerInvocation="604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="255" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="2569" standardDeviationMicrosecondsPerInvocation="265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="815" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="1134" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="299" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="26565" standardDeviationMicrosecondsPerInvocation="1531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="42" invocations="183" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="13244" standardDeviationMicrosecondsPerInvocation="1004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="119" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="3975" standardDeviationMicrosecondsPerInvocation="646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="27" invocations="119" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="2787" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="151" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="1857" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="119" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="9502" standardDeviationMicrosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="24" invocations="119" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="1721" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="47" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="7563" standardDeviationMicrosecondsPerInvocation="1519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="18" invocations="2830" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="844" standardDeviationMicrosecondsPerInvocation="22"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="119" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="1956" standardDeviationMicrosecondsPerInvocation="279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="17" invocations="47" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="6381" standardDeviationMicrosecondsPerInvocation="951"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="16" invocations="47" avgMicrosecondsPerInvocation="358" maxMicrosecondsPerInvocation="2671" standardDeviationMicrosecondsPerInvocation="538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="47" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="2282" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="47" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="5286" standardDeviationMicrosecondsPerInvocation="783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="255" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="1661" standardDeviationMicrosecondsPerInvocation="134"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

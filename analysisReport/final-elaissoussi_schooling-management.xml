@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596940568000" analysisTimestamp="1596940574014" release="">
+  <Project projectName="repositorios/elaissoussi_schooling-management">
+    <Jar>repositorios/elaissoussi_schooling-management</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.dao.GenericJpaDao">
+      <SourceLine classname="com.hrabhi.gestionscolarite.dao.GenericJpaDao" start="17" end="78" sourcefile="GenericJpaDao.java" sourcepath="com/hrabhi/gestionscolarite/dao/GenericJpaDao.java"/>
+    </Class>
+    <Method classname="com.hrabhi.gestionscolarite.dao.GenericJpaDao" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.dao.GenericJpaDao" start="41" end="41" startBytecode="0" endBytecode="117" sourcefile="GenericJpaDao.java" sourcepath="com/hrabhi/gestionscolarite/dao/GenericJpaDao.java"/>
+    </Method>
+    <SourceLine classname="com.hrabhi.gestionscolarite.dao.GenericJpaDao" start="42" end="42" startBytecode="8" endBytecode="8" sourcefile="GenericJpaDao.java" sourcepath="com/hrabhi/gestionscolarite/dao/GenericJpaDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa">
+      <SourceLine classname="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa" start="23" end="42" sourcefile="UserDaoJpa.java" sourcepath="com/hrabhi/gestionscolarite/dao/user/UserDaoJpa.java"/>
+    </Class>
+    <Method classname="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa" name="checkRegistredUser" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/hrabhi/gestionscolarite/model/User;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa" start="29" end="42" startBytecode="0" endBytecode="242" sourcefile="UserDaoJpa.java" sourcepath="com/hrabhi/gestionscolarite/dao/user/UserDaoJpa.java"/>
+    </Method>
+    <SourceLine classname="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa" start="30" end="30" startBytecode="8" endBytecode="8" sourcefile="UserDaoJpa.java" sourcepath="com/hrabhi/gestionscolarite/dao/user/UserDaoJpa.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Avis">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Avis" start="8" end="29" sourcefile="Avis.java" sourcepath="com/hrabhi/gestionscolarite/model/Avis.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Avis" name="prof" signature="Lcom/hrabhi/gestionscolarite/model/Professeur;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Avis" sourcefile="Avis.java" sourcepath="com/hrabhi/gestionscolarite/model/Avis.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Etudiant">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Etudiant" start="14" end="36" sourcefile="Etudiant.java" sourcepath="com/hrabhi/gestionscolarite/model/Etudiant.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Etudiant" name="niveau" signature="Lcom/hrabhi/gestionscolarite/model/Niveau;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Etudiant" sourcefile="Etudiant.java" sourcepath="com/hrabhi/gestionscolarite/model/Etudiant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Matiere">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" start="17" end="83" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Matiere" name="module" signature="Lcom/hrabhi/gestionscolarite/model/Module;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Matiere">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" start="17" end="83" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Matiere" name="niveau" signature="Lcom/hrabhi/gestionscolarite/model/Niveau;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Matiere">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" start="17" end="83" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Matiere" name="note" signature="Lcom/hrabhi/gestionscolarite/model/Note;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Matiere">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" start="17" end="83" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Matiere" name="prof" signature="Lcom/hrabhi/gestionscolarite/model/Professeur;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Matiere" sourcefile="Matiere.java" sourcepath="com/hrabhi/gestionscolarite/model/Matiere.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Module">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Module" start="14" end="55" sourcefile="Module.java" sourcepath="com/hrabhi/gestionscolarite/model/Module.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Module" name="niveau" signature="Lcom/hrabhi/gestionscolarite/model/Niveau;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Module" sourcefile="Module.java" sourcepath="com/hrabhi/gestionscolarite/model/Module.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Niveau">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Niveau" start="10" end="54" sourcefile="Niveau.java" sourcepath="com/hrabhi/gestionscolarite/model/Niveau.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Niveau" name="Etudiants" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Niveau" sourcefile="Niveau.java" sourcepath="com/hrabhi/gestionscolarite/model/Niveau.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Note">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Note" start="11" end="36" sourcefile="Note.java" sourcepath="com/hrabhi/gestionscolarite/model/Note.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Note" name="etudiant" signature="Lcom/hrabhi/gestionscolarite/model/Etudiant;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Note" sourcefile="Note.java" sourcepath="com/hrabhi/gestionscolarite/model/Note.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Note">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Note" start="11" end="36" sourcefile="Note.java" sourcepath="com/hrabhi/gestionscolarite/model/Note.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Note" name="matiere" signature="Lcom/hrabhi/gestionscolarite/model/Matiere;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Note" sourcefile="Note.java" sourcepath="com/hrabhi/gestionscolarite/model/Note.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Professeur">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Professeur" start="10" end="10" sourcefile="Professeur.java" sourcepath="com/hrabhi/gestionscolarite/model/Professeur.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Professeur" name="avis" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Professeur" sourcefile="Professeur.java" sourcepath="com/hrabhi/gestionscolarite/model/Professeur.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="com.hrabhi.gestionscolarite.model.Professeur">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Professeur" start="10" end="10" sourcefile="Professeur.java" sourcepath="com/hrabhi/gestionscolarite/model/Professeur.java"/>
+    </Class>
+    <Field classname="com.hrabhi.gestionscolarite.model.Professeur" name="matieres" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.hrabhi.gestionscolarite.model.Professeur" sourcefile="Professeur.java" sourcepath="com/hrabhi/gestionscolarite/model/Professeur.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="1" missingClasses="10">
+    <Error>
+      <ErrorMessage>Exception analyzing com.hrabhi.gestionscolarite.dao.GenericJpaDao using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 02:36:08 +0000" total_classes="36" referenced_classes="55" total_bugs="14" total_size="646" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.42" clock_seconds="1.50" peak_mbytes="189.14" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="11" priority_1="3">
+    <PackageStats package="com.hrabhi.gestionscolarite.controller" total_bugs="0" total_types="6" total_size="275">
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.AdminPageController" sourceFile="AdminPageController.java" interface="false" size="161" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.ErrorPageController" sourceFile="ErrorPageController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.HomePageController" sourceFile="HomePageController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.LoginPageController" sourceFile="LoginPageController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.StudentPageController" sourceFile="StudentPageController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.controller.TeacherPageController" sourceFile="TeacherPageController.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.dao" total_bugs="1" total_types="2" total_size="50" priority_2="1">
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.GenericDao" sourceFile="GenericDao.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.GenericJpaDao" sourceFile="GenericJpaDao.java" interface="false" size="41" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.dao.module" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.module.ModuleDao" sourceFile="ModuleDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.module.ModuleDaoJpa" sourceFile="ModuleDaoJpa.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.dao.niveau" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.niveau.NiveauDao" sourceFile="NiveauDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.niveau.NiveauDaoJpa" sourceFile="NiveauDaoJpa.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.dao.note" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.note.NoteDao" sourceFile="NoteDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.note.NoteDaoJpa" sourceFile="NoteDaoJpa.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.dao.user" total_bugs="1" total_types="10" total_size="45" priority_2="1">
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.AdminDao" sourceFile="AdminDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.AdminDaoJpa" sourceFile="AdminDaoJpa.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.EtudiantDao" sourceFile="EtudiantDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.EtudiantDaoJpa" sourceFile="EtudiantDaoJpa.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.MatiereDao" sourceFile="MatiereDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.MatiereDaoJpa" sourceFile="MatiereDaoJpa.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.PofesseurDao" sourceFile="PofesseurDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.ProfesseurDaoJpa" sourceFile="ProfesseurDaoJpa.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.UserDao" sourceFile="UserDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.dao.user.UserDaoJpa" sourceFile="UserDaoJpa.java" interface="false" size="14" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.interceptor" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.hrabhi.gestionscolarite.interceptor.AuthorizationInterceptor" sourceFile="AuthorizationInterceptor.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.hrabhi.gestionscolarite.model" total_bugs="12" total_types="11" total_size="226" priority_2="9" priority_1="3">
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Administrateur" sourceFile="Administrateur.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Avis" sourceFile="Avis.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Etudiant" sourceFile="Etudiant.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Matiere" sourceFile="Matiere.java" interface="false" size="39" bugs="4" priority_2="4"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Module" sourceFile="Module.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Niveau" sourceFile="Niveau.java" interface="false" size="27" bugs="1" priority_1="1"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Note" sourceFile="Note.java" interface="false" size="21" bugs="2" priority_2="2"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Professeur" sourceFile="Professeur.java" interface="false" size="5" bugs="2" priority_1="2"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.Role" sourceFile="Role.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.hrabhi.gestionscolarite.model.User" sourceFile="User.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="149" invocations="405" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="11037" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="48" invocations="55" avgMicrosecondsPerInvocation="887" maxMicrosecondsPerInvocation="11728" standardDeviationMicrosecondsPerInvocation="2038"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="40" invocations="144" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="4643" standardDeviationMicrosecondsPerInvocation="501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="413" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="2553" standardDeviationMicrosecondsPerInvocation="132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="37" invocations="144" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="7048" standardDeviationMicrosecondsPerInvocation="702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="35" invocations="144" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="1666" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="155" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="23045" standardDeviationMicrosecondsPerInvocation="1840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="212" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="3600" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="33" invocations="55" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="6527" standardDeviationMicrosecondsPerInvocation="1166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="32" invocations="144" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="9143" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="31" invocations="144" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="2483" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="144" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="7519" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="99" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="12989" standardDeviationMicrosecondsPerInvocation="1323"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="28" invocations="337" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="1090" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="55" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="6908" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="55" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="4092" standardDeviationMicrosecondsPerInvocation="817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="55" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="8100" standardDeviationMicrosecondsPerInvocation="1109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="15" invocations="1410" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1034" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="14" invocations="73" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="1768" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="55" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2234" standardDeviationMicrosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="55" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="4545" standardDeviationMicrosecondsPerInvocation="661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="12" invocations="36" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="3130" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="55" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="2845" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="36" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="2198" standardDeviationMicrosecondsPerInvocation="451"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

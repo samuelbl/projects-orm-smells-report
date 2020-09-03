@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596949675000" analysisTimestamp="1596949677096" release="">
+  <Project projectName="repositorios/clairvista_omaha-server">
+    <Jar>repositorios/clairvista_omaha-server</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="14" end="68" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" name="findApplication" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/Application;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="48" end="57" startBytecode="0" endBytecode="184" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="14" end="68" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" name="getApplications" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="68" end="68" startBytecode="0" endBytecode="58" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" start="68" end="68" startBytecode="4" endBytecode="4" sourcefile="ApplicationDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="19" end="137" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" name="getApplicationVersions" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="137" end="137" startBytecode="0" endBytecode="58" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="137" end="137" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    <String value="Method: getApplicationVersions. Fields with EAGER without Join Fetch: application, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="19" end="137" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" name="findByVersionForApplication" signature="(Lcom/clairvista/liveexpert/omaha/server/model/Application;Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersion;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="59" end="68" startBytecode="0" endBytecode="175" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="19" end="137" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" name="findCurrentForApplication" signature="(Lcom/clairvista/liveexpert/omaha/server/model/Application;)Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersion;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="73" end="83" startBytecode="0" endBytecode="267" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="73" end="73" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="19" end="137" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" name="getApplicationVersions" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="137" end="137" startBytecode="0" endBytecode="58" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" start="137" end="137" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="13" end="58" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" name="getApplicationVersionRequests" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="58" end="58" startBytecode="0" endBytecode="58" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="58" end="58" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+    <String value="Method: getApplicationVersionRequests. Fields with EAGER without Join Fetch: applicationVersion, request, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="13" end="58" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" name="getApplicationVersionRequests" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="58" end="58" startBytecode="0" endBytecode="58" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" start="58" end="58" startBytecode="4" endBytecode="4" sourcefile="ApplicationVersionRequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ApplicationVersionRequestDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="14" end="50" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" name="findOrCreateClientVersion" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/ClientVersion;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="30" end="45" startBytecode="0" endBytecode="239" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="30" end="30" startBytecode="4" endBytecode="4" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="14" end="50" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" name="getClientVersions" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="50" end="50" startBytecode="0" endBytecode="58" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" start="50" end="50" startBytecode="4" endBytecode="4" sourcefile="ClientVersionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ClientVersionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="13" end="63" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" name="getEvents" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="63" end="63" startBytecode="0" endBytecode="58" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="63" end="63" startBytecode="4" endBytecode="4" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+    <String value="Method: getEvents. Fields with EAGER without Join Fetch: applicationVersionRequest, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="13" end="63" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" name="getEvents" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="63" end="63" startBytecode="0" endBytecode="58" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" start="63" end="63" startBytecode="4" endBytecode="4" sourcefile="EventDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/EventDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="14" end="83" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" name="findOrCreateOperatingSystem" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/OperatingSystem;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="49" end="72" startBytecode="0" endBytecode="354" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="14" end="83" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" name="getOperatingSystems" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="83" end="83" startBytecode="0" endBytecode="58" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" start="83" end="83" startBytecode="4" endBytecode="4" sourcefile="OperatingSystemDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/OperatingSystemDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="13" end="51" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" name="getPings" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="51" end="51" startBytecode="0" endBytecode="58" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="51" end="51" startBytecode="4" endBytecode="4" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+    <String value="Method: getPings. Fields with EAGER without Join Fetch: applicationVersionRequest, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="13" end="51" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" name="getPings" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="51" end="51" startBytecode="0" endBytecode="58" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" start="51" end="51" startBytecode="4" endBytecode="4" sourcefile="PingDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/PingDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="14" end="44" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" name="findProtocol" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/Protocol;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="30" end="39" startBytecode="0" endBytecode="184" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="30" end="30" startBytecode="4" endBytecode="4" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="14" end="44" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" name="getProtocols" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="44" end="44" startBytecode="0" endBytecode="58" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" start="44" end="44" startBytecode="4" endBytecode="4" sourcefile="ProtocolDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/ProtocolDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="13" end="56" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" name="getRequests" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="56" end="56" startBytecode="0" endBytecode="58" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+    <String value="Method: getRequests. Fields with EAGER without Join Fetch: protocol, clientVersion, user, operatingSystem, session, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="13" end="56" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" name="getRequests" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="56" end="56" startBytecode="0" endBytecode="58" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="RequestDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/RequestDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="13" end="47" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" name="findOrCreateSession" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/Session;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="29" end="42" startBytecode="0" endBytecode="239" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="13" end="47" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" name="getSessions" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="47" end="47" startBytecode="0" endBytecode="58" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" start="47" end="47" startBytecode="4" endBytecode="4" sourcefile="SessionDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/SessionDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="13" end="53" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" name="getUpdateChecks" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="53" end="53" startBytecode="0" endBytecode="58" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+    <String value="Method: getUpdateChecks. Fields with EAGER without Join Fetch: applicationVersionRequest, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="13" end="53" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" name="getUpdateChecks" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="53" end="53" startBytecode="0" endBytecode="58" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="UpdateCheckDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UpdateCheckDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="14" end="70" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" name="findOrCreateUser" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/User;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="46" end="59" startBytecode="0" endBytecode="239" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    <String value="Method: findOrCreateUser. Fields with EAGER without Join Fetch: operatingSystem, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="14" end="70" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" name="getUsers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="70" end="70" startBytecode="0" endBytecode="58" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="70" end="70" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    <String value="Method: getUsers. Fields with EAGER without Join Fetch: operatingSystem, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="14" end="70" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" name="findOrCreateUser" signature="(Ljava/lang/String;)Lcom/clairvista/liveexpert/omaha/server/model/User;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="46" end="59" startBytecode="0" endBytecode="239" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="14" end="70" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Class>
+    <Method classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" name="getUsers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="70" end="70" startBytecode="0" endBytecode="58" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" start="70" end="70" startBytecode="4" endBytecode="4" sourcefile="UserDAOImpl.java" sourcepath="com/clairvista/liveexpert/omaha/server/dao/UserDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersion">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersion" start="21" end="170" sourcefile="ApplicationVersion.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersion.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersion" name="application" signature="Lcom/clairvista/liveexpert/omaha/server/model/Application;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersion" sourcefile="ApplicationVersion.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersion.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" start="15" end="146" sourcefile="ApplicationVersionRequest.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" name="applicationVersion" signature="Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersion;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" sourcefile="ApplicationVersionRequest.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" start="15" end="146" sourcefile="ApplicationVersionRequest.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" name="request" signature="Lcom/clairvista/liveexpert/omaha/server/model/Request;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" sourcefile="ApplicationVersionRequest.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Event">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Event" start="15" end="193" sourcefile="Event.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Event.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Event" name="applicationVersionRequest" signature="Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Event" sourcefile="Event.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Event.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Ping">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Ping" start="17" end="86" sourcefile="Ping.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Ping.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Ping" name="applicationVersionRequest" signature="Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Ping" sourcefile="Ping.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Ping.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Request">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" start="59" end="149" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Request" name="clientVersion" signature="Lcom/clairvista/liveexpert/omaha/server/model/ClientVersion;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Request">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" start="59" end="149" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Request" name="operatingSystem" signature="Lcom/clairvista/liveexpert/omaha/server/model/OperatingSystem;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Request">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" start="59" end="149" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Request" name="protocol" signature="Lcom/clairvista/liveexpert/omaha/server/model/Protocol;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Request">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" start="59" end="149" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Request" name="session" signature="Lcom/clairvista/liveexpert/omaha/server/model/Session;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.Request">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" start="59" end="149" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.Request" name="user" signature="Lcom/clairvista/liveexpert/omaha/server/model/User;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.Request" sourcefile="Request.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/Request.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.UpdateCheck">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.UpdateCheck" start="17" end="86" sourcefile="UpdateCheck.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/UpdateCheck.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.UpdateCheck" name="applicationVersionRequest" signature="Lcom/clairvista/liveexpert/omaha/server/model/ApplicationVersionRequest;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.UpdateCheck" sourcefile="UpdateCheck.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/UpdateCheck.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.clairvista.liveexpert.omaha.server.model.User">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.User" start="31" end="68" sourcefile="User.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/User.java"/>
+    </Class>
+    <Field classname="com.clairvista.liveexpert.omaha.server.model.User" name="operatingSystem" signature="Lcom/clairvista/liveexpert/omaha/server/model/OperatingSystem;" isStatic="false">
+      <SourceLine classname="com.clairvista.liveexpert.omaha.server.model.User" sourcefile="User.java" sourcepath="com/clairvista/liveexpert/omaha/server/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.orm.hibernate4.HibernateTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.hibernate4.LocalSessionFactoryBean</MissingClass>
+    <MissingClass>org.springframework.util.xml.DomUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:07:55 +0000" total_classes="84" referenced_classes="156" total_bugs="40" total_size="2155" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.53" clock_seconds="2.60" peak_mbytes="198.11" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="40">
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.constants" total_bugs="0" total_types="13" total_size="93">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.APIElementNames" sourceFile="APIElementNames.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.ActionAttrs" sourceFile="ActionAttrs.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.ApplicationAttrs" sourceFile="ApplicationAttrs.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.DayStartAttrs" sourceFile="DayStartAttrs.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.EventAttrs" sourceFile="EventAttrs.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.ManifestAttrs" sourceFile="ManifestAttrs.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.OperatingSystemAttrs" sourceFile="OperatingSystemAttrs.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.PackageAttrs" sourceFile="PackageAttrs.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.PingAttrs" sourceFile="PingAttrs.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.RequestAttrs" sourceFile="RequestAttrs.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.ResponseAttrs" sourceFile="ResponseAttrs.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.UpdateCheckAttrs" sourceFile="UpdateCheckAttrs.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.constants.UrlAttrs" sourceFile="UrlAttrs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.controller" total_bugs="0" total_types="3" total_size="92">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.controller.CodeRedServlet" sourceFile="CodeRedServlet.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.controller.StatusServlet" sourceFile="StatusServlet.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.controller.UpdateServlet" sourceFile="UpdateServlet.java" interface="false" size="65" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.dao" total_bugs="28" total_types="24" total_size="499" priority_2="28">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAO" sourceFile="ApplicationDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationDAOImpl" sourceFile="ApplicationDAOImpl.java" interface="false" size="37" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAO" sourceFile="ApplicationVersionDAO.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionDAOImpl" sourceFile="ApplicationVersionDAOImpl.java" interface="false" size="79" bugs="4" priority_2="4"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAO" sourceFile="ApplicationVersionRequestDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ApplicationVersionRequestDAOImpl" sourceFile="ApplicationVersionRequestDAOImpl.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAO" sourceFile="ClientVersionDAO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ClientVersionDAOImpl" sourceFile="ClientVersionDAOImpl.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.EventDAO" sourceFile="EventDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.EventDAOImpl" sourceFile="EventDAOImpl.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAO" sourceFile="OperatingSystemDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.OperatingSystemDAOImpl" sourceFile="OperatingSystemDAOImpl.java" interface="false" size="47" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.PingDAO" sourceFile="PingDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.PingDAOImpl" sourceFile="PingDAOImpl.java" interface="false" size="27" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAO" sourceFile="ProtocolDAO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.ProtocolDAOImpl" sourceFile="ProtocolDAOImpl.java" interface="false" size="19" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.RequestDAO" sourceFile="RequestDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.RequestDAOImpl" sourceFile="RequestDAOImpl.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.SessionDAO" sourceFile="SessionDAO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.SessionDAOImpl" sourceFile="SessionDAOImpl.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAO" sourceFile="UpdateCheckDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.UpdateCheckDAOImpl" sourceFile="UpdateCheckDAOImpl.java" interface="false" size="29" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.UserDAO" sourceFile="UserDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.dao.UserDAOImpl" sourceFile="UserDAOImpl.java" interface="false" size="39" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.init" total_bugs="0" total_types="1" total_size="42">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.init.WebAppConfig" sourceFile="WebAppConfig.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.model" total_bugs="12" total_types="12" total_size="612" priority_2="12">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Application" sourceFile="Application.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.ApplicationVersion" sourceFile="ApplicationVersion.java" interface="false" size="89" bugs="1" priority_2="1"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.ApplicationVersionRequest" sourceFile="ApplicationVersionRequest.java" interface="false" size="75" bugs="2" priority_2="2"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.ClientVersion" sourceFile="ClientVersion.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Event" sourceFile="Event.java" interface="false" size="99" bugs="1" priority_2="1"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.OperatingSystem" sourceFile="OperatingSystem.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Ping" sourceFile="Ping.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Protocol" sourceFile="Protocol.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Request" sourceFile="Request.java" interface="false" size="71" bugs="5" priority_2="5"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.Session" sourceFile="Session.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.UpdateCheck" sourceFile="UpdateCheck.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.model.User" sourceFile="User.java" interface="false" size="32" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.response" total_bugs="0" total_types="14" total_size="281">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.ActionResponse" sourceFile="ActionResponse.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.ActionsResponse" sourceFile="ActionsResponse.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.AppChildResponse" sourceFile="AppChildResponse.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.ApplicationResponse" sourceFile="ApplicationResponse.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.EventResponse" sourceFile="EventResponse.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.ManifestResponse" sourceFile="ManifestResponse.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.PackageResponse" sourceFile="PackageResponse.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.PackagesResponse" sourceFile="PackagesResponse.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.PingResponse" sourceFile="PingResponse.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.ResponseRoot" sourceFile="ResponseRoot.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.UnknownResponse" sourceFile="UnknownResponse.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.UpdateCheckResponse" sourceFile="UpdateCheckResponse.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.UrlResponse" sourceFile="UrlResponse.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.response.UrlsResponse" sourceFile="UrlsResponse.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.service" total_bugs="0" total_types="14" total_size="434">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.ApplicationService" sourceFile="ApplicationService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.ApplicationServiceImpl" sourceFile="ApplicationServiceImpl.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.ApplicationVersionRequestService" sourceFile="ApplicationVersionRequestService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.ApplicationVersionRequestServiceImpl" sourceFile="ApplicationVersionRequestServiceImpl.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.EventService" sourceFile="EventService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.EventServiceImpl" sourceFile="EventServiceImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.OperatingSystemService" sourceFile="OperatingSystemService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.OperatingSystemServiceImpl" sourceFile="OperatingSystemServiceImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.PingService" sourceFile="PingService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.PingServiceImpl" sourceFile="PingServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.RequestService" sourceFile="RequestService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.RequestServiceImpl" sourceFile="RequestServiceImpl.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.UpdateCheckService" sourceFile="UpdateCheckService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.service.UpdateCheckServiceImpl" sourceFile="UpdateCheckServiceImpl.java" interface="false" size="97" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.clairvista.liveexpert.omaha.server.util" total_bugs="0" total_types="3" total_size="102">
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.util.RequestElementValidationException" sourceFile="RequestElementValidationException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.util.ServletUtils" sourceFile="ServletUtils.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.clairvista.liveexpert.omaha.server.util.XMLUtils" sourceFile="XMLUtils.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="203" invocations="717" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="12623" standardDeviationMicrosecondsPerInvocation="745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="96" invocations="397" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="5803" standardDeviationMicrosecondsPerInvocation="546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="93" invocations="397" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="3754" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="87" invocations="724" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="29884" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="84" invocations="403" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="7527" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="156" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="10614" standardDeviationMicrosecondsPerInvocation="1354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="75" invocations="397" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="4453" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="73" invocations="397" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="7936" standardDeviationMicrosecondsPerInvocation="442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="69" invocations="403" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="9428" standardDeviationMicrosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="68" invocations="156" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="5810" standardDeviationMicrosecondsPerInvocation="925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="56" invocations="601" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="3519" standardDeviationMicrosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="49" invocations="473" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="23806" standardDeviationMicrosecondsPerInvocation="1092"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="46" invocations="202" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="3098" standardDeviationMicrosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="41" invocations="209" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="14245" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="641" avgMicrosecondsPerInvocation="59" maxMicrosecondsPerInvocation="987" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="156" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="5518" standardDeviationMicrosecondsPerInvocation="547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="4773" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1135" standardDeviationMicrosecondsPerInvocation="24"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="84" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4943" standardDeviationMicrosecondsPerInvocation="563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="156" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="2406" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="156" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="1118" standardDeviationMicrosecondsPerInvocation="232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="21" invocations="397" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="1375" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="156" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="8690" standardDeviationMicrosecondsPerInvocation="703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="84" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="1126" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="84" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="2893" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="156" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="4067" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="19" invocations="84" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="7289" standardDeviationMicrosecondsPerInvocation="977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="17" invocations="84" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="7513" standardDeviationMicrosecondsPerInvocation="824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadForLoop" totalMilliseconds="17" invocations="84" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="12048" standardDeviationMicrosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="84" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="5992" standardDeviationMicrosecondsPerInvocation="650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="156" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="1962" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="84" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="2933" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="14" invocations="84" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="2765" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="84" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="1658" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="13" invocations="397" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="866" standardDeviationMicrosecondsPerInvocation="63"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="13" invocations="84" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="2611" standardDeviationMicrosecondsPerInvocation="357"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

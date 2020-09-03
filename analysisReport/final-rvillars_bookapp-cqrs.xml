@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092716000" analysisTimestamp="1597092717525" release="">
+  <Project projectName="repositorios/rvillars_bookapp-cqrs">
+    <Jar>repositorios/rvillars_bookapp-cqrs</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.jpa.model.Book">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.model.Book" start="31" end="72" sourcefile="Book.java" sourcepath="ch/bfh/swos/bookapp/jpa/model/Book.java"/>
+    </Class>
+    <Field classname="ch.bfh.swos.bookapp.jpa.model.Book" name="author" signature="Lch/bfh/swos/bookapp/jpa/model/Author;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.model.Book" sourcefile="Book.java" sourcepath="ch/bfh/swos/bookapp/jpa/model/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="14" end="60" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+    </Class>
+    <Method classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" name="list" signature="()Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="34" end="34" startBytecode="0" endBytecode="58" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+    </Method>
+    <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="34" end="34" startBytecode="4" endBytecode="4" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="14" end="60" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+    </Class>
+    <Method classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" name="readByAuthorId" signature="(Ljava/lang/String;)Lch/bfh/swos/bookapp/jpa/model/Author;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="58" end="60" startBytecode="0" endBytecode="101" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+    </Method>
+    <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" start="58" end="58" startBytecode="4" endBytecode="4" sourcefile="JPAAuthorRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPAAuthorRepository.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="14" end="59" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+    </Class>
+    <Method classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" name="list" signature="()Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="34" end="34" startBytecode="0" endBytecode="58" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+    </Method>
+    <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="34" end="34" startBytecode="4" endBytecode="4" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+    <String value="Method: list. Fields with EAGER without Join Fetch: author, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="14" end="59" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+    </Class>
+    <Method classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" name="list" signature="()Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="34" end="34" startBytecode="0" endBytecode="58" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+    </Method>
+    <SourceLine classname="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" start="34" end="34" startBytecode="4" endBytecode="4" sourcefile="JPABookRepository.java" sourcepath="ch/bfh/swos/bookapp/jpa/repository/impl/JPABookRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.axonframework.commandhandling.gateway.CommandGateway</MissingClass>
+    <MissingClass>org.axonframework.domain.IdentifierFactory</MissingClass>
+    <MissingClass>org.axonframework.eventhandling.EventBus</MissingClass>
+    <MissingClass>org.axonframework.eventsourcing.annotation.AbstractAnnotatedAggregateRoot</MissingClass>
+    <MissingClass>org.axonframework.eventstore.EventVisitor</MissingClass>
+    <MissingClass>org.axonframework.eventstore.jpa.JpaEventStore</MissingClass>
+    <MissingClass>org.axonframework.repository.Repository</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.BeanPropertyRowMapper</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.JdbcTemplate</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.RowMapper</MissingClass>
+    <MissingClass>org.springframework.jdbc.core.support.JdbcDaoSupport</MissingClass>
+    <MissingClass>org.vertx.java.core.Handler</MissingClass>
+    <MissingClass>org.vertx.java.core.Vertx</MissingClass>
+    <MissingClass>org.vertx.java.core.VertxFactory</MissingClass>
+    <MissingClass>org.vertx.java.core.eventbus.EventBus</MissingClass>
+    <MissingClass>org.vertx.java.core.eventbus.Message</MissingClass>
+    <MissingClass>org.vertx.java.core.http.HttpServer</MissingClass>
+    <MissingClass>org.vertx.java.core.http.RouteMatcher</MissingClass>
+    <MissingClass>org.vertx.java.core.json.JsonArray</MissingClass>
+    <MissingClass>org.vertx.java.core.json.JsonObject</MissingClass>
+    <MissingClass>org.vertx.java.core.sockjs.SockJSServer</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:51:56 +0000" total_classes="45" referenced_classes="68" total_bugs="5" total_size="721" num_packages="21" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.29" clock_seconds="1.76" peak_mbytes="166.72" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="5">
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.author.application.command" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.application.command.AddAuthorCommand" sourceFile="AddAuthorCommand.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.application.command.RemoveAuthorCommand" sourceFile="RemoveAuthorCommand.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.author.application.handler" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.application.handler.AuthorCommandHandler" sourceFile="AuthorCommandHandler.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.author.domain" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.domain.Author" sourceFile="Author.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.author.domain.event" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.domain.event.AuthorAddedEvent" sourceFile="AuthorAddedEvent.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.domain.event.AuthorRemovedEvent" sourceFile="AuthorRemovedEvent.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.author.query" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.author.query.AuthorJPAEventListener" sourceFile="AuthorJPAEventListener.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.book.application.command" total_bugs="0" total_types="3" total_size="47">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.application.command.AddBookCommand" sourceFile="AddBookCommand.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.application.command.ChangeBookTitleCommand" sourceFile="ChangeBookTitleCommand.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.application.command.RemoveBookCommand" sourceFile="RemoveBookCommand.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.book.application.handler" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.application.handler.BookCommandHandler" sourceFile="BookCommandHandler.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.book.domain" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.domain.Book" sourceFile="Book.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.book.domain.event" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.domain.event.BookAddedEvent" sourceFile="BookAddedEvent.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.domain.event.BookRemovedEvent" sourceFile="BookRemovedEvent.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.domain.event.BookTitleChangedEvent" sourceFile="BookTitleChangedEvent.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.book.query" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.book.query.BookJPAEventListener" sourceFile="BookJPAEventListener.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.cqrs.common" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.common.EventStorePlayer" sourceFile="EventStorePlayer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.cqrs.common.EventStorePlayer$1" sourceFile="EventStorePlayer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.jpa.model" total_bugs="1" total_types="2" total_size="70" priority_2="1">
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.model.Author" sourceFile="Author.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.model.Book" sourceFile="Book.java" interface="false" size="35" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.jpa.repository" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.repository.AuthorRepository" sourceFile="AuthorRepository.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.repository.BookRepository" sourceFile="BookRepository.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.jpa.repository.impl" total_bugs="4" total_types="2" total_size="46" priority_2="4">
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.repository.impl.JPAAuthorRepository" sourceFile="JPAAuthorRepository.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="ch.bfh.swos.bookapp.jpa.repository.impl.JPABookRepository" sourceFile="JPABookRepository.java" interface="false" size="23" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.query.dto" total_bugs="0" total_types="2" total_size="51">
+      <ClassStats class="ch.bfh.swos.bookapp.query.dto.AuthorDTO" sourceFile="AuthorDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.query.dto.BookDTO" sourceFile="BookDTO.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.query.repository" total_bugs="0" total_types="2" total_size="6">
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.AuthorRepository" sourceFile="AuthorRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.BookRepository" sourceFile="BookRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.query.repository.impl" total_bugs="0" total_types="4" total_size="40">
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.impl.JdbcAuthorRepository" sourceFile="JdbcAuthorRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.impl.JdbcBookRepository" sourceFile="JdbcBookRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.impl.JdbcBookRepository$1" sourceFile="JdbcBookRepository.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.query.repository.impl.JdbcBookRepository$BookRowMapper" sourceFile="JdbcBookRepository.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.vertx" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.VertXBean" sourceFile="VertXBean.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.vertx.controller" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.controller.AuthorController" sourceFile="AuthorController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.controller.BookController" sourceFile="BookController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.controller.ReplayController" sourceFile="ReplayController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.vertx.handler" total_bugs="0" total_types="7" total_size="80">
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.AuthorCommandHandler" sourceFile="AuthorCommandHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.AuthorCommandHandler$1" sourceFile="AuthorCommandHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.AuthorCommandHandler$2" sourceFile="AuthorCommandHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.BookCommandHandler" sourceFile="BookCommandHandler.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.BookCommandHandler$1" sourceFile="BookCommandHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.BookCommandHandler$2" sourceFile="BookCommandHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.handler.BookCommandHandler$3" sourceFile="BookCommandHandler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.vertx.listener" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.listener.AuthorEventListener" sourceFile="AuthorEventListener.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.vertx.listener.BookEventListener" sourceFile="BookEventListener.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="178" invocations="504" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="14611" standardDeviationMicrosecondsPerInvocation="988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="68" avgMicrosecondsPerInvocation="813" maxMicrosecondsPerInvocation="9419" standardDeviationMicrosecondsPerInvocation="1694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="48" invocations="170" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="7849" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="515" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="2517" standardDeviationMicrosecondsPerInvocation="119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="43" invocations="164" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="3391" standardDeviationMicrosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="42" invocations="170" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="10233" standardDeviationMicrosecondsPerInvocation="796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="41" invocations="68" avgMicrosecondsPerInvocation="612" maxMicrosecondsPerInvocation="5398" standardDeviationMicrosecondsPerInvocation="1090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="40" invocations="170" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="8684" standardDeviationMicrosecondsPerInvocation="696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="38" invocations="45" avgMicrosecondsPerInvocation="864" maxMicrosecondsPerInvocation="4837" standardDeviationMicrosecondsPerInvocation="1263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="38" invocations="170" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="9480" standardDeviationMicrosecondsPerInvocation="743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="188" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="26066" standardDeviationMicrosecondsPerInvocation="1892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="32" invocations="170" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="1834" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="32" invocations="238" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="3767" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="138" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="13864" standardDeviationMicrosecondsPerInvocation="1201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="30" invocations="68" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="22116" standardDeviationMicrosecondsPerInvocation="2668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="424" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="998" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="68" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="3195" standardDeviationMicrosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="21" invocations="110" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="1182" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="68" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="4381" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="68" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="6166" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="68" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="2756" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="68" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="4485" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="68" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="1854" standardDeviationMicrosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="14" invocations="45" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="2910" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="13" invocations="1799" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="776" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="45" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="3039" standardDeviationMicrosecondsPerInvocation="452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="12" invocations="45" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="8076" standardDeviationMicrosecondsPerInvocation="1187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="11" invocations="45" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="5373" standardDeviationMicrosecondsPerInvocation="777"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

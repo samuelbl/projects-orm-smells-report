@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596944832000" analysisTimestamp="1596944834210" release="">
+  <Project projectName="repositorios/Aaaaaashu_Green">
+    <Jar>repositorios/Aaaaaashu_Green</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.green.dao.BaseDao">
+      <SourceLine classname="com.green.dao.BaseDao" start="26" end="202" sourcefile="BaseDao.java" sourcepath="com/green/dao/BaseDao.java"/>
+    </Class>
+    <Method classname="com.green.dao.BaseDao" name="removeSelect" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.green.dao.BaseDao" start="171" end="174" startBytecode="0" endBytecode="120" sourcefile="BaseDao.java" sourcepath="com/green/dao/BaseDao.java"/>
+    </Method>
+    <SourceLine classname="com.green.dao.BaseDao" start="172" end="172" startBytecode="8" endBytecode="8" sourcefile="BaseDao.java" sourcepath="com/green/dao/BaseDao.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.green.domain.LoginLog">
+      <SourceLine classname="com.green.domain.LoginLog" start="20" end="60" sourcefile="LoginLog.java" sourcepath="com/green/domain/LoginLog.java"/>
+    </Class>
+    <Field classname="com.green.domain.LoginLog" name="user" signature="Lcom/green/domain/User;" isStatic="false">
+      <SourceLine classname="com.green.domain.LoginLog" sourcefile="LoginLog.java" sourcepath="com/green/domain/LoginLog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.green.domain.Post">
+      <SourceLine classname="com.green.domain.Post" start="28" end="109" sourcefile="Post.java" sourcepath="com/green/domain/Post.java"/>
+    </Class>
+    <Field classname="com.green.domain.Post" name="topic" signature="Lcom/green/domain/Topic;" isStatic="false">
+      <SourceLine classname="com.green.domain.Post" sourcefile="Post.java" sourcepath="com/green/domain/Post.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.green.domain.Post">
+      <SourceLine classname="com.green.domain.Post" start="28" end="109" sourcefile="Post.java" sourcepath="com/green/domain/Post.java"/>
+    </Class>
+    <Field classname="com.green.domain.Post" name="user" signature="Lcom/green/domain/User;" isStatic="false">
+      <SourceLine classname="com.green.domain.Post" sourcefile="Post.java" sourcepath="com/green/domain/Post.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.green.domain.Topic">
+      <SourceLine classname="com.green.domain.Topic" start="22" end="142" sourcefile="Topic.java" sourcepath="com/green/domain/Topic.java"/>
+    </Class>
+    <Field classname="com.green.domain.Topic" name="user" signature="Lcom/green/domain/User;" isStatic="false">
+      <SourceLine classname="com.green.domain.Topic" sourcefile="Topic.java" sourcepath="com/green/domain/Topic.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.green.domain.User">
+      <SourceLine classname="com.green.domain.User" start="25" end="144" sourcefile="User.java" sourcepath="com/green/domain/User.java"/>
+    </Class>
+    <Field classname="com.green.domain.User" name="manBoards" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.green.domain.User" sourcefile="User.java" sourcepath="com/green/domain/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="15">
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.springframework.orm.hibernate3.HibernateTemplate</MissingClass>
+    <MissingClass>org.springframework.orm.hibernate3.SessionFactoryUtils</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:47:12 +0000" total_classes="26" referenced_classes="72" total_bugs="6" total_size="755" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.68" clock_seconds="1.86" peak_mbytes="194.00" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="5" priority_1="1">
+    <PackageStats package="com.green.cons" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.green.cons.CommonConstant" sourceFile="CommonConstant.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.green.dao" total_bugs="1" total_types="7" total_size="161" priority_2="1">
+      <ClassStats class="com.green.dao.BaseDao" sourceFile="BaseDao.java" interface="false" size="70" bugs="1" priority_2="1"/>
+      <ClassStats class="com.green.dao.BoardDao" sourceFile="BoardDao.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.green.dao.LoginLogDao" sourceFile="LoginLogDao.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.green.dao.Page" sourceFile="Page.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.green.dao.PostDao" sourceFile="PostDao.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.green.dao.TopicDao" sourceFile="TopicDao.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.green.dao.UserDao" sourceFile="UserDao.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.green.domain" total_bugs="5" total_types="7" total_size="246" priority_2="4" priority_1="1">
+      <ClassStats class="com.green.domain.BaseDomain" sourceFile="BaseDomain.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.green.domain.Board" sourceFile="Board.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.green.domain.LoginLog" sourceFile="LoginLog.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="com.green.domain.MainPost" sourceFile="MainPost.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.green.domain.Post" sourceFile="Post.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="com.green.domain.Topic" sourceFile="Topic.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="com.green.domain.User" sourceFile="User.java" interface="false" size="63" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.green.exception" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="com.green.exception.NotLoginException" sourceFile="NotLoginException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.green.exception.UserExistException" sourceFile="UserExistException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.green.service" total_bugs="0" total_types="2" total_size="131">
+      <ClassStats class="com.green.service.ForumService" sourceFile="ForumService.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.green.service.UserService" sourceFile="UserService.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.green.web" total_bugs="0" total_types="7" total_size="204">
+      <ClassStats class="com.green.web.BaseController" sourceFile="BaseController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.green.web.BoardManageController" sourceFile="BoardManageController.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.green.web.ForumFilter" sourceFile="ForumFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.green.web.ForumHandlerExceptionResolver" sourceFile="ForumHandlerExceptionResolver.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.green.web.ForumManageController" sourceFile="ForumManageController.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.green.web.LoginController" sourceFile="LoginController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.green.web.RegisterController" sourceFile="RegisterController.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="224" invocations="655" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="31413" standardDeviationMicrosecondsPerInvocation="1387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="72" avgMicrosecondsPerInvocation="932" maxMicrosecondsPerInvocation="11123" standardDeviationMicrosecondsPerInvocation="1861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="61" invocations="185" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="5518" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="59" invocations="185" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="5175" standardDeviationMicrosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="661" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="3698" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="52" invocations="362" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="2474" standardDeviationMicrosecondsPerInvocation="294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="48" invocations="185" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="7547" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="47" invocations="72" avgMicrosecondsPerInvocation="662" maxMicrosecondsPerInvocation="8384" standardDeviationMicrosecondsPerInvocation="1264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="46" invocations="187" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="9173" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="45" invocations="185" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="2190" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="44" invocations="185" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="7616" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="39" invocations="185" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="24367" standardDeviationMicrosecondsPerInvocation="1782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="567" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1498" standardDeviationMicrosecondsPerInvocation="132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="36" invocations="131" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="13439" standardDeviationMicrosecondsPerInvocation="1210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="30" invocations="72" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="7624" standardDeviationMicrosecondsPerInvocation="1003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="25" invocations="103" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="1333" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="72" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="8458" standardDeviationMicrosecondsPerInvocation="1018"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="72" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="3653" standardDeviationMicrosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="72" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="2034" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="72" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="1853" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="1590" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1107" standardDeviationMicrosecondsPerInvocation="37"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="185" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="1454" standardDeviationMicrosecondsPerInvocation="144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="72" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="5031" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="26" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="2416" standardDeviationMicrosecondsPerInvocation="528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="12" invocations="26" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="1698" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="7756" standardDeviationMicrosecondsPerInvocation="1471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="1600" standardDeviationMicrosecondsPerInvocation="484"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

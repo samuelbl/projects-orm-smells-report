@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595983789000" analysisTimestamp="1595983790375" release="">
+  <Project projectName="repositorios/karolgornicki_spitter">
+    <Jar>repositorios/karolgornicki_spitter</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.domain.Spitter">
+      <SourceLine classname="x.y.spitter.domain.Spitter" start="20" end="110" sourcefile="Spitter.java" sourcepath="x/y/spitter/domain/Spitter.java"/>
+    </Class>
+    <Field classname="x.y.spitter.domain.Spitter" name="followers" signature="Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="x.y.spitter.domain.Spitter" sourcefile="Spitter.java" sourcepath="x/y/spitter/domain/Spitter.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.domain.Spitter">
+      <SourceLine classname="x.y.spitter.domain.Spitter" start="20" end="110" sourcefile="Spitter.java" sourcepath="x/y/spitter/domain/Spitter.java"/>
+    </Class>
+    <Field classname="x.y.spitter.domain.Spitter" name="spittersIFollow" signature="Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="x.y.spitter.domain.Spitter" sourcefile="Spitter.java" sourcepath="x/y/spitter/domain/Spitter.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.domain.Spittle">
+      <SourceLine classname="x.y.spitter.domain.Spittle" start="15" end="49" sourcefile="Spittle.java" sourcepath="x/y/spitter/domain/Spittle.java"/>
+    </Class>
+    <Field classname="x.y.spitter.domain.Spittle" name="author" signature="Lx/y/spitter/domain/Spitter;" isStatic="false">
+      <SourceLine classname="x.y.spitter.domain.Spittle" sourcefile="Spittle.java" sourcepath="x/y/spitter/domain/Spittle.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="findSpitterByUserameOrEmail" signature="(Ljava/lang/String;)Lx/y/spitter/domain/Spitter;" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="57" end="64" startBytecode="0" endBytecode="177" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    <String value="Method: findSpitterByUserameOrEmail. Fields with EAGER without Join Fetch: spittersIFollow, followers, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="confirmUserDetails" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="253" end="261" startBytecode="0" endBytecode="195" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="253" end="253" startBytecode="4" endBytecode="4" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="countFollowers" signature="(Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="176" end="187" startBytecode="0" endBytecode="292" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="177" end="177" startBytecode="6" endBytecode="6" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="countFollowing" signature="(Ljava/lang/String;)I" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="195" end="206" startBytecode="0" endBytecode="292" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="196" end="196" startBytecode="6" endBytecode="6" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="deleteSpitter" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="299" end="305" startBytecode="0" endBytecode="166" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="300" end="300" startBytecode="6" endBytecode="6" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="findSpitterByUserameOrEmail" signature="(Ljava/lang/String;)Lx/y/spitter/domain/Spitter;" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="57" end="64" startBytecode="0" endBytecode="177" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="57" end="57" startBytecode="4" endBytecode="4" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="getAllUsers" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="284" end="292" startBytecode="0" endBytecode="257" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="285" end="285" startBytecode="12" endBytecode="12" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="getFollowers" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="153" end="168" startBytecode="0" endBytecode="415" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="155" end="155" startBytecode="16" endBytecode="16" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="getFollowing" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="131" end="145" startBytecode="0" endBytecode="415" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="133" end="133" startBytecode="16" endBytecode="16" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="isUsernameAvailable" signature="(Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="311" end="315" startBytecode="0" endBytecode="164" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="311" end="311" startBytecode="4" endBytecode="4" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="updateSpitter" signature="(Ljava/lang/String;Lx/y/spitter/util/EditSpitter;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="99" end="124" startBytecode="0" endBytecode="496" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="101" end="101" startBytecode="8" endBytecode="8" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="x.y.spitter.persistence.HibernateSpitterDao">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="32" end="315" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Class>
+    <Method classname="x.y.spitter.persistence.HibernateSpitterDao" name="updateSpitterPassword" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="268" end="277" startBytecode="0" endBytecode="233" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+    </Method>
+    <SourceLine classname="x.y.spitter.persistence.HibernateSpitterDao" start="268" end="268" startBytecode="4" endBytecode="4" sourcefile="HibernateSpitterDao.java" sourcepath="x/y/spitter/persistence/HibernateSpitterDao.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="28">
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.criterion.MatchMode</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactoryAware</MissingClass>
+    <MissingClass>org.springframework.mail.MailSender</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.Md5PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.encoding.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.GrantedAuthorityImpl</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.commons.CommonsMultipartFile</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 00:49:49 +0000" total_classes="23" referenced_classes="83" total_bugs="15" total_size="782" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.01" clock_seconds="2.91" peak_mbytes="196.00" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="13" priority_1="2">
+    <PackageStats package="x.y.spitter.controller" total_bugs="0" total_types="5" total_size="203">
+      <ClassStats class="x.y.spitter.controller.AccountController" sourceFile="AccountController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="x.y.spitter.controller.AdminController" sourceFile="AdminController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="x.y.spitter.controller.HomeController" sourceFile="HomeController.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="x.y.spitter.controller.SpitterController" sourceFile="SpitterController.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="x.y.spitter.controller.SpittleController" sourceFile="SpittleController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="x.y.spitter.domain" total_bugs="3" total_types="2" total_size="100" priority_2="1" priority_1="2">
+      <ClassStats class="x.y.spitter.domain.Spitter" sourceFile="Spitter.java" interface="false" size="72" bugs="2" priority_1="2"/>
+      <ClassStats class="x.y.spitter.domain.Spittle" sourceFile="Spittle.java" interface="false" size="28" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="x.y.spitter.persistence" total_bugs="12" total_types="2" total_size="180" priority_2="12">
+      <ClassStats class="x.y.spitter.persistence.HibernateSpitterDao" sourceFile="HibernateSpitterDao.java" interface="false" size="162" bugs="12" priority_2="12"/>
+      <ClassStats class="x.y.spitter.persistence.SpitterDao" sourceFile="SpitterDao.java" interface="true" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="x.y.spitter.service" total_bugs="0" total_types="6" total_size="151">
+      <ClassStats class="x.y.spitter.service.Assembler" sourceFile="Assembler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="x.y.spitter.service.SpitterService" sourceFile="SpitterService.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="x.y.spitter.service.SpitterServiceImpl" sourceFile="SpitterServiceImpl.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="x.y.spitter.service.SpittleService" sourceFile="SpittleService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="x.y.spitter.service.SpittleServiceImpl" sourceFile="SpittleServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="x.y.spitter.service.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="x.y.spitter.util" total_bugs="0" total_types="8" total_size="148">
+      <ClassStats class="x.y.spitter.util.EMailSender" sourceFile="EMailSender.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.EditSpitter" sourceFile="EditSpitter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.ImageAction" sourceFile="ImageAction.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.ImageUploadException" sourceFile="ImageUploadException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.SecurityRole" sourceFile="SecurityRole.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.ShortSpitter" sourceFile="ShortSpitter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.Tuple" sourceFile="Tuple.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="x.y.spitter.util.TupleComparator" sourceFile="TupleComparator.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="263" invocations="656" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="11097" standardDeviationMicrosecondsPerInvocation="1003"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="133" invocations="83" avgMicrosecondsPerInvocation="1603" maxMicrosecondsPerInvocation="23458" standardDeviationMicrosecondsPerInvocation="3819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="115" invocations="83" avgMicrosecondsPerInvocation="1393" maxMicrosecondsPerInvocation="17363" standardDeviationMicrosecondsPerInvocation="3052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="105" invocations="662" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="6201" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="95" invocations="187" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="70470" standardDeviationMicrosecondsPerInvocation="5142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="85" invocations="331" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="6765" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="80" invocations="150" avgMicrosecondsPerInvocation="536" maxMicrosecondsPerInvocation="6825" standardDeviationMicrosecondsPerInvocation="1083"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="80" invocations="151" avgMicrosecondsPerInvocation="531" maxMicrosecondsPerInvocation="16631" standardDeviationMicrosecondsPerInvocation="1563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteSuppressedWarnings" totalMilliseconds="78" invocations="83" avgMicrosecondsPerInvocation="942" maxMicrosecondsPerInvocation="46207" standardDeviationMicrosecondsPerInvocation="5415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="72" invocations="158" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="21040" standardDeviationMicrosecondsPerInvocation="1728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="71" invocations="151" avgMicrosecondsPerInvocation="472" maxMicrosecondsPerInvocation="11656" standardDeviationMicrosecondsPerInvocation="1314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="68" invocations="151" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="22983" standardDeviationMicrosecondsPerInvocation="2012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="62" invocations="158" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="20762" standardDeviationMicrosecondsPerInvocation="1710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="59" invocations="83" avgMicrosecondsPerInvocation="712" maxMicrosecondsPerInvocation="22892" standardDeviationMicrosecondsPerInvocation="2762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="49" invocations="139" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="14172" standardDeviationMicrosecondsPerInvocation="1360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="562" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="1859" standardDeviationMicrosecondsPerInvocation="148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="41" invocations="89" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="8879" standardDeviationMicrosecondsPerInvocation="1175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="83" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="5365" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="35" invocations="83" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="6526" standardDeviationMicrosecondsPerInvocation="992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="32" invocations="151" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="8596" standardDeviationMicrosecondsPerInvocation="967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="83" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="4546" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="23" avgMicrosecondsPerInvocation="1299" maxMicrosecondsPerInvocation="17343" standardDeviationMicrosecondsPerInvocation="4217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="83" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="9158" standardDeviationMicrosecondsPerInvocation="1176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="27" invocations="83" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="8852" standardDeviationMicrosecondsPerInvocation="1470"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

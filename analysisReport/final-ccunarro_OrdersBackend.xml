@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597091167000" analysisTimestamp="1597091168385" release="">
+  <Project projectName="repositorios/ccunarro_OrdersBackend">
+    <Jar>repositorios/ccunarro_OrdersBackend</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.dao.AbstractDAO">
+      <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="17" end="70" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+    </Class>
+    <Method classname="uy.com.orders.dao.AbstractDAO" name="findObject" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="48" end="48" startBytecode="0" endBytecode="111" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+    </Method>
+    <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="48" end="48" startBytecode="11" endBytecode="11" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.dao.AbstractDAO">
+      <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="17" end="70" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+    </Class>
+    <Method classname="uy.com.orders.dao.AbstractDAO" name="listObjects" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="70" end="70" startBytecode="0" endBytecode="96" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+    </Method>
+    <SourceLine classname="uy.com.orders.dao.AbstractDAO" start="70" end="70" startBytecode="11" endBytecode="11" sourcefile="AbstractDAO.java" sourcepath="uy/com/orders/dao/AbstractDAO.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.dao.SaleOrderDAOImpl">
+      <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="21" end="59" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+    </Class>
+    <Method classname="uy.com.orders.dao.SaleOrderDAOImpl" name="findObject" signature="(Ljava/lang/String;)Luy/com/orders/model/SaleOrder;" isStatic="false">
+      <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="59" end="59" startBytecode="0" endBytecode="71" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+    <String value="Method: findObject. Fields with EAGER without Join Fetch: customer, lines, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.dao.SaleOrderDAOImpl">
+      <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="21" end="59" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+    </Class>
+    <Method classname="uy.com.orders.dao.SaleOrderDAOImpl" name="findObject" signature="(Ljava/lang/String;)Luy/com/orders/model/SaleOrder;" isStatic="false">
+      <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="59" end="59" startBytecode="0" endBytecode="71" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+    </Method>
+    <SourceLine classname="uy.com.orders.dao.SaleOrderDAOImpl" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="SaleOrderDAOImpl.java" sourcepath="uy/com/orders/dao/SaleOrderDAOImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.model.LineOrder">
+      <SourceLine classname="uy.com.orders.model.LineOrder" start="20" end="60" sourcefile="LineOrder.java" sourcepath="uy/com/orders/model/LineOrder.java"/>
+    </Class>
+    <Field classname="uy.com.orders.model.LineOrder" name="product" signature="Luy/com/orders/model/Product;" isStatic="false">
+      <SourceLine classname="uy.com.orders.model.LineOrder" sourcefile="LineOrder.java" sourcepath="uy/com/orders/model/LineOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.model.SaleOrder">
+      <SourceLine classname="uy.com.orders.model.SaleOrder" start="25" end="77" sourcefile="SaleOrder.java" sourcepath="uy/com/orders/model/SaleOrder.java"/>
+    </Class>
+    <Field classname="uy.com.orders.model.SaleOrder" name="lines" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="uy.com.orders.model.SaleOrder" sourcefile="SaleOrder.java" sourcepath="uy/com/orders/model/SaleOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="uy.com.orders.model.SaleOrder">
+      <SourceLine classname="uy.com.orders.model.SaleOrder" start="25" end="77" sourcefile="SaleOrder.java" sourcepath="uy/com/orders/model/SaleOrder.java"/>
+    </Class>
+    <Field classname="uy.com.orders.model.SaleOrder" name="customer" signature="Luy/com/orders/model/Customer;" isStatic="false">
+      <SourceLine classname="uy.com.orders.model.SaleOrder" sourcefile="SaleOrder.java" sourcepath="uy/com/orders/model/SaleOrder.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="1" missingClasses="5">
+    <Error>
+      <ErrorMessage>Exception analyzing uy.com.orders.dao.AbstractDAO using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:26:07 +0000" total_classes="24" referenced_classes="65" total_bugs="7" total_size="413" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.77" clock_seconds="1.62" peak_mbytes="192.94" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="6" priority_1="1">
+    <PackageStats package="uy.com.orders.controller" total_bugs="0" total_types="3" total_size="39">
+      <ClassStats class="uy.com.orders.controller.CustomerRestController" sourceFile="CustomerRestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="uy.com.orders.controller.ProductRestController" sourceFile="ProductRestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="uy.com.orders.controller.SaleOrderRestController" sourceFile="SaleOrderRestController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uy.com.orders.dao" total_bugs="4" total_types="8" total_size="77" priority_2="4">
+      <ClassStats class="uy.com.orders.dao.AbstractDAO" sourceFile="AbstractDAO.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="uy.com.orders.dao.CustomerDAO" sourceFile="CustomerDAO.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.CustomerDAOImpl" sourceFile="CustomerDAOImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.Dao" sourceFile="Dao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.ProductDAO" sourceFile="ProductDAO.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.ProductDAOImpl" sourceFile="ProductDAOImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.SaleOrderDAO" sourceFile="SaleOrderDAO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uy.com.orders.dao.SaleOrderDAOImpl" sourceFile="SaleOrderDAOImpl.java" interface="false" size="29" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="uy.com.orders.model" total_bugs="3" total_types="4" total_size="160" priority_2="2" priority_1="1">
+      <ClassStats class="uy.com.orders.model.Customer" sourceFile="Customer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="uy.com.orders.model.LineOrder" sourceFile="LineOrder.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="uy.com.orders.model.Product" sourceFile="Product.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="uy.com.orders.model.SaleOrder" sourceFile="SaleOrder.java" interface="false" size="29" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="uy.com.orders.service" total_bugs="0" total_types="9" total_size="137">
+      <ClassStats class="uy.com.orders.service.CreditLimitBusinessException" sourceFile="CreditLimitBusinessException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.CustomerService" sourceFile="CustomerService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.CustomerServiceImpl" sourceFile="CustomerServiceImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.ProductService" sourceFile="ProductService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.SaleOrderService" sourceFile="SaleOrderService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.SaleOrderServiceImpl" sourceFile="SaleOrderServiceImpl.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.Service" sourceFile="Service.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="uy.com.orders.service.StockBusinessException" sourceFile="StockBusinessException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="192" invocations="546" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="12760" standardDeviationMicrosecondsPerInvocation="843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="72" invocations="65" avgMicrosecondsPerInvocation="1108" maxMicrosecondsPerInvocation="10764" standardDeviationMicrosecondsPerInvocation="2212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="60" invocations="281" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="3214" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="51" invocations="65" avgMicrosecondsPerInvocation="796" maxMicrosecondsPerInvocation="7921" standardDeviationMicrosecondsPerInvocation="1566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="550" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="795" standardDeviationMicrosecondsPerInvocation="58"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="43" invocations="115" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="6701" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="40" invocations="115" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="6311" standardDeviationMicrosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="39" invocations="115" avgMicrosecondsPerInvocation="347" maxMicrosecondsPerInvocation="9184" standardDeviationMicrosecondsPerInvocation="982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="39" invocations="65" avgMicrosecondsPerInvocation="612" maxMicrosecondsPerInvocation="24773" standardDeviationMicrosecondsPerInvocation="3052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="478" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="1674" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="37" invocations="115" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="9601" standardDeviationMicrosecondsPerInvocation="1039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="32" invocations="108" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="3715" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="101" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="12840" standardDeviationMicrosecondsPerInvocation="1309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="125" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="22990" standardDeviationMicrosecondsPerInvocation="2042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="29" invocations="115" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="9093" standardDeviationMicrosecondsPerInvocation="855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="65" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="7000" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="65" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="4507" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="19" invocations="66" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="3316" standardDeviationMicrosecondsPerInvocation="558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="65" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="7558" standardDeviationMicrosecondsPerInvocation="966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="65" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="2373" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="65" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="4905" standardDeviationMicrosecondsPerInvocation="631"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

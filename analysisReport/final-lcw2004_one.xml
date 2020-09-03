@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596952548000" analysisTimestamp="1596952549957" release="">
+  <Project projectName="repositorios/lcw2004_one">
+    <Jar>repositorios/lcw2004_one</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.msg.entity.MsgAnnounceEO">
+      <SourceLine classname="com.lcw.one.msg.entity.MsgAnnounceEO" start="18" end="196" sourcefile="MsgAnnounceEO.java" sourcepath="com/lcw/one/msg/entity/MsgAnnounceEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.msg.entity.MsgAnnounceEO" name="createUser" signature="Lcom/lcw/one/user/entity/UserInfoEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.msg.entity.MsgAnnounceEO" sourcefile="MsgAnnounceEO.java" sourcepath="com/lcw/one/msg/entity/MsgAnnounceEO.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.msg.entity.MsgTemplateEO">
+      <SourceLine classname="com.lcw.one.msg.entity.MsgTemplateEO" start="13" end="109" sourcefile="MsgTemplateEO.java" sourcepath="com/lcw/one/msg/entity/MsgTemplateEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.msg.entity.MsgTemplateEO" name="msgType" signature="Lcom/lcw/one/msg/entity/MsgTypeEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.msg.entity.MsgTemplateEO" sourcefile="MsgTemplateEO.java" sourcepath="com/lcw/one/msg/entity/MsgTemplateEO.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.sys.dao.SysConfigEODao">
+      <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="21" end="45" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.sys.dao.SysConfigEODao" name="list" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="40" end="40" startBytecode="0" endBytecode="66" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="40" end="40" startBytecode="1" endBytecode="1" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.sys.dao.SysConfigEODao">
+      <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="21" end="45" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.sys.dao.SysConfigEODao" name="page" signature="(Lcom/lcw/one/util/http/PageInfo;Ljava/lang/String;Ljava/lang/String;)Lcom/lcw/one/util/http/PageInfo;" isStatic="false">
+      <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="25" end="36" startBytecode="0" endBytecode="300" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.sys.dao.SysConfigEODao" start="27" end="27" startBytecode="20" endBytecode="20" sourcefile="SysConfigEODao.java" sourcepath="com/lcw/one/sys/dao/SysConfigEODao.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.sys.entity.SysLogEO">
+      <SourceLine classname="com.lcw.one.sys.entity.SysLogEO" start="16" end="256" sourcefile="SysLogEO.java" sourcepath="com/lcw/one/sys/entity/SysLogEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.sys.entity.SysLogEO" name="userInfo" signature="Lcom/lcw/one/user/entity/UserInfoEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.sys.entity.SysLogEO" sourcefile="SysLogEO.java" sourcepath="com/lcw/one/sys/entity/SysLogEO.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.util.persistence.BaseRepositoryImpl">
+      <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="23" end="195" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.lcw.one.util.persistence.BaseRepositoryImpl" name="findAllWithoutDeleted" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="110" end="110" startBytecode="0" endBytecode="100" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="110" end="110" startBytecode="8" endBytecode="8" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.util.persistence.BaseRepositoryImpl">
+      <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="23" end="195" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+    </Class>
+    <Method classname="com.lcw.one.util.persistence.BaseRepositoryImpl" name="saveTreeEntity" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="43" end="64" startBytecode="0" endBytecode="466" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.util.persistence.BaseRepositoryImpl" start="56" end="56" startBytecode="97" endBytecode="97" sourcefile="BaseRepositoryImpl.java" sourcepath="com/lcw/one/util/persistence/BaseRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.util.persistence.RepositoryUtils">
+      <SourceLine classname="com.lcw.one.util.persistence.RepositoryUtils" start="19" end="100" sourcefile="RepositoryUtils.java" sourcepath="com/lcw/one/util/persistence/RepositoryUtils.java"/>
+    </Class>
+    <Method classname="com.lcw.one.util.persistence.RepositoryUtils" name="buildCountHQL" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.lcw.one.util.persistence.RepositoryUtils" start="77" end="91" startBytecode="0" endBytecode="299" sourcefile="RepositoryUtils.java" sourcepath="com/lcw/one/util/persistence/RepositoryUtils.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.util.persistence.RepositoryUtils" start="78" end="78" startBytecode="12" endBytecode="12" sourcefile="RepositoryUtils.java" sourcepath="com/lcw/one/util/persistence/RepositoryUtils.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.util.service.TreeEntityService">
+      <SourceLine classname="com.lcw.one.util.service.TreeEntityService" start="13" end="92" sourcefile="TreeEntityService.java" sourcepath="com/lcw/one/util/service/TreeEntityService.java"/>
+    </Class>
+    <Method classname="com.lcw.one.util.service.TreeEntityService" name="listByParentId" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lcw.one.util.service.TreeEntityService" start="55" end="55" startBytecode="0" endBytecode="120" sourcefile="TreeEntityService.java" sourcepath="com/lcw/one/util/service/TreeEntityService.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.util.service.TreeEntityService" start="55" end="55" startBytecode="11" endBytecode="11" sourcefile="TreeEntityService.java" sourcepath="com/lcw/one/util/service/TreeEntityService.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.dao.FlowInfoEODao">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowInfoEODao" start="23" end="52" sourcefile="FlowInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowInfoEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.workflow.dao.FlowInfoEODao" name="page" signature="(Lcom/lcw/one/util/http/PageInfo;Ljava/lang/String;)Lcom/lcw/one/util/http/PageInfo;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowInfoEODao" start="43" end="52" startBytecode="0" endBytecode="235" sourcefile="FlowInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowInfoEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.workflow.dao.FlowInfoEODao" start="45" end="45" startBytecode="18" endBytecode="18" sourcefile="FlowInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowInfoEODao.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="17" end="38" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" name="getFlowTaskInfoEO" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/lcw/one/workflow/entity/FlowTaskInfoEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="21" end="21" startBytecode="0" endBytecode="83" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="21" end="21" startBytecode="1" endBytecode="1" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    <String value="Method: getFlowTaskInfoEO. Fields with EAGER without Join Fetch: bindRole, bindOffice, bindUser, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="17" end="38" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" name="listFlowTaskInfoEOByProcessKey" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="25" end="25" startBytecode="0" endBytecode="66" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="25" end="25" startBytecode="1" endBytecode="1" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    <String value="Method: listFlowTaskInfoEOByProcessKey. Fields with EAGER without Join Fetch: bindRole, bindOffice, bindUser, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="17" end="38" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" name="getFlowTaskInfoEO" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/lcw/one/workflow/entity/FlowTaskInfoEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="21" end="21" startBytecode="0" endBytecode="83" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="21" end="21" startBytecode="1" endBytecode="1" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="17" end="38" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Class>
+    <Method classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" name="listFlowTaskInfoEOByProcessKey" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="25" end="25" startBytecode="0" endBytecode="66" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+    </Method>
+    <SourceLine classname="com.lcw.one.workflow.dao.FlowTaskInfoEODao" start="25" end="25" startBytecode="1" endBytecode="1" sourcefile="FlowTaskInfoEODao.java" sourcepath="com/lcw/one/workflow/dao/FlowTaskInfoEODao.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.entity.FlowTaskInfoEO">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" start="18" end="204" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" name="bindOffice" signature="Lcom/lcw/one/sys/entity/SysOfficeEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.entity.FlowTaskInfoEO">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" start="18" end="204" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" name="bindRole" signature="Lcom/lcw/one/sys/entity/SysRoleEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.lcw.one.workflow.entity.FlowTaskInfoEO">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" start="18" end="204" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Class>
+    <Field classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" name="bindUser" signature="Lcom/lcw/one/user/entity/UserInfoEO;" isStatic="false">
+      <SourceLine classname="com.lcw.one.workflow.entity.FlowTaskInfoEO" sourcefile="FlowTaskInfoEO.java" sourcepath="com/lcw/one/workflow/entity/FlowTaskInfoEO.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="12" missingClasses="242">
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.baseInfo.entity.BaseTemplateEO using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.baseInfo.entity.BaseTemplateEO using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.workflow.entity.FlowAuditLogEO using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.workflow.entity.FlowAuditLogEO using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.sys.entity.SysOfficeEO using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.sys.entity.SysOfficeEO using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.user.entity.UserManagerEO using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.user.entity.UserManagerEO using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.user.entity.UserInfoEO using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.user.entity.UserInfoEO using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.util.persistence.BaseRepositoryImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.lcw.one.util.service.TreeEntityService using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.alibaba.druid.pool.DruidDataSource</MissingClass>
+    <MissingClass>com.aliyun.oss.OSSClient</MissingClass>
+    <MissingClass>com.aliyun.oss.model.OSSObject</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonAutoDetect$Visibility</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonInclude$Include</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.PropertyAccessor</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper$DefaultTyping</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.cache.RedisCacheStorager</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.model.Button</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.model.WeixinAccount</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.mp.api.MenuApi</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.mp.api.OauthApi</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.mp.model.OauthToken</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.mp.token.WeixinTokenCreator</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.token.TokenManager</MissingClass>
+    <MissingClass>com.foxinmy.weixin4j.type.ButtonType</MissingClass>
+    <MissingClass>com.google.common.base.CaseFormat</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>com.google.common.collect.Maps</MissingClass>
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.google.gson.GsonBuilder</MissingClass>
+    <MissingClass>com.google.gson.TypeAdapter</MissingClass>
+    <MissingClass>com.google.gson.reflect.TypeToken</MissingClass>
+    <MissingClass>io.swagger.annotations.ApiOperation</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>javax.validation.Path</MissingClass>
+    <MissingClass>javax.websocket.server.HandshakeRequest</MissingClass>
+    <MissingClass>javax.websocket.server.ServerEndpointConfig</MissingClass>
+    <MissingClass>javax.websocket.server.ServerEndpointConfig$Configurator</MissingClass>
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>org.activiti.engine.ActivitiException</MissingClass>
+    <MissingClass>org.activiti.engine.HistoryService</MissingClass>
+    <MissingClass>org.activiti.engine.IdentityService</MissingClass>
+    <MissingClass>org.activiti.engine.ManagementService</MissingClass>
+    <MissingClass>org.activiti.engine.ProcessEngine</MissingClass>
+    <MissingClass>org.activiti.engine.ProcessEngineConfiguration</MissingClass>
+    <MissingClass>org.activiti.engine.ProcessEngines</MissingClass>
+    <MissingClass>org.activiti.engine.RepositoryService</MissingClass>
+    <MissingClass>org.activiti.engine.RuntimeService</MissingClass>
+    <MissingClass>org.activiti.engine.TaskService</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.DelegateExecution</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.JavaDelegate</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.event.ActivitiEvent</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.event.ActivitiEventListener</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.event.ActivitiEventType</MissingClass>
+    <MissingClass>org.activiti.engine.delegate.event.impl.ActivitiEntityEventImpl</MissingClass>
+    <MissingClass>org.activiti.engine.history.HistoricProcessInstance</MissingClass>
+    <MissingClass>org.activiti.engine.history.HistoricProcessInstanceQuery</MissingClass>
+    <MissingClass>org.activiti.engine.history.HistoricTaskInstance</MissingClass>
+    <MissingClass>org.activiti.engine.history.HistoricTaskInstanceQuery</MissingClass>
+    <MissingClass>org.activiti.engine.impl.ProcessEngineImpl</MissingClass>
+    <MissingClass>org.activiti.engine.impl.RepositoryServiceImpl</MissingClass>
+    <MissingClass>org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl</MissingClass>
+    <MissingClass>org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration</MissingClass>
+    <MissingClass>org.activiti.engine.impl.persistence.entity.ExecutionEntity</MissingClass>
+    <MissingClass>org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity</MissingClass>
+    <MissingClass>org.activiti.engine.impl.persistence.entity.TaskEntity</MissingClass>
+    <MissingClass>org.activiti.engine.impl.pvm.process.ActivityImpl</MissingClass>
+    <MissingClass>org.activiti.engine.repository.Deployment</MissingClass>
+    <MissingClass>org.activiti.engine.repository.DeploymentBuilder</MissingClass>
+    <MissingClass>org.activiti.engine.repository.ProcessDefinition</MissingClass>
+    <MissingClass>org.activiti.engine.repository.ProcessDefinitionQuery</MissingClass>
+    <MissingClass>org.activiti.engine.runtime.ProcessInstance</MissingClass>
+    <MissingClass>org.activiti.engine.runtime.ProcessInstanceQuery</MissingClass>
+    <MissingClass>org.activiti.engine.task.NativeTaskQuery</MissingClass>
+    <MissingClass>org.activiti.engine.task.Task</MissingClass>
+    <MissingClass>org.activiti.engine.task.TaskQuery</MissingClass>
+    <MissingClass>org.activiti.image.ProcessDiagramGenerator</MissingClass>
+    <MissingClass>org.activiti.spring.SpringExpressionManager</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Hex</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.FilenameUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.RandomUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.http.Header</MissingClass>
+    <MissingClass>org.apache.http.HeaderElement</MissingClass>
+    <MissingClass>org.apache.http.HttpEntity</MissingClass>
+    <MissingClass>org.apache.http.StatusLine</MissingClass>
+    <MissingClass>org.apache.http.client.config.RequestConfig</MissingClass>
+    <MissingClass>org.apache.http.client.config.RequestConfig$Builder</MissingClass>
+    <MissingClass>org.apache.http.client.entity.UrlEncodedFormEntity</MissingClass>
+    <MissingClass>org.apache.http.client.methods.CloseableHttpResponse</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpGet</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPost</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpRequestBase</MissingClass>
+    <MissingClass>org.apache.http.entity.StringEntity</MissingClass>
+    <MissingClass>org.apache.http.impl.client.CloseableHttpClient</MissingClass>
+    <MissingClass>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClientBuilder</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClients</MissingClass>
+    <MissingClass>org.apache.http.message.BasicHeader</MissingClass>
+    <MissingClass>org.apache.http.message.BasicNameValuePair</MissingClass>
+    <MissingClass>org.apache.http.util.EntityUtils</MissingClass>
+    <MissingClass>org.apache.maven.model.Model</MissingClass>
+    <MissingClass>org.apache.maven.model.io.xpp3.MavenXpp3Reader</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFWorkbook</MissingClass>
+    <MissingClass>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Cell</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.CellStyle</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.CellType</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.DataValidationHelper</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.DateUtil</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Row</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Sheet</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Workbook</MissingClass>
+    <MissingClass>org.apache.poi.ss.util.CellRangeAddress</MissingClass>
+    <MissingClass>org.apache.poi.ss.util.CellRangeAddressList</MissingClass>
+    <MissingClass>org.apache.poi.xssf.streaming.SXSSFSheet</MissingClass>
+    <MissingClass>org.apache.poi.xssf.streaming.SXSSFWorkbook</MissingClass>
+    <MissingClass>org.apache.poi.xssf.usermodel.XSSFWorkbook</MissingClass>
+    <MissingClass>org.apache.shiro.SecurityUtils</MissingClass>
+    <MissingClass>org.apache.shiro.UnavailableSecurityManagerException</MissingClass>
+    <MissingClass>org.apache.shiro.authc.AuthenticationException</MissingClass>
+    <MissingClass>org.apache.shiro.authc.AuthenticationToken</MissingClass>
+    <MissingClass>org.apache.shiro.authc.SimpleAuthenticationInfo</MissingClass>
+    <MissingClass>org.apache.shiro.authc.UsernamePasswordToken</MissingClass>
+    <MissingClass>org.apache.shiro.authc.credential.HashedCredentialsMatcher</MissingClass>
+    <MissingClass>org.apache.shiro.authz.SimpleAuthorizationInfo</MissingClass>
+    <MissingClass>org.apache.shiro.cache.ehcache.EhCacheManager</MissingClass>
+    <MissingClass>org.apache.shiro.mgt.SecurityManager</MissingClass>
+    <MissingClass>org.apache.shiro.realm.AuthorizingRealm</MissingClass>
+    <MissingClass>org.apache.shiro.session.InvalidSessionException</MissingClass>
+    <MissingClass>org.apache.shiro.session.Session</MissingClass>
+    <MissingClass>org.apache.shiro.spring.LifecycleBeanPostProcessor</MissingClass>
+    <MissingClass>org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor</MissingClass>
+    <MissingClass>org.apache.shiro.spring.web.ShiroFilterFactoryBean</MissingClass>
+    <MissingClass>org.apache.shiro.subject.Subject</MissingClass>
+    <MissingClass>org.apache.shiro.util.ByteSource$Util</MissingClass>
+    <MissingClass>org.apache.shiro.util.ThreadContext</MissingClass>
+    <MissingClass>org.apache.shiro.web.filter.authc.FormAuthenticationFilter</MissingClass>
+    <MissingClass>org.apache.shiro.web.filter.mgt.DefaultFilterChainManager</MissingClass>
+    <MissingClass>org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver</MissingClass>
+    <MissingClass>org.apache.shiro.web.mgt.DefaultWebSecurityManager</MissingClass>
+    <MissingClass>org.apache.shiro.web.servlet.AbstractShiroFilter</MissingClass>
+    <MissingClass>org.apache.shiro.web.subject.WebSubject$Builder</MissingClass>
+    <MissingClass>org.apache.shiro.web.util.WebUtils</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.beetl.core.Configuration</MissingClass>
+    <MissingClass>org.beetl.core.GroupTemplate</MissingClass>
+    <MissingClass>org.beetl.core.Template</MissingClass>
+    <MissingClass>org.beetl.core.resource.ClasspathResourceLoader</MissingClass>
+    <MissingClass>org.beetl.core.resource.StringTemplateResourceLoader</MissingClass>
+    <MissingClass>org.codehaus.plexus.util.xml.pull.XmlPullParserException</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.FilterRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.MultipartConfigFactory</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.EnvironmentAware</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaEntityInformation</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaEntityInformationSupport</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaRepositoryFactory</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.SimpleJpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheConfiguration</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheManager</MissingClass>
+    <MissingClass>org.springframework.data.redis.cache.RedisCacheManager$RedisCacheManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.RedisTemplate</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.SetOperations</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.StringRedisTemplate</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.ValueOperations</MissingClass>
+    <MissingClass>org.springframework.data.redis.listener.ChannelTopic</MissingClass>
+    <MissingClass>org.springframework.data.redis.listener.RedisMessageListenerContainer</MissingClass>
+    <MissingClass>org.springframework.data.redis.listener.adapter.MessageListenerAdapter</MissingClass>
+    <MissingClass>org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer</MissingClass>
+    <MissingClass>org.springframework.data.redis.serializer.RedisSerializationContext$SerializationPair</MissingClass>
+    <MissingClass>org.springframework.data.redis.serializer.StringRedisSerializer</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.RepositoryInformation</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.Jackson2ObjectMapperBuilder</MissingClass>
+    <MissingClass>org.springframework.http.server.ServerHttpRequest</MissingClass>
+    <MissingClass>org.springframework.http.server.ServletServerHttpRequest</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.messaging.MessageChannel</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessageHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessageType</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessagingTemplate</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.MessageBrokerRegistry</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompCommand</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.messaging.support.ChannelInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.context.request.RequestContextHolder</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodArgumentResolver</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartException</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.socket.WebSocketSession</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.SockJsServiceRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompEndpointRegistry</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompWebSocketEndpointRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.WebSocketTransportRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.handler.WebSocketHandlerDecorator</MissingClass>
+    <MissingClass>org.springframework.web.socket.handler.WebSocketHandlerDecoratorFactory</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:55:48 +0000" total_classes="448" referenced_classes="601" total_bugs="17" total_size="14421" num_packages="122" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="29.62" clock_seconds="8.52" peak_mbytes="637.40" alloc_mbytes="3540.00" gc_seconds="0.27" priority_2="17">
+    <PackageStats package="com.lcw.one.base.advice" total_bugs="0" total_types="4" total_size="50">
+      <ClassStats class="com.lcw.one.base.advice.MultipartExceptionAdvice" sourceFile="MultipartExceptionAdvice.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.advice.NotValidExceptionAdvice" sourceFile="NotValidExceptionAdvice.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.advice.OneBaseExceptionAdvice" sourceFile="OneBaseExceptionAdvice.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.advice.ShiroExceptionAdvice" sourceFile="ShiroExceptionAdvice.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.base.aop" total_bugs="0" total_types="2" total_size="45">
+      <ClassStats class="com.lcw.one.base.aop.CurrentUserMethodArgumentResolver" sourceFile="CurrentUserMethodArgumentResolver.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.aop.WebInfoAspect" sourceFile="WebInfoAspect.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.base.config" total_bugs="0" total_types="7" total_size="179">
+      <ClassStats class="com.lcw.one.base.config.DatabaseConfig" sourceFile="DatabaseConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.GlobalConfig" sourceFile="GlobalConfig.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.GlobalConfigInitializer" sourceFile="GlobalConfigInitializer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.OneMainStartup" sourceFile="OneMainStartup.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.OneWebConfig" sourceFile="OneWebConfig.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.RedisConfig" sourceFile="RedisConfig.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.base.service" total_bugs="0" total_types="3" total_size="71">
+      <ClassStats class="com.lcw.one.base.service.SysInitDao" sourceFile="SysInitDao.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.service.SysInitService" sourceFile="SysInitService.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.service.VerifyCodeService" sourceFile="VerifyCodeService.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.base.utils" total_bugs="0" total_types="3" total_size="173">
+      <ClassStats class="com.lcw.one.base.utils.DictUtils" sourceFile="DictUtils.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.utils.LoginUserUtils" sourceFile="LoginUserUtils.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.lcw.one.base.utils.OneLinkUtils" sourceFile="OneLinkUtils.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.baseInfo.constant" total_bugs="0" total_types="1" total_size="41">
+      <ClassStats class="com.lcw.one.baseInfo.constant.CodeSettingEnum" sourceFile="CodeSettingEnum.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.baseInfo.entity" total_bugs="0" total_types="2" total_size="65">
+      <ClassStats class="com.lcw.one.baseInfo.entity.BaseTemplateEO" sourceFile="BaseTemplateEO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lcw.one.baseInfo.entity.BaseTemplateTypeEO" sourceFile="BaseTemplateTypeEO.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.codegen.OneCodeGenApplication" sourceFile="OneCodeGenApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.bean" total_bugs="0" total_types="7" total_size="322">
+      <ClassStats class="com.lcw.one.codegen.bean.CodeBean" sourceFile="CodeBean.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.CodeGenStrategy" sourceFile="CodeGenStrategy.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.ModuleBean" sourceFile="ModuleBean.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.TableFieldGen" sourceFile="TableFieldGen.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.TableFieldMetaInfo" sourceFile="TableFieldMetaInfo.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.TableGen" sourceFile="TableGen.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.TableMetaInfo" sourceFile="TableMetaInfo.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.bean.consts" total_bugs="0" total_types="2" total_size="80">
+      <ClassStats class="com.lcw.one.codegen.bean.consts.CodeTypeEnum" sourceFile="CodeTypeEnum.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.bean.consts.SqlOperationEnum" sourceFile="SqlOperationEnum.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.form" total_bugs="0" total_types="2" total_size="58">
+      <ClassStats class="com.lcw.one.codegen.core.form.FormTemplateBuilder" sourceFile="FormTemplateBuilder.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.IFormTemplate" sourceFile="IFormTemplate.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.form.impl" total_bugs="0" total_types="11" total_size="121">
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.CheckboxFormTemplate" sourceFile="CheckboxFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.DateFormTemplate" sourceFile="DateFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.DateTimeFormTemplate" sourceFile="DateTimeFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.EditorFormTemplate" sourceFile="EditorFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.FileUploadFormTemplate" sourceFile="FileUploadFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.InputFormTemplate" sourceFile="InputFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.OfficeFormTemplate" sourceFile="OfficeFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.RadioFormTemplate" sourceFile="RadioFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.SelectFormTemplate" sourceFile="SelectFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.TextAreaFormTemplate" sourceFile="TextAreaFormTemplate.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.form.impl.UserFormTemplate" sourceFile="UserFormTemplate.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.generate" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.lcw.one.codegen.core.generate.CodeGeneratorFactory" sourceFile="CodeGeneratorFactory.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.IGenerator" sourceFile="IGenerator.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.generate.impl" total_bugs="0" total_types="8" total_size="207">
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.BeanGenerator" sourceFile="BeanGenerator.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.ControllerGenerator" sourceFile="ControllerGenerator.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.DaoGenerator" sourceFile="DaoGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.ServiceGenerator" sourceFile="ServiceGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.VueEditGenerator" sourceFile="VueEditGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.VueListGenerator" sourceFile="VueListGenerator.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.VueModalGenerator" sourceFile="VueModalGenerator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.core.generate.impl.VueViewGenerator" sourceFile="VueViewGenerator.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.template" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.lcw.one.codegen.core.template.IFillTemplate" sourceFile="IFillTemplate.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.core.template.impl" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.lcw.one.codegen.core.template.impl.BeeTlTemplateImpl" sourceFile="BeeTlTemplateImpl.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.dao" total_bugs="0" total_types="3" total_size="83">
+      <ClassStats class="com.lcw.one.codegen.dao.CodeGenTableEODao" sourceFile="CodeGenTableEODao.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.dao.CodeGenTableFieldEODao" sourceFile="CodeGenTableFieldEODao.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.dao.TableMetaInfoDao" sourceFile="TableMetaInfoDao.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.entity" total_bugs="0" total_types="3" total_size="219">
+      <ClassStats class="com.lcw.one.codegen.entity.CodeGenTableEO" sourceFile="CodeGenTableEO.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.entity.CodeGenTableFieldEO" sourceFile="CodeGenTableFieldEO.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.entity.CodeGenTableFieldEOPK" sourceFile="CodeGenTableFieldEOPK.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.rest" total_bugs="0" total_types="3" total_size="34">
+      <ClassStats class="com.lcw.one.codegen.rest.CodeGenTableEORestController" sourceFile="CodeGenTableEORestController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.rest.CodeGenTableFieldEORestController" sourceFile="CodeGenTableFieldEORestController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.rest.TableMetaInfoRestController" sourceFile="TableMetaInfoRestController.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.service" total_bugs="0" total_types="5" total_size="153">
+      <ClassStats class="com.lcw.one.codegen.service.CodeGenTableEOService" sourceFile="CodeGenTableEOService.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.service.CodeGenTableFieldEOService" sourceFile="CodeGenTableFieldEOService.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.service.CodeGenerateService" sourceFile="CodeGenerateService.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.service.OnePomService" sourceFile="OnePomService.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.service.TableMetaInfoService" sourceFile="TableMetaInfoService.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.codegen.util" total_bugs="0" total_types="6" total_size="141">
+      <ClassStats class="com.lcw.one.codegen.util.CodeGenUtil" sourceFile="CodeGenUtil.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.util.JavaFieldTypeDefaultValueMapper" sourceFile="JavaFieldTypeDefaultValueMapper.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.util.JavaFieldTypeValueOfMapper" sourceFile="JavaFieldTypeValueOfMapper.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.util.JdbcFieldTypeMapper" sourceFile="JdbcFieldTypeMapper.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.util.NameUtils" sourceFile="NameUtils.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.codegen.util.PomUtils" sourceFile="PomUtils.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.db" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.db.OneDbInitApplication" sourceFile="OneDbInitApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.file.OneFileServerApplication" sourceFile="OneFileServerApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.bean.constant" total_bugs="0" total_types="3" total_size="52">
+      <ClassStats class="com.lcw.one.file.bean.constant.FilePermissionTypeEnum" sourceFile="FilePermissionTypeEnum.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.bean.constant.FileStoreType" sourceFile="FileStoreType.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.bean.constant.FileStoreTypeEnum" sourceFile="FileStoreTypeEnum.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.dao" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.lcw.one.file.dao.SysFileEODao" sourceFile="SysFileEODao.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.job" total_bugs="0" total_types="1" total_size="53">
+      <ClassStats class="com.lcw.one.file.job.SysFileJob" sourceFile="SysFileJob.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.rest" total_bugs="0" total_types="3" total_size="81">
+      <ClassStats class="com.lcw.one.file.rest.KindEditorRestController" sourceFile="KindEditorRestController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.rest.SysFileDownloadRestController" sourceFile="SysFileDownloadRestController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.rest.SysFileUploadRestController" sourceFile="SysFileUploadRestController.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.service" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="com.lcw.one.file.service.SysFileEOService" sourceFile="SysFileEOService.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.store" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.lcw.one.file.store.FileStoreFactory" sourceFile="FileStoreFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.store.IFileStore" sourceFile="IFileStore.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.file.store.impl" total_bugs="0" total_types="2" total_size="103">
+      <ClassStats class="com.lcw.one.file.store.impl.AliyunOSSStoreImpl" sourceFile="AliyunOSSStoreImpl.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lcw.one.file.store.impl.LocalFileStoreImpl" sourceFile="LocalFileStoreImpl.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.config" total_bugs="0" total_types="1" total_size="63">
+      <ClassStats class="com.lcw.one.login.config.ShiroConfiguration" sourceFile="ShiroConfiguration.java" interface="false" size="63" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.rest" total_bugs="0" total_types="3" total_size="140">
+      <ClassStats class="com.lcw.one.login.rest.AccountRestController" sourceFile="AccountRestController.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.rest.LoginRestController" sourceFile="LoginRestController.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.rest.UserRestController" sourceFile="UserRestController.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.security" total_bugs="0" total_types="5" total_size="134">
+      <ClassStats class="com.lcw.one.login.security.OneFormAuthenticationFilter" sourceFile="OneFormAuthenticationFilter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.OneUsernamePasswordToken" sourceFile="OneUsernamePasswordToken.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.ShiroSubjectUtils" sourceFile="ShiroSubjectUtils.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.SystemAuthorizingRealm" sourceFile="SystemAuthorizingRealm.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.SystemAuthorizingRealm$Principal" sourceFile="SystemAuthorizingRealm.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.security.exception" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.lcw.one.login.security.exception.CaptchaException" sourceFile="CaptchaException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.security.filterChain" total_bugs="0" total_types="3" total_size="57">
+      <ClassStats class="com.lcw.one.login.security.filterChain.AbstractFilterChainDefinitionsService" sourceFile="AbstractFilterChainDefinitionsService.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.filterChain.IFilterChainDefinitionsService" sourceFile="IFilterChainDefinitionsService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.filterChain.SimpleFilterChainDefinitionsService" sourceFile="SimpleFilterChainDefinitionsService.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.security.validatecode" total_bugs="0" total_types="3" total_size="75">
+      <ClassStats class="com.lcw.one.login.security.validatecode.IVerifyCodeGen" sourceFile="IVerifyCodeGen.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.validatecode.SimpleCharVerifyCodeGenImpl" sourceFile="SimpleCharVerifyCodeGenImpl.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.security.validatecode.VerifyCode" sourceFile="VerifyCode.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.service" total_bugs="0" total_types="3" total_size="57">
+      <ClassStats class="com.lcw.one.login.service.CommonLoginService" sourceFile="CommonLoginService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.service.WebLoginService" sourceFile="WebLoginService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.service.WeixinLoginService" sourceFile="WeixinLoginService.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.util" total_bugs="0" total_types="2" total_size="168">
+      <ClassStats class="com.lcw.one.login.util.UserUtils" sourceFile="UserUtils.java" interface="false" size="145" bugs="0"/>
+      <ClassStats class="com.lcw.one.login.util.UserUtils$CacheUtils" sourceFile="UserUtils.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.login.utils" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="com.lcw.one.login.utils.UserUtilService" sourceFile="UserUtilService.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.main" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.main.OneMainApplication" sourceFile="OneMainApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.main.aop" total_bugs="0" total_types="1" total_size="74">
+      <ClassStats class="com.lcw.one.main.aop.WebLogAspect" sourceFile="WebLogAspect.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.main.rest" total_bugs="0" total_types="1" total_size="38">
+      <ClassStats class="com.lcw.one.main.rest.InitRestController" sourceFile="InitRestController.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.msg.OneMsgApplication" sourceFile="OneMsgApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.bean" total_bugs="0" total_types="2" total_size="53">
+      <ClassStats class="com.lcw.one.msg.bean.MsgMessageStatusEnum" sourceFile="MsgMessageStatusEnum.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.bean.MsgMessageVO" sourceFile="MsgMessageVO.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.constant" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="com.lcw.one.msg.constant.MsgAnnounceStatusEnum" sourceFile="MsgAnnounceStatusEnum.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.dao" total_bugs="0" total_types="8" total_size="109">
+      <ClassStats class="com.lcw.one.msg.dao.MsgAnnounceEODao" sourceFile="MsgAnnounceEODao.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgChannelEODao" sourceFile="MsgChannelEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgMessageEODao" sourceFile="MsgMessageEODao.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgMessageUserEODao" sourceFile="MsgMessageUserEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgTemplateChannelEODao" sourceFile="MsgTemplateChannelEODao.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgTemplateEODao" sourceFile="MsgTemplateEODao.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgTemplateWeixinEODao" sourceFile="MsgTemplateWeixinEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.dao.MsgTypeEODao" sourceFile="MsgTypeEODao.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.entity" total_bugs="2" total_types="10" total_size="321" priority_2="2">
+      <ClassStats class="com.lcw.one.msg.entity.MsgAnnounceEO" sourceFile="MsgAnnounceEO.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgChannelEO" sourceFile="MsgChannelEO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgMessageEO" sourceFile="MsgMessageEO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgMessageUserEO" sourceFile="MsgMessageUserEO.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgMessageUserEOPK" sourceFile="MsgMessageUserEOPK.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgTemplateChannelEO" sourceFile="MsgTemplateChannelEO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgTemplateChannelEOPK" sourceFile="MsgTemplateChannelEOPK.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgTemplateEO" sourceFile="MsgTemplateEO.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgTemplateWeixinEO" sourceFile="MsgTemplateWeixinEO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.entity.MsgTypeEO" sourceFile="MsgTypeEO.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.rest" total_bugs="0" total_types="4" total_size="101">
+      <ClassStats class="com.lcw.one.msg.rest.MsgAnnounceEORestController" sourceFile="MsgAnnounceEORestController.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.rest.MsgMessageEORestController" sourceFile="MsgMessageEORestController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.rest.MsgTemplateEORestController" sourceFile="MsgTemplateEORestController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.rest.MsgTemplateWeixinEORestController" sourceFile="MsgTemplateWeixinEORestController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.msg.service" total_bugs="0" total_types="8" total_size="149">
+      <ClassStats class="com.lcw.one.msg.service.MsgAnnounceEOService" sourceFile="MsgAnnounceEOService.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgChannelEOService" sourceFile="MsgChannelEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgMessageEOService" sourceFile="MsgMessageEOService.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgMessageUserEOService" sourceFile="MsgMessageUserEOService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgTemplateChannelEOService" sourceFile="MsgTemplateChannelEOService.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgTemplateEOService" sourceFile="MsgTemplateEOService.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgTemplateWeixinEOService" sourceFile="MsgTemplateWeixinEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.msg.service.MsgTypeEOService" sourceFile="MsgTypeEOService.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.notify.OneNotifyApplication" sourceFile="OneNotifyApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.bean" total_bugs="0" total_types="2" total_size="90">
+      <ClassStats class="com.lcw.one.notify.bean.MessageBean" sourceFile="MessageBean.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.bean.MessageTargetTypeEnum" sourceFile="MessageTargetTypeEnum.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.channel.base" total_bugs="0" total_types="3" total_size="92">
+      <ClassStats class="com.lcw.one.notify.channel.base.EmailService" sourceFile="EmailService.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.channel.base.SmsService" sourceFile="SmsService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.channel.base.WebSocketService" sourceFile="WebSocketService.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.channel.sms" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.lcw.one.notify.channel.sms.ISmSSender" sourceFile="ISmSSender.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.channel.sms.impl" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.lcw.one.notify.channel.sms.impl.EmptySmsSender" sourceFile="EmptySmsSender.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.channel.system.dao" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.lcw.one.notify.channel.system.dao.UserContactInfoDao" sourceFile="UserContactInfoDao.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.channel.websocket" total_bugs="0" total_types="4" total_size="111">
+      <ClassStats class="com.lcw.one.notify.channel.websocket.HandShakeInterceptor" sourceFile="HandShakeInterceptor.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.channel.websocket.OneChannelInterceptor" sourceFile="OneChannelInterceptor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.channel.websocket.OneWebSocketHandlerDecorator" sourceFile="OneWebSocketHandlerDecorator.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.channel.websocket.SocketSessionRegistry" sourceFile="SocketSessionRegistry.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.config" total_bugs="0" total_types="4" total_size="60">
+      <ClassStats class="com.lcw.one.notify.config.GetHttpSessionConfigurator" sourceFile="GetHttpSessionConfigurator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.config.NotifyConfiguration" sourceFile="NotifyConfiguration.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.config.WebSocketConfiguration" sourceFile="WebSocketConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.config.WebSocketConfiguration$1" sourceFile="WebSocketConfiguration.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.rest" total_bugs="0" total_types="2" total_size="52">
+      <ClassStats class="com.lcw.one.notify.rest.MsgSenderRestController" sourceFile="MsgSenderRestController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.rest.WSBrokerRestController" sourceFile="WSBrokerRestController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.sender" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.lcw.one.notify.sender.IMessageSender" sourceFile="IMessageSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.sender.IMessageSenderFactory" sourceFile="IMessageSenderFactory.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.sender.impl" total_bugs="0" total_types="4" total_size="63">
+      <ClassStats class="com.lcw.one.notify.sender.impl.EmailMessageSender" sourceFile="EmailMessageSender.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.sender.impl.SmsMessageSender" sourceFile="SmsMessageSender.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.sender.impl.SystemMessageSender" sourceFile="SystemMessageSender.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lcw.one.notify.sender.impl.WeixinMessageSender" sourceFile="WeixinMessageSender.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.service" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.lcw.one.notify.service.IMessageSenderService" sourceFile="IMessageSenderService.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.service.impl" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="com.lcw.one.notify.service.impl.SimpleMessageSenderServiceImpl" sourceFile="SimpleMessageSenderServiceImpl.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.notify.utils" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="com.lcw.one.notify.utils.MessageUtils" sourceFile="MessageUtils.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.redis.OneRedisApplication" sourceFile="OneRedisApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.bean" total_bugs="0" total_types="1" total_size="49">
+      <ClassStats class="com.lcw.one.redis.bean.EventBean" sourceFile="EventBean.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.bean.constant" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="com.lcw.one.redis.bean.constant.EventStatusEnum" sourceFile="EventStatusEnum.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.config" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.lcw.one.redis.config.RedisEventConfiguration" sourceFile="RedisEventConfiguration.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.controller" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.lcw.one.redis.controller.EventSenderController" sourceFile="EventSenderController.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.dao" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.lcw.one.redis.dao.SysEventEODao" sourceFile="SysEventEODao.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.event.hanlder" total_bugs="0" total_types="4" total_size="43">
+      <ClassStats class="com.lcw.one.redis.event.hanlder.BaseEventHandler" sourceFile="BaseEventHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lcw.one.redis.event.hanlder.EventHandler" sourceFile="EventHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lcw.one.redis.event.hanlder.EventHandlerFactory" sourceFile="EventHandlerFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.redis.event.hanlder.EventHandlerRegistry" sourceFile="EventHandlerRegistry.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.event.receiver" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="com.lcw.one.redis.event.receiver.EventReceiver" sourceFile="EventReceiver.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.redis.service" total_bugs="0" total_types="2" total_size="48">
+      <ClassStats class="com.lcw.one.redis.service.EventService" sourceFile="EventService.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lcw.one.redis.service.SysEventEOService" sourceFile="SysEventEOService.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.sys.OneSysApplication" sourceFile="OneSysApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.bean" total_bugs="0" total_types="2" total_size="99">
+      <ClassStats class="com.lcw.one.sys.bean.SysFileVO" sourceFile="SysFileVO.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.bean.SysLogQueryCondition" sourceFile="SysLogQueryCondition.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.constant" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.lcw.one.sys.constant.SysDefaultRoleEnum" sourceFile="SysDefaultRoleEnum.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.dao" total_bugs="2" total_types="18" total_size="232" priority_2="2">
+      <ClassStats class="com.lcw.one.sys.dao.BaseTemplateEODao" sourceFile="BaseTemplateEODao.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.BaseTemplateTypeEODao" sourceFile="BaseTemplateTypeEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysAreaEODao" sourceFile="SysAreaEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysConfigEODao" sourceFile="SysConfigEODao.java" interface="false" size="20" bugs="2" priority_2="2"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysConfigTypeEODao" sourceFile="SysConfigTypeEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysDictDataEODao" sourceFile="SysDictDataEODao.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysDictEODao" sourceFile="SysDictEODao.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysHomeComponentEODao" sourceFile="SysHomeComponentEODao.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysLogEODao" sourceFile="SysLogEODao.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysMenuEODao" sourceFile="SysMenuEODao.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysOfficeEODao" sourceFile="SysOfficeEODao.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysOrgRoleEODao" sourceFile="SysOrgRoleEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysRoleComponentEODao" sourceFile="SysRoleComponentEODao.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysRoleEODao" sourceFile="SysRoleEODao.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysRoleMenuEODao" sourceFile="SysRoleMenuEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysScheduleEODao" sourceFile="SysScheduleEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysScheduleLogEODao" sourceFile="SysScheduleLogEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.dao.SysUserRoleEODao" sourceFile="SysUserRoleEODao.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.entity" total_bugs="1" total_types="24" total_size="1008" priority_2="1">
+      <ClassStats class="com.lcw.one.sys.entity.SysAreaEO" sourceFile="SysAreaEO.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysConfigEO" sourceFile="SysConfigEO.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysConfigTypeEO" sourceFile="SysConfigTypeEO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysDictDataEO" sourceFile="SysDictDataEO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysDictEO" sourceFile="SysDictEO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysEventEO" sourceFile="SysEventEO.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysFileEO" sourceFile="SysFileEO.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysFileSimpleEO" sourceFile="SysFileSimpleEO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysHomeComponentEO" sourceFile="SysHomeComponentEO.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysLogEO" sourceFile="SysLogEO.java" interface="false" size="99" bugs="1" priority_2="1"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysMenuEO" sourceFile="SysMenuEO.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysOfficeEO" sourceFile="SysOfficeEO.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysOrgRoleEO" sourceFile="SysOrgRoleEO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysOrgRoleEOPK" sourceFile="SysOrgRoleEOPK.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysRoleComponentEO" sourceFile="SysRoleComponentEO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysRoleComponentEOPK" sourceFile="SysRoleComponentEOPK.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysRoleEO" sourceFile="SysRoleEO.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysRoleMenuEO" sourceFile="SysRoleMenuEO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysRoleMenuEOPK" sourceFile="SysRoleMenuEOPK.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysScheduleEO" sourceFile="SysScheduleEO.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysScheduleLogEO" sourceFile="SysScheduleLogEO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysUserRoleEO" sourceFile="SysUserRoleEO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SysUserRoleEOPK" sourceFile="SysUserRoleEOPK.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.entity.SystemInfo" sourceFile="SystemInfo.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.rest" total_bugs="0" total_types="13" total_size="207">
+      <ClassStats class="com.lcw.one.sys.rest.BaseTemplateEORestController" sourceFile="BaseTemplateEORestController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.BaseTemplateTypeEORestController" sourceFile="BaseTemplateTypeEORestController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysAreaEORestController" sourceFile="SysAreaEORestController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysConfigEORestController" sourceFile="SysConfigEORestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysDictDataEORestController" sourceFile="SysDictDataEORestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysDictEORestController" sourceFile="SysDictEORestController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysHomeComponentEORestController" sourceFile="SysHomeComponentEORestController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysLogEORestController" sourceFile="SysLogEORestController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysMenuEORestController" sourceFile="SysMenuEORestController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysOfficeEORestController" sourceFile="SysOfficeEORestController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysRoleEORestController" sourceFile="SysRoleEORestController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysScheduleEORestController" sourceFile="SysScheduleEORestController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.rest.SysScheduleLogEORestController" sourceFile="SysScheduleLogEORestController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.service" total_bugs="0" total_types="19" total_size="313">
+      <ClassStats class="com.lcw.one.sys.service.BaseTemplateEOService" sourceFile="BaseTemplateEOService.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.BaseTemplateTypeEOService" sourceFile="BaseTemplateTypeEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysAreaEOService" sourceFile="SysAreaEOService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysConfigEOService" sourceFile="SysConfigEOService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysConfigTypeEOService" sourceFile="SysConfigTypeEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysDictDataEOService" sourceFile="SysDictDataEOService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysDictEOService" sourceFile="SysDictEOService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysHomeComponentEOService" sourceFile="SysHomeComponentEOService.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysLogEOService" sourceFile="SysLogEOService.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysMenuEOService" sourceFile="SysMenuEOService.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysOfficeEOService" sourceFile="SysOfficeEOService.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysOfficeEOService$1" sourceFile="SysOfficeEOService.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysOrgRoleEOService" sourceFile="SysOrgRoleEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysRoleComponentEOService" sourceFile="SysRoleComponentEOService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysRoleEOService" sourceFile="SysRoleEOService.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysRoleMenuEOService" sourceFile="SysRoleMenuEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysScheduleEOService" sourceFile="SysScheduleEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysScheduleLogEOService" sourceFile="SysScheduleLogEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.sys.service.SysUserRoleEOService" sourceFile="SysUserRoleEOService.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.sys.utils" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.lcw.one.sys.utils.SysAreaUtils" sourceFile="SysAreaUtils.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.user.OneUserApplication" sourceFile="OneUserApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.bean" total_bugs="0" total_types="2" total_size="109">
+      <ClassStats class="com.lcw.one.user.bean.ManageUserQueryCondition" sourceFile="ManageUserQueryCondition.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.bean.UserQueryCondition" sourceFile="UserQueryCondition.java" interface="false" size="85" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.bean.vo" total_bugs="0" total_types="5" total_size="235">
+      <ClassStats class="com.lcw.one.user.bean.vo.ExcelImportBean" sourceFile="ExcelImportBean.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.bean.vo.ExcelImportFailDataBean" sourceFile="ExcelImportFailDataBean.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.bean.vo.ExpertUserVO" sourceFile="ExpertUserVO.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.bean.vo.ManageUserVO" sourceFile="ManageUserVO.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.bean.vo.UserImportVO" sourceFile="UserImportVO.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.constant" total_bugs="0" total_types="4" total_size="122">
+      <ClassStats class="com.lcw.one.user.constant.AuditStatusEnum" sourceFile="AuditStatusEnum.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.constant.UserInfoStatusEnum" sourceFile="UserInfoStatusEnum.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.constant.UserInfoTypeEnum" sourceFile="UserInfoTypeEnum.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.constant.VerifyCodeTypeEnum" sourceFile="VerifyCodeTypeEnum.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.dao" total_bugs="0" total_types="7" total_size="100">
+      <ClassStats class="com.lcw.one.user.dao.DictUserOperateEODao" sourceFile="DictUserOperateEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserBaseInfoEODao" sourceFile="UserBaseInfoEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserContactInfoEODao" sourceFile="UserContactInfoEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserEducationInfoEODao" sourceFile="UserEducationInfoEODao.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserInfoEODao" sourceFile="UserInfoEODao.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserManagerEODao" sourceFile="UserManagerEODao.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.dao.UserOperationLogEODao" sourceFile="UserOperationLogEODao.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.entity" total_bugs="0" total_types="7" total_size="484">
+      <ClassStats class="com.lcw.one.user.entity.DictUserOperateEO" sourceFile="DictUserOperateEO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserBaseInfoEO" sourceFile="UserBaseInfoEO.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserContactInfoEO" sourceFile="UserContactInfoEO.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserEducationInfoEO" sourceFile="UserEducationInfoEO.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserInfoEO" sourceFile="UserInfoEO.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserManagerEO" sourceFile="UserManagerEO.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.entity.UserOperationLogEO" sourceFile="UserOperationLogEO.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.rest" total_bugs="0" total_types="2" total_size="52">
+      <ClassStats class="com.lcw.one.user.rest.UserManagerEORestController" sourceFile="UserManagerEORestController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.rest.UserOperationLogEORestController" sourceFile="UserOperationLogEORestController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.user.service" total_bugs="0" total_types="9" total_size="370">
+      <ClassStats class="com.lcw.one.user.service.DictUserOperateEOService" sourceFile="DictUserOperateEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserBaseInfoEOService" sourceFile="UserBaseInfoEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserContactInfoEOService" sourceFile="UserContactInfoEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserEducationInfoEOService" sourceFile="UserEducationInfoEOService.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserImportService" sourceFile="UserImportService.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserInfoEOService" sourceFile="UserInfoEOService.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserManagerEOService" sourceFile="UserManagerEOService.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserManagerImportService" sourceFile="UserManagerImportService.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.lcw.one.user.service.UserOperationLogEOService" sourceFile="UserOperationLogEOService.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.annotation" total_bugs="0" total_types="4" total_size="10">
+      <ClassStats class="com.lcw.one.util.annotation.CurrentUser" sourceFile="CurrentUser.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.annotation.ExcelField" sourceFile="ExcelField.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.annotation.ExcelIndex" sourceFile="ExcelIndex.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.annotation.RequireUser" sourceFile="RequireUser.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.bean" total_bugs="0" total_types="3" total_size="125">
+      <ClassStats class="com.lcw.one.util.bean.LoginUser" sourceFile="LoginUser.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.bean.SysDict" sourceFile="SysDict.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.bean.TimeRange" sourceFile="TimeRange.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.constant" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.lcw.one.util.constant.DeleteFlagEnum" sourceFile="DeleteFlagEnum.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.constant.YesOrNoEnum" sourceFile="YesOrNoEnum.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.echart" total_bugs="0" total_types="3" total_size="78">
+      <ClassStats class="com.lcw.one.util.echart.EChart" sourceFile="EChart.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.echart.EChatData" sourceFile="EChatData.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.echart.LineSeries" sourceFile="LineSeries.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.excel" total_bugs="0" total_types="7" total_size="518">
+      <ClassStats class="com.lcw.one.util.excel.ExcelDictCache" sourceFile="ExcelDictCache.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.ExcelExporter" sourceFile="ExcelExporter.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.ExcelImporter" sourceFile="ExcelImporter.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.ExcelTemplateExporter" sourceFile="ExcelTemplateExporter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.ExcelUtils" sourceFile="ExcelUtils.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.POIUtils" sourceFile="POIUtils.java" interface="false" size="196" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.POIUtils$1" sourceFile="POIUtils.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.excel.rule" total_bugs="0" total_types="2" total_size="137">
+      <ClassStats class="com.lcw.one.util.excel.rule.ExcelClassRule" sourceFile="ExcelClassRule.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.rule.ExcelFieldRule" sourceFile="ExcelFieldRule.java" interface="false" size="85" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.excel.style" total_bugs="0" total_types="5" total_size="129">
+      <ClassStats class="com.lcw.one.util.excel.style.ExcelCellStyleEnum" sourceFile="ExcelCellStyleEnum.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.style.ExcelStyleTemplate" sourceFile="ExcelStyleTemplate.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.style.ExcelStyleTemplateParser" sourceFile="ExcelStyleTemplateParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.style.IExcelStyle" sourceFile="IExcelStyle.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.excel.style.TemplateExcelStyle" sourceFile="TemplateExcelStyle.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.exception" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.lcw.one.util.exception.LoginInvalidException" sourceFile="LoginInvalidException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.exception.OneBaseException" sourceFile="OneBaseException.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.filter" total_bugs="0" total_types="5" total_size="121">
+      <ClassStats class="com.lcw.one.util.filter.AddExpiresHeaderResponse" sourceFile="AddExpiresHeaderResponse.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.filter.CorsFilter" sourceFile="CorsFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.filter.HttpCacheFilter" sourceFile="HttpCacheFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.filter.OverWriteJSessionIdFilter" sourceFile="OverWriteJSessionIdFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.filter.RequestInfoFilter" sourceFile="RequestInfoFilter.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.http" total_bugs="0" total_types="5" total_size="176">
+      <ClassStats class="com.lcw.one.util.http.PageInfo" sourceFile="PageInfo.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.http.ResponseMessage" sourceFile="ResponseMessage.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.http.ResponseMessageCodeEnum" sourceFile="ResponseMessageCodeEnum.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.http.Result" sourceFile="Result.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.http.Settings" sourceFile="Settings.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.http.bean" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="com.lcw.one.util.http.bean.BaseQueryCondition" sourceFile="BaseQueryCondition.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.http.bean.ValidError" sourceFile="ValidError.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.persistence" total_bugs="3" total_types="7" total_size="259" priority_2="3">
+      <ClassStats class="com.lcw.one.util.persistence.BaseRepositoryFactory" sourceFile="BaseRepositoryFactory.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.BaseRepositoryFactoryBean" sourceFile="BaseRepositoryFactoryBean.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.BaseRepositoryImpl" sourceFile="BaseRepositoryImpl.java" interface="false" size="105" bugs="2" priority_2="2"/>
+      <ClassStats class="com.lcw.one.util.persistence.DataScopeEnum" sourceFile="DataScopeEnum.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.DataScopeUtils" sourceFile="DataScopeUtils.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.IBaseRepository" sourceFile="IBaseRepository.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.RepositoryUtils" sourceFile="RepositoryUtils.java" interface="false" size="58" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.persistence.entity" total_bugs="0" total_types="2" total_size="95">
+      <ClassStats class="com.lcw.one.util.persistence.entity.TreeEntity" sourceFile="TreeEntity.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.persistence.entity.TreeEntityUtil" sourceFile="TreeEntityUtil.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.service" total_bugs="1" total_types="2" total_size="112" priority_2="1">
+      <ClassStats class="com.lcw.one.util.service.CrudService" sourceFile="CrudService.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.service.TreeEntityService" sourceFile="TreeEntityService.java" interface="false" size="55" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.utils" total_bugs="0" total_types="27" total_size="1380">
+      <ClassStats class="com.lcw.one.util.utils.AspectHelper" sourceFile="AspectHelper.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.BaseTemplateUtils" sourceFile="BaseTemplateUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.BeetlUtils" sourceFile="BeetlUtils.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.CollectionUtils" sourceFile="CollectionUtils.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.DataSourceUtils" sourceFile="DataSourceUtils.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.DateUtils" sourceFile="DateUtils.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.Exceptions" sourceFile="Exceptions.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.FileUtil" sourceFile="FileUtil.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.GsonType" sourceFile="GsonType.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.GsonType$1" sourceFile="GsonType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.GsonType$2" sourceFile="GsonType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.GsonType$3" sourceFile="GsonType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.GsonUtil" sourceFile="GsonUtil.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.IOUtils" sourceFile="IOUtils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.ImageUtils" sourceFile="ImageUtils.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.MathUtils" sourceFile="MathUtils.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.NumberUtils" sourceFile="NumberUtils.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.ObjectUtils" sourceFile="ObjectUtils.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.PersistenceUtils" sourceFile="PersistenceUtils.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.RandomUtils" sourceFile="RandomUtils.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.RedisUtil" sourceFile="RedisUtil.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.Reflections" sourceFile="Reflections.java" interface="false" size="204" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.RequestUtils" sourceFile="RequestUtils.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.SpringContextHolder" sourceFile="SpringContextHolder.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.StringUtils" sourceFile="StringUtils.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.SwaggerUtils" sourceFile="SwaggerUtils.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.UUID" sourceFile="UUID.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.utils.cipher" total_bugs="0" total_types="2" total_size="89">
+      <ClassStats class="com.lcw.one.util.utils.cipher.DigestUtils" sourceFile="DigestUtils.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.cipher.Encodes" sourceFile="Encodes.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.utils.cipher.password" total_bugs="0" total_types="4" total_size="41">
+      <ClassStats class="com.lcw.one.util.utils.cipher.password.IPassWordUtil" sourceFile="IPassWordUtil.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.cipher.password.MD5PasswordUtil" sourceFile="MD5PasswordUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.cipher.password.PasswordUtils" sourceFile="PasswordUtils.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.cipher.password.SHA1PasswordUtil" sourceFile="SHA1PasswordUtil.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.util.utils.http" total_bugs="0" total_types="5" total_size="551">
+      <ClassStats class="com.lcw.one.util.utils.http.CookieUtils" sourceFile="CookieUtils.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.http.HttpClientWrapper" sourceFile="HttpClientWrapper.java" interface="false" size="201" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.http.HttpUtils" sourceFile="HttpUtils.java" interface="false" size="230" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.http.HttpUtilsTest" sourceFile="HttpUtilsTest.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.util.utils.http.ResponseContent" sourceFile="ResponseContent.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.weixin" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.lcw.one.weixin.OneWeixinApplication" sourceFile="OneWeixinApplication.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.weixin.config" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.lcw.one.weixin.config.WeixinConfiguration" sourceFile="WeixinConfiguration.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.weixin.rest" total_bugs="0" total_types="5" total_size="141">
+      <ClassStats class="com.lcw.one.weixin.rest.WeixinAuthController" sourceFile="WeixinAuthController.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.lcw.one.weixin.rest.WeixinCallbackController" sourceFile="WeixinCallbackController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.lcw.one.weixin.rest.WeixinInitRestController" sourceFile="WeixinInitRestController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.lcw.one.weixin.rest.WeixinTestController" sourceFile="WeixinTestController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.lcw.one.weixin.rest.WeixinUserController" sourceFile="WeixinUserController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.lcw.one.workflow.WorkFlowApplication" sourceFile="WorkFlowApplication.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.audit" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="com.lcw.one.workflow.audit.AbstractAudit" sourceFile="AbstractAudit.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.audit.IActivitiAssign" sourceFile="IActivitiAssign.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.audit.IDoAudit" sourceFile="IDoAudit.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.bean" total_bugs="0" total_types="4" total_size="365">
+      <ClassStats class="com.lcw.one.workflow.bean.CandidateUtils" sourceFile="CandidateUtils.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.TaskInfoBean" sourceFile="TaskInfoBean.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.TaskQueryCondition" sourceFile="TaskQueryCondition.java" interface="false" size="164" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.WorkFlowBean" sourceFile="WorkFlowBean.java" interface="false" size="96" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.bean.constant" total_bugs="0" total_types="5" total_size="123">
+      <ClassStats class="com.lcw.one.workflow.bean.constant.FlowAssignTypeEnum" sourceFile="FlowAssignTypeEnum.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.constant.FlowEffectiveEnum" sourceFile="FlowEffectiveEnum.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.constant.FlowFinishEnum" sourceFile="FlowFinishEnum.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.constant.FlowQueryTypeEnum" sourceFile="FlowQueryTypeEnum.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.bean.constant.ProcessStateEOEnum" sourceFile="ProcessStateEOEnum.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.config" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.lcw.one.workflow.config.ActivitiAutoConfiguration" sourceFile="ActivitiAutoConfiguration.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.config.listener" total_bugs="0" total_types="2" total_size="61">
+      <ClassStats class="com.lcw.one.workflow.config.listener.OneActivitiEventListener" sourceFile="OneActivitiEventListener.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.config.listener.OneActivitiEventListener$1" sourceFile="OneActivitiEventListener.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.constant" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="com.lcw.one.workflow.constant.WorkflowDefEnum" sourceFile="WorkflowDefEnum.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.dao" total_bugs="5" total_types="5" total_size="85" priority_2="5">
+      <ClassStats class="com.lcw.one.workflow.dao.FlowAuditItemDetailEODao" sourceFile="FlowAuditItemDetailEODao.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.dao.FlowAuditItemEODao" sourceFile="FlowAuditItemEODao.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.dao.FlowAuditLogEODao" sourceFile="FlowAuditLogEODao.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.dao.FlowInfoEODao" sourceFile="FlowInfoEODao.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="com.lcw.one.workflow.dao.FlowTaskInfoEODao" sourceFile="FlowTaskInfoEODao.java" interface="false" size="17" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.entity" total_bugs="3" total_types="7" total_size="407" priority_2="3">
+      <ClassStats class="com.lcw.one.workflow.entity.FlowAuditItemBean" sourceFile="FlowAuditItemBean.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowAuditItemDetailEO" sourceFile="FlowAuditItemDetailEO.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowAuditItemEO" sourceFile="FlowAuditItemEO.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowAuditLogEO" sourceFile="FlowAuditLogEO.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowInfoEO" sourceFile="FlowInfoEO.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowTaskInfoEO" sourceFile="FlowTaskInfoEO.java" interface="false" size="81" bugs="3" priority_2="3"/>
+      <ClassStats class="com.lcw.one.workflow.entity.FlowTaskInfoEOPK" sourceFile="FlowTaskInfoEOPK.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.rest" total_bugs="0" total_types="3" total_size="108">
+      <ClassStats class="com.lcw.one.workflow.rest.FlowAuditItemRestController" sourceFile="FlowAuditItemRestController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.rest.FlowInfoEORestController" sourceFile="FlowInfoEORestController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.rest.FlowRestController" sourceFile="FlowRestController.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.service" total_bugs="0" total_types="8" total_size="348">
+      <ClassStats class="com.lcw.one.workflow.service.FlowAuditItemDetailEOService" sourceFile="FlowAuditItemDetailEOService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.FlowAuditItemEOService" sourceFile="FlowAuditItemEOService.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.FlowAuditLogEOService" sourceFile="FlowAuditLogEOService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.FlowInfoActivitiService" sourceFile="FlowInfoActivitiService.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.FlowInfoEOService" sourceFile="FlowInfoEOService.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.FlowTaskInfoEOService" sourceFile="FlowTaskInfoEOService.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.WorkFlowAssignService" sourceFile="WorkFlowAssignService.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.service.WorkFlowService" sourceFile="WorkFlowService.java" interface="false" size="111" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.service.flow" total_bugs="0" total_types="1" total_size="245">
+      <ClassStats class="com.lcw.one.workflow.service.flow.ActivitiService" sourceFile="ActivitiService.java" interface="false" size="245" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.lcw.one.workflow.utils" total_bugs="0" total_types="3" total_size="69">
+      <ClassStats class="com.lcw.one.workflow.utils.AuditUtils" sourceFile="AuditUtils.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.utils.CompareUtils" sourceFile="CompareUtils.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.lcw.one.workflow.utils.ThreadLocalContext" sourceFile="ThreadLocalContext.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="469" invocations="3183" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="23977" standardDeviationMicrosecondsPerInvocation="543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="411" invocations="3226" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="6688" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="378" invocations="2096" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="20684" standardDeviationMicrosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="373" invocations="3264" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="12488" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="355" invocations="3219" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="6814" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="299" invocations="3266" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="9497" standardDeviationMicrosecondsPerInvocation="265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="275" invocations="3226" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="8039" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="247" invocations="1988" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="9805" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="242" invocations="601" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="9049" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="227" invocations="601" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="6262" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="202" invocations="3872" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="4090" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="131" invocations="2115" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="8389" standardDeviationMicrosecondsPerInvocation="186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="121" invocations="448" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="25006" standardDeviationMicrosecondsPerInvocation="1208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="115" invocations="3305" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="22232" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="109" invocations="3226" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="14398" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="102" invocations="42150" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1240" standardDeviationMicrosecondsPerInvocation="10"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="101" invocations="448" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="29058" standardDeviationMicrosecondsPerInvocation="1720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="97" invocations="945" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="14312" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="95" invocations="448" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="2287" standardDeviationMicrosecondsPerInvocation="290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="89" invocations="601" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="3168" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="85" invocations="448" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="5513" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="84" invocations="448" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="2859" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="74" invocations="601" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="2252" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="73" invocations="601" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="1783" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="67" invocations="601" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="3733" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="64" invocations="448" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="9785" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="63" invocations="448" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="3500" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="60" invocations="448" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="8609" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="59" invocations="448" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="7012" standardDeviationMicrosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="58" invocations="1646" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="1858" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="58" invocations="3183" avgMicrosecondsPerInvocation="18" maxMicrosecondsPerInvocation="1249" standardDeviationMicrosecondsPerInvocation="41"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="56" invocations="3175" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="651" standardDeviationMicrosecondsPerInvocation="37"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="54" invocations="601" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="8533" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="54" invocations="448" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2136" standardDeviationMicrosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="53" invocations="601" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="4927" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="50" invocations="448" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="1304" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="49" invocations="601" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="17429" standardDeviationMicrosecondsPerInvocation="715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="48" invocations="448" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="5242" standardDeviationMicrosecondsPerInvocation="274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnrelatedTypesInGenericContainer" totalMilliseconds="46" invocations="448" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="16303" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="45" invocations="448" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="1649" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="45" invocations="448" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="7684" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="43" invocations="448" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="2668" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="43" invocations="56011" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="906" standardDeviationMicrosecondsPerInvocation="4"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

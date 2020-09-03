@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596944970000" analysisTimestamp="1596944971680" release="">
+  <Project projectName="repositorios/KryniuPL_Library_managment_system">
+    <Jar>repositorios/KryniuPL_Library_managment_system</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.library.model.Bill">
+      <SourceLine classname="com.library.model.Bill" start="7" end="48" sourcefile="Bill.java" sourcepath="com/library/model/Bill.java"/>
+    </Class>
+    <Field classname="com.library.model.Bill" name="bookBorrowID" signature="Lcom/library/model/BookBorrow;" isStatic="false">
+      <SourceLine classname="com.library.model.Bill" sourcefile="Bill.java" sourcepath="com/library/model/Bill.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.library.model.Bill">
+      <SourceLine classname="com.library.model.Bill" start="7" end="48" sourcefile="Bill.java" sourcepath="com/library/model/Bill.java"/>
+    </Class>
+    <Field classname="com.library.model.Bill" name="userID" signature="Lcom/library/model/User;" isStatic="false">
+      <SourceLine classname="com.library.model.Bill" sourcefile="Bill.java" sourcepath="com/library/model/Bill.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.library.model.BookBorrow">
+      <SourceLine classname="com.library.model.BookBorrow" start="15" end="109" sourcefile="BookBorrow.java" sourcepath="com/library/model/BookBorrow.java"/>
+    </Class>
+    <Field classname="com.library.model.BookBorrow" name="book" signature="Lcom/library/model/Book;" isStatic="false">
+      <SourceLine classname="com.library.model.BookBorrow" sourcefile="BookBorrow.java" sourcepath="com/library/model/BookBorrow.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.library.model.BookBorrow">
+      <SourceLine classname="com.library.model.BookBorrow" start="15" end="109" sourcefile="BookBorrow.java" sourcepath="com/library/model/BookBorrow.java"/>
+    </Class>
+    <Field classname="com.library.model.BookBorrow" name="user" signature="Lcom/library/model/User;" isStatic="false">
+      <SourceLine classname="com.library.model.BookBorrow" sourcefile="BookBorrow.java" sourcepath="com/library/model/BookBorrow.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="findPhrase" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="getIdenticalLike" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/library/model/Book;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByAuthorAsc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByAuthorDesc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByNameAsc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByNameDesc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByPriceAsc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.BookRepository">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.BookRepository" name="orderByPriceDesc" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.BookRepository" sourcefile="BookRepository.java" sourcepath="com/library/repository/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.library.repository.UserRepository">
+      <SourceLine classname="com.library.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/library/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.library.repository.UserRepository" name="findPhrase" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.library.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/library/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="33">
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.Database</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaDialect</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.JdbcUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</MissingClass>
+    <MissingClass>org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect</MissingClass>
+    <MissingClass>org.thymeleaf.spring4.SpringTemplateEngine</MissingClass>
+    <MissingClass>org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver</MissingClass>
+    <MissingClass>org.thymeleaf.spring4.view.ThymeleafViewResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:49:30 +0000" total_classes="236" referenced_classes="380" total_bugs="13" total_size="3062" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="14.27" clock_seconds="4.02" peak_mbytes="346.40" alloc_mbytes="3540.00" gc_seconds="0.21" priority_2="13">
+    <PackageStats package="com.library" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.library.LibraryApplication" sourceFile="LibraryApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.library.config" total_bugs="0" total_types="5" total_size="113">
+      <ClassStats class="com.library.config.DatabaseConfig" sourceFile="DatabaseConfig.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.library.config.LibrarySetupConfig" sourceFile="LibrarySetupConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.library.config.LibraryWebAppInitializer" sourceFile="LibraryWebAppInitializer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.library.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.library.config.WebConfig" sourceFile="WebConfig.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.library.controllers" total_bugs="0" total_types="5" total_size="245">
+      <ClassStats class="com.library.controllers.BookBorrowController" sourceFile="BookBorrowController.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.library.controllers.BooksController" sourceFile="BooksController.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.library.controllers.HomeController" sourceFile="HomeController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.library.controllers.LoginController" sourceFile="LoginController.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.library.controllers.UserController" sourceFile="UserController.java" interface="false" size="84" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.library.model" total_bugs="4" total_types="5" total_size="209" priority_2="4">
+      <ClassStats class="com.library.model.Bill" sourceFile="Bill.java" interface="false" size="27" bugs="2" priority_2="2"/>
+      <ClassStats class="com.library.model.Book" sourceFile="Book.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.library.model.BookBorrow" sourceFile="BookBorrow.java" interface="false" size="54" bugs="2" priority_2="2"/>
+      <ClassStats class="com.library.model.Role" sourceFile="Role.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.library.model.User" sourceFile="User.java" interface="false" size="74" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.library.repository" total_bugs="9" total_types="5" total_size="32" priority_2="9">
+      <ClassStats class="com.library.repository.BillRepository" sourceFile="BillRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.library.repository.BookBorrowRepository" sourceFile="BookBorrowRepository.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.library.repository.BookRepository" sourceFile="BookRepository.java" interface="true" size="14" bugs="8" priority_2="8"/>
+      <ClassStats class="com.library.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.library.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="7" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.library.scheduler" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.library.scheduler.BookBorrowScheduler" sourceFile="BookBorrowScheduler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.library.scheduler.UserScheduler" sourceFile="UserScheduler.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.library.service" total_bugs="0" total_types="2" total_size="18">
+      <ClassStats class="com.library.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.library.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence" total_bugs="0" total_types="117" total_size="817">
+      <ClassStats class="javax.persistence.Access" sourceFile="Access.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.AccessType" sourceFile="AccessType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.AssociationOverride" sourceFile="AssociationOverride.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.AssociationOverrides" sourceFile="AssociationOverrides.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.AttributeOverride" sourceFile="AttributeOverride.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.AttributeOverrides" sourceFile="AttributeOverrides.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Basic" sourceFile="Basic.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.Cache" sourceFile="Cache.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.CacheRetrieveMode" sourceFile="CacheRetrieveMode.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.CacheStoreMode" sourceFile="CacheStoreMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.Cacheable" sourceFile="Cacheable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.CascadeType" sourceFile="CascadeType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="javax.persistence.CollectionTable" sourceFile="CollectionTable.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.Column" sourceFile="Column.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.ColumnResult" sourceFile="ColumnResult.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorColumn" sourceFile="DiscriminatorColumn.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorType" sourceFile="DiscriminatorType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.DiscriminatorValue" sourceFile="DiscriminatorValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.ElementCollection" sourceFile="ElementCollection.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.Embeddable" sourceFile="Embeddable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Embedded" sourceFile="Embedded.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.EmbeddedId" sourceFile="EmbeddedId.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Entity" sourceFile="Entity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityExistsException" sourceFile="EntityExistsException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityListeners" sourceFile="EntityListeners.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityManager" sourceFile="EntityManager.java" interface="true" size="41" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityManagerFactory" sourceFile="EntityManagerFactory.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityNotFoundException" sourceFile="EntityNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityResult" sourceFile="EntityResult.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.EntityTransaction" sourceFile="EntityTransaction.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.EnumType" sourceFile="EnumType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.Enumerated" sourceFile="Enumerated.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.ExcludeDefaultListeners" sourceFile="ExcludeDefaultListeners.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.ExcludeSuperclassListeners" sourceFile="ExcludeSuperclassListeners.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.FetchType" sourceFile="FetchType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.FieldResult" sourceFile="FieldResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.FlushModeType" sourceFile="FlushModeType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.GeneratedValue" sourceFile="GeneratedValue.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.GenerationType" sourceFile="GenerationType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.Id" sourceFile="Id.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.IdClass" sourceFile="IdClass.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Inheritance" sourceFile="Inheritance.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.InheritanceType" sourceFile="InheritanceType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinColumn" sourceFile="JoinColumn.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinColumns" sourceFile="JoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.JoinTable" sourceFile="JoinTable.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.Lob" sourceFile="Lob.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.LockModeType" sourceFile="LockModeType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.persistence.LockTimeoutException" sourceFile="LockTimeoutException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.ManyToMany" sourceFile="ManyToMany.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.ManyToOne" sourceFile="ManyToOne.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKey" sourceFile="MapKey.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyClass" sourceFile="MapKeyClass.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyColumn" sourceFile="MapKeyColumn.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyEnumerated" sourceFile="MapKeyEnumerated.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyJoinColumn" sourceFile="MapKeyJoinColumn.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyJoinColumns" sourceFile="MapKeyJoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MapKeyTemporal" sourceFile="MapKeyTemporal.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.MappedSuperclass" sourceFile="MappedSuperclass.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.MapsId" sourceFile="MapsId.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedNativeQueries" sourceFile="NamedNativeQueries.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedNativeQuery" sourceFile="NamedNativeQuery.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedQueries" sourceFile="NamedQueries.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.NamedQuery" sourceFile="NamedQuery.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.NoResultException" sourceFile="NoResultException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.NonUniqueResultException" sourceFile="NonUniqueResultException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.OneToMany" sourceFile="OneToMany.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.OneToOne" sourceFile="OneToOne.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.OptimisticLockException" sourceFile="OptimisticLockException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.OrderBy" sourceFile="OrderBy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.OrderColumn" sourceFile="OrderColumn.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.Parameter" sourceFile="Parameter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.Persistence" sourceFile="Persistence.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.persistence.Persistence$1" sourceFile="Persistence.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Persistence$PersistenceUtilImpl" sourceFile="Persistence.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContext" sourceFile="PersistenceContext.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContextType" sourceFile="PersistenceContextType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceContexts" sourceFile="PersistenceContexts.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceException" sourceFile="PersistenceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceProperty" sourceFile="PersistenceProperty.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnit" sourceFile="PersistenceUnit.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnitUtil" sourceFile="PersistenceUnitUtil.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUnits" sourceFile="PersistenceUnits.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.PersistenceUtil" sourceFile="PersistenceUtil.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.PessimisticLockException" sourceFile="PessimisticLockException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.PessimisticLockScope" sourceFile="PessimisticLockScope.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.PostLoad" sourceFile="PostLoad.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostPersist" sourceFile="PostPersist.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostRemove" sourceFile="PostRemove.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PostUpdate" sourceFile="PostUpdate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PrePersist" sourceFile="PrePersist.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PreRemove" sourceFile="PreRemove.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PreUpdate" sourceFile="PreUpdate.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.PrimaryKeyJoinColumn" sourceFile="PrimaryKeyJoinColumn.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.PrimaryKeyJoinColumns" sourceFile="PrimaryKeyJoinColumns.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Query" sourceFile="Query.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="javax.persistence.QueryHint" sourceFile="QueryHint.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.QueryTimeoutException" sourceFile="QueryTimeoutException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.RollbackException" sourceFile="RollbackException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.SecondaryTable" sourceFile="SecondaryTable.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.SecondaryTables" sourceFile="SecondaryTables.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.SequenceGenerator" sourceFile="SequenceGenerator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.SharedCacheMode" sourceFile="SharedCacheMode.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="javax.persistence.SqlResultSetMapping" sourceFile="SqlResultSetMapping.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.SqlResultSetMappings" sourceFile="SqlResultSetMappings.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.Table" sourceFile="Table.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.TableGenerator" sourceFile="TableGenerator.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.Temporal" sourceFile="Temporal.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.TemporalType" sourceFile="TemporalType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.TransactionRequiredException" sourceFile="TransactionRequiredException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.Transient" sourceFile="Transient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.Tuple" sourceFile="Tuple.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.TupleElement" sourceFile="TupleElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.TypedQuery" sourceFile="TypedQuery.java" interface="true" size="17" bugs="0"/>
+      <ClassStats class="javax.persistence.UniqueConstraint" sourceFile="UniqueConstraint.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.ValidationMode" sourceFile="ValidationMode.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.Version" sourceFile="Version.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.criteria" total_bugs="0" total_types="28" total_size="331">
+      <ClassStats class="javax.persistence.criteria.AbstractQuery" sourceFile="AbstractQuery.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CollectionJoin" sourceFile="CollectionJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CompoundSelection" sourceFile="CompoundSelection.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder" sourceFile="CriteriaBuilder.java" interface="true" size="139" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Case" sourceFile="CriteriaBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Coalesce" sourceFile="CriteriaBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$In" sourceFile="CriteriaBuilder.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$SimpleCase" sourceFile="CriteriaBuilder.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaBuilder$Trimspec" sourceFile="CriteriaBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.CriteriaQuery" sourceFile="CriteriaQuery.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Expression" sourceFile="Expression.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Fetch" sourceFile="Fetch.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.FetchParent" sourceFile="FetchParent.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.From" sourceFile="From.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Join" sourceFile="Join.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.JoinType" sourceFile="JoinType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.ListJoin" sourceFile="ListJoin.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.MapJoin" sourceFile="MapJoin.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Order" sourceFile="Order.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.ParameterExpression" sourceFile="ParameterExpression.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Path" sourceFile="Path.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.PluralJoin" sourceFile="PluralJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Predicate" sourceFile="Predicate.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Predicate$BooleanOperator" sourceFile="Predicate.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Root" sourceFile="Root.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Selection" sourceFile="Selection.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.SetJoin" sourceFile="SetJoin.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.criteria.Subquery" sourceFile="Subquery.java" interface="true" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.metamodel" total_bugs="0" total_types="21" total_size="145">
+      <ClassStats class="javax.persistence.metamodel.Attribute" sourceFile="Attribute.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Attribute$PersistentAttributeType" sourceFile="Attribute.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.BasicType" sourceFile="BasicType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Bindable" sourceFile="Bindable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Bindable$BindableType" sourceFile="Bindable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.CollectionAttribute" sourceFile="CollectionAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.EmbeddableType" sourceFile="EmbeddableType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.EntityType" sourceFile="EntityType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.IdentifiableType" sourceFile="IdentifiableType.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.ListAttribute" sourceFile="ListAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.ManagedType" sourceFile="ManagedType.java" interface="true" size="29" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.MapAttribute" sourceFile="MapAttribute.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.MappedSuperclassType" sourceFile="MappedSuperclassType.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Metamodel" sourceFile="Metamodel.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.PluralAttribute" sourceFile="PluralAttribute.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.PluralAttribute$CollectionType" sourceFile="PluralAttribute.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.SetAttribute" sourceFile="SetAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.SingularAttribute" sourceFile="SingularAttribute.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.StaticMetamodel" sourceFile="StaticMetamodel.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Type" sourceFile="Type.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.metamodel.Type$PersistenceType" sourceFile="Type.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.persistence.spi" total_bugs="0" total_types="11" total_size="159">
+      <ClassStats class="javax.persistence.spi.ClassTransformer" sourceFile="ClassTransformer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.LoadState" sourceFile="LoadState.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProvider" sourceFile="PersistenceProvider.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolver" sourceFile="PersistenceProviderResolver.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$1" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$DefaultPersistenceProviderResolver" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceProviderResolverHolder$DefaultPersistenceProviderResolver$ProviderName" sourceFile="PersistenceProviderResolverHolder.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceUnitInfo" sourceFile="PersistenceUnitInfo.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.PersistenceUnitTransactionType" sourceFile="PersistenceUnitTransactionType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.persistence.spi.ProviderUtil" sourceFile="ProviderUtil.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="330" invocations="1381" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="17447" standardDeviationMicrosecondsPerInvocation="715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="172" invocations="380" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="12974" standardDeviationMicrosecondsPerInvocation="1225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="138" invocations="380" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="4995" standardDeviationMicrosecondsPerInvocation="803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="132" invocations="996" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="3112" standardDeviationMicrosecondsPerInvocation="261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="131" invocations="480" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="5390" standardDeviationMicrosecondsPerInvocation="593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="127" invocations="487" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="10348" standardDeviationMicrosecondsPerInvocation="693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="121" invocations="488" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="10728" standardDeviationMicrosecondsPerInvocation="816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="119" invocations="475" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="6046" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="114" invocations="479" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="6411" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="98" invocations="480" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="9102" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="98" invocations="1390" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="469" standardDeviationMicrosecondsPerInvocation="44"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="87" invocations="380" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="28052" standardDeviationMicrosecondsPerInvocation="1482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="86" invocations="1230" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="22712" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="72" invocations="476" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="14454" standardDeviationMicrosecondsPerInvocation="726"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="69" invocations="373" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="3857" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="62" invocations="1180" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="27501" standardDeviationMicrosecondsPerInvocation="805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="56" invocations="236" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="21742" standardDeviationMicrosecondsPerInvocation="1594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="47" invocations="380" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="1623" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="47" invocations="380" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="5733" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="41" invocations="380" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="2411" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="380" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="6970" standardDeviationMicrosecondsPerInvocation="419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="37" invocations="380" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="8192" standardDeviationMicrosecondsPerInvocation="633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="35" invocations="380" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="1995" standardDeviationMicrosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="30" invocations="29696" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="1649" standardDeviationMicrosecondsPerInvocation="11"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="30" invocations="480" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1586" standardDeviationMicrosecondsPerInvocation="135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="30" invocations="6493" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1107" standardDeviationMicrosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="28" invocations="236" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2726" standardDeviationMicrosecondsPerInvocation="250"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="26" invocations="380" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="2057" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="25" invocations="236" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1255" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="24" invocations="1180" avgMicrosecondsPerInvocation="20" maxMicrosecondsPerInvocation="10743" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="236" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="4648" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="59" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="5249" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="23" invocations="236" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="9914" standardDeviationMicrosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="22" invocations="236" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="2228" standardDeviationMicrosecondsPerInvocation="223"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

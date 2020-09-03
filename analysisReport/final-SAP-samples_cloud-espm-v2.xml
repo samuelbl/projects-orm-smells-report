@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597094996000" analysisTimestamp="1597094997956" release="">
+  <Project projectName="repositorios/SAP-samples_cloud-espm-v2">
+    <Jar>repositorios/SAP-samples_cloud-espm-v2</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.CustomerReview">
+      <SourceLine classname="com.sap.espm.model.CustomerReview" start="55" end="120" sourcefile="CustomerReview.java" sourcepath="com/sap/espm/model/CustomerReview.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.CustomerReview" name="product" signature="Lcom/sap/espm/model/Product;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.CustomerReview" sourcefile="CustomerReview.java" sourcepath="com/sap/espm/model/CustomerReview.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.Product">
+      <SourceLine classname="com.sap.espm.model.Product" start="38" end="351" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.Product" name="reviews" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.Product" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.Product">
+      <SourceLine classname="com.sap.espm.model.Product" start="38" end="351" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.Product" name="supplier" signature="Lcom/sap/espm/model/Supplier;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.Product" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.Product">
+      <SourceLine classname="com.sap.espm.model.Product" start="38" end="351" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Class>
+    <Method classname="com.sap.espm.model.Product" name="getProductText" signature="(Ljavax/persistence/EntityManager;)Lcom/sap/espm/model/ProductText;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.Product" start="334" end="341" startBytecode="0" endBytecode="188" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Method>
+    <SourceLine classname="com.sap.espm.model.Product" start="334" end="334" startBytecode="1" endBytecode="1" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.Product">
+      <SourceLine classname="com.sap.espm.model.Product" start="38" end="351" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Class>
+    <Method classname="com.sap.espm.model.Product" name="updatePrices" signature="()V" isStatic="true">
+      <SourceLine classname="com.sap.espm.model.Product" start="261" end="272" startBytecode="0" endBytecode="291" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+    </Method>
+    <SourceLine classname="com.sap.espm.model.Product" start="264" end="264" startBytecode="12" endBytecode="12" sourcefile="Product.java" sourcepath="com/sap/espm/model/Product.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.SalesOrderHeader">
+      <SourceLine classname="com.sap.espm.model.SalesOrderHeader" start="44" end="211" sourcefile="SalesOrderHeader.java" sourcepath="com/sap/espm/model/SalesOrderHeader.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.SalesOrderHeader" name="salesOrderItems" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.SalesOrderHeader" sourcefile="SalesOrderHeader.java" sourcepath="com/sap/espm/model/SalesOrderHeader.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.SalesOrderHeader">
+      <SourceLine classname="com.sap.espm.model.SalesOrderHeader" start="44" end="211" sourcefile="SalesOrderHeader.java" sourcepath="com/sap/espm/model/SalesOrderHeader.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.SalesOrderHeader" name="customer" signature="Lcom/sap/espm/model/Customer;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.SalesOrderHeader" sourcefile="SalesOrderHeader.java" sourcepath="com/sap/espm/model/SalesOrderHeader.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.SalesOrderItem">
+      <SourceLine classname="com.sap.espm.model.SalesOrderItem" start="28" end="187" sourcefile="SalesOrderItem.java" sourcepath="com/sap/espm/model/SalesOrderItem.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.SalesOrderItem" name="product" signature="Lcom/sap/espm/model/Product;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.SalesOrderItem" sourcefile="SalesOrderItem.java" sourcepath="com/sap/espm/model/SalesOrderItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.espm.model.Stock">
+      <SourceLine classname="com.sap.espm.model.Stock" start="25" end="107" sourcefile="Stock.java" sourcepath="com/sap/espm/model/Stock.java"/>
+    </Class>
+    <Field classname="com.sap.espm.model.Stock" name="product" signature="Lcom/sap/espm/model/Product;" isStatic="false">
+      <SourceLine classname="com.sap.espm.model.Stock" sourcefile="Stock.java" sourcepath="com/sap/espm/model/Stock.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>com.sap.ecm.api.EcmService</MissingClass>
+    <MissingClass>com.sap.ecm.api.RepositoryOptions</MissingClass>
+    <MissingClass>com.sap.ecm.api.RepositoryOptions$Visibility</MissingClass>
+    <MissingClass>com.sap.ecm.api.ServiceException</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.client.api.Document</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.client.api.Folder</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.client.api.ObjectFactory</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.client.api.Session</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.commons.data.ContentStream</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.commons.enums.VersioningState</MissingClass>
+    <MissingClass>org.apache.chemistry.opencmis.commons.exceptions.CmisObjectNotFoundException</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.api.commons.HttpStatusCodes</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.api.exception.ODataApplicationException</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.api.exception.ODataException</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.core.exception.ODataRuntimeException</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.ODataJPAContext</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.ODataJPAServiceFactory</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.model.JPAEdmExtension</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.model.JPAEdmSchemaView</MissingClass>
+    <MissingClass>org.apache.pdfbox.exceptions.COSVisitorException</MissingClass>
+    <MissingClass>org.apache.pdfbox.pdmodel.PDDocument</MissingClass>
+    <MissingClass>org.apache.pdfbox.pdmodel.PDPage</MissingClass>
+    <MissingClass>org.apache.pdfbox.pdmodel.edit.PDPageContentStream</MissingClass>
+    <MissingClass>org.apache.pdfbox.pdmodel.font.PDType1Font</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:29:56 +0000" total_classes="28" referenced_classes="100" total_bugs="9" total_size="1919" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.10" clock_seconds="4.31" peak_mbytes="335.11" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="7" priority_1="2">
+    <PackageStats package="com.sap.espm.model" total_bugs="9" total_types="10" total_size="741" priority_2="7" priority_1="2">
+      <ClassStats class="com.sap.espm.model.Customer" sourceFile="Customer.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.CustomerReview" sourceFile="CustomerReview.java" interface="false" size="53" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.espm.model.Product" sourceFile="Product.java" interface="false" size="189" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="com.sap.espm.model.ProductCategory" sourceFile="ProductCategory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.ProductText" sourceFile="ProductText.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.SalesOrderHeader" sourceFile="SalesOrderHeader.java" interface="false" size="110" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.sap.espm.model.SalesOrderItem" sourceFile="SalesOrderItem.java" interface="false" size="101" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.espm.model.SalesOrderItemId" sourceFile="SalesOrderItemId.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.Stock" sourceFile="Stock.java" interface="false" size="50" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.espm.model.Supplier" sourceFile="Supplier.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.data" total_bugs="0" total_types="2" total_size="711">
+      <ClassStats class="com.sap.espm.model.data.DataLoader" sourceFile="DataLoader.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.data.XMLParser" sourceFile="XMLParser.java" interface="false" size="573" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.documentservice" total_bugs="0" total_types="2" total_size="103">
+      <ClassStats class="com.sap.espm.model.documentservice.CMISSessionHelper" sourceFile="CMISSessionHelper.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.documentservice.InvoiceBuilder" sourceFile="InvoiceBuilder.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.exception" total_bugs="0" total_types="3" total_size="24">
+      <ClassStats class="com.sap.espm.model.exception.BaseESPMRunTimeException" sourceFile="BaseESPMRunTimeException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.exception.CMISConnectionException" sourceFile="CMISConnectionException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.exception.ReportGenerationException" sourceFile="ReportGenerationException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.function.impl" total_bugs="0" total_types="3" total_size="160">
+      <ClassStats class="com.sap.espm.model.function.impl.CustomerProcessor" sourceFile="CustomerProcessor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.function.impl.CustomerReviewProcessor" sourceFile="CustomerReviewProcessor.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.function.impl.SalesOrderProcessor" sourceFile="SalesOrderProcessor.java" interface="false" size="116" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.pdf.generator" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="com.sap.espm.model.pdf.generator.CmisRead" sourceFile="CmisRead.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.util" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="com.sap.espm.model.util.ReadProperties" sourceFile="ReadProperties.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.util.Utility" sourceFile="Utility.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.espm.model.web" total_bugs="0" total_types="5" total_size="104">
+      <ClassStats class="com.sap.espm.model.web.EspmProcessingExtension" sourceFile="EspmProcessingExtension.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.web.EspmServiceFactory" sourceFile="EspmServiceFactory.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.web.EspmServiceFactoryFilter" sourceFile="EspmServiceFactoryFilter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.web.JpaEntityManagerFactory" sourceFile="JpaEntityManagerFactory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sap.espm.model.web.StartupServlet" sourceFile="StartupServlet.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="353" invocations="756" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="28622" standardDeviationMicrosecondsPerInvocation="1625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="223" invocations="299" avgMicrosecondsPerInvocation="747" maxMicrosecondsPerInvocation="22144" standardDeviationMicrosecondsPerInvocation="2728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="189" invocations="22" avgMicrosecondsPerInvocation="8620" maxMicrosecondsPerInvocation="19001" standardDeviationMicrosecondsPerInvocation="4853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="183" invocations="288" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="48187" standardDeviationMicrosecondsPerInvocation="3705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="179" invocations="301" avgMicrosecondsPerInvocation="594" maxMicrosecondsPerInvocation="20836" standardDeviationMicrosecondsPerInvocation="2349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="164" invocations="101" avgMicrosecondsPerInvocation="1630" maxMicrosecondsPerInvocation="56970" standardDeviationMicrosecondsPerInvocation="6302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="137" invocations="288" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="30429" standardDeviationMicrosecondsPerInvocation="2143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="135" invocations="100" avgMicrosecondsPerInvocation="1356" maxMicrosecondsPerInvocation="21215" standardDeviationMicrosecondsPerInvocation="3049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="133" invocations="529" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="11399" standardDeviationMicrosecondsPerInvocation="867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="131" invocations="100" avgMicrosecondsPerInvocation="1312" maxMicrosecondsPerInvocation="12455" standardDeviationMicrosecondsPerInvocation="2359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="127" invocations="288" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="12205" standardDeviationMicrosecondsPerInvocation="1474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="92" invocations="288" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="10825" standardDeviationMicrosecondsPerInvocation="1134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="86" invocations="169" avgMicrosecondsPerInvocation="510" maxMicrosecondsPerInvocation="21897" standardDeviationMicrosecondsPerInvocation="2015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="762" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="3186" standardDeviationMicrosecondsPerInvocation="215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="72" invocations="22" avgMicrosecondsPerInvocation="3302" maxMicrosecondsPerInvocation="14142" standardDeviationMicrosecondsPerInvocation="4853"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="72" invocations="28" avgMicrosecondsPerInvocation="2571" maxMicrosecondsPerInvocation="45795" standardDeviationMicrosecondsPerInvocation="8690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="65" invocations="100" avgMicrosecondsPerInvocation="653" maxMicrosecondsPerInvocation="14797" standardDeviationMicrosecondsPerInvocation="2096"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="55" invocations="100" avgMicrosecondsPerInvocation="550" maxMicrosecondsPerInvocation="13894" standardDeviationMicrosecondsPerInvocation="1793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="53" invocations="288" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="23525" standardDeviationMicrosecondsPerInvocation="1445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="100" avgMicrosecondsPerInvocation="503" maxMicrosecondsPerInvocation="7579" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="49" invocations="641" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="4139" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="40" invocations="100" avgMicrosecondsPerInvocation="408" maxMicrosecondsPerInvocation="6217" standardDeviationMicrosecondsPerInvocation="947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="39" invocations="100" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="15984" standardDeviationMicrosecondsPerInvocation="2091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="37" invocations="28" avgMicrosecondsPerInvocation="1355" maxMicrosecondsPerInvocation="18306" standardDeviationMicrosecondsPerInvocation="3431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="35" invocations="28" avgMicrosecondsPerInvocation="1277" maxMicrosecondsPerInvocation="26816" standardDeviationMicrosecondsPerInvocation="4929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="35" invocations="100" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="7145" standardDeviationMicrosecondsPerInvocation="893"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

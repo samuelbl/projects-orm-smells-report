@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597101493000" analysisTimestamp="1597101496008" release="">
+  <Project projectName="repositorios/vladmeh_choose-restaurant">
+    <Jar>repositorios/vladmeh_choose-restaurant</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmeh.choosing.model.Choice">
+      <SourceLine classname="com.vladmeh.choosing.model.Choice" start="19" end="41" sourcefile="Choice.java" sourcepath="com/vladmeh/choosing/model/Choice.java"/>
+    </Class>
+    <Field classname="com.vladmeh.choosing.model.Choice" name="restaurant" signature="Lcom/vladmeh/choosing/model/Restaurant;" isStatic="false">
+      <SourceLine classname="com.vladmeh.choosing.model.Choice" sourcefile="Choice.java" sourcepath="com/vladmeh/choosing/model/Choice.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmeh.choosing.model.Choice">
+      <SourceLine classname="com.vladmeh.choosing.model.Choice" start="19" end="41" sourcefile="Choice.java" sourcepath="com/vladmeh/choosing/model/Choice.java"/>
+    </Class>
+    <Field classname="com.vladmeh.choosing.model.Choice" name="user" signature="Lcom/vladmeh/choosing/model/User;" isStatic="false">
+      <SourceLine classname="com.vladmeh.choosing.model.Choice" sourcefile="Choice.java" sourcepath="com/vladmeh/choosing/model/Choice.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.vladmeh.choosing.model.Lunch">
+      <SourceLine classname="com.vladmeh.choosing.model.Lunch" start="14" end="45" sourcefile="Lunch.java" sourcepath="com/vladmeh/choosing/model/Lunch.java"/>
+    </Class>
+    <Field classname="com.vladmeh.choosing.model.Lunch" name="restaurant" signature="Lcom/vladmeh/choosing/model/Restaurant;" isStatic="false">
+      <SourceLine classname="com.vladmeh.choosing.model.Lunch" sourcefile="Lunch.java" sourcepath="com/vladmeh/choosing/model/Lunch.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.vladmeh.choosing.repository.ChoiceRepository">
+      <SourceLine classname="com.vladmeh.choosing.repository.ChoiceRepository" sourcefile="ChoiceRepository.java" sourcepath="com/vladmeh/choosing/repository/ChoiceRepository.java"/>
+    </Class>
+    <Method classname="com.vladmeh.choosing.repository.ChoiceRepository" name="getForUserAndDate" signature="(Ljava/lang/Long;Ljava/time/LocalDate;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="com.vladmeh.choosing.repository.ChoiceRepository" sourcefile="ChoiceRepository.java" sourcepath="com/vladmeh/choosing/repository/ChoiceRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.vladmeh.choosing.repository.UserRepository">
+      <SourceLine classname="com.vladmeh.choosing.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/vladmeh/choosing/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.vladmeh.choosing.repository.UserRepository" name="findByEmail" signature="(Ljava/lang/String;)Lcom/vladmeh/choosing/model/User;" isStatic="false">
+      <SourceLine classname="com.vladmeh.choosing.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/vladmeh/choosing/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="45">
+    <MissingClass>com.fasterxml.jackson.annotation.JsonAutoDetect$Visibility</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonInclude$Include</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.PropertyAccessor</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolationException</MissingClass>
+    <MissingClass>javax.validation.ValidationException</MissingClass>
+    <MissingClass>org.h2.tools.Server</MissingClass>
+    <MissingClass>org.hibernate.validator.internal.engine.path.NodeImpl</MissingClass>
+    <MissingClass>org.hibernate.validator.internal.engine.path.PathImpl</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.dao.DataIntegrityViolationException</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.AbstractPersistable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.Jackson2ObjectMapperBuilder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.DisabledException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.dao.DaoAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>org.springframework.web.bind.MissingServletRequestParameterException</MissingClass>
+    <MissingClass>org.springframework.web.context.request.WebRequest</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:18:13 +0000" total_classes="35" referenced_classes="131" total_bugs="5" total_size="650" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.81" clock_seconds="4.77" peak_mbytes="188.99" alloc_mbytes="3540.00" gc_seconds="0.23" priority_2="5">
+    <PackageStats package="com.vladmeh.choosing" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.vladmeh.choosing.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.config" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="com.vladmeh.choosing.config.AppConfig" sourceFile="AppConfig.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.exceptions" total_bugs="0" total_types="9" total_size="217">
+      <ClassStats class="com.vladmeh.choosing.exceptions.DataNotFoundException" sourceFile="DataNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.ExceptionResponse" sourceFile="ExceptionResponse.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.ExceptionResponse$DetailsError" sourceFile="ExceptionResponse.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.ExceptionResponse$DetailsValidationError" sourceFile="ExceptionResponse.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.RestResponseEntityExceptionHandler" sourceFile="RestResponseEntityExceptionHandler.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.RestResponseEntityExceptionHandler$1" sourceFile="RestResponseEntityExceptionHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.RestaurantNotFoundException" sourceFile="RestaurantNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.exceptions.ValidationLimitException" sourceFile="ValidationLimitException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.model" total_bugs="3" total_types="7" total_size="164" priority_2="3">
+      <ClassStats class="com.vladmeh.choosing.model.AbstractBaseEntity" sourceFile="AbstractBaseEntity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.model.AbstractNamedEntity" sourceFile="AbstractNamedEntity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.model.Choice" sourceFile="Choice.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.vladmeh.choosing.model.Lunch" sourceFile="Lunch.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmeh.choosing.model.Restaurant" sourceFile="Restaurant.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.model.Role" sourceFile="Role.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.model.User" sourceFile="User.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.repository" total_bugs="2" total_types="4" total_size="20" priority_2="2">
+      <ClassStats class="com.vladmeh.choosing.repository.ChoiceRepository" sourceFile="ChoiceRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.vladmeh.choosing.repository.LunchRepository" sourceFile="LunchRepository.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.repository.RestaurantRepository" sourceFile="RestaurantRepository.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.service" total_bugs="0" total_types="5" total_size="96">
+      <ClassStats class="com.vladmeh.choosing.service.ChoiceService" sourceFile="ChoiceService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.service.ChoiceServiceImpl" sourceFile="ChoiceServiceImpl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.service.RestaurantService" sourceFile="RestaurantService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.service.RestaurantServiceImpl" sourceFile="RestaurantServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.service.UserDetailService" sourceFile="UserDetailService.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.to" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="com.vladmeh.choosing.to.LunchTo" sourceFile="LunchTo.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.to.RestaurantTo" sourceFile="RestaurantTo.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.userdetails" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.vladmeh.choosing.userdetails.UserPrincipal" sourceFile="UserPrincipal.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.util" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="com.vladmeh.choosing.util.ChoiceStatus" sourceFile="ChoiceStatus.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.util.ValidationUtil" sourceFile="ValidationUtil.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.vladmeh.choosing.web" total_bugs="0" total_types="2" total_size="20">
+      <ClassStats class="com.vladmeh.choosing.web.ChoiceController" sourceFile="ChoiceController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.vladmeh.choosing.web.RestaurantController" sourceFile="RestaurantController.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="504" invocations="809" avgMicrosecondsPerInvocation="623" maxMicrosecondsPerInvocation="33426" standardDeviationMicrosecondsPerInvocation="2395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="234" invocations="131" avgMicrosecondsPerInvocation="1793" maxMicrosecondsPerInvocation="30988" standardDeviationMicrosecondsPerInvocation="4998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="224" invocations="131" avgMicrosecondsPerInvocation="1712" maxMicrosecondsPerInvocation="28227" standardDeviationMicrosecondsPerInvocation="4440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="160" invocations="203" avgMicrosecondsPerInvocation="791" maxMicrosecondsPerInvocation="64215" standardDeviationMicrosecondsPerInvocation="5348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="146" invocations="816" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="15404" standardDeviationMicrosecondsPerInvocation="931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="144" invocations="410" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="21013" standardDeviationMicrosecondsPerInvocation="1818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="105" invocations="197" avgMicrosecondsPerInvocation="533" maxMicrosecondsPerInvocation="13250" standardDeviationMicrosecondsPerInvocation="1656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="104" invocations="207" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="21960" standardDeviationMicrosecondsPerInvocation="1927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="101" invocations="224" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="60028" standardDeviationMicrosecondsPerInvocation="4115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="100" invocations="656" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="22271" standardDeviationMicrosecondsPerInvocation="1062"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="93" invocations="207" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="12617" standardDeviationMicrosecondsPerInvocation="1298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="89" invocations="207" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="14429" standardDeviationMicrosecondsPerInvocation="1510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="85" invocations="131" avgMicrosecondsPerInvocation="649" maxMicrosecondsPerInvocation="11744" standardDeviationMicrosecondsPerInvocation="1937"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="77" invocations="207" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="21229" standardDeviationMicrosecondsPerInvocation="1740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="62" invocations="204" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="14880" standardDeviationMicrosecondsPerInvocation="1101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="62" invocations="131" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="10468" standardDeviationMicrosecondsPerInvocation="1754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="60" invocations="131" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="17530" standardDeviationMicrosecondsPerInvocation="1791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="59" invocations="131" avgMicrosecondsPerInvocation="453" maxMicrosecondsPerInvocation="13326" standardDeviationMicrosecondsPerInvocation="1692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="58" invocations="131" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="14763" standardDeviationMicrosecondsPerInvocation="1748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="58" invocations="131" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="17223" standardDeviationMicrosecondsPerInvocation="1644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="57" invocations="35" avgMicrosecondsPerInvocation="1656" maxMicrosecondsPerInvocation="24968" standardDeviationMicrosecondsPerInvocation="4568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="45" invocations="2269" avgMicrosecondsPerInvocation="20" maxMicrosecondsPerInvocation="11739" standardDeviationMicrosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="39" invocations="143" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="6096" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="31" invocations="131" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="11837" standardDeviationMicrosecondsPerInvocation="1199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="35" avgMicrosecondsPerInvocation="856" maxMicrosecondsPerInvocation="25169" standardDeviationMicrosecondsPerInvocation="4220"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

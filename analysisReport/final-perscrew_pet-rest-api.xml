@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597101719000" analysisTimestamp="1597101721010" release="">
+  <Project projectName="repositorios/perscrew_pet-rest-api">
+    <Jar>repositorios/perscrew_pet-rest-api</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="fr.pet.rest.core.model.Pet">
+      <SourceLine classname="fr.pet.rest.core.model.Pet" start="25" end="64" sourcefile="Pet.java" sourcepath="fr/pet/rest/core/model/Pet.java"/>
+    </Class>
+    <Field classname="fr.pet.rest.core.model.Pet" name="category" signature="Lfr/pet/rest/core/model/Category;" isStatic="false">
+      <SourceLine classname="fr.pet.rest.core.model.Pet" sourcefile="Pet.java" sourcepath="fr/pet/rest/core/model/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>org.h2.server.web.WebServlet</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.ServletRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:21:59 +0000" total_classes="10" referenced_classes="23" total_bugs="1" total_size="135" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="3.92" clock_seconds="1.11" peak_mbytes="121.82" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="1">
+    <PackageStats package="fr.pet.rest.api" total_bugs="0" total_types="2" total_size="35">
+      <ClassStats class="fr.pet.rest.api.CategoryController" sourceFile="CategoryController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="fr.pet.rest.api.PetController" sourceFile="PetController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fr.pet.rest.app" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="fr.pet.rest.app.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fr.pet.rest.config" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="fr.pet.rest.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="fr.pet.rest.config.WebConfiguration" sourceFile="WebConfiguration.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fr.pet.rest.core.app" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="fr.pet.rest.core.app.TestApplication" sourceFile="TestApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fr.pet.rest.core.dao" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="fr.pet.rest.core.dao.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="fr.pet.rest.core.dao.PetRepository" sourceFile="PetRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fr.pet.rest.core.model" total_bugs="1" total_types="2" total_size="59" priority_2="1">
+      <ClassStats class="fr.pet.rest.core.model.Category" sourceFile="Category.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="fr.pet.rest.core.model.Pet" sourceFile="Pet.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="148" invocations="375" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="12932" standardDeviationMicrosecondsPerInvocation="1009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="76" invocations="10" avgMicrosecondsPerInvocation="7648" maxMicrosecondsPerInvocation="76023" standardDeviationMicrosecondsPerInvocation="22791"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="43" invocations="23" avgMicrosecondsPerInvocation="1875" maxMicrosecondsPerInvocation="11195" standardDeviationMicrosecondsPerInvocation="2993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="36" invocations="98" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="3243" standardDeviationMicrosecondsPerInvocation="569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="33" invocations="378" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="481" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="28" invocations="36" avgMicrosecondsPerInvocation="791" maxMicrosecondsPerInvocation="24615" standardDeviationMicrosecondsPerInvocation="4027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="298" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="1527" standardDeviationMicrosecondsPerInvocation="169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="56" avgMicrosecondsPerInvocation="468" maxMicrosecondsPerInvocation="14296" standardDeviationMicrosecondsPerInvocation="1919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="23" invocations="23" avgMicrosecondsPerInvocation="1015" maxMicrosecondsPerInvocation="6364" standardDeviationMicrosecondsPerInvocation="1595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="19" invocations="35" avgMicrosecondsPerInvocation="556" maxMicrosecondsPerInvocation="6212" standardDeviationMicrosecondsPerInvocation="1085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="23" avgMicrosecondsPerInvocation="768" maxMicrosecondsPerInvocation="7431" standardDeviationMicrosecondsPerInvocation="1577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="8497" standardDeviationMicrosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="497" maxMicrosecondsPerInvocation="9794" standardDeviationMicrosecondsPerInvocation="1606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="16" invocations="35" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="9413" standardDeviationMicrosecondsPerInvocation="1544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="23" avgMicrosecondsPerInvocation="697" maxMicrosecondsPerInvocation="4982" standardDeviationMicrosecondsPerInvocation="1307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="15" invocations="23" avgMicrosecondsPerInvocation="658" maxMicrosecondsPerInvocation="7984" standardDeviationMicrosecondsPerInvocation="1657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="12" invocations="35" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="2917" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="12" invocations="35" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="1483" standardDeviationMicrosecondsPerInvocation="347"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

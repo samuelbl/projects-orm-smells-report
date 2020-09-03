@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085570000" analysisTimestamp="1597085571730" release="">
+  <Project projectName="repositorios/aleksey-lukyanets_market">
+    <Jar>repositorios/aleksey-lukyanets_market</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="market.dao.ProductDAO">
+      <SourceLine classname="market.dao.ProductDAO" sourcefile="ProductDAO.java" sourcepath="market/dao/ProductDAO.java"/>
+    </Class>
+    <Method classname="market.dao.ProductDAO" name="findByRegionOrderByName" signature="(Lmarket/domain/Region;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="market.dao.ProductDAO" sourcefile="ProductDAO.java" sourcepath="market/dao/ProductDAO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Bill">
+      <SourceLine classname="market.domain.Bill" start="25" end="109" sourcefile="Bill.java" sourcepath="market/domain/Bill.java"/>
+    </Class>
+    <Field classname="market.domain.Bill" name="order" signature="Lmarket/domain/Order;" isStatic="false">
+      <SourceLine classname="market.domain.Bill" sourcefile="Bill.java" sourcepath="market/domain/Bill.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Cart">
+      <SourceLine classname="market.domain.Cart" start="15" end="154" sourcefile="Cart.java" sourcepath="market/domain/Cart.java"/>
+    </Class>
+    <Field classname="market.domain.Cart" name="cartItems" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="market.domain.Cart" sourcefile="Cart.java" sourcepath="market/domain/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Cart">
+      <SourceLine classname="market.domain.Cart" start="15" end="154" sourcefile="Cart.java" sourcepath="market/domain/Cart.java"/>
+    </Class>
+    <Field classname="market.domain.Cart" name="userAccount" signature="Lmarket/domain/UserAccount;" isStatic="false">
+      <SourceLine classname="market.domain.Cart" sourcefile="Cart.java" sourcepath="market/domain/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.CartItem">
+      <SourceLine classname="market.domain.CartItem" start="12" end="82" sourcefile="CartItem.java" sourcepath="market/domain/CartItem.java"/>
+    </Class>
+    <Field classname="market.domain.CartItem" name="product" signature="Lmarket/domain/Product;" isStatic="false">
+      <SourceLine classname="market.domain.CartItem" sourcefile="CartItem.java" sourcepath="market/domain/CartItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Contacts">
+      <SourceLine classname="market.domain.Contacts" start="15" end="100" sourcefile="Contacts.java" sourcepath="market/domain/Contacts.java"/>
+    </Class>
+    <Field classname="market.domain.Contacts" name="userAccount" signature="Lmarket/domain/UserAccount;" isStatic="false">
+      <SourceLine classname="market.domain.Contacts" sourcefile="Contacts.java" sourcepath="market/domain/Contacts.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Distillery">
+      <SourceLine classname="market.domain.Distillery" start="20" end="85" sourcefile="Distillery.java" sourcepath="market/domain/Distillery.java"/>
+    </Class>
+    <Field classname="market.domain.Distillery" name="region" signature="Lmarket/domain/Region;" isStatic="false">
+      <SourceLine classname="market.domain.Distillery" sourcefile="Distillery.java" sourcepath="market/domain/Distillery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Order">
+      <SourceLine classname="market.domain.Order" start="20" end="149" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Class>
+    <Field classname="market.domain.Order" name="orderedProducts" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="market.domain.Order" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Order">
+      <SourceLine classname="market.domain.Order" start="20" end="149" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Class>
+    <Field classname="market.domain.Order" name="bill" signature="Lmarket/domain/Bill;" isStatic="false">
+      <SourceLine classname="market.domain.Order" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Order">
+      <SourceLine classname="market.domain.Order" start="20" end="149" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Class>
+    <Field classname="market.domain.Order" name="userAccount" signature="Lmarket/domain/UserAccount;" isStatic="false">
+      <SourceLine classname="market.domain.Order" sourcefile="Order.java" sourcepath="market/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.OrderedProduct">
+      <SourceLine classname="market.domain.OrderedProduct" start="12" end="77" sourcefile="OrderedProduct.java" sourcepath="market/domain/OrderedProduct.java"/>
+    </Class>
+    <Field classname="market.domain.OrderedProduct" name="product" signature="Lmarket/domain/Product;" isStatic="false">
+      <SourceLine classname="market.domain.OrderedProduct" sourcefile="OrderedProduct.java" sourcepath="market/domain/OrderedProduct.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.Product">
+      <SourceLine classname="market.domain.Product" start="15" end="146" sourcefile="Product.java" sourcepath="market/domain/Product.java"/>
+    </Class>
+    <Field classname="market.domain.Product" name="distillery" signature="Lmarket/domain/Distillery;" isStatic="false">
+      <SourceLine classname="market.domain.Product" sourcefile="Product.java" sourcepath="market/domain/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.UserAccount">
+      <SourceLine classname="market.domain.UserAccount" start="11" end="126" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Class>
+    <Field classname="market.domain.UserAccount" name="roles" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="market.domain.UserAccount" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.UserAccount">
+      <SourceLine classname="market.domain.UserAccount" start="11" end="126" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Class>
+    <Field classname="market.domain.UserAccount" name="cart" signature="Lmarket/domain/Cart;" isStatic="false">
+      <SourceLine classname="market.domain.UserAccount" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="market.domain.UserAccount">
+      <SourceLine classname="market.domain.UserAccount" start="11" end="126" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Class>
+    <Field classname="market.domain.UserAccount" name="contacts" signature="Lmarket/domain/Contacts;" isStatic="false">
+      <SourceLine classname="market.domain.UserAccount" sourcefile="UserAccount.java" sourcepath="market/domain/UserAccount.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="67">
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.jdbc.DataSourceProperties</MissingClass>
+    <MissingClass>org.springframework.boot.jdbc.DataSourceBuilder</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.context.support.ReloadableResourceBundleMessageSource</MissingClass>
+    <MissingClass>org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.hateoas.CollectionModel</MissingClass>
+    <MissingClass>org.springframework.hateoas.Link</MissingClass>
+    <MissingClass>org.springframework.hateoas.RepresentationModel</MissingClass>
+    <MissingClass>org.springframework.hateoas.server.RepresentationModelAssembler</MissingClass>
+    <MissingClass>org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport</MissingClass>
+    <MissingClass>org.springframework.hateoas.server.mvc.WebMvcLinkBuilder</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.dao.DaoAuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.AnonymousConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.RememberMeConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer$ConcurrencyControlConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.AuthorityUtils</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.web.bind.MethodArgumentNotValidException</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.InternalResourceViewResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.tiles3.TilesConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.tiles3.TilesViewResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:52:50 +0000" total_classes="111" referenced_classes="188" total_bugs="15" total_size="3421" num_packages="17" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.66" clock_seconds="3.88" peak_mbytes="333.17" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="12" priority_1="3">
+    <PackageStats package="market" total_bugs="0" total_types="4" total_size="100">
+      <ClassStats class="market.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="market.DataConfig" sourceFile="DataConfig.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="market.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="market.ServletConfig" sourceFile="ServletConfig.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.controller" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="market.controller.SpringExceptionHandler" sourceFile="SpringExceptionHandler.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.controller.backend" total_bugs="0" total_types="6" total_size="251">
+      <ClassStats class="market.controller.backend.BackendController" sourceFile="BackendController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="market.controller.backend.DistilleryController" sourceFile="DistilleryController.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="market.controller.backend.OrdersController" sourceFile="OrdersController.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="market.controller.backend.ProductController" sourceFile="ProductController.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="market.controller.backend.RegionController" sourceFile="RegionController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="market.controller.backend.StorageController" sourceFile="StorageController.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.controller.frontend" total_bugs="0" total_types="5" total_size="313">
+      <ClassStats class="market.controller.frontend.CartController" sourceFile="CartController.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="market.controller.frontend.CheckoutController" sourceFile="CheckoutController.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="market.controller.frontend.CustomerController" sourceFile="CustomerController.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="market.controller.frontend.FrontendController" sourceFile="FrontendController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="market.controller.frontend.ShowcaseController" sourceFile="ShowcaseController.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.dao" total_bugs="1" total_types="8" total_size="20" priority_2="1">
+      <ClassStats class="market.dao.CartDAO" sourceFile="CartDAO.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="market.dao.ContactsDAO" sourceFile="ContactsDAO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="market.dao.DistilleryDAO" sourceFile="DistilleryDAO.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="market.dao.OrderDAO" sourceFile="OrderDAO.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="market.dao.OrderedProductDAO" sourceFile="OrderedProductDAO.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="market.dao.ProductDAO" sourceFile="ProductDAO.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="market.dao.RegionDAO" sourceFile="RegionDAO.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="market.dao.UserAccountDAO" sourceFile="UserAccountDAO.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.domain" total_bugs="14" total_types="23" total_size="1155" priority_2="11" priority_1="3">
+      <ClassStats class="market.domain.Bill" sourceFile="Bill.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.Bill$Builder" sourceFile="Bill.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="market.domain.Cart" sourceFile="Cart.java" interface="false" size="103" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="market.domain.Cart$Builder" sourceFile="Cart.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="market.domain.CartItem" sourceFile="CartItem.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.CartItemId" sourceFile="CartItemId.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="market.domain.Contacts" sourceFile="Contacts.java" interface="false" size="63" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.Contacts$Builder" sourceFile="Contacts.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="market.domain.Distillery" sourceFile="Distillery.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.Distillery$Builder" sourceFile="Distillery.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="market.domain.Order" sourceFile="Order.java" interface="false" size="80" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="market.domain.Order$Builder" sourceFile="Order.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="market.domain.OrderedProduct" sourceFile="OrderedProduct.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.OrderedProduct$Builder" sourceFile="OrderedProduct.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="market.domain.OrderedProductId" sourceFile="OrderedProductId.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="market.domain.Product" sourceFile="Product.java" interface="false" size="91" bugs="1" priority_2="1"/>
+      <ClassStats class="market.domain.Product$Builder" sourceFile="Product.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="market.domain.Region" sourceFile="Region.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="market.domain.Region$Builder" sourceFile="Region.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="market.domain.Role" sourceFile="Role.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="market.domain.Role$Roles" sourceFile="Role.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="market.domain.UserAccount" sourceFile="UserAccount.java" interface="false" size="83" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="market.domain.UserAccount$Builder" sourceFile="UserAccount.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.dto" total_bugs="0" total_types="12" total_size="521">
+      <ClassStats class="market.dto.BillDTO" sourceFile="BillDTO.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="market.dto.CartDTO" sourceFile="CartDTO.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="market.dto.CartItemDTO" sourceFile="CartItemDTO.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="market.dto.ContactsDTO" sourceFile="ContactsDTO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="market.dto.CreditCardDTO" sourceFile="CreditCardDTO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="market.dto.DistilleryDTO" sourceFile="DistilleryDTO.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="market.dto.OrderDTO" sourceFile="OrderDTO.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="market.dto.OrderedProductDTO" sourceFile="OrderedProductDTO.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="market.dto.ProductDTO" sourceFile="ProductDTO.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="market.dto.ProductPreviewDTO" sourceFile="ProductPreviewDTO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="market.dto.RegionDTO" sourceFile="RegionDTO.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="market.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.dto.assembler" total_bugs="0" total_types="10" total_size="226">
+      <ClassStats class="market.dto.assembler.BillDtoAssembler" sourceFile="BillDtoAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="market.dto.assembler.CartDtoAssembler" sourceFile="CartDtoAssembler.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="market.dto.assembler.ContactsDtoAssembler" sourceFile="ContactsDtoAssembler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="market.dto.assembler.DistilleryDtoAssembler" sourceFile="DistilleryDtoAssembler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="market.dto.assembler.OrderDtoAssembler" sourceFile="OrderDtoAssembler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="market.dto.assembler.OrderedProductDtoAssembler" sourceFile="OrderedProductDtoAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="market.dto.assembler.ProductDtoAssembler" sourceFile="ProductDtoAssembler.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="market.dto.assembler.ProductPreviewAssembler" sourceFile="ProductPreviewAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="market.dto.assembler.RegionDtoAssembler" sourceFile="RegionDtoAssembler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="market.dto.assembler.UserAccountDtoAssembler" sourceFile="UserAccountDtoAssembler.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.exception" total_bugs="0" total_types="5" total_size="43">
+      <ClassStats class="market.exception.CustomNotValidException" sourceFile="CustomNotValidException.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="market.exception.EmailExistsException" sourceFile="EmailExistsException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="market.exception.EmptyCartException" sourceFile="EmptyCartException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="market.exception.RestNotAuthenticatedException" sourceFile="RestNotAuthenticatedException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="market.exception.UnknownEntityException" sourceFile="UnknownEntityException.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.exception.dto" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="market.exception.dto.FieldErrorDTO" sourceFile="FieldErrorDTO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="market.exception.dto.ValidationErrorDTO" sourceFile="ValidationErrorDTO.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.interceptors" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="market.interceptors.RestUserCheckInterceptor" sourceFile="RestUserCheckInterceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="market.interceptors.SessionCartInterceptor" sourceFile="SessionCartInterceptor.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.properties" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="market.properties.MarketProperties" sourceFile="MarketProperties.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="market.properties.PaginationProperties" sourceFile="PaginationProperties.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="market.properties.PaginationProperties$Builder" sourceFile="PaginationProperties.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.rest" total_bugs="0" total_types="6" total_size="108">
+      <ClassStats class="market.rest.CartRestController" sourceFile="CartRestController.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="market.rest.ContactsRestController" sourceFile="ContactsRestController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="market.rest.MediaUtf8" sourceFile="MediaUtf8.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="market.rest.OrdersRestController" sourceFile="OrdersRestController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="market.rest.ProductsRestController" sourceFile="ProductsRestController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="market.rest.SignupRestController" sourceFile="SignupRestController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.security" total_bugs="0" total_types="3" total_size="69">
+      <ClassStats class="market.security.AuthenticationService" sourceFile="AuthenticationService.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="market.security.CustomAuthenticationSuccessHandler" sourceFile="CustomAuthenticationSuccessHandler.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="market.security.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.service" total_bugs="0" total_types="7" total_size="45">
+      <ClassStats class="market.service.CartService" sourceFile="CartService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="market.service.ContactsService" sourceFile="ContactsService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="market.service.DistilleryService" sourceFile="DistilleryService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="market.service.OrderService" sourceFile="OrderService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="market.service.ProductService" sourceFile="ProductService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="market.service.RegionService" sourceFile="RegionService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="market.service.UserAccountService" sourceFile="UserAccountService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.service.impl" total_bugs="0" total_types="7" total_size="291">
+      <ClassStats class="market.service.impl.CartServiceImpl" sourceFile="CartServiceImpl.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="market.service.impl.ContactsServiceImpl" sourceFile="ContactsServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="market.service.impl.DistilleryServiceImpl" sourceFile="DistilleryServiceImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="market.service.impl.OrderServiceImpl" sourceFile="OrderServiceImpl.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="market.service.impl.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="market.service.impl.RegionServiceImpl" sourceFile="RegionServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="market.service.impl.UserAccountServiceImpl" sourceFile="UserAccountServiceImpl.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="market.sorting" total_bugs="0" total_types="7" total_size="176">
+      <ClassStats class="market.sorting.AbstractSorter" sourceFile="AbstractSorter.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="market.sorting.ISorter" sourceFile="ISorter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="market.sorting.OrderSorting" sourceFile="OrderSorting.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="market.sorting.ProductBackendSorting" sourceFile="ProductBackendSorting.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="market.sorting.ProductSorting" sourceFile="ProductSorting.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="market.sorting.SortingValuesDTO" sourceFile="SortingValuesDTO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="market.sorting.StorageSorting" sourceFile="StorageSorting.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="283" invocations="980" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="11440" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="155" invocations="783" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="4605" standardDeviationMicrosecondsPerInvocation="374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="150" invocations="793" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="10202" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="142" invocations="188" avgMicrosecondsPerInvocation="758" maxMicrosecondsPerInvocation="27849" standardDeviationMicrosecondsPerInvocation="2324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="131" invocations="797" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="8938" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="127" invocations="799" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="20132" standardDeviationMicrosecondsPerInvocation="814"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="127" invocations="793" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="4948" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="122" invocations="188" avgMicrosecondsPerInvocation="649" maxMicrosecondsPerInvocation="8356" standardDeviationMicrosecondsPerInvocation="1219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="120" invocations="793" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="9622" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="90" invocations="989" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="2634" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="85" invocations="1084" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="9489" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="77" invocations="370" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="3680" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="845" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="26488" standardDeviationMicrosecondsPerInvocation="911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="64" invocations="782" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="12735" standardDeviationMicrosecondsPerInvocation="472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="60" invocations="295" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="12374" standardDeviationMicrosecondsPerInvocation="807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="58" invocations="9407" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="5916" standardDeviationMicrosecondsPerInvocation="63"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="57" invocations="111" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="6539" standardDeviationMicrosecondsPerInvocation="1329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="57" invocations="188" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="5767" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="43" invocations="188" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="7405" standardDeviationMicrosecondsPerInvocation="617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="39" invocations="111" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="2576" standardDeviationMicrosecondsPerInvocation="437"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="39" invocations="188" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="21579" standardDeviationMicrosecondsPerInvocation="1640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="188" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="9587" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="37" invocations="188" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="3307" standardDeviationMicrosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="35" invocations="111" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="2516" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="33" invocations="793" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1402" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="188" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="3741" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="32" invocations="111" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="2626" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="31" invocations="188" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="6407" standardDeviationMicrosecondsPerInvocation="597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="26" invocations="111" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="2344" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="111" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="5360" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="24" invocations="111" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="3643" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="24" invocations="111" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="2073" standardDeviationMicrosecondsPerInvocation="268"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="21" invocations="111" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="2282" standardDeviationMicrosecondsPerInvocation="248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="20" invocations="783" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="1080" standardDeviationMicrosecondsPerInvocation="49"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

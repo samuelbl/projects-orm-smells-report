@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596952482000" analysisTimestamp="1596952483575" release="">
+  <Project projectName="repositorios/database-rider_database-rider">
+    <Jar>repositorios/database-rider_database-rider</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.github.quarkus.sample.BookRepository">
+      <SourceLine classname="com.github.quarkus.sample.BookRepository" start="31" end="62" sourcefile="BookRepository.java" sourcepath="com/github/quarkus/sample/BookRepository.java"/>
+    </Class>
+    <Method classname="com.github.quarkus.sample.BookRepository" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.github.quarkus.sample.BookRepository" start="45" end="45" startBytecode="0" endBytecode="60" sourcefile="BookRepository.java" sourcepath="com/github/quarkus/sample/BookRepository.java"/>
+    </Method>
+    <SourceLine classname="com.github.quarkus.sample.BookRepository" start="45" end="45" startBytecode="4" endBytecode="4" sourcefile="BookRepository.java" sourcepath="com/github/quarkus/sample/BookRepository.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="example.domain.Pet">
+      <SourceLine classname="example.domain.Pet" start="9" end="49" sourcefile="Pet.java" sourcepath="example/domain/Pet.java"/>
+    </Class>
+    <Field classname="example.domain.Pet" name="owner" signature="Lexample/domain/Owner;" isStatic="false">
+      <SourceLine classname="example.domain.Pet" sourcefile="Pet.java" sourcepath="example/domain/Pet.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.example.jpadomain.Contact">
+      <SourceLine classname="org.example.jpadomain.Contact" start="31" end="75" sourcefile="Contact.java" sourcepath="org/example/jpadomain/Contact.java"/>
+    </Class>
+    <Field classname="org.example.jpadomain.Contact" name="company" signature="Lorg/example/jpadomain/Company;" isStatic="false">
+      <SourceLine classname="org.example.jpadomain.Contact" sourcefile="Contact.java" sourcepath="org/example/jpadomain/Contact.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="186">
+    <MissingClass>com.mysema.query.types.Path</MissingClass>
+    <MissingClass>com.mysema.query.types.PathMetadata</MissingClass>
+    <MissingClass>com.mysema.query.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.mysema.query.types.expr.BooleanExpression</MissingClass>
+    <MissingClass>com.mysema.query.types.path.EntityPathBase</MissingClass>
+    <MissingClass>com.mysema.query.types.path.PathInits</MissingClass>
+    <MissingClass>com.mysema.query.types.path.StringPath</MissingClass>
+    <MissingClass>cucumber.api.java.ObjectFactory</MissingClass>
+    <MissingClass>cucumber.api.junit.Cucumber</MissingClass>
+    <MissingClass>io.micronaut.aop.Intercepted</MissingClass>
+    <MissingClass>io.micronaut.aop.chain.InterceptorChain</MissingClass>
+    <MissingClass>io.micronaut.aop.chain.MethodInterceptorChain</MissingClass>
+    <MissingClass>io.micronaut.context.AbstractBeanDefinition</MissingClass>
+    <MissingClass>io.micronaut.context.AbstractBeanDefinitionReference</MissingClass>
+    <MissingClass>io.micronaut.context.AbstractExecutableMethod</MissingClass>
+    <MissingClass>io.micronaut.context.ApplicationContext</MissingClass>
+    <MissingClass>io.micronaut.context.event.ApplicationEventListener</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationClassValue</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationMetadata</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationUtil</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationValue</MissingClass>
+    <MissingClass>io.micronaut.core.beans.AbstractBeanIntrospection</MissingClass>
+    <MissingClass>io.micronaut.core.beans.AbstractBeanIntrospectionReference</MissingClass>
+    <MissingClass>io.micronaut.core.beans.AbstractBeanProperty</MissingClass>
+    <MissingClass>io.micronaut.core.reflect.ReflectionUtils</MissingClass>
+    <MissingClass>io.micronaut.core.reflect.exception.InstantiationException</MissingClass>
+    <MissingClass>io.micronaut.core.type.Argument</MissingClass>
+    <MissingClass>io.micronaut.core.util.CollectionUtils</MissingClass>
+    <MissingClass>io.micronaut.data.annotation.Relation$Kind</MissingClass>
+    <MissingClass>io.micronaut.data.model.DataType</MissingClass>
+    <MissingClass>io.micronaut.data.repository.CrudRepository</MissingClass>
+    <MissingClass>io.micronaut.data.repository.PageableRepository</MissingClass>
+    <MissingClass>io.micronaut.inject.ProxyBeanDefinition</MissingClass>
+    <MissingClass>io.micronaut.inject.annotation.AnnotationMetadataHierarchy</MissingClass>
+    <MissingClass>io.micronaut.inject.annotation.DefaultAnnotationMetadata</MissingClass>
+    <MissingClass>io.micronaut.inject.qualifiers.Qualifiers</MissingClass>
+    <MissingClass>io.micronaut.runtime.Micronaut</MissingClass>
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.CDI</MissingClass>
+    <MissingClass>javax.enterprise.util.AnnotationLiteral</MissingClass>
+    <MissingClass>javax.interceptor.InvocationContext</MissingClass>
+    <MissingClass>javax.persistence.Cache</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.transaction.UserTransaction</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+    <MissingClass>org.apache.deltaspike.cdise.api.CdiContainer</MissingClass>
+    <MissingClass>org.apache.deltaspike.cdise.api.CdiContainerLoader</MissingClass>
+    <MissingClass>org.apache.deltaspike.cdise.api.ContextControl</MissingClass>
+    <MissingClass>org.apache.deltaspike.core.api.projectstage.ProjectStage</MissingClass>
+    <MissingClass>org.apache.deltaspike.core.api.provider.BeanProvider</MissingClass>
+    <MissingClass>org.apache.deltaspike.core.util.ExceptionUtils</MissingClass>
+    <MissingClass>org.apache.deltaspike.core.util.ProjectStageProducer</MissingClass>
+    <MissingClass>org.apache.deltaspike.core.util.ServiceUtils</MissingClass>
+    <MissingClass>org.apache.deltaspike.data.api.EntityRepository</MissingClass>
+    <MissingClass>org.apache.deltaspike.data.api.QueryResult</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.api.TestControl</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.api.junit.CdiTestSuiteRunner</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.api.literal.TestControlLiteral</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.spi.ExternalContainer</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.spi.TestAware</MissingClass>
+    <MissingClass>org.apache.deltaspike.testcontrol.spi.TestControlValidator</MissingClass>
+    <MissingClass>org.codehaus.jackson.map.ObjectMapper</MissingClass>
+    <MissingClass>org.dbunit.DatabaseUnitException</MissingClass>
+    <MissingClass>org.dbunit.assertion.DbUnitAssert</MissingClass>
+    <MissingClass>org.dbunit.assertion.DbUnitAssert$ComparisonColumn</MissingClass>
+    <MissingClass>org.dbunit.assertion.Difference</MissingClass>
+    <MissingClass>org.dbunit.assertion.FailureHandler</MissingClass>
+    <MissingClass>org.dbunit.database.AmbiguousTableNameException</MissingClass>
+    <MissingClass>org.dbunit.database.CachedResultSetTableFactory</MissingClass>
+    <MissingClass>org.dbunit.database.CyclicTablesDependencyException</MissingClass>
+    <MissingClass>org.dbunit.database.DatabaseConfig</MissingClass>
+    <MissingClass>org.dbunit.database.DatabaseConfig$ConfigProperty</MissingClass>
+    <MissingClass>org.dbunit.database.DatabaseConnection</MissingClass>
+    <MissingClass>org.dbunit.database.ForwardOnlyResultSetTableFactory</MissingClass>
+    <MissingClass>org.dbunit.database.IDatabaseConnection</MissingClass>
+    <MissingClass>org.dbunit.database.IMetadataHandler</MissingClass>
+    <MissingClass>org.dbunit.database.QueryDataSet</MissingClass>
+    <MissingClass>org.dbunit.database.search.TablesDependencyHelper</MissingClass>
+    <MissingClass>org.dbunit.dataset.AbstractDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.CachedDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.Column</MissingClass>
+    <MissingClass>org.dbunit.dataset.CompositeDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.DataSetException</MissingClass>
+    <MissingClass>org.dbunit.dataset.DefaultTable</MissingClass>
+    <MissingClass>org.dbunit.dataset.DefaultTableIterator</MissingClass>
+    <MissingClass>org.dbunit.dataset.DefaultTableMetaData</MissingClass>
+    <MissingClass>org.dbunit.dataset.FilteredDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.IDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.ITable</MissingClass>
+    <MissingClass>org.dbunit.dataset.ITableIterator</MissingClass>
+    <MissingClass>org.dbunit.dataset.ITableMetaData</MissingClass>
+    <MissingClass>org.dbunit.dataset.NoSuchColumnException</MissingClass>
+    <MissingClass>org.dbunit.dataset.ReplacementDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.RowOutOfBoundsException</MissingClass>
+    <MissingClass>org.dbunit.dataset.SortedTable</MissingClass>
+    <MissingClass>org.dbunit.dataset.csv.CsvDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.csv.CsvDataSetWriter</MissingClass>
+    <MissingClass>org.dbunit.dataset.datatype.DataType</MissingClass>
+    <MissingClass>org.dbunit.dataset.datatype.IDataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.dataset.excel.XlsDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.excel.XlsDataSetWriter</MissingClass>
+    <MissingClass>org.dbunit.dataset.filter.DefaultColumnFilter</MissingClass>
+    <MissingClass>org.dbunit.dataset.filter.SequenceTableFilter</MissingClass>
+    <MissingClass>org.dbunit.dataset.stream.BufferedConsumer</MissingClass>
+    <MissingClass>org.dbunit.dataset.stream.DataSetProducerAdapter</MissingClass>
+    <MissingClass>org.dbunit.dataset.stream.IDataSetConsumer</MissingClass>
+    <MissingClass>org.dbunit.dataset.xml.FlatDtdDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.xml.FlatXmlDataSet</MissingClass>
+    <MissingClass>org.dbunit.dataset.xml.FlatXmlDataSetBuilder</MissingClass>
+    <MissingClass>org.dbunit.ext.db2.Db2DataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.db2.Db2MetadataHandler</MissingClass>
+    <MissingClass>org.dbunit.ext.h2.H2DataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.hsqldb.HsqldbDataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.mssql.InsertIdentityOperation</MissingClass>
+    <MissingClass>org.dbunit.ext.mssql.MsSqlDataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.mysql.MySqlDataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.mysql.MySqlMetadataHandler</MissingClass>
+    <MissingClass>org.dbunit.ext.oracle.Oracle10DataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.ext.postgresql.PostgresqlDataTypeFactory</MissingClass>
+    <MissingClass>org.dbunit.operation.CompositeOperation</MissingClass>
+    <MissingClass>org.dbunit.operation.DatabaseOperation</MissingClass>
+    <MissingClass>org.dbunit.util.search.SearchException</MissingClass>
+    <MissingClass>org.eclipse.persistence.internal.helper.DatabaseField</MissingClass>
+    <MissingClass>org.eclipse.persistence.internal.jpa.metamodel.AttributeImpl</MissingClass>
+    <MissingClass>org.eclipse.persistence.mappings.DatabaseMapping</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker</MissingClass>
+    <MissingClass>org.hibernate.bytecode.enhance.internal.tracker.NoopCollectionTracker</MissingClass>
+    <MissingClass>org.hibernate.bytecode.enhance.internal.tracker.SimpleFieldTracker</MissingClass>
+    <MissingClass>org.hibernate.engine.spi.ManagedEntity</MissingClass>
+    <MissingClass>org.hibernate.engine.spi.PersistentAttributeInterceptable</MissingClass>
+    <MissingClass>org.hibernate.engine.spi.PersistentAttributeInterceptor</MissingClass>
+    <MissingClass>org.hibernate.engine.spi.SelfDirtinessTracker</MissingClass>
+    <MissingClass>org.hibernate.internal.SessionImpl</MissingClass>
+    <MissingClass>org.hibernate.persister.entity.AbstractEntityPersister</MissingClass>
+    <MissingClass>org.jooq.DataType</MissingClass>
+    <MissingClass>org.jooq.Record</MissingClass>
+    <MissingClass>org.jooq.Row</MissingClass>
+    <MissingClass>org.jooq.impl.AbstractKeys</MissingClass>
+    <MissingClass>org.jooq.impl.CatalogImpl</MissingClass>
+    <MissingClass>org.jooq.impl.SQLDataType</MissingClass>
+    <MissingClass>org.jooq.impl.SchemaImpl</MissingClass>
+    <MissingClass>org.jooq.impl.SequenceImpl</MissingClass>
+    <MissingClass>org.jooq.impl.TableImpl</MissingClass>
+    <MissingClass>org.jooq.impl.UpdatableRecordImpl</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.BeforeTestExecutionCallback</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext$Namespace</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext$Store</MissingClass>
+    <MissingClass>org.junit.platform.commons.util.AnnotationUtils</MissingClass>
+    <MissingClass>org.junit.rules.TestRule</MissingClass>
+    <MissingClass>org.junit.runner.Description</MissingClass>
+    <MissingClass>org.junit.runners.model.Statement</MissingClass>
+    <MissingClass>org.junit.runners.model.TestClass</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.jdbc.DataSourceProperties</MissingClass>
+    <MissingClass>org.springframework.boot.jdbc.DataSourceBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder$Builder</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotatedElementUtils</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.test.context.TestContext</MissingClass>
+    <MissingClass>org.springframework.test.context.junit.jupiter.SpringExtension</MissingClass>
+    <MissingClass>org.springframework.test.context.support.AbstractTestExecutionListener</MissingClass>
+    <MissingClass>org.yaml.snakeyaml.Yaml</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:54:42 +0000" total_classes="345" referenced_classes="527" total_bugs="3" total_size="18580" num_packages="56" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="33.13" clock_seconds="9.56" peak_mbytes="962.50" alloc_mbytes="3540.00" gc_seconds="0.30" priority_2="3">
+    <PackageStats package="com.github.database.rider.cdi" total_bugs="0" total_types="4" total_size="249">
+      <ClassStats class="com.github.database.rider.cdi.DBUnitInterceptorImpl" sourceFile="DBUnitInterceptorImpl.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.DataSetProcessor" sourceFile="DataSetProcessor.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.DataSetProcessor$1" sourceFile="DataSetProcessor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.JTAConnectionHolder" sourceFile="JTAConnectionHolder.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.cdi.api" total_bugs="0" total_types="5" total_size="17">
+      <ClassStats class="com.github.database.rider.cdi.api.DBRider" sourceFile="DBRider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.api.DBUnitInterceptor" sourceFile="DBUnitInterceptor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.api.DefaultAnnotation" sourceFile="DefaultAnnotation.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.api.RiderPU" sourceFile="RiderPU.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cdi.api.RiderPUAnnotation" sourceFile="RiderPUAnnotation.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core" total_bugs="0" total_types="6" total_size="210">
+      <ClassStats class="com.github.database.rider.core.AbstractRiderTestContext" sourceFile="AbstractRiderTestContext.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.DBUnitRule" sourceFile="DBUnitRule.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.DBUnitRule$1" sourceFile="DBUnitRule.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.JUnit4RiderTestContext" sourceFile="JUnit4RiderTestContext.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.RiderRunner" sourceFile="RiderRunner.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.RiderTestContext" sourceFile="RiderTestContext.java" interface="true" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.configuration" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.github.database.rider.core.api.configuration.DBUnit" sourceFile="DBUnit.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.configuration.Orthography" sourceFile="Orthography.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.connection" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.github.database.rider.core.api.connection.ConnectionHolder" sourceFile="ConnectionHolder.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.dataset" total_bugs="0" total_types="18" total_size="550">
+      <ClassStats class="com.github.database.rider.core.api.dataset.CompareOperation" sourceFile="CompareOperation.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.DataSet" sourceFile="DataSet.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.DataSetExecutor" sourceFile="DataSetExecutor.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.DataSetFormat" sourceFile="DataSetFormat.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.DataSetImpl" sourceFile="DataSetImpl.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.DataSetProvider" sourceFile="DataSetProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.ExpectedDataSet" sourceFile="ExpectedDataSet.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.JSONDataSet" sourceFile="JSONDataSet.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.JSONDataSet$1" sourceFile="JSONDataSet.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.JSONDataSet$JSONITableParser" sourceFile="JSONDataSet.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.RiderSequenceFilter" sourceFile="RiderSequenceFilter.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.RiderSequenceFilter$DependencyInfo" sourceFile="RiderSequenceFilter.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.ScriptableDataSet" sourceFile="ScriptableDataSet.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.ScriptableDataSetIterator" sourceFile="ScriptableDataSetIterator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.ScriptableTable" sourceFile="ScriptableTable.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.SeedStrategy" sourceFile="SeedStrategy.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.YamlDataSet" sourceFile="YamlDataSet.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.dataset.YamlDataSet$MyTable" sourceFile="YamlDataSet.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.exporter" total_bugs="0" total_types="3" total_size="66">
+      <ClassStats class="com.github.database.rider.core.api.exporter.BuilderType" sourceFile="BuilderType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.exporter.DataSetExportConfig" sourceFile="DataSetExportConfig.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.exporter.ExportDataSet" sourceFile="ExportDataSet.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.leak" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.github.database.rider.core.api.leak.LeakHunter" sourceFile="LeakHunter.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.api.replacer" total_bugs="0" total_types="5" total_size="127">
+      <ClassStats class="com.github.database.rider.core.api.replacer.DayReplacerType" sourceFile="DayReplacerType.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.replacer.HourReplacerType" sourceFile="HourReplacerType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.replacer.MinuteReplacerType" sourceFile="MinuteReplacerType.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.replacer.ReplacerType" sourceFile="ReplacerType.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.api.replacer.SecondReplacerType" sourceFile="SecondReplacerType.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.assertion" total_bugs="0" total_types="2" total_size="49">
+      <ClassStats class="com.github.database.rider.core.assertion.DataSetAssert" sourceFile="DataSetAssert.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.assertion.DataSetAssertion" sourceFile="DataSetAssertion.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.configuration" total_bugs="0" total_types="5" total_size="492">
+      <ClassStats class="com.github.database.rider.core.configuration.ConnectionConfig" sourceFile="ConnectionConfig.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.configuration.DBUnitConfig" sourceFile="DBUnitConfig.java" interface="false" size="224" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.configuration.DataSetConfig" sourceFile="DataSetConfig.java" interface="false" size="188" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.configuration.ExpectedDataSetConfig" sourceFile="ExpectedDataSetConfig.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.configuration.GlobalConfig" sourceFile="GlobalConfig.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.connection" total_bugs="0" total_types="4" total_size="116">
+      <ClassStats class="com.github.database.rider.core.connection.ConnectionHolderImpl" sourceFile="ConnectionHolderImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.connection.RiderDataSource" sourceFile="RiderDataSource.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.connection.RiderDataSource$1" sourceFile="RiderDataSource.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.connection.RiderDataSource$DBType" sourceFile="RiderDataSource.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.dataset" total_bugs="0" total_types="3" total_size="648">
+      <ClassStats class="com.github.database.rider.core.dataset.DataSetExecutorImpl" sourceFile="DataSetExecutorImpl.java" interface="false" size="633" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.DataSetExecutorImpl$1" sourceFile="DataSetExecutorImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.DataSetExecutorImpl$2" sourceFile="DataSetExecutorImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.dataset.builder" total_bugs="0" total_types="8" total_size="414">
+      <ClassStats class="com.github.database.rider.core.dataset.builder.BasicRowBuilder" sourceFile="BasicRowBuilder.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.BuilderUtil" sourceFile="BuilderUtil.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.ColumnBuilder" sourceFile="ColumnBuilder.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.ColumnSpec" sourceFile="ColumnSpec.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.DataSetBuilder" sourceFile="DataSetBuilder.java" interface="false" size="141" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.RowBuilder" sourceFile="RowBuilder.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.TableBuilder" sourceFile="TableBuilder.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.builder.TableMetaDataBuilder" sourceFile="TableMetaDataBuilder.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.dataset.writer" total_bugs="0" total_types="2" total_size="158">
+      <ClassStats class="com.github.database.rider.core.dataset.writer.JSONWriter" sourceFile="JSONWriter.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dataset.writer.YMLWriter" sourceFile="YMLWriter.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.dsl" total_bugs="0" total_types="3" total_size="76">
+      <ClassStats class="com.github.database.rider.core.dsl.RiderDSL" sourceFile="RiderDSL.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dsl.RiderDSL$DBUnitConfigDSL" sourceFile="RiderDSL.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.dsl.RiderDSL$DataSetConfigDSL" sourceFile="RiderDSL.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.exception" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.github.database.rider.core.exception.DataBaseSeedingException" sourceFile="DataBaseSeedingException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.exporter" total_bugs="0" total_types="2" total_size="110">
+      <ClassStats class="com.github.database.rider.core.exporter.DataSetExporter" sourceFile="DataSetExporter.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.exporter.DataSetExporter$1" sourceFile="DataSetExporter.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.exporter.builder" total_bugs="0" total_types="2" total_size="97">
+      <ClassStats class="com.github.database.rider.core.exporter.builder.BuilderExportConfig" sourceFile="BuilderExportConfig.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.exporter.builder.DataSetBuilderExporter" sourceFile="DataSetBuilderExporter.java" interface="false" size="85" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.leak" total_bugs="0" total_types="10" total_size="131">
+      <ClassStats class="com.github.database.rider.core.leak.AbstractLeakHunter" sourceFile="AbstractLeakHunter.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.H2LeakHunter" sourceFile="H2LeakHunter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.HsqlDBLeakHunter" sourceFile="HsqlDBLeakHunter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.LeakHunterException" sourceFile="LeakHunterException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.LeakHunterFactory" sourceFile="LeakHunterFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.LeakHunterFactory$1" sourceFile="LeakHunterFactory.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.MsSqlLeakHunter" sourceFile="MsSqlLeakHunter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.MySqlLeakHunter" sourceFile="MySqlLeakHunter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.OracleLeakHunter" sourceFile="OracleLeakHunter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.leak.PostgreLeakHunter" sourceFile="PostgreLeakHunter.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.replacers" total_bugs="0" total_types="4" total_size="68">
+      <ClassStats class="com.github.database.rider.core.replacers.DateTimeReplacer" sourceFile="DateTimeReplacer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.replacers.NullReplacer" sourceFile="NullReplacer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.replacers.Replacer" sourceFile="Replacer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.replacers.UnixTimestampReplacer" sourceFile="UnixTimestampReplacer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.spi" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.github.database.rider.core.spi.DriverNameService" sourceFile="DriverNameService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.core.util" total_bugs="0" total_types="9" total_size="389">
+      <ClassStats class="com.github.database.rider.core.util.AnnotationUtils" sourceFile="AnnotationUtils.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.AnnotationUtils$AnnotationCacheKey" sourceFile="AnnotationUtils.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.ClassUtils" sourceFile="ClassUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.ContainsFilterTable" sourceFile="ContainsFilterTable.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.DateUtils" sourceFile="DateUtils.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.DriverUtils" sourceFile="DriverUtils.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.EntityManagerProvider" sourceFile="EntityManagerProvider.java" interface="false" size="103" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.EntityManagerProvider$1" sourceFile="EntityManagerProvider.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.github.database.rider.core.util.PropertyResolutionUtil" sourceFile="PropertyResolutionUtil.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.cucumber" total_bugs="0" total_types="3" total_size="214">
+      <ClassStats class="com.github.database.rider.cucumber.CdiCucumberTestRunner" sourceFile="CdiCucumberTestRunner.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cucumber.CdiCucumberTestRunner$ContainerAwareTestContext" sourceFile="CdiCucumberTestRunner.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="com.github.database.rider.cucumber.CdiCucumberTestRunner$ContainerAwareTestContext$1" sourceFile="CdiCucumberTestRunner.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.example" total_bugs="0" total_types="2" total_size="13">
+      <ClassStats class="com.github.database.rider.example.User" sourceFile="User.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.github.database.rider.example.UserRepository" sourceFile="UserRepository.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.junit5" total_bugs="0" total_types="3" total_size="314">
+      <ClassStats class="com.github.database.rider.junit5.DBUnitExtension" sourceFile="DBUnitExtension.java" interface="false" size="262" bugs="0"/>
+      <ClassStats class="com.github.database.rider.junit5.DBUnitTestContext" sourceFile="DBUnitTestContext.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.github.database.rider.junit5.JUnit5RiderTestContext" sourceFile="JUnit5RiderTestContext.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.junit5.api" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.github.database.rider.junit5.api.DBRider" sourceFile="DBRider.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.junit5.util" total_bugs="0" total_types="2" total_size="129">
+      <ClassStats class="com.github.database.rider.junit5.util.EntityManagerProvider" sourceFile="EntityManagerProvider.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.github.database.rider.junit5.util.PropertyResolutionUtil" sourceFile="PropertyResolutionUtil.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.spring" total_bugs="0" total_types="3" total_size="68">
+      <ClassStats class="com.github.database.rider.spring.DBRiderTestExecutionListener" sourceFile="DBRiderTestExecutionListener.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.database.rider.spring.SpringRiderTestContext" sourceFile="SpringRiderTestContext.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.github.database.rider.spring.SpringRiderTestContext$1" sourceFile="SpringRiderTestContext.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.spring.api" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.github.database.rider.spring.api.DBRider" sourceFile="DBRider.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.github.database.rider.springboot.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot.controller" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="com.github.database.rider.springboot.controller.MainController" sourceFile="MainController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.github.database.rider.springboot.controller.UserController" sourceFile="UserController.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot.infra.company" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.github.database.rider.springboot.infra.company.CompanyDBConfig" sourceFile="CompanyDBConfig.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot.infra.user" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="com.github.database.rider.springboot.infra.user.UserDBConfig" sourceFile="UserDBConfig.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot.model.company" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="com.github.database.rider.springboot.model.company.Company" sourceFile="Company.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.database.rider.springboot.model.company.CompanyRepository" sourceFile="CompanyRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.database.rider.springboot.model.user" total_bugs="0" total_types="2" total_size="40">
+      <ClassStats class="com.github.database.rider.springboot.model.user.User" sourceFile="User.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.github.database.rider.springboot.model.user.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.quarkus.sample" total_bugs="1" total_types="1" total_size="16" priority_2="1">
+      <ClassStats class="com.github.quarkus.sample.BookRepository" sourceFile="BookRepository.java" interface="false" size="16" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.github.quarkus.sample.domain" total_bugs="0" total_types="1" total_size="50">
+      <ClassStats class="com.github.quarkus.sample.domain.Book" sourceFile="Book.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.quarkus.sample.rest" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="com.github.quarkus.sample.rest.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.github.quarkus.sample.rest.BookResource" sourceFile="BookResource.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cucumber.runtime" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="cucumber.runtime.CucumberObjectFactory" sourceFile="CucumberObjectFactory.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="example" total_bugs="0" total_types="9" total_size="481">
+      <ClassStats class="example.$Application$ApplicationEventListener$init1$InterceptedDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="107" bugs="0"/>
+      <ClassStats class="example.$Application$ApplicationEventListener$init1$InterceptedDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="37" bugs="0"/>
+      <ClassStats class="example.$Application$ApplicationEventListener$init1$InterceptedDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="81" bugs="0"/>
+      <ClassStats class="example.$ApplicationDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="40" bugs="0"/>
+      <ClassStats class="example.$ApplicationDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="67" bugs="0"/>
+      <ClassStats class="example.$ApplicationDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="60" bugs="0"/>
+      <ClassStats class="example.Application" sourceFile="Application.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="example.Application$ApplicationEventListener$init1$Intercepted" sourceFile="&lt;Unknown&gt;" interface="false" size="15" bugs="0"/>
+      <ClassStats class="example.Application$ApplicationEventListener$init1$Intercepted$$proxy0" sourceFile="&lt;Unknown&gt;" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="example.controllers" total_bugs="0" total_types="15" total_size="844">
+      <ClassStats class="example.controllers.$$OwnerControllerDefinition$InterceptedDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="42" bugs="0"/>
+      <ClassStats class="example.controllers.$$OwnerControllerDefinition$InterceptedDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="35" bugs="0"/>
+      <ClassStats class="example.controllers.$$OwnerControllerDefinition$InterceptedDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="116" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="57" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="50" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinition$$exec2" sourceFile="&lt;Unknown&gt;" interface="false" size="93" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinition$Intercepted" sourceFile="&lt;Unknown&gt;" interface="false" size="16" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinition$Intercepted$$proxy0" sourceFile="&lt;Unknown&gt;" interface="false" size="36" bugs="0"/>
+      <ClassStats class="example.controllers.$OwnerControllerDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="116" bugs="0"/>
+      <ClassStats class="example.controllers.$PetControllerDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="57" bugs="0"/>
+      <ClassStats class="example.controllers.$PetControllerDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="53" bugs="0"/>
+      <ClassStats class="example.controllers.$PetControllerDefinition$$exec2" sourceFile="&lt;Unknown&gt;" interface="false" size="53" bugs="0"/>
+      <ClassStats class="example.controllers.$PetControllerDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="100" bugs="0"/>
+      <ClassStats class="example.controllers.OwnerController" sourceFile="OwnerController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="example.controllers.PetController" sourceFile="PetController.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="example.domain" total_bugs="1" total_types="20" total_size="758" priority_2="1">
+      <ClassStats class="example.domain.$NameDTO$Introspection" sourceFile="&lt;Unknown&gt;" interface="false" size="6" bugs="0"/>
+      <ClassStats class="example.domain.$NameDTO$Introspection$$0" sourceFile="&lt;Unknown&gt;" interface="false" size="7" bugs="0"/>
+      <ClassStats class="example.domain.$NameDTO$IntrospectionRef" sourceFile="&lt;Unknown&gt;" interface="false" size="30" bugs="0"/>
+      <ClassStats class="example.domain.$Owner$Introspection" sourceFile="&lt;Unknown&gt;" interface="false" size="12" bugs="0"/>
+      <ClassStats class="example.domain.$Owner$Introspection$$0" sourceFile="&lt;Unknown&gt;" interface="false" size="16" bugs="0"/>
+      <ClassStats class="example.domain.$Owner$Introspection$$1" sourceFile="&lt;Unknown&gt;" interface="false" size="17" bugs="0"/>
+      <ClassStats class="example.domain.$Owner$Introspection$$2" sourceFile="&lt;Unknown&gt;" interface="false" size="28" bugs="0"/>
+      <ClassStats class="example.domain.$Owner$IntrospectionRef" sourceFile="&lt;Unknown&gt;" interface="false" size="127" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$Introspection" sourceFile="&lt;Unknown&gt;" interface="false" size="14" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$Introspection$$0" sourceFile="&lt;Unknown&gt;" interface="false" size="16" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$Introspection$$1" sourceFile="&lt;Unknown&gt;" interface="false" size="27" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$Introspection$$2" sourceFile="&lt;Unknown&gt;" interface="false" size="28" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$Introspection$$3" sourceFile="&lt;Unknown&gt;" interface="false" size="16" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$IntrospectionRef" sourceFile="&lt;Unknown&gt;" interface="false" size="141" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$PetType$Introspection" sourceFile="&lt;Unknown&gt;" interface="false" size="9" bugs="0"/>
+      <ClassStats class="example.domain.$Pet$PetType$IntrospectionRef" sourceFile="&lt;Unknown&gt;" interface="false" size="141" bugs="0"/>
+      <ClassStats class="example.domain.NameDTO" sourceFile="NameDTO.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="example.domain.Owner" sourceFile="Owner.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="example.domain.Pet" sourceFile="Pet.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="example.domain.Pet$PetType" sourceFile="Pet.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="example.repositories" total_bugs="0" total_types="64" total_size="8640">
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="55" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="120" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec10" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec11" sourceFile="&lt;Unknown&gt;" interface="false" size="146" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec12" sourceFile="&lt;Unknown&gt;" interface="false" size="144" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec13" sourceFile="&lt;Unknown&gt;" interface="false" size="110" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec2" sourceFile="&lt;Unknown&gt;" interface="false" size="138" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec3" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec4" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec5" sourceFile="&lt;Unknown&gt;" interface="false" size="154" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec6" sourceFile="&lt;Unknown&gt;" interface="false" size="171" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec7" sourceFile="&lt;Unknown&gt;" interface="false" size="171" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec8" sourceFile="&lt;Unknown&gt;" interface="false" size="121" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinition$$exec9" sourceFile="&lt;Unknown&gt;" interface="false" size="120" bugs="0"/>
+      <ClassStats class="example.repositories.$OwnerRepository$InterceptedDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="110" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="57" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec1" sourceFile="&lt;Unknown&gt;" interface="false" size="137" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec10" sourceFile="&lt;Unknown&gt;" interface="false" size="121" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec11" sourceFile="&lt;Unknown&gt;" interface="false" size="120" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec12" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec13" sourceFile="&lt;Unknown&gt;" interface="false" size="146" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec14" sourceFile="&lt;Unknown&gt;" interface="false" size="144" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec15" sourceFile="&lt;Unknown&gt;" interface="false" size="110" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec2" sourceFile="&lt;Unknown&gt;" interface="false" size="155" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec3" sourceFile="&lt;Unknown&gt;" interface="false" size="130" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec4" sourceFile="&lt;Unknown&gt;" interface="false" size="133" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec5" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec6" sourceFile="&lt;Unknown&gt;" interface="false" size="161" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec7" sourceFile="&lt;Unknown&gt;" interface="false" size="154" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec8" sourceFile="&lt;Unknown&gt;" interface="false" size="171" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinition$$exec9" sourceFile="&lt;Unknown&gt;" interface="false" size="171" bugs="0"/>
+      <ClassStats class="example.repositories.$PetRepository$InterceptedDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="116" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository" sourceFile="OwnerRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted" sourceFile="&lt;Unknown&gt;" interface="false" size="136" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy0" sourceFile="&lt;Unknown&gt;" interface="false" size="121" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy1" sourceFile="&lt;Unknown&gt;" interface="false" size="140" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy10" sourceFile="&lt;Unknown&gt;" interface="false" size="140" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy11" sourceFile="&lt;Unknown&gt;" interface="false" size="137" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy12" sourceFile="&lt;Unknown&gt;" interface="false" size="112" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy2" sourceFile="&lt;Unknown&gt;" interface="false" size="151" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy3" sourceFile="&lt;Unknown&gt;" interface="false" size="151" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy4" sourceFile="&lt;Unknown&gt;" interface="false" size="144" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy5" sourceFile="&lt;Unknown&gt;" interface="false" size="165" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy6" sourceFile="&lt;Unknown&gt;" interface="false" size="164" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy7" sourceFile="&lt;Unknown&gt;" interface="false" size="122" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy8" sourceFile="&lt;Unknown&gt;" interface="false" size="122" bugs="0"/>
+      <ClassStats class="example.repositories.OwnerRepository$Intercepted$$proxy9" sourceFile="&lt;Unknown&gt;" interface="false" size="154" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository" sourceFile="PetRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted" sourceFile="&lt;Unknown&gt;" interface="false" size="158" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy0" sourceFile="&lt;Unknown&gt;" interface="false" size="139" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy1" sourceFile="&lt;Unknown&gt;" interface="false" size="157" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy10" sourceFile="&lt;Unknown&gt;" interface="false" size="122" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy11" sourceFile="&lt;Unknown&gt;" interface="false" size="154" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy12" sourceFile="&lt;Unknown&gt;" interface="false" size="140" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy13" sourceFile="&lt;Unknown&gt;" interface="false" size="137" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy14" sourceFile="&lt;Unknown&gt;" interface="false" size="112" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy2" sourceFile="&lt;Unknown&gt;" interface="false" size="132" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy3" sourceFile="&lt;Unknown&gt;" interface="false" size="134" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy4" sourceFile="&lt;Unknown&gt;" interface="false" size="151" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy5" sourceFile="&lt;Unknown&gt;" interface="false" size="151" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy6" sourceFile="&lt;Unknown&gt;" interface="false" size="144" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy7" sourceFile="&lt;Unknown&gt;" interface="false" size="165" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy8" sourceFile="&lt;Unknown&gt;" interface="false" size="164" bugs="0"/>
+      <ClassStats class="example.repositories.PetRepository$Intercepted$$proxy9" sourceFile="&lt;Unknown&gt;" interface="false" size="122" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="464">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.example" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.example.CdiConfig" sourceFile="CdiConfig.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.example.jpadomain" total_bugs="1" total_types="9" total_size="159" priority_2="1">
+      <ClassStats class="org.example.jpadomain.AbstractEntity" sourceFile="AbstractEntity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.AbstractEntity_" sourceFile="AbstractEntity_.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.Company" sourceFile="Company.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.Company_" sourceFile="Company_.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.Contact" sourceFile="Contact.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="org.example.jpadomain.Contact_" sourceFile="Contact_.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.QAbstractEntity" sourceFile="QAbstractEntity.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.QCompany" sourceFile="QCompany.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.example.jpadomain.QContact" sourceFile="QContact.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.example.service.deltaspike" total_bugs="0" total_types="3" total_size="34">
+      <ClassStats class="org.example.service.deltaspike.CompanyRepository" sourceFile="CompanyRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.example.service.deltaspike.ContactRepository" sourceFile="ContactRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.example.service.deltaspike.DeltaSpikeContactService" sourceFile="DeltaSpikeContactService.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.example.service.querydsl" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="org.example.service.querydsl.QueryDslContactService" sourceFile="QueryDslContactService.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.example.service.springdata" total_bugs="0" total_types="3" total_size="28">
+      <ClassStats class="org.example.service.springdata.CompanyRepository" sourceFile="CompanyRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.example.service.springdata.ContactRepository" sourceFile="ContactRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.example.service.springdata.SpringDataContactService" sourceFile="SpringDataContactService.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.cli" total_bugs="0" total_types="24" total_size="534">
+      <ClassStats class="org.gradle.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="130" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.gradle.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.wrapper" total_bugs="0" total_types="20" total_size="688">
+      <ClassStats class="org.gradle.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.BootstrapMainStarter$1" sourceFile="BootstrapMainStarter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download" sourceFile="Download.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$1" sourceFile="Download.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$DefaultDownloadProgressListener" sourceFile="Download.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$ProxyAuthenticator" sourceFile="Download.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.DownloadProgressListener" sourceFile="DownloadProgressListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.ExclusiveFileAccessManager" sourceFile="ExclusiveFileAccessManager.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleUserHomeLookup" sourceFile="GradleUserHomeLookup.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleWrapperMain" sourceFile="GradleWrapperMain.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.IDownload" sourceFile="IDownload.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install" sourceFile="Install.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install$1" sourceFile="Install.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install$InstallCheck" sourceFile="Install.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Logger" sourceFile="Logger.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jooq.example.flyway.db.h2" total_bugs="0" total_types="7" total_size="80">
+      <ClassStats class="org.jooq.example.flyway.db.h2.DefaultCatalog" sourceFile="DefaultCatalog.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.FlywayTest" sourceFile="FlywayTest.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.Keys" sourceFile="Keys.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.Keys$ForeignKeys0" sourceFile="Keys.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.Keys$UniqueKeys0" sourceFile="Keys.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.Sequences" sourceFile="Sequences.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.Tables" sourceFile="Tables.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jooq.example.flyway.db.h2.tables" total_bugs="0" total_types="2" total_size="82">
+      <ClassStats class="org.jooq.example.flyway.db.h2.tables.Author" sourceFile="Author.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.tables.Book" sourceFile="Book.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jooq.example.flyway.db.h2.tables.records" total_bugs="0" total_types="2" total_size="186">
+      <ClassStats class="org.jooq.example.flyway.db.h2.tables.records.AuthorRecord" sourceFile="AuthorRecord.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="org.jooq.example.flyway.db.h2.tables.records.BookRecord" sourceFile="BookRecord.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="533" invocations="2953" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="5455" standardDeviationMicrosecondsPerInvocation="443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="526" invocations="2995" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="6702" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="475" invocations="2977" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="6644" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="433" invocations="3033" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="8977" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="426" invocations="3027" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="8711" standardDeviationMicrosecondsPerInvocation="391"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="385" invocations="1927" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="20753" standardDeviationMicrosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="326" invocations="2995" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="18022" standardDeviationMicrosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="301" invocations="2399" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="3516" standardDeviationMicrosecondsPerInvocation="310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="287" invocations="527" avgMicrosecondsPerInvocation="544" maxMicrosecondsPerInvocation="20845" standardDeviationMicrosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="283" invocations="527" avgMicrosecondsPerInvocation="537" maxMicrosecondsPerInvocation="20773" standardDeviationMicrosecondsPerInvocation="1421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="225" invocations="3664" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="2426" standardDeviationMicrosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="172" invocations="527" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="38622" standardDeviationMicrosecondsPerInvocation="1712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="170" invocations="2995" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="26592" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="157" invocations="345" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="57762" standardDeviationMicrosecondsPerInvocation="3413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="129" invocations="1940" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="5867" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="100" invocations="527" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="9946" standardDeviationMicrosecondsPerInvocation="539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="98" invocations="3133" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="24246" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="97" invocations="2953" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="1328" standardDeviationMicrosecondsPerInvocation="86"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="95" invocations="345" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="4935" standardDeviationMicrosecondsPerInvocation="397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="89" invocations="772" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="13676" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="88" invocations="38021" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1198" standardDeviationMicrosecondsPerInvocation="11"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="87" invocations="2857" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="2624" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="86" invocations="527" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="18350" standardDeviationMicrosecondsPerInvocation="820"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="85" invocations="345" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="4078" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="85" invocations="345" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="3585" standardDeviationMicrosecondsPerInvocation="366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="81" invocations="345" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="3049" standardDeviationMicrosecondsPerInvocation="277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="72" invocations="345" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="3185" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="70" invocations="345" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="5343" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="65" invocations="345" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="2414" standardDeviationMicrosecondsPerInvocation="237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="64" invocations="1498" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="5769" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="60" invocations="527" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="4289" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="56" invocations="345" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="2704" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="55" invocations="345" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="2053" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="53" invocations="527" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="3740" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="52" invocations="345" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="2722" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="52" invocations="345" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="2732" standardDeviationMicrosecondsPerInvocation="274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="51" invocations="361" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2496" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="50" invocations="527" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="6766" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="50" invocations="527" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="5389" standardDeviationMicrosecondsPerInvocation="283"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

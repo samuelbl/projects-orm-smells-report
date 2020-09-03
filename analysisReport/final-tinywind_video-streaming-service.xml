@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597097327000" analysisTimestamp="1597097328601" release="">
+  <Project projectName="repositorios/tinywind_video-streaming-service">
+    <Jar>repositorios/tinywind_video-streaming-service</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="kr.tinywind.springbootstreaming.model.Material">
+      <SourceLine classname="kr.tinywind.springbootstreaming.model.Material" start="18" end="99" sourcefile="Material.java" sourcepath="kr/tinywind/springbootstreaming/model/Material.java"/>
+    </Class>
+    <Field classname="kr.tinywind.springbootstreaming.model.Material" name="materialDataList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="kr.tinywind.springbootstreaming.model.Material" sourcefile="Material.java" sourcepath="kr/tinywind/springbootstreaming/model/Material.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.h2.server.web.WebServlet</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.CommandLineRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.context.embedded.ServletRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.core.io.InputStreamResource</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.AbstractPersistable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.AbstractView</MissingClass>
+    <MissingClass>org.supercsv.io.CsvBeanWriter</MissingClass>
+    <MissingClass>org.supercsv.io.ICsvBeanWriter</MissingClass>
+    <MissingClass>org.supercsv.prefs.CsvPreference</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:08:47 +0000" total_classes="12" referenced_classes="88" total_bugs="1" total_size="335" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.23" clock_seconds="1.79" peak_mbytes="147.46" alloc_mbytes="3540.00" gc_seconds="0.10" priority_1="1">
+    <PackageStats package="kr.tinywind.springbootstreaming" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="kr.tinywind.springbootstreaming.Launcher" sourceFile="Launcher.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.tinywind.springbootstreaming.config" total_bugs="0" total_types="4" total_size="73">
+      <ClassStats class="kr.tinywind.springbootstreaming.config.Constants" sourceFile="Constants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.config.DbAuthConfig" sourceFile="DbAuthConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.config.PostInitActionConfig" sourceFile="PostInitActionConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.config.StreamView" sourceFile="StreamView.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.tinywind.springbootstreaming.controller" total_bugs="0" total_types="1" total_size="69">
+      <ClassStats class="kr.tinywind.springbootstreaming.controller.MainController" sourceFile="MainController.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.tinywind.springbootstreaming.model" total_bugs="1" total_types="6" total_size="187" priority_1="1">
+      <ClassStats class="kr.tinywind.springbootstreaming.model.FileNode" sourceFile="FileNode.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.model.Material" sourceFile="Material.java" interface="false" size="44" bugs="1" priority_1="1"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.model.MaterialData" sourceFile="MaterialData.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.model.MaterialDataList" sourceFile="MaterialDataList.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.model.MaterialDataRepository" sourceFile="MaterialDataRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="kr.tinywind.springbootstreaming.model.MaterialRepository" sourceFile="MaterialRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="219" invocations="674" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="18490" standardDeviationMicrosecondsPerInvocation="1057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="86" invocations="88" avgMicrosecondsPerInvocation="986" maxMicrosecondsPerInvocation="13755" standardDeviationMicrosecondsPerInvocation="2079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="67" invocations="88" avgMicrosecondsPerInvocation="769" maxMicrosecondsPerInvocation="8034" standardDeviationMicrosecondsPerInvocation="1473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="61" invocations="286" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="3855" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="60" invocations="680" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2606" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="54" invocations="63" avgMicrosecondsPerInvocation="862" maxMicrosecondsPerInvocation="14259" standardDeviationMicrosecondsPerInvocation="2525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="63" avgMicrosecondsPerInvocation="837" maxMicrosecondsPerInvocation="11734" standardDeviationMicrosecondsPerInvocation="2000"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="52" invocations="61" avgMicrosecondsPerInvocation="857" maxMicrosecondsPerInvocation="11769" standardDeviationMicrosecondsPerInvocation="1792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="39" invocations="61" avgMicrosecondsPerInvocation="652" maxMicrosecondsPerInvocation="9203" standardDeviationMicrosecondsPerInvocation="1342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="145" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="12636" standardDeviationMicrosecondsPerInvocation="1148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="61" avgMicrosecondsPerInvocation="630" maxMicrosecondsPerInvocation="10324" standardDeviationMicrosecondsPerInvocation="1434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="37" invocations="580" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1099" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="61" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="25317" standardDeviationMicrosecondsPerInvocation="3212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="32" invocations="61" avgMicrosecondsPerInvocation="537" maxMicrosecondsPerInvocation="8684" standardDeviationMicrosecondsPerInvocation="1271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="31" invocations="88" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="7287" standardDeviationMicrosecondsPerInvocation="897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="88" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="9715" standardDeviationMicrosecondsPerInvocation="1066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="23" invocations="42" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="8236" standardDeviationMicrosecondsPerInvocation="1343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="88" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="4279" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="88" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="2503" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="88" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="2528" standardDeviationMicrosecondsPerInvocation="381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="88" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="4833" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="14" invocations="12" avgMicrosecondsPerInvocation="1248" maxMicrosecondsPerInvocation="9775" standardDeviationMicrosecondsPerInvocation="2918"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

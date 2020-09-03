@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597099336000" analysisTimestamp="1597099338091" release="">
+  <Project projectName="repositorios/moifort_play-with-hexagonal-architecture">
+    <Jar>repositorios/moifort_play-with-hexagonal-architecture</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="persistence.sql.entity.File">
+      <SourceLine classname="persistence.sql.entity.File" start="7" end="64" sourcefile="File.java" sourcepath="persistence/sql/entity/File.java"/>
+    </Class>
+    <Field classname="persistence.sql.entity.File" name="owner" signature="Lpersistence/sql/entity/User;" isStatic="false">
+      <SourceLine classname="persistence.sql.entity.File" sourcefile="File.java" sourcepath="persistence/sql/entity/File.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>io.dropwizard.Application</MissingClass>
+    <MissingClass>io.dropwizard.Configuration</MissingClass>
+    <MissingClass>io.dropwizard.jersey.setup.JerseyEnvironment</MissingClass>
+    <MissingClass>io.dropwizard.setup.Environment</MissingClass>
+    <MissingClass>javax.mail.Authenticator</MissingClass>
+    <MissingClass>javax.mail.Message</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.PasswordAuthentication</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+    <MissingClass>org.jibble.pircbot.PircBot</MissingClass>
+    <MissingClass>org.mapstruct.factory.Mappers</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:42:16 +0000" total_classes="93" referenced_classes="212" total_bugs="1" total_size="1958" num_packages="29" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.30" clock_seconds="3.46" peak_mbytes="337.76" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="1">
+    <PackageStats package="application.commandline" total_bugs="0" total_types="1" total_size="41">
+      <ClassStats class="application.commandline.Application" sourceFile="Application.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="application.rest" total_bugs="0" total_types="1" total_size="26">
+      <ClassStats class="application.rest.RestApplication" sourceFile="RestApplication.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="application.rest.configuration" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="application.rest.configuration.CORSResponseFilter" sourceFile="CORSResponseFilter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="application.rest.configuration.RestConfiguration" sourceFile="RestConfiguration.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="application.rest.dto" total_bugs="0" total_types="3" total_size="69">
+      <ClassStats class="application.rest.dto.FileDTO" sourceFile="FileDTO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="application.rest.dto.NotificationConfigurationDTO" sourceFile="NotificationConfigurationDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="application.rest.dto.NotificationServiceConfigurationDTO" sourceFile="NotificationServiceConfigurationDTO.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="application.rest.mapper" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="application.rest.mapper.FileDTOMapper" sourceFile="FileDTOMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="application.rest.mapper.FileDTOMapperImpl" sourceFile="FileDTOMapperImpl.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="application.rest.resource" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="application.rest.resource.FileManagerResource" sourceFile="FileManagerResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="application.rest.resource.NotificationCenterResource" sourceFile="NotificationCenterResource.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.filemanager.api" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="domain.filemanager.api.FileManagerService" sourceFile="FileManagerService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.filemanager.api.entity" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="domain.filemanager.api.entity.File" sourceFile="File.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="domain.filemanager.api.entity.Permission" sourceFile="Permission.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.filemanager.api.exception" total_bugs="0" total_types="2" total_size="6">
+      <ClassStats class="domain.filemanager.api.exception.AccessDeniedException" sourceFile="AccessDeniedException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="domain.filemanager.api.exception.FileNotFoundException" sourceFile="FileNotFoundException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.filemanager.core" total_bugs="0" total_types="3" total_size="87">
+      <ClassStats class="domain.filemanager.core.EmptyFileEventNotification" sourceFile="EmptyFileEventNotification.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="domain.filemanager.core.FileAccessService" sourceFile="FileAccessService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="domain.filemanager.core.FileManagerServiceImpl" sourceFile="FileManagerServiceImpl.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.filemanager.spi" total_bugs="0" total_types="3" total_size="26">
+      <ClassStats class="domain.filemanager.spi.FileEventNotification" sourceFile="FileEventNotification.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="domain.filemanager.spi.FileEventNotification$Type" sourceFile="FileEventNotification.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="domain.filemanager.spi.FileRepository" sourceFile="FileRepository.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.notificationcenter.api" total_bugs="0" total_types="2" total_size="6">
+      <ClassStats class="domain.notificationcenter.api.NotificationCenterService" sourceFile="NotificationCenterService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="domain.notificationcenter.api.NotificationServiceConfiguration" sourceFile="NotificationServiceConfiguration.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.notificationcenter.api.exception" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="domain.notificationcenter.api.exception.ServiceNotificationInternalException" sourceFile="ServiceNotificationInternalException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="domain.notificationcenter.api.exception.UnknownNotificationServiceException" sourceFile="UnknownNotificationServiceException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.notificationcenter.core" total_bugs="0" total_types="2" total_size="61">
+      <ClassStats class="domain.notificationcenter.core.NotificationCenterServiceImpl" sourceFile="NotificationCenterServiceImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="domain.notificationcenter.core.NotificationServiceConfigurationImpl" sourceFile="NotificationServiceConfigurationImpl.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="domain.notificationcenter.spi" total_bugs="0" total_types="3" total_size="9">
+      <ClassStats class="domain.notificationcenter.spi.NotificationService" sourceFile="NotificationService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="domain.notificationcenter.spi.NotificationSettingRepository" sourceFile="NotificationSettingRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="domain.notificationcenter.spi.ServiceConfigurationRepository" sourceFile="ServiceConfigurationRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="notification.irc" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="notification.irc.IrcNotification" sourceFile="IrcNotification.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="notification.irc.MyBot" sourceFile="MyBot.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="notification.irc.configuration" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="notification.irc.configuration.IrcConfiguration" sourceFile="IrcConfiguration.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="notification.irc.configuration.IrcConfigurationBuilder" sourceFile="IrcConfigurationBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="notification.irc.configuration.IrcConfigurationParser" sourceFile="IrcConfigurationParser.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="notification.mail" total_bugs="0" total_types="2" total_size="53">
+      <ClassStats class="notification.mail.MailNotification" sourceFile="MailNotification.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="notification.mail.MailNotification$1" sourceFile="MailNotification.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="notification.mail.configuration" total_bugs="0" total_types="3" total_size="29">
+      <ClassStats class="notification.mail.configuration.MailConfiguration" sourceFile="MailConfiguration.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="notification.mail.configuration.MailConfigurationBuilder" sourceFile="MailConfigurationBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="notification.mail.configuration.MailConfigurationParser" sourceFile="MailConfigurationParser.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="444">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="24" total_size="528">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.inmemory.entity" total_bugs="0" total_types="1" total_size="39">
+      <ClassStats class="persistence.inmemory.entity.File" sourceFile="File.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.inmemory.repository" total_bugs="0" total_types="3" total_size="125">
+      <ClassStats class="persistence.inmemory.repository.InMemoryRepositoryNotification" sourceFile="InMemoryRepositoryNotification.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="persistence.inmemory.repository.InMemoryRepositoryNotification$ConfigurationSettingKey" sourceFile="InMemoryRepositoryNotification.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="persistence.inmemory.repository.InMemoryRepositoryNotification$SettingKey" sourceFile="InMemoryRepositoryNotification.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="persistence.sql.PersistenceConfiguration" sourceFile="PersistenceConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="persistence.sql.SQLPersistence" sourceFile="SQLPersistence.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql.adapter" total_bugs="0" total_types="2" total_size="69">
+      <ClassStats class="persistence.sql.adapter.FileAdpater" sourceFile="FileAdpater.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="persistence.sql.adapter.FileRepositoryAdapter" sourceFile="FileRepositoryAdapter.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql.entity" total_bugs="1" total_types="3" total_size="75" priority_2="1">
+      <ClassStats class="persistence.sql.entity.File" sourceFile="File.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="persistence.sql.entity.Permission" sourceFile="Permission.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="persistence.sql.entity.User" sourceFile="User.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql.factory" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="persistence.sql.factory.FileFactory" sourceFile="FileFactory.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql.mapper" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="persistence.sql.mapper.FileMapper" sourceFile="FileMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="persistence.sql.mapper.FileMapperImpl" sourceFile="FileMapperImpl.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="persistence.sql.repository" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="persistence.sql.repository.FileRepository" sourceFile="FileRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="persistence.sql.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="274" invocations="1084" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="16687" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="149" invocations="212" avgMicrosecondsPerInvocation="703" maxMicrosecondsPerInvocation="12242" standardDeviationMicrosecondsPerInvocation="1458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="139" invocations="409" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="17371" standardDeviationMicrosecondsPerInvocation="1120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="122" invocations="405" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="6922" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="118" invocations="212" avgMicrosecondsPerInvocation="560" maxMicrosecondsPerInvocation="6968" standardDeviationMicrosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="111" invocations="410" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="10410" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="108" invocations="397" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="4368" standardDeviationMicrosecondsPerInvocation="473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="104" invocations="404" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="7761" standardDeviationMicrosecondsPerInvocation="611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="101" invocations="862" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="1704" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="94" invocations="405" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="10627" standardDeviationMicrosecondsPerInvocation="575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="1087" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="829" standardDeviationMicrosecondsPerInvocation="48"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="75" invocations="297" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="5871" standardDeviationMicrosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="59" invocations="976" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="14282" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="453" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="25050" standardDeviationMicrosecondsPerInvocation="1174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="55" invocations="298" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="14687" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="52" invocations="212" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="3599" standardDeviationMicrosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="42" invocations="212" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="4958" standardDeviationMicrosecondsPerInvocation="586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="36" invocations="93" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="6215" standardDeviationMicrosecondsPerInvocation="1141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="36" invocations="212" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="5077" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="212" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="6876" standardDeviationMicrosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="212" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2086" standardDeviationMicrosecondsPerInvocation="255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="212" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="1719" standardDeviationMicrosecondsPerInvocation="285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="30" invocations="212" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="7746" standardDeviationMicrosecondsPerInvocation="725"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="28" invocations="405" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="1340" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="27" invocations="36" avgMicrosecondsPerInvocation="754" maxMicrosecondsPerInvocation="2003" standardDeviationMicrosecondsPerInvocation="473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="26" invocations="51" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="3519" standardDeviationMicrosecondsPerInvocation="829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="6136" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="826" standardDeviationMicrosecondsPerInvocation="19"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="93" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="3664" standardDeviationMicrosecondsPerInvocation="424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="23" invocations="93" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="2526" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="20" invocations="212" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="1693" standardDeviationMicrosecondsPerInvocation="190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="19" invocations="212" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1915" standardDeviationMicrosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="19" invocations="93" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="2649" standardDeviationMicrosecondsPerInvocation="312"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

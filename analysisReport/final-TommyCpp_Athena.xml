@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597101904000" analysisTimestamp="1597101905470" release="">
+  <Project projectName="repositorios/TommyCpp_Athena">
+    <Jar>repositorios/TommyCpp_Athena</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="17" missingClasses="121">
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Book using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Book using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.security.BlockRecord using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.security.BlockRecord using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Audio using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Audio using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.SimpleCopy using detector com.ufpe.badsmells.OneToManyCollectionsDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getField called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getField(PreorderVisitor.java:562)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.collectionVerify(OneToManyCollectionsDetector.java:35)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.OneToManyCollectionsDetector.visitAnnotation(OneToManyCollectionsDetector.java:31)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.BookCopy using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.BookCopy using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.AudioCopy using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.AudioCopy using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Journal using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.publication.Journal using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.borrow.Borrow using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.borrow.Borrow using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.JournalCopy using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.athena.model.copy.JournalCopy using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.fasterxml.jackson.databind.BeanDescription</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationConfig</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.introspect.AnnotatedField</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.introspect.BeanPropertyDefinition</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.type.TypeFactory</MissingClass>
+    <MissingClass>com.github.stuxuhai.jpinyin.PinyinFormat</MissingClass>
+    <MissingClass>com.github.stuxuhai.jpinyin.PinyinHelper</MissingClass>
+    <MissingClass>com.google.common.base.Charsets</MissingClass>
+    <MissingClass>com.google.common.io.CharSource</MissingClass>
+    <MissingClass>com.google.common.io.Files</MissingClass>
+    <MissingClass>com.mongodb.BasicDBObject</MissingClass>
+    <MissingClass>com.mongodb.DBObject</MissingClass>
+    <MissingClass>com.mongodb.MongoClientOptions$Builder</MissingClass>
+    <MissingClass>com.mongodb.MongoGridFSException</MissingClass>
+    <MissingClass>com.mongodb.gridfs.GridFSDBFile</MissingClass>
+    <MissingClass>com.mongodb.gridfs.GridFSFile</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.ExpiredJwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.MalformedJwtException</MissingClass>
+    <MissingClass>io.jsonwebtoken.SignatureAlgorithm</MissingClass>
+    <MissingClass>io.jsonwebtoken.SignatureException</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityNotFoundException</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.text.StrSubstitutor</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.support.PropertySourcesPlaceholderConfigurer</MissingClass>
+    <MissingClass>org.springframework.core.MethodParameter</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.dao.DataAccessException</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specifications</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.MongoTemplate</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Criteria</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.core.query.Query</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.gridfs.GridFsTemplate</MissingClass>
+    <MissingClass>org.springframework.data.mongodb.repository.MongoRepository</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.RedisTemplate</MissingClass>
+    <MissingClass>org.springframework.data.redis.core.ValueOperations</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.Database</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationServiceException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CorsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.util.DigestUtils</MissingClass>
+    <MissingClass>org.springframework.util.InvalidMimeTypeException</MissingClass>
+    <MissingClass>org.springframework.util.MimeType</MissingClass>
+    <MissingClass>org.springframework.util.MimeTypeUtils</MissingClass>
+    <MissingClass>org.springframework.util.MultiValueMap</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.springframework.web.cors.CorsConfiguration</MissingClass>
+    <MissingClass>org.springframework.web.cors.UrlBasedCorsConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.method.support.HandlerMethodArgumentResolver</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.multipart.support.MissingServletRequestPartException</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.socket.handler.TextWebSocketHandler</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.ApiKey</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:25:04 +0000" total_classes="179" referenced_classes="324" total_bugs="0" total_size="4501" num_packages="37" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="17.42" clock_seconds="4.91" peak_mbytes="467.41" alloc_mbytes="3540.00" gc_seconds="0.20">
+    <PackageStats package="com.athena" total_bugs="0" total_types="1" total_size="45">
+      <ClassStats class="com.athena.AthenaApplication" sourceFile="AthenaApplication.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.annotation" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.athena.annotation.ArgumentNotNull" sourceFile="ArgumentNotNull.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.athena.annotation.PublicationSearchParam" sourceFile="PublicationSearchParam.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.aspect" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.athena.aspect.NotNullArgumentAspect" sourceFile="NotNullArgumentAspect.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.config" total_bugs="0" total_types="3" total_size="63">
+      <ClassStats class="com.athena.config.ConstantConfig" sourceFile="ConstantConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.athena.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.athena.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.controller" total_bugs="0" total_types="9" total_size="216">
+      <ClassStats class="com.athena.controller.AdminController" sourceFile="AdminController.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.athena.controller.AudioController" sourceFile="AudioController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.athena.controller.BatchController" sourceFile="BatchController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.athena.controller.BookController" sourceFile="BookController.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.athena.controller.CopyController" sourceFile="CopyController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.athena.controller.CopyDamageReportController" sourceFile="CopyDamageReportController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.controller.JournalController" sourceFile="JournalController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.athena.controller.PublisherController" sourceFile="PublisherController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.athena.controller.UserController" sourceFile="UserController.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.exception" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.athena.exception.BaseException" sourceFile="BaseException.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.exception.http" total_bugs="0" total_types="13" total_size="104">
+      <ClassStats class="com.athena.exception.http.BookNotFoundException" sourceFile="BookNotFoundException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.IllegalBorrowRequest" sourceFile="IllegalBorrowRequest.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.IllegalEntityAttributeException" sourceFile="IllegalEntityAttributeException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.IllegalReturnRequest" sourceFile="IllegalReturnRequest.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.InvalidCopyTypeException" sourceFile="InvalidCopyTypeException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.IsbnAndCopyIdMismatchException" sourceFile="IsbnAndCopyIdMismatchException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.MixedCopyTypeException" sourceFile="MixedCopyTypeException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.PermissionRequiredException" sourceFile="PermissionRequiredException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.ResourceNotDeletable" sourceFile="ResourceNotDeletable.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.ResourceNotFoundByIdException" sourceFile="ResourceNotFoundByIdException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.UnsupportedHttpRequestParam" sourceFile="UnsupportedHttpRequestParam.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.athena.exception.http.UserNotFoundException" sourceFile="UserNotFoundException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.exception.internal" total_bugs="0" total_types="8" total_size="82">
+      <ClassStats class="com.athena.exception.internal.AccountNotFoundException" sourceFile="AccountNotFoundException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.AuthMethodNotSupportedException" sourceFile="AuthMethodNotSupportedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.BatchStoreException" sourceFile="BatchStoreException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.CannotPartialUpdateIdFieldException" sourceFile="CannotPartialUpdateIdFieldException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.DataException" sourceFile="DataException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.EntityAttributeNotFoundException" sourceFile="EntityAttributeNotFoundException.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.JwtAuthException" sourceFile="JwtAuthException.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.athena.exception.internal.NotCopyException" sourceFile="NotCopyException.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.exceptionhandler" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="com.athena.exceptionhandler.DataExceptionHandler" sourceFile="DataExceptionHandler.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.athena.exceptionhandler.EntityAttributeNotFoundExceptionHandler" sourceFile="EntityAttributeNotFoundExceptionHandler.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.borrow" total_bugs="0" total_types="1" total_size="70">
+      <ClassStats class="com.athena.model.borrow.Borrow" sourceFile="Borrow.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.common" total_bugs="0" total_types="1" total_size="45">
+      <ClassStats class="com.athena.model.common.Batch" sourceFile="Batch.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.conveter" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.athena.model.conveter.WriterConverter" sourceFile="WriterConverter.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.copy" total_bugs="0" total_types="10" total_size="253">
+      <ClassStats class="com.athena.model.copy.AbstractCopy" sourceFile="AbstractCopy.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.AudioCopy" sourceFile="AudioCopy.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.BookCopy" sourceFile="BookCopy.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.CopyDamageReport" sourceFile="CopyDamageReport.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.CopyStatus" sourceFile="CopyStatus.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.CopyVerficationVo" sourceFile="CopyVerficationVo.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.CopyVo" sourceFile="CopyVo.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.JournalCopy" sourceFile="JournalCopy.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.PublicationCopy" sourceFile="PublicationCopy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.athena.model.copy.SimpleCopy" sourceFile="SimpleCopy.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.listener" total_bugs="0" total_types="6" total_size="44">
+      <ClassStats class="com.athena.model.listener.AudioListener" sourceFile="AudioListener.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.model.listener.BookListener" sourceFile="BookListener.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.model.listener.BorrowListener" sourceFile="BorrowListener.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.athena.model.listener.JournalListener" sourceFile="JournalListener.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.model.listener.PublicationListener" sourceFile="PublicationListener.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.athena.model.listener.UserListener" sourceFile="UserListener.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.message" total_bugs="0" total_types="4" total_size="48">
+      <ClassStats class="com.athena.model.message.AbstractUserGroup" sourceFile="AbstractUserGroup.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.athena.model.message.AuthorityUserGroup" sourceFile="AuthorityUserGroup.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.athena.model.message.Message" sourceFile="Message.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.athena.model.message.TemplateMessage" sourceFile="TemplateMessage.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.publication" total_bugs="0" total_types="6" total_size="435">
+      <ClassStats class="com.athena.model.publication.Audio" sourceFile="Audio.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.Book" sourceFile="Book.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.Journal" sourceFile="Journal.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.JournalPK" sourceFile="JournalPK.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.Publication" sourceFile="Publication.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.Publisher" sourceFile="Publisher.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.publication.search" total_bugs="0" total_types="6" total_size="218">
+      <ClassStats class="com.athena.model.publication.search.AbstractPublicationSearchVo" sourceFile="AbstractPublicationSearchVo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.search.AudioSearchVo" sourceFile="AudioSearchVo.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.search.BookSearchVo" sourceFile="BookSearchVo.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.search.JournalSearchVo" sourceFile="JournalSearchVo.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.search.PublicationSearchVo" sourceFile="PublicationSearchVo.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="com.athena.model.publication.search.SearchVo" sourceFile="SearchVo.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.model.security" total_bugs="0" total_types="5" total_size="273">
+      <ClassStats class="com.athena.model.security.Account" sourceFile="Account.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.athena.model.security.BlockRecord" sourceFile="BlockRecord.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.athena.model.security.JwtAuthenticationToken" sourceFile="JwtAuthenticationToken.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.athena.model.security.NewUserVo" sourceFile="NewUserVo.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.athena.model.security.User" sourceFile="User.java" interface="false" size="81" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.repository.jpa" total_bugs="0" total_types="11" total_size="67">
+      <ClassStats class="com.athena.repository.jpa.AudioRepository" sourceFile="AudioRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BlockRecordRepository" sourceFile="BlockRecordRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BookRepository" sourceFile="BookRepository.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BookRepositoryImpl" sourceFile="BookRepositoryImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BorrowRepository" sourceFile="BorrowRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BorrowRepositoryCustom" sourceFile="BorrowRepositoryCustom.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.BorrowRepositoryImpl" sourceFile="BorrowRepositoryImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.CustomBookRepository" sourceFile="CustomBookRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.JournalRepository" sourceFile="JournalRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.PublisherRepository" sourceFile="PublisherRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.repository.jpa.copy" total_bugs="0" total_types="8" total_size="128">
+      <ClassStats class="com.athena.repository.jpa.copy.AudioCopyRepository" sourceFile="AudioCopyRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.AudioCopyRepositoryImpl" sourceFile="AudioCopyRepositoryImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.BookCopyRepository" sourceFile="BookCopyRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.BookCopyRepositoryImpl" sourceFile="BookCopyRepositoryImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.CopyRepositoryCustom" sourceFile="CopyRepositoryCustom.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.JournalCopyRepository" sourceFile="JournalCopyRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.JournalCopyRepositoryImpl" sourceFile="JournalCopyRepositoryImpl.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.athena.repository.jpa.copy.SimpleCopyRepository" sourceFile="SimpleCopyRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.repository.mongo" total_bugs="0" total_types="4" total_size="46">
+      <ClassStats class="com.athena.repository.mongo.BatchRepository" sourceFile="BatchRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.athena.repository.mongo.CopyDamageReportRepository" sourceFile="CopyDamageReportRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.athena.repository.mongo.CopyDamageReportRepositoryImpl" sourceFile="CopyDamageReportRepositoryImpl.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.athena.repository.mongo.CustomCopyDamageReportRepository" sourceFile="CustomCopyDamageReportRepository.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="com.athena.service.ModelCRUDService" sourceFile="ModelCRUDService.java" interface="true" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.borrow" total_bugs="0" total_types="4" total_size="154">
+      <ClassStats class="com.athena.service.borrow.BlockService" sourceFile="BlockService.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.athena.service.borrow.BorrowService" sourceFile="BorrowService.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.athena.service.borrow.BorrowVerificationService" sourceFile="BorrowVerificationService.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.athena.service.borrow.PublicationDamagedHandler" sourceFile="PublicationDamagedHandler.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.copy" total_bugs="0" total_types="7" total_size="309">
+      <ClassStats class="com.athena.service.copy.AudioCopyService" sourceFile="AudioCopyService.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.BookCopyService" sourceFile="BookCopyService.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.CopyDamageReportService" sourceFile="CopyDamageReportService.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.CopyService" sourceFile="CopyService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.GenericCopyService" sourceFile="GenericCopyService.java" interface="true" size="29" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.JournalCopyService" sourceFile="JournalCopyService.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.athena.service.copy.SimpleCopyService" sourceFile="SimpleCopyService.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.message" total_bugs="0" total_types="2" total_size="13">
+      <ClassStats class="com.athena.service.message.MessageService" sourceFile="MessageService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.athena.service.message.SystemMessageService" sourceFile="SystemMessageService.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.publication" total_bugs="0" total_types="5" total_size="266">
+      <ClassStats class="com.athena.service.publication.AudioService" sourceFile="AudioService.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.athena.service.publication.BookService" sourceFile="BookService.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.athena.service.publication.JournalService" sourceFile="JournalService.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.athena.service.publication.PublicationService" sourceFile="PublicationService.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="com.athena.service.publication.PublisherService" sourceFile="PublisherService.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.security" total_bugs="0" total_types="6" total_size="215">
+      <ClassStats class="com.athena.service.security.AccountService" sourceFile="AccountService.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.athena.service.security.AuthenticationEntryPoint" sourceFile="AuthenticationEntryPoint.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.athena.service.security.JwtAuthenticationProvider" sourceFile="JwtAuthenticationProvider.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.athena.service.security.PrivilegeService" sourceFile="PrivilegeService.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.athena.service.security.TokenAuthenticationService" sourceFile="TokenAuthenticationService.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.athena.service.security.UserService" sourceFile="UserService.java" interface="false" size="65" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.service.util" total_bugs="0" total_types="3" total_size="92">
+      <ClassStats class="com.athena.service.util.BatchService" sourceFile="BatchService.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.athena.service.util.PageableHeaderService" sourceFile="PageableHeaderService.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.athena.service.util.RateLimitService" sourceFile="RateLimitService.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util" total_bugs="0" total_types="4" total_size="110">
+      <ClassStats class="com.athena.util.EntityUtil" sourceFile="EntityUtil.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.athena.util.ListUtil" sourceFile="ListUtil.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.athena.util.TemplateBuilder" sourceFile="TemplateBuilder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.athena.util.VariableNameUtil" sourceFile="VariableNameUtil.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.filter" total_bugs="0" total_types="3" total_size="50">
+      <ClassStats class="com.athena.util.filter.JwtAuthenticationFilter" sourceFile="JwtAuthenticationFilter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.athena.util.filter.JwtLoginFilter" sourceFile="JwtLoginFilter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.athena.util.filter.SecurityInitializer" sourceFile="SecurityInitializer.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.interceptor" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.athena.util.interceptor.RateLimitInterceptor" sourceFile="RateLimitInterceptor.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.messager" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.athena.util.messager.Messenger" sourceFile="Messenger.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.messager.email" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.athena.util.messager.email.EmailMessenger" sourceFile="EmailMessenger.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.messager.websocket" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.athena.util.messager.websocket.WebSocketMessenger" sourceFile="WebSocketMessenger.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.athena.util.publication.search" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="com.athena.util.publication.search.PublicationSearchParamResolver" sourceFile="PublicationSearchParamResolver.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="444">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$1" sourceFile="DefaultDownloader.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="24" total_size="528">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="347" invocations="1477" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="31110" standardDeviationMicrosecondsPerInvocation="982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="201" invocations="1042" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="16791" standardDeviationMicrosecondsPerInvocation="613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="199" invocations="1054" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="11738" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="173" invocations="1017" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="11501" standardDeviationMicrosecondsPerInvocation="501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="171" invocations="324" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="11827" standardDeviationMicrosecondsPerInvocation="1118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="170" invocations="889" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="4879" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="164" invocations="1054" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="10210" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="144" invocations="1042" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="8551" standardDeviationMicrosecondsPerInvocation="327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="141" invocations="324" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="7620" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="135" invocations="1567" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="8488" standardDeviationMicrosecondsPerInvocation="287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="118" invocations="742" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="4899" standardDeviationMicrosecondsPerInvocation="373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="109" invocations="1189" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="28113" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="106" invocations="1490" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="3403" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="76" invocations="1148" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="25073" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="482" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="13112" standardDeviationMicrosecondsPerInvocation="682"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="61" invocations="324" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="2758" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="60" invocations="179" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="5842" standardDeviationMicrosecondsPerInvocation="950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="51" invocations="324" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="3110" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="49" invocations="1042" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1903" standardDeviationMicrosecondsPerInvocation="112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="49" invocations="13339" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="1261" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="48" invocations="324" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="2780" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="45" invocations="324" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="4975" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="43" invocations="179" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="2214" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="40" invocations="324" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="6184" standardDeviationMicrosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="39" invocations="179" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="3413" standardDeviationMicrosecondsPerInvocation="300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="34" invocations="179" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1123" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="33" invocations="179" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="911" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="33" invocations="324" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="1723" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="30" invocations="179" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="9660" standardDeviationMicrosecondsPerInvocation="722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="28" invocations="324" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2887" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="28" invocations="179" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="1201" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="28" invocations="179" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="4232" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="27" invocations="179" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="2202" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="26" invocations="850" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="1630" standardDeviationMicrosecondsPerInvocation="77"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="26" invocations="324" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="6827" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="25" invocations="889" avgMicrosecondsPerInvocation="28" maxMicrosecondsPerInvocation="629" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="24" invocations="179" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="2684" standardDeviationMicrosecondsPerInvocation="259"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092130000" analysisTimestamp="1597092132277" release="">
+  <Project projectName="repositorios/rtatol_dropwizard-guice-jpa-eclipselink">
+    <Jar>repositorios/rtatol_dropwizard-guice-jpa-eclipselink</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.example.dw.jpa.dao.DaoImpl">
+      <SourceLine classname="com.example.dw.jpa.dao.DaoImpl" start="20" end="64" sourcefile="DaoImpl.java" sourcepath="com/example/dw/jpa/dao/DaoImpl.java"/>
+    </Class>
+    <Method classname="com.example.dw.jpa.dao.DaoImpl" name="findAll" signature="(Ljava/lang/Class;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.example.dw.jpa.dao.DaoImpl" start="51" end="52" startBytecode="0" endBytecode="106" sourcefile="DaoImpl.java" sourcepath="com/example/dw/jpa/dao/DaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.example.dw.jpa.dao.DaoImpl" start="51" end="51" startBytecode="0" endBytecode="0" sourcefile="DaoImpl.java" sourcepath="com/example/dw/jpa/dao/DaoImpl.java"/>
+  </BugInstance>
+  <Errors errors="1" missingClasses="18">
+    <Error>
+      <ErrorMessage>Exception analyzing com.example.dw.jpa.dao.DaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.inject.AbstractModule</MissingClass>
+    <MissingClass>com.google.inject.Guice</MissingClass>
+    <MissingClass>com.google.inject.Injector</MissingClass>
+    <MissingClass>com.google.inject.Provider</MissingClass>
+    <MissingClass>com.google.inject.binder.AnnotatedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.ScopedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.persist.jpa.JpaPersistModule</MissingClass>
+    <MissingClass>io.dropwizard.Application</MissingClass>
+    <MissingClass>io.dropwizard.Configuration</MissingClass>
+    <MissingClass>io.dropwizard.jersey.setup.JerseyEnvironment</MissingClass>
+    <MissingClass>io.dropwizard.jetty.setup.ServletEnvironment</MissingClass>
+    <MissingClass>io.dropwizard.setup.Environment</MissingClass>
+    <MissingClass>io.dropwizard.util.Generics</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:42:10 +0000" total_classes="15" referenced_classes="41" total_bugs="1" total_size="230" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.26" clock_seconds="2.38" peak_mbytes="188.90" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="com.example.dw.jpa" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="com.example.dw.jpa.App" sourceFile="App.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.AppModule" sourceFile="AppModule.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.dw.jpa.config" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="com.example.dw.jpa.config.Config" sourceFile="Config.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.config.DbConfig" sourceFile="DbConfig.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.dw.jpa.dao" total_bugs="1" total_types="2" total_size="39" priority_2="1">
+      <ClassStats class="com.example.dw.jpa.dao.Dao" sourceFile="Dao.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.dao.DaoImpl" sourceFile="DaoImpl.java" interface="false" size="31" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.example.dw.jpa.entity" total_bugs="0" total_types="3" total_size="57">
+      <ClassStats class="com.example.dw.jpa.entity.AbstractEntity" sourceFile="AbstractEntity.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.entity.Player" sourceFile="Player.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.entity.Score" sourceFile="Score.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.dw.jpa.resource" total_bugs="0" total_types="3" total_size="32">
+      <ClassStats class="com.example.dw.jpa.resource.HomeResource" sourceFile="HomeResource.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.resource.HomeResource$HelloMessage" sourceFile="HomeResource.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.resource.PlayerResource" sourceFile="PlayerResource.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.dw.jpa.service" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="com.example.dw.jpa.service.AbstractService" sourceFile="AbstractService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.service.PlayerService" sourceFile="PlayerService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.example.dw.jpa.service.ScoreService" sourceFile="ScoreService.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="284" invocations="461" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="16896" standardDeviationMicrosecondsPerInvocation="1450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="88" invocations="468" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="9733" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="87" invocations="41" avgMicrosecondsPerInvocation="2137" maxMicrosecondsPerInvocation="14890" standardDeviationMicrosecondsPerInvocation="3618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="82" invocations="67" avgMicrosecondsPerInvocation="1225" maxMicrosecondsPerInvocation="10393" standardDeviationMicrosecondsPerInvocation="2366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="77" invocations="41" avgMicrosecondsPerInvocation="1886" maxMicrosecondsPerInvocation="16226" standardDeviationMicrosecondsPerInvocation="2947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="70" invocations="67" avgMicrosecondsPerInvocation="1052" maxMicrosecondsPerInvocation="26389" standardDeviationMicrosecondsPerInvocation="3395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="68" invocations="171" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="6829" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="63" invocations="74" avgMicrosecondsPerInvocation="857" maxMicrosecondsPerInvocation="35394" standardDeviationMicrosecondsPerInvocation="4242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="62" invocations="67" avgMicrosecondsPerInvocation="936" maxMicrosecondsPerInvocation="20453" standardDeviationMicrosecondsPerInvocation="2747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="370" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="6352" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="52" invocations="66" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="7716" standardDeviationMicrosecondsPerInvocation="1331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="48" invocations="90" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="16219" standardDeviationMicrosecondsPerInvocation="1929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="67" avgMicrosecondsPerInvocation="695" maxMicrosecondsPerInvocation="13439" standardDeviationMicrosecondsPerInvocation="1749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="44" invocations="67" avgMicrosecondsPerInvocation="662" maxMicrosecondsPerInvocation="17811" standardDeviationMicrosecondsPerInvocation="2195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="42" invocations="41" avgMicrosecondsPerInvocation="1047" maxMicrosecondsPerInvocation="13614" standardDeviationMicrosecondsPerInvocation="2556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="34" invocations="41" avgMicrosecondsPerInvocation="846" maxMicrosecondsPerInvocation="11561" standardDeviationMicrosecondsPerInvocation="2075"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="41" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="6680" standardDeviationMicrosecondsPerInvocation="1308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="41" avgMicrosecondsPerInvocation="625" maxMicrosecondsPerInvocation="13519" standardDeviationMicrosecondsPerInvocation="2089"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="41" avgMicrosecondsPerInvocation="602" maxMicrosecondsPerInvocation="13289" standardDeviationMicrosecondsPerInvocation="2044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="41" avgMicrosecondsPerInvocation="557" maxMicrosecondsPerInvocation="4324" standardDeviationMicrosecondsPerInvocation="988"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

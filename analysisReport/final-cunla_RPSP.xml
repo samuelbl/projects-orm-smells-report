@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596947818000" analysisTimestamp="1596947819229" release="">
+  <Project projectName="repositorios/cunla_RPSP">
+    <Jar>repositorios/cunla_RPSP</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.backupsystems.BackupSystemsRepository">
+      <SourceLine classname="com.emc.rpsp.backupsystems.BackupSystemsRepository" sourcefile="BackupSystemsRepository.java" sourcepath="com/emc/rpsp/backupsystems/BackupSystemsRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.backupsystems.BackupSystemsRepository" name="findVmByName" signature="(Ljava/lang/String;)Lcom/emc/rpsp/backupsystems/VmBackup;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.backupsystems.BackupSystemsRepository" sourcefile="BackupSystemsRepository.java" sourcepath="com/emc/rpsp/backupsystems/BackupSystemsRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.backupsystems.VmBackupRepository">
+      <SourceLine classname="com.emc.rpsp.backupsystems.VmBackupRepository" sourcefile="VmBackupRepository.java" sourcepath="com/emc/rpsp/backupsystems/VmBackupRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.backupsystems.VmBackupRepository" name="findByName" signature="(Ljava/lang/String;)Lcom/emc/rpsp/backupsystems/VmBackup;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.backupsystems.VmBackupRepository" sourcefile="VmBackupRepository.java" sourcepath="com/emc/rpsp/backupsystems/VmBackupRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.backupsystems.VmBackupRepository">
+      <SourceLine classname="com.emc.rpsp.backupsystems.VmBackupRepository" sourcefile="VmBackupRepository.java" sourcepath="com/emc/rpsp/backupsystems/VmBackupRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.backupsystems.VmBackupRepository" name="findByVmId" signature="(Ljava/lang/String;)Lcom/emc/rpsp/backupsystems/VmBackup;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.backupsystems.VmBackupRepository" sourcefile="VmBackupRepository.java" sourcepath="com/emc/rpsp/backupsystems/VmBackupRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.packages.domain.PackageDefinition">
+      <SourceLine classname="com.emc.rpsp.packages.domain.PackageDefinition" start="22" end="515" sourcefile="PackageDefinition.java" sourcepath="com/emc/rpsp/packages/domain/PackageDefinition.java"/>
+    </Class>
+    <Field classname="com.emc.rpsp.packages.domain.PackageDefinition" name="systemSettings" signature="Lcom/emc/rpsp/rpsystems/SystemSettings;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.packages.domain.PackageDefinition" sourcefile="PackageDefinition.java" sourcepath="com/emc/rpsp/packages/domain/PackageDefinition.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.rpsystems.SystemSettings">
+      <SourceLine classname="com.emc.rpsp.rpsystems.SystemSettings" start="95" end="230" sourcefile="SystemSettings.java" sourcepath="com/emc/rpsp/rpsystems/SystemSettings.java"/>
+    </Class>
+    <Field classname="com.emc.rpsp.rpsystems.SystemSettings" name="clusters" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.rpsystems.SystemSettings" sourcefile="SystemSettings.java" sourcepath="com/emc/rpsp/rpsystems/SystemSettings.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.domain.User">
+      <SourceLine classname="com.emc.rpsp.users.domain.User" start="19" end="229" sourcefile="User.java" sourcepath="com/emc/rpsp/users/domain/User.java"/>
+    </Class>
+    <Field classname="com.emc.rpsp.users.domain.User" name="account" signature="Lcom/emc/rpsp/accounts/domain/Account;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.users.domain.User" sourcefile="User.java" sourcepath="com/emc/rpsp/users/domain/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="findAll" signature="()Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findAll. Fields with EAGER without Join Fetch: account, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="findNotActivatedUsersByCreationDateBefore" signature="(Lorg/joda/time/DateTime;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findNotActivatedUsersByCreationDateBefore. Fields with EAGER without Join Fetch: account, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="getUserByActivationKey" signature="(Ljava/lang/String;)Lcom/emc/rpsp/users/domain/User;" isStatic="false"/>
+    <String value="Method: getUserByActivationKey. Fields with EAGER without Join Fetch: account, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="findNotActivatedUsersByCreationDateBefore" signature="(Lorg/joda/time/DateTime;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.users.repository.UserRepository">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" start="13" end="13" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="com.emc.rpsp.users.repository.UserRepository" name="getUserByActivationKey" signature="(Ljava/lang/String;)Lcom/emc/rpsp/users/domain/User;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.users.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="com/emc/rpsp/users/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.emc.rpsp.vms.domain.VmOwnership">
+      <SourceLine classname="com.emc.rpsp.vms.domain.VmOwnership" start="44" end="101" sourcefile="VmOwnership.java" sourcepath="com/emc/rpsp/vms/domain/VmOwnership.java"/>
+    </Class>
+    <Field classname="com.emc.rpsp.vms.domain.VmOwnership" name="account" signature="Lcom/emc/rpsp/accounts/domain/Account;" isStatic="false">
+      <SourceLine classname="com.emc.rpsp.vms.domain.VmOwnership" sourcefile="VmOwnership.java" sourcepath="com/emc/rpsp/vms/domain/VmOwnership.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="84">
+    <MissingClass>com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module</MissingClass>
+    <MissingClass>com.vmware.vim25.VirtualMachineCloneSpec</MissingClass>
+    <MissingClass>com.vmware.vim25.VirtualMachinePowerState</MissingClass>
+    <MissingClass>com.vmware.vim25.VirtualMachineRelocateSpec</MissingClass>
+    <MissingClass>com.vmware.vim25.VirtualMachineRuntimeInfo</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.Datacenter</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.Folder</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.InventoryNavigator</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.ManagedEntity</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.ServiceInstance</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.Task</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.VirtualMachine</MissingClass>
+    <MissingClass>com.vmware.vim25.mo.util.MorUtil</MissingClass>
+    <MissingClass>com.zaxxer.hikari.HikariConfig</MissingClass>
+    <MissingClass>com.zaxxer.hikari.HikariDataSource</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.protocol.InetAddressUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateFormatUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.tuple.ImmutablePair</MissingClass>
+    <MissingClass>org.apache.commons.lang3.tuple.Pair</MissingClass>
+    <MissingClass>org.apache.tomcat.util.codec.binary.Base64</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.codehaus.jackson.map.ObjectMapper</MissingClass>
+    <MissingClass>org.codehaus.jackson.map.type.TypeFactory</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.Banner$Mode</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.orm.jpa.JpaProperties</MissingClass>
+    <MissingClass>org.springframework.boot.bind.RelaxedPropertyResolver</MissingClass>
+    <MissingClass>org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder$Builder</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextException</MissingClass>
+    <MissingClass>org.springframework.context.EnvironmentAware</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationUtils</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.env.SimpleCommandLinePropertySource</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.rest.core.config.RepositoryRestConfiguration</MissingClass>
+    <MissingClass>org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.AuthorityUtils</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>retrofit.RequestInterceptor</MissingClass>
+    <MissingClass>retrofit.RequestInterceptor$RequestFacade</MissingClass>
+    <MissingClass>retrofit.RestAdapter</MissingClass>
+    <MissingClass>retrofit.RestAdapter$Builder</MissingClass>
+    <MissingClass>retrofit.RestAdapter$LogLevel</MissingClass>
+    <MissingClass>retrofit.converter.ConversionException</MissingClass>
+    <MissingClass>retrofit.converter.Converter</MissingClass>
+    <MissingClass>retrofit.mime.TypedByteArray</MissingClass>
+    <MissingClass>retrofit.mime.TypedInput</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 04:36:58 +0000" total_classes="899" referenced_classes="1019" total_bugs="13" total_size="31661" num_packages="89" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="47.54" clock_seconds="14.03" peak_mbytes="1011.38" alloc_mbytes="3540.00" gc_seconds="0.36" priority_2="12" priority_1="1">
+    <PackageStats package="com.emc.rpsp" total_bugs="0" total_types="4" total_size="57">
+      <ClassStats class="com.emc.rpsp.Application" sourceFile="Application.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.ExceptionInfo" sourceFile="ExceptionInfo.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.RpspException" sourceFile="RpspException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.StatesConsts" sourceFile="StatesConsts.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.accounts.controller" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="com.emc.rpsp.accounts.controller.AccountController" sourceFile="AccountController.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.accounts.domain" total_bugs="0" total_types="1" total_size="78">
+      <ClassStats class="com.emc.rpsp.accounts.domain.Account" sourceFile="Account.java" interface="false" size="78" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.accounts.repository" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.accounts.repository.AccountRepository" sourceFile="AccountRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.accounts.service" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.emc.rpsp.accounts.service.AccountService" sourceFile="AccountService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.accounts.service.impl" total_bugs="0" total_types="1" total_size="45">
+      <ClassStats class="com.emc.rpsp.accounts.service.impl.AccountServiceImpl" sourceFile="AccountServiceImpl.java" interface="false" size="45" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.backupsystems" total_bugs="3" total_types="8" total_size="367" priority_2="3">
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupApi" sourceFile="BackupApi.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupConsts" sourceFile="BackupConsts.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupImageAccessParams" sourceFile="BackupImageAccessParams.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupRestServices" sourceFile="BackupRestServices.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupSystem" sourceFile="BackupSystem.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.BackupSystemsRepository" sourceFile="BackupSystemsRepository.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.VmBackup" sourceFile="VmBackup.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.VmBackupRepository" sourceFile="VmBackupRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.backupsystems.tasks" total_bugs="0" total_types="5" total_size="133">
+      <ClassStats class="com.emc.rpsp.backupsystems.tasks.BackupWorker" sourceFile="BackupWorker.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.tasks.DisableBackupAccessTask" sourceFile="DisableBackupAccessTask.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.tasks.EnableImageAccessTask" sourceFile="EnableImageAccessTask.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.tasks.GenerateBackupTask" sourceFile="GenerateBackupTask.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.backupsystems.tasks.Task" sourceFile="Task.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.bookmarks.controller" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="com.emc.rpsp.bookmarks.controller.GroupBookmarksController" sourceFile="GroupBookmarksController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.bookmarks.controller.GroupSetBookmarksController" sourceFile="GroupSetBookmarksController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.bookmarks.service" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.emc.rpsp.bookmarks.service.GroupBookmarksService" sourceFile="GroupBookmarksService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.bookmarks.service.GroupSetBookmarksService" sourceFile="GroupSetBookmarksService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.bookmarks.service.impl" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.emc.rpsp.bookmarks.service.impl.GroupBookmarksServiceImpl" sourceFile="GroupBookmarksServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.bookmarks.service.impl.GroupSetBookmarksServiceImpl" sourceFile="GroupSetBookmarksServiceImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config" total_bugs="0" total_types="8" total_size="232">
+      <ClassStats class="com.emc.rpsp.config.AuditAspectConfiguration" sourceFile="AuditAspectConfiguration.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.Constants" sourceFile="Constants.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.Consts" sourceFile="Consts.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.DatabaseConfiguration" sourceFile="DatabaseConfiguration.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.GlobalDefaultExceptionHandler" sourceFile="GlobalDefaultExceptionHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.RESTAuthenticationSuccessHandler" sourceFile="RESTAuthenticationSuccessHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.RepositoryConfig" sourceFile="RepositoryConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config.auditing" total_bugs="0" total_types="7" total_size="120">
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditAspect" sourceFile="AuditAspect.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditConsts" sourceFile="AuditConsts.java" interface="true" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditEntry" sourceFile="AuditEntry.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditRepository" sourceFile="AuditRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditTypesHandler" sourceFile="AuditTypesHandler.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.AuditedResourceExample" sourceFile="AuditedResourceExample.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.RpspAuditException" sourceFile="RpspAuditException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config.auditing.annotations" total_bugs="0" total_types="4" total_size="8">
+      <ClassStats class="com.emc.rpsp.config.auditing.annotations.RpspAuditObject" sourceFile="RpspAuditObject.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.annotations.RpspAuditResult" sourceFile="RpspAuditResult.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.annotations.RpspAuditSubject" sourceFile="RpspAuditSubject.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.annotations.RpspAudited" sourceFile="RpspAudited.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config.auditing.cache" total_bugs="0" total_types="2" total_size="69">
+      <ClassStats class="com.emc.rpsp.config.auditing.cache.AuditedMethodDescriptor" sourceFile="AuditedMethodDescriptor.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.cache.AuditingCache" sourceFile="AuditingCache.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config.auditing.rest" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="com.emc.rpsp.config.auditing.rest.AuditLog" sourceFile="AuditLog.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.config.auditing.rest.AuditResource" sourceFile="AuditResource.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.config.auditing.rp4vm" total_bugs="0" total_types="1" total_size="206">
+      <ClassStats class="com.emc.rpsp.config.auditing.rp4vm.Rp4vmAuditTypesHandler" sourceFile="Rp4vmAuditTypesHandler.java" interface="false" size="206" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.core.service" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.emc.rpsp.core.service.BaseService" sourceFile="BaseService.java" interface="true" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.core.service.impl" total_bugs="0" total_types="1" total_size="100">
+      <ClassStats class="com.emc.rpsp.core.service.impl.BaseServiceImpl" sourceFile="BaseServiceImpl.java" interface="false" size="100" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.dataloader.controller" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.emc.rpsp.dataloader.controller.DataLoaderController" sourceFile="DataLoaderController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.dataloader.domain" total_bugs="0" total_types="1" total_size="39">
+      <ClassStats class="com.emc.rpsp.dataloader.domain.InternalData" sourceFile="InternalData.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.dataloader.service" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="com.emc.rpsp.dataloader.service.DataLoaderService" sourceFile="DataLoaderService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.dataloader.service.impl" total_bugs="0" total_types="1" total_size="167">
+      <ClassStats class="com.emc.rpsp.dataloader.service.impl.DataLoaderServiceImpl" sourceFile="DataLoaderServiceImpl.java" interface="false" size="167" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.editcg.controller" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.emc.rpsp.editcg.controller.EditGroupController" sourceFile="EditGroupController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.editcg.domain" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.emc.rpsp.editcg.domain.ConsistencyGroupChanges" sourceFile="ConsistencyGroupChanges.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.editcg.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.editcg.service.EditGroupService" sourceFile="EditGroupService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.editcg.service.impl" total_bugs="0" total_types="1" total_size="92">
+      <ClassStats class="com.emc.rpsp.editcg.service.impl.EditGroupServiceImpl" sourceFile="EditGroupServiceImpl.java" interface="false" size="92" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.exceptions" total_bugs="0" total_types="5" total_size="23">
+      <ClassStats class="com.emc.rpsp.exceptions.RpspBackupFailedException" sourceFile="RpspBackupFailedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.exceptions.RpspBackupSystemNotSetException" sourceFile="RpspBackupSystemNotSetException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.exceptions.RpspBackupVmNotFoundException" sourceFile="RpspBackupVmNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.exceptions.RpspLoadingException" sourceFile="RpspLoadingException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.exceptions.RpspParamsException" sourceFile="RpspParamsException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.failover.controller" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="com.emc.rpsp.failover.controller.GroupCopiesFailoverController" sourceFile="GroupCopiesFailoverController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.failover.controller.GroupSetFailoverController" sourceFile="GroupSetFailoverController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.failover.service" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.emc.rpsp.failover.service.GroupCopiesFailoverService" sourceFile="GroupCopiesFailoverService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.failover.service.GroupSetFailoverService" sourceFile="GroupSetFailoverService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.failover.service.impl" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.emc.rpsp.failover.service.impl.GroupCopiesFailoverServiceImpl" sourceFile="GroupCopiesFailoverServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.failover.service.impl.GroupSetFailoverServiceImpl" sourceFile="GroupSetFailoverServiceImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.fal" total_bugs="0" total_types="10" total_size="976">
+      <ClassStats class="com.emc.rpsp.fal.Client" sourceFile="Client.java" interface="false" size="808" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.ClusterConnector" sourceFile="ClusterConnector.java" interface="true" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.ClusterConnectorFactory" sourceFile="ClusterConnectorFactory.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.ClusterConnectorFactory$1" sourceFile="ClusterConnectorFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.ClusterConnectorFactory$2" sourceFile="ClusterConnectorFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.ClusterConnectorFactory$3" sourceFile="ClusterConnectorFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.DELETE_WITH_BODY" sourceFile="DELETE_WITH_BODY.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.FalController" sourceFile="FalController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.GeneralFalConsts" sourceFile="GeneralFalConsts.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.JacksonConverter" sourceFile="JacksonConverter.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.fal.commons" total_bugs="0" total_types="623" total_size="23980">
+      <ClassStats class="com.emc.rpsp.fal.commons.AccountSettings" sourceFile="AccountSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AccountState" sourceFile="AccountState.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ActivationSettingsChangesParams" sourceFile="ActivationSettingsChangesParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AddArrayManagementProviderParams" sourceFile="AddArrayManagementProviderParams.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AddArrayParams" sourceFile="AddArrayParams.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AggregatedSplitterSettings" sourceFile="AggregatedSplitterSettings.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AggregatedSplitterState" sourceFile="AggregatedSplitterState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AlertType" sourceFile="AlertType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AllClustersSANVolumesInfo" sourceFile="AllClustersSANVolumesInfo.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayBasedSplitterSettings" sourceFile="ArrayBasedSplitterSettings.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayCapabilities" sourceFile="ArrayCapabilities.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayCapability" sourceFile="ArrayCapability.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayCertificateInformationParam" sourceFile="ArrayCertificateInformationParam.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayConfigRequirement" sourceFile="ArrayConfigRequirement.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayConnectivityInfo" sourceFile="ArrayConnectivityInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayConnectivityStatus" sourceFile="ArrayConnectivityStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayIRThrottlingPolicy" sourceFile="ArrayIRThrottlingPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayIRThrottlingPolicyInfo" sourceFile="ArrayIRThrottlingPolicyInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayIRThrottlingPolicyParams" sourceFile="ArrayIRThrottlingPolicyParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayInfo" sourceFile="ArrayInfo.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayLicenseSettings" sourceFile="ArrayLicenseSettings.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderCapability" sourceFile="ArrayManagementProviderCapability.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderSettings" sourceFile="ArrayManagementProviderSettings.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderState" sourceFile="ArrayManagementProviderState.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderType" sourceFile="ArrayManagementProviderType.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderTypesSet" sourceFile="ArrayManagementProviderTypesSet.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayManagementProviderUID" sourceFile="ArrayManagementProviderUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolAllocationParams" sourceFile="ArrayResourcePoolAllocationParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolInfo" sourceFile="ArrayResourcePoolInfo.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolSettings" sourceFile="ArrayResourcePoolSettings.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolState" sourceFile="ArrayResourcePoolState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolSupportedTier" sourceFile="ArrayResourcePoolSupportedTier.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolSupportedTiers" sourceFile="ArrayResourcePoolSupportedTiers.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolTieringPolicies" sourceFile="ArrayResourcePoolTieringPolicies.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolTieringPolicy" sourceFile="ArrayResourcePoolTieringPolicy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayResourcePoolType" sourceFile="ArrayResourcePoolType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArraySettings" sourceFile="ArraySettings.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayState" sourceFile="ArrayState.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayType" sourceFile="ArrayType.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ArrayUID" sourceFile="ArrayUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AttachedUserVolumeAccessState" sourceFile="AttachedUserVolumeAccessState.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AttachedUserVolumeInfo" sourceFile="AttachedUserVolumeInfo.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AuthenticationType" sourceFile="AuthenticationType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AutoNegotiationInformation" sourceFile="AutoNegotiationInformation.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AutomaticSnapshotConsolidationPolicy" sourceFile="AutomaticSnapshotConsolidationPolicy.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AvailableArrayResourcePools" sourceFile="AvailableArrayResourcePools.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.AxxanaCopyStatus" sourceFile="AxxanaCopyStatus.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BalanceLoadRecommendation" sourceFile="BalanceLoadRecommendation.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseConnectionParams" sourceFile="BaseConnectionParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseCredentials" sourceFile="BaseCredentials.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseFunctionalAPIException" sourceFile="BaseFunctionalAPIException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BasePolicyTemplate" sourceFile="BasePolicyTemplate.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseRecoveryActivity" sourceFile="BaseRecoveryActivity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseSplitterCredentials" sourceFile="BaseSplitterCredentials.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseValidatablePolicyTemplateType" sourceFile="BaseValidatablePolicyTemplateType.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseVmStartUpAction" sourceFile="BaseVmStartUpAction.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BaseVolumeParams" sourceFile="BaseVolumeParams.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BookmarkConsolidationPolicy" sourceFile="BookmarkConsolidationPolicy.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BottlenecksDetectionMode" sourceFile="BottlenecksDetectionMode.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BottlenecksDetectionResult" sourceFile="BottlenecksDetectionResult.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BrocadeInitiatorVirtualTargets" sourceFile="BrocadeInitiatorVirtualTargets.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BrocadeSplitterVirtualTargets" sourceFile="BrocadeSplitterVirtualTargets.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.BrocadeVirtualTarget" sourceFile="BrocadeVirtualTarget.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CalculateVolumeSizeParams" sourceFile="CalculateVolumeSizeParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CallHomeEvent" sourceFile="CallHomeEvent.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CallHomeEventUID" sourceFile="CallHomeEventUID.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CallHomeEvents" sourceFile="CallHomeEvents.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Capability" sourceFile="Capability.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CertificateInformation" sourceFile="CertificateInformation.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Chap" sourceFile="Chap.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionConnectionParams" sourceFile="ClariionConnectionParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionCredentials" sourceFile="ClariionCredentials.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionCredentialsType" sourceFile="ClariionCredentialsType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionSplitter" sourceFile="ClariionSplitter.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionSplitterCredentials" sourceFile="ClariionSplitterCredentials.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionSplitterCredentialsType" sourceFile="ClariionSplitterCredentialsType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionSplitterSettings" sourceFile="ClariionSplitterSettings.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionVolumeInformation" sourceFile="ClariionVolumeInformation.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionVolumes" sourceFile="ClariionVolumes.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClariionVolumesContext" sourceFile="ClariionVolumesContext.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterArrayManagementProviderSettings" sourceFile="ClusterArrayManagementProviderSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterArrayManagementProvidersState" sourceFile="ClusterArrayManagementProvidersState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterAutoRegistrationInformation" sourceFile="ClusterAutoRegistrationInformation.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterAvailableArrays" sourceFile="ClusterAvailableArrays.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterAvailableSplitters" sourceFile="ClusterAvailableSplitters.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterClariionVolumes" sourceFile="ClusterClariionVolumes.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterConfiguration" sourceFile="ClusterConfiguration.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterEntityConnectivityStatus" sourceFile="ClusterEntityConnectivityStatus.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterEntityType" sourceFile="ClusterEntityType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterFileSystemView" sourceFile="ClusterFileSystemView.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterFileSystemViewContext" sourceFile="ClusterFileSystemViewContext.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterInfo" sourceFile="ClusterInfo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterLicenseReport" sourceFile="ClusterLicenseReport.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterLicenseSettings" sourceFile="ClusterLicenseSettings.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterMaintenanceMode" sourceFile="ClusterMaintenanceMode.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterRPAMultipathMonitoring" sourceFile="ClusterRPAMultipathMonitoring.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterRPAsState" sourceFile="ClusterRPAsState.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSANVolumes" sourceFile="ClusterSANVolumes.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSANVolumesContext" sourceFile="ClusterSANVolumesContext.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSettings" sourceFile="ClusterSettings.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSoftwareSerialID" sourceFile="ClusterSoftwareSerialID.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSplittersSANView" sourceFile="ClusterSplittersSANView.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSplittersSettings" sourceFile="ClusterSplittersSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSplittersState" sourceFile="ClusterSplittersState.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterStatistics" sourceFile="ClusterStatistics.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSupportedArrayManagementProviderAndArrayTypes" sourceFile="ClusterSupportedArrayManagementProviderAndArrayTypes.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterSyslogHost" sourceFile="ClusterSyslogHost.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterUID" sourceFile="ClusterUID.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVCenterServerView" sourceFile="ClusterVCenterServerView.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVCenterServers" sourceFile="ClusterVCenterServers.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVersionState" sourceFile="ClusterVersionState.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVirtualEntitiesInformation" sourceFile="ClusterVirtualEntitiesInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVirtualInfraConfiguration" sourceFile="ClusterVirtualInfraConfiguration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVirtualInfrastructuresState" sourceFile="ClusterVirtualInfrastructuresState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClusterVnxServers" sourceFile="ClusterVnxServers.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ClustersVirtualInfraConfiguration" sourceFile="ClustersVirtualInfraConfiguration.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsLinkToLogsValue" sourceFile="CollectLogsLinkToLogsValue.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsParams" sourceFile="CollectLogsParams.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsRPAResultValue" sourceFile="CollectLogsRPAResultValue.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsResult" sourceFile="CollectLogsResult.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsResultValue" sourceFile="CollectLogsResultValue.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsSplitterParam" sourceFile="CollectLogsSplitterParam.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsSplitterParamWithCredentials" sourceFile="CollectLogsSplitterParamWithCredentials.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CollectLogsSplitterResultValue" sourceFile="CollectLogsSplitterResultValue.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConditionAcceptsAll" sourceFile="ConditionAcceptsAll.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConectivityCondition" sourceFile="ConectivityCondition.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConfigParamType" sourceFile="ConfigParamType.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConfigurationParams" sourceFile="ConfigurationParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectHomeMethod" sourceFile="ConnectHomeMethod.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectInMethod" sourceFile="ConnectInMethod.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectionCompressionRatio" sourceFile="ConnectionCompressionRatio.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectionInfo" sourceFile="ConnectionInfo.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectionOutThroughput" sourceFile="ConnectionOutThroughput.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectionStatus" sourceFile="ConnectionStatus.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectionType" sourceFile="ConnectionType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConnectivityStatus" sourceFile="ConnectivityStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupBalanceLoadRecommendation" sourceFile="ConsistencyGroupBalanceLoadRecommendation.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyInfo" sourceFile="ConsistencyGroupCopyInfo.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyInformation" sourceFile="ConsistencyGroupCopyInformation.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyJournal" sourceFile="ConsistencyGroupCopyJournal.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyJournalStatistics" sourceFile="ConsistencyGroupCopyJournalStatistics.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyParam" sourceFile="ConsistencyGroupCopyParam.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyPolicy" sourceFile="ConsistencyGroupCopyPolicy.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyPolicyParams" sourceFile="ConsistencyGroupCopyPolicyParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyPolicyTemplate" sourceFile="ConsistencyGroupCopyPolicyTemplate.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyProtectionWindowsInfo" sourceFile="ConsistencyGroupCopyProtectionWindowsInfo.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyRecoveryActivity" sourceFile="ConsistencyGroupCopyRecoveryActivity.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyRole" sourceFile="ConsistencyGroupCopyRole.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyRoleInfo" sourceFile="ConsistencyGroupCopyRoleInfo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopySettings" sourceFile="ConsistencyGroupCopySettings.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopySettingsChangesParam" sourceFile="ConsistencyGroupCopySettingsChangesParam.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopySettingsParam" sourceFile="ConsistencyGroupCopySettingsParam.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopySnapshots" sourceFile="ConsistencyGroupCopySnapshots.java" interface="false" size="141" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyState" sourceFile="ConsistencyGroupCopyState.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyStatistics" sourceFile="ConsistencyGroupCopyStatistics.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyUID" sourceFile="ConsistencyGroupCopyUID.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyVolumeCreationParams" sourceFile="ConsistencyGroupCopyVolumeCreationParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupCopyVolumesState" sourceFile="ConsistencyGroupCopyVolumesState.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupInfo" sourceFile="ConsistencyGroupInfo.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupInformation" sourceFile="ConsistencyGroupInformation.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkInfo" sourceFile="ConsistencyGroupLinkInfo.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkInitStatistics" sourceFile="ConsistencyGroupLinkInitStatistics.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkPipeStatistics" sourceFile="ConsistencyGroupLinkPipeStatistics.java" interface="false" size="185" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkPolicy" sourceFile="ConsistencyGroupLinkPolicy.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkPolicyParams" sourceFile="ConsistencyGroupLinkPolicyParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkPolicyTemplate" sourceFile="ConsistencyGroupLinkPolicyTemplate.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkSettings" sourceFile="ConsistencyGroupLinkSettings.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkState" sourceFile="ConsistencyGroupLinkState.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkStatistics" sourceFile="ConsistencyGroupLinkStatistics.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupLinkUID" sourceFile="ConsistencyGroupLinkUID.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupManagementSettings" sourceFile="ConsistencyGroupManagementSettings.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupPolicy" sourceFile="ConsistencyGroupPolicy.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReport" sourceFile="ConsistencyGroupReport.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReportContextInfo" sourceFile="ConsistencyGroupReportContextInfo.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReportStartUpStep" sourceFile="ConsistencyGroupReportStartUpStep.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReportStats" sourceFile="ConsistencyGroupReportStats.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReportStep" sourceFile="ConsistencyGroupReportStep.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupReportVMStep" sourceFile="ConsistencyGroupReportVMStep.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetProblems" sourceFile="ConsistencyGroupSetProblems.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetRecoveryActivity" sourceFile="ConsistencyGroupSetRecoveryActivity.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetRecoverySettings" sourceFile="ConsistencyGroupSetRecoverySettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetSettings" sourceFile="ConsistencyGroupSetSettings.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetSubset" sourceFile="ConsistencyGroupSetSubset.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSetUID" sourceFile="ConsistencyGroupSetUID.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSettings" sourceFile="ConsistencyGroupSettings.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSettingsChangesParam" sourceFile="ConsistencyGroupSettingsChangesParam.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupSnapshots" sourceFile="ConsistencyGroupSnapshots.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupState" sourceFile="ConsistencyGroupState.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupStatistics" sourceFile="ConsistencyGroupStatistics.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupTopologyParams" sourceFile="ConsistencyGroupTopologyParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupTransferState" sourceFile="ConsistencyGroupTransferState.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupUID" sourceFile="ConsistencyGroupUID.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupVMHardwareReplicationParams" sourceFile="ConsistencyGroupVMHardwareReplicationParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupVMReplicationParams" sourceFile="ConsistencyGroupVMReplicationParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistencyGroupVolumesState" sourceFile="ConsistencyGroupVolumesState.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsistentGroupSetConsistencyPolicy" sourceFile="ConsistentGroupSetConsistencyPolicy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ConsolidationProgress" sourceFile="ConsolidationProgress.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ControllerType" sourceFile="ControllerType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CreateTargetVMAutomaticResourcePlacementParam" sourceFile="CreateTargetVMAutomaticResourcePlacementParam.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CreateTargetVMManualResourcePlacementParam" sourceFile="CreateTargetVMManualResourcePlacementParam.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CreateTargetVMResourcePlacementParam" sourceFile="CreateTargetVMResourcePlacementParam.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CreateVMParam" sourceFile="CreateVMParam.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.CredentialsUID" sourceFile="CredentialsUID.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DataCommPath" sourceFile="DataCommPath.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DataMoverView" sourceFile="DataMoverView.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DataStore" sourceFile="DataStore.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatacenterConfiguration" sourceFile="DatacenterConfiguration.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatacenterEntitiesInformation" sourceFile="DatacenterEntitiesInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatacenterUID" sourceFile="DatacenterUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatastoreClusterConfiguration" sourceFile="DatastoreClusterConfiguration.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatastoreClusterUID" sourceFile="DatastoreClusterUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatastoreConfiguration" sourceFile="DatastoreConfiguration.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DatastoreUID" sourceFile="DatastoreUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DefaultArrayResourcePool" sourceFile="DefaultArrayResourcePool.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DefaultArrayResourcePoolParams" sourceFile="DefaultArrayResourcePoolParams.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DefaultDataMoverParam" sourceFile="DefaultDataMoverParam.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DetectBottlenecksFilter" sourceFile="DetectBottlenecksFilter.java" interface="false" size="97" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DeviceInfo" sourceFile="DeviceInfo.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DeviceUID" sourceFile="DeviceUID.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DiskProvisionPolicy" sourceFile="DiskProvisionPolicy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.DistributedConsistencyGroupWithDefaultPolicyParams" sourceFile="DistributedConsistencyGroupWithDefaultPolicyParams.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ESXView" sourceFile="ESXView.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EmailFilterData" sourceFile="EmailFilterData.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxClusterAbilities" sourceFile="EsxClusterAbilities.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxClusterConfiguration" sourceFile="EsxClusterConfiguration.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxClusterUID" sourceFile="EsxClusterUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxConfiguration" sourceFile="EsxConfiguration.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxSplitterSettings" sourceFile="EsxSplitterSettings.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EsxUID" sourceFile="EsxUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLog" sourceFile="EventLog.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLogInfo" sourceFile="EventLogInfo.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLogLevel" sourceFile="EventLogLevel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLogScope" sourceFile="EventLogScope.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLogTopic" sourceFile="EventLogTopic.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.EventLogsFilter" sourceFile="EventLogsFilter.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExecutionState" sourceFile="ExecutionState.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExistingVMParam" sourceFile="ExistingVMParam.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExternalHostParams" sourceFile="ExternalHostParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExternalHostSettings" sourceFile="ExternalHostSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExternalHostUID" sourceFile="ExternalHostUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ExternalManagement" sourceFile="ExternalManagement.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FAPIConstants" sourceFile="FAPIConstants.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FTPInformation" sourceFile="FTPInformation.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Features" sourceFile="Features.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FiberChannelInitiatorInformation" sourceFile="FiberChannelInitiatorInformation.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FiberChannelPath" sourceFile="FiberChannelPath.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemExtendedInformation" sourceFile="FileSystemExtendedInformation.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemInformation" sourceFile="FileSystemInformation.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemMatchingReplicas" sourceFile="FileSystemMatchingReplicas.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemUID" sourceFile="FileSystemUID.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemView" sourceFile="FileSystemView.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FileSystemVolumeCreationParam" sourceFile="FileSystemVolumeCreationParam.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullConsistencyGroupCopyPolicy" sourceFile="FullConsistencyGroupCopyPolicy.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullConsistencyGroupLinkPolicy" sourceFile="FullConsistencyGroupLinkPolicy.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullConsistencyGroupPolicy" sourceFile="FullConsistencyGroupPolicy.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullRecoverPointContext" sourceFile="FullRecoverPointContext.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullRecoverPointSettings" sourceFile="FullRecoverPointSettings.java" interface="false" size="139" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullRecoverPointSettingsContext" sourceFile="FullRecoverPointSettingsContext.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullRecoverPointState" sourceFile="FullRecoverPointState.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullRecoverPointStateContext" sourceFile="FullRecoverPointStateContext.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullVmReplicationPolicy" sourceFile="FullVmReplicationPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FullVmReplicationSetPolicy" sourceFile="FullVmReplicationSetPolicy.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FunctionalAPIActionFailedException" sourceFile="FunctionalAPIActionFailedException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FunctionalAPIContext" sourceFile="FunctionalAPIContext.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FunctionalAPIInternalError" sourceFile="FunctionalAPIInternalError.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FunctionalAPIPasswordExpiredException" sourceFile="FunctionalAPIPasswordExpiredException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.FunctionalAPIValidationException" sourceFile="FunctionalAPIValidationException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GatewayInformation" sourceFile="GatewayInformation.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GeneralStatus" sourceFile="GeneralStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalCopyLinkUID" sourceFile="GlobalCopyLinkUID.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalCopyUID" sourceFile="GlobalCopyUID.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalLinkState" sourceFile="GlobalLinkState.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalLinkUID" sourceFile="GlobalLinkUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalNetworkPolicy" sourceFile="GlobalNetworkPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GlobalSystemConfiguration" sourceFile="GlobalSystemConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.GroupSetTransferState" sourceFile="GroupSetTransferState.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.HardwareChangesPolicy" sourceFile="HardwareChangesPolicy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.HostConnectivityStatus" sourceFile="HostConnectivityStatus.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.HostOS" sourceFile="HostOS.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IOFilterSplitterSettings" sourceFile="IOFilterSplitterSettings.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPCustomizationPolicy" sourceFile="IPCustomizationPolicy.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPInformation" sourceFile="IPInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPPort" sourceFile="IPPort.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPVersion" sourceFile="IPVersion.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPv4CustomizationPolicy" sourceFile="IPv4CustomizationPolicy.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IPv6CustomizationPolicy" sourceFile="IPv6CustomizationPolicy.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.IRThrottleType" sourceFile="IRThrottleType.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ISCSIInitiatorInformation" sourceFile="ISCSIInitiatorInformation.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ISCSIPath" sourceFile="ISCSIPath.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ISCSIPortInformation" sourceFile="ISCSIPortInformation.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessGeneralParameters" sourceFile="ImageAccessGeneralParameters.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessInformation" sourceFile="ImageAccessInformation.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessLatestSnapshotParameters" sourceFile="ImageAccessLatestSnapshotParameters.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessMode" sourceFile="ImageAccessMode.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessParameters" sourceFile="ImageAccessParameters.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessQueryParameters" sourceFile="ImageAccessQueryParameters.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessScenario" sourceFile="ImageAccessScenario.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessSpecificSnapshotParameters" sourceFile="ImageAccessSpecificSnapshotParameters.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessTargetVirtualNetworkAutomaticCreationParam" sourceFile="ImageAccessTargetVirtualNetworkAutomaticCreationParam.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessTargetVirtualNetworkManualSelectionParam" sourceFile="ImageAccessTargetVirtualNetworkManualSelectionParam.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ImageAccessTargetVirtualNetworkParam" sourceFile="ImageAccessTargetVirtualNetworkParam.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.InOutThroughputStatistics" sourceFile="InOutThroughputStatistics.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.InitiatorInformation" sourceFile="InitiatorInformation.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.InstallationActivityType" sourceFile="InstallationActivityType.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.InstallationPerformingResource" sourceFile="InstallationPerformingResource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.InterfaceType" sourceFile="InterfaceType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.JournalCompressionLevel" sourceFile="JournalCompressionLevel.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.JournalState" sourceFile="JournalState.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.JournalVolumeSettings" sourceFile="JournalVolumeSettings.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.JournalVolumeState" sourceFile="JournalVolumeState.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPAdvancedSettings" sourceFile="LDAPAdvancedSettings.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPBinding" sourceFile="LDAPBinding.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPProtocol" sourceFile="LDAPProtocol.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPProtocolType" sourceFile="LDAPProtocolType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPSearchScope" sourceFile="LDAPSearchScope.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPServer" sourceFile="LDAPServer.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPServerInfo" sourceFile="LDAPServerInfo.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LDAPSettings" sourceFile="LDAPSettings.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseCapacityUnit" sourceFile="LicenseCapacityUnit.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseCapacityUnitAndUsed" sourceFile="LicenseCapacityUnitAndUsed.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseSettings" sourceFile="LicenseSettings.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseState" sourceFile="LicenseState.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseStatus" sourceFile="LicenseStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LicenseUID" sourceFile="LicenseUID.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LinkAdvancedPolicy" sourceFile="LinkAdvancedPolicy.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LinkProtectionPolicy" sourceFile="LinkProtectionPolicy.java" interface="false" size="155" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LocalISCSIPortInformation" sourceFile="LocalISCSIPortInformation.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LocalISCSIPortsConfiguration" sourceFile="LocalISCSIPortsConfiguration.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LongTermStatisticsTimeFrame" sourceFile="LongTermStatisticsTimeFrame.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.LongTermStatisticsTimeFrames" sourceFile="LongTermStatisticsTimeFrames.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MTUInformation" sourceFile="MTUInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ManagementMode" sourceFile="ManagementMode.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ManagementSettings" sourceFile="ManagementSettings.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParameter" sourceFile="MonitoredParameter.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParameterKey" sourceFile="MonitoredParameterKey.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParameterType" sourceFile="MonitoredParameterType.java" interface="false" size="119" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParameterValue" sourceFile="MonitoredParameterValue.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParameterWaterMarks" sourceFile="MonitoredParameterWaterMarks.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MonitoredParametersStatus" sourceFile="MonitoredParametersStatus.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MountInformation" sourceFile="MountInformation.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.MountType" sourceFile="MountType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.NICInformation" sourceFile="NICInformation.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.NetBiosMode" sourceFile="NetBiosMode.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.NetworkInterface" sourceFile="NetworkInterface.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.NewConsistencyGroupCopySettingsParam" sourceFile="NewConsistencyGroupCopySettingsParam.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.NicCustomizationPolicy" sourceFile="NicCustomizationPolicy.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.OutgoingThroughputStatistics" sourceFile="OutgoingThroughputStatistics.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Path" sourceFile="Path.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Permission" sourceFile="Permission.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PhoenixClusterProtectionPolicy" sourceFile="PhoenixClusterProtectionPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PhoenixClusterState" sourceFile="PhoenixClusterState.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PhoenixClusterStatus" sourceFile="PhoenixClusterStatus.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PhoenixProtectionPolicy" sourceFile="PhoenixProtectionPolicy.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PipeState" sourceFile="PipeState.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.PolicyTemplates" sourceFile="PolicyTemplates.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Priority" sourceFile="Priority.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProblemCategory" sourceFile="ProblemCategory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProblemDescription" sourceFile="ProblemDescription.java" interface="false" size="178" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProblemSeverity" sourceFile="ProblemSeverity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProductType" sourceFile="ProductType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Property" sourceFile="Property.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProtectionMode" sourceFile="ProtectionMode.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProtectionWindowInfo" sourceFile="ProtectionWindowInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProtectionWindowStatus" sourceFile="ProtectionWindowStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ProtectionWindowsInfo" sourceFile="ProtectionWindowsInfo.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Quantity" sourceFile="Quantity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.QuantityType" sourceFile="QuantityType.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAConfiguration" sourceFile="RPAConfiguration.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAConnectivityStatus" sourceFile="RPAConnectivityStatus.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAInterfaceStatus" sourceFile="RPAInterfaceStatus.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAPortInformation" sourceFile="RPAPortInformation.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAState" sourceFile="RPAState.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAStatistics" sourceFile="RPAStatistics.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAStatus" sourceFile="RPAStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPAType" sourceFile="RPAType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPOMinimizationType" sourceFile="RPOMinimizationType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RPOPolicy" sourceFile="RPOPolicy.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointClustersInformation" sourceFile="RecoverPointClustersInformation.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointLicenseType" sourceFile="RecoverPointLicenseType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointTimeStamp" sourceFile="RecoverPointTimeStamp.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointUser" sourceFile="RecoverPointUser.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointUserType" sourceFile="RecoverPointUserType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointVersion" sourceFile="RecoverPointVersion.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoverPointVersionInformation" sourceFile="RecoverPointVersionInformation.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RecoveryActivityState" sourceFile="RecoveryActivityState.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RegisterArrayResourcePoolParams" sourceFile="RegisterArrayResourcePoolParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RemoteClusterConnectionInformation" sourceFile="RemoteClusterConnectionInformation.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RemoteISCSIPortInformation" sourceFile="RemoteISCSIPortInformation.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RemoteISCSIPortsConfiguration" sourceFile="RemoteISCSIPortsConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicaFileSystemCreationParam" sourceFile="ReplicaFileSystemCreationParam.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicateVmsParam" sourceFile="ReplicateVmsParam.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicatedVMParams" sourceFile="ReplicatedVMParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationMode" sourceFile="ReplicationMode.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetInfo" sourceFile="ReplicationSetInfo.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetSettings" sourceFile="ReplicationSetSettings.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetSettingsChangesParam" sourceFile="ReplicationSetSettingsChangesParam.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetType" sourceFile="ReplicationSetType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetUID" sourceFile="ReplicationSetUID.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReplicationSetVolumesState" sourceFile="ReplicationSetVolumesState.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportStatus" sourceFile="ReportStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportStepStatus" sourceFile="ReportStepStatus.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportStepType" sourceFile="ReportStepType.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportStepUID" sourceFile="ReportStepUID.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportType" sourceFile="ReportType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ReportUID" sourceFile="ReportUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RepositoryVolumeSettings" sourceFile="RepositoryVolumeSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RepositoryVolumeState" sourceFile="RepositoryVolumeState.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ResizeReplicationSetParam" sourceFile="ResizeReplicationSetParam.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ResourcePoolConfiguration" sourceFile="ResourcePoolConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ResourcePoolUID" sourceFile="ResourcePoolUID.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ResourcePoolUsageStats" sourceFile="ResourcePoolUsageStats.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RpSupportedArrayCapabilities" sourceFile="RpSupportedArrayCapabilities.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RpSupportedArrayCapability" sourceFile="RpSupportedArrayCapability.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RpaUID" sourceFile="RpaUID.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.RpaView" sourceFile="RpaView.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SNMPSettings" sourceFile="SNMPSettings.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SNMPTrapDestination" sourceFile="SNMPTrapDestination.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SNMPUser" sourceFile="SNMPUser.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SSHKey" sourceFile="SSHKey.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ScaleIoConnectionParams" sourceFile="ScaleIoConnectionParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SearchImageType" sourceFile="SearchImageType.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SetArraySettingsParams" sourceFile="SetArraySettingsParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SetVolumeParam" sourceFile="SetVolumeParam.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ShareInformation" sourceFile="ShareInformation.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.ShareType" sourceFile="ShareType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SingleSplitterProcessorName" sourceFile="SingleSplitterProcessorName.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Snapshot" sourceFile="Snapshot.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotBookmarkingSettingsInfo" sourceFile="SnapshotBookmarkingSettingsInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotConsistencyType" sourceFile="SnapshotConsistencyType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotConsolidationInfo" sourceFile="SnapshotConsolidationInfo.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotConsolidationStatistics" sourceFile="SnapshotConsolidationStatistics.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotConsolidationType" sourceFile="SnapshotConsolidationType.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotGranularity" sourceFile="SnapshotGranularity.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotShippingMode" sourceFile="SnapshotShippingMode.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotShippingPolicy" sourceFile="SnapshotShippingPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotUID" sourceFile="SnapshotUID.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SnapshotsPolicy" sourceFile="SnapshotsPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SourceVmParam" sourceFile="SourceVmParam.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SpecificImageAccessType" sourceFile="SpecificImageAccessType.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitVariant" sourceFile="SplitVariant.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterConnectivityStatus" sourceFile="SplitterConnectivityStatus.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterCredentialsStatus" sourceFile="SplitterCredentialsStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterInfo" sourceFile="SplitterInfo.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterOSAndVersionInfo" sourceFile="SplitterOSAndVersionInfo.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterSANView" sourceFile="SplitterSANView.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterSettings" sourceFile="SplitterSettings.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterState" sourceFile="SplitterState.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterStatus" sourceFile="SplitterStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterType" sourceFile="SplitterType.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterUID" sourceFile="SplitterUID.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterView" sourceFile="SplitterView.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterVolume" sourceFile="SplitterVolume.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterVolumeInfo" sourceFile="SplitterVolumeInfo.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SplitterVolumeSANInfo" sourceFile="SplitterVolumeSANInfo.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.StateCondition" sourceFile="StateCondition.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.StatisticsCounters" sourceFile="StatisticsCounters.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.StatisticsFilter" sourceFile="StatisticsFilter.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.StatisticsGranularity" sourceFile="StatisticsGranularity.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.StorageAccessState" sourceFile="StorageAccessState.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SupportedArrayManagementProviderAndArrayTypes" sourceFile="SupportedArrayManagementProviderAndArrayTypes.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixArrayList" sourceFile="SymmetrixArrayList.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixDevicePath" sourceFile="SymmetrixDevicePath.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixGateKeepersInfo" sourceFile="SymmetrixGateKeepersInfo.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixGateKeepersRPAInfo" sourceFile="SymmetrixGateKeepersRPAInfo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixHostIDsInfo" sourceFile="SymmetrixHostIDsInfo.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixHostId" sourceFile="SymmetrixHostId.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixSplitterSettings" sourceFile="SymmetrixSplitterSettings.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixSplitterState" sourceFile="SymmetrixSplitterState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixV3SplitterSettings" sourceFile="SymmetrixV3SplitterSettings.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SymmetrixVolumeInformation" sourceFile="SymmetrixVolumeInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SyncReplicationThreshold" sourceFile="SyncReplicationThreshold.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SyslogFacility" sourceFile="SyslogFacility.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SyslogSettings" sourceFile="SyslogSettings.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemAlertsSettings" sourceFile="SystemAlertsSettings.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemEventLogs" sourceFile="SystemEventLogs.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemEventLogsFilter" sourceFile="SystemEventLogsFilter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemEventLogsFilterUID" sourceFile="SystemEventLogsFilterUID.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemEventUID" sourceFile="SystemEventUID.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemGlobalPolicy" sourceFile="SystemGlobalPolicy.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemInternalConfigParams" sourceFile="SystemInternalConfigParams.java" interface="false" size="262" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemMiscellaneousSettings" sourceFile="SystemMiscellaneousSettings.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemReportSettings" sourceFile="SystemReportSettings.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemReportTransferMethod" sourceFile="SystemReportTransferMethod.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemSecurityLevel" sourceFile="SystemSecurityLevel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemSettings" sourceFile="SystemSettings.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemSettingsConflicts" sourceFile="SystemSettingsConflicts.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemStatistics" sourceFile="SystemStatistics.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemStatus" sourceFile="SystemStatus.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemStatusContext" sourceFile="SystemStatusContext.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.SystemVersionState" sourceFile="SystemVersionState.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TargetVmCandidate" sourceFile="TargetVmCandidate.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TargetVmCandidates" sourceFile="TargetVmCandidates.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TextFilter" sourceFile="TextFilter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TimeFrame" sourceFile="TimeFrame.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TimeSettings" sourceFile="TimeSettings.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TimeZoneInfo" sourceFile="TimeZoneInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TrafficStatistics" sourceFile="TrafficStatistics.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TransactionID" sourceFile="TransactionID.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TransactionResult" sourceFile="TransactionResult.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TransactionStatus" sourceFile="TransactionStatus.java" interface="false" size="129" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TransferState" sourceFile="TransferState.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.TransferState$1" sourceFile="TransferState.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserDefinedProperties" sourceFile="UserDefinedProperties.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserEventLogsFilter" sourceFile="UserEventLogsFilter.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserInformation" sourceFile="UserInformation.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserRole" sourceFile="UserRole.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserVolumeSettings" sourceFile="UserVolumeSettings.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserVolumeSettingsChangesParam" sourceFile="UserVolumeSettingsChangesParam.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UserVolumeState" sourceFile="UserVolumeState.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.UsersSettings" sourceFile="UsersSettings.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCLicenseSettings" sourceFile="VCLicenseSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServer" sourceFile="VCenterServer.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerConnectionStatus" sourceFile="VCenterServerConnectionStatus.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerCredentials" sourceFile="VCenterServerCredentials.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerESXFilter" sourceFile="VCenterServerESXFilter.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerFilter" sourceFile="VCenterServerFilter.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerFilterType" sourceFile="VCenterServerFilterType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerFilters" sourceFile="VCenterServerFilters.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerLunFilter" sourceFile="VCenterServerLunFilter.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerUID" sourceFile="VCenterServerUID.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerVMFilter" sourceFile="VCenterServerVMFilter.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerView" sourceFile="VCenterServerView.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServerViewContext" sourceFile="VCenterServerViewContext.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VCenterServersViewSettings" sourceFile="VCenterServersViewSettings.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMEntitiesInformation" sourceFile="VMEntitiesInformation.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMParam" sourceFile="VMParam.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMPersistentReportInfo" sourceFile="VMPersistentReportInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMProtectionStatus" sourceFile="VMProtectionStatus.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMReplicationSetParam" sourceFile="VMReplicationSetParam.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMReportPowerUpStepInfo" sourceFile="VMReportPowerUpStepInfo.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMReportStepInfo" sourceFile="VMReportStepInfo.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMView" sourceFile="VMView.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VMVolume" sourceFile="VMVolume.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Validateable" sourceFile="Validateable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VcConnectionParams" sourceFile="VcConnectionParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VcCredentials" sourceFile="VcCredentials.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupCopyStateParam" sourceFile="VerifyConsistencyGroupCopyStateParam.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupLinkStateParam" sourceFile="VerifyConsistencyGroupLinkStateParam.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupStateParam" sourceFile="VerifyConsistencyGroupStateParam.java" interface="false" size="284" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupStateParam$1" sourceFile="VerifyConsistencyGroupStateParam.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupStateParam$2" sourceFile="VerifyConsistencyGroupStateParam.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyConsistencyGroupStateParam$3" sourceFile="VerifyConsistencyGroupStateParam.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyGroupCopySnapshotsParam" sourceFile="VerifyGroupCopySnapshotsParam.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifyRPAStateParam" sourceFile="VerifyRPAStateParam.java" interface="false" size="147" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VerifySplitterStateParam" sourceFile="VerifySplitterStateParam.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualCenterConfiguration" sourceFile="VirtualCenterConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualCenterEntitiesInformation" sourceFile="VirtualCenterEntitiesInformation.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualCenterProtectedVmCountState" sourceFile="VirtualCenterProtectedVmCountState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualCenterUID" sourceFile="VirtualCenterUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDiskId" sourceFile="VirtualDiskId.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDiskInformation" sourceFile="VirtualDiskInformation.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDiskReplicationCapabilities" sourceFile="VirtualDiskReplicationCapabilities.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDiskSettings" sourceFile="VirtualDiskSettings.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDiskState" sourceFile="VirtualDiskState.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDisksReplicationPolicy" sourceFile="VirtualDisksReplicationPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualDisksReplicationPolicyParam" sourceFile="VirtualDisksReplicationPolicyParam.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualHardwareReplicationPolicy" sourceFile="VirtualHardwareReplicationPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualHardwareReplicationPolicyParam" sourceFile="VirtualHardwareReplicationPolicyParam.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualInfrastructuresState" sourceFile="VirtualInfrastructuresState.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualNetworkConfiguration" sourceFile="VirtualNetworkConfiguration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualNetworkUID" sourceFile="VirtualNetworkUID.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualResourcePoolUUID" sourceFile="VirtualResourcePoolUUID.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualVolumeInformation" sourceFile="VirtualVolumeInformation.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VirtualVolumeType" sourceFile="VirtualVolumeType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmInformation" sourceFile="VmInformation.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmNameAndUuid" sourceFile="VmNameAndUuid.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmNetworkCustomizationPolicy" sourceFile="VmNetworkCustomizationPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmNetworkPolicy" sourceFile="VmNetworkPolicy.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmPowerUpSequenceParam" sourceFile="VmPowerUpSequenceParam.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationCandidateCluster" sourceFile="VmReplicationCandidateCluster.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationCandidateClusters" sourceFile="VmReplicationCandidateClusters.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationNonCandidateClusterReasons" sourceFile="VmReplicationNonCandidateClusterReasons.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationOption" sourceFile="VmReplicationOption.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationPolicy" sourceFile="VmReplicationPolicy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSetPolicy" sourceFile="VmReplicationSetPolicy.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSetSettings" sourceFile="VmReplicationSetSettings.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSetSettingsChangesParam" sourceFile="VmReplicationSetSettingsChangesParam.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSetUID" sourceFile="VmReplicationSetUID.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSettings" sourceFile="VmReplicationSettings.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationSettingsChangesParam" sourceFile="VmReplicationSettingsChangesParam.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmReplicationTarget" sourceFile="VmReplicationTarget.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmStartUpActionState" sourceFile="VmStartUpActionState.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmStartUpActionUID" sourceFile="VmStartUpActionUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmStartUpActionsPolicy" sourceFile="VmStartUpActionsPolicy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmStartUpPrompt" sourceFile="VmStartUpPrompt.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmStartUpScript" sourceFile="VmStartUpScript.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmState" sourceFile="VmState.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VmUID" sourceFile="VmUID.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.Vnx2eSplitterSettings" sourceFile="Vnx2eSplitterSettings.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxClasses" sourceFile="VnxClasses.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxCredentials" sourceFile="VnxCredentials.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxEndPoint" sourceFile="VnxEndPoint.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxLoginInformation" sourceFile="VnxLoginInformation.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxServer" sourceFile="VnxServer.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxSplitterCredentials" sourceFile="VnxSplitterCredentials.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VnxUID" sourceFile="VnxUID.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeAccessCondition" sourceFile="VolumeAccessCondition.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeAccessState" sourceFile="VolumeAccessState.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeAccessStatus" sourceFile="VolumeAccessStatus.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeConnectivityStatus" sourceFile="VolumeConnectivityStatus.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeCreationParams" sourceFile="VolumeCreationParams.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeInformation" sourceFile="VolumeInformation.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeInformationAndPaths" sourceFile="VolumeInformationAndPaths.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumePath" sourceFile="VolumePath.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeRPAAccessStatus" sourceFile="VolumeRPAAccessStatus.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeSANInfo" sourceFile="VolumeSANInfo.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeSelectionParam" sourceFile="VolumeSelectionParam.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeSettings" sourceFile="VolumeSettings.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeSize" sourceFile="VolumeSize.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeState" sourceFile="VolumeState.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeStatus" sourceFile="VolumeStatus.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeStorageType" sourceFile="VolumeStorageType.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VolumeType" sourceFile="VolumeType.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexCredentials" sourceFile="VplexCredentials.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexCredentialsType" sourceFile="VplexCredentialsType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexMetroLinkState" sourceFile="VplexMetroLinkState.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexSplitter" sourceFile="VplexSplitter.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexSplitterCredentials" sourceFile="VplexSplitterCredentials.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexSplitterSettings" sourceFile="VplexSplitterSettings.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexVolumeInformation" sourceFile="VplexVolumeInformation.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.VplexVolumeLocality" sourceFile="VplexVolumeLocality.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.WanCompression" sourceFile="WanCompression.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.commons.XioCredentials" sourceFile="XioCredentials.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.fal.response" total_bugs="0" total_types="3" total_size="12">
+      <ClassStats class="com.emc.rpsp.fal.response.DisableImageAccessResponse" sourceFile="DisableImageAccessResponse.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.response.EnableImageAccessResponse" sourceFile="EnableImageAccessResponse.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.response.EnableLatestImageAccessResponse" sourceFile="EnableLatestImageAccessResponse.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.fal.wrappers" total_bugs="0" total_types="104" total_size="1746">
+      <ClassStats class="com.emc.rpsp.fal.wrappers.AddConsistencyGroupLinkParams" sourceFile="AddConsistencyGroupLinkParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.AddConsistencyGroupParams" sourceFile="AddConsistencyGroupParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.AddConsistencyGroupWithDefaultPolicyParams" sourceFile="AddConsistencyGroupWithDefaultPolicyParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.AddUserVolumeParams" sourceFile="AddUserVolumeParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ArrayConfigRequirementSet" sourceFile="ArrayConfigRequirementSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.CGCopySettingsChangesParamSet" sourceFile="CGCopySettingsChangesParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.CalculateVolumeSizeRestParams" sourceFile="CalculateVolumeSizeRestParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.CheckArrayConnectivityParams" sourceFile="CheckArrayConnectivityParams.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterArrayManagementProviderSettingsSet" sourceFile="ClusterArrayManagementProviderSettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterArrayManagementProvidersStateSet" sourceFile="ClusterArrayManagementProvidersStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterAvailableSplittersSet" sourceFile="ClusterAvailableSplittersSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterLicenseReportSet" sourceFile="ClusterLicenseReportSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterRPAsStateSet" sourceFile="ClusterRPAsStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterSplittersSANViewSet" sourceFile="ClusterSplittersSANViewSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterSplittersSettingsSet" sourceFile="ClusterSplittersSettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterSplittersStateSet" sourceFile="ClusterSplittersStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterSupportedAMPAndArrayTypesSet" sourceFile="ClusterSupportedAMPAndArrayTypesSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterUIDSet" sourceFile="ClusterUIDSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterVCenterServerViewSet" sourceFile="ClusterVCenterServerViewSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterVCenterServersSet" sourceFile="ClusterVCenterServersSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterVirtualEntitiesInformationSet" sourceFile="ClusterVirtualEntitiesInformationSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ClusterVirtualInfrastructuresStateSet" sourceFile="ClusterVirtualInfrastructuresStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupCopyPolicyTemplateSet" sourceFile="ConsistencyGroupCopyPolicyTemplateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupCopyProtectionWindowsInfoSet" sourceFile="ConsistencyGroupCopyProtectionWindowsInfoSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupCopySettingsSet" sourceFile="ConsistencyGroupCopySettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupInformationSet" sourceFile="ConsistencyGroupInformationSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupLinkPolicyTemplateSet" sourceFile="ConsistencyGroupLinkPolicyTemplateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupReportContextInfoSet" sourceFile="ConsistencyGroupReportContextInfoSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupReportSet" sourceFile="ConsistencyGroupReportSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupReportStatsSet" sourceFile="ConsistencyGroupReportStatsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupSetSettingsSet" sourceFile="ConsistencyGroupSetSettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupSettingsSet" sourceFile="ConsistencyGroupSettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupStateSet" sourceFile="ConsistencyGroupStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupStatisticsSet" sourceFile="ConsistencyGroupStatisticsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupUIDSet" sourceFile="ConsistencyGroupUIDSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupVolumesStateSet" sourceFile="ConsistencyGroupVolumesStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsistencyGroupsTransferStateSet" sourceFile="ConsistencyGroupsTransferStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ConsolidateSnapshotsParams" sourceFile="ConsolidateSnapshotsParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.CreateBookmarkForGroupSetSubSetParams" sourceFile="CreateBookmarkForGroupSetSubSetParams.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.CreateBookmarkParams" sourceFile="CreateBookmarkParams.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.DeviceUIDSet" sourceFile="DeviceUIDSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableImageAccessForGroupSetSubsetWithGeneralParametersParams" sourceFile="EnableImageAccessForGroupSetSubsetWithGeneralParametersParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableImageAccessForGroupSetsSubsetParams" sourceFile="EnableImageAccessForGroupSetsSubsetParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableImageAccessParams" sourceFile="EnableImageAccessParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableImageAccessWithParams" sourceFile="EnableImageAccessWithParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableLatestImageAccessForGroupSetSubsetParams" sourceFile="EnableLatestImageAccessForGroupSetSubsetParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.EnableLatestImageAccessParams" sourceFile="EnableLatestImageAccessParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ExistingVMParamsSet" sourceFile="ExistingVMParamsSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ExportStatisticsParams" sourceFile="ExportStatisticsParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.FullVmReplicationSetPoliciesSet" sourceFile="FullVmReplicationSetPoliciesSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.GetArrayCertificateInformationParams" sourceFile="GetArrayCertificateInformationParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.GlobalLinkStateSet" sourceFile="GlobalLinkStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.MarkGroupCopyVolumesAsDirtyParams" sourceFile="MarkGroupCopyVolumesAsDirtyParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.MarkGroupVolumesAsDirtyParams" sourceFile="MarkGroupVolumesAsDirtyParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.MoveToImageParams" sourceFile="MoveToImageParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.NewConsistencyGroupCopySettingsParamSet" sourceFile="NewConsistencyGroupCopySettingsParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.PhoenixClusterStateSet" sourceFile="PhoenixClusterStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RPAStatisticsSet" sourceFile="RPAStatisticsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RecoverPointUserSet" sourceFile="RecoverPointUserSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RecoveryActivitiesSet" sourceFile="RecoveryActivitiesSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RegisterArrayResourcePoolParamsSet" sourceFile="RegisterArrayResourcePoolParamsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RemovePassiveConsistencyGroupLinkParams" sourceFile="RemovePassiveConsistencyGroupLinkParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RemoveUserVolumeParams" sourceFile="RemoveUserVolumeParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ReplicationSetSettingsChangesParamSet" sourceFile="ReplicationSetSettingsChangesParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ReplicationSetSettingsSet" sourceFile="ReplicationSetSettingsSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ReportUIDSet" sourceFile="ReportUIDSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RepositoryVolumeStateSet" sourceFile="RepositoryVolumeStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.ResourcePoolUIDSet" sourceFile="ResourcePoolUIDSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestArrayType" sourceFile="RestArrayType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestBookmarkConsolidationPolicy" sourceFile="RestBookmarkConsolidationPolicy.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestClusterMaintenanceMode" sourceFile="RestClusterMaintenanceMode.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestHostConnectivityStatus" sourceFile="RestHostConnectivityStatus.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestImageAccessGeneralParameters" sourceFile="RestImageAccessGeneralParameters.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestSnapshotConsistencyType" sourceFile="RestSnapshotConsistencyType.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestSystemSecurityLevel" sourceFile="RestSystemSecurityLevel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.RestVCenterServerFilter" sourceFile="RestVCenterServerFilter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SNMPUserSet" sourceFile="SNMPUserSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SSHKeySet" sourceFile="SSHKeySet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetAttachedVolumesForSplitterParams" sourceFile="SetAttachedVolumesForSplitterParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetConsistencyGroupCopyPolicyTemplateParams" sourceFile="SetConsistencyGroupCopyPolicyTemplateParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetConsistencyGroupLinkPolicyParams" sourceFile="SetConsistencyGroupLinkPolicyParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetConsistencyGroupLinkPolicyTemplateParams" sourceFile="SetConsistencyGroupLinkPolicyTemplateParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetPasswordParams" sourceFile="SetPasswordParams.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetSystemAlertsSettingsParams" sourceFile="SetSystemAlertsSettingsParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetSystemEventLogsFiltersParams" sourceFile="SetSystemEventLogsFiltersParams.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetSystemReportSettingsParams" sourceFile="SetSystemReportSettingsParams.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SetVolumeParamSet" sourceFile="SetVolumeParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SplitterUIDSet" sourceFile="SplitterUIDSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.SystemEventLogsFilterSet" sourceFile="SystemEventLogsFilterSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.UserRoleSet" sourceFile="UserRoleSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VCenterServerFiltersSet" sourceFile="VCenterServerFiltersSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VirtualCenterProtectedVmCountStateSet" sourceFile="VirtualCenterProtectedVmCountStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VirtualDisksReplicationPolicyParamSet" sourceFile="VirtualDisksReplicationPolicyParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VirtualHardwareReplicationPolicyParamSet" sourceFile="VirtualHardwareReplicationPolicyParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VirtualNetworkConfigurationSet" sourceFile="VirtualNetworkConfigurationSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmEntitiesInformationSet" sourceFile="VmEntitiesInformationSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmNetworkPoliciesSet" sourceFile="VmNetworkPoliciesSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmPowerUpSequenceParamSet" sourceFile="VmPowerUpSequenceParamSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmReplicationSetParamSet" sourceFile="VmReplicationSetParamSet.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmStartUpActionUIDSet" sourceFile="VmStartUpActionUIDSet.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmStateSet" sourceFile="VmStateSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VmUIDSet" sourceFile="VmUIDSet.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VolumeInformationSet" sourceFile="VolumeInformationSet.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.fal.wrappers.VolumePathSet" sourceFile="VolumePathSet.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.groupset.controller" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.emc.rpsp.groupset.controller.GroupSetController" sourceFile="GroupSetController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.groupset.domain" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="com.emc.rpsp.groupset.domain.GroupSet" sourceFile="GroupSet.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.groupset.service" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="com.emc.rpsp.groupset.service.GroupSetService" sourceFile="GroupSetService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.groupset.service.impl" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.emc.rpsp.groupset.service.impl.GroupSetServiceImpl" sourceFile="GroupSetServiceImpl.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.imageaccess.controller" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="com.emc.rpsp.imageaccess.controller.GroupCopiesImageAccessController" sourceFile="GroupCopiesImageAccessController.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.imageaccess.controller.GroupSetImageAccessController" sourceFile="GroupSetImageAccessController.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.imageaccess.service" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="com.emc.rpsp.imageaccess.service.GroupCopiesImageAccessService" sourceFile="GroupCopiesImageAccessService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.imageaccess.service.GroupSetImageAccessService" sourceFile="GroupSetImageAccessService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.imageaccess.service.impl" total_bugs="0" total_types="2" total_size="31">
+      <ClassStats class="com.emc.rpsp.imageaccess.service.impl.GroupCopiesImageAccessServiceImpl" sourceFile="GroupCopiesImageAccessServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.imageaccess.service.impl.GroupSetImageAccessServiceImpl" sourceFile="GroupSetImageAccessServiceImpl.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.accounts.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.infra.common.accounts.service.AccountsDataService" sourceFile="AccountsDataService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.auth.domain" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="com.emc.rpsp.infra.common.auth.domain.AbstractCurrentUser" sourceFile="AbstractCurrentUser.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.infra.common.auth.domain.CurrentUser" sourceFile="CurrentUser.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.auth.service" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.emc.rpsp.infra.common.auth.service.CurrentUserDetailsService" sourceFile="CurrentUserDetailsService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.packages.service" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.emc.rpsp.infra.common.packages.service.PackagesDataService" sourceFile="PackagesDataService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.systems.service" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.emc.rpsp.infra.common.systems.service.SystemsDataService" sourceFile="SystemsDataService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.common.vms.service" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.emc.rpsp.infra.common.vms.service.VmsDataService" sourceFile="VmsDataService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.accounts.service.impl" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.accounts.service.impl.AccountsDataServiceSqlImpl" sourceFile="AccountsDataServiceSqlImpl.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.auth.domain" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.auth.domain.CurrentUserSqlImpl" sourceFile="CurrentUserSqlImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.auth.service.impl" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.auth.service.impl.CurrentUserDetailsServiceSqlImpl" sourceFile="CurrentUserDetailsServiceSqlImpl.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.packages.service.impl" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.packages.service.impl.PackagesDataServiceSqlImpl" sourceFile="PackagesDataServiceSqlImpl.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.systems.service.impl" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.systems.service.impl.SystemsDataServiceSqlImpl" sourceFile="SystemsDataServiceSqlImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.infra.sqlplugin.vms.service.impl" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.emc.rpsp.infra.sqlplugin.vms.service.impl.VmsDataServiceSqlImpl" sourceFile="VmsDataServiceSqlImpl.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.packages.controller" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="com.emc.rpsp.packages.controller.PackageDefinitionController" sourceFile="PackageDefinitionController.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.packages.domain" total_bugs="1" total_types="2" total_size="308" priority_2="1">
+      <ClassStats class="com.emc.rpsp.packages.domain.PackageConfig" sourceFile="PackageConfig.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.packages.domain.PackageDefinition" sourceFile="PackageDefinition.java" interface="false" size="238" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.packages.repository" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="com.emc.rpsp.packages.repository.PackageDefinitionRepository" sourceFile="PackageDefinitionRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.packages.service" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="com.emc.rpsp.packages.service.PackageDefinitionService" sourceFile="PackageDefinitionService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.packages.service.impl" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="com.emc.rpsp.packages.service.impl.PackageDefinitionServiceImpl" sourceFile="PackageDefinitionServiceImpl.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.protect.controller" total_bugs="0" total_types="1" total_size="57">
+      <ClassStats class="com.emc.rpsp.protect.controller.GroupsProtectionController" sourceFile="GroupsProtectionController.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.protect.service" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.emc.rpsp.protect.service.GroupsProtectionService" sourceFile="GroupsProtectionService.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.protect.service.impl" total_bugs="0" total_types="1" total_size="50">
+      <ClassStats class="com.emc.rpsp.protect.service.impl.GroupsProtectionServiceImpl" sourceFile="GroupsProtectionServiceImpl.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.recover.controller" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="com.emc.rpsp.recover.controller.GroupCopiesRecoverController" sourceFile="GroupCopiesRecoverController.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.recover.controller.GroupSetRecoverController" sourceFile="GroupSetRecoverController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.recover.service" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="com.emc.rpsp.recover.service.GroupCopiesRecoverService" sourceFile="GroupCopiesRecoverService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.recover.service.GroupSetRecoverService" sourceFile="GroupSetRecoverService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.recover.service.impl" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.emc.rpsp.recover.service.impl.GroupCopiesRecoverServiceImpl" sourceFile="GroupCopiesRecoverServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.recover.service.impl.GroupSetRecoverServiceImpl" sourceFile="GroupSetRecoverServiceImpl.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.rpsystems" total_bugs="1" total_types="6" total_size="300" priority_1="1">
+      <ClassStats class="com.emc.rpsp.rpsystems.ClusterSettings" sourceFile="ClusterSettings.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.rpsystems.ClustersResource" sourceFile="ClustersResource.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.rpsystems.SettingsResource" sourceFile="SettingsResource.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.rpsystems.SystemConnectionInfoRepository" sourceFile="SystemConnectionInfoRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.rpsystems.SystemSettings" sourceFile="SystemSettings.java" interface="false" size="103" bugs="1" priority_1="1"/>
+      <ClassStats class="com.emc.rpsp.rpsystems.SystemSettings$TestResult" sourceFile="SystemSettings.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.settings" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.emc.rpsp.settings.SettingsController" sourceFile="SettingsController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.tools" total_bugs="0" total_types="2" total_size="65">
+      <ClassStats class="com.emc.rpsp.tools.PortBinding" sourceFile="PortBinding.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.tools.StringXORer" sourceFile="StringXORer.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.users.controller" total_bugs="0" total_types="1" total_size="44">
+      <ClassStats class="com.emc.rpsp.users.controller.UserController" sourceFile="UserController.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.users.domain" total_bugs="1" total_types="2" total_size="139" priority_2="1">
+      <ClassStats class="com.emc.rpsp.users.domain.AbstractAuditingEntity" sourceFile="AbstractAuditingEntity.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.users.domain.User" sourceFile="User.java" interface="false" size="108" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.users.repository" total_bugs="6" total_types="1" total_size="8" priority_2="6">
+      <ClassStats class="com.emc.rpsp.users.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="8" bugs="6" priority_2="6"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.users.service" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.emc.rpsp.users.service.UserService" sourceFile="UserService.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.users.service.impl" total_bugs="0" total_types="1" total_size="89">
+      <ClassStats class="com.emc.rpsp.users.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="89" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.virtualconfig.controller" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.emc.rpsp.virtualconfig.controller.VirtualConfigurationController" sourceFile="VirtualConfigurationController.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.virtualconfig.domain" total_bugs="0" total_types="5" total_size="158">
+      <ClassStats class="com.emc.rpsp.virtualconfig.domain.DataCenterConfig" sourceFile="DataCenterConfig.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.virtualconfig.domain.DataStoreConfig" sourceFile="DataStoreConfig.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.virtualconfig.domain.EsxClusterConfig" sourceFile="EsxClusterConfig.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.virtualconfig.domain.EsxConfig" sourceFile="EsxConfig.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.virtualconfig.domain.VcenterConfig" sourceFile="VcenterConfig.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.virtualconfig.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.virtualconfig.service.VirtualConfigurationService" sourceFile="VirtualConfigurationService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.virtualconfig.service.impl" total_bugs="0" total_types="1" total_size="54">
+      <ClassStats class="com.emc.rpsp.virtualconfig.service.impl.VirtualConfigurationServiceImpl" sourceFile="VirtualConfigurationServiceImpl.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vms.controller" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="com.emc.rpsp.vms.controller.VmOwnershipController" sourceFile="VmOwnershipController.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vms.domain" total_bugs="1" total_types="1" total_size="47" priority_2="1">
+      <ClassStats class="com.emc.rpsp.vms.domain.VmOwnership" sourceFile="VmOwnership.java" interface="false" size="47" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vms.repository" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.vms.repository.VmOwnershipRepository" sourceFile="VmOwnershipRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vms.service" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.emc.rpsp.vms.service.VmOwnershipService" sourceFile="VmOwnershipService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vms.service.impl" total_bugs="0" total_types="1" total_size="41">
+      <ClassStats class="com.emc.rpsp.vms.service.impl.VmOwnershipServiceImpl" sourceFile="VmOwnershipServiceImpl.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmstructure.constants" total_bugs="0" total_types="3" total_size="77">
+      <ClassStats class="com.emc.rpsp.vmstructure.constants.ConsistencyType" sourceFile="ConsistencyType.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.constants.ImageAccess" sourceFile="ImageAccess.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.constants.TransferState" sourceFile="TransferState.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmstructure.controller" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.emc.rpsp.vmstructure.controller.AccountVmsStructureController" sourceFile="AccountVmsStructureController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmstructure.domain" total_bugs="0" total_types="9" total_size="399">
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.AccountVmsStructure" sourceFile="AccountVmsStructure.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.ClusterDefinition" sourceFile="ClusterDefinition.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.ConsistencyGroup" sourceFile="ConsistencyGroup.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.CopySnapshot" sourceFile="CopySnapshot.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.GroupCopySettings" sourceFile="GroupCopySettings.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.GroupSet" sourceFile="GroupSet.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.SystemInfo" sourceFile="SystemInfo.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.VmContainer" sourceFile="VmContainer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.domain.VmDefinition" sourceFile="VmDefinition.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmstructure.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.emc.rpsp.vmstructure.service.AccountVmsStructureService" sourceFile="AccountVmsStructureService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmstructure.service.impl" total_bugs="0" total_types="2" total_size="546">
+      <ClassStats class="com.emc.rpsp.vmstructure.service.impl.AccountVmsStructureServiceImpl" sourceFile="AccountVmsStructureServiceImpl.java" interface="false" size="540" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmstructure.service.impl.AccountVmsStructureServiceImpl$1" sourceFile="AccountVmsStructureServiceImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.vmwal" total_bugs="0" total_types="2" total_size="143">
+      <ClassStats class="com.emc.rpsp.vmwal.VSphereApi" sourceFile="VSphereApi.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.vmwal.VmwMain" sourceFile="VmwMain.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.emc.rpsp.web.rest" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="com.emc.rpsp.web.rest.HttpTools" sourceFile="HttpTools.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.emc.rpsp.web.rest.UserResource" sourceFile="UserResource.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="923" invocations="8567" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="23998" standardDeviationMicrosecondsPerInvocation="442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="789" invocations="8582" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="26520" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="653" invocations="8581" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="8851" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="590" invocations="8589" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="8862" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="547" invocations="8592" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="9286" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="500" invocations="8582" avgMicrosecondsPerInvocation="58" maxMicrosecondsPerInvocation="10037" standardDeviationMicrosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="383" invocations="4111" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="6035" standardDeviationMicrosecondsPerInvocation="185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="380" invocations="2231" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="14642" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="321" invocations="1019" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="20457" standardDeviationMicrosecondsPerInvocation="832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="304" invocations="1019" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="7904" standardDeviationMicrosecondsPerInvocation="621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="215" invocations="9039" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="2556" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="203" invocations="8582" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="3611" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="196" invocations="899" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="7671" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="192" invocations="8732" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="25458" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="188" invocations="899" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="5247" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="187" invocations="899" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="3924" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="177" invocations="109978" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="1520" standardDeviationMicrosecondsPerInvocation="7"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="165" invocations="899" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="2978" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="149" invocations="8567" avgMicrosecondsPerInvocation="17" maxMicrosecondsPerInvocation="7030" standardDeviationMicrosecondsPerInvocation="96"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="135" invocations="1019" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="9436" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="130" invocations="1241" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="14935" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="129" invocations="1019" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="46466" standardDeviationMicrosecondsPerInvocation="1456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="128" invocations="899" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="4573" standardDeviationMicrosecondsPerInvocation="215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="117" invocations="899" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="4512" standardDeviationMicrosecondsPerInvocation="202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="116" invocations="8536" avgMicrosecondsPerInvocation="13" maxMicrosecondsPerInvocation="1181" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="116" invocations="1019" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="3603" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="115" invocations="899" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="6856" standardDeviationMicrosecondsPerInvocation="265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="115" invocations="2244" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="574" standardDeviationMicrosecondsPerInvocation="43"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="107" invocations="899" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="2532" standardDeviationMicrosecondsPerInvocation="141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="106" invocations="899" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="3686" standardDeviationMicrosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="100" invocations="899" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="3334" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="96" invocations="899" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="5713" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="92" invocations="1019" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="1571" standardDeviationMicrosecondsPerInvocation="124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="92" invocations="899" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="3170" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="90" invocations="899" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="2628" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="89" invocations="899" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="11998" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="86" invocations="8732" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="2246" standardDeviationMicrosecondsPerInvocation="40"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="86" invocations="899" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="2441" standardDeviationMicrosecondsPerInvocation="125"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="85" invocations="899" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1823" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="85" invocations="899" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1966" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="81" invocations="899" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="1809" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="80" invocations="899" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1436" standardDeviationMicrosecondsPerInvocation="92"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="79" invocations="899" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="1599" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="78" invocations="1019" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="2564" standardDeviationMicrosecondsPerInvocation="151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IncompatMask" totalMilliseconds="76" invocations="899" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="1831" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="73" invocations="899" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="7210" standardDeviationMicrosecondsPerInvocation="259"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

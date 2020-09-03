@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106711000" analysisTimestamp="1597106712890" release="">
+  <Project projectName="repositorios/niuyuzhou_staffManager">
+    <Jar>repositorios/niuyuzhou_staffManager</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.tomniu.model.Employee">
+      <SourceLine classname="com.tomniu.model.Employee" start="14" end="63" sourcefile="Employee.java" sourcepath="com/tomniu/model/Employee.java"/>
+    </Class>
+    <Field classname="com.tomniu.model.Employee" name="dept" signature="Lcom/tomniu/model/Department;" isStatic="false">
+      <SourceLine classname="com.tomniu.model.Employee" sourcefile="Employee.java" sourcepath="com/tomniu/model/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder$ClientBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:45:11 +0000" total_classes="11" referenced_classes="34" total_bugs="1" total_size="199" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.70" clock_seconds="1.34" peak_mbytes="188.20" alloc_mbytes="3540.00" gc_seconds="0.08" priority_2="1">
+    <PackageStats package="com.tomniu" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.tomniu.Application" sourceFile="Application.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.tomniu.config" total_bugs="0" total_types="5" total_size="78">
+      <ClassStats class="com.tomniu.config.DatabaseConfig" sourceFile="DatabaseConfig.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.tomniu.config.OAuth2ServerConfig" sourceFile="SecurityConfig.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.tomniu.config.OAuth2ServerConfig$1" sourceFile="SecurityConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.tomniu.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.tomniu.config.WebSecurityConfiguration" sourceFile="SecurityConfig.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.tomniu.controller" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="com.tomniu.controller.DeptController" sourceFile="DeptController.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.tomniu.model" total_bugs="1" total_types="4" total_size="83" priority_2="1">
+      <ClassStats class="com.tomniu.model.Department" sourceFile="Department.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.tomniu.model.DeptJson" sourceFile="DeptJson.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.tomniu.model.DeptRepository" sourceFile="DeptRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.tomniu.model.Employee" sourceFile="Employee.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="187" invocations="461" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="18513" standardDeviationMicrosecondsPerInvocation="1206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="34" avgMicrosecondsPerInvocation="1648" maxMicrosecondsPerInvocation="12962" standardDeviationMicrosecondsPerInvocation="2716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="155" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="4384" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="44" invocations="471" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="2587" standardDeviationMicrosecondsPerInvocation="126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="37" invocations="34" avgMicrosecondsPerInvocation="1088" maxMicrosecondsPerInvocation="4563" standardDeviationMicrosecondsPerInvocation="1415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="366" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="1492" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="46" avgMicrosecondsPerInvocation="678" maxMicrosecondsPerInvocation="25818" standardDeviationMicrosecondsPerInvocation="3748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="87" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="14657" standardDeviationMicrosecondsPerInvocation="1595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="27" invocations="46" avgMicrosecondsPerInvocation="598" maxMicrosecondsPerInvocation="6824" standardDeviationMicrosecondsPerInvocation="1131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="26" invocations="46" avgMicrosecondsPerInvocation="572" maxMicrosecondsPerInvocation="8421" standardDeviationMicrosecondsPerInvocation="1308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="46" avgMicrosecondsPerInvocation="526" maxMicrosecondsPerInvocation="9670" standardDeviationMicrosecondsPerInvocation="1419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="23" invocations="46" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="10131" standardDeviationMicrosecondsPerInvocation="1464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="34" avgMicrosecondsPerInvocation="688" maxMicrosecondsPerInvocation="7703" standardDeviationMicrosecondsPerInvocation="1381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="21" invocations="45" avgMicrosecondsPerInvocation="486" maxMicrosecondsPerInvocation="2888" standardDeviationMicrosecondsPerInvocation="632"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="20" invocations="46" avgMicrosecondsPerInvocation="449" maxMicrosecondsPerInvocation="3839" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="34" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="9074" standardDeviationMicrosecondsPerInvocation="1552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="34" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="4220" standardDeviationMicrosecondsPerInvocation="1101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="34" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="5363" standardDeviationMicrosecondsPerInvocation="963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="34" avgMicrosecondsPerInvocation="428" maxMicrosecondsPerInvocation="3182" standardDeviationMicrosecondsPerInvocation="600"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="34" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="2430" standardDeviationMicrosecondsPerInvocation="554"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

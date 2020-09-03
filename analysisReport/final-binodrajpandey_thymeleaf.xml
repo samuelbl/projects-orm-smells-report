@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086056000" analysisTimestamp="1597086058606" release="">
+  <Project projectName="repositorios/binodrajpandey_thymeleaf">
+    <Jar>repositorios/binodrajpandey_thymeleaf</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.demo.entities.Department">
+      <SourceLine classname="com.example.demo.entities.Department" start="20" end="53" sourcefile="Department.java" sourcepath="com/example/demo/entities/Department.java"/>
+    </Class>
+    <Field classname="com.example.demo.entities.Department" name="studentList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.example.demo.entities.Department" sourcefile="Department.java" sourcepath="com/example/demo/entities/Department.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.demo.entities.Student">
+      <SourceLine classname="com.example.demo.entities.Student" start="19" end="74" sourcefile="Student.java" sourcepath="com/example/demo/entities/Student.java"/>
+    </Class>
+    <Field classname="com.example.demo.entities.Student" name="department" signature="Lcom/example/demo/entities/Department;" isStatic="false">
+      <SourceLine classname="com.example.demo.entities.Student" sourcefile="Student.java" sourcepath="com/example/demo/entities/Student.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="34">
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.io.ByteArrayResource</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.web.access.AccessDeniedHandler</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.validation.Errors</MissingClass>
+    <MissingClass>org.springframework.validation.FieldError</MissingClass>
+    <MissingClass>org.springframework.validation.ObjectError</MissingClass>
+    <MissingClass>org.springframework.validation.Validator</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:00:56 +0000" total_classes="24" referenced_classes="80" total_bugs="2" total_size="526" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.96" clock_seconds="2.29" peak_mbytes="138.30" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="1" priority_1="1">
+    <PackageStats package="com.example.demo" total_bugs="0" total_types="3" total_size="44">
+      <ClassStats class="com.example.demo.MyAccessDeniedHandler" sourceFile="MyAccessDeniedHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.example.demo.SpringBootThymeleafApplication" sourceFile="SpringBootThymeleafApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.example.demo.SpringSecurityConfig" sourceFile="SpringSecurityConfig.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.controllers" total_bugs="0" total_types="3" total_size="86">
+      <ClassStats class="com.example.demo.controllers.DefaultController" sourceFile="DefaultController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.example.demo.controllers.DepartmentController" sourceFile="DepartmentController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.example.demo.controllers.StudentController" sourceFile="StudentController.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.dtos" total_bugs="0" total_types="2" total_size="49">
+      <ClassStats class="com.example.demo.dtos.DepartmentDTO" sourceFile="DepartmentDTO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.example.demo.dtos.StudentDTO" sourceFile="StudentDTO.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.entities" total_bugs="2" total_types="3" total_size="76" priority_2="1" priority_1="1">
+      <ClassStats class="com.example.demo.entities.Department" sourceFile="Department.java" interface="false" size="22" bugs="1" priority_1="1"/>
+      <ClassStats class="com.example.demo.entities.Student" sourceFile="Student.java" interface="false" size="33" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.demo.entities.StudentResource" sourceFile="StudentResource.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.exception" total_bugs="0" total_types="6" total_size="200">
+      <ClassStats class="com.example.demo.exception.ApiErrorResource" sourceFile="ApiErrorResource.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.example.demo.exception.ApiExceptionHandler" sourceFile="ApiExceptionHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.example.demo.exception.ApiFieldErrorResource" sourceFile="ApiFieldErrorResource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.example.demo.exception.ApiObjectErrorResource" sourceFile="ApiObjectErrorResource.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.example.demo.exception.ApiResponseResrouce" sourceFile="ApiResponseResrouce.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.example.demo.exception.InvalidRequestException" sourceFile="InvalidRequestException.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.repositories" total_bugs="0" total_types="2" total_size="3">
+      <ClassStats class="com.example.demo.repositories.DepartmentRepository" sourceFile="DepartmentRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.example.demo.repositories.StudentRepository" sourceFile="StudentRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.services" total_bugs="0" total_types="4" total_size="58">
+      <ClassStats class="com.example.demo.services.DepartmentService" sourceFile="DepartmentService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.example.demo.services.DepartmentServiceImpl" sourceFile="DepartmentServiceImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.example.demo.services.StudentService" sourceFile="StudentService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.example.demo.services.StudentServiceImpl" sourceFile="StudentServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.demo.validation" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.example.demo.validation.DepartmentValidator" sourceFile="DepartmentValidator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="244" invocations="681" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="13023" standardDeviationMicrosecondsPerInvocation="913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="118" invocations="80" avgMicrosecondsPerInvocation="1479" maxMicrosecondsPerInvocation="14561" standardDeviationMicrosecondsPerInvocation="2901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="103" invocations="687" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="5045" standardDeviationMicrosecondsPerInvocation="329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="97" invocations="80" avgMicrosecondsPerInvocation="1215" maxMicrosecondsPerInvocation="15901" standardDeviationMicrosecondsPerInvocation="2483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="75" invocations="303" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="6511" standardDeviationMicrosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="75" invocations="80" avgMicrosecondsPerInvocation="937" maxMicrosecondsPerInvocation="37281" standardDeviationMicrosecondsPerInvocation="4212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="60" invocations="128" avgMicrosecondsPerInvocation="472" maxMicrosecondsPerInvocation="15090" standardDeviationMicrosecondsPerInvocation="1415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="568" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="13895" standardDeviationMicrosecondsPerInvocation="593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="48" invocations="80" avgMicrosecondsPerInvocation="608" maxMicrosecondsPerInvocation="15987" standardDeviationMicrosecondsPerInvocation="2022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="48" invocations="144" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="13816" standardDeviationMicrosecondsPerInvocation="1306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="46" invocations="128" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="5229" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="43" invocations="128" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="6754" standardDeviationMicrosecondsPerInvocation="799"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="128" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="10015" standardDeviationMicrosecondsPerInvocation="1123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="41" invocations="128" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="9420" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="40" invocations="80" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="16014" standardDeviationMicrosecondsPerInvocation="1869"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="132" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="26817" standardDeviationMicrosecondsPerInvocation="2322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="128" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="9815" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="80" avgMicrosecondsPerInvocation="450" maxMicrosecondsPerInvocation="12654" standardDeviationMicrosecondsPerInvocation="1701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="80" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="6865" standardDeviationMicrosecondsPerInvocation="911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="80" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="7175" standardDeviationMicrosecondsPerInvocation="1196"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

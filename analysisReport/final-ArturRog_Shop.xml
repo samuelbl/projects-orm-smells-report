@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595982339000" analysisTimestamp="1595982340940" release="">
+  <Project projectName="repositorios/ArturRog_Shop">
+    <Jar>repositorios/ArturRog_Shop</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.rog.webshop.dao.AbstractDao">
+      <SourceLine classname="com.rog.webshop.dao.AbstractDao" start="17" end="53" sourcefile="AbstractDao.java" sourcepath="com/rog/webshop/dao/AbstractDao.java"/>
+    </Class>
+    <Method classname="com.rog.webshop.dao.AbstractDao" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.rog.webshop.dao.AbstractDao" start="49" end="49" startBytecode="0" endBytecode="104" sourcefile="AbstractDao.java" sourcepath="com/rog/webshop/dao/AbstractDao.java"/>
+    </Method>
+    <SourceLine classname="com.rog.webshop.dao.AbstractDao" start="49" end="49" startBytecode="11" endBytecode="11" sourcefile="AbstractDao.java" sourcepath="com/rog/webshop/dao/AbstractDao.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rog.webshop.model.order.Order">
+      <SourceLine classname="com.rog.webshop.model.order.Order" start="32" end="107" sourcefile="Order.java" sourcepath="com/rog/webshop/model/order/Order.java"/>
+    </Class>
+    <Field classname="com.rog.webshop.model.order.Order" name="productList" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.rog.webshop.model.order.Order" sourcefile="Order.java" sourcepath="com/rog/webshop/model/order/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rog.webshop.model.order.Order">
+      <SourceLine classname="com.rog.webshop.model.order.Order" start="32" end="107" sourcefile="Order.java" sourcepath="com/rog/webshop/model/order/Order.java"/>
+    </Class>
+    <Field classname="com.rog.webshop.model.order.Order" name="user" signature="Lcom/rog/webshop/model/user/User;" isStatic="false">
+      <SourceLine classname="com.rog.webshop.model.order.Order" sourcefile="Order.java" sourcepath="com/rog/webshop/model/order/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rog.webshop.model.product.Product">
+      <SourceLine classname="com.rog.webshop.model.product.Product" start="46" end="126" sourcefile="Product.java" sourcepath="com/rog/webshop/model/product/Product.java"/>
+    </Class>
+    <Field classname="com.rog.webshop.model.product.Product" name="category" signature="Lcom/rog/webshop/model/product/Category;" isStatic="false">
+      <SourceLine classname="com.rog.webshop.model.product.Product" sourcefile="Product.java" sourcepath="com/rog/webshop/model/product/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.rog.webshop.model.user.User">
+      <SourceLine classname="com.rog.webshop.model.user.User" start="18" end="226" sourcefile="User.java" sourcepath="com/rog/webshop/model/user/User.java"/>
+    </Class>
+    <Field classname="com.rog.webshop.model.user.User" name="userProfiles" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.rog.webshop.model.user.User" sourcefile="User.java" sourcepath="com/rog/webshop/model/user/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="1" missingClasses="36">
+    <Error>
+      <ErrorMessage>Exception analyzing com.rog.webshop.dao.AbstractDao using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.mail.MailException</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessagePreparator</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.DefaultRedirectStrategy</MissingClass>
+    <MissingClass>org.springframework.security.web.RedirectStrategy</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.ui.velocity.VelocityEngineUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.bind.WebDataBinder</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 00:25:39 +0000" total_classes="55" referenced_classes="112" total_bugs="5" total_size="1213" num_packages="19" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.24" clock_seconds="2.41" peak_mbytes="194.92" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="3" priority_1="2">
+    <PackageStats package="com.rog.webshop.configuration" total_bugs="0" total_types="1" total_size="44">
+      <ClassStats class="com.rog.webshop.configuration.CustomSuccessHandler" sourceFile="CustomSuccessHandler.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.controller" total_bugs="0" total_types="4" total_size="189">
+      <ClassStats class="com.rog.webshop.controller.CartController" sourceFile="CartController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.rog.webshop.controller.CartRestController" sourceFile="CartRestController.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.rog.webshop.controller.HomeController" sourceFile="HomeController.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.rog.webshop.controller.ProductController" sourceFile="ProductController.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.dao" total_bugs="1" total_types="1" total_size="24" priority_2="1">
+      <ClassStats class="com.rog.webshop.dao.AbstractDao" sourceFile="AbstractDao.java" interface="false" size="24" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.dao.cart" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="com.rog.webshop.dao.cart.CartDao" sourceFile="CartDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.cart.CartDaoImpl" sourceFile="CartDaoImpl.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.dao.order" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="com.rog.webshop.dao.order.OrderDao" sourceFile="OrderDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.order.OrderDaoImpl" sourceFile="OrderDaoImpl.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.dao.product" total_bugs="0" total_types="4" total_size="48">
+      <ClassStats class="com.rog.webshop.dao.product.CategoryDao" sourceFile="CategoryDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.product.CategoryDaoImpl" sourceFile="CategoryDaoImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.product.ProductDao" sourceFile="ProductDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.product.ProductDaoImpl" sourceFile="ProductDaoImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.dao.user" total_bugs="0" total_types="4" total_size="57">
+      <ClassStats class="com.rog.webshop.dao.user.UserDao" sourceFile="UserDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.user.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.user.UserProfileDao" sourceFile="UserProfileDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.rog.webshop.dao.user.UserProfileDaoImpl" sourceFile="UserProfileDaoImpl.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.exception" total_bugs="0" total_types="4" total_size="33">
+      <ClassStats class="com.rog.webshop.exception.CustomerNotFoundException" sourceFile="CustomerNotFoundException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.rog.webshop.exception.InvalidCartException" sourceFile="InvalidCartException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.rog.webshop.exception.NoProductsFoundUnderCategoryException" sourceFile="NoProductsFoundUnderCategoryException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.rog.webshop.exception.ProductNotFoundException" sourceFile="ProductNotFoundException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.model.cart" total_bugs="0" total_types="2" total_size="112">
+      <ClassStats class="com.rog.webshop.model.cart.Cart" sourceFile="Cart.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.cart.Item" sourceFile="Item.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.model.order" total_bugs="2" total_types="2" total_size="110" priority_2="1" priority_1="1">
+      <ClassStats class="com.rog.webshop.model.order.Address" sourceFile="Address.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.order.Order" sourceFile="Order.java" interface="false" size="47" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.model.product" total_bugs="1" total_types="3" total_size="111" priority_2="1">
+      <ClassStats class="com.rog.webshop.model.product.Category" sourceFile="Category.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.product.CategoryName" sourceFile="CategoryName.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.product.Product" sourceFile="Product.java" interface="false" size="62" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.model.user" total_bugs="1" total_types="4" total_size="197" priority_1="1">
+      <ClassStats class="com.rog.webshop.model.user.State" sourceFile="State.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.user.User" sourceFile="User.java" interface="false" size="111" bugs="1" priority_1="1"/>
+      <ClassStats class="com.rog.webshop.model.user.UserProfile" sourceFile="UserProfile.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.rog.webshop.model.user.UserProfileType" sourceFile="UserProfileType.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.service.cart" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.rog.webshop.service.cart.CartService" sourceFile="CartService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.cart.CartServiceImpl" sourceFile="CartServiceImpl.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.service.mail" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="com.rog.webshop.service.mail.MailService" sourceFile="MailService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.mail.MailServiceImpl" sourceFile="MailServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.mail.MailServiceImpl$1" sourceFile="MailServiceImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.service.order" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.rog.webshop.service.order.OrderService" sourceFile="OrderService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.order.OrderServiceImpl" sourceFile="OrderServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.service.product" total_bugs="0" total_types="4" total_size="45">
+      <ClassStats class="com.rog.webshop.service.product.CategoryService" sourceFile="CategoryService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.product.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.product.ProductService" sourceFile="ProductService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.product.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.service.user" total_bugs="0" total_types="5" total_size="57">
+      <ClassStats class="com.rog.webshop.service.user.CustomUserDetailsService" sourceFile="CustomUserDetailsService.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.user.UserProfileService" sourceFile="UserProfileService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.user.UserProfileServiceImpl" sourceFile="UserProfileServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.user.UserService" sourceFile="UserService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.rog.webshop.service.user.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.util" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="com.rog.webshop.util.CategoryConverter" sourceFile="CategoryConverter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.rog.webshop.util.QuickPasswordEncodingGenerator" sourceFile="QuickPasswordEncodingGenerator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.rog.webshop.util.RoleToUserProfileConverter" sourceFile="RoleToUserProfileConverter.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.rog.webshop.validator" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="com.rog.webshop.validator.UserSsoId" sourceFile="UserSsoId.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.rog.webshop.validator.UserSsoIdValidator" sourceFile="UserSsoIdValidator.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.rog.webshop.validator.ValidateOnCreationOnly" sourceFile="ValidateOnCreationOnly.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="182" invocations="667" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="17944" standardDeviationMicrosecondsPerInvocation="900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="124" invocations="291" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="16046" standardDeviationMicrosecondsPerInvocation="1403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="92" invocations="291" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="17820" standardDeviationMicrosecondsPerInvocation="1206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="84" invocations="291" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="16685" standardDeviationMicrosecondsPerInvocation="1157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="79" invocations="112" avgMicrosecondsPerInvocation="707" maxMicrosecondsPerInvocation="10247" standardDeviationMicrosecondsPerInvocation="1701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="78" invocations="287" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="3802" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="73" invocations="294" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="9025" standardDeviationMicrosecondsPerInvocation="651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="69" invocations="291" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="4923" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="64" invocations="464" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="3747" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="61" invocations="112" avgMicrosecondsPerInvocation="550" maxMicrosecondsPerInvocation="7866" standardDeviationMicrosecondsPerInvocation="1189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="673" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="2233" standardDeviationMicrosecondsPerInvocation="101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="48" invocations="350" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="24835" standardDeviationMicrosecondsPerInvocation="1330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="41" invocations="112" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="32071" standardDeviationMicrosecondsPerInvocation="3056"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="40" invocations="194" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="1434" standardDeviationMicrosecondsPerInvocation="237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="38" invocations="187" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="13097" standardDeviationMicrosecondsPerInvocation="983"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="112" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="5470" standardDeviationMicrosecondsPerInvocation="698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="33" invocations="538" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="973" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="112" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8612" standardDeviationMicrosecondsPerInvocation="857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="24" invocations="55" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="6211" standardDeviationMicrosecondsPerInvocation="1327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="112" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="5216" standardDeviationMicrosecondsPerInvocation="764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="24" invocations="287" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="13786" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="22" invocations="112" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="2330" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="55" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="4946" standardDeviationMicrosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="22" invocations="3292" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1020" standardDeviationMicrosecondsPerInvocation="28"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="22" invocations="55" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="3315" standardDeviationMicrosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="112" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2750" standardDeviationMicrosecondsPerInvocation="362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="18" invocations="291" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1386" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="16" invocations="55" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="6619" standardDeviationMicrosecondsPerInvocation="930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="55" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="5388" standardDeviationMicrosecondsPerInvocation="722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="14" invocations="55" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="1394" standardDeviationMicrosecondsPerInvocation="303"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

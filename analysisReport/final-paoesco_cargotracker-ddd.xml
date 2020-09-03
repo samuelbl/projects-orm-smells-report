@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597112333000" analysisTimestamp="1597112334613" release="">
+  <Project projectName="repositorios/paoesco_cargotracker-ddd">
+    <Jar>repositorios/paoesco_cargotracker-ddd</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.application.util.SampleDataGenerator">
+      <SourceLine classname="net.java.cargotracker.application.util.SampleDataGenerator" start="33" end="299" sourcefile="SampleDataGenerator.java" sourcepath="net/java/cargotracker/application/util/SampleDataGenerator.java"/>
+    </Class>
+    <Method classname="net.java.cargotracker.application.util.SampleDataGenerator" name="unLoadAll" signature="()V" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.application.util.SampleDataGenerator" start="56" end="76" startBytecode="0" endBytecode="329" sourcefile="SampleDataGenerator.java" sourcepath="net/java/cargotracker/application/util/SampleDataGenerator.java"/>
+    </Method>
+    <SourceLine classname="net.java.cargotracker.application.util.SampleDataGenerator" start="61" end="61" startBytecode="12" endBytecode="12" sourcefile="SampleDataGenerator.java" sourcepath="net/java/cargotracker/application/util/SampleDataGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Cargo">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Cargo" start="119" end="244" sourcefile="Cargo.java" sourcepath="net/java/cargotracker/domain/model/cargo/Cargo.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Cargo" name="origin" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Cargo" sourcefile="Cargo.java" sourcepath="net/java/cargotracker/domain/model/cargo/Cargo.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" start="36" end="377" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Delivery" name="currentVoyage" signature="Lnet/java/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" start="36" end="377" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Delivery" name="lastEvent" signature="Lnet/java/cargotracker/domain/model/handling/HandlingEvent;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" start="36" end="377" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Delivery" name="lastKnownLocation" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="net/java/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.HandlingActivity">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" start="37" end="110" sourcefile="HandlingActivity.java" sourcepath="net/java/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" name="location" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" sourcefile="HandlingActivity.java" sourcepath="net/java/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.HandlingActivity">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" start="37" end="110" sourcefile="HandlingActivity.java" sourcepath="net/java/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" name="voyage" signature="Lnet/java/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.HandlingActivity" sourcefile="HandlingActivity.java" sourcepath="net/java/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" start="48" end="116" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Leg" name="loadLocation" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" start="48" end="116" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Leg" name="unloadLocation" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" start="48" end="116" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.Leg" name="voyage" signature="Lnet/java/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="net/java/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.RouteSpecification">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" start="22" end="107" sourcefile="RouteSpecification.java" sourcepath="net/java/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" name="destination" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" sourcefile="RouteSpecification.java" sourcepath="net/java/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.cargo.RouteSpecification">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" start="22" end="107" sourcefile="RouteSpecification.java" sourcepath="net/java/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" name="origin" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.cargo.RouteSpecification" sourcefile="RouteSpecification.java" sourcepath="net/java/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" start="127" end="262" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.handling.HandlingEvent" name="cargo" signature="Lnet/java/cargotracker/domain/model/cargo/Cargo;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" start="127" end="262" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.handling.HandlingEvent" name="location" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" start="127" end="262" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.handling.HandlingEvent" name="voyage" signature="Lnet/java/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="net/java/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.voyage.CarrierMovement">
+      <SourceLine classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" start="48" end="108" sourcefile="CarrierMovement.java" sourcepath="net/java/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" name="arrivalLocation" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" sourcefile="CarrierMovement.java" sourcepath="net/java/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.java.cargotracker.domain.model.voyage.CarrierMovement">
+      <SourceLine classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" start="48" end="108" sourcefile="CarrierMovement.java" sourcepath="net/java/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Class>
+    <Field classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" name="departureLocation" signature="Lnet/java/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="net.java.cargotracker.domain.model.voyage.CarrierMovement" sourcefile="CarrierMovement.java" sourcepath="net/java/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>javax.batch.api.chunk.AbstractItemReader</MissingClass>
+    <MissingClass>javax.batch.api.chunk.AbstractItemWriter</MissingClass>
+    <MissingClass>javax.batch.api.chunk.listener.SkipReadListener</MissingClass>
+    <MissingClass>javax.batch.operations.JobOperator</MissingClass>
+    <MissingClass>javax.batch.runtime.BatchRuntime</MissingClass>
+    <MissingClass>javax.batch.runtime.context.JobContext</MissingClass>
+    <MissingClass>javax.enterprise.event.Event</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.Annotated</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.InjectionPoint</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.convert.Converter</MissingClass>
+    <MissingClass>javax.jms.Destination</MissingClass>
+    <MissingClass>javax.jms.JMSContext</MissingClass>
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>javax.jms.JMSProducer</MissingClass>
+    <MissingClass>javax.jms.MessageListener</MissingClass>
+    <MissingClass>javax.jms.ObjectMessage</MissingClass>
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>javax.json.Json</MissingClass>
+    <MissingClass>javax.json.stream.JsonGenerator</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.websocket.RemoteEndpoint$Basic</MissingClass>
+    <MissingClass>javax.websocket.Session</MissingClass>
+    <MissingClass>javax.ws.rs.client.Client</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.client.Invocation$Builder</MissingClass>
+    <MissingClass>javax.ws.rs.client.WebTarget</MissingClass>
+    <MissingClass>javax.ws.rs.core.GenericType</MissingClass>
+    <MissingClass>javax.ws.rs.core.MediaType</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ContextResolver</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.glassfish.jersey.moxy.json.MoxyJsonConfig</MissingClass>
+    <MissingClass>org.glassfish.jersey.moxy.json.MoxyJsonFeature</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ResourceConfig</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:18:53 +0000" total_classes="98" referenced_classes="193" total_bugs="17" total_size="2672" num_packages="26" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.40" clock_seconds="3.79" peak_mbytes="334.66" alloc_mbytes="3540.00" gc_seconds="0.20" priority_2="17">
+    <PackageStats package="net.java.cargotracker.application" total_bugs="0" total_types="4" total_size="14">
+      <ClassStats class="net.java.cargotracker.application.ApplicationEvents" sourceFile="ApplicationEvents.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.BookingService" sourceFile="BookingService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.CargoInspectionService" sourceFile="CargoInspectionService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.HandlingEventService" sourceFile="HandlingEventService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.application.internal" total_bugs="0" total_types="3" total_size="85">
+      <ClassStats class="net.java.cargotracker.application.internal.DefaultBookingService" sourceFile="DefaultBookingService.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.internal.DefaultCargoInspectionService" sourceFile="DefaultCargoInspectionService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.internal.DefaultHandlingEventService" sourceFile="DefaultHandlingEventService.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.application.util" total_bugs="1" total_types="4" total_size="208" priority_2="1">
+      <ClassStats class="net.java.cargotracker.application.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.util.JsonMoxyConfigurationContextResolver" sourceFile="JsonMoxyConfigurationContextResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.util.RestConfiguration" sourceFile="RestConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.application.util.SampleDataGenerator" sourceFile="SampleDataGenerator.java" interface="false" size="176" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.model.cargo" total_bugs="11" total_types="11" total_size="527" priority_2="11">
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.Cargo" sourceFile="Cargo.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.CargoRepository" sourceFile="CargoRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.Delivery" sourceFile="Delivery.java" interface="false" size="176" bugs="3" priority_2="3"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.Delivery$1" sourceFile="Delivery.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.HandlingActivity" sourceFile="HandlingActivity.java" interface="false" size="53" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.Itinerary" sourceFile="Itinerary.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.Leg" sourceFile="Leg.java" interface="false" size="50" bugs="3" priority_2="3"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.RouteSpecification" sourceFile="RouteSpecification.java" interface="false" size="50" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.RoutingStatus" sourceFile="RoutingStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.TrackingId" sourceFile="TrackingId.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.cargo.TransportStatus" sourceFile="TransportStatus.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.model.handling" total_bugs="3" total_types="10" total_size="227" priority_2="3">
+      <ClassStats class="net.java.cargotracker.domain.model.handling.CannotCreateHandlingEventException" sourceFile="CannotCreateHandlingEventException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingEvent" sourceFile="HandlingEvent.java" interface="false" size="87" bugs="3" priority_2="3"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingEvent$Type" sourceFile="HandlingEvent.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingEventFactory" sourceFile="HandlingEventFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingEventRepository" sourceFile="HandlingEventRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingHistory" sourceFile="HandlingHistory.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.HandlingHistory$1" sourceFile="HandlingHistory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.UnknownCargoException" sourceFile="UnknownCargoException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.UnknownLocationException" sourceFile="UnknownLocationException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.handling.UnknownVoyageException" sourceFile="UnknownVoyageException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.model.location" total_bugs="0" total_types="4" total_size="101">
+      <ClassStats class="net.java.cargotracker.domain.model.location.Location" sourceFile="Location.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.location.LocationRepository" sourceFile="LocationRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.location.SampleLocations" sourceFile="SampleLocations.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.location.UnLocode" sourceFile="UnLocode.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.model.voyage" total_bugs="2" total_types="7" total_size="258" priority_2="2">
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.CarrierMovement" sourceFile="CarrierMovement.java" interface="false" size="46" bugs="2" priority_2="2"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.SampleVoyages" sourceFile="SampleVoyages.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.Schedule" sourceFile="Schedule.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.Voyage" sourceFile="Voyage.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.Voyage$Builder" sourceFile="Voyage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.VoyageNumber" sourceFile="VoyageNumber.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.model.voyage.VoyageRepository" sourceFile="VoyageRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="net.java.cargotracker.domain.service.RoutingService" sourceFile="RoutingService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.domain.shared" total_bugs="0" total_types="6" total_size="49">
+      <ClassStats class="net.java.cargotracker.domain.shared.AbstractSpecification" sourceFile="AbstractSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.shared.AndSpecification" sourceFile="AndSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.shared.DomainObjectUtils" sourceFile="DomainObjectUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.shared.NotSpecification" sourceFile="NotSpecification.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.shared.OrSpecification" sourceFile="OrSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.domain.shared.Specification" sourceFile="Specification.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.infrastructure.events.cdi" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.java.cargotracker.infrastructure.events.cdi.CargoInspected" sourceFile="CargoInspected.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.infrastructure.messaging.jms" total_bugs="0" total_types="4" total_size="93">
+      <ClassStats class="net.java.cargotracker.infrastructure.messaging.jms.CargoHandledConsumer" sourceFile="CargoHandledConsumer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.messaging.jms.HandlingEventRegistrationAttemptConsumer" sourceFile="HandlingEventRegistrationAttemptConsumer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.messaging.jms.JmsApplicationEvents" sourceFile="JmsApplicationEvents.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.messaging.jms.SimpleLoggingConsumer" sourceFile="SimpleLoggingConsumer.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.infrastructure.persistence.jpa" total_bugs="0" total_types="4" total_size="53">
+      <ClassStats class="net.java.cargotracker.infrastructure.persistence.jpa.JpaCargoRepository" sourceFile="JpaCargoRepository.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.persistence.jpa.JpaHandlingEventRepository" sourceFile="JpaHandlingEventRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.persistence.jpa.JpaLocationRepository" sourceFile="JpaLocationRepository.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.persistence.jpa.JpaVoyageRepository" sourceFile="JpaVoyageRepository.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.infrastructure.routing" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="net.java.cargotracker.infrastructure.routing.ExternalRoutingService" sourceFile="ExternalRoutingService.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.infrastructure.routing.ExternalRoutingService$1" sourceFile="ExternalRoutingService.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.booking.facade" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.BookingServiceFacade" sourceFile="BookingServiceFacade.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.booking.facade.dto" total_bugs="0" total_types="4" total_size="98">
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.dto.CargoRoute" sourceFile="CargoRoute.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.dto.Leg" sourceFile="Leg.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.dto.Location" sourceFile="Location.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.dto.RouteCandidate" sourceFile="RouteCandidate.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.booking.facade.internal" total_bugs="0" total_types="1" total_size="46">
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.internal.DefaultBookingServiceFacade" sourceFile="DefaultBookingServiceFacade.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.booking.facade.internal.assembler" total_bugs="0" total_types="3" total_size="63">
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.internal.assembler.CargoRouteDtoAssembler" sourceFile="CargoRouteDtoAssembler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.internal.assembler.ItineraryCandidateDtoAssembler" sourceFile="ItineraryCandidateDtoAssembler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.facade.internal.assembler.LocationDtoAssembler" sourceFile="LocationDtoAssembler.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.booking.web" total_bugs="0" total_types="6" total_size="197">
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.CargoAdmin" sourceFile="CargoAdmin.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.CargoDetails" sourceFile="CargoDetails.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.ChangeDestination" sourceFile="ChangeDestination.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.ItinerarySelection" sourceFile="ItinerarySelection.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.ListCargo" sourceFile="ListCargo.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.booking.web.Registration" sourceFile="Registration.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.handling" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="net.java.cargotracker.interfaces.handling.HandlingEventRegistrationAttempt" sourceFile="HandlingEventRegistrationAttempt.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.handling.file" total_bugs="0" total_types="7" total_size="191">
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.EventFilesCheckpoint" sourceFile="EventFilesCheckpoint.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.EventItemReader" sourceFile="EventItemReader.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.EventItemWriter" sourceFile="EventItemWriter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.EventLineParseException" sourceFile="EventLineParseException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.FileProcessorJobListener" sourceFile="FileProcessorJobListener.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.LineParseExceptionListener" sourceFile="LineParseExceptionListener.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.file.UploadDirectoryScanner" sourceFile="UploadDirectoryScanner.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.handling.rest" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="net.java.cargotracker.interfaces.handling.rest.HandlingReport" sourceFile="HandlingReport.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.handling.rest.HandlingReportService" sourceFile="HandlingReportService.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.tracking.socket" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="net.java.cargotracker.interfaces.tracking.socket.RealtimeCargoTrackingService" sourceFile="RealtimeCargoTrackingService.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.tracking.web" total_bugs="0" total_types="4" total_size="133">
+      <ClassStats class="net.java.cargotracker.interfaces.tracking.web.CargoTracker" sourceFile="CargoTracker.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter$1" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter$HandlingEventViewAdapter" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.cargotracker.interfaces.web.util" total_bugs="0" total_types="3" total_size="22">
+      <ClassStats class="net.java.cargotracker.interfaces.web.util.RequestParameter" sourceFile="RequestParameter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.web.util.StringTimmerConverter" sourceFile="StringTimmerConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.cargotracker.interfaces.web.util.WebProducer" sourceFile="WebProducer.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.pathfinder.api" total_bugs="0" total_types="3" total_size="110">
+      <ClassStats class="net.java.pathfinder.api.GraphTraversalService" sourceFile="GraphTraversalService.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.java.pathfinder.api.TransitEdge" sourceFile="TransitEdge.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="net.java.pathfinder.api.TransitPath" sourceFile="TransitPath.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.java.pathfinder.internal" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="net.java.pathfinder.internal.GraphDao" sourceFile="GraphDao.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="280" invocations="1001" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="11000" standardDeviationMicrosecondsPerInvocation="606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="150" invocations="489" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="13674" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="140" invocations="499" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="10641" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="138" invocations="492" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="9980" standardDeviationMicrosecondsPerInvocation="667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="136" invocations="492" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="11733" standardDeviationMicrosecondsPerInvocation="808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="136" invocations="193" avgMicrosecondsPerInvocation="705" maxMicrosecondsPerInvocation="8117" standardDeviationMicrosecondsPerInvocation="1394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="135" invocations="500" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="14853" standardDeviationMicrosecondsPerInvocation="1045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="115" invocations="193" avgMicrosecondsPerInvocation="598" maxMicrosecondsPerInvocation="5796" standardDeviationMicrosecondsPerInvocation="1045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="835" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="4184" standardDeviationMicrosecondsPerInvocation="274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="102" invocations="492" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="9692" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="95" invocations="366" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="12325" standardDeviationMicrosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="1014" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="748" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="67" invocations="193" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="20484" standardDeviationMicrosecondsPerInvocation="1513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="64" invocations="293" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="15003" standardDeviationMicrosecondsPerInvocation="1176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="525" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="27139" standardDeviationMicrosecondsPerInvocation="1183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="42" invocations="98" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="4561" standardDeviationMicrosecondsPerInvocation="678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="846" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="928" standardDeviationMicrosecondsPerInvocation="83"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="38" invocations="98" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="21002" standardDeviationMicrosecondsPerInvocation="2107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="36" invocations="98" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="5272" standardDeviationMicrosecondsPerInvocation="610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="34" invocations="193" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="1800" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="33" invocations="8279" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="2513" standardDeviationMicrosecondsPerInvocation="33"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="33" invocations="492" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="2789" standardDeviationMicrosecondsPerInvocation="168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="193" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="7453" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="31" invocations="193" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="3427" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="193" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2343" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="29" invocations="98" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="1948" standardDeviationMicrosecondsPerInvocation="368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="28" invocations="193" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="3248" standardDeviationMicrosecondsPerInvocation="372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="26" invocations="98" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="1505" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="25" invocations="98" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="6973" standardDeviationMicrosecondsPerInvocation="714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="23" invocations="489" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1214" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="22" invocations="98" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="9348" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="21" invocations="98" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2814" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="21" invocations="98" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="2092" standardDeviationMicrosecondsPerInvocation="261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="20" invocations="487" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="970" standardDeviationMicrosecondsPerInvocation="83"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="19" invocations="98" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="2419" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="19" invocations="98" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="2607" standardDeviationMicrosecondsPerInvocation="292"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

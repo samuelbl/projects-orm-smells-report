@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597104036000" analysisTimestamp="1597104037366" release="">
+  <Project projectName="repositorios/mkdika_zkmvvmcrud">
+    <Jar>repositorios/mkdika_zkmvvmcrud</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.mkdika.zkmvvmcrud.entity.TbExperience">
+      <SourceLine classname="com.mkdika.zkmvvmcrud.entity.TbExperience" start="123" end="329" sourcefile="TbExperience.java" sourcepath="com/mkdika/zkmvvmcrud/entity/TbExperience.java"/>
+    </Class>
+    <Field classname="com.mkdika.zkmvvmcrud.entity.TbExperience" name="person" signature="Lcom/mkdika/zkmvvmcrud/entity/TbPerson;" isStatic="false">
+      <SourceLine classname="com.mkdika.zkmvvmcrud.entity.TbExperience" sourcefile="TbExperience.java" sourcepath="com/mkdika/zkmvvmcrud/entity/TbExperience.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.mkdika.zkmvvmcrud.entity.TbPerson">
+      <SourceLine classname="com.mkdika.zkmvvmcrud.entity.TbPerson" start="97" end="187" sourcefile="TbPerson.java" sourcepath="com/mkdika/zkmvvmcrud/entity/TbPerson.java"/>
+    </Class>
+    <Field classname="com.mkdika.zkmvvmcrud.entity.TbPerson" name="experiences" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.mkdika.zkmvvmcrud.entity.TbPerson" sourcefile="TbPerson.java" sourcepath="com/mkdika/zkmvvmcrud/entity/TbPerson.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.RollbackException</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.annotation.AnnotationConfigApplicationContext</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</MissingClass>
+    <MissingClass>org.zkoss.bind.BindUtils</MissingClass>
+    <MissingClass>org.zkoss.bind.Converter</MissingClass>
+    <MissingClass>org.zkoss.zk.ui.Executions</MissingClass>
+    <MissingClass>org.zkoss.zk.ui.http.HttpSessionListener</MissingClass>
+    <MissingClass>org.zkoss.zk.ui.util.Clients</MissingClass>
+    <MissingClass>org.zkoss.zkplus.spring.SpringUtil</MissingClass>
+    <MissingClass>org.zkoss.zul.Combobox</MissingClass>
+    <MissingClass>org.zkoss.zul.ListModelList</MissingClass>
+    <MissingClass>org.zkoss.zul.Window</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:00:36 +0000" total_classes="237" referenced_classes="402" total_bugs="2" total_size="4579" num_packages="29" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="15.11" clock_seconds="4.22" peak_mbytes="341.48" alloc_mbytes="3540.00" gc_seconds="0.18" priority_2="1" priority_1="1">
+    <PackageStats package="com.mkdika.zkmvvmcrud.cli" total_bugs="0" total_types="1" total_size="60">
+      <ClassStats class="com.mkdika.zkmvvmcrud.cli.TestCLI" sourceFile="TestCLI.java" interface="false" size="60" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.config" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.mkdika.zkmvvmcrud.config.SpringConfig" sourceFile="SpringConfig.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.entity" total_bugs="2" total_types="2" total_size="230" priority_2="1" priority_1="1">
+      <ClassStats class="com.mkdika.zkmvvmcrud.entity.TbExperience" sourceFile="TbExperience.java" interface="false" size="159" bugs="1" priority_2="1"/>
+      <ClassStats class="com.mkdika.zkmvvmcrud.entity.TbPerson" sourceFile="TbPerson.java" interface="false" size="71" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.helper" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.mkdika.zkmvvmcrud.helper.AppUtil" sourceFile="AppUtil.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.helper.wrapper" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.mkdika.zkmvvmcrud.helper.wrapper.ToolbarWrapper" sourceFile="ToolbarWrapper.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.repository" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.mkdika.zkmvvmcrud.repository.ServiceRepository" sourceFile="ServiceRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.service" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.mkdika.zkmvvmcrud.service.AppService" sourceFile="AppService.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.web" total_bugs="0" total_types="3" total_size="231">
+      <ClassStats class="com.mkdika.zkmvvmcrud.web.BrowseData" sourceFile="BrowseData.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.mkdika.zkmvvmcrud.web.HttpSessionPool" sourceFile="HttpSessionPool.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.mkdika.zkmvvmcrud.web.Index" sourceFile="Index.java" interface="false" size="195" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.mkdika.zkmvvmcrud.web.converter" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="com.mkdika.zkmvvmcrud.web.converter.StringListConverter" sourceFile="StringListConverter.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.annotation" total_bugs="0" total_types="8" total_size="31">
+      <ClassStats class="javax.annotation.Generated" sourceFile="Generated.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.annotation.ManagedBean" sourceFile="ManagedBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.PostConstruct" sourceFile="PostConstruct.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.PreDestroy" sourceFile="PreDestroy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.Priority" sourceFile="Priority.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.Resource" sourceFile="Resource.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.annotation.Resource$AuthenticationType" sourceFile="Resource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.annotation.Resources" sourceFile="Resources.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.annotation.security" total_bugs="0" total_types="5" total_size="8">
+      <ClassStats class="javax.annotation.security.DeclareRoles" sourceFile="DeclareRoles.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.security.DenyAll" sourceFile="DenyAll.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.security.PermitAll" sourceFile="PermitAll.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.security.RolesAllowed" sourceFile="RolesAllowed.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.security.RunAs" sourceFile="RunAs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.annotation.sql" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="javax.annotation.sql.DataSourceDefinition" sourceFile="DataSourceDefinition.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="javax.annotation.sql.DataSourceDefinitions" sourceFile="DataSourceDefinitions.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.jws" total_bugs="0" total_types="7" total_size="39">
+      <ClassStats class="javax.jws.HandlerChain" sourceFile="HandlerChain.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.jws.Oneway" sourceFile="Oneway.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.jws.WebMethod" sourceFile="WebMethod.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.jws.WebParam" sourceFile="WebParam.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.jws.WebParam$Mode" sourceFile="WebParam.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.jws.WebResult" sourceFile="WebResult.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.jws.WebService" sourceFile="WebService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.jws.soap" total_bugs="0" total_types="7" total_size="48">
+      <ClassStats class="javax.jws.soap.InitParam" sourceFile="InitParam.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding" sourceFile="SOAPBinding.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$ParameterStyle" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$Style" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$Use" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPMessageHandler" sourceFile="SOAPMessageHandler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPMessageHandlers" sourceFile="SOAPMessageHandlers.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind" total_bugs="0" total_types="41" total_size="1559">
+      <ClassStats class="javax.xml.bind.Binder" sourceFile="Binder.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ContextFinder" sourceFile="ContextFinder.java" interface="false" size="241" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ContextFinder$1" sourceFile="ContextFinder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ContextFinder$2" sourceFile="ContextFinder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ContextFinder$3" sourceFile="ContextFinder.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DataBindingException" sourceFile="DataBindingException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverter" sourceFile="DatatypeConverter.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterImpl" sourceFile="DatatypeConverterImpl.java" interface="false" size="402" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterImpl$CalendarFormatter" sourceFile="DatatypeConverterImpl.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterInterface" sourceFile="DatatypeConverterInterface.java" interface="true" size="39" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Element" sourceFile="Element.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.GetPropertyAction" sourceFile="GetPropertyAction.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXB" sourceFile="JAXB.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXB$Cache" sourceFile="JAXB.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBContext" sourceFile="JAXBContext.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBContext$1" sourceFile="JAXBContext.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBElement" sourceFile="JAXBElement.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBElement$GlobalScope" sourceFile="JAXBElement.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBException" sourceFile="JAXBException.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBIntrospector" sourceFile="JAXBIntrospector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBPermission" sourceFile="JAXBPermission.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.MarshalException" sourceFile="MarshalException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Marshaller" sourceFile="Marshaller.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Marshaller$Listener" sourceFile="Marshaller.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Messages" sourceFile="Messages.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.bind.NotIdentifiableEvent" sourceFile="NotIdentifiableEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ParseConversionEvent" sourceFile="ParseConversionEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.PrintConversionEvent" sourceFile="PrintConversionEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.PropertyException" sourceFile="PropertyException.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="javax.xml.bind.SchemaOutputResolver" sourceFile="SchemaOutputResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.TypeConstraintException" sourceFile="TypeConstraintException.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="javax.xml.bind.UnmarshalException" sourceFile="UnmarshalException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Unmarshaller" sourceFile="Unmarshaller.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Unmarshaller$Listener" sourceFile="Unmarshaller.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.UnmarshallerHandler" sourceFile="UnmarshallerHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEvent" sourceFile="ValidationEvent.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEventHandler" sourceFile="ValidationEventHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEventLocator" sourceFile="ValidationEventLocator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationException" sourceFile="ValidationException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Validator" sourceFile="Validator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.WhiteSpaceProcessor" sourceFile="WhiteSpaceProcessor.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.annotation" total_bugs="0" total_types="40" total_size="173">
+      <ClassStats class="javax.xml.bind.annotation.DomHandler" sourceFile="DomHandler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.W3CDomHandler" sourceFile="W3CDomHandler.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessOrder" sourceFile="XmlAccessOrder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessType" sourceFile="XmlAccessType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessorOrder" sourceFile="XmlAccessorOrder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessorType" sourceFile="XmlAccessorType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAnyAttribute" sourceFile="XmlAnyAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAnyElement" sourceFile="XmlAnyElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAttachmentRef" sourceFile="XmlAttachmentRef.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAttribute" sourceFile="XmlAttribute.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElement" sourceFile="XmlElement.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElement$DEFAULT" sourceFile="XmlElement.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementDecl" sourceFile="XmlElementDecl.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementDecl$GLOBAL" sourceFile="XmlElementDecl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRef" sourceFile="XmlElementRef.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRef$DEFAULT" sourceFile="XmlElementRef.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRefs" sourceFile="XmlElementRefs.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementWrapper" sourceFile="XmlElementWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElements" sourceFile="XmlElements.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlEnum" sourceFile="XmlEnum.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlEnumValue" sourceFile="XmlEnumValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlID" sourceFile="XmlID.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlIDREF" sourceFile="XmlIDREF.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlInlineBinaryData" sourceFile="XmlInlineBinaryData.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlList" sourceFile="XmlList.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlMimeType" sourceFile="XmlMimeType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlMixed" sourceFile="XmlMixed.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlNs" sourceFile="XmlNs.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlNsForm" sourceFile="XmlNsForm.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlRegistry" sourceFile="XmlRegistry.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlRootElement" sourceFile="XmlRootElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchema" sourceFile="XmlSchema.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaType" sourceFile="XmlSchemaType.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaType$DEFAULT" sourceFile="XmlSchemaType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaTypes" sourceFile="XmlSchemaTypes.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSeeAlso" sourceFile="XmlSeeAlso.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlTransient" sourceFile="XmlTransient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlType" sourceFile="XmlType.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlType$DEFAULT" sourceFile="XmlType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlValue" sourceFile="XmlValue.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.annotation.adapters" total_bugs="0" total_types="7" total_size="86">
+      <ClassStats class="javax.xml.bind.annotation.adapters.CollapsedStringAdapter" sourceFile="CollapsedStringAdapter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.HexBinaryAdapter" sourceFile="HexBinaryAdapter.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.NormalizedStringAdapter" sourceFile="NormalizedStringAdapter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlAdapter" sourceFile="XmlAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter" sourceFile="XmlJavaTypeAdapter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter$DEFAULT" sourceFile="XmlJavaTypeAdapter.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters" sourceFile="XmlJavaTypeAdapters.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.attachment" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="javax.xml.bind.attachment.AttachmentMarshaller" sourceFile="AttachmentMarshaller.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.attachment.AttachmentUnmarshaller" sourceFile="AttachmentUnmarshaller.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.helpers" total_bugs="0" total_types="9" total_size="516">
+      <ClassStats class="javax.xml.bind.helpers.AbstractMarshallerImpl" sourceFile="AbstractMarshallerImpl.java" interface="false" size="165" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.AbstractUnmarshallerImpl" sourceFile="AbstractUnmarshallerImpl.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.DefaultValidationEventHandler" sourceFile="DefaultValidationEventHandler.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.Messages" sourceFile="Messages.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.NotIdentifiableEventImpl" sourceFile="NotIdentifiableEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ParseConversionEventImpl" sourceFile="ParseConversionEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.PrintConversionEventImpl" sourceFile="PrintConversionEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ValidationEventImpl" sourceFile="ValidationEventImpl.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ValidationEventLocatorImpl" sourceFile="ValidationEventLocatorImpl.java" interface="false" size="80" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.util" total_bugs="0" total_types="5" total_size="154">
+      <ClassStats class="javax.xml.bind.util.JAXBResult" sourceFile="JAXBResult.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.JAXBSource" sourceFile="JAXBSource.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.JAXBSource$1" sourceFile="JAXBSource.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.Messages" sourceFile="Messages.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.ValidationEventCollector" sourceFile="ValidationEventCollector.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.soap" total_bugs="0" total_types="29" total_size="570">
+      <ClassStats class="javax.xml.soap.AttachmentPart" sourceFile="AttachmentPart.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="javax.xml.soap.Detail" sourceFile="Detail.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.soap.DetailEntry" sourceFile="DetailEntry.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.soap.FactoryFinder" sourceFile="FactoryFinder.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="javax.xml.soap.MessageFactory" sourceFile="MessageFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.soap.MimeHeader" sourceFile="MimeHeader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.soap.MimeHeaders" sourceFile="MimeHeaders.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="javax.xml.soap.MimeHeaders$MatchingIterator" sourceFile="MimeHeaders.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="javax.xml.soap.Name" sourceFile="Name.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.soap.Node" sourceFile="Node.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SAAJMetaFactory" sourceFile="SAAJMetaFactory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SAAJResult" sourceFile="SAAJResult.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPBody" sourceFile="SOAPBody.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPBodyElement" sourceFile="SOAPBodyElement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPConnection" sourceFile="SOAPConnection.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPConnectionFactory" sourceFile="SOAPConnectionFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPConstants" sourceFile="SOAPConstants.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPElement" sourceFile="SOAPElement.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPElementFactory" sourceFile="SOAPElementFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPEnvelope" sourceFile="SOAPEnvelope.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPException" sourceFile="SOAPException.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPFactory" sourceFile="SOAPFactory.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPFault" sourceFile="SOAPFault.java" interface="true" size="27" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPFaultElement" sourceFile="SOAPFaultElement.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPHeader" sourceFile="SOAPHeader.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPHeaderElement" sourceFile="SOAPHeaderElement.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPMessage" sourceFile="SOAPMessage.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="javax.xml.soap.SOAPPart" sourceFile="SOAPPart.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="javax.xml.soap.Text" sourceFile="Text.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws" total_bugs="0" total_types="32" total_size="269">
+      <ClassStats class="javax.xml.ws.Action" sourceFile="Action.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.AsyncHandler" sourceFile="AsyncHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Binding" sourceFile="Binding.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingProvider" sourceFile="BindingProvider.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingType" sourceFile="BindingType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Dispatch" sourceFile="Dispatch.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Endpoint" sourceFile="Endpoint.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="javax.xml.ws.EndpointContext" sourceFile="EndpointContext.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.EndpointReference" sourceFile="EndpointReference.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.FaultAction" sourceFile="FaultAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Holder" sourceFile="Holder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.LogicalMessage" sourceFile="LogicalMessage.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ProtocolException" sourceFile="ProtocolException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Provider" sourceFile="Provider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RequestWrapper" sourceFile="RequestWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RespectBinding" sourceFile="RespectBinding.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RespectBindingFeature" sourceFile="RespectBindingFeature.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Response" sourceFile="Response.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ResponseWrapper" sourceFile="ResponseWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service" sourceFile="Service.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service$Mode" sourceFile="Service.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ServiceMode" sourceFile="ServiceMode.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebEndpoint" sourceFile="WebEndpoint.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebFault" sourceFile="WebFault.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceClient" sourceFile="WebServiceClient.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceContext" sourceFile="WebServiceContext.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceException" sourceFile="WebServiceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceFeature" sourceFile="WebServiceFeature.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServicePermission" sourceFile="WebServicePermission.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceProvider" sourceFile="WebServiceProvider.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRef" sourceFile="WebServiceRef.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRefs" sourceFile="WebServiceRefs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler" total_bugs="0" total_types="7" total_size="43">
+      <ClassStats class="javax.xml.ws.handler.Handler" sourceFile="Handler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.HandlerResolver" sourceFile="HandlerResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalHandler" sourceFile="LogicalHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalMessageContext" sourceFile="LogicalMessageContext.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext" sourceFile="MessageContext.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext$Scope" sourceFile="MessageContext.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.PortInfo" sourceFile="PortInfo.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler.soap" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPHandler" sourceFile="SOAPHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPMessageContext" sourceFile="SOAPMessageContext.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.http" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="javax.xml.ws.http.HTTPBinding" sourceFile="HTTPBinding.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.http.HTTPException" sourceFile="HTTPException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.soap" total_bugs="0" total_types="7" total_size="94">
+      <ClassStats class="javax.xml.ws.soap.Addressing" sourceFile="Addressing.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.AddressingFeature" sourceFile="AddressingFeature.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.AddressingFeature$Responses" sourceFile="AddressingFeature.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.MTOM" sourceFile="MTOM.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.MTOMFeature" sourceFile="MTOMFeature.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.SOAPBinding" sourceFile="SOAPBinding.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.SOAPFaultException" sourceFile="SOAPFaultException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.spi" total_bugs="0" total_types="5" total_size="172">
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder" sourceFile="FactoryFinder.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.Invoker" sourceFile="Invoker.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.Provider" sourceFile="Provider.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.ServiceDelegate" sourceFile="ServiceDelegate.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.WebServiceFeatureAnnotation" sourceFile="WebServiceFeatureAnnotation.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.spi.http" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="javax.xml.ws.spi.http.HttpContext" sourceFile="HttpContext.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.http.HttpExchange" sourceFile="HttpExchange.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.http.HttpHandler" sourceFile="HttpHandler.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.wsaddressing" total_bugs="0" total_types="5" total_size="107">
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference" sourceFile="W3CEndpointReference.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference$Address" sourceFile="W3CEndpointReference.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference$Elements" sourceFile="W3CEndpointReference.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder" sourceFile="W3CEndpointReferenceBuilder.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="324" invocations="1186" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="30159" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="165" invocations="402" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="10703" standardDeviationMicrosecondsPerInvocation="1196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="153" invocations="850" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="7199" standardDeviationMicrosecondsPerInvocation="453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="148" invocations="402" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="8133" standardDeviationMicrosecondsPerInvocation="914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="146" invocations="879" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="8076" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="134" invocations="1314" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="2435" standardDeviationMicrosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="134" invocations="838" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="4593" standardDeviationMicrosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="131" invocations="880" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="9591" standardDeviationMicrosecondsPerInvocation="521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="126" invocations="849" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="4822" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="123" invocations="850" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="9578" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="85" invocations="1196" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="509" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="73" invocations="644" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="2274" standardDeviationMicrosecondsPerInvocation="220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="1434" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="25904" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="63" invocations="497" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="14222" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="61" invocations="237" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="31038" standardDeviationMicrosecondsPerInvocation="2013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="56" invocations="402" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="3828" standardDeviationMicrosecondsPerInvocation="365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="49" invocations="402" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="1799" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="44" invocations="402" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="4833" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="1073" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="1002" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="39" invocations="850" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="1335" standardDeviationMicrosecondsPerInvocation="107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="39" invocations="402" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="3469" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="402" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="5449" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="37" invocations="7902" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="877" standardDeviationMicrosecondsPerInvocation="20"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="35" invocations="237" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2201" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="34" invocations="237" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="8565" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="32" invocations="402" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="2299" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="30" invocations="402" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="8493" standardDeviationMicrosecondsPerInvocation="625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="28" invocations="237" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2858" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="28" invocations="29883" avgMicrosecondsPerInvocation="0" maxMicrosecondsPerInvocation="1152" standardDeviationMicrosecondsPerInvocation="6"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="27" invocations="124" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="3083" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="26" invocations="237" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="4196" standardDeviationMicrosecondsPerInvocation="307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="26" invocations="1434" avgMicrosecondsPerInvocation="18" maxMicrosecondsPerInvocation="3234" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="26" invocations="237" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2647" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="25" invocations="835" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="951" standardDeviationMicrosecondsPerInvocation="73"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="24" invocations="237" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="2393" standardDeviationMicrosecondsPerInvocation="261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="24" invocations="237" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="1865" standardDeviationMicrosecondsPerInvocation="217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="24" invocations="237" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="2044" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="23" invocations="838" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="955" standardDeviationMicrosecondsPerInvocation="50"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

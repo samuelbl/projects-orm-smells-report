@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596955584000" analysisTimestamp="1596955585671" release="">
+  <Project projectName="repositorios/mavogel_hska-vis-legacy">
+    <Jar>repositorios/mavogel_hska-vis-legacy</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="hska.iwi.eShopMaster.model.database.dataobjects.Product">
+      <SourceLine classname="hska.iwi.eShopMaster.model.database.dataobjects.Product" start="37" end="91" sourcefile="Product.java" sourcepath="hska/iwi/eShopMaster/model/database/dataobjects/Product.java"/>
+    </Class>
+    <Field classname="hska.iwi.eShopMaster.model.database.dataobjects.Product" name="category" signature="Lhska/iwi/eShopMaster/model/database/dataobjects/Category;" isStatic="false">
+      <SourceLine classname="hska.iwi.eShopMaster.model.database.dataobjects.Product" sourcefile="Product.java" sourcepath="hska/iwi/eShopMaster/model/database/dataobjects/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="hska.iwi.eShopMaster.model.database.dataobjects.User">
+      <SourceLine classname="hska.iwi.eShopMaster.model.database.dataobjects.User" start="44" end="102" sourcefile="User.java" sourcepath="hska/iwi/eShopMaster/model/database/dataobjects/User.java"/>
+    </Class>
+    <Field classname="hska.iwi.eShopMaster.model.database.dataobjects.User" name="role" signature="Lhska/iwi/eShopMaster/model/database/dataobjects/Role;" isStatic="false">
+      <SourceLine classname="hska.iwi.eShopMaster.model.database.dataobjects.User" sourcefile="User.java" sourcepath="hska/iwi/eShopMaster/model/database/dataobjects/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="12">
+    <MissingClass>com.opensymphony.xwork2.ActionContext</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionSupport</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.boot.Metadata</MissingClass>
+    <MissingClass>org.hibernate.boot.MetadataSources</MissingClass>
+    <MissingClass>org.hibernate.boot.registry.StandardServiceRegistryBuilder</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 06:46:24 +0000" total_classes="28" referenced_classes="50" total_bugs="2" total_size="911" num_packages="7" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.99" clock_seconds="1.67" peak_mbytes="155.05" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="2">
+    <PackageStats package="hska.iwi.eShopMaster.controller" total_bugs="0" total_types="11" total_size="444">
+      <ClassStats class="hska.iwi.eShopMaster.controller.AddCategoryAction" sourceFile="AddCategoryAction.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.AddProductAction" sourceFile="AddProductAction.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.DeleteCategoryAction" sourceFile="DeleteCategoryAction.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.DeleteProductAction" sourceFile="DeleteProductAction.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.InitCategorySiteAction" sourceFile="InitCategorySiteAction.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.ListAllProductsAction" sourceFile="ListAllProductsAction.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.LoginAction" sourceFile="LoginAction.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.LogoutAction" sourceFile="LogoutAction.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.ProductDetailsAction" sourceFile="ProductDetailsAction.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.RegisterAction" sourceFile="RegisterAction.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.controller.SearchAction" sourceFile="SearchAction.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.businessLogic.manager" total_bugs="0" total_types="3" total_size="21">
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.CategoryManager" sourceFile="CategoryManager.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.ProductManager" sourceFile="ProductManager.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.UserManager" sourceFile="UserManager.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.businessLogic.manager.impl" total_bugs="0" total_types="3" total_size="83">
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.impl.CategoryManagerImpl" sourceFile="CategoryManagerImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.impl.ProductManagerImpl" sourceFile="ProductManagerImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.businessLogic.manager.impl.UserManagerImpl" sourceFile="UserManagerImpl.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.database" total_bugs="0" total_types="1" total_size="113">
+      <ClassStats class="hska.iwi.eShopMaster.model.database.GenericHibernateDAO" sourceFile="GenericHibernateDAO.java" interface="false" size="113" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.database.dataAccessObjects" total_bugs="0" total_types="5" total_size="75">
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataAccessObjects.CategoryDAO" sourceFile="CategoryDAO.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataAccessObjects.IGenericDAO" sourceFile="IGenericDAO.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataAccessObjects.ProductDAO" sourceFile="ProductDAO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataAccessObjects.RoleDAO" sourceFile="RoleDAO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataAccessObjects.UserDAO" sourceFile="UserDAO.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.database.dataobjects" total_bugs="2" total_types="4" total_size="158" priority_2="2">
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataobjects.Category" sourceFile="Category.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataobjects.Product" sourceFile="Product.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataobjects.Role" sourceFile="Role.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="hska.iwi.eShopMaster.model.database.dataobjects.User" sourceFile="User.java" interface="false" size="49" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="hska.iwi.eShopMaster.model.sessionFactory.util" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="hska.iwi.eShopMaster.model.sessionFactory.util.HibernateUtil" sourceFile="HibernateUtil.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="162" invocations="444" avgMicrosecondsPerInvocation="366" maxMicrosecondsPerInvocation="11338" standardDeviationMicrosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="77" invocations="50" avgMicrosecondsPerInvocation="1558" maxMicrosecondsPerInvocation="20596" standardDeviationMicrosecondsPerInvocation="3651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="48" invocations="188" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="8216" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="47" invocations="188" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="5099" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="448" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1165" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="42" invocations="188" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="4319" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="41" invocations="188" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="9248" standardDeviationMicrosecondsPerInvocation="696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="50" avgMicrosecondsPerInvocation="813" maxMicrosecondsPerInvocation="6356" standardDeviationMicrosecondsPerInvocation="1347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="39" invocations="215" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="25655" standardDeviationMicrosecondsPerInvocation="1742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="37" invocations="189" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="9277" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="257" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="4132" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="33" invocations="188" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="3023" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="385" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="1896" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="102" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="13574" standardDeviationMicrosecondsPerInvocation="1364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="76" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="1823" standardDeviationMicrosecondsPerInvocation="359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="50" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="6921" standardDeviationMicrosecondsPerInvocation="1041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="50" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="11797" standardDeviationMicrosecondsPerInvocation="1664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="50" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="3947" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="50" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="4834" standardDeviationMicrosecondsPerInvocation="770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="14" invocations="1754" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="1268" standardDeviationMicrosecondsPerInvocation="41"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="28" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="2910" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="50" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="2426" standardDeviationMicrosecondsPerInvocation="452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="50" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="2202" standardDeviationMicrosecondsPerInvocation="423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="11" invocations="188" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="1651" standardDeviationMicrosecondsPerInvocation="133"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

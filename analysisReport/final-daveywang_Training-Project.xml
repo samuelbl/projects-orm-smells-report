@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596945734000" analysisTimestamp="1596945736161" release="">
+  <Project projectName="repositorios/daveywang_Training-Project">
+    <Jar>repositorios/daveywang_Training-Project</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.model.Employee">
+      <SourceLine classname="com.ascending.training.model.Employee" start="19" end="134" sourcefile="Employee.java" sourcepath="com/ascending/training/model/Employee.java"/>
+    </Class>
+    <Field classname="com.ascending.training.model.Employee" name="department" signature="Lcom/ascending/training/model/Department;" isStatic="false">
+      <SourceLine classname="com.ascending.training.model.Employee" sourcefile="Employee.java" sourcepath="com/ascending/training/model/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.model.User">
+      <SourceLine classname="com.ascending.training.model.User" start="19" end="109" sourcefile="User.java" sourcepath="com/ascending/training/model/User.java"/>
+    </Class>
+    <Field classname="com.ascending.training.model.User" name="roles" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.model.User" sourcefile="User.java" sourcepath="com/ascending/training/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.AccountDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="35" end="108" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.AccountDaoImpl" name="getAccountById" signature="(I)Lcom/ascending/training/model/Account;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="83" end="90" startBytecode="0" endBytecode="408" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="83" end="83" startBytecode="0" endBytecode="0" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.AccountDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="35" end="108" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.AccountDaoImpl" name="getAccounts" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="72" end="78" startBytecode="0" endBytecode="389" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.AccountDaoImpl" start="72" end="72" startBytecode="0" endBytecode="0" sourcefile="AccountDaoImpl.java" sourcepath="com/ascending/training/repository/AccountDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="35" end="204" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl" name="getDepartmentAndEmployees" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="162" end="178" startBytecode="0" endBytecode="576" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="164" end="164" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="35" end="204" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl" name="getDepartmentAndEmployeesAndAccounts" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="184" end="204" startBytecode="0" endBytecode="599" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="186" end="186" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="35" end="204" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl" name="getDepartmentByName" signature="(Ljava/lang/String;)Lcom/ascending/training/model/Department;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="144" end="156" startBytecode="0" endBytecode="232" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="145" end="145" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="35" end="204" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl" name="getDepartments" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="118" end="125" startBytecode="0" endBytecode="404" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="118" end="118" startBytecode="0" endBytecode="0" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="35" end="204" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl" name="getDepartmentsWithChildren" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="131" end="138" startBytecode="0" endBytecode="389" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl" start="131" end="131" startBytecode="0" endBytecode="0" sourcefile="DepartmentDaoImpl.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl2">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="33" end="191" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl2" name="getDepartmentAndEmployees" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="150" end="166" startBytecode="0" endBytecode="576" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="152" end="152" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl2">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="33" end="191" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl2" name="getDepartmentAndEmployeesAndAccounts" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="171" end="191" startBytecode="0" endBytecode="599" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="173" end="173" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl2">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="33" end="191" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl2" name="getDepartmentByName" signature="(Ljava/lang/String;)Lcom/ascending/training/model/Department;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="133" end="145" startBytecode="0" endBytecode="232" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="134" end="134" startBytecode="6" endBytecode="6" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl2">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="33" end="191" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl2" name="getDepartments" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="111" end="117" startBytecode="0" endBytecode="389" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="111" end="111" startBytecode="0" endBytecode="0" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.DepartmentDaoImpl2">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="33" end="191" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.DepartmentDaoImpl2" name="getDepartmentsWithChildren" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="121" end="128" startBytecode="0" endBytecode="389" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.DepartmentDaoImpl2" start="121" end="121" startBytecode="0" endBytecode="0" sourcefile="DepartmentDaoImpl2.java" sourcepath="com/ascending/training/repository/DepartmentDaoImpl2.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.EmployeeDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="34" end="117" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.EmployeeDaoImpl" name="getEmployeeByName" signature="(Ljava/lang/String;)Lcom/ascending/training/model/Employee;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="110" end="117" startBytecode="0" endBytecode="411" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="110" end="110" startBytecode="0" endBytecode="0" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    <String value="Method: getEmployeeByName. Fields with EAGER without Join Fetch: department, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.EmployeeDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="34" end="117" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.EmployeeDaoImpl" name="getEmployees" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="98" end="104" startBytecode="0" endBytecode="389" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="98" end="98" startBytecode="0" endBytecode="0" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    <String value="Method: getEmployees. Fields with EAGER without Join Fetch: department, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.EmployeeDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="34" end="117" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.EmployeeDaoImpl" name="getEmployeeByName" signature="(Ljava/lang/String;)Lcom/ascending/training/model/Employee;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="110" end="117" startBytecode="0" endBytecode="411" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="110" end="110" startBytecode="0" endBytecode="0" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.EmployeeDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="34" end="117" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.EmployeeDaoImpl" name="getEmployees" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="98" end="104" startBytecode="0" endBytecode="389" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.EmployeeDaoImpl" start="98" end="98" startBytecode="0" endBytecode="0" sourcefile="EmployeeDaoImpl.java" sourcepath="com/ascending/training/repository/EmployeeDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.RoleDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.RoleDaoImpl" start="23" end="36" sourcefile="RoleDaoImpl.java" sourcepath="com/ascending/training/repository/RoleDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.RoleDaoImpl" name="getRoleByName" signature="(Ljava/lang/String;)Lcom/ascending/training/model/Role;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.RoleDaoImpl" start="29" end="36" startBytecode="0" endBytecode="414" sourcefile="RoleDaoImpl.java" sourcepath="com/ascending/training/repository/RoleDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.RoleDaoImpl" start="29" end="29" startBytecode="0" endBytecode="0" sourcefile="RoleDaoImpl.java" sourcepath="com/ascending/training/repository/RoleDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.UserDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="27" end="76" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.UserDaoImpl" name="getUserByCredentials" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/ascending/training/model/User;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="67" end="76" startBytecode="0" endBytecode="489" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="67" end="67" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    <String value="Method: getUserByCredentials. Fields with EAGER without Join Fetch: roles, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.UserDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="27" end="76" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.UserDaoImpl" name="getUserByEmail" signature="(Ljava/lang/String;)Lcom/ascending/training/model/User;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="55" end="62" startBytecode="0" endBytecode="414" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="55" end="55" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    <String value="Method: getUserByEmail. Fields with EAGER without Join Fetch: roles, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.UserDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="27" end="76" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.UserDaoImpl" name="getUserByCredentials" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/ascending/training/model/User;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="67" end="76" startBytecode="0" endBytecode="489" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="67" end="67" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.ascending.training.repository.UserDaoImpl">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="27" end="76" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.ascending.training.repository.UserDaoImpl" name="getUserByEmail" signature="(Ljava/lang/String;)Lcom/ascending/training/model/User;" isStatic="false">
+      <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="55" end="62" startBytecode="0" endBytecode="414" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ascending.training.repository.UserDaoImpl" start="55" end="55" startBytecode="0" endBytecode="0" sourcefile="UserDaoImpl.java" sourcepath="com/ascending/training/repository/UserDaoImpl.java"/>
+  </BugInstance>
+  <Errors errors="2" missingClasses="57">
+    <Error>
+      <ErrorMessage>Exception analyzing com.ascending.training.repository.DepartmentDaoImpl2 using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.ascending.training.repository.DepartmentDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.amazonaws.HttpMethod</MissingClass>
+    <MissingClass>com.amazonaws.auth.DefaultAWSCredentialsProviderChain</MissingClass>
+    <MissingClass>com.amazonaws.regions.Regions</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3ClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.GeneratePresignedUrlRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.AmazonSQS</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.AmazonSQSClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.CreateQueueRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.CreateQueueResult</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.GetQueueUrlResult</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.MessageAttributeValue</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.ReceiveMessageRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.ReceiveMessageResult</MissingClass>
+    <MissingClass>com.amazonaws.services.sqs.model.SendMessageRequest</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.github.fluent.hibernate.cfg.scanner.EntityScanner</MissingClass>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.SignatureAlgorithm</MissingClass>
+    <MissingClass>javax.persistence.ParameterMode</MissingClass>
+    <MissingClass>javax.persistence.StoredProcedureQuery</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.codec.digest.DigestUtils</MissingClass>
+    <MissingClass>org.hibernate.EmptyInterceptor</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionBuilder</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.boot.registry.StandardServiceRegistryBuilder</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.query.Query</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InjectionPoint</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.UrlResource</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.web.bind.annotation.RequestMethod</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 04:02:14 +0000" total_classes="57" referenced_classes="131" total_bugs="23" total_size="1539" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.41" clock_seconds="2.84" peak_mbytes="304.92" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="22" priority_1="1">
+    <PackageStats package="com.ascending.training.bean" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.ascending.training.bean.BeanFactory" sourceFile="BeanFactory.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.controller" total_bugs="0" total_types="6" total_size="161">
+      <ClassStats class="com.ascending.training.controller.AccountController" sourceFile="AccountController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.ascending.training.controller.Authentication" sourceFile="Authentication.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ascending.training.controller.DepartmentController" sourceFile="DepartmentController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.ascending.training.controller.EmployeeController" sourceFile="EmployeeController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ascending.training.controller.FileController" sourceFile="FileController.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.ascending.training.controller.TestController" sourceFile="TestController.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.exception" total_bugs="0" total_types="4" total_size="65">
+      <ClassStats class="com.ascending.training.exception.AppBaseException" sourceFile="AppBaseException.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.ascending.training.exception.AuthenticationException" sourceFile="AuthenticationException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.ascending.training.exception.RestExceptionHandler" sourceFile="RestExceptionHandler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.ascending.training.exception.UserNotFoundException" sourceFile="UserNotFoundException.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.filter" total_bugs="0" total_types="2" total_size="44">
+      <ClassStats class="com.ascending.training.filter.LogFilter" sourceFile="LogFilter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.ascending.training.filter.SecurityFilter" sourceFile="SecurityFilter.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.init" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.ascending.training.init.AppInitializer" sourceFile="AppInitializer.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.interceptor" total_bugs="0" total_types="1" total_size="35">
+      <ClassStats class="com.ascending.training.interceptor.HibernateInterceptor" sourceFile="HibernateInterceptor.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.jdbc" total_bugs="0" total_types="2" total_size="81">
+      <ClassStats class="com.ascending.training.jdbc.DepartmentDao" sourceFile="DepartmentDao.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.ascending.training.jdbc.EmployeeDao" sourceFile="EmployeeDao.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.listener" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.ascending.training.listener.AppContextListener" sourceFile="AppContextListener.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.model" total_bugs="2" total_types="6" total_size="295" priority_2="1" priority_1="1">
+      <ClassStats class="com.ascending.training.model.Account" sourceFile="Account.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.ascending.training.model.Department" sourceFile="Department.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.ascending.training.model.Employee" sourceFile="Employee.java" interface="false" size="77" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ascending.training.model.Model" sourceFile="Model.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ascending.training.model.Role" sourceFile="Role.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.ascending.training.model.User" sourceFile="User.java" interface="false" size="56" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.repository" total_bugs="21" total_types="13" total_size="433" priority_2="21">
+      <ClassStats class="com.ascending.training.repository.AccountDao" sourceFile="AccountDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.AccountDaoImpl" sourceFile="AccountDaoImpl.java" interface="false" size="58" bugs="2" priority_2="2"/>
+      <ClassStats class="com.ascending.training.repository.DepartmentDao" sourceFile="DepartmentDao.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.DepartmentDaoImpl" sourceFile="DepartmentDaoImpl.java" interface="false" size="109" bugs="5" priority_2="5"/>
+      <ClassStats class="com.ascending.training.repository.DepartmentDaoImpl2" sourceFile="DepartmentDaoImpl2.java" interface="false" size="106" bugs="5" priority_2="5"/>
+      <ClassStats class="com.ascending.training.repository.DepartmentDaoNew" sourceFile="DepartmentDaoNew.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.DepartmentDaoNewImpl" sourceFile="DepartmentDaoNewImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.EmployeeDao" sourceFile="EmployeeDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.EmployeeDaoImpl" sourceFile="EmployeeDaoImpl.java" interface="false" size="62" bugs="4" priority_2="4"/>
+      <ClassStats class="com.ascending.training.repository.RoleDao" sourceFile="RoleDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.RoleDaoImpl" sourceFile="RoleDaoImpl.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ascending.training.repository.UserDao" sourceFile="UserDao.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.ascending.training.repository.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="40" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.service" total_bugs="0" total_types="16" total_size="241">
+      <ClassStats class="com.ascending.training.service.AccountService" sourceFile="AccountService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.AccountServiceImpl" sourceFile="AccountServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.AuthService" sourceFile="AuthService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.AuthServiceImpl" sourceFile="AuthServiceImpl.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.DepartmentService" sourceFile="DepartmentService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.DepartmentServiceImpl" sourceFile="DepartmentServiceImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.EmployeeService" sourceFile="EmployeeService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.EmployeeServiceImpl" sourceFile="EmployeeServiceImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.FileService" sourceFile="FileService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.FileServiceImpl" sourceFile="FileServiceImpl.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.MessageService" sourceFile="MessageService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.MessageServiceImpl" sourceFile="MessageServiceImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.RoleService" sourceFile="RoleService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.RoleServiceImpl" sourceFile="RoleServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.UserService" sourceFile="UserService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.ascending.training.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.servlet" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.ascending.training.servlet.AuthServlet" sourceFile="AuthServlet.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ascending.training.util" total_bugs="0" total_types="3" total_size="132">
+      <ClassStats class="com.ascending.training.util.Functions" sourceFile="Functions.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.ascending.training.util.HibernateUtil" sourceFile="HibernateUtil.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.ascending.training.util.JwtUtil" sourceFile="JwtUtil.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="239" invocations="923" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="20485" standardDeviationMicrosecondsPerInvocation="838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="112" invocations="247" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="8971" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="106" invocations="247" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="3803" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="103" invocations="131" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="12479" standardDeviationMicrosecondsPerInvocation="1637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="100" invocations="247" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="8005" standardDeviationMicrosecondsPerInvocation="812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="89" invocations="247" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="8549" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="86" invocations="131" avgMicrosecondsPerInvocation="663" maxMicrosecondsPerInvocation="8697" standardDeviationMicrosecondsPerInvocation="1226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="84" invocations="247" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="5911" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="74" invocations="938" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="3056" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="72" invocations="543" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="3635" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="70" invocations="247" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="7706" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="68" invocations="191" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="3716" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="52" invocations="761" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="13046" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="237" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="14131" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="45" invocations="298" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="22262" standardDeviationMicrosecondsPerInvocation="1286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="40" invocations="57" avgMicrosecondsPerInvocation="703" maxMicrosecondsPerInvocation="9217" standardDeviationMicrosecondsPerInvocation="2011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="131" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="5052" standardDeviationMicrosecondsPerInvocation="563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="30" invocations="131" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="2999" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="131" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="5160" standardDeviationMicrosecondsPerInvocation="621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="28" invocations="131" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="1315" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="27" invocations="247" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2088" standardDeviationMicrosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="27" invocations="4256" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1095" standardDeviationMicrosecondsPerInvocation="24"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="26" invocations="131" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="8553" standardDeviationMicrosecondsPerInvocation="771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="26" invocations="57" avgMicrosecondsPerInvocation="461" maxMicrosecondsPerInvocation="2720" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="25" invocations="57" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="5745" standardDeviationMicrosecondsPerInvocation="883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="23" invocations="131" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="2072" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="57" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="3003" standardDeviationMicrosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="57" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="2280" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="17" invocations="57" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="3466" standardDeviationMicrosecondsPerInvocation="483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="57" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="6327" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="16" invocations="57" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="1386" standardDeviationMicrosecondsPerInvocation="371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="16" invocations="57" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="2191" standardDeviationMicrosecondsPerInvocation="346"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

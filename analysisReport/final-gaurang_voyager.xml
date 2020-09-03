@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596935696000" analysisTimestamp="1596935697955" release="">
+  <Project projectName="repositorios/gaurang_voyager">
+    <Jar>repositorios/gaurang_voyager</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.BankDetails">
+      <SourceLine classname="com.cd.voyager.entities.BankDetails" start="16" end="135" sourcefile="BankDetails.java" sourcepath="com/cd/voyager/entities/BankDetails.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.BankDetails" name="driver" signature="Lcom/cd/voyager/entities/Driver;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.BankDetails" sourcefile="BankDetails.java" sourcepath="com/cd/voyager/entities/BankDetails.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Customer">
+      <SourceLine classname="com.cd.voyager.entities.Customer" start="33" end="355" sourcefile="Customer.java" sourcepath="com/cd/voyager/entities/Customer.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Customer" name="paymentList" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Customer" sourcefile="Customer.java" sourcepath="com/cd/voyager/entities/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Customer">
+      <SourceLine classname="com.cd.voyager.entities.Customer" start="33" end="355" sourcefile="Customer.java" sourcepath="com/cd/voyager/entities/Customer.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Customer" name="customerReward" signature="Lcom/cd/voyager/entities/CustomerReward;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Customer" sourcefile="Customer.java" sourcepath="com/cd/voyager/entities/Customer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.DrVehicle">
+      <SourceLine classname="com.cd.voyager.entities.DrVehicle" start="16" end="251" sourcefile="DrVehicle.java" sourcepath="com/cd/voyager/entities/DrVehicle.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.DrVehicle" name="driver" signature="Lcom/cd/voyager/entities/Driver;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.DrVehicle" sourcefile="DrVehicle.java" sourcepath="com/cd/voyager/entities/DrVehicle.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Driver">
+      <SourceLine classname="com.cd.voyager.entities.Driver" start="29" end="408" sourcefile="Driver.java" sourcepath="com/cd/voyager/entities/Driver.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Driver" name="driverDetails" signature="Lcom/cd/voyager/entities/DriverDetails;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Driver" sourcefile="Driver.java" sourcepath="com/cd/voyager/entities/Driver.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Users">
+      <SourceLine classname="com.cd.voyager.entities.Users" start="21" end="159" sourcefile="Users.java" sourcepath="com/cd/voyager/entities/Users.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Users" name="userActivitiyList" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Users" sourcefile="Users.java" sourcepath="com/cd/voyager/entities/Users.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Users">
+      <SourceLine classname="com.cd.voyager.entities.Users" start="21" end="159" sourcefile="Users.java" sourcepath="com/cd/voyager/entities/Users.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Users" name="userRole" signature="Lcom/cd/voyager/entities/UserRole;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Users" sourcefile="Users.java" sourcepath="com/cd/voyager/entities/Users.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.entities.Vehicle">
+      <SourceLine classname="com.cd.voyager.entities.Vehicle" start="15" end="173" sourcefile="Vehicle.java" sourcepath="com/cd/voyager/entities/Vehicle.java"/>
+    </Class>
+    <Field classname="com.cd.voyager.entities.Vehicle" name="driver" signature="Lcom/cd/voyager/entities/Driver;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.entities.Vehicle" sourcefile="Vehicle.java" sourcepath="com/cd/voyager/entities/Vehicle.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="customerFromBooking" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/Customer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2409" end="2417" startBytecode="0" endBytecode="141" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2409" end="2409" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    <String value="Method: customerFromBooking. Fields with EAGER without Join Fetch: paymentList, customerReward, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getDrVehicleDetails" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/DrVehicle;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1991" end="1996" startBytecode="0" endBytecode="117" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1991" end="1991" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    <String value="Method: getDrVehicleDetails. Fields with EAGER without Join Fetch: driver, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getDriverFromBooking" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/Driver;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2247" end="2280" startBytecode="0" endBytecode="336" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2247" end="2247" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    <String value="Method: getDriverFromBooking. Fields with EAGER without Join Fetch: driverDetails, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="verifyOTPForgotPass" signature="(Lcom/cd/voyager/entities/Customer;)Lcom/cd/voyager/entities/Customer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2600" end="2619" startBytecode="0" endBytecode="455" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2600" end="2600" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    <String value="Method: verifyOTPForgotPass. Fields with EAGER without Join Fetch: paymentList, customerReward, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="applyPromo" signature="(Ljava/lang/Integer;Ljava/lang/String;)Ljava/lang/Boolean;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="765" end="770" startBytecode="0" endBytecode="83" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="765" end="765" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="capturePayment" signature="(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/math/BigDecimal;)Ljava/lang/Integer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2082" end="2123" startBytecode="0" endBytecode="778" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2082" end="2082" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="customerFromBooking" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/Customer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2409" end="2417" startBytecode="0" endBytecode="141" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2409" end="2409" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="deletePayment" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="584" end="604" startBytecode="0" endBytecode="285" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="584" end="584" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getDrVehicle" signature="(Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1977" end="1981" startBytecode="0" endBytecode="114" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1977" end="1977" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getDrVehicleDetails" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/DrVehicle;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1991" end="1996" startBytecode="0" endBytecode="117" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1991" end="1991" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getDriverFromBooking" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/Driver;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2247" end="2280" startBytecode="0" endBytecode="336" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2247" end="2247" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getPromoApplied" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Lcom/cd/voyager/entities/PromoApplied;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1618" end="1630" startBytecode="0" endBytecode="194" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1618" end="1618" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="getPromoValidate" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Lcom/cd/voyager/entities/PromoValidate;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1600" end="1613" startBytecode="0" endBytecode="211" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="1600" end="1600" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="startupCheckDriver" signature="(Ljava/lang/Integer;)Lcom/cd/voyager/entities/Booking;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2752" end="2759" startBytecode="0" endBytecode="149" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2752" end="2752" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="validatePromoCode" signature="(Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="817" end="867" startBytecode="0" endBytecode="748" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="817" end="817" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="verifyOTP" signature="(Lcom/cd/voyager/entities/Registration;)Lcom/cd/voyager/entities/Registration;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="331" end="349" startBytecode="0" endBytecode="438" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="331" end="331" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="83" end="2774" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" name="verifyOTPForgotPass" signature="(Lcom/cd/voyager/entities/Customer;)Lcom/cd/voyager/entities/Customer;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2600" end="2619" startBytecode="0" endBytecode="455" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.mobility.service.impl.MobileServiceImpl" start="2600" end="2600" startBytecode="0" endBytecode="0" sourcefile="MobileServiceImpl.java" sourcepath="com/cd/voyager/mobility/service/impl/MobileServiceImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.cd.voyager.web.service.impl.MainServiceImpl">
+      <SourceLine classname="com.cd.voyager.web.service.impl.MainServiceImpl" start="47" end="783" sourcefile="MainServiceImpl.java" sourcepath="com/cd/voyager/web/service/impl/MainServiceImpl.java"/>
+    </Class>
+    <Method classname="com.cd.voyager.web.service.impl.MainServiceImpl" name="getGlobalConfig" signature="(Ljava/lang/Integer;)Ljava/util/LinkedHashMap;" isStatic="false">
+      <SourceLine classname="com.cd.voyager.web.service.impl.MainServiceImpl" start="204" end="261" startBytecode="0" endBytecode="807" sourcefile="MainServiceImpl.java" sourcepath="com/cd/voyager/web/service/impl/MainServiceImpl.java"/>
+    </Method>
+    <SourceLine classname="com.cd.voyager.web.service.impl.MainServiceImpl" start="204" end="204" startBytecode="0" endBytecode="0" sourcefile="MainServiceImpl.java" sourcepath="com/cd/voyager/web/service/impl/MainServiceImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="146">
+    <MissingClass>android.app.AlarmManager</MissingClass>
+    <MissingClass>android.app.IntentService</MissingClass>
+    <MissingClass>android.app.PendingIntent</MissingClass>
+    <MissingClass>android.content.BroadcastReceiver</MissingClass>
+    <MissingClass>android.content.Context</MissingClass>
+    <MissingClass>android.content.Intent</MissingClass>
+    <MissingClass>android.content.IntentFilter</MissingClass>
+    <MissingClass>android.content.SharedPreferences</MissingClass>
+    <MissingClass>android.content.SharedPreferences$Editor</MissingClass>
+    <MissingClass>android.content.pm.ActivityInfo</MissingClass>
+    <MissingClass>android.content.pm.PackageInfo</MissingClass>
+    <MissingClass>android.content.pm.PackageManager</MissingClass>
+    <MissingClass>android.content.pm.ResolveInfo</MissingClass>
+    <MissingClass>android.os.Build$VERSION</MissingClass>
+    <MissingClass>android.os.PowerManager</MissingClass>
+    <MissingClass>android.os.PowerManager$WakeLock</MissingClass>
+    <MissingClass>android.os.SystemClock</MissingClass>
+    <MissingClass>android.util.Log</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.google.android.gcm.server.Message</MissingClass>
+    <MissingClass>com.google.android.gcm.server.Message$Builder</MissingClass>
+    <MissingClass>com.google.android.gcm.server.Result</MissingClass>
+    <MissingClass>com.google.android.gcm.server.Sender</MissingClass>
+    <MissingClass>com.google.maps.DirectionsApi</MissingClass>
+    <MissingClass>com.google.maps.DirectionsApi$RouteRestriction</MissingClass>
+    <MissingClass>com.google.maps.DirectionsApiRequest</MissingClass>
+    <MissingClass>com.google.maps.DistanceMatrixApi</MissingClass>
+    <MissingClass>com.google.maps.DistanceMatrixApiRequest</MissingClass>
+    <MissingClass>com.google.maps.GeoApiContext</MissingClass>
+    <MissingClass>com.google.maps.model.DirectionsResult</MissingClass>
+    <MissingClass>com.google.maps.model.DirectionsRoute</MissingClass>
+    <MissingClass>com.google.maps.model.Distance</MissingClass>
+    <MissingClass>com.google.maps.model.DistanceMatrix</MissingClass>
+    <MissingClass>com.google.maps.model.DistanceMatrixElement</MissingClass>
+    <MissingClass>com.google.maps.model.DistanceMatrixRow</MissingClass>
+    <MissingClass>com.google.maps.model.Duration</MissingClass>
+    <MissingClass>com.google.maps.model.EncodedPolyline</MissingClass>
+    <MissingClass>com.google.maps.model.LatLng</MissingClass>
+    <MissingClass>com.google.maps.model.TravelMode</MissingClass>
+    <MissingClass>com.google.maps.model.Unit</MissingClass>
+    <MissingClass>com.itextpdf.text.Document</MissingClass>
+    <MissingClass>com.itextpdf.text.DocumentException</MissingClass>
+    <MissingClass>com.itextpdf.text.Image</MissingClass>
+    <MissingClass>com.itextpdf.text.PageSize</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.BaseFont</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.PdfContentByte</MissingClass>
+    <MissingClass>com.itextpdf.text.pdf.PdfWriter</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWTClaimsSet</MissingClass>
+    <MissingClass>com.nimbusds.jwt.PlainJWT</MissingClass>
+    <MissingClass>com.paypal.api.openidconnect.CreateFromAuthorizationCodeParameters</MissingClass>
+    <MissingClass>com.paypal.api.openidconnect.Tokeninfo</MissingClass>
+    <MissingClass>com.paypal.api.payments.Amount</MissingClass>
+    <MissingClass>com.paypal.api.payments.Authorization</MissingClass>
+    <MissingClass>com.paypal.api.payments.FuturePayment</MissingClass>
+    <MissingClass>com.paypal.api.payments.Payer</MissingClass>
+    <MissingClass>com.paypal.api.payments.Payment</MissingClass>
+    <MissingClass>com.paypal.api.payments.PaymentExecution</MissingClass>
+    <MissingClass>com.paypal.api.payments.RelatedResources</MissingClass>
+    <MissingClass>com.paypal.api.payments.Transaction</MissingClass>
+    <MissingClass>com.paypal.base.ClientCredentials</MissingClass>
+    <MissingClass>com.paypal.base.rest.APIContext</MissingClass>
+    <MissingClass>com.paypal.base.rest.PayPalRESTException</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.websocket.RemoteEndpoint$Basic</MissingClass>
+    <MissingClass>javax.websocket.Session</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.SQLQuery</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.hibernate.sql.JoinType</MissingClass>
+    <MissingClass>org.hibernate.transform.ResultTransformer</MissingClass>
+    <MissingClass>org.hibernate.transform.Transformers</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.dao.DataAccessException</MissingClass>
+    <MissingClass>org.springframework.dao.DeadlockLoserDataAccessException</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator</MissingClass>
+    <MissingClass>org.springframework.mail.MailException</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSenderImpl</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessagePreparator</MissingClass>
+    <MissingClass>org.springframework.messaging.Message</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessagingTemplate</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompCommand</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.messaging.support.ChannelInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AbstractAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationServiceException</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.DefaultRedirectStrategy</MissingClass>
+    <MissingClass>org.springframework.security.web.RedirectStrategy</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.util.matcher.AntPathRequestMatcher</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.context.support.SpringBeanAutowiringSupport</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.HandlerExceptionResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.RedirectView</MissingClass>
+    <MissingClass>org.springframework.web.socket.BinaryMessage</MissingClass>
+    <MissingClass>org.springframework.web.socket.TextMessage</MissingClass>
+    <MissingClass>org.springframework.web.socket.WebSocketSession</MissingClass>
+    <MissingClass>org.springframework.web.socket.handler.BinaryWebSocketHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.handler.TextWebSocketHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 01:14:56 +0000" total_classes="212" referenced_classes="408" total_bugs="26" total_size="15774" num_packages="30" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="31.87" clock_seconds="9.20" peak_mbytes="623.84" alloc_mbytes="3540.00" gc_seconds="0.31" priority_2="24" priority_1="2">
+    <PackageStats package="com.cd.voyager.common.util" total_bugs="0" total_types="11" total_size="646">
+      <ClassStats class="com.cd.voyager.common.util.AppConstants" sourceFile="AppConstants.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.DisplayImage" sourceFile="DisplayImage.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.EMUtils" sourceFile="EMUtils.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.GCMSender" sourceFile="GCMSender.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.GenerateInvoice" sourceFile="GenerateInvoice.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.GoogleServicesWrapper" sourceFile="GoogleServicesWrapper.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.ImageIOUtils" sourceFile="ImageIOUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.MD5Utils" sourceFile="MD5Utils.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.SMSUtil" sourceFile="SMSUtil.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.StringGenUtils" sourceFile="StringGenUtils.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.cd.voyager.common.util.ValidateUtils" sourceFile="ValidateUtils.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.email" total_bugs="0" total_types="3" total_size="179">
+      <ClassStats class="com.cd.voyager.email.MailSender" sourceFile="MailSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.cd.voyager.email.MailSenderPooled" sourceFile="MailSenderPooled.java" interface="false" size="153" bugs="0"/>
+      <ClassStats class="com.cd.voyager.email.Queue" sourceFile="Queue.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.entities" total_bugs="8" total_types="39" total_size="3213" priority_2="6" priority_1="2">
+      <ClassStats class="com.cd.voyager.entities.AttrConfig" sourceFile="AttrConfig.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.BankDetails" sourceFile="BankDetails.java" interface="false" size="81" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cd.voyager.entities.Booking" sourceFile="Booking.java" interface="false" size="294" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.CorpCustReward" sourceFile="CorpCustReward.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.CorpEmp" sourceFile="CorpEmp.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.CorporateCustomer" sourceFile="CorporateCustomer.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Customer" sourceFile="Customer.java" interface="false" size="176" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.cd.voyager.entities.CustomerAccount" sourceFile="CustomerAccount.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.CustomerReward" sourceFile="CustomerReward.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.CustomerRide" sourceFile="CustomerRide.java" interface="false" size="162" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DrLocation" sourceFile="DrLocation.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DrVehicle" sourceFile="DrVehicle.java" interface="false" size="119" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cd.voyager.entities.Driver" sourceFile="Driver.java" interface="false" size="196" bugs="1" priority_2="1"/>
+      <ClassStats class="com.cd.voyager.entities.DriverBooking" sourceFile="DriverBooking.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DriverDetails" sourceFile="DriverDetails.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DriverEarnings" sourceFile="DriverEarnings.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DriverLogin" sourceFile="DriverLogin.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.DriverRide" sourceFile="DriverRide.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.EmergancyContact" sourceFile="EmergancyContact.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.EnquiryForm" sourceFile="EnquiryForm.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.EquipDriver" sourceFile="EquipDriver.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Equipment" sourceFile="Equipment.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.EquipmentInventory" sourceFile="EquipmentInventory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.FeedBack" sourceFile="FeedBack.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.GoogleDistance" sourceFile="GoogleDistance.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Notification" sourceFile="Notification.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Payment" sourceFile="Payment.java" interface="false" size="144" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Preferences" sourceFile="Preferences.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Promo" sourceFile="Promo.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.PromoApplied" sourceFile="PromoApplied.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.PromoValidate" sourceFile="PromoValidate.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.RegDevice" sourceFile="RegDevice.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Registration" sourceFile="Registration.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.ServiceRequestTX" sourceFile="ServiceRequestTX.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.SupportMaster" sourceFile="SupportMaster.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.UserActivity" sourceFile="UserActivity.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.UserRole" sourceFile="UserRole.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.Users" sourceFile="Users.java" interface="false" size="93" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="com.cd.voyager.entities.Vehicle" sourceFile="Vehicle.java" interface="false" size="118" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.entities.idclass" total_bugs="0" total_types="5" total_size="166">
+      <ClassStats class="com.cd.voyager.entities.idclass.CustomerAccountIdClass" sourceFile="CustomerAccountIdClass.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.idclass.DriverBookingIdClass" sourceFile="DriverBookingIdClass.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.idclass.EquipDriverId" sourceFile="EquipDriverId.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.idclass.MasterAttr" sourceFile="MasterAttr.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.cd.voyager.entities.idclass.PreferenceId" sourceFile="PreferenceId.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.entities.transfermer" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="com.cd.voyager.entities.transfermer.AttrConfigTransfermer" sourceFile="AttrConfigTransfermer.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.exception" total_bugs="0" total_types="8" total_size="148">
+      <ClassStats class="com.cd.voyager.exception.CorporateSignupWIthoutPayment" sourceFile="CorporateSignupWIthoutPayment.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.DaoException" sourceFile="DaoException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.ExceptionHandler" sourceFile="ExceptionHandler.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.InvalidCredentialsException" sourceFile="InvalidCredentialsException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.MailException" sourceFile="MailException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.MySQLErrorCodesTranslator" sourceFile="MySQLErrorCodesTranslator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.RootException" sourceFile="RootException.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.cd.voyager.exception.ServiceException" sourceFile="ServiceException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.mobility.data" total_bugs="0" total_types="6" total_size="112">
+      <ClassStats class="com.cd.voyager.mobility.data.CustomerWebUserDetails" sourceFile="CustomerWebUserDetails.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.DriverWebUserDetails" sourceFile="DriverWebUserDetails.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.RequestObj" sourceFile="RequestObj.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.ResponseObj" sourceFile="ResponseObj.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.UserDetailSession" sourceFile="UserDetailSession.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.WebUserDetails" sourceFile="WebUserDetails.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.mobility.data.child" total_bugs="0" total_types="3" total_size="94">
+      <ClassStats class="com.cd.voyager.mobility.data.child.MetaData" sourceFile="MetaData.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.child.ReqHeader" sourceFile="ReqHeader.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.data.child.ResHeader" sourceFile="ResHeader.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.mobility.service" total_bugs="0" total_types="1" total_size="122">
+      <ClassStats class="com.cd.voyager.mobility.service.IMobileService" sourceFile="IMobileService.java" interface="true" size="122" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.mobility.service.impl" total_bugs="17" total_types="1" total_size="1357" priority_2="17">
+      <ClassStats class="com.cd.voyager.mobility.service.impl.MobileServiceImpl" sourceFile="MobileServiceImpl.java" interface="false" size="1357" bugs="17" priority_2="17"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.mobility.webservice" total_bugs="0" total_types="4" total_size="1571">
+      <ClassStats class="com.cd.voyager.mobility.webservice.FileUploadRest" sourceFile="FileUploadRest.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.webservice.NotificationController" sourceFile="NotificationController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.webservice.RestServiceController" sourceFile="RestServiceController.java" interface="false" size="963" bugs="0"/>
+      <ClassStats class="com.cd.voyager.mobility.webservice.RestServicesDriver" sourceFile="RestServicesDriver.java" interface="false" size="580" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.secure" total_bugs="0" total_types="5" total_size="82">
+      <ClassStats class="com.cd.voyager.secure.CustomTokenAuthenticationFilter" sourceFile="CustomTokenAuthenticationFilter.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.cd.voyager.secure.JWTAuthenticationToken" sourceFile="JWTAuthenticationToken.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.cd.voyager.secure.NoOpAuthenticationManager" sourceFile="NoOpAuthenticationManager.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.cd.voyager.secure.RestAuthenticationEntryPoint" sourceFile="RestAuthenticationEntryPoint.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.cd.voyager.secure.TokenSimpleUrlAuthenticationSuccessHandler" sourceFile="TokenSimpleUrlAuthenticationSuccessHandler.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.testObject" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="com.cd.voyager.testObject.Greeting" sourceFile="Greeting.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.utils.payment.paypal" total_bugs="0" total_types="1" total_size="123">
+      <ClassStats class="com.cd.voyager.utils.payment.paypal.PaypalFuturePaymentUtils" sourceFile="PaypalFuturePaymentUtils.java" interface="false" size="123" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.utils.payment.payway" total_bugs="0" total_types="1" total_size="91">
+      <ClassStats class="com.cd.voyager.utils.payment.payway.PayWayAPIUtil" sourceFile="PayWayAPIUtil.java" interface="false" size="91" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.controller" total_bugs="0" total_types="5" total_size="832">
+      <ClassStats class="com.cd.voyager.web.controller.CorpController" sourceFile="CorpController.java" interface="false" size="206" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.controller.DefaultController" sourceFile="DefaultController.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.controller.DriverAuthenticationEntryPoint" sourceFile="DriverAuthenticationEntryPoint.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.controller.DriverController" sourceFile="DriverController.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.controller.SystemController" sourceFile="SystemController.java" interface="false" size="470" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.controller.handler" total_bugs="0" total_types="2" total_size="64">
+      <ClassStats class="com.cd.voyager.web.controller.handler.CustomAuthenticationSuccessHandler" sourceFile="CustomAuthenticationSuccessHandler.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.controller.handler.DriverSuccessHandler" sourceFile="DriverSuccessHandler.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.formWrappers" total_bugs="0" total_types="2" total_size="48">
+      <ClassStats class="com.cd.voyager.web.formWrappers.CustomerForm" sourceFile="CustomerForm.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.formWrappers.DriverForm" sourceFile="DriverForm.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.service" total_bugs="0" total_types="2" total_size="62">
+      <ClassStats class="com.cd.voyager.web.service.IDefaultService" sourceFile="IDefaultService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.service.IMainService" sourceFile="IMainService.java" interface="true" size="60" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.service.dao" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="com.cd.voyager.web.service.dao.AbstractDao" sourceFile="AbstractDao.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.cd.voyager.web.service.impl" total_bugs="1" total_types="4" total_size="416" priority_2="1">
+      <ClassStats class="com.cd.voyager.web.service.impl.ClientDetailsServiceImpl" sourceFile="ClientDetailsServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.service.impl.DeafultServiceImpl" sourceFile="DeafultServiceImpl.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.service.impl.DriverDetailServiceImpl" sourceFile="DriverDetailServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.cd.voyager.web.service.impl.MainServiceImpl" sourceFile="MainServiceImpl.java" interface="false" size="334" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.google.android.gcm" total_bugs="0" total_types="4" total_size="316">
+      <ClassStats class="com.google.android.gcm.GCMBaseIntentService" sourceFile="GCMBaseIntentService.java" interface="false" size="109" bugs="0"/>
+      <ClassStats class="com.google.android.gcm.GCMBroadcastReceiver" sourceFile="GCMBroadcastReceiver.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.google.android.gcm.GCMConstants" sourceFile="GCMConstants.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.google.android.gcm.GCMRegistrar" sourceFile="GCMRegistrar.java" interface="false" size="168" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.metiom.core.net" total_bugs="0" total_types="29" total_size="2569">
+      <ClassStats class="com.metiom.core.net.CertificateManager" sourceFile="CertificateManager.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.ChunkedInputStream" sourceFile="ChunkedInputStream.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.ChunkedOutputStream" sourceFile="ChunkedOutputStream.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.Cookie" sourceFile="Cookie.java" interface="false" size="210" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.GenericSocket" sourceFile="GenericSocket.java" interface="false" size="112" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.GenericSocketFactory" sourceFile="GenericSocketFactory.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPClient" sourceFile="HTTPClient.java" interface="false" size="174" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPClientConnection" sourceFile="HTTPClientConnection.java" interface="false" size="112" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPConnection" sourceFile="HTTPConnection.java" interface="false" size="215" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPConstants" sourceFile="HTTPConstants.java" interface="true" size="27" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPHeader" sourceFile="HTTPHeader.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPHeader$ContentType" sourceFile="HTTPHeader.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPMessage" sourceFile="HTTPMessage.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPMessageReader" sourceFile="HTTPMessageReader.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPReaderBase" sourceFile="HTTPReaderBase.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPRequest" sourceFile="HTTPRequest.java" interface="false" size="185" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPRequestReader" sourceFile="HTTPRequestReader.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPResponse" sourceFile="HTTPResponse.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPResponseReader" sourceFile="HTTPResponseReader.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.HTTPSingleConnectionClient" sourceFile="HTTPSingleConnectionClient.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.IPAddressMatcher" sourceFile="IPAddressMatcher.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.KeyManagerWrapper" sourceFile="KeyManagerWrapper.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.MIMEBodyInputStream" sourceFile="MIMEBodyInputStream.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.MIMEBodyPart" sourceFile="MIMEBodyPart.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.MIMEReader" sourceFile="MIMEReader.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.MIMEWriter" sourceFile="MIMEWriter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.ProxyInfo" sourceFile="ProxyInfo.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.ServerInputStream" sourceFile="ServerInputStream.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.metiom.core.net.TrustManagerWrapper" sourceFile="TrustManagerWrapper.java" interface="false" size="67" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.metiom.system" total_bugs="0" total_types="9" total_size="520">
+      <ClassStats class="com.metiom.system.DefaultLog" sourceFile="DefaultLog.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="com.metiom.system.DefaultLogFormatter" sourceFile="DefaultLogFormatter.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.metiom.system.DefaultLogNamer" sourceFile="DefaultLogNamer.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.metiom.system.DefaultLogNamer$1" sourceFile="DefaultLogNamer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.metiom.system.DefaultLogOutput" sourceFile="DefaultLogOutput.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.metiom.system.Log" sourceFile="Log.java" interface="false" size="270" bugs="0"/>
+      <ClassStats class="com.metiom.system.LogFormatter" sourceFile="LogFormatter.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.metiom.system.LogNamer" sourceFile="LogNamer.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.metiom.system.LogOutput" sourceFile="LogOutput.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.metiom.util" total_bugs="0" total_types="15" total_size="1464">
+      <ClassStats class="com.metiom.util.Base64Decoder" sourceFile="Base64Decoder.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.metiom.util.Base64Encoder" sourceFile="Base64Encoder.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.metiom.util.Base64FormatException" sourceFile="Base64FormatException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.metiom.util.Base64InputStream" sourceFile="Base64InputStream.java" interface="false" size="197" bugs="0"/>
+      <ClassStats class="com.metiom.util.Base64OutputStream" sourceFile="Base64OutputStream.java" interface="false" size="180" bugs="0"/>
+      <ClassStats class="com.metiom.util.ByteCountingInputStream" sourceFile="ByteCountingInputStream.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.metiom.util.ByteCountingOutputStream" sourceFile="ByteCountingOutputStream.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.metiom.util.CardUtil" sourceFile="CardUtil.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.metiom.util.DateFormatter" sourceFile="DateFormatter.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="com.metiom.util.EchoInputStream" sourceFile="EchoInputStream.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.metiom.util.HexUtil" sourceFile="HexUtil.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.metiom.util.IOUtil" sourceFile="IOUtil.java" interface="false" size="228" bugs="0"/>
+      <ClassStats class="com.metiom.util.NameValuePair" sourceFile="NameValuePair.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.metiom.util.StringUtil" sourceFile="StringUtil.java" interface="false" size="318" bugs="0"/>
+      <ClassStats class="com.metiom.util.TeeOutputStream" sourceFile="TeeOutputStream.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.qvalent.payway" total_bugs="0" total_types="1" total_size="318">
+      <ClassStats class="com.qvalent.payway.PayWayAPI" sourceFile="PayWayAPI.java" interface="false" size="318" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hello" total_bugs="0" total_types="4" total_size="36">
+      <ClassStats class="hello.Greeting" sourceFile="Greeting.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hello.HelloMessage" sourceFile="HelloMessage.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="hello.PresenceChannelInterceptor" sourceFile="PresenceChannelInterceptor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hello.PresenceChannelInterceptor$1" sourceFile="PresenceChannelInterceptor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.cli" total_bugs="0" total_types="24" total_size="545">
+      <ClassStats class="org.gradle.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$1" sourceFile="CommandLineParser.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.gradle.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.gradle.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.gradle.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.gradle.wrapper" total_bugs="0" total_types="16" total_size="587">
+      <ClassStats class="org.gradle.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download" sourceFile="Download.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$1" sourceFile="Download.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Download$SystemPropertiesProxyAuthenticator" sourceFile="Download.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.ExclusiveFileAccessManager" sourceFile="ExclusiveFileAccessManager.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleUserHomeLookup" sourceFile="GradleUserHomeLookup.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.GradleWrapperMain" sourceFile="GradleWrapperMain.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.IDownload" sourceFile="IDownload.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install" sourceFile="Install.java" interface="false" size="128" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Install$1" sourceFile="Install.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.Logger" sourceFile="Logger.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.gradle.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="socket" total_bugs="0" total_types="4" total_size="54">
+      <ClassStats class="socket.EchoServer" sourceFile="EchoServer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="socket.GreetingHandler" sourceFile="GreetingHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="socket.HandshakeInterceptor" sourceFile="HandshakeInterceptor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="socket.WebsocketEndPoint" sourceFile="WebsocketEndPoint.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="534" invocations="2594" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="36252" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="481" invocations="2600" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="44086" standardDeviationMicrosecondsPerInvocation="982"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="407" invocations="2599" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="18723" standardDeviationMicrosecondsPerInvocation="537"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="404" invocations="2643" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="11312" standardDeviationMicrosecondsPerInvocation="480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="378" invocations="212" avgMicrosecondsPerInvocation="1783" maxMicrosecondsPerInvocation="93098" standardDeviationMicrosecondsPerInvocation="8097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="361" invocations="1616" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="10094" standardDeviationMicrosecondsPerInvocation="516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="349" invocations="2644" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="9377" standardDeviationMicrosecondsPerInvocation="393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="292" invocations="2600" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="7931" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="290" invocations="1628" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="147949" standardDeviationMicrosecondsPerInvocation="3690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="260" invocations="408" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="23841" standardDeviationMicrosecondsPerInvocation="1675"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="258" invocations="1312" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="12298" standardDeviationMicrosecondsPerInvocation="585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="236" invocations="408" avgMicrosecondsPerInvocation="579" maxMicrosecondsPerInvocation="19574" standardDeviationMicrosecondsPerInvocation="1462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="225" invocations="3360" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="7556" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="107" invocations="2813" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="23412" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="106" invocations="755" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="2598" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="106" invocations="2600" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="2485" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="93" invocations="212" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="10486" standardDeviationMicrosecondsPerInvocation="1121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="93" invocations="212" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="10873" standardDeviationMicrosecondsPerInvocation="908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="90" invocations="212" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="9809" standardDeviationMicrosecondsPerInvocation="950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="86" invocations="408" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="4220" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="84" invocations="408" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="7480" standardDeviationMicrosecondsPerInvocation="605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="79" invocations="613" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="12904" standardDeviationMicrosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="79" invocations="39260" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="1453" standardDeviationMicrosecondsPerInvocation="11"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="79" invocations="212" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="8191" standardDeviationMicrosecondsPerInvocation="695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="72" invocations="212" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="9086" standardDeviationMicrosecondsPerInvocation="967"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="69" invocations="2594" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="2629" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="67" invocations="212" avgMicrosecondsPerInvocation="318" maxMicrosecondsPerInvocation="5274" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="67" invocations="365" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="1244" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="65" invocations="2568" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="2860" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="59" invocations="212" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="4907" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="57" invocations="212" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="8487" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="56" invocations="408" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="1933" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="55" invocations="212" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="4476" standardDeviationMicrosecondsPerInvocation="516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="54" invocations="408" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="2589" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="54" invocations="2813" avgMicrosecondsPerInvocation="19" maxMicrosecondsPerInvocation="4202" standardDeviationMicrosecondsPerInvocation="125"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="53" invocations="408" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="5514" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="51" invocations="212" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="15073" standardDeviationMicrosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="51" invocations="212" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="6128" standardDeviationMicrosecondsPerInvocation="593"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597108924000" analysisTimestamp="1597108926111" release="">
+  <Project projectName="repositorios/dlbunker_ps-guitar-rest">
+    <Jar>repositorios/dlbunker_ps-guitar-rest</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.guitar.model.Manufacturer">
+      <SourceLine classname="com.guitar.model.Manufacturer" start="26" end="97" sourcefile="Manufacturer.java" sourcepath="com/guitar/model/Manufacturer.java"/>
+    </Class>
+    <Field classname="com.guitar.model.Manufacturer" name="headquarters" signature="Lcom/guitar/model/Location;" isStatic="false">
+      <SourceLine classname="com.guitar.model.Manufacturer" sourcefile="Manufacturer.java" sourcepath="com/guitar/model/Manufacturer.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.guitar.model.Model">
+      <SourceLine classname="com.guitar.model.Model" start="17" end="96" sourcefile="Model.java" sourcepath="com/guitar/model/Model.java"/>
+    </Class>
+    <Field classname="com.guitar.model.Model" name="manufacturer" signature="Lcom/guitar/model/Manufacturer;" isStatic="false">
+      <SourceLine classname="com.guitar.model.Model" sourcefile="Model.java" sourcepath="com/guitar/model/Model.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.guitar.model.Model">
+      <SourceLine classname="com.guitar.model.Model" start="17" end="96" sourcefile="Model.java" sourcepath="com/guitar/model/Model.java"/>
+    </Class>
+    <Field classname="com.guitar.model.Model" name="modelType" signature="Lcom/guitar/model/ModelType;" isStatic="false">
+      <SourceLine classname="com.guitar.model.Model" sourcefile="Model.java" sourcepath="com/guitar/model/Model.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.guitar.repository.LocationRepository">
+      <SourceLine classname="com.guitar.repository.LocationRepository" start="13" end="58" sourcefile="LocationRepository.java" sourcepath="com/guitar/repository/LocationRepository.java"/>
+    </Class>
+    <Method classname="com.guitar.repository.LocationRepository" name="getLocationByStateName" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.guitar.repository.LocationRepository" start="55" end="58" startBytecode="0" endBytecode="136" sourcefile="LocationRepository.java" sourcepath="com/guitar/repository/LocationRepository.java"/>
+    </Method>
+    <SourceLine classname="com.guitar.repository.LocationRepository" start="55" end="55" startBytecode="4" endBytecode="4" sourcefile="LocationRepository.java" sourcepath="com/guitar/repository/LocationRepository.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.guitar.repository.ManufacturerRepository">
+      <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="15" end="71" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+    </Class>
+    <Method classname="com.guitar.repository.ManufacturerRepository" name="getManufacturerByName" signature="(Ljava/lang/String;)Lcom/guitar/model/Manufacturer;" isStatic="false">
+      <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="61" end="64" startBytecode="0" endBytecode="121" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+    </Method>
+    <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="61" end="61" startBytecode="4" endBytecode="4" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+    <String value="Method: getManufacturerByName. Fields with EAGER without Join Fetch: headquarters, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.guitar.repository.ManufacturerRepository">
+      <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="15" end="71" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+    </Class>
+    <Method classname="com.guitar.repository.ManufacturerRepository" name="getManufacturerByName" signature="(Ljava/lang/String;)Lcom/guitar/model/Manufacturer;" isStatic="false">
+      <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="61" end="64" startBytecode="0" endBytecode="121" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+    </Method>
+    <SourceLine classname="com.guitar.repository.ManufacturerRepository" start="61" end="61" startBytecode="4" endBytecode="4" sourcefile="ManufacturerRepository.java" sourcepath="com/guitar/repository/ManufacturerRepository.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.guitar.repository.ModelJpaRepository">
+      <SourceLine classname="com.guitar.repository.ModelJpaRepository" sourcefile="ModelJpaRepository.java" sourcepath="com/guitar/repository/ModelJpaRepository.java"/>
+    </Class>
+    <Method classname="com.guitar.repository.ModelJpaRepository" name="queryByPriceRangeAndWoodType" signature="(Ljava/math/BigDecimal;Ljava/math/BigDecimal;Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="com.guitar.repository.ModelJpaRepository" sourcefile="ModelJpaRepository.java" sourcepath="com/guitar/repository/ModelJpaRepository.java"/>
+    </Method>
+    <SourceLine classname="com.guitar.repository.ModelJpaRepository" startBytecode="4" endBytecode="4" sourcefile="ModelJpaRepository.java" sourcepath="com/guitar/repository/ModelJpaRepository.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:22:04 +0000" total_classes="16" referenced_classes="34" total_bugs="7" total_size="261" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.77" clock_seconds="1.42" peak_mbytes="124.71" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="7">
+    <PackageStats package="com.guitar" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.guitar.Main" sourceFile="Main.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.guitar.config" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.guitar.config.JpaConfiguration" sourceFile="JpaConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.guitar.model" total_bugs="3" total_types="4" total_size="135" priority_2="3">
+      <ClassStats class="com.guitar.model.Location" sourceFile="Location.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.guitar.model.Manufacturer" sourceFile="Manufacturer.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="com.guitar.model.Model" sourceFile="Model.java" interface="false" size="48" bugs="2" priority_2="2"/>
+      <ClassStats class="com.guitar.model.ModelType" sourceFile="ModelType.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.guitar.repository" total_bugs="4" total_types="10" total_size="117" priority_2="4">
+      <ClassStats class="com.guitar.repository.LocationJpaRepository" sourceFile="LocationJpaRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.guitar.repository.LocationRepository" sourceFile="LocationRepository.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="com.guitar.repository.ManufacturerJpaRepository" sourceFile="ManufacturerJpaRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.guitar.repository.ManufacturerRepository" sourceFile="ManufacturerRepository.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="com.guitar.repository.ModelJpaRepository" sourceFile="ModelJpaRepository.java" interface="true" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="com.guitar.repository.ModelJpaRepositoryCustom" sourceFile="ModelJpaRepositoryCustom.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.guitar.repository.ModelJpaRepositoryImpl" sourceFile="ModelJpaRepositoryImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.guitar.repository.ModelRepository" sourceFile="ModelRepository.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.guitar.repository.ModelTypeJpaRepository" sourceFile="ModelTypeJpaRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.guitar.repository.ModelTypeRepository" sourceFile="ModelTypeRepository.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="176" invocations="438" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="12434" standardDeviationMicrosecondsPerInvocation="986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="34" avgMicrosecondsPerInvocation="1634" maxMicrosecondsPerInvocation="9194" standardDeviationMicrosecondsPerInvocation="2493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="45" invocations="77" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="11685" standardDeviationMicrosecondsPerInvocation="1762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="441" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="2424" standardDeviationMicrosecondsPerInvocation="122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="370" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="11852" standardDeviationMicrosecondsPerInvocation="625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="39" invocations="172" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="2603" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="36" invocations="34" avgMicrosecondsPerInvocation="1084" maxMicrosecondsPerInvocation="18691" standardDeviationMicrosecondsPerInvocation="3290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="92" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="26696" standardDeviationMicrosecondsPerInvocation="2765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="29" invocations="34" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="3619" standardDeviationMicrosecondsPerInvocation="1067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="63" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="13372" standardDeviationMicrosecondsPerInvocation="1691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="26" invocations="77" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="10840" standardDeviationMicrosecondsPerInvocation="1277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="34" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="4244" standardDeviationMicrosecondsPerInvocation="1015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="21" invocations="77" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="9651" standardDeviationMicrosecondsPerInvocation="1079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="21" invocations="77" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="10113" standardDeviationMicrosecondsPerInvocation="1134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="20" invocations="77" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="2725" standardDeviationMicrosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="18" invocations="77" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="1336" standardDeviationMicrosecondsPerInvocation="237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="34" avgMicrosecondsPerInvocation="500" maxMicrosecondsPerInvocation="6764" standardDeviationMicrosecondsPerInvocation="1204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="15" invocations="16" avgMicrosecondsPerInvocation="989" maxMicrosecondsPerInvocation="14693" standardDeviationMicrosecondsPerInvocation="3540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="34" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="2314" standardDeviationMicrosecondsPerInvocation="554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="34" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="5204" standardDeviationMicrosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="12" invocations="16" avgMicrosecondsPerInvocation="805" maxMicrosecondsPerInvocation="8866" standardDeviationMicrosecondsPerInvocation="2151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="34" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="1872" standardDeviationMicrosecondsPerInvocation="494"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

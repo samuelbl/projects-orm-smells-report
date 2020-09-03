@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106117000" analysisTimestamp="1597106118441" release="">
+  <Project projectName="repositorios/rvillars_bookapp-rest">
+    <Jar>repositorios/rvillars_bookapp-rest</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ch.bfh.swos.bookapp.model.Book">
+      <SourceLine classname="ch.bfh.swos.bookapp.model.Book" start="28" end="61" sourcefile="Book.java" sourcepath="ch/bfh/swos/bookapp/model/Book.java"/>
+    </Class>
+    <Field classname="ch.bfh.swos.bookapp.model.Book" name="author" signature="Lch/bfh/swos/bookapp/model/Author;" isStatic="false">
+      <SourceLine classname="ch.bfh.swos.bookapp.model.Book" sourcefile="Book.java" sourcepath="ch/bfh/swos/bookapp/model/Book.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>javax.faces.model.DataModel</MissingClass>
+    <MissingClass>javax.faces.model.ListDataModel</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>org.modelmapper.ModelMapper</MissingClass>
+    <MissingClass>org.modelmapper.TypeToken</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:35:17 +0000" total_classes="17" referenced_classes="37" total_bugs="1" total_size="320" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.82" clock_seconds="1.36" peak_mbytes="188.77" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="ch.bfh.swos.bookapp.jsf.controller" total_bugs="0" total_types="2" total_size="73">
+      <ClassStats class="ch.bfh.swos.bookapp.jsf.controller.AuthorController" sourceFile="AuthorController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.jsf.controller.BookController" sourceFile="BookController.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.jsf.filter" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="ch.bfh.swos.bookapp.jsf.filter.CharacterEncodingFilter" sourceFile="CharacterEncodingFilter.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.model" total_bugs="1" total_types="2" total_size="58" priority_2="1">
+      <ClassStats class="ch.bfh.swos.bookapp.model.Author" sourceFile="Author.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.model.Book" sourceFile="Book.java" interface="false" size="29" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.repository" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="ch.bfh.swos.bookapp.repository.AuthorRepository" sourceFile="AuthorRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.repository.BookRepository" sourceFile="BookRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.rest.controller" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="ch.bfh.swos.bookapp.rest.controller.AuthorController" sourceFile="AuthorController.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.rest.controller.BookController" sourceFile="BookController.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.service" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="ch.bfh.swos.bookapp.service.AuthorService" sourceFile="AuthorService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.service.BookService" sourceFile="BookService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.service.dto" total_bugs="0" total_types="2" total_size="54">
+      <ClassStats class="ch.bfh.swos.bookapp.service.dto.AuthorDTO" sourceFile="AuthorDTO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.service.dto.BookDTO" sourceFile="BookDTO.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ch.bfh.swos.bookapp.service.impl" total_bugs="0" total_types="4" total_size="62">
+      <ClassStats class="ch.bfh.swos.bookapp.service.impl.DefaultAuthorService" sourceFile="DefaultAuthorService.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.service.impl.DefaultAuthorService$1" sourceFile="DefaultAuthorService.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.service.impl.DefaultBookService" sourceFile="DefaultBookService.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ch.bfh.swos.bookapp.service.impl.DefaultBookService$1" sourceFile="DefaultBookService.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="195" invocations="417" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="18227" standardDeviationMicrosecondsPerInvocation="1281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="54" invocations="37" avgMicrosecondsPerInvocation="1469" maxMicrosecondsPerInvocation="11515" standardDeviationMicrosecondsPerInvocation="2478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="421" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="2476" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="39" invocations="37" avgMicrosecondsPerInvocation="1054" maxMicrosecondsPerInvocation="5837" standardDeviationMicrosecondsPerInvocation="1452"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="36" invocations="151" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="4010" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="33" invocations="354" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="1710" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="95" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="24326" standardDeviationMicrosecondsPerInvocation="2475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="73" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="14377" standardDeviationMicrosecondsPerInvocation="1691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="26" invocations="85" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="5533" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="85" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="9336" standardDeviationMicrosecondsPerInvocation="995"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="24" invocations="85" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="8200" standardDeviationMicrosecondsPerInvocation="877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="24" invocations="85" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="8612" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="23" invocations="85" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="1064" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="37" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="4717" standardDeviationMicrosecondsPerInvocation="925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="20" invocations="85" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="2577" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="37" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="4708" standardDeviationMicrosecondsPerInvocation="1060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="37" avgMicrosecondsPerInvocation="496" maxMicrosecondsPerInvocation="6382" standardDeviationMicrosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="37" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="5309" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="37" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="2274" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="37" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="2872" standardDeviationMicrosecondsPerInvocation="518"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

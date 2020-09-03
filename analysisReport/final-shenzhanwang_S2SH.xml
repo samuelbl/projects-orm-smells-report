@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596940308000" analysisTimestamp="1596940309832" release="">
+  <Project projectName="repositorios/shenzhanwang_S2SH">
+    <Jar>repositorios/shenzhanwang_S2SH</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="common.dao.BaseDaoImpl">
+      <SourceLine classname="common.dao.BaseDaoImpl" start="10" end="105" sourcefile="BaseDaoImpl.java" sourcepath="common/dao/BaseDaoImpl.java"/>
+    </Class>
+    <Method classname="common.dao.BaseDaoImpl" name="findAll" signature="(Ljava/lang/Class;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="common.dao.BaseDaoImpl" start="51" end="51" startBytecode="0" endBytecode="119" sourcefile="BaseDaoImpl.java" sourcepath="common/dao/BaseDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="common.dao.BaseDaoImpl" start="51" end="51" startBytecode="8" endBytecode="8" sourcefile="BaseDaoImpl.java" sourcepath="common/dao/BaseDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.City">
+      <SourceLine classname="po.City" start="32" end="71" sourcefile="City.java" sourcepath="po/City.java"/>
+    </Class>
+    <Field classname="po.City" name="country" signature="Lpo/Country;" isStatic="false">
+      <SourceLine classname="po.City" sourcefile="City.java" sourcepath="po/City.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Country">
+      <SourceLine classname="po.Country" start="25" end="63" sourcefile="Country.java" sourcepath="po/Country.java"/>
+    </Class>
+    <Field classname="po.Country" name="citys" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="po.Country" sourcefile="Country.java" sourcepath="po/Country.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film">
+      <SourceLine classname="po.Film" start="22" end="141" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Class>
+    <Field classname="po.Film" name="films" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="po.Film" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film">
+      <SourceLine classname="po.Film" start="22" end="141" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Class>
+    <Field classname="po.Film" name="inventorys" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="po.Film" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film">
+      <SourceLine classname="po.Film" start="22" end="141" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Class>
+    <Field classname="po.Film" name="language" signature="Lpo/Language;" isStatic="false">
+      <SourceLine classname="po.Film" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film">
+      <SourceLine classname="po.Film" start="22" end="141" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Class>
+    <Field classname="po.Film" name="language2" signature="Lpo/Language;" isStatic="false">
+      <SourceLine classname="po.Film" sourcefile="Film.java" sourcepath="po/Film.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film_actor">
+      <SourceLine classname="po.Film_actor" start="15" end="70" sourcefile="Film_actor.java" sourcepath="po/Film_actor.java"/>
+    </Class>
+    <Field classname="po.Film_actor" name="film" signature="Lpo/Film;" isStatic="false">
+      <SourceLine classname="po.Film_actor" sourcefile="Film_actor.java" sourcepath="po/Film_actor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film_category">
+      <SourceLine classname="po.Film_category" start="18" end="65" sourcefile="Film_category.java" sourcepath="po/Film_category.java"/>
+    </Class>
+    <Field classname="po.Film_category" name="category" signature="Lpo/Category;" isStatic="false">
+      <SourceLine classname="po.Film_category" sourcefile="Film_category.java" sourcepath="po/Film_category.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Film_category">
+      <SourceLine classname="po.Film_category" start="18" end="65" sourcefile="Film_category.java" sourcepath="po/Film_category.java"/>
+    </Class>
+    <Field classname="po.Film_category" name="film" signature="Lpo/Film;" isStatic="false">
+      <SourceLine classname="po.Film_category" sourcefile="Film_category.java" sourcepath="po/Film_category.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Inventory">
+      <SourceLine classname="po.Inventory" start="17" end="51" sourcefile="Inventory.java" sourcepath="po/Inventory.java"/>
+    </Class>
+    <Field classname="po.Inventory" name="film" signature="Lpo/Film;" isStatic="false">
+      <SourceLine classname="po.Inventory" sourcefile="Inventory.java" sourcepath="po/Inventory.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Language">
+      <SourceLine classname="po.Language" start="20" end="64" sourcefile="Language.java" sourcepath="po/Language.java"/>
+    </Class>
+    <Field classname="po.Language" name="films" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="po.Language" sourcefile="Language.java" sourcepath="po/Language.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Language">
+      <SourceLine classname="po.Language" start="20" end="64" sourcefile="Language.java" sourcepath="po/Language.java"/>
+    </Class>
+    <Field classname="po.Language" name="films2" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="po.Language" sourcefile="Language.java" sourcepath="po/Language.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Staff">
+      <SourceLine classname="po.Staff" start="16" end="87" sourcefile="Staff.java" sourcepath="po/Staff.java"/>
+    </Class>
+    <Field classname="po.Staff" name="store" signature="Lpo/Store;" isStatic="false">
+      <SourceLine classname="po.Staff" sourcefile="Staff.java" sourcepath="po/Staff.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="po.Store">
+      <SourceLine classname="po.Store" start="17" end="51" sourcefile="Store.java" sourcepath="po/Store.java"/>
+    </Class>
+    <Field classname="po.Store" name="staff" signature="Lpo/Staff;" isStatic="false">
+      <SourceLine classname="po.Store" sourcefile="Store.java" sourcepath="po/Store.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="1" missingClasses="21">
+    <Error>
+      <ErrorMessage>Exception analyzing common.dao.BaseDaoImpl using detector com.ufpe.badsmells.N1MissedJoinFetchDetector</ErrorMessage>
+      <Exception>java.lang.ArrayIndexOutOfBoundsException: 1</Exception>
+      <StackTrace>com.ufpe.badsmells.utils.CodeSmellsUtils.transformListReturnToEntity(CodeSmellsUtils.java:107)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.analyzeMethod(N1MissedJoinFetchDetector.java:111)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.N1MissedJoinFetchDetector.visitClassContext(N1MissedJoinFetchDetector.java:83)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>com.opensymphony.xwork2.ActionContext</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionInvocation</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.ActionSupport</MissingClass>
+    <MissingClass>com.opensymphony.xwork2.interceptor.AbstractInterceptor</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFCell</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFCellStyle</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFFont</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFRichTextString</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFRow</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFSheet</MissingClass>
+    <MissingClass>org.apache.poi.hssf.usermodel.HSSFWorkbook</MissingClass>
+    <MissingClass>org.apache.struts2.ServletActionContext</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.springframework.scheduling.quartz.QuartzJobBean</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 02:31:48 +0000" total_classes="53" referenced_classes="91" total_bugs="15" total_size="1399" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.92" clock_seconds="2.18" peak_mbytes="199.11" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="10" priority_1="5">
+    <PackageStats package="action" total_bugs="0" total_types="9" total_size="381">
+      <ClassStats class="action.ActorAction" sourceFile="ActorAction.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="action.ActorGridAction" sourceFile="ActorGridAction.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="action.CountryAction" sourceFile="CountryAction.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="action.Country_cityAction" sourceFile="Country_cityAction.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="action.LoginAction" sourceFile="LoginAction.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="action.RentalAction" sourceFile="RentalAction.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="action.RentalGridAction" sourceFile="RentalGridAction.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="action.Staff_storeAction" sourceFile="Staff_storeAction.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="action.UploadAction" sourceFile="UploadAction.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="common.dao" total_bugs="1" total_types="2" total_size="70" priority_2="1">
+      <ClassStats class="common.dao.BaseDao" sourceFile="BaseDao.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="common.dao.BaseDaoImpl" sourceFile="BaseDaoImpl.java" interface="false" size="60" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="dao" total_bugs="0" total_types="6" total_size="6">
+      <ClassStats class="dao.ActorDao" sourceFile="ActorDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="dao.CityDao" sourceFile="CityDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="dao.CountryDao" sourceFile="CountryDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="dao.RentalDao" sourceFile="RentalDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="dao.StaffDao" sourceFile="StaffDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="dao.UserDao" sourceFile="UserDao.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="dao.impl" total_bugs="0" total_types="6" total_size="18">
+      <ClassStats class="dao.impl.ActorDaoImpl" sourceFile="ActorDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="dao.impl.CityDaoImpl" sourceFile="CityDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="dao.impl.CountryDaoImpl" sourceFile="CountryDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="dao.impl.RentalDaoImpl" sourceFile="RentalDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="dao.impl.StaffDaoImpl" sourceFile="StaffDaoImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="dao.impl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="intercepter" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="intercepter.LoginIntercepter" sourceFile="LoginIntercepter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="po" total_bugs="14" total_types="14" total_size="536" priority_2="9" priority_1="5">
+      <ClassStats class="po.Actor" sourceFile="Actor.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="po.Address" sourceFile="Address.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="po.Category" sourceFile="Category.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="po.City" sourceFile="City.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="po.Country" sourceFile="Country.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="po.Film" sourceFile="Film.java" interface="false" size="95" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="po.Film_actor" sourceFile="Film_actor.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="po.Film_category" sourceFile="Film_category.java" interface="false" size="33" bugs="2" priority_2="2"/>
+      <ClassStats class="po.Film_text" sourceFile="Film_text.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="po.Inventory" sourceFile="Inventory.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="po.Language" sourceFile="Language.java" interface="false" size="35" bugs="2" priority_1="2"/>
+      <ClassStats class="po.Rental" sourceFile="Rental.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="po.Staff" sourceFile="Staff.java" interface="false" size="57" bugs="1" priority_2="1"/>
+      <ClassStats class="po.Store" sourceFile="Store.java" interface="false" size="21" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="poi" total_bugs="0" total_types="1" total_size="104">
+      <ClassStats class="poi.WriteExcel" sourceFile="WriteExcel.java" interface="false" size="104" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="schedule" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="schedule.AddActor" sourceFile="AddActor.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="service" total_bugs="0" total_types="6" total_size="30">
+      <ClassStats class="service.ActorService" sourceFile="ActorService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="service.CityService" sourceFile="CityService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="service.CountryService" sourceFile="CountryService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="service.RentalService" sourceFile="RentalService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="service.StaffService" sourceFile="StaffService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="service.impl" total_bugs="0" total_types="6" total_size="153">
+      <ClassStats class="service.impl.ActorServiceImpl" sourceFile="ActorServiceImpl.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="service.impl.CityServiceImpl" sourceFile="CityServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="service.impl.CountryServiceImpl" sourceFile="CountryServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="service.impl.RentalServiceImpl" sourceFile="RentalServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="service.impl.StaffServiceImpl" sourceFile="StaffServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="web" total_bugs="0" total_types="1" total_size="70">
+      <ClassStats class="web.AuthImg" sourceFile="AuthImg.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="242" invocations="652" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="25827" standardDeviationMicrosecondsPerInvocation="1261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="73" invocations="91" avgMicrosecondsPerInvocation="811" maxMicrosecondsPerInvocation="12624" standardDeviationMicrosecondsPerInvocation="1872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="72" invocations="358" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="7218" standardDeviationMicrosecondsPerInvocation="662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="65" invocations="358" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="9667" standardDeviationMicrosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="62" invocations="358" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="6869" standardDeviationMicrosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="62" invocations="358" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="8400" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="58" invocations="358" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="8542" standardDeviationMicrosecondsPerInvocation="595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="657" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="499" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="55" invocations="91" avgMicrosecondsPerInvocation="604" maxMicrosecondsPerInvocation="6132" standardDeviationMicrosecondsPerInvocation="1130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="358" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="9702" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="52" invocations="489" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="4390" standardDeviationMicrosecondsPerInvocation="314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="46" invocations="391" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="24174" standardDeviationMicrosecondsPerInvocation="1222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="568" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="1546" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="149" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="15412" standardDeviationMicrosecondsPerInvocation="1280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="30" invocations="106" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="3778" standardDeviationMicrosecondsPerInvocation="542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="91" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="7663" standardDeviationMicrosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="23" invocations="2508" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="941" standardDeviationMicrosecondsPerInvocation="34"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="91" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="4062" standardDeviationMicrosecondsPerInvocation="691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="53" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="3250" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="91" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="9701" standardDeviationMicrosecondsPerInvocation="1033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="19" invocations="358" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="2996" standardDeviationMicrosecondsPerInvocation="235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="91" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="3013" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="19" invocations="53" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="10026" standardDeviationMicrosecondsPerInvocation="1359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="53" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="5882" standardDeviationMicrosecondsPerInvocation="1133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="53" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="2997" standardDeviationMicrosecondsPerInvocation="454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="91" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="2325" standardDeviationMicrosecondsPerInvocation="363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="91" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="5225" standardDeviationMicrosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="53" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="4997" standardDeviationMicrosecondsPerInvocation="683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="13" invocations="53" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="2489" standardDeviationMicrosecondsPerInvocation="540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="13" invocations="53" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="1962" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="12" invocations="358" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1842" standardDeviationMicrosecondsPerInvocation="121"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

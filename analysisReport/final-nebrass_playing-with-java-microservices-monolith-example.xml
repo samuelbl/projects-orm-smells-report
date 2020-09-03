@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597086098000" analysisTimestamp="1597086099499" release="">
+  <Project projectName="repositorios/nebrass_playing-with-java-microservices-monolith-example">
+    <Jar>repositorios/nebrass_playing-with-java-microservices-monolith-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.Cart">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Cart" start="16" end="57" sourcefile="Cart.java" sourcepath="com/targa/labs/myboutique/domain/Cart.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.Cart" name="customer" signature="Lcom/targa/labs/myboutique/domain/Customer;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Cart" sourcefile="Cart.java" sourcepath="com/targa/labs/myboutique/domain/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.Order">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Order" start="20" end="92" sourcefile="Order.java" sourcepath="com/targa/labs/myboutique/domain/Order.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.Order" name="cart" signature="Lcom/targa/labs/myboutique/domain/Cart;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Order" sourcefile="Order.java" sourcepath="com/targa/labs/myboutique/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.Order">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Order" start="20" end="92" sourcefile="Order.java" sourcepath="com/targa/labs/myboutique/domain/Order.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.Order" name="payment" signature="Lcom/targa/labs/myboutique/domain/Payment;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Order" sourcefile="Order.java" sourcepath="com/targa/labs/myboutique/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.OrderItem">
+      <SourceLine classname="com.targa.labs.myboutique.domain.OrderItem" start="18" end="59" sourcefile="OrderItem.java" sourcepath="com/targa/labs/myboutique/domain/OrderItem.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.OrderItem" name="order" signature="Lcom/targa/labs/myboutique/domain/Order;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.OrderItem" sourcefile="OrderItem.java" sourcepath="com/targa/labs/myboutique/domain/OrderItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.OrderItem">
+      <SourceLine classname="com.targa.labs.myboutique.domain.OrderItem" start="18" end="59" sourcefile="OrderItem.java" sourcepath="com/targa/labs/myboutique/domain/OrderItem.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.OrderItem" name="product" signature="Lcom/targa/labs/myboutique/domain/Product;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.OrderItem" sourcefile="OrderItem.java" sourcepath="com/targa/labs/myboutique/domain/OrderItem.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.Payment">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Payment" start="16" end="58" sourcefile="Payment.java" sourcepath="com/targa/labs/myboutique/domain/Payment.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.Payment" name="order" signature="Lcom/targa/labs/myboutique/domain/Order;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Payment" sourcefile="Payment.java" sourcepath="com/targa/labs/myboutique/domain/Payment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.targa.labs.myboutique.domain.Product">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Product" start="20" end="96" sourcefile="Product.java" sourcepath="com/targa/labs/myboutique/domain/Product.java"/>
+    </Class>
+    <Field classname="com.targa.labs.myboutique.domain.Product" name="category" signature="Lcom/targa/labs/myboutique/domain/Category;" isStatic="false">
+      <SourceLine classname="com.targa.labs.myboutique.domain.Product" sourcefile="Product.java" sourcepath="com/targa/labs/myboutique/domain/Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:01:38 +0000" total_classes="85" referenced_classes="206" total_bugs="7" total_size="2244" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.55" clock_seconds="3.83" peak_mbytes="341.34" alloc_mbytes="3540.00" gc_seconds="0.21" priority_2="7">
+    <PackageStats package="com.targa.labs.myboutique" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.targa.labs.myboutique.MyboutiqueApplication" sourceFile="MyboutiqueApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.common" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="com.targa.labs.myboutique.common.Web" sourceFile="Web.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.configuration" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.targa.labs.myboutique.configuration.SwaggerConfiguration" sourceFile="SwaggerConfiguration.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.domain" total_bugs="7" total_types="10" total_size="399" priority_2="7">
+      <ClassStats class="com.targa.labs.myboutique.domain.AbstractEntity" sourceFile="AbstractEntity.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Address" sourceFile="Address.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Cart" sourceFile="Cart.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Category" sourceFile="Category.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Customer" sourceFile="Customer.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Order" sourceFile="Order.java" interface="false" size="57" bugs="2" priority_2="2"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.OrderItem" sourceFile="OrderItem.java" interface="false" size="34" bugs="2" priority_2="2"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Payment" sourceFile="Payment.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Product" sourceFile="Product.java" interface="false" size="66" bugs="1" priority_2="1"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.Review" sourceFile="Review.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.domain.enumeration" total_bugs="0" total_types="4" total_size="47">
+      <ClassStats class="com.targa.labs.myboutique.domain.enumeration.CartStatus" sourceFile="CartStatus.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.enumeration.OrderStatus" sourceFile="OrderStatus.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.enumeration.PaymentStatus" sourceFile="PaymentStatus.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.domain.enumeration.ProductStatus" sourceFile="ProductStatus.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.repository" total_bugs="0" total_types="8" total_size="12">
+      <ClassStats class="com.targa.labs.myboutique.repository.CartRepository" sourceFile="CartRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.OrderItemRepository" sourceFile="OrderItemRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.PaymentRepository" sourceFile="PaymentRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.repository.ReviewRepository" sourceFile="ReviewRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.service" total_bugs="0" total_types="9" total_size="405">
+      <ClassStats class="com.targa.labs.myboutique.service.AddressService" sourceFile="AddressService.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.CartService" sourceFile="CartService.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.CategoryService" sourceFile="CategoryService.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.CustomerService" sourceFile="CustomerService.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.OrderItemService" sourceFile="OrderItemService.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.OrderService" sourceFile="OrderService.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.PaymentService" sourceFile="PaymentService.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.ProductService" sourceFile="ProductService.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.service.ReviewService" sourceFile="ReviewService.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.web" total_bugs="0" total_types="8" total_size="128">
+      <ClassStats class="com.targa.labs.myboutique.web.CartResource" sourceFile="CartResource.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.CategoryResource" sourceFile="CategoryResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.CustomerResource" sourceFile="CustomerResource.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.OrderItemResource" sourceFile="OrderItemResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.OrderResource" sourceFile="OrderResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.PaymentResource" sourceFile="PaymentResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.ProductResource" sourceFile="ProductResource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.ReviewResource" sourceFile="ReviewResource.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.targa.labs.myboutique.web.dto" total_bugs="0" total_types="9" total_size="266">
+      <ClassStats class="com.targa.labs.myboutique.web.dto.AddressDto" sourceFile="AddressDto.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.CartDto" sourceFile="CartDto.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.CategoryDto" sourceFile="CategoryDto.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.CustomerDto" sourceFile="CustomerDto.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.OrderDto" sourceFile="OrderDto.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.OrderItemDto" sourceFile="OrderItemDto.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.PaymentDto" sourceFile="PaymentDto.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.ProductDto" sourceFile="ProductDto.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.targa.labs.myboutique.web.dto.ReviewDto" sourceFile="ReviewDto.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="295" invocations="1091" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="30736" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="170" invocations="590" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="22005" standardDeviationMicrosecondsPerInvocation="1030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="156" invocations="206" avgMicrosecondsPerInvocation="761" maxMicrosecondsPerInvocation="12958" standardDeviationMicrosecondsPerInvocation="1578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="155" invocations="595" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="6129" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="133" invocations="599" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="5677" standardDeviationMicrosecondsPerInvocation="530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="125" invocations="599" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="8453" standardDeviationMicrosecondsPerInvocation="568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="122" invocations="594" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="6523" standardDeviationMicrosecondsPerInvocation="502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="114" invocations="206" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="5251" standardDeviationMicrosecondsPerInvocation="858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="109" invocations="1064" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="6406" standardDeviationMicrosecondsPerInvocation="243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="105" invocations="595" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="7472" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="89" invocations="369" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="14319" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="86" invocations="1095" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="2438" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="83" invocations="206" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="24449" standardDeviationMicrosecondsPerInvocation="1800"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="58" invocations="616" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="24613" standardDeviationMicrosecondsPerInvocation="990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="57" invocations="277" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="14654" standardDeviationMicrosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="47" invocations="85" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="7200" standardDeviationMicrosecondsPerInvocation="1362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="45" invocations="206" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="6640" standardDeviationMicrosecondsPerInvocation="687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="989" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="978" standardDeviationMicrosecondsPerInvocation="80"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="39" invocations="595" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="2243" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="36" invocations="206" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="3938" standardDeviationMicrosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="35" invocations="206" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="2101" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="206" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="6791" standardDeviationMicrosecondsPerInvocation="524"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="32" invocations="8985" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="716" standardDeviationMicrosecondsPerInvocation="15"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="31" invocations="85" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="2922" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="29" invocations="85" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="3421" standardDeviationMicrosecondsPerInvocation="475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="28" invocations="206" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="7249" standardDeviationMicrosecondsPerInvocation="666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="27" invocations="206" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="1432" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="25" invocations="206" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2072" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="25" invocations="85" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="3515" standardDeviationMicrosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="25" invocations="590" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1043" standardDeviationMicrosecondsPerInvocation="75"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="23" invocations="85" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="1412" standardDeviationMicrosecondsPerInvocation="298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="51" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="3404" standardDeviationMicrosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="22" invocations="85" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="3643" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="21" invocations="85" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="2915" standardDeviationMicrosecondsPerInvocation="350"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

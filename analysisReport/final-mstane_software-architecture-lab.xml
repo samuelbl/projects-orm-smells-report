@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597106756000" analysisTimestamp="1597106758052" release="">
+  <Project projectName="repositorios/mstane_software-architecture-lab">
+    <Jar>repositorios/mstane_software-architecture-lab</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.domain.Book">
+      <SourceLine classname="org.sm.lab.mybooks.domain.Book" start="30" end="81" sourcefile="Book.java" sourcepath="org/sm/lab/mybooks/domain/Book.java"/>
+    </Class>
+    <Field classname="org.sm.lab.mybooks.domain.Book" name="reader" signature="Lorg/sm/lab/mybooks/domain/Reader;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.domain.Book" sourcefile="Book.java" sourcepath="org/sm/lab/mybooks/domain/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.domain.Note">
+      <SourceLine classname="org.sm.lab.mybooks.domain.Note" start="25" end="63" sourcefile="Note.java" sourcepath="org/sm/lab/mybooks/domain/Note.java"/>
+    </Class>
+    <Field classname="org.sm.lab.mybooks.domain.Note" name="book" signature="Lorg/sm/lab/mybooks/domain/Book;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.domain.Note" sourcefile="Note.java" sourcepath="org/sm/lab/mybooks/domain/Note.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.repository.data.BookRepository">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.BookRepository" sourcefile="BookRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/BookRepository.java"/>
+    </Class>
+    <Method classname="org.sm.lab.mybooks.repository.data.BookRepository" name="findByKeyword" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.BookRepository" sourcefile="BookRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/BookRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.repository.data.NoteRepository">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.NoteRepository" sourcefile="NoteRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/NoteRepository.java"/>
+    </Class>
+    <Method classname="org.sm.lab.mybooks.repository.data.NoteRepository" name="findByKeyword" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.NoteRepository" sourcefile="NoteRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/NoteRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.repository.data.NoteRepository">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.NoteRepository" sourcefile="NoteRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/NoteRepository.java"/>
+    </Class>
+    <Method classname="org.sm.lab.mybooks.repository.data.NoteRepository" name="search" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.NoteRepository" sourcefile="NoteRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/NoteRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.sm.lab.mybooks.repository.data.ReaderRepository">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.ReaderRepository" sourcefile="ReaderRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/ReaderRepository.java"/>
+    </Class>
+    <Method classname="org.sm.lab.mybooks.repository.data.ReaderRepository" name="search" signature="(Ljava/lang/String;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="org.sm.lab.mybooks.repository.data.ReaderRepository" sourcefile="ReaderRepository.java" sourcepath="org/sm/lab/mybooks/repository/data/ReaderRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="58">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.querydsl.core.BooleanBuilder</MissingClass>
+    <MissingClass>com.querydsl.core.types.Path</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadata</MissingClass>
+    <MissingClass>com.querydsl.core.types.PathMetadataFactory</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.BooleanExpression</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EntityPathBase</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.EnumPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.NumberPath</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.PathInits</MissingClass>
+    <MissingClass>com.querydsl.core.types.dsl.StringPath</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.lang3.RandomStringUtils</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.FilterRegistrationBean</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.querydsl.QueryDslPredicateExecutor</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.jdbc.datasource.DriverManagerDataSource</MissingClass>
+    <MissingClass>org.springframework.mail.MailException</MissingClass>
+    <MissingClass>org.springframework.mail.MailSender</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.AuthorityUtils</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.csrf.CsrfToken</MissingClass>
+    <MissingClass>org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository</MissingClass>
+    <MissingClass>org.springframework.web.cors.CorsConfiguration</MissingClass>
+    <MissingClass>org.springframework.web.cors.UrlBasedCorsConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.web.filter.CorsFilter</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.util.WebUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:45:56 +0000" total_classes="35" referenced_classes="82" total_bugs="6" total_size="769" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.73" clock_seconds="2.15" peak_mbytes="204.38" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="6">
+    <PackageStats package="org.sm.lab.mybooks" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.sm.lab.mybooks.MyBooksApplication" sourceFile="MyBooksApplication.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.config" total_bugs="0" total_types="4" total_size="89">
+      <ClassStats class="org.sm.lab.mybooks.config.CORSConfig" sourceFile="CORSConfig.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.config.DataSourceConfig" sourceFile="DataSourceConfig.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.config.SecurityConfig$1" sourceFile="SecurityConfig.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.domain" total_bugs="2" total_types="7" total_size="263" priority_2="2">
+      <ClassStats class="org.sm.lab.mybooks.domain.Book" sourceFile="Book.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.Note" sourceFile="Note.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.QBook" sourceFile="QBook.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.QNote" sourceFile="QNote.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.QReader" sourceFile="QReader.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.Reader" sourceFile="Reader.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.domain.SearchItem" sourceFile="SearchItem.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.enums" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="org.sm.lab.mybooks.enums.Genre" sourceFile="Genre.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.enums.SystemRole" sourceFile="SystemRole.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.repository.data" total_bugs="4" total_types="5" total_size="55" priority_2="4">
+      <ClassStats class="org.sm.lab.mybooks.repository.data.BookRepository" sourceFile="BookRepository.java" interface="true" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="org.sm.lab.mybooks.repository.data.BookRepositoryCustom" sourceFile="BookRepositoryCustom.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.repository.data.BookRepositoryImpl" sourceFile="BookRepositoryImpl.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.repository.data.NoteRepository" sourceFile="NoteRepository.java" interface="true" size="4" bugs="2" priority_2="2"/>
+      <ClassStats class="org.sm.lab.mybooks.repository.data.ReaderRepository" sourceFile="ReaderRepository.java" interface="true" size="5" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.security" total_bugs="0" total_types="4" total_size="101">
+      <ClassStats class="org.sm.lab.mybooks.security.AuthorizationService" sourceFile="AuthorizationService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.security.AuthorizationServiceImpl" sourceFile="AuthorizationServiceImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.security.UserDetailsImpl" sourceFile="UserDetailsImpl.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.security.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.service" total_bugs="0" total_types="6" total_size="91">
+      <ClassStats class="org.sm.lab.mybooks.service.BookService" sourceFile="BookService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.service.BookServiceImpl" sourceFile="BookServiceImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.service.NoteService" sourceFile="NoteService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.service.NoteServiceImpl" sourceFile="NoteServiceImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.service.ReaderService" sourceFile="ReaderService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.service.ReaderServiceImpl" sourceFile="ReaderServiceImpl.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.sm.lab.mybooks.web" total_bugs="0" total_types="6" total_size="129">
+      <ClassStats class="org.sm.lab.mybooks.web.AppController" sourceFile="AppController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.web.AppRestController" sourceFile="AppRestController.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.web.BookRestController" sourceFile="BookRestController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.web.NoteRestController" sourceFile="NoteRestController.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.web.ProfileRestController" sourceFile="ProfileRestController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.sm.lab.mybooks.web.ReaderRestController" sourceFile="ReaderRestController.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="219" invocations="695" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="13242" standardDeviationMicrosecondsPerInvocation="744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="74" invocations="82" avgMicrosecondsPerInvocation="908" maxMicrosecondsPerInvocation="7945" standardDeviationMicrosecondsPerInvocation="1603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="73" invocations="190" avgMicrosecondsPerInvocation="386" maxMicrosecondsPerInvocation="7391" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="64" invocations="191" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="9249" standardDeviationMicrosecondsPerInvocation="795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="62" invocations="189" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="3730" standardDeviationMicrosecondsPerInvocation="531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="61" invocations="82" avgMicrosecondsPerInvocation="744" maxMicrosecondsPerInvocation="6486" standardDeviationMicrosecondsPerInvocation="1280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="57" invocations="702" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="536" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="53" invocations="191" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="10027" standardDeviationMicrosecondsPerInvocation="774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="53" invocations="190" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="9225" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="47" invocations="190" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="2814" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="46" invocations="225" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="26740" standardDeviationMicrosecondsPerInvocation="1778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="388" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="4304" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="532" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1602" standardDeviationMicrosecondsPerInvocation="132"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="37" invocations="158" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="13445" standardDeviationMicrosecondsPerInvocation="1112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="35" invocations="136" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="1796" standardDeviationMicrosecondsPerInvocation="328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="34" invocations="35" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="9020" standardDeviationMicrosecondsPerInvocation="1925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="30" invocations="566" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="22087" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="82" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="5771" standardDeviationMicrosecondsPerInvocation="748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="82" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="5173" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="82" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="8250" standardDeviationMicrosecondsPerInvocation="939"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="82" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="5741" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="82" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="1420" standardDeviationMicrosecondsPerInvocation="343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="2718" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="1203" standardDeviationMicrosecondsPerInvocation="30"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="190" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="1626" standardDeviationMicrosecondsPerInvocation="161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="82" avgMicrosecondsPerInvocation="189" maxMicrosecondsPerInvocation="2257" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="5051" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="14" invocations="35" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="1717" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="com.ufpe.badsmells.ProjectionDetector" totalMilliseconds="14" invocations="35" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="12979" standardDeviationMicrosecondsPerInvocation="2156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="35" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="2336" standardDeviationMicrosecondsPerInvocation="529"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

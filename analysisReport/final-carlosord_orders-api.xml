@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597096856000" analysisTimestamp="1597096858257" release="">
+  <Project projectName="repositorios/carlosord_orders-api">
+    <Jar>repositorios/carlosord_orders-api</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.ricoh.orders.model.Article">
+      <SourceLine classname="com.ricoh.orders.model.Article" start="55" end="118" sourcefile="Article.java" sourcepath="com/ricoh/orders/model/Article.java"/>
+    </Class>
+    <Field classname="com.ricoh.orders.model.Article" name="catalogue" signature="Lcom/ricoh/orders/model/Catalogue;" isStatic="false">
+      <SourceLine classname="com.ricoh.orders.model.Article" sourcefile="Article.java" sourcepath="com/ricoh/orders/model/Article.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer$UserDetailsBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.HttpSecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.ClientDetailsServiceBuilder$ClientBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.DefaultTokenServices</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.TokenStore</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter</MissingClass>
+    <MissingClass>org.springframework.security.oauth2.provider.token.store.JwtTokenStore</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.ApiInfo</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:00:56 +0000" total_classes="21" referenced_classes="67" total_bugs="1" total_size="315" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.34" clock_seconds="1.52" peak_mbytes="191.26" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="1">
+    <PackageStats package="com.ricoh.orders" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.ricoh.orders.OrdersApplication" sourceFile="OrdersApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.config" total_bugs="0" total_types="4" total_size="93">
+      <ClassStats class="com.ricoh.orders.config.AuthorizationServerConfig" sourceFile="AuthorizationServerConfig.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.config.ResourceServerConfig" sourceFile="ResourceServerConfig.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.controller" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="com.ricoh.orders.controller.ArticleController" sourceFile="ArticleController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.controller.OrderController" sourceFile="OrderController.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.model" total_bugs="1" total_types="7" total_size="144" priority_2="1">
+      <ClassStats class="com.ricoh.orders.model.Article" sourceFile="Article.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ricoh.orders.model.Associations" sourceFile="Associations.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.model.Associations$Belong" sourceFile="Associations.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.model.Associations$Has" sourceFile="Associations.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.model.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.model.Catalogue" sourceFile="Catalogue.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.model.Order" sourceFile="Order.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.repository" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.ricoh.orders.repository.ArticleRepository" sourceFile="ArticleRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.repository.OrderRepository" sourceFile="OrderRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.service" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="com.ricoh.orders.service.ArticleService" sourceFile="ArticleService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.service.OrderService" sourceFile="OrderService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.service.exception" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="com.ricoh.orders.service.exception.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ricoh.orders.service.impl" total_bugs="0" total_types="2" total_size="25">
+      <ClassStats class="com.ricoh.orders.service.impl.ArticleServiceImpl" sourceFile="ArticleServiceImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ricoh.orders.service.impl.OrderServiceImpl" sourceFile="OrderServiceImpl.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="210" invocations="636" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="12218" standardDeviationMicrosecondsPerInvocation="764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="76" invocations="645" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="21469" standardDeviationMicrosecondsPerInvocation="847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="70" invocations="67" avgMicrosecondsPerInvocation="1045" maxMicrosecondsPerInvocation="9759" standardDeviationMicrosecondsPerInvocation="1935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="48" invocations="67" avgMicrosecondsPerInvocation="725" maxMicrosecondsPerInvocation="8739" standardDeviationMicrosecondsPerInvocation="1338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="40" invocations="502" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="1646" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="39" invocations="231" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="2561" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="34" invocations="141" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="14141" standardDeviationMicrosecondsPerInvocation="1219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="86" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="25706" standardDeviationMicrosecondsPerInvocation="2748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="32" invocations="81" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="8431" standardDeviationMicrosecondsPerInvocation="952"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="67" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="4509" standardDeviationMicrosecondsPerInvocation="805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="27" invocations="81" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="8844" standardDeviationMicrosecondsPerInvocation="990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="25" invocations="81" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="9414" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="81" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="9831" standardDeviationMicrosecondsPerInvocation="1087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="22" invocations="80" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="2536" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="21" invocations="81" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="3133" standardDeviationMicrosecondsPerInvocation="424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="3864" standardDeviationMicrosecondsPerInvocation="745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="67" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="6689" standardDeviationMicrosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="67" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="2168" standardDeviationMicrosecondsPerInvocation="426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="67" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="2778" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="67" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="4497" standardDeviationMicrosecondsPerInvocation="575"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

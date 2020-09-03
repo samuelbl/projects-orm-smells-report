@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597083745000" analysisTimestamp="1597083746953" release="">
+  <Project projectName="repositorios/eclipse-ee4j_cargotracker">
+    <Jar>repositorios/eclipse-ee4j_cargotracker</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.application.util.SampleDataGenerator">
+      <SourceLine classname="org.eclipse.cargotracker.application.util.SampleDataGenerator" start="27" end="293" sourcefile="SampleDataGenerator.java" sourcepath="org/eclipse/cargotracker/application/util/SampleDataGenerator.java"/>
+    </Class>
+    <Method classname="org.eclipse.cargotracker.application.util.SampleDataGenerator" name="unLoadAll" signature="()V" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.application.util.SampleDataGenerator" start="50" end="70" startBytecode="0" endBytecode="329" sourcefile="SampleDataGenerator.java" sourcepath="org/eclipse/cargotracker/application/util/SampleDataGenerator.java"/>
+    </Method>
+    <SourceLine classname="org.eclipse.cargotracker.application.util.SampleDataGenerator" start="55" end="55" startBytecode="12" endBytecode="12" sourcefile="SampleDataGenerator.java" sourcepath="org/eclipse/cargotracker/application/util/SampleDataGenerator.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Cargo">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Cargo" start="76" end="201" sourcefile="Cargo.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Cargo.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Cargo" name="origin" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Cargo" sourcefile="Cargo.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Cargo.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" start="30" end="371" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" name="currentVoyage" signature="Lorg/eclipse/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" start="30" end="371" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" name="lastEvent" signature="Lorg/eclipse/cargotracker/domain/model/handling/HandlingEvent;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Delivery">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" start="30" end="371" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" name="lastKnownLocation" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Delivery" sourcefile="Delivery.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Delivery.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" start="32" end="105" sourcefile="HandlingActivity.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" name="location" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" sourcefile="HandlingActivity.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" start="32" end="105" sourcefile="HandlingActivity.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" name="voyage" signature="Lorg/eclipse/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" sourcefile="HandlingActivity.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/HandlingActivity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" start="42" end="110" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Leg" name="loadLocation" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" start="42" end="110" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Leg" name="unloadLocation" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.Leg">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" start="42" end="110" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.Leg" name="voyage" signature="Lorg/eclipse/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.Leg" sourcefile="Leg.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/Leg.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" start="18" end="103" sourcefile="RouteSpecification.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" name="destination" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" sourcefile="RouteSpecification.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" start="18" end="103" sourcefile="RouteSpecification.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" name="origin" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" sourcefile="RouteSpecification.java" sourcepath="org/eclipse/cargotracker/domain/model/cargo/RouteSpecification.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" start="118" end="266" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" name="cargo" signature="Lorg/eclipse/cargotracker/domain/model/cargo/Cargo;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" start="118" end="266" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" name="location" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" start="118" end="266" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" name="voyage" signature="Lorg/eclipse/cargotracker/domain/model/voyage/Voyage;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" sourcefile="HandlingEvent.java" sourcepath="org/eclipse/cargotracker/domain/model/handling/HandlingEvent.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" start="41" end="101" sourcefile="CarrierMovement.java" sourcepath="org/eclipse/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" name="arrivalLocation" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" sourcefile="CarrierMovement.java" sourcepath="org/eclipse/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" start="41" end="101" sourcefile="CarrierMovement.java" sourcepath="org/eclipse/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Class>
+    <Field classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" name="departureLocation" signature="Lorg/eclipse/cargotracker/domain/model/location/Location;" isStatic="false">
+      <SourceLine classname="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" sourcefile="CarrierMovement.java" sourcepath="org/eclipse/cargotracker/domain/model/voyage/CarrierMovement.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="53">
+    <MissingClass>javax.batch.api.chunk.AbstractItemReader</MissingClass>
+    <MissingClass>javax.batch.api.chunk.AbstractItemWriter</MissingClass>
+    <MissingClass>javax.batch.api.chunk.listener.SkipReadListener</MissingClass>
+    <MissingClass>javax.batch.operations.JobOperator</MissingClass>
+    <MissingClass>javax.batch.runtime.BatchRuntime</MissingClass>
+    <MissingClass>javax.batch.runtime.context.JobContext</MissingClass>
+    <MissingClass>javax.enterprise.event.Event</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.faces.model.SelectItem</MissingClass>
+    <MissingClass>javax.jms.Destination</MissingClass>
+    <MissingClass>javax.jms.JMSContext</MissingClass>
+    <MissingClass>javax.jms.JMSException</MissingClass>
+    <MissingClass>javax.jms.JMSProducer</MissingClass>
+    <MissingClass>javax.jms.Message</MissingClass>
+    <MissingClass>javax.jms.MessageListener</MissingClass>
+    <MissingClass>javax.jms.ObjectMessage</MissingClass>
+    <MissingClass>javax.jms.TextMessage</MissingClass>
+    <MissingClass>javax.json.Json</MissingClass>
+    <MissingClass>javax.json.JsonArrayBuilder</MissingClass>
+    <MissingClass>javax.json.JsonObjectBuilder</MissingClass>
+    <MissingClass>javax.json.stream.JsonGenerator</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.websocket.RemoteEndpoint$Basic</MissingClass>
+    <MissingClass>javax.websocket.Session</MissingClass>
+    <MissingClass>javax.ws.rs.client.Client</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.client.Invocation$Builder</MissingClass>
+    <MissingClass>javax.ws.rs.client.WebTarget</MissingClass>
+    <MissingClass>javax.ws.rs.core.GenericType</MissingClass>
+    <MissingClass>javax.ws.rs.core.MediaType</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ContextResolver</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.EqualsBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.HashCodeBuilder</MissingClass>
+    <MissingClass>org.glassfish.jersey.moxy.json.MoxyJsonConfig</MissingClass>
+    <MissingClass>org.glassfish.jersey.moxy.json.MoxyJsonFeature</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ResourceConfig</MissingClass>
+    <MissingClass>org.primefaces.PrimeFaces</MissingClass>
+    <MissingClass>org.primefaces.PrimeFaces$Ajax</MissingClass>
+    <MissingClass>org.primefaces.PrimeFaces$Dialog</MissingClass>
+    <MissingClass>org.primefaces.event.FlowEvent</MissingClass>
+    <MissingClass>org.primefaces.model.DashboardColumn</MissingClass>
+    <MissingClass>org.primefaces.model.DashboardModel</MissingClass>
+    <MissingClass>org.primefaces.model.DefaultDashboardColumn</MissingClass>
+    <MissingClass>org.primefaces.model.DefaultDashboardModel</MissingClass>
+    <MissingClass>org.primefaces.model.map.DefaultMapModel</MissingClass>
+    <MissingClass>org.primefaces.model.map.LatLng</MissingClass>
+    <MissingClass>org.primefaces.model.map.MapModel</MissingClass>
+    <MissingClass>org.primefaces.model.map.Marker</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:22:25 +0000" total_classes="104" referenced_classes="199" total_bugs="17" total_size="3174" num_packages="27" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="14.26" clock_seconds="4.35" peak_mbytes="336.56" alloc_mbytes="3540.00" gc_seconds="0.21" priority_2="17">
+    <PackageStats package="org.eclipse.cargotracker.application" total_bugs="0" total_types="4" total_size="14">
+      <ClassStats class="org.eclipse.cargotracker.application.ApplicationEvents" sourceFile="ApplicationEvents.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.BookingService" sourceFile="BookingService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.CargoInspectionService" sourceFile="CargoInspectionService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.HandlingEventService" sourceFile="HandlingEventService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.application.internal" total_bugs="0" total_types="3" total_size="85">
+      <ClassStats class="org.eclipse.cargotracker.application.internal.DefaultBookingService" sourceFile="DefaultBookingService.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.internal.DefaultCargoInspectionService" sourceFile="DefaultCargoInspectionService.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.internal.DefaultHandlingEventService" sourceFile="DefaultHandlingEventService.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.application.util" total_bugs="1" total_types="5" total_size="297" priority_2="1">
+      <ClassStats class="org.eclipse.cargotracker.application.util.DateUtil" sourceFile="DateUtil.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.util.JsonMoxyConfigurationContextResolver" sourceFile="JsonMoxyConfigurationContextResolver.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.util.LocationUtil" sourceFile="LocationUtil.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.util.RestConfiguration" sourceFile="RestConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.application.util.SampleDataGenerator" sourceFile="SampleDataGenerator.java" interface="false" size="176" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.model.cargo" total_bugs="11" total_types="12" total_size="623" priority_2="11">
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.BookingBackingBean" sourceFile="BookingBackingBean.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.Cargo" sourceFile="Cargo.java" interface="false" size="60" bugs="1" priority_2="1"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.CargoRepository" sourceFile="CargoRepository.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.Delivery" sourceFile="Delivery.java" interface="false" size="176" bugs="3" priority_2="3"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.Delivery$1" sourceFile="Delivery.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.HandlingActivity" sourceFile="HandlingActivity.java" interface="false" size="53" bugs="2" priority_2="2"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.Itinerary" sourceFile="Itinerary.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.Leg" sourceFile="Leg.java" interface="false" size="50" bugs="3" priority_2="3"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.RouteSpecification" sourceFile="RouteSpecification.java" interface="false" size="50" bugs="2" priority_2="2"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.RoutingStatus" sourceFile="RoutingStatus.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.TrackingId" sourceFile="TrackingId.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.cargo.TransportStatus" sourceFile="TransportStatus.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.model.handling" total_bugs="3" total_types="10" total_size="237" priority_2="3">
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.CannotCreateHandlingEventException" sourceFile="CannotCreateHandlingEventException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingEvent" sourceFile="HandlingEvent.java" interface="false" size="97" bugs="3" priority_2="3"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingEvent$Type" sourceFile="HandlingEvent.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingEventFactory" sourceFile="HandlingEventFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingEventRepository" sourceFile="HandlingEventRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingHistory" sourceFile="HandlingHistory.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.HandlingHistory$1" sourceFile="HandlingHistory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.UnknownCargoException" sourceFile="UnknownCargoException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.UnknownLocationException" sourceFile="UnknownLocationException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.handling.UnknownVoyageException" sourceFile="UnknownVoyageException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.model.location" total_bugs="0" total_types="4" total_size="101">
+      <ClassStats class="org.eclipse.cargotracker.domain.model.location.Location" sourceFile="Location.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.location.LocationRepository" sourceFile="LocationRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.location.SampleLocations" sourceFile="SampleLocations.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.location.UnLocode" sourceFile="UnLocode.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.model.voyage" total_bugs="2" total_types="7" total_size="259" priority_2="2">
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.CarrierMovement" sourceFile="CarrierMovement.java" interface="false" size="46" bugs="2" priority_2="2"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.SampleVoyages" sourceFile="SampleVoyages.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.Schedule" sourceFile="Schedule.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.Voyage" sourceFile="Voyage.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.Voyage$Builder" sourceFile="Voyage.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.VoyageNumber" sourceFile="VoyageNumber.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.model.voyage.VoyageRepository" sourceFile="VoyageRepository.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.service" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="org.eclipse.cargotracker.domain.service.RoutingService" sourceFile="RoutingService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.domain.shared" total_bugs="0" total_types="6" total_size="49">
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.AbstractSpecification" sourceFile="AbstractSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.AndSpecification" sourceFile="AndSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.DomainObjectUtils" sourceFile="DomainObjectUtils.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.NotSpecification" sourceFile="NotSpecification.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.OrSpecification" sourceFile="OrSpecification.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.domain.shared.Specification" sourceFile="Specification.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.infrastructure.events.cdi" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.events.cdi.CargoInspected" sourceFile="CargoInspected.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.infrastructure.messaging.jms" total_bugs="0" total_types="6" total_size="126">
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.CargoHandledConsumer" sourceFile="CargoHandledConsumer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.DeliveredCargoConsumer" sourceFile="DeliveredCargoConsumer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.HandlingEventRegistrationAttemptConsumer" sourceFile="HandlingEventRegistrationAttemptConsumer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.JmsApplicationEvents" sourceFile="JmsApplicationEvents.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.MisdirectedCargoConsumer" sourceFile="MisdirectedCargoConsumer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.messaging.jms.RejectedRegistrationAttemptsConsumer" sourceFile="RejectedRegistrationAttemptsConsumer.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.infrastructure.persistence.jpa" total_bugs="0" total_types="4" total_size="73">
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.persistence.jpa.JpaCargoRepository" sourceFile="JpaCargoRepository.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.persistence.jpa.JpaHandlingEventRepository" sourceFile="JpaHandlingEventRepository.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.persistence.jpa.JpaLocationRepository" sourceFile="JpaLocationRepository.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.persistence.jpa.JpaVoyageRepository" sourceFile="JpaVoyageRepository.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.infrastructure.routing" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.routing.ExternalRoutingService" sourceFile="ExternalRoutingService.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.infrastructure.routing.ExternalRoutingService$1" sourceFile="ExternalRoutingService.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.facade" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.BookingServiceFacade" sourceFile="BookingServiceFacade.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.facade.dto" total_bugs="0" total_types="4" total_size="142">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.dto.CargoRoute" sourceFile="CargoRoute.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.dto.Leg" sourceFile="Leg.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.dto.Location" sourceFile="Location.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.dto.RouteCandidate" sourceFile="RouteCandidate.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.facade.internal" total_bugs="0" total_types="1" total_size="46">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.internal.DefaultBookingServiceFacade" sourceFile="DefaultBookingServiceFacade.java" interface="false" size="46" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.facade.internal.assembler" total_bugs="0" total_types="4" total_size="86">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.internal.assembler.CargoRouteDtoAssembler" sourceFile="CargoRouteDtoAssembler.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.internal.assembler.ItineraryCandidateDtoAssembler" sourceFile="ItineraryCandidateDtoAssembler.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.internal.assembler.LocationDtoAssembler" sourceFile="LocationDtoAssembler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.facade.internal.assembler.LocationDtoAssembler$1" sourceFile="LocationDtoAssembler.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.rest" total_bugs="0" total_types="1" total_size="25">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.rest.CargoMonitoringService" sourceFile="CargoMonitoringService.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.socket" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.socket.RealtimeCargoTrackingService" sourceFile="RealtimeCargoTrackingService.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.booking.web" total_bugs="0" total_types="8" total_size="276">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.CargoAdmin" sourceFile="CargoAdmin.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.CargoDetails" sourceFile="CargoDetails.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.ChangeDestination" sourceFile="ChangeDestination.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.ChangeDestinationDialog" sourceFile="ChangeDestinationDialog.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.DashboardView" sourceFile="DashboardView.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.ItinerarySelection" sourceFile="ItinerarySelection.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.ListCargo" sourceFile="ListCargo.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.booking.web.Registration" sourceFile="Registration.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.handling" total_bugs="0" total_types="1" total_size="30">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.HandlingEventRegistrationAttempt" sourceFile="HandlingEventRegistrationAttempt.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.handling.file" total_bugs="0" total_types="7" total_size="191">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.EventFilesCheckpoint" sourceFile="EventFilesCheckpoint.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.EventItemReader" sourceFile="EventItemReader.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.EventItemWriter" sourceFile="EventItemWriter.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.EventLineParseException" sourceFile="EventLineParseException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.FileProcessorJobListener" sourceFile="FileProcessorJobListener.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.LineParseExceptionListener" sourceFile="LineParseExceptionListener.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.file.UploadDirectoryScanner" sourceFile="UploadDirectoryScanner.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.handling.mobile" total_bugs="0" total_types="1" total_size="83">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.mobile.EventWizard" sourceFile="EventWizard.java" interface="false" size="83" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.handling.rest" total_bugs="0" total_types="2" total_size="57">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.rest.HandlingReport" sourceFile="HandlingReport.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.handling.rest.HandlingReportService" sourceFile="HandlingReportService.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.cargotracker.interfaces.tracking.web" total_bugs="0" total_types="4" total_size="152">
+      <ClassStats class="org.eclipse.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter$1" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.tracking.web.CargoTrackingViewAdapter$HandlingEventViewAdapter" sourceFile="CargoTrackingViewAdapter.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.eclipse.cargotracker.interfaces.tracking.web.Track" sourceFile="Track.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.pathfinder.api" total_bugs="0" total_types="3" total_size="110">
+      <ClassStats class="org.eclipse.pathfinder.api.GraphTraversalService" sourceFile="GraphTraversalService.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.eclipse.pathfinder.api.TransitEdge" sourceFile="TransitEdge.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.eclipse.pathfinder.api.TransitPath" sourceFile="TransitPath.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.pathfinder.internal" total_bugs="0" total_types="1" total_size="15">
+      <ClassStats class="org.eclipse.pathfinder.internal.GraphDao" sourceFile="GraphDao.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="263" invocations="1033" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="13384" standardDeviationMicrosecondsPerInvocation="587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="188" invocations="587" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="10607" standardDeviationMicrosecondsPerInvocation="805"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="187" invocations="587" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="11815" standardDeviationMicrosecondsPerInvocation="881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="179" invocations="583" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="13572" standardDeviationMicrosecondsPerInvocation="764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="167" invocations="595" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="9087" standardDeviationMicrosecondsPerInvocation="735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="156" invocations="596" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="12534" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="155" invocations="199" avgMicrosecondsPerInvocation="780" maxMicrosecondsPerInvocation="12817" standardDeviationMicrosecondsPerInvocation="1787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="150" invocations="949" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="40860" standardDeviationMicrosecondsPerInvocation="1349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="143" invocations="587" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="13436" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="126" invocations="199" avgMicrosecondsPerInvocation="634" maxMicrosecondsPerInvocation="5169" standardDeviationMicrosecondsPerInvocation="1060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="109" invocations="426" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="5471" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="1047" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="505" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="71" invocations="621" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="30875" standardDeviationMicrosecondsPerInvocation="1239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="55" invocations="199" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="6569" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="54" invocations="314" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="13936" standardDeviationMicrosecondsPerInvocation="817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="50" invocations="587" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="5218" standardDeviationMicrosecondsPerInvocation="319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="862" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="3393" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="45" invocations="104" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="6349" standardDeviationMicrosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="41" invocations="104" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="7476" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="40" invocations="9716" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1132" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="39" invocations="104" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="3068" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="38" invocations="104" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="17769" standardDeviationMicrosecondsPerInvocation="1729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="36" invocations="104" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="10979" standardDeviationMicrosecondsPerInvocation="1150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="36" invocations="199" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="1892" standardDeviationMicrosecondsPerInvocation="290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="199" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="7619" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="199" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="11216" standardDeviationMicrosecondsPerInvocation="801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="199" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2970" standardDeviationMicrosecondsPerInvocation="311"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="32" invocations="104" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="3047" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="30" invocations="583" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="2577" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="30" invocations="104" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="3927" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="29" invocations="104" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="2823" standardDeviationMicrosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="28" invocations="199" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="2241" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="25" invocations="104" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="2968" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="24" invocations="581" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="901" standardDeviationMicrosecondsPerInvocation="86"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.Naming" totalMilliseconds="22" invocations="104" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="7165" standardDeviationMicrosecondsPerInvocation="696"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

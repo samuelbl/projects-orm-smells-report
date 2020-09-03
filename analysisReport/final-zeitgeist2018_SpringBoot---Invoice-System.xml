@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085166000" analysisTimestamp="1597085167396" release="">
+  <Project projectName="repositorios/zeitgeist2018_SpringBoot---Invoice-System">
+    <Jar>repositorios/zeitgeist2018_SpringBoot---Invoice-System</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl" start="16" end="46" sourcefile="ClientDaoImpl.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/ClientDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl" start="29" end="29" startBytecode="0" endBytecode="58" sourcefile="ClientDaoImpl.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/ClientDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="ClientDaoImpl.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/ClientDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bolsadeideas.springboot.app.models.dao.IClientDao2">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IClientDao2" sourcefile="IClientDao2.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IClientDao2.java"/>
+    </Class>
+    <Method classname="com.bolsadeideas.springboot.app.models.dao.IClientDao2" name="fetchByIdWithInvoice" signature="(Ljava/lang/Long;)Lcom/bolsadeideas/springboot/app/models/entity/Client;" isStatic="false">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IClientDao2" sourcefile="IClientDao2.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IClientDao2.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bolsadeideas.springboot.app.models.dao.IInvoiceDao">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IInvoiceDao" sourcefile="IInvoiceDao.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IInvoiceDao.java"/>
+    </Class>
+    <Method classname="com.bolsadeideas.springboot.app.models.dao.IInvoiceDao" name="fetchByIdWithClientWithInvoiceLineWithProduct" signature="(Ljava/lang/Long;)Lcom/bolsadeideas/springboot/app/models/entity/Invoice;" isStatic="false">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IInvoiceDao" sourcefile="IInvoiceDao.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IInvoiceDao.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bolsadeideas.springboot.app.models.dao.IProductDao">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IProductDao" sourcefile="IProductDao.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IProductDao.java"/>
+    </Class>
+    <Method classname="com.bolsadeideas.springboot.app.models.dao.IProductDao" name="findByName" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bolsadeideas.springboot.app.models.dao.IProductDao" sourcefile="IProductDao.java" sourcepath="com/bolsadeideas/springboot/app/models/dao/IProductDao.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="70">
+    <MissingClass>com.lowagie.text.Document</MissingClass>
+    <MissingClass>com.lowagie.text.Phrase</MissingClass>
+    <MissingClass>com.lowagie.text.pdf.PdfPCell</MissingClass>
+    <MissingClass>com.lowagie.text.pdf.PdfPTable</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.BorderStyle</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Cell</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.CellStyle</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.FillPatternType</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.IndexedColors</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Row</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Sheet</MissingClass>
+    <MissingClass>org.apache.poi.ss.usermodel.Workbook</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.MessageSource</MissingClass>
+    <MissingClass>org.springframework.context.support.MessageSourceAccessor</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.UrlResource</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExceptionHandlingConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.FileSystemUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.bind.support.SessionStatus</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.FlashMap</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.LocaleChangeInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.servlet.i18n.SessionLocaleResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+    <MissingClass>org.springframework.web.servlet.support.SessionFlashMapManager</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.AbstractView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.document.AbstractPdfView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.view.document.AbstractXlsxView</MissingClass>
+    <MissingClass>org.supercsv.io.CsvBeanWriter</MissingClass>
+    <MissingClass>org.supercsv.io.ICsvBeanWriter</MissingClass>
+    <MissingClass>org.supercsv.prefs.CsvPreference</MissingClass>
+    <MissingClass>org.thymeleaf.spring5.SpringTemplateEngine</MissingClass>
+    <MissingClass>org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:46:06 +0000" total_classes="65" referenced_classes="183" total_bugs="4" total_size="1767" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="12.44" clock_seconds="3.60" peak_mbytes="341.43" alloc_mbytes="3540.00" gc_seconds="0.18" priority_2="4">
+    <PackageStats package="com.bolsadeideas.springboot.app" total_bugs="0" total_types="4" total_size="70">
+      <ClassStats class="com.bolsadeideas.springboot.app.MvcConfig" sourceFile="MvcConfig.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.SpringBootDataJpaApplication" sourceFile="SpringBootDataJpaApplication.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.SpringSecurityConfig" sourceFile="SpringSecurityConfig.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.ThymeleafConfig" sourceFile="ThymeleafConfig.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.auth.handler" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="com.bolsadeideas.springboot.app.auth.handler.LoginSuccessHandler" sourceFile="LoginSuccessHandler.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.controllers" total_bugs="0" total_types="4" total_size="162">
+      <ClassStats class="com.bolsadeideas.springboot.app.controllers.ClientController" sourceFile="ClientController.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.controllers.InvoiceController" sourceFile="InvoiceController.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.controllers.LocaleController" sourceFile="LocaleController.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.controllers.LoginController" sourceFile="LoginController.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.models.dao" total_bugs="4" total_types="6" total_size="31" priority_2="4">
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.ClientDaoImpl" sourceFile="ClientDaoImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.IClientDao" sourceFile="IClientDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.IClientDao2" sourceFile="IClientDao2.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.IInvoiceDao" sourceFile="IInvoiceDao.java" interface="true" size="2" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.IProductDao" sourceFile="IProductDao.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.dao.IUserDao" sourceFile="IUserDao.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.models.entity" total_bugs="0" total_types="6" total_size="214">
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.Client" sourceFile="Client.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.Invoice" sourceFile="Invoice.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.InvoiceLine" sourceFile="InvoiceLine.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.Product" sourceFile="Product.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.Role" sourceFile="Role.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.entity.User" sourceFile="User.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.models.service" total_bugs="0" total_types="5" total_size="109">
+      <ClassStats class="com.bolsadeideas.springboot.app.models.service.ClientServiceImpl" sourceFile="ClientServiceImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.service.IClientService" sourceFile="IClientService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.service.IUploadFileService" sourceFile="IUploadFileService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.service.JPAUserDetailsService" sourceFile="JPAUserDetailsService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.models.service.UploadFileServiceImpl" sourceFile="UploadFileServiceImpl.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.util.paginator" total_bugs="0" total_types="2" total_size="63">
+      <ClassStats class="com.bolsadeideas.springboot.app.util.paginator.PageItem" sourceFile="PageItem.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.bolsadeideas.springboot.app.util.paginator.PageRender" sourceFile="PageRender.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.view.csv" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="com.bolsadeideas.springboot.app.view.csv.ClientCsvView" sourceFile="ClientCsvView.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.view.pdf" total_bugs="0" total_types="1" total_size="50">
+      <ClassStats class="com.bolsadeideas.springboot.app.view.pdf.InvoicePdfView" sourceFile="InvoicePdfView.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bolsadeideas.springboot.app.view.xlsx" total_bugs="0" total_types="1" total_size="68">
+      <ClassStats class="com.bolsadeideas.springboot.app.view.xlsx.InvoiceXlsxView" sourceFile="InvoiceXlsxView.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="11" total_size="448">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="271" invocations="1163" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="11581" standardDeviationMicrosecondsPerInvocation="562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="207" invocations="183" avgMicrosecondsPerInvocation="1131" maxMicrosecondsPerInvocation="36616" standardDeviationMicrosecondsPerInvocation="3130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="145" invocations="183" avgMicrosecondsPerInvocation="793" maxMicrosecondsPerInvocation="5684" standardDeviationMicrosecondsPerInvocation="1244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="139" invocations="808" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="3052" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="136" invocations="336" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="18368" standardDeviationMicrosecondsPerInvocation="1388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="132" invocations="337" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="9445" standardDeviationMicrosecondsPerInvocation="979"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="117" invocations="341" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="8104" standardDeviationMicrosecondsPerInvocation="921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="115" invocations="332" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="7281" standardDeviationMicrosecondsPerInvocation="737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="112" invocations="341" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="16884" standardDeviationMicrosecondsPerInvocation="1211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="91" invocations="1178" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="554" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="91" invocations="230" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="7721" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="85" invocations="337" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="8889" standardDeviationMicrosecondsPerInvocation="702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="57" invocations="183" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="3499" standardDeviationMicrosecondsPerInvocation="550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="57" invocations="297" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="13756" standardDeviationMicrosecondsPerInvocation="841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="55" invocations="183" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="15889" standardDeviationMicrosecondsPerInvocation="1192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="52" invocations="380" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="25950" standardDeviationMicrosecondsPerInvocation="1331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="984" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="1398" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="42" invocations="183" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="2407" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="42" invocations="183" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="4905" standardDeviationMicrosecondsPerInvocation="549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="37" invocations="183" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="2306" standardDeviationMicrosecondsPerInvocation="379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="183" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="7124" standardDeviationMicrosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="33" invocations="183" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="9231" standardDeviationMicrosecondsPerInvocation="884"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="30" invocations="337" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2526" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="29" invocations="5902" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1129" standardDeviationMicrosecondsPerInvocation="23"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="28" invocations="65" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="5581" standardDeviationMicrosecondsPerInvocation="1207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="25" invocations="183" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1845" standardDeviationMicrosecondsPerInvocation="248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="24" invocations="65" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="4272" standardDeviationMicrosecondsPerInvocation="747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="61" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="2431" standardDeviationMicrosecondsPerInvocation="532"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

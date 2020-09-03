@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597110124000" analysisTimestamp="1597110125255" release="">
+  <Project projectName="repositorios/Mretron_MyBlogWebSite">
+    <Jar>repositorios/Mretron_MyBlogWebSite</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findByYear" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findByYear. Fields with EAGER without Join Fetch: type, user, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findByYearAndMonth" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findByYearAndMonth. Fields with EAGER without Join Fetch: type, user, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findTop. Fields with EAGER without Join Fetch: type, user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findByYear" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findByYearAndMonth" signature="(Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.BlogRepository">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.BlogRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.dao.BlogRepository" sourcefile="BlogRepository.java" sourcepath="com/zzj/blog/dao/BlogRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.TagRepository">
+      <SourceLine classname="com.zzj.blog.dao.TagRepository" sourcefile="TagRepository.java" sourcepath="com/zzj/blog/dao/TagRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.TagRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.dao.TagRepository" sourcefile="TagRepository.java" sourcepath="com/zzj/blog/dao/TagRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.dao.TypeRepository">
+      <SourceLine classname="com.zzj.blog.dao.TypeRepository" sourcefile="TypeRepository.java" sourcepath="com/zzj/blog/dao/TypeRepository.java"/>
+    </Class>
+    <Method classname="com.zzj.blog.dao.TypeRepository" name="findTop" signature="(Lorg/springframework/data/domain/Pageable;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.dao.TypeRepository" sourcefile="TypeRepository.java" sourcepath="com/zzj/blog/dao/TypeRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.pojo.Blog">
+      <SourceLine classname="com.zzj.blog.pojo.Blog" start="53" end="284" sourcefile="Blog.java" sourcepath="com/zzj/blog/pojo/Blog.java"/>
+    </Class>
+    <Field classname="com.zzj.blog.pojo.Blog" name="type" signature="Lcom/zzj/blog/pojo/Type;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.pojo.Blog" sourcefile="Blog.java" sourcepath="com/zzj/blog/pojo/Blog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.pojo.Blog">
+      <SourceLine classname="com.zzj.blog.pojo.Blog" start="53" end="284" sourcefile="Blog.java" sourcepath="com/zzj/blog/pojo/Blog.java"/>
+    </Class>
+    <Field classname="com.zzj.blog.pojo.Blog" name="user" signature="Lcom/zzj/blog/pojo/User;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.pojo.Blog" sourcefile="Blog.java" sourcepath="com/zzj/blog/pojo/Blog.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.pojo.Comment">
+      <SourceLine classname="com.zzj.blog.pojo.Comment" start="29" end="142" sourcefile="Comment.java" sourcepath="com/zzj/blog/pojo/Comment.java"/>
+    </Class>
+    <Field classname="com.zzj.blog.pojo.Comment" name="blog" signature="Lcom/zzj/blog/pojo/Blog;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.pojo.Comment" sourcefile="Comment.java" sourcepath="com/zzj/blog/pojo/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.zzj.blog.pojo.Comment">
+      <SourceLine classname="com.zzj.blog.pojo.Comment" start="29" end="142" sourcefile="Comment.java" sourcepath="com/zzj/blog/pojo/Comment.java"/>
+    </Class>
+    <Field classname="com.zzj.blog.pojo.Comment" name="parentComment" signature="Lcom/zzj/blog/pojo/Comment;" isStatic="false">
+      <SourceLine classname="com.zzj.blog.pojo.Comment" sourcefile="Comment.java" sourcepath="com/zzj/blog/pojo/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="44">
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Join</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.commonmark.ext.gfm.tables.TablesExtension</MissingClass>
+    <MissingClass>org.commonmark.ext.heading.anchor.HeadingAnchorExtension</MissingClass>
+    <MissingClass>org.commonmark.node.Node</MissingClass>
+    <MissingClass>org.commonmark.parser.Parser</MissingClass>
+    <MissingClass>org.commonmark.parser.Parser$Builder</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.AttributeProvider</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.AttributeProviderFactory</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.HtmlRenderer</MissingClass>
+    <MissingClass>org.commonmark.renderer.html.HtmlRenderer$Builder</MissingClass>
+    <MissingClass>org.jsoup.Connection</MissingClass>
+    <MissingClass>org.jsoup.Connection$Response</MissingClass>
+    <MissingClass>org.jsoup.Jsoup</MissingClass>
+    <MissingClass>org.jsoup.nodes.Document</MissingClass>
+    <MissingClass>org.jsoup.nodes.Element</MissingClass>
+    <MissingClass>org.jsoup.select.Elements</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.core.annotation.AnnotationUtils</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.context.request.RequestContextHolder</MissingClass>
+    <MissingClass>org.springframework.web.context.request.ServletRequestAttributes</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.InterceptorRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 01:42:04 +0000" total_classes="67" referenced_classes="117" total_bugs="12" total_size="1464" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.96" clock_seconds="2.56" peak_mbytes="252.20" alloc_mbytes="3540.00" gc_seconds="0.12" priority_2="12">
+    <PackageStats package="com.zzj.blog" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.zzj.blog.BlogApplication" sourceFile="BlogApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.zzj.blog.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.aspect" total_bugs="0" total_types="2" total_size="38">
+      <ClassStats class="com.zzj.blog.aspect.LogAspect" sourceFile="LogAspect.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.zzj.blog.aspect.LogAspect$RequestLog" sourceFile="LogAspect.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.dao" total_bugs="8" total_types="9" total_size="21" priority_2="8">
+      <ClassStats class="com.zzj.blog.dao.BlogRepository" sourceFile="BlogRepository.java" interface="true" size="5" bugs="6" priority_2="6"/>
+      <ClassStats class="com.zzj.blog.dao.BulletinRepository" sourceFile="BulletinRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zzj.blog.dao.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.zzj.blog.dao.FriendRepositry" sourceFile="FriendRepositry.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zzj.blog.dao.IPAddressRepository" sourceFile="IPAddressRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.zzj.blog.dao.MessageRepository" sourceFile="MessageRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.zzj.blog.dao.TagRepository" sourceFile="TagRepository.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.zzj.blog.dao.TypeRepository" sourceFile="TypeRepository.java" interface="true" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="com.zzj.blog.dao.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.handler" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.zzj.blog.handler.ControllerExceptionHandler" sourceFile="ControllerExceptionHandler.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.interceptor" total_bugs="0" total_types="2" total_size="17">
+      <ClassStats class="com.zzj.blog.interceptor.LoginInterceptor" sourceFile="LoginInterceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.zzj.blog.interceptor.WebConfig" sourceFile="WebConfig.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.pojo" total_bugs="4" total_types="11" total_size="588" priority_2="4">
+      <ClassStats class="com.zzj.blog.pojo.Blog" sourceFile="Blog.java" interface="false" size="156" bugs="2" priority_2="2"/>
+      <ClassStats class="com.zzj.blog.pojo.BlogQuery" sourceFile="BlogQuery.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.Bulletin" sourceFile="Bulletin.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.Comment" sourceFile="Comment.java" interface="false" size="78" bugs="2" priority_2="2"/>
+      <ClassStats class="com.zzj.blog.pojo.Friend" sourceFile="Friend.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.IPAddress" sourceFile="IPAddress.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.Message" sourceFile="Message.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.Tag" sourceFile="Tag.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.TransWord" sourceFile="TransWord.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.Type" sourceFile="Type.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.zzj.blog.pojo.User" sourceFile="User.java" interface="false" size="79" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.service" total_bugs="0" total_types="20" total_size="313">
+      <ClassStats class="com.zzj.blog.service.BlogService" sourceFile="BlogService.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.BlogServiceImpl" sourceFile="BlogServiceImpl.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.BlogServiceImpl$1" sourceFile="BlogServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.BlogServiceImpl$2" sourceFile="BlogServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.BulletinService" sourceFile="BulletinService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.BulletinServiceImpl" sourceFile="BulletinServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.CommentService" sourceFile="CommentService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.FriendService" sourceFile="FriendService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.FriendServiceImpl" sourceFile="FriendServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.IPAddressService" sourceFile="IPAddressService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.IPAddressServiceImpl" sourceFile="IPAddressServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.MessageService" sourceFile="MessageService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.MessageServiceImpl" sourceFile="MessageServiceImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.TagService" sourceFile="TagService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.TypeService" sourceFile="TypeService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.TypeServiceImpl" sourceFile="TypeServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.UserService" sourceFile="UserService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.zzj.blog.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.util" total_bugs="0" total_types="6" total_size="122">
+      <ClassStats class="com.zzj.blog.util.LogIP" sourceFile="LogIP.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.zzj.blog.util.MD5Utils" sourceFile="MD5Utils.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.zzj.blog.util.MarkdownUtils" sourceFile="MarkdownUtils.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.zzj.blog.util.MarkdownUtils$1" sourceFile="MarkdownUtils.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.zzj.blog.util.MarkdownUtils$CustomAttributeProvider" sourceFile="MarkdownUtils.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.zzj.blog.util.TranslateUtil" sourceFile="TranslateUtil.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.web" total_bugs="0" total_types="7" total_size="145">
+      <ClassStats class="com.zzj.blog.web.ArchiveShowController" sourceFile="ArchiveShowController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.CommentController" sourceFile="CommentController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.FriendsShowController" sourceFile="FriendsShowController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.IndexController" sourceFile="IndexController.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.TagShowController" sourceFile="TagShowController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.TranslateController" sourceFile="TranslateController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.TypeShowController" sourceFile="TypeShowController.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.zzj.blog.web.admin" total_bugs="0" total_types="7" total_size="190">
+      <ClassStats class="com.zzj.blog.web.admin.AdminIndexController" sourceFile="AdminIndexController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.BlogController" sourceFile="BlogController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.BulletinController" sourceFile="BulletinController.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.FriendsController" sourceFile="FriendsController.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.LoginController" sourceFile="LoginController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.TagController" sourceFile="TagController.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.zzj.blog.web.admin.TypeController" sourceFile="TypeController.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="216" invocations="731" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="11310" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="117" avgMicrosecondsPerInvocation="810" maxMicrosecondsPerInvocation="12134" standardDeviationMicrosecondsPerInvocation="1844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="80" invocations="335" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="5069" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="76" invocations="335" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="4695" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="76" invocations="117" avgMicrosecondsPerInvocation="652" maxMicrosecondsPerInvocation="8806" standardDeviationMicrosecondsPerInvocation="1362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="69" invocations="336" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="7967" standardDeviationMicrosecondsPerInvocation="539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="64" invocations="336" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="8869" standardDeviationMicrosecondsPerInvocation="566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="63" invocations="574" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="6532" standardDeviationMicrosecondsPerInvocation="319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="62" invocations="335" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="9748" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="60" invocations="335" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="3888" standardDeviationMicrosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="742" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="469" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="57" invocations="191" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="18901" standardDeviationMicrosecondsPerInvocation="1689"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="52" invocations="396" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="28366" standardDeviationMicrosecondsPerInvocation="1422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="43" invocations="190" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="2242" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="596" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="1791" standardDeviationMicrosecondsPerInvocation="130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="117" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="5508" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="28" invocations="396" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="17043" standardDeviationMicrosecondsPerInvocation="882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="26" invocations="4888" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1263" standardDeviationMicrosecondsPerInvocation="24"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="25" invocations="67" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="18561" standardDeviationMicrosecondsPerInvocation="2240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="117" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="1851" standardDeviationMicrosecondsPerInvocation="321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="117" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="5095" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="117" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="2491" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="117" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="8626" standardDeviationMicrosecondsPerInvocation="808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="2405" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="2317" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="16247" standardDeviationMicrosecondsPerInvocation="1962"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="67" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="6087" standardDeviationMicrosecondsPerInvocation="1143"/>
+      <ClassProfile name="com.ufpe.badsmells.collects.CollectEagerAtributes" totalMilliseconds="20" invocations="67" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="18084" standardDeviationMicrosecondsPerInvocation="2191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="17" invocations="335" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1546" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="117" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="2040" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="15" invocations="67" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="1557" standardDeviationMicrosecondsPerInvocation="295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="14" invocations="67" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="6850" standardDeviationMicrosecondsPerInvocation="852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="67" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="5086" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="13" invocations="67" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="940" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="13" invocations="335" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="761" standardDeviationMicrosecondsPerInvocation="77"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597085873000" analysisTimestamp="1597085875139" release="">
+  <Project projectName="repositorios/DanielMichalski_spring-web-rss-channels">
+    <Jar>repositorios/DanielMichalski_spring-web-rss-channels</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.dmichalski.rss.core.entity.RssFeedEntity">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.RssFeedEntity" start="22" end="85" sourcefile="RssFeedEntity.java" sourcepath="pl/dmichalski/rss/core/entity/RssFeedEntity.java"/>
+    </Class>
+    <Field classname="pl.dmichalski.rss.core.entity.RssFeedEntity" name="userEntity" signature="Lpl/dmichalski/rss/core/entity/UserEntity;" isStatic="false">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.RssFeedEntity" sourcefile="RssFeedEntity.java" sourcepath="pl/dmichalski/rss/core/entity/RssFeedEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.dmichalski.rss.core.entity.RssFeedEntryEntity">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.RssFeedEntryEntity" start="17" end="88" sourcefile="RssFeedEntryEntity.java" sourcepath="pl/dmichalski/rss/core/entity/RssFeedEntryEntity.java"/>
+    </Class>
+    <Field classname="pl.dmichalski.rss.core.entity.RssFeedEntryEntity" name="rssFeedEntity" signature="Lpl/dmichalski/rss/core/entity/RssFeedEntity;" isStatic="false">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.RssFeedEntryEntity" sourcefile="RssFeedEntryEntity.java" sourcepath="pl/dmichalski/rss/core/entity/RssFeedEntryEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="pl.dmichalski.rss.core.entity.UserEntity">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.UserEntity" start="24" end="120" sourcefile="UserEntity.java" sourcepath="pl/dmichalski/rss/core/entity/UserEntity.java"/>
+    </Class>
+    <Field classname="pl.dmichalski.rss.core.entity.UserEntity" name="countryEntity" signature="Lpl/dmichalski/rss/core/entity/CountryEntity;" isStatic="false">
+      <SourceLine classname="pl.dmichalski.rss.core.entity.UserEntity" sourcefile="UserEntity.java" sourcepath="pl/dmichalski/rss/core/entity/UserEntity.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>javax.mail.Authenticator</MissingClass>
+    <MissingClass>javax.mail.Message</MissingClass>
+    <MissingClass>javax.mail.Message$RecipientType</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.PasswordAuthentication</MissingClass>
+    <MissingClass>javax.mail.Session</MissingClass>
+    <MissingClass>javax.mail.Transport</MissingClass>
+    <MissingClass>javax.mail.internet.InternetAddress</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanPostProcessor</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.ReflectionUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:57:53 +0000" total_classes="46" referenced_classes="137" total_bugs="3" total_size="997" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.36" clock_seconds="2.52" peak_mbytes="187.26" alloc_mbytes="3540.00" gc_seconds="0.16" priority_2="3">
+    <PackageStats package="pl.dmichalski.rss.core.annotation" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="pl.dmichalski.rss.core.annotation.UsernameUnique" sourceFile="UsernameUnique.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.annotation.UsernameUniqueValidator" sourceFile="UsernameUniqueValidator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.entity" total_bugs="3" total_types="5" total_size="173" priority_2="3">
+      <ClassStats class="pl.dmichalski.rss.core.entity.CountryEntity" sourceFile="CountryEntity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.entity.RssFeedEntity" sourceFile="RssFeedEntity.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.dmichalski.rss.core.entity.RssFeedEntryEntity" sourceFile="RssFeedEntryEntity.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.dmichalski.rss.core.entity.UserEntity" sourceFile="UserEntity.java" interface="false" size="53" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.dmichalski.rss.core.entity.UserRoleEntity" sourceFile="UserRoleEntity.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.exception" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="pl.dmichalski.rss.core.exception.RSSException" sourceFile="RSSException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.form" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="pl.dmichalski.rss.core.form.ContactForm" sourceFile="ContactForm.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.repository" total_bugs="0" total_types="5" total_size="10">
+      <ClassStats class="pl.dmichalski.rss.core.repository.BlogRepository" sourceFile="BlogRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.repository.CountryRepository" sourceFile="CountryRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.repository.ItemRepository" sourceFile="ItemRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.repository.RoleRepository" sourceFile="RoleRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.rss" total_bugs="0" total_types="12" total_size="430">
+      <ClassStats class="pl.dmichalski.rss.core.rss.ObjectFactory" sourceFile="ObjectFactory.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TCategory" sourceFile="TCategory.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TCloud" sourceFile="TCloud.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TCloudProtocol" sourceFile="TCloudProtocol.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TEnclosure" sourceFile="TEnclosure.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TGuid" sourceFile="TGuid.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TImage" sourceFile="TImage.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TRss" sourceFile="TRss.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TRssChannel" sourceFile="TRssChannel.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TRssItem" sourceFile="TRssItem.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TSource" sourceFile="TSource.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.rss.TTextInput" sourceFile="TTextInput.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.service" total_bugs="0" total_types="5" total_size="22">
+      <ClassStats class="pl.dmichalski.rss.core.service.IMailService" sourceFile="IMailService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.IRssFeedItemService" sourceFile="IRssFeedItemService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.IRssFeedService" sourceFile="IRssFeedService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.IRssService" sourceFile="IRssService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.IUserService" sourceFile="IUserService.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.service.impl" total_bugs="0" total_types="7" total_size="218">
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.EmailAuthenticator" sourceFile="EmailAuthenticator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.InitDbService" sourceFile="InitDbService.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.MailService" sourceFile="MailService.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.RssFeedItemService" sourceFile="RssFeedItemService.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.RssFeedService" sourceFile="RssFeedService.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.RssService" sourceFile="RssService.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.service.impl.UserService" sourceFile="UserService.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.core.util.log" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="pl.dmichalski.rss.core.util.log.AutowiredLogger" sourceFile="AutowiredLogger.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.core.util.log.LoggerPostProcessor" sourceFile="LoggerPostProcessor.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.dmichalski.rss.web.controller" total_bugs="0" total_types="6" total_size="88">
+      <ClassStats class="pl.dmichalski.rss.web.controller.AdminController" sourceFile="AdminController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.web.controller.ContactController" sourceFile="ContactController.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.web.controller.HomeController" sourceFile="HomeController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.web.controller.LoginController" sourceFile="LoginController.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.web.controller.RegisterController" sourceFile="RegisterController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="pl.dmichalski.rss.web.controller.UserController" sourceFile="UserController.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="286" invocations="802" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="17692" standardDeviationMicrosecondsPerInvocation="1023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="124" invocations="137" avgMicrosecondsPerInvocation="908" maxMicrosecondsPerInvocation="15086" standardDeviationMicrosecondsPerInvocation="2142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="108" invocations="137" avgMicrosecondsPerInvocation="793" maxMicrosecondsPerInvocation="8453" standardDeviationMicrosecondsPerInvocation="1666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="94" invocations="137" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="32518" standardDeviationMicrosecondsPerInvocation="3026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="87" invocations="552" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="4554" standardDeviationMicrosecondsPerInvocation="372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="87" invocations="809" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="3564" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="55" invocations="273" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="5738" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="54" invocations="275" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="8453" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="52" invocations="273" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="9581" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="52" invocations="196" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="13535" standardDeviationMicrosecondsPerInvocation="1011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="49" invocations="275" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="9600" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="49" invocations="697" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="2889" standardDeviationMicrosecondsPerInvocation="171"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="47" invocations="271" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="5157" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="44" invocations="137" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="10304" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="298" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="26456" standardDeviationMicrosecondsPerInvocation="1527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="41" invocations="273" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="3555" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="35" invocations="137" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="3848" standardDeviationMicrosecondsPerInvocation="550"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="137" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="15493" standardDeviationMicrosecondsPerInvocation="1328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="137" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="6462" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="137" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="2188" standardDeviationMicrosecondsPerInvocation="426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="25" invocations="137" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="8103" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="110" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="4687" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="46" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="5532" standardDeviationMicrosecondsPerInvocation="892"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

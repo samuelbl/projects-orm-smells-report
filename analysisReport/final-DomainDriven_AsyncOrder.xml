@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596956562000" analysisTimestamp="1596956564106" release="">
+  <Project projectName="repositorios/DomainDriven_AsyncOrder">
+    <Jar>repositorios/DomainDriven_AsyncOrder</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.app.order.domain.command.OrderStatusHistory">
+      <SourceLine classname="ymyoo.app.order.domain.command.OrderStatusHistory" start="11" end="60" sourcefile="OrderStatusHistory.java" sourcepath="ymyoo/app/order/domain/command/OrderStatusHistory.java"/>
+    </Class>
+    <Field classname="ymyoo.app.order.domain.command.OrderStatusHistory" name="orderStatus" signature="Lymyoo/app/order/domain/command/OrderStatus;" isStatic="false">
+      <SourceLine classname="ymyoo.app.order.domain.command.OrderStatusHistory" sourcefile="OrderStatusHistory.java" sourcepath="ymyoo/app/order/domain/command/OrderStatusHistory.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.app.order.domain.command.po.PurchaseOrder">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" start="27" end="50" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Class>
+    <Field classname="ymyoo.app.order.domain.command.po.PurchaseOrder" name="orderItem" signature="Lymyoo/app/order/domain/command/po/PurchaseOrderItem;" isStatic="false">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.app.order.domain.command.po.PurchaseOrder">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" start="27" end="50" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Class>
+    <Field classname="ymyoo.app.order.domain.command.po.PurchaseOrder" name="orderPayment" signature="Lymyoo/app/order/domain/command/po/PurchaseOrderPayment;" isStatic="false">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="ymyoo.app.order.domain.command.po.PurchaseOrder">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" start="27" end="50" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Class>
+    <Field classname="ymyoo.app.order.domain.command.po.PurchaseOrder" name="purchaser" signature="Lymyoo/app/order/domain/command/po/Purchaser;" isStatic="false">
+      <SourceLine classname="ymyoo.app.order.domain.command.po.PurchaseOrder" sourcefile="PurchaseOrder.java" sourcepath="ymyoo/app/order/domain/command/po/PurchaseOrder.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.EntityTransaction</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.BeanUtilsBean</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConvertUtilsBean</MissingClass>
+    <MissingClass>org.apache.kafka.clients.consumer.ConsumerRecord</MissingClass>
+    <MissingClass>org.apache.kafka.clients.consumer.ConsumerRecords</MissingClass>
+    <MissingClass>org.apache.kafka.clients.consumer.KafkaConsumer</MissingClass>
+    <MissingClass>org.apache.kafka.clients.producer.KafkaProducer</MissingClass>
+    <MissingClass>org.apache.kafka.clients.producer.Producer</MissingClass>
+    <MissingClass>org.apache.kafka.clients.producer.ProducerRecord</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>rx.Observable</MissingClass>
+    <MissingClass>rx.Subscriber</MissingClass>
+    <MissingClass>rx.schedulers.Schedulers</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 07:02:42 +0000" total_classes="81" referenced_classes="150" total_bugs="4" total_size="1236" num_packages="27" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.65" clock_seconds="2.46" peak_mbytes="198.42" alloc_mbytes="3540.00" gc_seconds="0.13" priority_2="4">
+    <PackageStats package="ymyoo.app.inventory" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="ymyoo.app.inventory.InventoryApplication" sourceFile="InventoryApplication.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.ProductInventory" sourceFile="ProductInventory.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.inventory.adapter.messaging" total_bugs="0" total_types="4" total_size="43">
+      <ClassStats class="ymyoo.app.inventory.adapter.messaging.InventoryChannelAdapter" sourceFile="InventoryChannelAdapter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.adapter.messaging.InventoryChannelAdapter$CheckingInventoryMessageTranslator" sourceFile="InventoryChannelAdapter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.adapter.messaging.InventoryChannelAdapter$CheckingInventoryMessageTranslator$1" sourceFile="InventoryChannelAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.adapter.messaging.InventoryReplier" sourceFile="InventoryReplier.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.inventory.domain" total_bugs="0" total_types="4" total_size="46">
+      <ClassStats class="ymyoo.app.inventory.domain.Inventory" sourceFile="Inventory.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.domain.InventoryService" sourceFile="InventoryService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.domain.TakingOrderItem" sourceFile="TakingOrderItem.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.domain.TakingOrderItem$DeliveryType" sourceFile="TakingOrderItem.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.inventory.domain.exception" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="ymyoo.app.inventory.domain.exception.StockOutException" sourceFile="StockOutException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.inventory.domain.impl" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="ymyoo.app.inventory.domain.impl.AgencyInventory" sourceFile="AgencyInventory.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="ymyoo.app.inventory.domain.impl.DirectingInventory" sourceFile="DirectingInventory.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.notification" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="ymyoo.app.notification.NotificationApplication" sourceFile="NotificationApplication.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.notification.adapter.messaging" total_bugs="0" total_types="3" total_size="40">
+      <ClassStats class="ymyoo.app.notification.adapter.messaging.NotificationChannelAdapter" sourceFile="NotificationChannelAdapter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ymyoo.app.notification.adapter.messaging.NotificationChannelAdapter$NotificationMessageTranslator" sourceFile="NotificationChannelAdapter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ymyoo.app.notification.adapter.messaging.NotificationMessageConsumer" sourceFile="NotificationMessageConsumer.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.notification.domain" total_bugs="0" total_types="2" total_size="34">
+      <ClassStats class="ymyoo.app.notification.domain.NotificationService" sourceFile="NotificationService.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ymyoo.app.notification.domain.PurchaseNotification" sourceFile="PurchaseNotification.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="ymyoo.app.order.OrderApplication" sourceFile="OrderApplication.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.adapter.messaging" total_bugs="0" total_types="5" total_size="53">
+      <ClassStats class="ymyoo.app.order.adapter.messaging.InventoryChannelAdapter" sourceFile="InventoryChannelAdapter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.adapter.messaging.InventoryChannelAdapter$MessageTranslator" sourceFile="InventoryChannelAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.adapter.messaging.PaymentGatewayChannelAdapter" sourceFile="PaymentGatewayChannelAdapter.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.adapter.messaging.PaymentGatewayChannelAdapter$MessageTranslator" sourceFile="PaymentGatewayChannelAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.adapter.messaging.PurchaseOrderChannelAdapter" sourceFile="PurchaseOrderChannelAdapter.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command" total_bugs="1" total_types="10" total_size="188" priority_2="1">
+      <ClassStats class="ymyoo.app.order.domain.command.Order" sourceFile="Order.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderFactory" sourceFile="OrderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderIdGenerator" sourceFile="OrderIdGenerator.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderItem" sourceFile="OrderItem.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderItemDeliveryType" sourceFile="OrderItemDeliveryType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderPayment" sourceFile="OrderPayment.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderStatus" sourceFile="OrderStatus.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderStatus$Status" sourceFile="OrderStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.OrderStatusHistory" sourceFile="OrderStatusHistory.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="ymyoo.app.order.domain.command.Orderer" sourceFile="Orderer.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command.exception" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="ymyoo.app.order.domain.command.exception.UnSupportedDeliveryTypeException" sourceFile="UnSupportedDeliveryTypeException.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command.po" total_bugs="3" total_types="6" total_size="114" priority_2="3">
+      <ClassStats class="ymyoo.app.order.domain.command.po.ApprovalOrderPayment" sourceFile="ApprovalOrderPayment.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.po.PurchaseOrder" sourceFile="PurchaseOrder.java" interface="false" size="23" bugs="3" priority_2="3"/>
+      <ClassStats class="ymyoo.app.order.domain.command.po.PurchaseOrderFactory" sourceFile="PurchaseOrderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.po.PurchaseOrderItem" sourceFile="PurchaseOrderItem.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.po.PurchaseOrderPayment" sourceFile="PurchaseOrderPayment.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.po.Purchaser" sourceFile="Purchaser.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command.workflow" total_bugs="0" total_types="4" total_size="51">
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.DefaultOrderProcessManager" sourceFile="DefaultOrderProcessManager.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.DefaultOrderProcessManager$1" sourceFile="DefaultOrderProcessManager.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.OrderProcessManager" sourceFile="OrderProcessManager.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.OrderProcessManagerFactory" sourceFile="OrderProcessManagerFactory.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command.workflow.activity" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.activity.BusinessActivity" sourceFile="BusinessActivity.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.command.workflow.activity.impl" total_bugs="0" total_types="4" total_size="67">
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.activity.impl.AbstractBusinessActivity" sourceFile="AbstractBusinessActivity.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.activity.impl.InventoryBusinessActivity" sourceFile="InventoryBusinessActivity.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.activity.impl.PaymentGatewayBusinessActivity" sourceFile="PaymentGatewayBusinessActivity.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.command.workflow.activity.impl.PurchaseOrderBusinessActivity" sourceFile="PurchaseOrderBusinessActivity.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.query" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="ymyoo.app.order.domain.query.PlacingOrderStatusQueryProcessor" sourceFile="PlacingOrderStatusQueryProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.query.PurchaseOrderQueryProcessor" sourceFile="PurchaseOrderQueryProcessor.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.domain.query.dto" total_bugs="0" total_types="2" total_size="67">
+      <ClassStats class="ymyoo.app.order.domain.query.dto.CustomerPurchaseOrder" sourceFile="CustomerPurchaseOrder.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.domain.query.dto.PlacingOrderStatus" sourceFile="PlacingOrderStatus.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.infrastructure.repository" total_bugs="0" total_types="4" total_size="50">
+      <ClassStats class="ymyoo.app.order.infrastructure.repository.AbstractOrderJpaRepository" sourceFile="AbstractOrderJpaRepository.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.infrastructure.repository.CustomerPurchaseOrderRepository" sourceFile="CustomerPurchaseOrderRepository.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.infrastructure.repository.OrderStatusRepository" sourceFile="OrderStatusRepository.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.infrastructure.repository.PurchaseOrderRepository" sourceFile="PurchaseOrderRepository.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.service" total_bugs="0" total_types="2" total_size="35">
+      <ClassStats class="ymyoo.app.order.service.OrderApplicationService" sourceFile="OrderApplicationService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ymyoo.app.order.service.WorkOrder" sourceFile="WorkOrder.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.order.service.impl" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="ymyoo.app.order.service.impl.OrderApplicationServiceImpl" sourceFile="OrderApplicationServiceImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.payment" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="ymyoo.app.payment.PaymentApplication" sourceFile="PaymentApplication.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.payment.adapter.messaging" total_bugs="0" total_types="3" total_size="31">
+      <ClassStats class="ymyoo.app.payment.adapter.messaging.PaymentChannelAdapter" sourceFile="PaymentChannelAdapter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ymyoo.app.payment.adapter.messaging.PaymentChannelAdapter$AuthApvPaymentMessageTranslator" sourceFile="PaymentChannelAdapter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ymyoo.app.payment.adapter.messaging.PaymentReplier" sourceFile="PaymentReplier.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.app.payment.domain" total_bugs="0" total_types="4" total_size="52">
+      <ClassStats class="ymyoo.app.payment.domain.ApprovalPayment" sourceFile="ApprovalPayment.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="ymyoo.app.payment.domain.PaymentGateway" sourceFile="PaymentGateway.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ymyoo.app.payment.domain.PaymentGatewayService" sourceFile="PaymentGatewayService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ymyoo.app.payment.domain.TakingOrderPayment" sourceFile="TakingOrderPayment.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.infra.messaging" total_bugs="0" total_types="8" total_size="211">
+      <ClassStats class="ymyoo.infra.messaging.AbstractReplier" sourceFile="AbstractReplier.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.EventDrivenMessageConsumer" sourceFile="EventDrivenMessageConsumer.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.Message" sourceFile="Message.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.MessageChannels" sourceFile="MessageChannels.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.MessageListener" sourceFile="MessageListener.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.MessageProducer" sourceFile="MessageProducer.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.PollingMessageConsumer" sourceFile="PollingMessageConsumer.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="ymyoo.infra.messaging.Requester" sourceFile="Requester.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.infra.persistence" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="ymyoo.infra.persistence.ABlockOfCode" sourceFile="ABlockOfCode.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ymyoo.infra.persistence.TransactionJpaTemplate" sourceFile="TransactionJpaTemplate.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ymyoo.utils" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="ymyoo.utils.PrettySystemOut" sourceFile="PrettySystemOut.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="224" invocations="781" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="19052" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="110" invocations="150" avgMicrosecondsPerInvocation="738" maxMicrosecondsPerInvocation="13410" standardDeviationMicrosecondsPerInvocation="1760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="98" invocations="150" avgMicrosecondsPerInvocation="655" maxMicrosecondsPerInvocation="11851" standardDeviationMicrosecondsPerInvocation="1484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="68" invocations="287" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="9144" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="67" invocations="221" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="14652" standardDeviationMicrosecondsPerInvocation="1289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="537" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="8224" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="787" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="1438" standardDeviationMicrosecondsPerInvocation="67"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="61" invocations="284" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="2623" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="60" invocations="150" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="30683" standardDeviationMicrosecondsPerInvocation="2552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="60" invocations="292" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="8697" standardDeviationMicrosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="60" invocations="289" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="7959" standardDeviationMicrosecondsPerInvocation="541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="59" invocations="287" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="9473" standardDeviationMicrosecondsPerInvocation="571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="287" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="3819" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="45" invocations="299" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="24347" standardDeviationMicrosecondsPerInvocation="1402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="40" invocations="150" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="4860" standardDeviationMicrosecondsPerInvocation="633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="35" invocations="691" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="957" standardDeviationMicrosecondsPerInvocation="90"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="34" invocations="194" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="2267" standardDeviationMicrosecondsPerInvocation="237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="33" invocations="150" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="7234" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="31" invocations="150" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="6085" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="24" invocations="150" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="3684" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="24" invocations="150" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="8161" standardDeviationMicrosecondsPerInvocation="721"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="22" invocations="150" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="3132" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="18" invocations="150" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="7414" standardDeviationMicrosecondsPerInvocation="785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="18" invocations="81" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="7420" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="81" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2626" standardDeviationMicrosecondsPerInvocation="314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="17" invocations="287" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="1233" standardDeviationMicrosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="81" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="4216" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="2548" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="831" standardDeviationMicrosecondsPerInvocation="22"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="14" invocations="81" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="577" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="81" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="5153" standardDeviationMicrosecondsPerInvocation="567"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

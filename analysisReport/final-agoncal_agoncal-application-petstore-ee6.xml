@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597081336000" analysisTimestamp="1597081337940" release="">
+  <Project projectName="repositorios/agoncal_agoncal-application-petstore-ee6">
+    <Jar>repositorios/agoncal_agoncal-application-petstore-ee6</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.petstore.domain.Item">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Item" start="62" end="155" sourcefile="Item.java" sourcepath="org/agoncal/application/petstore/domain/Item.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.petstore.domain.Item" name="product" signature="Lorg/agoncal/application/petstore/domain/Product;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Item" sourcefile="Item.java" sourcepath="org/agoncal/application/petstore/domain/Item.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.petstore.domain.Order">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Order" start="42" end="194" sourcefile="Order.java" sourcepath="org/agoncal/application/petstore/domain/Order.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.petstore.domain.Order" name="orderLines" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Order" sourcefile="Order.java" sourcepath="org/agoncal/application/petstore/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.petstore.domain.Order">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Order" start="42" end="194" sourcefile="Order.java" sourcepath="org/agoncal/application/petstore/domain/Order.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.petstore.domain.Order" name="customer" signature="Lorg/agoncal/application/petstore/domain/Customer;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Order" sourcefile="Order.java" sourcepath="org/agoncal/application/petstore/domain/Order.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.petstore.domain.OrderLine">
+      <SourceLine classname="org.agoncal.application.petstore.domain.OrderLine" start="31" end="105" sourcefile="OrderLine.java" sourcepath="org/agoncal/application/petstore/domain/OrderLine.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.petstore.domain.OrderLine" name="item" signature="Lorg/agoncal/application/petstore/domain/Item;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.petstore.domain.OrderLine" sourcefile="OrderLine.java" sourcepath="org/agoncal/application/petstore/domain/OrderLine.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.application.petstore.domain.Product">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Product" start="60" end="144" sourcefile="Product.java" sourcepath="org/agoncal/application/petstore/domain/Product.java"/>
+    </Class>
+    <Field classname="org.agoncal.application.petstore.domain.Product" name="category" signature="Lorg/agoncal/application/petstore/domain/Category;" isStatic="false">
+      <SourceLine classname="org.agoncal.application.petstore.domain.Product" sourcefile="Product.java" sourcepath="org/agoncal/application/petstore/domain/Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="17">
+    <MissingClass>javax.enterprise.context.Conversation</MissingClass>
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.Annotated</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeanManager</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.InjectionPoint</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.interceptor.InvocationContext</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 17:42:16 +0000" total_classes="40" referenced_classes="125" total_bugs="5" total_size="1393" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="10.28" clock_seconds="3.53" peak_mbytes="253.40" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="4" priority_1="1">
+    <PackageStats package="org.agoncal.application.petstore.constraint" total_bugs="0" total_types="5" total_size="18">
+      <ClassStats class="org.agoncal.application.petstore.constraint.Email" sourceFile="Email.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.constraint.Email$List" sourceFile="Email.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.constraint.Login" sourceFile="Login.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.constraint.NotEmpty" sourceFile="NotEmpty.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.constraint.Price" sourceFile="Price.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.domain" total_bugs="5" total_types="10" total_size="605" priority_2="4" priority_1="1">
+      <ClassStats class="org.agoncal.application.petstore.domain.Address" sourceFile="Address.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.CartItem" sourceFile="CartItem.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.Category" sourceFile="Category.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.CreditCard" sourceFile="CreditCard.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.CreditCardType" sourceFile="CreditCardType.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.Customer" sourceFile="Customer.java" interface="false" size="114" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.Item" sourceFile="Item.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.Order" sourceFile="Order.java" interface="false" size="90" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.OrderLine" sourceFile="OrderLine.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="org.agoncal.application.petstore.domain.Product" sourceFile="Product.java" interface="false" size="60" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.exception" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.agoncal.application.petstore.exception.ValidationException" sourceFile="ValidationException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.rest" total_bugs="0" total_types="2" total_size="57">
+      <ClassStats class="org.agoncal.application.petstore.rest.ApplicationConfig" sourceFile="ApplicationConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.rest.CatalogRestService" sourceFile="CatalogRestService.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.security" total_bugs="0" total_types="3" total_size="69">
+      <ClassStats class="org.agoncal.application.petstore.security.LoginContextProducer" sourceFile="LoginContextProducer.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.security.SimpleCallbackHandler" sourceFile="SimpleCallbackHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.security.SimpleLoginModule" sourceFile="SimpleLoginModule.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.service" total_bugs="0" total_types="4" total_size="341">
+      <ClassStats class="org.agoncal.application.petstore.service.CatalogService" sourceFile="CatalogService.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.service.CustomerService" sourceFile="CustomerService.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.service.DBPopulator" sourceFile="DBPopulator.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.service.OrderService" sourceFile="OrderService.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.util" total_bugs="0" total_types="6" total_size="37">
+      <ClassStats class="org.agoncal.application.petstore.util.ConfigProperty" sourceFile="ConfigProperty.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.util.ConfigPropertyProducer" sourceFile="ConfigPropertyProducer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.util.DatabaseProducer" sourceFile="DatabaseProducer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.util.Loggable" sourceFile="Loggable.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.util.LoggingInterceptor" sourceFile="LoggingInterceptor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.util.LoggingProducer" sourceFile="LoggingProducer.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.application.petstore.web" total_bugs="0" total_types="9" total_size="262">
+      <ClassStats class="org.agoncal.application.petstore.web.AccountController" sourceFile="AccountController.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.CatalogController" sourceFile="CatalogController.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.CatchException" sourceFile="CatchException.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.Controller" sourceFile="Controller.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.Credentials" sourceFile="Credentials.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.ExceptionInterceptor" sourceFile="ExceptionInterceptor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.LocaleBean" sourceFile="LocaleBean.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.LoggedIn" sourceFile="LoggedIn.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.agoncal.application.petstore.web.ShoppingCartController" sourceFile="ShoppingCartController.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="385" invocations="818" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="13144" standardDeviationMicrosecondsPerInvocation="1388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="255" invocations="825" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="37846" standardDeviationMicrosecondsPerInvocation="1840"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="158" invocations="125" avgMicrosecondsPerInvocation="1266" maxMicrosecondsPerInvocation="25734" standardDeviationMicrosecondsPerInvocation="3468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="148" invocations="125" avgMicrosecondsPerInvocation="1190" maxMicrosecondsPerInvocation="28133" standardDeviationMicrosecondsPerInvocation="2986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="107" invocations="288" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="19901" standardDeviationMicrosecondsPerInvocation="1265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="98" invocations="288" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="7887" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="95" invocations="532" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="10886" standardDeviationMicrosecondsPerInvocation="620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="95" invocations="291" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="10664" standardDeviationMicrosecondsPerInvocation="841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="95" invocations="291" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="11455" standardDeviationMicrosecondsPerInvocation="928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="74" invocations="288" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="9312" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="68" invocations="288" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="6111" standardDeviationMicrosecondsPerInvocation="476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="64" invocations="192" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="17651" standardDeviationMicrosecondsPerInvocation="1639"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="61" invocations="689" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="5081" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="57" invocations="171" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="4952" standardDeviationMicrosecondsPerInvocation="647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="55" invocations="302" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="32970" standardDeviationMicrosecondsPerInvocation="1892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="47" invocations="125" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="7485" standardDeviationMicrosecondsPerInvocation="903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="46" invocations="125" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="19559" standardDeviationMicrosecondsPerInvocation="1752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="40" invocations="125" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="10761" standardDeviationMicrosecondsPerInvocation="1135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="39" invocations="125" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="19442" standardDeviationMicrosecondsPerInvocation="1739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="36" invocations="125" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="7864" standardDeviationMicrosecondsPerInvocation="875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="125" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="4076" standardDeviationMicrosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="28" invocations="40" avgMicrosecondsPerInvocation="724" maxMicrosecondsPerInvocation="3388" standardDeviationMicrosecondsPerInvocation="819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="3743" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1025" standardDeviationMicrosecondsPerInvocation="26"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="22" invocations="288" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="2625" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="21" invocations="40" avgMicrosecondsPerInvocation="534" maxMicrosecondsPerInvocation="4851" standardDeviationMicrosecondsPerInvocation="811"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

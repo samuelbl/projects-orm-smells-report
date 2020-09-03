@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597112673000" analysisTimestamp="1597112675177" release="">
+  <Project projectName="repositorios/oleg-filippov_newsportal">
+    <Jar>repositorios/oleg-filippov_newsportal</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.domain.Article">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" start="141" end="333" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Class>
+    <Field classname="net.filippov.newsportal.domain.Article" name="tags" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.domain.Article">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" start="141" end="333" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Class>
+    <Field classname="net.filippov.newsportal.domain.Article" name="author" signature="Lnet/filippov/newsportal/domain/User;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.domain.Article">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" start="141" end="333" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Class>
+    <Field classname="net.filippov.newsportal.domain.Article" name="category" signature="Lnet/filippov/newsportal/domain/Category;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.domain.Article" sourcefile="Article.java" sourcepath="net/filippov/newsportal/domain/Article.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.domain.Comment">
+      <SourceLine classname="net.filippov.newsportal.domain.Comment" start="68" end="184" sourcefile="Comment.java" sourcepath="net/filippov/newsportal/domain/Comment.java"/>
+    </Class>
+    <Field classname="net.filippov.newsportal.domain.Comment" name="article" signature="Lnet/filippov/newsportal/domain/Article;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.domain.Comment" sourcefile="Comment.java" sourcepath="net/filippov/newsportal/domain/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.domain.Comment">
+      <SourceLine classname="net.filippov.newsportal.domain.Comment" start="68" end="184" sourcefile="Comment.java" sourcepath="net/filippov/newsportal/domain/Comment.java"/>
+    </Class>
+    <Field classname="net.filippov.newsportal.domain.Comment" name="author" signature="Lnet/filippov/newsportal/domain/User;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.domain.Comment" sourcefile="Comment.java" sourcepath="net/filippov/newsportal/domain/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="net.filippov.newsportal.repository.GenericRepositoryJpaImpl">
+      <SourceLine classname="net.filippov.newsportal.repository.GenericRepositoryJpaImpl" start="30" end="214" sourcefile="GenericRepositoryJpaImpl.java" sourcepath="net/filippov/newsportal/repository/GenericRepositoryJpaImpl.java"/>
+    </Class>
+    <Method classname="net.filippov.newsportal.repository.GenericRepositoryJpaImpl" name="getAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="net.filippov.newsportal.repository.GenericRepositoryJpaImpl" start="109" end="109" startBytecode="0" endBytecode="103" sourcefile="GenericRepositoryJpaImpl.java" sourcepath="net/filippov/newsportal/repository/GenericRepositoryJpaImpl.java"/>
+    </Method>
+    <SourceLine classname="net.filippov.newsportal.repository.GenericRepositoryJpaImpl" start="109" end="109" startBytecode="11" endBytecode="11" sourcefile="GenericRepositoryJpaImpl.java" sourcepath="net/filippov/newsportal/repository/GenericRepositoryJpaImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.PersistenceException</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.io.FileUtils</MissingClass>
+    <MissingClass>org.hibernate.exception.ConstraintViolationException</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.i18n.LocaleContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.util.FileCopyUtils</MissingClass>
+    <MissingClass>org.springframework.validation.BindingResult</MissingClass>
+    <MissingClass>org.springframework.web.bind.support.SessionStatus</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MaxUploadSizeExceededException</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:24:33 +0000" total_classes="38" referenced_classes="91" total_bugs="6" total_size="1229" num_packages="9" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.72" clock_seconds="2.47" peak_mbytes="199.20" alloc_mbytes="3540.00" gc_seconds="0.17" priority_2="5" priority_1="1">
+    <PackageStats package="net.filippov.newsportal.domain" total_bugs="5" total_types="7" total_size="378" priority_2="4" priority_1="1">
+      <ClassStats class="net.filippov.newsportal.domain.Article" sourceFile="Article.java" interface="false" size="95" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="net.filippov.newsportal.domain.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.domain.Category" sourceFile="Category.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.domain.Comment" sourceFile="Comment.java" interface="false" size="64" bugs="2" priority_2="2"/>
+      <ClassStats class="net.filippov.newsportal.domain.Tag" sourceFile="Tag.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.domain.User" sourceFile="User.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.domain.UserRole" sourceFile="UserRole.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.exception" total_bugs="0" total_types="4" total_size="32">
+      <ClassStats class="net.filippov.newsportal.exception.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.exception.NotUniqueUserFieldException" sourceFile="NotUniqueUserFieldException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.exception.ServiceException" sourceFile="ServiceException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.exception.UnacceptableFileFormatException" sourceFile="UnacceptableFileFormatException.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.repository" total_bugs="1" total_types="2" total_size="77" priority_2="1">
+      <ClassStats class="net.filippov.newsportal.repository.GenericRepository" sourceFile="GenericRepository.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.repository.GenericRepositoryJpaImpl" sourceFile="GenericRepositoryJpaImpl.java" interface="false" size="61" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.security" total_bugs="0" total_types="2" total_size="33">
+      <ClassStats class="net.filippov.newsportal.security.CustomAuthenticationSuccessHandler" sourceFile="CustomAuthenticationSuccessHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.security.CustomUserDetailsService" sourceFile="CustomUserDetailsService.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.service" total_bugs="0" total_types="6" total_size="32">
+      <ClassStats class="net.filippov.newsportal.service.AbstractService" sourceFile="AbstractService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.ArticleService" sourceFile="ArticleService.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.CategoryService" sourceFile="CategoryService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.CommentService" sourceFile="CommentService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.TagService" sourceFile="TagService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.service.impl" total_bugs="0" total_types="6" total_size="304">
+      <ClassStats class="net.filippov.newsportal.service.impl.AbstractServiceImpl" sourceFile="AbstractServiceImpl.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.impl.ArticleServiceImpl" sourceFile="ArticleServiceImpl.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.impl.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.impl.CommentServiceImpl" sourceFile="CommentServiceImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.impl.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.service.util" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="net.filippov.newsportal.service.util.QueryParameters" sourceFile="QueryParameters.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.web" total_bugs="0" total_types="7" total_size="306">
+      <ClassStats class="net.filippov.newsportal.web.ArticleController" sourceFile="ArticleController.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.CustomExceptionHandler" sourceFile="CustomExceptionHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.ErrorController" sourceFile="ErrorController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.FileUploadController" sourceFile="FileUploadController.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.MainController" sourceFile="MainController.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.SearchController" sourceFile="SearchController.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.UserController" sourceFile="UserController.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.filippov.newsportal.web.constants" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="net.filippov.newsportal.web.constants.Common" sourceFile="Common.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.constants.URL" sourceFile="URL.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="net.filippov.newsportal.web.constants.View" sourceFile="View.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="221" invocations="700" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="18127" standardDeviationMicrosecondsPerInvocation="1073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="93" invocations="221" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="4155" standardDeviationMicrosecondsPerInvocation="524"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="88" invocations="91" avgMicrosecondsPerInvocation="973" maxMicrosecondsPerInvocation="14743" standardDeviationMicrosecondsPerInvocation="2133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="87" invocations="222" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="10188" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="87" invocations="222" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="5184" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="67" invocations="91" avgMicrosecondsPerInvocation="743" maxMicrosecondsPerInvocation="8082" standardDeviationMicrosecondsPerInvocation="1474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="67" invocations="222" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="10154" standardDeviationMicrosecondsPerInvocation="715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="67" invocations="222" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="3812" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="63" invocations="222" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="10713" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="60" invocations="405" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="2548" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="58" invocations="708" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="2547" standardDeviationMicrosecondsPerInvocation="103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="50" invocations="152" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="2141" standardDeviationMicrosecondsPerInvocation="338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="48" invocations="263" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="26526" standardDeviationMicrosecondsPerInvocation="1629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="38" invocations="157" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="14587" standardDeviationMicrosecondsPerInvocation="1187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="34" invocations="38" avgMicrosecondsPerInvocation="916" maxMicrosecondsPerInvocation="18023" standardDeviationMicrosecondsPerInvocation="2877"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="576" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="991" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="91" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="7967" standardDeviationMicrosecondsPerInvocation="941"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="31" invocations="221" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="19926" standardDeviationMicrosecondsPerInvocation="1335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="2945" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="1117" standardDeviationMicrosecondsPerInvocation="32"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="91" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="9477" standardDeviationMicrosecondsPerInvocation="1023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="91" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="4114" standardDeviationMicrosecondsPerInvocation="677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="22" invocations="91" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="2490" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="38" avgMicrosecondsPerInvocation="574" maxMicrosecondsPerInvocation="2907" standardDeviationMicrosecondsPerInvocation="677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="21" invocations="91" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="5239" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="91" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="2441" standardDeviationMicrosecondsPerInvocation="362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="20" invocations="91" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="4687" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="19" invocations="222" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="1378" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="38" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="4124" standardDeviationMicrosecondsPerInvocation="744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="15" invocations="38" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="3995" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="38" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="4945" standardDeviationMicrosecondsPerInvocation="821"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

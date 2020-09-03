@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596949466000" analysisTimestamp="1596949467903" release="">
+  <Project projectName="repositorios/GoogleCloudPlatform_google-cloud-spanner-hibernate">
+    <Jar>repositorios/GoogleCloudPlatform_google-cloud-spanner-hibernate</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="codelab.Album">
+      <SourceLine classname="codelab.Album" start="44" end="97" sourcefile="Album.java" sourcepath="codelab/Album.java"/>
+    </Class>
+    <Field classname="codelab.Album" name="singer" signature="Lcodelab/Singer;" isStatic="false">
+      <SourceLine classname="codelab.Album" sourcefile="Album.java" sourcepath="codelab/Album.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="codelab.App">
+      <SourceLine classname="codelab.App" start="36" end="109" sourcefile="App.java" sourcepath="codelab/App.java"/>
+    </Class>
+    <Method classname="codelab.App" name="readData" signature="(Lorg/hibernate/Session;)V" isStatic="true">
+      <SourceLine classname="codelab.App" start="86" end="102" startBytecode="0" endBytecode="427" sourcefile="App.java" sourcepath="codelab/App.java"/>
+    </Method>
+    <SourceLine classname="codelab.App" start="86" end="86" startBytecode="1" endBytecode="1" sourcefile="App.java" sourcepath="codelab/App.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.example.entities.Album">
+      <SourceLine classname="com.example.entities.Album" start="53" end="81" sourcefile="Album.java" sourcepath="com/example/entities/Album.java"/>
+    </Class>
+    <Field classname="com.example.entities.Album" name="singer" signature="Lcom/example/entities/Singer;" isStatic="false">
+      <SourceLine classname="com.example.entities.Album" sourcefile="Album.java" sourcepath="com/example/entities/Album.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="com.example.entities.Person">
+      <SourceLine classname="com.example.entities.Person" start="58" end="110" sourcefile="Person.java" sourcepath="com/example/entities/Person.java"/>
+    </Class>
+    <Field classname="com.example.entities.Person" name="payments" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.example.entities.Person" sourcefile="Person.java" sourcepath="com/example/entities/Person.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="model.Coffee">
+      <SourceLine classname="model.Coffee" start="43" end="72" sourcefile="Coffee.java" sourcepath="model/Coffee.java"/>
+    </Class>
+    <Field classname="model.Coffee" name="customer" signature="Lmodel/Customer;" isStatic="false">
+      <SourceLine classname="model.Coffee" sourcefile="Coffee.java" sourcepath="model/Coffee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.hibernate.userguide.model.Call">
+      <SourceLine classname="org.hibernate.userguide.model.Call" start="40" end="72" sourcefile="Call.java" sourcepath="org/hibernate/userguide/model/Call.java"/>
+    </Class>
+    <Field classname="org.hibernate.userguide.model.Call" name="phone" signature="Lorg/hibernate/userguide/model/Phone;" isStatic="false">
+      <SourceLine classname="org.hibernate.userguide.model.Call" sourcefile="Call.java" sourcepath="org/hibernate/userguide/model/Call.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.hibernate.userguide.model.Payment">
+      <SourceLine classname="org.hibernate.userguide.model.Payment" start="22" end="69" sourcefile="Payment.java" sourcepath="org/hibernate/userguide/model/Payment.java"/>
+    </Class>
+    <Field classname="org.hibernate.userguide.model.Payment" name="person" signature="Lorg/hibernate/userguide/model/Person;" isStatic="false">
+      <SourceLine classname="org.hibernate.userguide.model.Payment" sourcefile="Payment.java" sourcepath="org/hibernate/userguide/model/Payment.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="69">
+    <MissingClass>com.google.api.gax.longrunning.OperationFuture</MissingClass>
+    <MissingClass>com.google.cloud.Date</MissingClass>
+    <MissingClass>com.google.cloud.spanner.DatabaseAdminClient</MissingClass>
+    <MissingClass>com.google.cloud.spanner.DatabaseClient</MissingClass>
+    <MissingClass>com.google.cloud.spanner.DatabaseId</MissingClass>
+    <MissingClass>com.google.cloud.spanner.ErrorCode</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Mutation</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Mutation$WriteBuilder</MissingClass>
+    <MissingClass>com.google.cloud.spanner.ReadContext</MissingClass>
+    <MissingClass>com.google.cloud.spanner.ReadOnlyTransaction</MissingClass>
+    <MissingClass>com.google.cloud.spanner.ResultSet</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Spanner</MissingClass>
+    <MissingClass>com.google.cloud.spanner.SpannerException</MissingClass>
+    <MissingClass>com.google.cloud.spanner.SpannerOptions</MissingClass>
+    <MissingClass>com.google.cloud.spanner.SpannerOptions$Builder</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Statement</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Statement$Builder</MissingClass>
+    <MissingClass>com.google.cloud.spanner.Struct</MissingClass>
+    <MissingClass>com.google.cloud.spanner.ValueBinder</MissingClass>
+    <MissingClass>io.quarkus.hibernate.orm.panache.PanacheRepositoryBase</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.boot.Metadata</MissingClass>
+    <MissingClass>org.hibernate.boot.MetadataSources</MissingClass>
+    <MissingClass>org.hibernate.boot.model.relational.AuxiliaryDatabaseObject</MissingClass>
+    <MissingClass>org.hibernate.boot.model.relational.Database</MissingClass>
+    <MissingClass>org.hibernate.boot.registry.StandardServiceInitiator</MissingClass>
+    <MissingClass>org.hibernate.boot.registry.StandardServiceRegistryBuilder</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.dialect.Dialect</MissingClass>
+    <MissingClass>org.hibernate.dialect.function.SQLFunctionTemplate</MissingClass>
+    <MissingClass>org.hibernate.dialect.function.StandardSQLFunction</MissingClass>
+    <MissingClass>org.hibernate.dialect.lock.LockingStrategy</MissingClass>
+    <MissingClass>org.hibernate.dialect.unique.DefaultUniqueDelegate</MissingClass>
+    <MissingClass>org.hibernate.hql.spi.id.inline.InlineIdsOrClauseBulkIdStrategy</MissingClass>
+    <MissingClass>org.hibernate.mapping.Collection</MissingClass>
+    <MissingClass>org.hibernate.mapping.Column</MissingClass>
+    <MissingClass>org.hibernate.mapping.Constraint</MissingClass>
+    <MissingClass>org.hibernate.mapping.ForeignKey</MissingClass>
+    <MissingClass>org.hibernate.mapping.Index</MissingClass>
+    <MissingClass>org.hibernate.mapping.PersistentClass</MissingClass>
+    <MissingClass>org.hibernate.mapping.PrimaryKey</MissingClass>
+    <MissingClass>org.hibernate.mapping.Table</MissingClass>
+    <MissingClass>org.hibernate.mapping.UniqueKey</MissingClass>
+    <MissingClass>org.hibernate.query.Query</MissingClass>
+    <MissingClass>org.hibernate.resource.transaction.spi.DdlTransactionIsolator</MissingClass>
+    <MissingClass>org.hibernate.service.spi.ServiceContributor</MissingClass>
+    <MissingClass>org.hibernate.tool.hbm2ddl.UniqueConstraintSchemaUpdateStrategy</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.Action</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.internal.HibernateSchemaManagementTool</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.internal.StandardForeignKeyExporter</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.internal.exec.JdbcContext</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.spi.ExecutionOptions</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.spi.Exporter</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.spi.SchemaCreator</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.spi.SchemaDropper</MissingClass>
+    <MissingClass>org.hibernate.tool.schema.spi.SchemaMigrator</MissingClass>
+    <MissingClass>org.hibernate.type.StandardBasicTypes</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 05:04:26 +0000" total_classes="107" referenced_classes="250" total_bugs="7" total_size="3165" num_packages="12" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="14.12" clock_seconds="3.86" peak_mbytes="339.86" alloc_mbytes="3540.00" gc_seconds="0.15" priority_2="6" priority_1="1">
+    <PackageStats package="codelab" total_bugs="2" total_types="3" total_size="146" priority_2="2">
+      <ClassStats class="codelab.Album" sourceFile="Album.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="codelab.App" sourceFile="App.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="codelab.Singer" sourceFile="Singer.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example" total_bugs="0" total_types="6" total_size="125">
+      <ClassStats class="com.example.CoffeeApplication" sourceFile="CoffeeApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.example.Person" sourceFile="Person.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.PersonController" sourceFile="PersonController.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.example.PersonRepository" sourceFile="PersonRepository.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.example.SampleApplication" sourceFile="SampleApplication.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.example.WebController" sourceFile="WebController.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.entities" total_bugs="2" total_types="7" total_size="147" priority_2="1" priority_1="1">
+      <ClassStats class="com.example.entities.Album" sourceFile="Album.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="com.example.entities.Album$AlbumId" sourceFile="Album.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.example.entities.CreditCardPayment" sourceFile="CreditCardPayment.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.example.entities.Payment" sourceFile="Payment.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.entities.Person" sourceFile="Person.java" interface="false" size="37" bugs="1" priority_1="1"/>
+      <ClassStats class="com.example.entities.Singer" sourceFile="Singer.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.example.entities.WireTransferPayment" sourceFile="WireTransferPayment.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.example.microprofile" total_bugs="0" total_types="4" total_size="38">
+      <ClassStats class="com.example.microprofile.Person" sourceFile="Person.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.example.microprofile.PersonController" sourceFile="PersonController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.example.microprofile.Producer" sourceFile="Producer.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.example.microprofile.RestApplication" sourceFile="RestApplication.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.cloud.spanner.hibernate" total_bugs="0" total_types="13" total_size="566">
+      <ClassStats class="com.google.cloud.spanner.hibernate.BenchmarkUtil" sourceFile="BenchmarkUtil.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.ClientLibraryDriver" sourceFile="ClientLibraryDriver.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.ClientLibraryOperations" sourceFile="ClientLibraryOperations.java" interface="false" size="116" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.HibernateDriver" sourceFile="HibernateDriver.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.HibernateOperations" sourceFile="HibernateOperations.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.Interleaved" sourceFile="Interleaved.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerDialect" sourceFile="SpannerDialect.java" interface="false" size="246" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerDialect$DoNothingLockingStrategy" sourceFile="SpannerDialect.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerDialect$EmptyExporter" sourceFile="SpannerDialect.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerServiceContributor" sourceFile="SpannerServiceContributor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerServiceContributor$1" sourceFile="SpannerServiceContributor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerTableExporter" sourceFile="SpannerTableExporter.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.SpannerUniqueDelegate" sourceFile="SpannerUniqueDelegate.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.cloud.spanner.hibernate.bulkddl" total_bugs="0" total_types="11" total_size="492">
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport1" sourceFile="Airport1.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport10" sourceFile="Airport10.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport2" sourceFile="Airport2.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport3" sourceFile="Airport3.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport4" sourceFile="Airport4.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport5" sourceFile="Airport5.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport6" sourceFile="Airport6.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport7" sourceFile="Airport7.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport8" sourceFile="Airport8.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.Airport9" sourceFile="Airport9.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.bulkddl.BulkDdlDriver" sourceFile="BulkDdlDriver.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.cloud.spanner.hibernate.entities" total_bugs="0" total_types="1" total_size="47">
+      <ClassStats class="com.google.cloud.spanner.hibernate.entities.Airport" sourceFile="Airport.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.cloud.spanner.hibernate.schema" total_bugs="0" total_types="11" total_size="334">
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.RunBatchDdl" sourceFile="RunBatchDdl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SchemaUtils" sourceFile="SchemaUtils.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerDatabaseInfo" sourceFile="SpannerDatabaseInfo.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerForeignKeyExporter" sourceFile="SpannerForeignKeyExporter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerSchemaCreator" sourceFile="SpannerSchemaCreator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerSchemaDropper" sourceFile="SpannerSchemaDropper.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerSchemaManagementTool" sourceFile="SpannerSchemaManagementTool.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerSchemaMigrator" sourceFile="SpannerSchemaMigrator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.SpannerTableStatements" sourceFile="SpannerTableStatements.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.StartBatchDdl" sourceFile="StartBatchDdl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.google.cloud.spanner.hibernate.schema.TableDependencyTracker" sourceFile="TableDependencyTracker.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="model" total_bugs="1" total_types="4" total_size="61" priority_2="1">
+      <ClassStats class="model.Coffee" sourceFile="Coffee.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="model.CoffeeRepository" sourceFile="CoffeeRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="model.Customer" sourceFile="Customer.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="model.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper" total_bugs="0" total_types="12" total_size="464">
+      <ClassStats class="org.apache.maven.wrapper.BootstrapMainStarter" sourceFile="BootstrapMainStarter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader" sourceFile="DefaultDownloader.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.DefaultDownloader$SystemPropertiesProxyAuthenticator" sourceFile="DefaultDownloader.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Downloader" sourceFile="Downloader.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Installer" sourceFile="Installer.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.Logger" sourceFile="Logger.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.MavenWrapperMain" sourceFile="MavenWrapperMain.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler" sourceFile="PathAssembler.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.PathAssembler$LocalDistribution" sourceFile="PathAssembler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.SystemPropertiesHandler" sourceFile="SystemPropertiesHandler.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperConfiguration" sourceFile="WrapperConfiguration.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.WrapperExecutor" sourceFile="WrapperExecutor.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.maven.wrapper.cli" total_bugs="0" total_types="23" total_size="520">
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractCommandLineConverter" sourceFile="AbstractCommandLineConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.AbstractPropertiesCommandLineConverter" sourceFile="AbstractPropertiesCommandLineConverter.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineArgumentException" sourceFile="CommandLineArgumentException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineConverter" sourceFile="CommandLineConverter.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineOption" sourceFile="CommandLineOption.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser" sourceFile="CommandLineParser.java" interface="false" size="127" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$AfterOptions" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$BeforeFirstSubCommand" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$CaseInsensitiveStringComparator" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$KnownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$MissingOptionArgState" sourceFile="CommandLineParser.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionAwareParserState" sourceFile="CommandLineParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionComparator" sourceFile="CommandLineParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionParserState" sourceFile="CommandLineParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionString" sourceFile="CommandLineParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$OptionStringComparator" sourceFile="CommandLineParser.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$ParserState" sourceFile="CommandLineParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.CommandLineParser$UnknownOptionParserState" sourceFile="CommandLineParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLine" sourceFile="ParsedCommandLine.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ParsedCommandLineOption" sourceFile="ParsedCommandLineOption.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.ProjectPropertiesCommandLineConverter" sourceFile="ProjectPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.maven.wrapper.cli.SystemPropertiesCommandLineConverter" sourceFile="SystemPropertiesCommandLineConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.hibernate.userguide.model" total_bugs="2" total_types="12" total_size="225" priority_2="2">
+      <ClassStats class="org.hibernate.userguide.model.AddressType" sourceFile="AddressType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.Call" sourceFile="Call.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.hibernate.userguide.model.CreditCardPayment" sourceFile="CreditCardPayment.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.Image" sourceFile="Image.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.Partner" sourceFile="Partner.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.Payment" sourceFile="Payment.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.hibernate.userguide.model.Person" sourceFile="Person.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.PersonNames" sourceFile="PersonNames.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.PersonPhoneCount" sourceFile="PersonPhoneCount.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.Phone" sourceFile="Phone.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.PhoneType" sourceFile="PhoneType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.hibernate.userguide.model.WireTransferPayment" sourceFile="WireTransferPayment.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="309" invocations="1299" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="24495" standardDeviationMicrosecondsPerInvocation="847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="160" invocations="716" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="13690" standardDeviationMicrosecondsPerInvocation="754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="158" invocations="707" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="8201" standardDeviationMicrosecondsPerInvocation="570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="144" invocations="699" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="9818" standardDeviationMicrosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="144" invocations="250" avgMicrosecondsPerInvocation="576" maxMicrosecondsPerInvocation="8236" standardDeviationMicrosecondsPerInvocation="1147"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="132" invocations="706" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="9226" standardDeviationMicrosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="127" invocations="250" avgMicrosecondsPerInvocation="508" maxMicrosecondsPerInvocation="5671" standardDeviationMicrosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="126" invocations="718" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="9171" standardDeviationMicrosecondsPerInvocation="602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="116" invocations="707" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="7739" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="111" invocations="1212" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="2030" standardDeviationMicrosecondsPerInvocation="181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="91" invocations="1310" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="545" standardDeviationMicrosecondsPerInvocation="40"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="87" invocations="382" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="4923" standardDeviationMicrosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="64" invocations="726" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="22807" standardDeviationMicrosecondsPerInvocation="845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="58" invocations="361" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="13990" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="58" invocations="107" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="12765" standardDeviationMicrosecondsPerInvocation="1662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="53" invocations="250" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="16668" standardDeviationMicrosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="51" invocations="250" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="3982" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="47" invocations="1069" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1613" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="39" invocations="250" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="1689" standardDeviationMicrosecondsPerInvocation="239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="38" invocations="8358" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1116" standardDeviationMicrosecondsPerInvocation="20"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="36" invocations="250" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="2234" standardDeviationMicrosecondsPerInvocation="279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="35" invocations="707" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1504" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="33" invocations="250" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="2906" standardDeviationMicrosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="250" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="6569" standardDeviationMicrosecondsPerInvocation="446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="31" invocations="107" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="4198" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="29" invocations="107" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="2559" standardDeviationMicrosecondsPerInvocation="331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="28" invocations="107" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="1686" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="26" invocations="83" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="2172" standardDeviationMicrosecondsPerInvocation="448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="24" invocations="250" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="7122" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="23" invocations="107" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="2465" standardDeviationMicrosecondsPerInvocation="343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="22" invocations="699" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="1922" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="22" invocations="107" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="2297" standardDeviationMicrosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="21" invocations="107" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="5313" standardDeviationMicrosecondsPerInvocation="566"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

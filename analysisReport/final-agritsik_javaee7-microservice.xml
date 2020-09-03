@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597087013000" analysisTimestamp="1597087014882" release="">
+  <Project projectName="repositorios/agritsik_javaee7-microservice">
+    <Jar>repositorios/agritsik_javaee7-microservice</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.agritsik.samples.blog.entity.Comment">
+      <SourceLine classname="com.agritsik.samples.blog.entity.Comment" start="14" end="61" sourcefile="Comment.java" sourcepath="com/agritsik/samples/blog/entity/Comment.java"/>
+    </Class>
+    <Field classname="com.agritsik.samples.blog.entity.Comment" name="post" signature="Lcom/agritsik/samples/blog/entity/Post;" isStatic="false">
+      <SourceLine classname="com.agritsik.samples.blog.entity.Comment" sourcefile="Comment.java" sourcepath="com/agritsik/samples/blog/entity/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="11">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 19:16:53 +0000" total_classes="9" referenced_classes="22" total_bugs="1" total_size="128" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.05" clock_seconds="1.64" peak_mbytes="185.57" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="1">
+    <PackageStats package="com.agritsik.samples.blog" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="com.agritsik.samples.blog.JAXRSConfiguration" sourceFile="JAXRSConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.agritsik.samples.blog.ResponseFilter" sourceFile="ResponseFilter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.agritsik.samples.blog.boundary" total_bugs="0" total_types="5" total_size="69">
+      <ClassStats class="com.agritsik.samples.blog.boundary.CommentResource" sourceFile="CommentResource.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.agritsik.samples.blog.boundary.CommentService" sourceFile="CommentService.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.agritsik.samples.blog.boundary.EntityService" sourceFile="EntityService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.agritsik.samples.blog.boundary.PostResource" sourceFile="PostResource.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.agritsik.samples.blog.boundary.PostService" sourceFile="PostService.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.agritsik.samples.blog.entity" total_bugs="1" total_types="2" total_size="47" priority_2="1">
+      <ClassStats class="com.agritsik.samples.blog.entity.Comment" sourceFile="Comment.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.agritsik.samples.blog.entity.Post" sourceFile="Post.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="224" invocations="382" avgMicrosecondsPerInvocation="588" maxMicrosecondsPerInvocation="11916" standardDeviationMicrosecondsPerInvocation="1228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="108" invocations="9" avgMicrosecondsPerInvocation="12051" maxMicrosecondsPerInvocation="107191" standardDeviationMicrosecondsPerInvocation="33637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="22" avgMicrosecondsPerInvocation="2885" maxMicrosecondsPerInvocation="15059" standardDeviationMicrosecondsPerInvocation="4307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="55" invocations="119" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="6634" standardDeviationMicrosecondsPerInvocation="855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="385" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="2675" standardDeviationMicrosecondsPerInvocation="199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="44" invocations="37" avgMicrosecondsPerInvocation="1196" maxMicrosecondsPerInvocation="13524" standardDeviationMicrosecondsPerInvocation="2706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="316" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="2490" standardDeviationMicrosecondsPerInvocation="294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="42" avgMicrosecondsPerInvocation="971" maxMicrosecondsPerInvocation="36426" standardDeviationMicrosecondsPerInvocation="5537"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="22" avgMicrosecondsPerInvocation="1849" maxMicrosecondsPerInvocation="10585" standardDeviationMicrosecondsPerInvocation="2665"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="32" invocations="37" avgMicrosecondsPerInvocation="883" maxMicrosecondsPerInvocation="6945" standardDeviationMicrosecondsPerInvocation="1645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="30" invocations="37" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="18157" standardDeviationMicrosecondsPerInvocation="2914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="48" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="15567" standardDeviationMicrosecondsPerInvocation="2246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="22" avgMicrosecondsPerInvocation="1197" maxMicrosecondsPerInvocation="9777" standardDeviationMicrosecondsPerInvocation="2092"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="26" invocations="37" avgMicrosecondsPerInvocation="705" maxMicrosecondsPerInvocation="15215" standardDeviationMicrosecondsPerInvocation="2442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="22" avgMicrosecondsPerInvocation="1073" maxMicrosecondsPerInvocation="14416" standardDeviationMicrosecondsPerInvocation="2971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="20" invocations="37" avgMicrosecondsPerInvocation="547" maxMicrosecondsPerInvocation="9677" standardDeviationMicrosecondsPerInvocation="1542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="22" avgMicrosecondsPerInvocation="836" maxMicrosecondsPerInvocation="4887" standardDeviationMicrosecondsPerInvocation="1419"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

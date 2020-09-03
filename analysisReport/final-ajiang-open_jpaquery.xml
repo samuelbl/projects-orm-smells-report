@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596943893000" analysisTimestamp="1596943894808" release="">
+  <Project projectName="repositorios/ajiang-open_jpaquery">
+    <Jar>repositorios/ajiang-open_jpaquery</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.FlushModeType</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>net.sf.cglib.proxy.Enhancer</MissingClass>
+    <MissingClass>net.sf.cglib.proxy.MethodInterceptor</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.ConstructorUtils</MissingClass>
+    <MissingClass>org.apache.commons.beanutils.MethodUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</MissingClass>
+    <MissingClass>org.hibernate.hql.internal.ast.QueryTranslatorImpl</MissingClass>
+    <MissingClass>org.hibernate.hql.spi.QueryTranslator</MissingClass>
+    <MissingClass>org.hibernate.hql.spi.QueryTranslatorFactory</MissingClass>
+    <MissingClass>org.hibernate.query.NativeQuery</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Order</MissingClass>
+    <MissingClass>org.springframework.transaction.support.TransactionSynchronizationManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:31:33 +0000" total_classes="77" referenced_classes="180" total_bugs="0" total_size="3250" num_packages="10" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.51" clock_seconds="3.71" peak_mbytes="336.56" alloc_mbytes="3540.00" gc_seconds="0.17">
+    <PackageStats package="com.jpaquery.builder" total_bugs="0" total_types="3" total_size="394">
+      <ClassStats class="com.jpaquery.builder.JPQL" sourceFile="JPQL.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.jpaquery.builder.JPQL$SqlFormatter" sourceFile="JPQL.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.jpaquery.builder.JPQL$SqlFormatter$FormatProcess" sourceFile="JPQL.java" interface="false" size="245" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core" total_bugs="0" total_types="3" total_size="11">
+      <ClassStats class="com.jpaquery.core.QueryHandler" sourceFile="QueryHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.Querys" sourceFile="Querys.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.SubQueryHandler" sourceFile="SubQueryHandler.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.constant" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.jpaquery.core.constant.LikeWay" sourceFile="LikeWay.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.facade" total_bugs="0" total_types="30" total_size="272">
+      <ClassStats class="com.jpaquery.core.facade.And" sourceFile="And.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.BetweenPath" sourceFile="BetweenPath.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.FunctionPath" sourceFile="FunctionPath.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Group" sourceFile="Group.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.GroupPath" sourceFile="GroupPath.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Having" sourceFile="Having.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.HavingFunctionPath" sourceFile="HavingFunctionPath.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.HavingPath" sourceFile="HavingPath.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Join" sourceFile="Join.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.JoinHandler" sourceFile="JoinHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.JoinPath" sourceFile="JoinPath.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.JoinPath$JoinPathType" sourceFile="JoinPath.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.JpaQuery" sourceFile="JpaQuery.java" interface="true" size="38" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.JpaQueryEach" sourceFile="JpaQueryEach.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Or" sourceFile="Or.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Order" sourceFile="Order.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.OrderPath" sourceFile="OrderPath.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.OrderPath$OrderPathType" sourceFile="OrderPath.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.QueryAppender" sourceFile="QueryAppender.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.QueryRender" sourceFile="QueryRender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Select" sourceFile="Select.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.SelectPath" sourceFile="SelectPath.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.SelectPath$SelectPathType" sourceFile="SelectPath.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.SubJpaQuery" sourceFile="SubJpaQuery.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.SubJpaQuery$SubJpaQueryType" sourceFile="SubJpaQuery.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Where" sourceFile="Where.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.Where$WhereType" sourceFile="Where.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.WhereHandler" sourceFile="WhereHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.WherePath" sourceFile="WherePath.java" interface="true" size="67" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.facade.WherePath$WherePathType" sourceFile="WherePath.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.impl" total_bugs="0" total_types="23" total_size="1486">
+      <ClassStats class="com.jpaquery.core.impl.BetweenPathImpl" sourceFile="BetweenPathImpl.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.GroupImpl" sourceFile="GroupImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.GroupPathImpl" sourceFile="GroupPathImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.HavingImpl" sourceFile="HavingImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.HavingPathImpl" sourceFile="HavingPathImpl.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JoinImpl" sourceFile="JoinImpl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JoinPathImpl" sourceFile="JoinPathImpl.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler" sourceFile="JpaQueryHandler.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler$1" sourceFile="JpaQueryHandler.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler$1$1" sourceFile="JpaQueryHandler.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler$1$1$1" sourceFile="JpaQueryHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler$1$2" sourceFile="JpaQueryHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryHandler$1$2$1" sourceFile="JpaQueryHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryImpl" sourceFile="JpaQueryImpl.java" interface="false" size="331" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.JpaQueryImpl$1" sourceFile="JpaQueryImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.OrderImpl" sourceFile="OrderImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.OrderPathImpl" sourceFile="OrderPathImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.QueryAppenderImpl" sourceFile="QueryAppenderImpl.java" interface="false" size="92" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.SelectImpl" sourceFile="SelectImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.SelectPathImpl" sourceFile="SelectPathImpl.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.SubJpaQueryImpl" sourceFile="SubJpaQueryImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.WhereImpl" sourceFile="WhereImpl.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.impl.WherePathImpl" sourceFile="WherePathImpl.java" interface="false" size="328" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.render" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="com.jpaquery.core.render.JpaQueryRender" sourceFile="JpaQueryRender.java" interface="true" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.render.impl" total_bugs="0" total_types="2" total_size="511">
+      <ClassStats class="com.jpaquery.core.render.impl.JpaQueryRenderImpl" sourceFile="JpaQueryRenderImpl.java" interface="false" size="505" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.render.impl.JpaQueryRenderImpl$1" sourceFile="JpaQueryRenderImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.core.vo" total_bugs="0" total_types="4" total_size="134">
+      <ClassStats class="com.jpaquery.core.vo.EntityInfo" sourceFile="EntityInfo.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.vo.FromInfo" sourceFile="FromInfo.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.vo.PathInfo" sourceFile="PathInfo.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.jpaquery.core.vo.QueryContent" sourceFile="QueryContent.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.example" total_bugs="0" total_types="2" total_size="147">
+      <ClassStats class="com.jpaquery.example.Example" sourceFile="Example.java" interface="false" size="142" bugs="0"/>
+      <ClassStats class="com.jpaquery.example.Examples" sourceFile="Examples.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jpaquery.util" total_bugs="0" total_types="8" total_size="276">
+      <ClassStats class="com.jpaquery.util._Helper" sourceFile="_Helper.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._MergeMap" sourceFile="_MergeMap.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._MergeMap$1" sourceFile="_MergeMap.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._MergeMap$1$1" sourceFile="_MergeMap.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._MergeMap$1$1$1" sourceFile="_MergeMap.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._Proxys" sourceFile="_Proxys.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._Proxys$1" sourceFile="_Proxys.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.jpaquery.util._Proxys$2" sourceFile="_Proxys.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="265" invocations="934" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="11640" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="154" invocations="509" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="7976" standardDeviationMicrosecondsPerInvocation="732"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="153" invocations="890" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="4337" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="148" invocations="508" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="4714" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="147" invocations="512" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="16876" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="135" invocations="180" avgMicrosecondsPerInvocation="751" maxMicrosecondsPerInvocation="15719" standardDeviationMicrosecondsPerInvocation="1710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="131" invocations="508" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="7743" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="125" invocations="513" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="9312" standardDeviationMicrosecondsPerInvocation="712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="97" invocations="180" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="5876" standardDeviationMicrosecondsPerInvocation="992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="97" invocations="509" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="9138" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="939" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="2667" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="77" invocations="387" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="3686" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="59" invocations="683" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="26495" standardDeviationMicrosecondsPerInvocation="1015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="54" invocations="180" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="40267" standardDeviationMicrosecondsPerInvocation="3029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="50" invocations="180" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="21137" standardDeviationMicrosecondsPerInvocation="1613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="50" invocations="180" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="5901" standardDeviationMicrosecondsPerInvocation="688"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="45" invocations="864" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="1081" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="44" invocations="244" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="11987" standardDeviationMicrosecondsPerInvocation="796"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="40" invocations="180" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="5606" standardDeviationMicrosecondsPerInvocation="568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="36" invocations="509" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="2960" standardDeviationMicrosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="180" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="8000" standardDeviationMicrosecondsPerInvocation="795"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="33" invocations="77" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="6187" standardDeviationMicrosecondsPerInvocation="912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="31" invocations="12382" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="964" standardDeviationMicrosecondsPerInvocation="17"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="180" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="2868" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="27" invocations="77" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="3755" standardDeviationMicrosecondsPerInvocation="659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="26" invocations="77" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="3769" standardDeviationMicrosecondsPerInvocation="545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="25" invocations="77" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="9734" standardDeviationMicrosecondsPerInvocation="1166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="180" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="3139" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="24" invocations="77" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="3515" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="23" invocations="180" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="2256" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="22" invocations="77" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="5827" standardDeviationMicrosecondsPerInvocation="801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="21" invocations="499" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="1878" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="21" invocations="77" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="3520" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="20" invocations="508" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="791" standardDeviationMicrosecondsPerInvocation="64"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="20" invocations="77" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="2904" standardDeviationMicrosecondsPerInvocation="501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="19" invocations="683" avgMicrosecondsPerInvocation="28" maxMicrosecondsPerInvocation="4588" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="2970" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="3072" standardDeviationMicrosecondsPerInvocation="427"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

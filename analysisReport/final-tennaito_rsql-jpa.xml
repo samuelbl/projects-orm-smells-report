@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597112460000" analysisTimestamp="1597112461432" release="">
+  <Project projectName="repositorios/tennaito_rsql-jpa">
+    <Jar>repositorios/tennaito_rsql-jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="18">
+    <MissingClass>cz.jirutka.rsql.parser.ast.ComparisonNode</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.ComparisonOperator</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.LogicalNode</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.LogicalOperator</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.Node</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.RSQLOperators</MissingClass>
+    <MissingClass>cz.jirutka.rsql.parser.ast.RSQLVisitor</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Expression</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Attribute$PersistentAttributeType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.ManagedType</MissingClass>
+    <MissingClass>javax.persistence.metamodel.Metamodel</MissingClass>
+    <MissingClass>javax.persistence.metamodel.PluralAttribute</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:21:00 +0000" total_classes="15" referenced_classes="77" total_bugs="0" total_size="507" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.71" clock_seconds="1.88" peak_mbytes="166.64" alloc_mbytes="3540.00" gc_seconds="0.12">
+    <PackageStats package="com.github.tennaito.rsql.builder" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="com.github.tennaito.rsql.builder.BuilderTools" sourceFile="BuilderTools.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.builder.SimpleBuilderTools" sourceFile="SimpleBuilderTools.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.tennaito.rsql.jpa" total_bugs="0" total_types="7" total_size="343">
+      <ClassStats class="com.github.tennaito.rsql.jpa.AbstractJpaVisitor" sourceFile="AbstractJpaVisitor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.JpaCriteriaCountQueryVisitor" sourceFile="JpaCriteriaCountQueryVisitor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.JpaCriteriaQueryVisitor" sourceFile="JpaCriteriaQueryVisitor.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.JpaPredicateVisitor" sourceFile="JpaPredicateVisitor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.PredicateBuilder" sourceFile="PredicateBuilder.java" interface="false" size="214" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.PredicateBuilder$1" sourceFile="PredicateBuilder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.jpa.PredicateBuilderStrategy" sourceFile="PredicateBuilderStrategy.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.tennaito.rsql.misc" total_bugs="0" total_types="5" total_size="95">
+      <ClassStats class="com.github.tennaito.rsql.misc.ArgumentFormatException" sourceFile="ArgumentFormatException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.misc.ArgumentParser" sourceFile="ArgumentParser.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.misc.DefaultArgumentParser" sourceFile="DefaultArgumentParser.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.misc.Mapper" sourceFile="Mapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.github.tennaito.rsql.misc.SimpleMapper" sourceFile="SimpleMapper.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.github.tennaito.rsql.parser.ast" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="com.github.tennaito.rsql.parser.ast.ComparisonOperatorProxy" sourceFile="ComparisonOperatorProxy.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="208" invocations="610" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="23955" standardDeviationMicrosecondsPerInvocation="1168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="93" invocations="77" avgMicrosecondsPerInvocation="1212" maxMicrosecondsPerInvocation="11176" standardDeviationMicrosecondsPerInvocation="2239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="300" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="4060" standardDeviationMicrosecondsPerInvocation="427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="66" invocations="77" avgMicrosecondsPerInvocation="864" maxMicrosecondsPerInvocation="10241" standardDeviationMicrosecondsPerInvocation="1592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="62" invocations="94" avgMicrosecondsPerInvocation="661" maxMicrosecondsPerInvocation="7586" standardDeviationMicrosecondsPerInvocation="1331"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="59" invocations="96" avgMicrosecondsPerInvocation="618" maxMicrosecondsPerInvocation="8769" standardDeviationMicrosecondsPerInvocation="1271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="614" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="492" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="52" invocations="85" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="5962" standardDeviationMicrosecondsPerInvocation="1007"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="50" invocations="545" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="15843" standardDeviationMicrosecondsPerInvocation="683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="49" invocations="96" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="9131" standardDeviationMicrosecondsPerInvocation="1303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="94" avgMicrosecondsPerInvocation="493" maxMicrosecondsPerInvocation="7375" standardDeviationMicrosecondsPerInvocation="1057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="127" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="14553" standardDeviationMicrosecondsPerInvocation="1347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="38" invocations="94" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="9306" standardDeviationMicrosecondsPerInvocation="1040"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="104" avgMicrosecondsPerInvocation="358" maxMicrosecondsPerInvocation="25468" standardDeviationMicrosecondsPerInvocation="2479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="34" invocations="79" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="5529" standardDeviationMicrosecondsPerInvocation="830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="31" invocations="77" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="6752" standardDeviationMicrosecondsPerInvocation="908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="26" invocations="77" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="4788" standardDeviationMicrosecondsPerInvocation="779"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="77" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="8859" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="77" avgMicrosecondsPerInvocation="283" maxMicrosecondsPerInvocation="2305" standardDeviationMicrosecondsPerInvocation="435"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="77" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="2079" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="77" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="5110" standardDeviationMicrosecondsPerInvocation="644"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="15" invocations="2394" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1155" standardDeviationMicrosecondsPerInvocation="38"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

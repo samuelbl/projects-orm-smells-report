@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114738000" analysisTimestamp="1597114739405" release="">
+  <Project projectName="repositorios/mcupak_beacon-of-beacons">
+    <Jar>repositorios/mcupak_beacon-of-beacons</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.Beacon">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Beacon" start="35" end="102" sourcefile="Beacon.java" sourcepath="com/dnastack/bob/persistence/entity/Beacon.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.Beacon" name="organization" signature="Lcom/dnastack/bob/persistence/entity/Organization;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Beacon" sourcefile="Beacon.java" sourcepath="com/dnastack/bob/persistence/entity/Beacon.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.BeaconResponse">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.BeaconResponse" start="31" end="78" sourcefile="BeaconResponse.java" sourcepath="com/dnastack/bob/persistence/entity/BeaconResponse.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.BeaconResponse" name="beacon" signature="Lcom/dnastack/bob/persistence/entity/Beacon;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.BeaconResponse" sourcefile="BeaconResponse.java" sourcepath="com/dnastack/bob/persistence/entity/BeaconResponse.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.BeaconResponse">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.BeaconResponse" start="31" end="78" sourcefile="BeaconResponse.java" sourcepath="com/dnastack/bob/persistence/entity/BeaconResponse.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.BeaconResponse" name="query" signature="Lcom/dnastack/bob/persistence/entity/Query;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.BeaconResponse" sourcefile="BeaconResponse.java" sourcepath="com/dnastack/bob/persistence/entity/BeaconResponse.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.Dataset">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Dataset" start="34" end="65" sourcefile="Dataset.java" sourcepath="com/dnastack/bob/persistence/entity/Dataset.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.Dataset" name="beacon" signature="Lcom/dnastack/bob/persistence/entity/Beacon;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Dataset" sourcefile="Dataset.java" sourcepath="com/dnastack/bob/persistence/entity/Dataset.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.Query">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Query" start="36" end="73" sourcefile="Query.java" sourcepath="com/dnastack/bob/persistence/entity/Query.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.Query" name="dataSet" signature="Lcom/dnastack/bob/persistence/entity/Dataset;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Query" sourcefile="Query.java" sourcepath="com/dnastack/bob/persistence/entity/Query.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.entity.Query">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Query" start="36" end="73" sourcefile="Query.java" sourcepath="com/dnastack/bob/persistence/entity/Query.java"/>
+    </Class>
+    <Field classname="com.dnastack.bob.persistence.entity.Query" name="user" signature="Lcom/dnastack/bob/persistence/entity/User;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.entity.Query" sourcefile="Query.java" sourcepath="com/dnastack/bob/persistence/entity/Query.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl">
+      <SourceLine classname="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl" start="38" end="130" sourcefile="AbstractGenericDaoImpl.java" sourcepath="com/dnastack/bob/persistence/impl/AbstractGenericDaoImpl.java"/>
+    </Class>
+    <Method classname="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl" name="findAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl" start="113" end="113" startBytecode="0" endBytecode="96" sourcefile="AbstractGenericDaoImpl.java" sourcepath="com/dnastack/bob/persistence/impl/AbstractGenericDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl" start="113" end="113" startBytecode="5" endBytecode="5" sourcefile="AbstractGenericDaoImpl.java" sourcepath="com/dnastack/bob/persistence/impl/AbstractGenericDaoImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>com.google.common.collect.HashMultimap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableSet</MissingClass>
+    <MissingClass>com.google.common.collect.Multimap</MissingClass>
+    <MissingClass>javax.ejb.AsyncResult</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeanManager</MissingClass>
+    <MissingClass>javax.enterprise.util.AnnotationLiteral</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.ws.rs.NotFoundException</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.Application</MissingClass>
+    <MissingClass>javax.ws.rs.core.HttpHeaders</MissingClass>
+    <MissingClass>javax.ws.rs.core.MediaType</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.core.UriInfo</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ExceptionMapper</MissingClass>
+    <MissingClass>org.apache.http.HttpEntity</MissingClass>
+    <MissingClass>org.apache.http.client.config.RequestConfig</MissingClass>
+    <MissingClass>org.apache.http.client.config.RequestConfig$Builder</MissingClass>
+    <MissingClass>org.apache.http.client.entity.UrlEncodedFormEntity</MissingClass>
+    <MissingClass>org.apache.http.client.methods.CloseableHttpResponse</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpGet</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPost</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpRequestBase</MissingClass>
+    <MissingClass>org.apache.http.impl.client.CloseableHttpClient</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClientBuilder</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClients</MissingClass>
+    <MissingClass>org.apache.http.message.BasicNameValuePair</MissingClass>
+    <MissingClass>org.apache.http.util.EntityUtils</MissingClass>
+    <MissingClass>org.apache.xmlrpc.XmlRpcException</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcClient</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcClientConfigImpl</MissingClass>
+    <MissingClass>org.jboss.resteasy.plugins.interceptors.CorsFilter</MissingClass>
+    <MissingClass>org.json.JSONArray</MissingClass>
+    <MissingClass>org.json.JSONException</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 02:58:58 +0000" total_classes="187" referenced_classes="288" total_bugs="7" total_size="3691" num_packages="30" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="17.02" clock_seconds="4.72" peak_mbytes="345.14" alloc_mbytes="3540.00" gc_seconds="0.17" priority_2="7">
+    <PackageStats package="com.dnastack.bob.persistence.api" total_bugs="0" total_types="9" total_size="32">
+      <ClassStats class="com.dnastack.bob.persistence.api.BeaconDao" sourceFile="BeaconDao.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.BeaconResponseDao" sourceFile="BeaconResponseDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.DataUseDao" sourceFile="DataUseDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.DataUseRequirementDao" sourceFile="DataUseRequirementDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.DatasetDao" sourceFile="DatasetDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.GenericDao" sourceFile="GenericDao.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.OrganizationDao" sourceFile="OrganizationDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.QueryDao" sourceFile="QueryDao.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.api.UserDao" sourceFile="UserDao.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.persistence.entity" total_bugs="6" total_types="19" total_size="647" priority_2="6">
+      <ClassStats class="com.dnastack.bob.persistence.entity.BasicEntity" sourceFile="BasicEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Beacon" sourceFile="Beacon.java" interface="false" size="127" bugs="1" priority_2="1"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Beacon$BeaconBuilder" sourceFile="Beacon.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.BeaconResponse" sourceFile="BeaconResponse.java" interface="false" size="61" bugs="2" priority_2="2"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.BeaconResponse$BeaconResponseBuilder" sourceFile="BeaconResponse.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataSize" sourceFile="DataSize.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataSize$DataSizeBuilder" sourceFile="DataSize.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataUse" sourceFile="DataUse.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataUse$DataUseBuilder" sourceFile="DataUse.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataUseRequirement" sourceFile="DataUseRequirement.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.DataUseRequirement$DataUseRequirementBuilder" sourceFile="DataUseRequirement.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Dataset" sourceFile="Dataset.java" interface="false" size="48" bugs="1" priority_2="1"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Dataset$DatasetBuilder" sourceFile="Dataset.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Organization" sourceFile="Organization.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Organization$OrganizationBuilder" sourceFile="Organization.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Query" sourceFile="Query.java" interface="false" size="56" bugs="2" priority_2="2"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.Query$QueryBuilder" sourceFile="Query.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.User" sourceFile="User.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.entity.User$UserBuilder" sourceFile="User.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.persistence.enumerated" total_bugs="0" total_types="2" total_size="72">
+      <ClassStats class="com.dnastack.bob.persistence.enumerated.Chromosome" sourceFile="Chromosome.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.enumerated.Reference" sourceFile="Reference.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.persistence.impl" total_bugs="1" total_types="9" total_size="162" priority_2="1">
+      <ClassStats class="com.dnastack.bob.persistence.impl.AbstractGenericDaoImpl" sourceFile="AbstractGenericDaoImpl.java" interface="false" size="51" bugs="1" priority_2="1"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.BeaconDaoImpl" sourceFile="BeaconDaoImpl.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.BeaconResponseDaoImpl" sourceFile="BeaconResponseDaoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.DataUseDaoImpl" sourceFile="DataUseDaoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.DataUseRequirementDaoImpl" sourceFile="DataUseRequirementDaoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.DatasetDaoImpl" sourceFile="DatasetDaoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.OrganizationDaoImpl" sourceFile="OrganizationDaoImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.QueryDaoImpl" sourceFile="QueryDaoImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.persistence.impl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.api" total_bugs="0" total_types="7" total_size="23">
+      <ClassStats class="com.dnastack.bob.rest.api.AlleleResource" sourceFile="AlleleResource.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.BeaconResource" sourceFile="BeaconResource.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.BeaconResponseResource" sourceFile="BeaconResponseResource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.ChromosomeResource" sourceFile="ChromosomeResource.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.OrganizationResource" sourceFile="OrganizationResource.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.ReferenceResource" sourceFile="ReferenceResource.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.api.RestEndPointResource" sourceFile="RestEndPointResource.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.app" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="com.dnastack.bob.rest.app.BeaconApplication" sourceFile="BeaconApplication.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.base" total_bugs="0" total_types="4" total_size="80">
+      <ClassStats class="com.dnastack.bob.rest.base.Error" sourceFile="Error.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.base.Error$ErrorBuilder" sourceFile="Error.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.base.RestEndPoint" sourceFile="RestEndPoint.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.base.RestEndPoint$RestEndPointBuilder" sourceFile="RestEndPoint.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.comparator" total_bugs="0" total_types="9" total_size="63">
+      <ClassStats class="com.dnastack.bob.rest.comparator.BeaconDtoComparator" sourceFile="BeaconDtoComparator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.BeaconDtoIdComparator" sourceFile="BeaconDtoIdComparator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.BeaconDtoNameComparator" sourceFile="BeaconDtoNameComparator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.BeaconResponseDtoComparator" sourceFile="BeaconResponseDtoComparator.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.IdComparator" sourceFile="IdComparator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.NameComparator" sourceFile="NameComparator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.OrganizationDtoComparator" sourceFile="OrganizationDtoComparator.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.OrganizationDtoIdComparator" sourceFile="OrganizationDtoIdComparator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.comparator.OrganizationDtoNameComparator" sourceFile="OrganizationDtoNameComparator.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.resource" total_bugs="0" total_types="7" total_size="159">
+      <ClassStats class="com.dnastack.bob.rest.resource.AlleleResourceImpl" sourceFile="AlleleResourceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.BeaconResourceImpl" sourceFile="BeaconResourceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.BeaconResponseResourceImpl" sourceFile="BeaconResponseResourceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.ChromosomeResourceImpl" sourceFile="ChromosomeResourceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.OrganizationResourceImpl" sourceFile="OrganizationResourceImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.ReferenceResourceImpl" sourceFile="ReferenceResourceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.resource.RestEndPointResourceImpl" sourceFile="RestEndPointResourceImpl.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.rest.util" total_bugs="0" total_types="7" total_size="124">
+      <ClassStats class="com.dnastack.bob.rest.util.ExceptionHandler" sourceFile="ExceptionHandler.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.IpExtractor" sourceFile="IpExtractor.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.JaxbList" sourceFile="JaxbList.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.LoggingFilter" sourceFile="LoggingFilter.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.MediaTypeResolver" sourceFile="MediaTypeResolver.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.ParameterParser" sourceFile="ParameterParser.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.rest.util.ResponseStatusMapper" sourceFile="ResponseStatusMapper.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.api" total_bugs="0" total_types="3" total_size="18">
+      <ClassStats class="com.dnastack.bob.service.api.BeaconResponseService" sourceFile="BeaconResponseService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.api.BeaconService" sourceFile="BeaconService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.api.OrganizationService" sourceFile="OrganizationService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.converter.api" total_bugs="0" total_types="6" total_size="7">
+      <ClassStats class="com.dnastack.bob.service.converter.api.AlleleConverter" sourceFile="AlleleConverter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.api.BeaconConverter" sourceFile="BeaconConverter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.api.ChromosomeConverter" sourceFile="ChromosomeConverter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.api.Converter" sourceFile="Converter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.api.PositionConverter" sourceFile="PositionConverter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.api.ReferenceConverter" sourceFile="ReferenceConverter.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.converter.impl" total_bugs="0" total_types="14" total_size="147">
+      <ClassStats class="com.dnastack.bob.service.converter.impl.BeaconIdBeaconConverter" sourceFile="BeaconIdBeaconConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.BeaconIdWithoutOrganizationBeaconConverter" sourceFile="BeaconIdWithoutOrganizationBeaconConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.BracketsAlleleConverter" sourceFile="BracketsAlleleConverter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.ChrPrefixChromosomeConverter" sourceFile="ChrPrefixChromosomeConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.EmptyAlleleConverter" sourceFile="EmptyAlleleConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.EmptyChromosomeConverter" sourceFile="EmptyChromosomeConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.EmptyPositionConverter" sourceFile="EmptyPositionConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.EmptyReferenceConverter" sourceFile="EmptyReferenceConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.GrchReferenceConverter" sourceFile="GrchReferenceConverter.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.HReferenceConverter" sourceFile="HReferenceConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.IncrementPositionConverter" sourceFile="IncrementPositionConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.LongNameAlleleConverter" sourceFile="LongNameAlleleConverter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.LowerCaseChromosomeConverter" sourceFile="LowerCaseChromosomeConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.converter.impl.NumberChromosomeConverter" sourceFile="NumberChromosomeConverter.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.converter.util" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="com.dnastack.bob.service.converter.util.ConvertUtils" sourceFile="ConvertUtils.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.dto" total_bugs="0" total_types="13" total_size="389">
+      <ClassStats class="com.dnastack.bob.service.dto.AlleleDto" sourceFile="AlleleDto.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.BeaconDto" sourceFile="BeaconDto.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.BeaconDto$BeaconDtoBuilder" sourceFile="BeaconDto.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.BeaconResponseDto" sourceFile="BeaconResponseDto.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.BeaconResponseDto$BeaconResponseDtoBuilder" sourceFile="BeaconResponseDto.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.ChromosomeDto" sourceFile="ChromosomeDto.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.OrganizationDto" sourceFile="OrganizationDto.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.OrganizationDto$OrganizationDtoBuilder" sourceFile="OrganizationDto.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.QueryDto" sourceFile="QueryDto.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.QueryDto$QueryDtoBuilder" sourceFile="QueryDto.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.ReferenceDto" sourceFile="ReferenceDto.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.UserDto" sourceFile="UserDto.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.dto.UserDto$UserDtoBuilder" sourceFile="UserDto.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.fetcher.api" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.dnastack.bob.service.fetcher.api.ResponseFetcher" sourceFile="ResponseFetcher.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.fetcher.impl" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="com.dnastack.bob.service.fetcher.impl.GetResponseFetcher" sourceFile="GetResponseFetcher.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.fetcher.impl.PostResponseFetcher" sourceFile="PostResponseFetcher.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.fetcher.util" total_bugs="0" total_types="1" total_size="62">
+      <ClassStats class="com.dnastack.bob.service.fetcher.util.HttpUtils" sourceFile="HttpUtils.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.impl" total_bugs="0" total_types="3" total_size="361">
+      <ClassStats class="com.dnastack.bob.service.impl.BeaconResponseServiceImpl" sourceFile="BeaconResponseServiceImpl.java" interface="false" size="242" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.impl.BeaconServiceImpl" sourceFile="BeaconServiceImpl.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.impl.OrganizationServiceImpl" sourceFile="OrganizationServiceImpl.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.lrg" total_bugs="0" total_types="10" total_size="203">
+      <ClassStats class="com.dnastack.bob.service.lrg.Brca" sourceFile="Brca.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.Brca2" sourceFile="Brca2.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.Brca2LrgConvertor" sourceFile="Brca2LrgConvertor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.BrcaLrgConvertor" sourceFile="BrcaLrgConvertor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgConvertor" sourceFile="LrgConvertor.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgCoordinates" sourceFile="LrgCoordinates.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgLocus" sourceFile="LrgLocus.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgMapping" sourceFile="LrgMapping.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgMappingProvider" sourceFile="LrgMappingProvider.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.lrg.LrgReference" sourceFile="LrgReference.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.mapper.api" total_bugs="0" total_types="8" total_size="16">
+      <ClassStats class="com.dnastack.bob.service.mapper.api.BeaconMapper" sourceFile="BeaconMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.BeaconResponseMapper" sourceFile="BeaconResponseMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.ChromosomeMapper" sourceFile="ChromosomeMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.Mapper" sourceFile="Mapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.OrganizationMapper" sourceFile="OrganizationMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.QueryMapper" sourceFile="QueryMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.ReferenceMapper" sourceFile="ReferenceMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.api.UserMapper" sourceFile="UserMapper.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.mapper.impl" total_bugs="0" total_types="7" total_size="365">
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.BeaconMapperImpl" sourceFile="BeaconMapperImpl.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.BeaconResponseMapperImpl" sourceFile="BeaconResponseMapperImpl.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.ChromosomeMapperImpl" sourceFile="ChromosomeMapperImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.OrganizationMapperImpl" sourceFile="OrganizationMapperImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.QueryMapperImpl" sourceFile="QueryMapperImpl.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.ReferenceMapperImpl" sourceFile="ReferenceMapperImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.mapper.impl.UserMapperImpl" sourceFile="UserMapperImpl.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.parser.api" total_bugs="0" total_types="4" total_size="8">
+      <ClassStats class="com.dnastack.bob.service.parser.api.BeaconParser" sourceFile="BeaconParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.api.ExternalUrlParser" sourceFile="ExternalUrlParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.api.MetadataParser" sourceFile="MetadataParser.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.api.ResponseParser" sourceFile="ResponseParser.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.parser.impl" total_bugs="0" total_types="19" total_size="214">
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonDatasetAlleleResponsesExternalUrlParser" sourceFile="JsonDatasetAlleleResponsesExternalUrlParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonExistResponseParser" sourceFile="JsonExistResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonExistsGtResponseParser" sourceFile="JsonExistsGtResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonExistsResponseParser" sourceFile="JsonExistsResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonIntegerPresentResponseParser" sourceFile="JsonIntegerPresentResponseParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonKeyValueAlleleDatasetResponeMetadataParser" sourceFile="JsonKeyValueAlleleDatasetResponeMetadataParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonKeyValueMetadataParser" sourceFile="JsonKeyValueMetadataParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseExistResponseParser" sourceFile="JsonResponseExistResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseExistsNullAsFalseResponseParser" sourceFile="JsonResponseExistsNullAsFalseResponseParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseExistsResponseParser" sourceFile="JsonResponseExistsResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseExistsWithOverlapResponseParser" sourceFile="JsonResponseExistsWithOverlapResponseParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseExternalUrlParser" sourceFile="JsonResponseExternalUrlParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.JsonResponseResponseParser" sourceFile="JsonResponseResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringFoundResponseParser" sourceFile="StringFoundResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringTrueFalseResponseParser" sourceFile="StringTrueFalseResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringVisualizationResponseParser" sourceFile="StringVisualizationResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringYesNoRefResponseParser" sourceFile="StringYesNoRefResponseParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringYesNoResponseParser" sourceFile="StringYesNoResponseParser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.parser.impl.StringYesNoStrictResponseParser" sourceFile="StringYesNoStrictResponseParser.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.parser.util" total_bugs="0" total_types="1" total_size="157">
+      <ClassStats class="com.dnastack.bob.service.parser.util.ParseUtils" sourceFile="ParseUtils.java" interface="false" size="157" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.processor.api" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="com.dnastack.bob.service.processor.api.BeaconProcessor" sourceFile="BeaconProcessor.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.processor.impl" total_bugs="0" total_types="3" total_size="151">
+      <ClassStats class="com.dnastack.bob.service.processor.impl.ParallelBeaconProcessor" sourceFile="ParallelBeaconProcessor.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.processor.impl.ParallelBeaconProcessor$FutureBeaconResponse" sourceFile="ParallelBeaconProcessor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.processor.impl.ParallelBeaconProcessor$FutureBeaconResponse$FutureBeaconResponseBuilder" sourceFile="ParallelBeaconProcessor.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.processor.util" total_bugs="0" total_types="4" total_size="45">
+      <ClassStats class="com.dnastack.bob.service.processor.util.CdiBeanResolver" sourceFile="CdiBeanResolver.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.processor.util.CdiBeanResolver$1" sourceFile="CdiBeanResolver.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.processor.util.EjbResolver" sourceFile="EjbResolver.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.processor.util.ErrorUtils" sourceFile="ErrorUtils.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.requester.api" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="com.dnastack.bob.service.requester.api.RequestConstructor" sourceFile="RequestConstructor.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.dnastack.bob.service.requester.impl" total_bugs="0" total_types="11" total_size="105">
+      <ClassStats class="com.dnastack.bob.service.requester.impl.BeaconChromPosAlleleRequestConstructor" sourceFile="BeaconChromPosAlleleRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.BeaconRefChromPosAlleleRequestConstructor" sourceFile="BeaconRefChromPosAlleleRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.BeaconRefChromPosReferenceBasesAlternateBasesRequestConstructor" sourceFile="BeaconRefChromPosReferenceBasesAlternateBasesRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.BeaconRefChromPosRequestConstructor" sourceFile="BeaconRefChromPosRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.ChromPosAlleleRequestConstructor" sourceFile="ChromPosAlleleRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.ChromPosReferenceBasesAlternateBasesRequestConstructor" sourceFile="ChromPosReferenceBasesAlternateBasesRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.NoParamBeaconRefChrPosAltPayloadRequestConstructor" sourceFile="NoParamBeaconRefChrPosAltPayloadRequestConstructor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.NoParamPopulationGenomeChrCoordAllelePayloadRequestConstructor" sourceFile="NoParamPopulationGenomeChrCoordAllelePayloadRequestConstructor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.NoParamPopulationIdChromPositionAllelePayloadRequestConstructor" sourceFile="NoParamPopulationIdChromPositionAllelePayloadRequestConstructor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.RefChromPosAlleleRequestConstructor" sourceFile="RefChromPosAlleleRequestConstructor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.dnastack.bob.service.requester.impl.RefChromPosReferenceBasesAlternateBasesRequestConstructor" sourceFile="RefChromPosReferenceBasesAlternateBasesRequestConstructor.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="290" invocations="1100" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="13421" standardDeviationMicrosecondsPerInvocation="619"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="230" invocations="953" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="11216" standardDeviationMicrosecondsPerInvocation="720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="209" invocations="1009" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="6415" standardDeviationMicrosecondsPerInvocation="520"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="199" invocations="1036" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="9238" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="172" invocations="1001" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="6663" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="153" invocations="1038" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="11030" standardDeviationMicrosecondsPerInvocation="468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="152" invocations="288" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="16585" standardDeviationMicrosecondsPerInvocation="1340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="144" invocations="1009" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="9555" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="140" invocations="288" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="16498" standardDeviationMicrosecondsPerInvocation="1231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="113" invocations="608" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="5239" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="97" invocations="1319" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="2934" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="89" invocations="407" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="24579" standardDeviationMicrosecondsPerInvocation="1399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="80" invocations="1108" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="611" standardDeviationMicrosecondsPerInvocation="47"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="76" invocations="1084" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="28535" standardDeviationMicrosecondsPerInvocation="869"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="65" invocations="1009" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="11318" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="63" invocations="945" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="13355" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="53" invocations="288" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="4771" standardDeviationMicrosecondsPerInvocation="410"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="50" invocations="19304" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="906" standardDeviationMicrosecondsPerInvocation="12"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="48" invocations="187" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="4990" standardDeviationMicrosecondsPerInvocation="517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="46" invocations="187" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="6895" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="46" invocations="288" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="9223" standardDeviationMicrosecondsPerInvocation="619"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="45" invocations="187" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="3596" standardDeviationMicrosecondsPerInvocation="374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="45" invocations="187" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="8438" standardDeviationMicrosecondsPerInvocation="996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="44" invocations="288" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="3424" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="40" invocations="187" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="3127" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="38" invocations="288" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="2705" standardDeviationMicrosecondsPerInvocation="277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="288" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="6489" standardDeviationMicrosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="35" invocations="953" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="2544" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="33" invocations="187" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="3501" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="33" invocations="187" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="7869" standardDeviationMicrosecondsPerInvocation="593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="33" invocations="187" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="3164" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="32" invocations="925" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="2217" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="31" invocations="187" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="3263" standardDeviationMicrosecondsPerInvocation="329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="30" invocations="288" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="2661" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="27" invocations="187" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="2860" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="26" invocations="187" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="3995" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="25" invocations="187" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="6891" standardDeviationMicrosecondsPerInvocation="551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="24" invocations="187" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="1971" standardDeviationMicrosecondsPerInvocation="219"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

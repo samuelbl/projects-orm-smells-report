@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597083506000" analysisTimestamp="1597083508101" release="">
+  <Project projectName="repositorios/ctpconsulting_query">
+    <Jar>repositorios/ctpconsulting_query</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <Errors errors="0" missingClasses="39">
+    <MissingClass>com.mysema.query.jpa.impl.JPAQuery</MissingClass>
+    <MissingClass>javassist.util.proxy.ProxyFactory</MissingClass>
+    <MissingClass>javax.enterprise.context.Conversation</MissingClass>
+    <MissingClass>javax.enterprise.event.Event</MissingClass>
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.AnnotatedType</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.Bean</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.BeanManager</MissingClass>
+    <MissingClass>javax.enterprise.inject.spi.ProcessAnnotatedType</MissingClass>
+    <MissingClass>javax.enterprise.util.AnnotationLiteral</MissingClass>
+    <MissingClass>javax.faces.application.FacesMessage</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.interceptor.InvocationContext</MissingClass>
+    <MissingClass>javax.persistence.Entity</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.persistence.IdClass</MissingClass>
+    <MissingClass>javax.persistence.LockModeType</MissingClass>
+    <MissingClass>javax.persistence.PersistenceUnitUtil</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.QueryHint</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder$In</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.From</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.metamodel.SingularAttribute</MissingClass>
+    <MissingClass>org.jboss.solder.bean.BeanBuilder</MissingClass>
+    <MissingClass>org.jboss.solder.beanManager.BeanManagerLocator</MissingClass>
+    <MissingClass>org.jboss.solder.logging.Logger</MissingClass>
+    <MissingClass>org.jboss.solder.properties.Property</MissingClass>
+    <MissingClass>org.jboss.solder.properties.query.AnnotatedPropertyCriteria</MissingClass>
+    <MissingClass>org.jboss.solder.properties.query.NamedPropertyCriteria</MissingClass>
+    <MissingClass>org.jboss.solder.properties.query.PropertyQueries</MissingClass>
+    <MissingClass>org.jboss.solder.properties.query.PropertyQuery</MissingClass>
+    <MissingClass>org.jboss.solder.reflection.AnnotationInstanceProvider</MissingClass>
+    <MissingClass>org.jboss.solder.serviceHandler.ServiceHandlerBeanLifecycle</MissingClass>
+    <MissingClass>org.jboss.solder.serviceHandler.ServiceHandlerExtension</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:18:26 +0000" total_classes="179" referenced_classes="267" total_bugs="0" total_size="3137" num_packages="23" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="13.85" clock_seconds="4.07" peak_mbytes="332.51" alloc_mbytes="3540.00" gc_seconds="0.13">
+    <PackageStats package="com.ctp.cdi.query" total_bugs="0" total_types="12" total_size="103">
+      <ClassStats class="com.ctp.cdi.query.AbstractEntityDao" sourceFile="AbstractEntityDao.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.Dao" sourceFile="Dao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.EntityDao" sourceFile="EntityDao.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.FirstResult" sourceFile="FirstResult.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.MaxResults" sourceFile="MaxResults.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.Modifying" sourceFile="Modifying.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.NonEntity" sourceFile="NonEntity.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.Query" sourceFile="Query.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.QueryExtension" sourceFile="QueryExtension.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.QueryParam" sourceFile="QueryParam.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.QueryResult" sourceFile="QueryResult.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.WithEntityManager" sourceFile="WithEntityManager.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.audit" total_bugs="0" total_types="11" total_size="131">
+      <ClassStats class="com.ctp.cdi.query.audit.AuditEntityListener" sourceFile="AuditEntityListener.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.AuditPropertyException" sourceFile="AuditPropertyException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.AuditProvider" sourceFile="AuditProvider.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.CreatedOn" sourceFile="CreatedOn.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.CurrentUser" sourceFile="CurrentUser.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.ModifiedBy" sourceFile="ModifiedBy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.ModifiedOn" sourceFile="ModifiedOn.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.PrePersistAuditListener" sourceFile="PrePersistAuditListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.PreUpdateAuditListener" sourceFile="PreUpdateAuditListener.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.PrincipalProvider" sourceFile="PrincipalProvider.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.audit.TimestampsProvider" sourceFile="TimestampsProvider.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.builder" total_bugs="0" total_types="12" total_size="242">
+      <ClassStats class="com.ctp.cdi.query.builder.AnnotatedQueryBuilder" sourceFile="AnnotatedQueryBuilder.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.DelegateQueryBuilder" sourceFile="DelegateQueryBuilder.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.MethodExpressionException" sourceFile="MethodExpressionException.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.MethodQueryBuilder" sourceFile="MethodQueryBuilder.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.OrderDirection" sourceFile="OrderDirection.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.OrderDirection$1" sourceFile="OrderDirection.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.OrderDirection$2" sourceFile="OrderDirection.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.QueryBuilder" sourceFile="QueryBuilder.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.QueryBuilderContext" sourceFile="QueryBuilderContext.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.QueryBuilderFactory" sourceFile="QueryBuilderFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.QueryOperator" sourceFile="QueryOperator.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.WrappedQueryBuilder" sourceFile="WrappedQueryBuilder.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.builder.part" total_bugs="0" total_types="10" total_size="234">
+      <ClassStats class="com.ctp.cdi.query.builder.part.AndQueryPart" sourceFile="AndQueryPart.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.BasePropertyQueryPart" sourceFile="BasePropertyQueryPart.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.ConnectingQueryPart" sourceFile="ConnectingQueryPart.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.OrQueryPart" sourceFile="OrQueryPart.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.OrderByQueryPart" sourceFile="OrderByQueryPart.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.OrderByQueryPart$Direction" sourceFile="OrderByQueryPart.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.OrderByQueryPart$OrderByQueryAttribute" sourceFile="OrderByQueryPart.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.PropertyQueryPart" sourceFile="PropertyQueryPart.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.QueryPart" sourceFile="QueryPart.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.part.QueryRoot" sourceFile="QueryRoot.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.builder.postprocessor" total_bugs="0" total_types="8" total_size="130">
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.CountQueryPostProcessor" sourceFile="CountQueryPostProcessor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.CountQueryPostProcessor$QueryExtraction" sourceFile="CountQueryPostProcessor.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.FirstResultPostProcessor" sourceFile="FirstResultPostProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.FlushModePostProcessor" sourceFile="FlushModePostProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.HintPostProcessor" sourceFile="HintPostProcessor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.LockModePostProcessor" sourceFile="LockModePostProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.MaxResultPostProcessor" sourceFile="MaxResultPostProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.postprocessor.OrderByQueryStringPostProcessor" sourceFile="OrderByQueryStringPostProcessor.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.builder.result" total_bugs="0" total_types="11" total_size="176">
+      <ClassStats class="com.ctp.cdi.query.builder.result.DefaultQueryResult" sourceFile="DefaultQueryResult.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.DefaultQueryResult$1" sourceFile="DefaultQueryResult.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.DefaultQueryResult$2" sourceFile="DefaultQueryResult.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.DefaultQueryResult$ChangeOrder" sourceFile="DefaultQueryResult.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessor" sourceFile="QueryProcessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory" sourceFile="QueryProcessorFactory.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory$1" sourceFile="QueryProcessorFactory.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory$ExecuteUpdateQueryProcessor" sourceFile="QueryProcessorFactory.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory$ListQueryProcessor" sourceFile="QueryProcessorFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory$NoOpQueryProcessor" sourceFile="QueryProcessorFactory.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.builder.result.QueryProcessorFactory$SingleResultQueryProcessor" sourceFile="QueryProcessorFactory.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria" total_bugs="0" total_types="5" total_size="232">
+      <ClassStats class="com.ctp.cdi.query.criteria.Criteria" sourceFile="Criteria.java" interface="true" size="36" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.CriteriaSupport" sourceFile="CriteriaSupport.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.QueryCriteria" sourceFile="QueryCriteria.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.QueryDslSupport" sourceFile="QueryDslSupport.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.QuerySelection" sourceFile="QuerySelection.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.predicate" total_bugs="0" total_types="20" total_size="216">
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.Between" sourceFile="Between.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.Eq" sourceFile="Eq.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.FetchBuilder" sourceFile="FetchBuilder.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.GreaterThan" sourceFile="GreaterThan.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.GreaterThanOrEqual" sourceFile="GreaterThanOrEqual.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.In" sourceFile="In.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.IsEmpty" sourceFile="IsEmpty.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.IsNotEmpty" sourceFile="IsNotEmpty.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.IsNotNull" sourceFile="IsNotNull.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.IsNull" sourceFile="IsNull.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.JoinBuilder" sourceFile="JoinBuilder.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.LessThan" sourceFile="LessThan.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.LessThanOrEqual" sourceFile="LessThanOrEqual.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.Like" sourceFile="Like.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.NoValueBuilder" sourceFile="NoValueBuilder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.NotEq" sourceFile="NotEq.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.NotLike" sourceFile="NotLike.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.OrBuilder" sourceFile="OrBuilder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.PredicateBuilder" sourceFile="PredicateBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.predicate.SingleValueBuilder" sourceFile="SingleValueBuilder.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.processor" total_bugs="0" total_types="3" total_size="20">
+      <ClassStats class="com.ctp.cdi.query.criteria.processor.OrderBy" sourceFile="OrderBy.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.processor.OrderBy$1" sourceFile="OrderBy.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.processor.QueryProcessor" sourceFile="QueryProcessor.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.selection" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.AttributeQuerySelection" sourceFile="AttributeQuerySelection.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.SingularAttributeSelection" sourceFile="SingularAttributeSelection.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.selection.numeric" total_bugs="0" total_types="8" total_size="50">
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Abs" sourceFile="Abs.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Avg" sourceFile="Avg.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Count" sourceFile="Count.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Max" sourceFile="Max.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Min" sourceFile="Min.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Modulo" sourceFile="Modulo.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Neg" sourceFile="Neg.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.numeric.Sum" sourceFile="Sum.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.selection.strings" total_bugs="0" total_types="4" total_size="28">
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.strings.Lower" sourceFile="Lower.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.strings.SubstringFrom" sourceFile="SubstringFrom.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.strings.SubstringFromTo" sourceFile="SubstringFromTo.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.strings.Upper" sourceFile="Upper.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.criteria.selection.temporal" total_bugs="0" total_types="3" total_size="15">
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.temporal.CurrentDate" sourceFile="CurrentDate.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.temporal.CurrentTime" sourceFile="CurrentTime.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.criteria.selection.temporal.CurrentTimestamp" sourceFile="CurrentTimestamp.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.handler" total_bugs="0" total_types="11" total_size="430">
+      <ClassStats class="com.ctp.cdi.query.handler.AbstractDelegateQueryHandler" sourceFile="AbstractDelegateQueryHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.CdiQueryContextFactory" sourceFile="CdiQueryContextFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.CdiQueryInvocationContext" sourceFile="CdiQueryInvocationContext.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.CriteriaSupportHandler" sourceFile="CriteriaSupportHandler.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.EntityDaoHandler" sourceFile="EntityDaoHandler.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.EntityManagerDelegateQueryHandler" sourceFile="EntityManagerDelegateQueryHandler.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.JpaQueryPostProcessor" sourceFile="JpaQueryPostProcessor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.QueryDslSupportHandler" sourceFile="QueryDslSupportHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.QueryHandler" sourceFile="QueryHandler.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.QueryInvocationException" sourceFile="QueryInvocationException.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.handler.QueryStringPostProcessor" sourceFile="QueryStringPostProcessor.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.home" total_bugs="0" total_types="15" total_size="254">
+      <ClassStats class="com.ctp.cdi.query.home.ConversationProvider" sourceFile="ConversationProvider.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.DefaultConversationProvider" sourceFile="DefaultConversationProvider.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.DefaultNavigationProvider" sourceFile="DefaultNavigationProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.EntityHome" sourceFile="EntityHome.java" interface="false" size="101" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.EntityHome$SingularAttributes" sourceFile="EntityHome.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.EntityMessage" sourceFile="EntityMessage.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.EntityMessage$HomeOperation" sourceFile="EntityMessage.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.EntityMessage$MessageType" sourceFile="EntityMessage.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.FacesConversationProvider" sourceFile="FacesConversationProvider.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.FacesHome" sourceFile="FacesHome.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.FacesMessageObserver" sourceFile="FacesMessageObserver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.FacesNavigationProvider" sourceFile="FacesNavigationProvider.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.NavigationProvider" sourceFile="NavigationProvider.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.PersistenceUtils" sourceFile="PersistenceUtils.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.home.QueryPersistenceUtils" sourceFile="QueryPersistenceUtils.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.meta" total_bugs="0" total_types="10" total_size="204">
+      <ClassStats class="com.ctp.cdi.query.meta.DaoComponent" sourceFile="DaoComponent.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.DaoComponents" sourceFile="DaoComponents.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.DaoComponentsFactory" sourceFile="DaoComponentsFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.DaoEntity" sourceFile="DaoEntity.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.DaoMethod" sourceFile="DaoMethod.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.Initialized" sourceFile="Initialized.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.MethodType" sourceFile="MethodType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.NonEntityException" sourceFile="NonEntityException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.QueryInvocation" sourceFile="QueryInvocation.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.QueryInvocationLiteral" sourceFile="QueryInvocationLiteral.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.meta.extractor" total_bugs="0" total_types="3" total_size="50">
+      <ClassStats class="com.ctp.cdi.query.meta.extractor.AnnotationMetadataExtractor" sourceFile="AnnotationMetadataExtractor.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.extractor.MetadataExtractor" sourceFile="MetadataExtractor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.extractor.TypeMetadataExtractor" sourceFile="TypeMetadataExtractor.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.meta.unit" total_bugs="0" total_types="14" total_size="380">
+      <ClassStats class="com.ctp.cdi.query.meta.unit.Descriptor" sourceFile="Descriptor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.DescriptorHierarchyBuilder" sourceFile="DescriptorHierarchyBuilder.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.DescriptorReader" sourceFile="DescriptorReader.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptor" sourceFile="EntityDescriptor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptorReader" sourceFile="EntityDescriptorReader.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptorReader$1" sourceFile="EntityDescriptorReader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptorReader$2" sourceFile="EntityDescriptorReader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptorReader$EntityBuilder" sourceFile="EntityDescriptorReader.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.EntityDescriptorReader$MappingFile" sourceFile="EntityDescriptorReader.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.MappedSuperclassDescriptor" sourceFile="MappedSuperclassDescriptor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.PersistenceUnit" sourceFile="PersistenceUnit.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.PersistenceUnitReader" sourceFile="PersistenceUnitReader.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.PersistenceUnits" sourceFile="PersistenceUnits.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.unit.PersistentClassDescriptor" sourceFile="PersistentClassDescriptor.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.meta.verifier" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="com.ctp.cdi.query.meta.verifier.EntityVerifier" sourceFile="EntityVerifier.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.meta.verifier.Verifier" sourceFile="Verifier.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.param" total_bugs="0" total_types="4" total_size="95">
+      <ClassStats class="com.ctp.cdi.query.param.IndexedParameter" sourceFile="IndexedParameter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.param.NamedParameter" sourceFile="NamedParameter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.param.Parameter" sourceFile="Parameter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.param.Parameters" sourceFile="Parameters.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.spi" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="com.ctp.cdi.query.spi.DelegateQueryHandler" sourceFile="DelegateQueryHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.spi.QueryInvocationContext" sourceFile="QueryInvocationContext.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.util" total_bugs="0" total_types="2" total_size="75">
+      <ClassStats class="com.ctp.cdi.query.util.EntityUtils" sourceFile="EntityUtils.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.QueryUtils" sourceFile="QueryUtils.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ctp.cdi.query.util.jpa" total_bugs="0" total_types="7" total_size="47">
+      <ClassStats class="com.ctp.cdi.query.util.jpa.BaseQueryStringExtractor" sourceFile="BaseQueryStringExtractor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.EclipseLinkEjbQueryStringExtractor" sourceFile="EclipseLinkEjbQueryStringExtractor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.HibernateQueryStringExtractor" sourceFile="HibernateQueryStringExtractor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.OpenJpaQueryStringExtractor" sourceFile="OpenJpaQueryStringExtractor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.ProviderSpecific" sourceFile="ProviderSpecific.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.QueryStringExtractor" sourceFile="QueryStringExtractor.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ctp.cdi.query.util.jpa.QueryStringExtractorFactory" sourceFile="QueryStringExtractorFactory.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="237" invocations="955" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="15338" standardDeviationMicrosecondsPerInvocation="668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="193" invocations="700" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="12925" standardDeviationMicrosecondsPerInvocation="891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="156" invocations="703" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="4960" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="144" invocations="711" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="8913" standardDeviationMicrosecondsPerInvocation="424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="141" invocations="703" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="10714" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="133" invocations="715" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="10972" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="132" invocations="267" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="10011" standardDeviationMicrosecondsPerInvocation="1260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="119" invocations="267" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="7246" standardDeviationMicrosecondsPerInvocation="980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="109" invocations="703" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="9477" standardDeviationMicrosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="109" invocations="622" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="15266" standardDeviationMicrosecondsPerInvocation="651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="94" invocations="1029" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="3483" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="78" invocations="962" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="3946" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="845" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="26127" standardDeviationMicrosecondsPerInvocation="901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="52" invocations="363" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="12038" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="47" invocations="703" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="7328" standardDeviationMicrosecondsPerInvocation="304"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="46" invocations="267" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="5545" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="43" invocations="8568" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1675" standardDeviationMicrosecondsPerInvocation="28"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="41" invocations="822" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="1604" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="39" invocations="267" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2552" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="35" invocations="179" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="2641" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="34" invocations="267" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="18539" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="267" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="6860" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="34" invocations="179" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="2394" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="33" invocations="179" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="6061" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="267" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="1270" standardDeviationMicrosecondsPerInvocation="212"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="31" invocations="179" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="10121" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="30" invocations="179" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="5215" standardDeviationMicrosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="30" invocations="267" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="8338" standardDeviationMicrosecondsPerInvocation="528"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFloatEquality" totalMilliseconds="29" invocations="179" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="19732" standardDeviationMicrosecondsPerInvocation="1468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="29" invocations="179" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1510" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="28" invocations="700" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="3697" standardDeviationMicrosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="27" invocations="690" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="6095" standardDeviationMicrosecondsPerInvocation="237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="27" invocations="179" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="1453" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="267" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="2166" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="24" invocations="22460" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="95" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="23" invocations="179" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="6686" standardDeviationMicrosecondsPerInvocation="511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="23" invocations="179" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="3335" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUncalledPrivateMethods" totalMilliseconds="23" invocations="179" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="8443" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="22" invocations="179" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="2032" standardDeviationMicrosecondsPerInvocation="205"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597083173000" analysisTimestamp="1597083174993" release="">
+  <Project projectName="repositorios/adorsys_ledgers">
+    <Jar>repositorios/adorsys_ledgers</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.domain.Payment">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.Payment" start="17" end="150" sourcefile="Payment.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/Payment.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.deposit.db.domain.Payment" name="targets" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.Payment" sourcefile="Payment.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/Payment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.domain.Payment">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.Payment" start="17" end="150" sourcefile="Payment.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/Payment.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.deposit.db.domain.Payment" name="targets" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.Payment" sourcefile="Payment.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/Payment.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.domain.PaymentTarget">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.PaymentTarget" start="25" end="73" sourcefile="PaymentTarget.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/PaymentTarget.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.deposit.db.domain.PaymentTarget" name="payment" signature="Lde/adorsys/ledgers/deposit/db/domain/Payment;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.domain.PaymentTarget" sourcefile="PaymentTarget.java" sourcepath="de/adorsys/ledgers/deposit/db/domain/PaymentTarget.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" name="findAllByDebtorAccount" signature="(Ljava/lang/String;Ljava/lang/String;Lde/adorsys/ledgers/deposit/db/domain/PaymentType;Lde/adorsys/ledgers/deposit/db/domain/TransactionStatus;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: findAllByDebtorAccount. Fields with EAGER without Join Fetch: targets, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" name="getAllDuePayments" signature="()Ljava/util/List;" isStatic="false"/>
+    <String value="Method: getAllDuePayments. Fields with EAGER without Join Fetch: targets, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" name="findAllByDebtorAccount" signature="(Ljava/lang/String;Ljava/lang/String;Lde/adorsys/ledgers/deposit/db/domain/PaymentType;Lde/adorsys/ledgers/deposit/db/domain/TransactionStatus;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" name="getAllDuePayments" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourcefile="PaymentRepository.java" sourcepath="de/adorsys/ledgers/deposit/db/repository/PaymentRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.AccountStmt">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" start="20" end="67" sourcefile="AccountStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/AccountStmt.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" name="account" signature="Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" sourcefile="AccountStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/AccountStmt.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.AccountStmt">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" start="20" end="67" sourcefile="AccountStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/AccountStmt.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" name="youngestPst" signature="Lde/adorsys/ledgers/postings/db/domain/PostingTrace;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.AccountStmt" sourcefile="AccountStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/AccountStmt.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" start="27" end="72" sourcefile="FinancialStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/FinancialStmt.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" name="latestPst" signature="Lde/adorsys/ledgers/postings/db/domain/PostingTrace;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" sourcefile="FinancialStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/FinancialStmt.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" start="27" end="72" sourcefile="FinancialStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/FinancialStmt.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" name="posting" signature="Lde/adorsys/ledgers/postings/db/domain/Posting;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.FinancialStmt" sourcefile="FinancialStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/FinancialStmt.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.Ledger">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Ledger" start="15" end="35" sourcefile="Ledger.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Ledger.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.Ledger" name="coa" signature="Lde/adorsys/ledgers/postings/db/domain/ChartOfAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Ledger" sourcefile="Ledger.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Ledger.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" start="17" end="77" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" name="coa" signature="Lde/adorsys/ledgers/postings/db/domain/ChartOfAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" start="17" end="77" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" name="ledger" signature="Lde/adorsys/ledgers/postings/db/domain/Ledger;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" start="17" end="77" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" name="parent" signature="Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerAccount" sourcefile="LedgerAccount.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerAccount.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.LedgerStmt">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerStmt" start="22" end="50" sourcefile="LedgerStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerStmt.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.LedgerStmt" name="ledger" signature="Lde/adorsys/ledgers/postings/db/domain/Ledger;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.LedgerStmt" sourcefile="LedgerStmt.java" sourcepath="de/adorsys/ledgers/postings/db/domain/LedgerStmt.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.Posting">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Posting" start="29" end="178" sourcefile="Posting.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Posting.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.Posting" name="lines" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Posting" sourcefile="Posting.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Posting.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.Posting">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Posting" start="29" end="178" sourcefile="Posting.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Posting.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.Posting" name="ledger" signature="Lde/adorsys/ledgers/postings/db/domain/Ledger;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.Posting" sourcefile="Posting.java" sourcepath="de/adorsys/ledgers/postings/db/domain/Posting.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.PostingLine">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.PostingLine" start="15" end="133" sourcefile="PostingLine.java" sourcepath="de/adorsys/ledgers/postings/db/domain/PostingLine.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.PostingLine" name="account" signature="Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.PostingLine" sourcefile="PostingLine.java" sourcepath="de/adorsys/ledgers/postings/db/domain/PostingLine.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.domain.PostingTrace">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.PostingTrace" start="23" end="58" sourcefile="PostingTrace.java" sourcepath="de/adorsys/ledgers/postings/db/domain/PostingTrace.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.postings.db.domain.PostingTrace" name="account" signature="Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.domain.PostingTrace" sourcefile="PostingTrace.java" sourcepath="de/adorsys/ledgers/postings/db/domain/PostingTrace.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" sourcefile="LedgerAccountRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/LedgerAccountRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" name="getAccountsByIbans" signature="(Ljava/util/Set;Lde/adorsys/ledgers/postings/db/domain/Ledger;)Ljava/util/List;" isStatic="false"/>
+    <String value="Method: getAccountsByIbans. Fields with EAGER without Join Fetch: parent, coa, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" sourcefile="LedgerAccountRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/LedgerAccountRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" name="getAccountsByIbans" signature="(Ljava/util/Set;Lde/adorsys/ledgers/postings/db/domain/Ledger;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" sourcefile="LedgerAccountRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/LedgerAccountRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" sourcefile="PostingLineRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/PostingLineRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" name="findByAccountAndPstTimeGreaterThanAndPstTimeLessThanEqualAndDiscardedTimeIsNullOrderByPstTimeDesc" signature="(Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" sourcefile="PostingLineRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/PostingLineRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" sourcefile="PostingLineRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/PostingLineRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" name="findPostingsByAccountAndDates" signature="(Lde/adorsys/ledgers/postings/db/domain/LedgerAccount;Ljava/time/LocalDateTime;Ljava/time/LocalDateTime;Lorg/springframework/data/domain/Pageable;)Lorg/springframework/data/domain/Page;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" sourcefile="PostingLineRepository.java" sourcepath="de/adorsys/ledgers/postings/db/repository/PostingLineRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.domain.EmailVerificationEntity">
+      <SourceLine classname="de.adorsys.ledgers.um.db.domain.EmailVerificationEntity" start="10" end="39" sourcefile="EmailVerificationEntity.java" sourcepath="de/adorsys/ledgers/um/db/domain/EmailVerificationEntity.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.um.db.domain.EmailVerificationEntity" name="scaUserData" signature="Lde/adorsys/ledgers/um/db/domain/ScaUserDataEntity;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.domain.EmailVerificationEntity" sourcefile="EmailVerificationEntity.java" sourcepath="de/adorsys/ledgers/um/db/domain/EmailVerificationEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.domain.ScaUserDataEntity">
+      <SourceLine classname="de.adorsys.ledgers.um.db.domain.ScaUserDataEntity" start="10" end="41" sourcefile="ScaUserDataEntity.java" sourcepath="de/adorsys/ledgers/um/db/domain/ScaUserDataEntity.java"/>
+    </Class>
+    <Field classname="de.adorsys.ledgers.um.db.domain.ScaUserDataEntity" name="emailVerification" signature="Lde/adorsys/ledgers/um/db/domain/EmailVerificationEntity;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.domain.ScaUserDataEntity" sourcefile="ScaUserDataEntity.java" sourcepath="de/adorsys/ledgers/um/db/domain/ScaUserDataEntity.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.repository.UserRepository">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.um.db.repository.UserRepository" name="findBranchIdsByMultipleParameters" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lde/adorsys/ledgers/um/db/domain/UserRole;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.repository.UserRepository">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.um.db.repository.UserRepository" name="findByLoginOrEmail" signature="(Ljava/lang/String;)Ljava/util/Optional;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.repository.UserRepository">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.um.db.repository.UserRepository" name="findOwnersByAccountId" signature="(Ljava/lang/String;Lde/adorsys/ledgers/um/db/domain/AccessType;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.repository.UserRepository">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.um.db.repository.UserRepository" name="findOwnersByIban" signature="(Ljava/lang/String;Lde/adorsys/ledgers/um/db/domain/AccessType;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="de.adorsys.ledgers.um.db.repository.UserRepository">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Class>
+    <Method classname="de.adorsys.ledgers.um.db.repository.UserRepository" name="findUsersByIban" signature="(Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="de.adorsys.ledgers.um.db.repository.UserRepository" sourcefile="UserRepository.java" sourcepath="de/adorsys/ledgers/um/db/repository/UserRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="133">
+    <MissingClass>com.fasterxml.jackson.annotation.JsonInclude$Include</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.type.TypeReference</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializationFeature</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.deser.std.StdDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.module.SimpleModule</MissingClass>
+    <MissingClass>com.fasterxml.jackson.dataformat.xml.XmlMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.dataformat.yaml.YAMLFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.jdk8.Jdk8Module</MissingClass>
+    <MissingClass>com.fasterxml.jackson.datatype.jsr310.JavaTimeModule</MissingClass>
+    <MissingClass>com.fasterxml.jackson.module.paramnames.ParameterNamesModule</MissingClass>
+    <MissingClass>com.google.common.base.Predicates</MissingClass>
+    <MissingClass>com.google.common.io.BaseEncoding</MissingClass>
+    <MissingClass>com.nimbusds.jose.JOSEException</MissingClass>
+    <MissingClass>com.nimbusds.jose.JWSAlgorithm</MissingClass>
+    <MissingClass>com.nimbusds.jose.JWSHeader</MissingClass>
+    <MissingClass>com.nimbusds.jose.JWSHeader$Builder</MissingClass>
+    <MissingClass>com.nimbusds.jose.crypto.MACSigner</MissingClass>
+    <MissingClass>com.nimbusds.jose.crypto.MACVerifier</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWTClaimsSet</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWTClaimsSet$Builder</MissingClass>
+    <MissingClass>com.nimbusds.jwt.SignedJWT</MissingClass>
+    <MissingClass>feign.FeignException</MissingClass>
+    <MissingClass>feign.RequestInterceptor</MissingClass>
+    <MissingClass>feign.RequestTemplate</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequestWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>net.minidev.json.JSONValue</MissingClass>
+    <MissingClass>net.minidev.json.reader.JsonWriterI</MissingClass>
+    <MissingClass>net.objectlab.kit.datecalc.common.DateCalculator</MissingClass>
+    <MissingClass>net.objectlab.kit.datecalc.common.DefaultHolidayCalendar</MissingClass>
+    <MissingClass>net.objectlab.kit.datecalc.jdk8.LocalDateKitCalculatorsFactory</MissingClass>
+    <MissingClass>org.aopalliance.intercept.MethodInvocation</MissingClass>
+    <MissingClass>org.apache.commons.collections4.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.RandomStringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.time.DateUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.validator.routines.IBANValidator</MissingClass>
+    <MissingClass>org.jasypt.encryption.pbe.PBEStringCleanablePasswordEncryptor</MissingClass>
+    <MissingClass>org.jasypt.encryption.pbe.StandardPBEStringEncryptor</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+    <MissingClass>org.json.XML</MissingClass>
+    <MissingClass>org.mapstruct.factory.Mappers</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.boot.ApplicationRunner</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.info.BuildProperties</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.core.io.DefaultResourceLoader</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.ResourceLoader</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.mail.MailException</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.security.access.AccessDeniedException</MissingClass>
+    <MissingClass>org.springframework.security.access.expression.SecurityExpressionRoot</MissingClass>
+    <MissingClass>org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationTrustResolverImpl</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CorsConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.HeadersConfigurer$FrameOptionsConfig</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.http.SessionCreationPolicy</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.password.PasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.util.AntPathMatcher</MissingClass>
+    <MissingClass>org.springframework.web.cors.CorsConfiguration</MissingClass>
+    <MissingClass>org.springframework.web.cors.UrlBasedCorsConfigurationSource</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport</MissingClass>
+    <MissingClass>org.springframework.web.util.UriBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+    <MissingClass>org.subethamail.smtp.helper.SimpleMessageListener</MissingClass>
+    <MissingClass>org.subethamail.smtp.helper.SimpleMessageListenerAdapter</MissingClass>
+    <MissingClass>org.subethamail.smtp.server.SMTPServer</MissingClass>
+    <MissingClass>pro.javatar.commons.reader.ResourceReader</MissingClass>
+    <MissingClass>pro.javatar.commons.reader.YamlReader</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.service.ApiInfo</MissingClass>
+    <MissingClass>springfox.documentation.service.ApiKey</MissingClass>
+    <MissingClass>springfox.documentation.service.AuthorizationScope</MissingClass>
+    <MissingClass>springfox.documentation.service.Contact</MissingClass>
+    <MissingClass>springfox.documentation.service.SecurityReference</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spi.service.contexts.SecurityContext</MissingClass>
+    <MissingClass>springfox.documentation.spi.service.contexts.SecurityContextBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 18:12:53 +0000" total_classes="610" referenced_classes="746" total_bugs="31" total_size="22646" num_packages="81" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="41.59" clock_seconds="12.81" peak_mbytes="1081.25" alloc_mbytes="3540.00" gc_seconds="0.36" priority_2="28" priority_1="3">
+    <PackageStats package="de.adorsys.ledgers.app" total_bugs="0" total_types="1" total_size="21">
+      <ClassStats class="de.adorsys.ledgers.app.LedgersApplication" sourceFile="LedgersApplication.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.app.initiation" total_bugs="0" total_types="2" total_size="233">
+      <ClassStats class="de.adorsys.ledgers.app.initiation.BankInitService" sourceFile="BankInitService.java" interface="false" size="192" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.initiation.PaymentRestInitiationService" sourceFile="PaymentRestInitiationService.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.app.mock" total_bugs="0" total_types="11" total_size="169">
+      <ClassStats class="de.adorsys.ledgers.app.mock.AccountBalance" sourceFile="AccountBalance.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.AccountBalances" sourceFile="AccountBalances.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.AuthConfig" sourceFile="AuthConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.BalancesData" sourceFile="BalancesData.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.BulkPaymentsData" sourceFile="BulkPaymentsData.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.MockAuthCodeGenerator" sourceFile="MockAuthCodeGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.MockBankConfigSource" sourceFile="MockBankConfigSource.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.MockBankInitDataConfiguration" sourceFile="MockBankInitDataConfiguration.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.MockbankInitData" sourceFile="MockbankInitData.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.SinglePaymentsData" sourceFile="SinglePaymentsData.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.mock.TransactionData" sourceFile="TransactionData.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.app.server" total_bugs="0" total_types="5" total_size="99">
+      <ClassStats class="de.adorsys.ledgers.app.server.ApiDateConstants" sourceFile="ApiDateConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.DateTimeDeserializer" sourceFile="DateTimeDeserializer.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.FileReader" sourceFile="FileReader.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.ObjectMapperConfig" sourceFile="ObjectMapperConfig.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.app.server.auth" total_bugs="0" total_types="6" total_size="129">
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.CorsConfig" sourceFile="CorsConfig.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.CorsConfigProperties" sourceFile="CorsConfigProperties.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.DisableEndpointFilter" sourceFile="DisableEndpointFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.MethodSecurityConfig" sourceFile="MethodSecurityConfig.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.PermittedResources" sourceFile="PermittedResources.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.app.server.auth.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.client" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.client.ExchangeRateClient" sourceFile="ExchangeRateClient.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.domain" total_bugs="0" total_types="26" total_size="1612">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.AccountReferenceBO" sourceFile="AccountReferenceBO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.AccountTypeBO" sourceFile="AccountTypeBO.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.AccountUsageBO" sourceFile="AccountUsageBO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.AddressBO" sourceFile="AddressBO.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.AmountBO" sourceFile="AmountBO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.BalanceBO" sourceFile="BalanceBO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.BalanceTypeBO" sourceFile="BalanceTypeBO.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.BankTransactionCode" sourceFile="BankTransactionCode.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.ChargeBearerBO" sourceFile="ChargeBearerBO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.DepositAccountBO" sourceFile="DepositAccountBO.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.DepositAccountBO$DepositAccountBOBuilder" sourceFile="DepositAccountBO.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.DepositAccountDetailsBO" sourceFile="DepositAccountDetailsBO.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.ExchangeRateBO" sourceFile="ExchangeRateBO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.FrequencyCodeBO" sourceFile="FrequencyCodeBO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.FundsConfirmationRequestBO" sourceFile="FundsConfirmationRequestBO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.MockBookingDetailsBO" sourceFile="MockBookingDetailsBO.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PaymentBO" sourceFile="PaymentBO.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PaymentOrderDetailsBO" sourceFile="PaymentOrderDetailsBO.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PaymentTargetBO" sourceFile="PaymentTargetBO.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PaymentTargetDetailsBO" sourceFile="PaymentTargetDetailsBO.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PaymentTypeBO" sourceFile="PaymentTypeBO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.PurposeCodeBO" sourceFile="PurposeCodeBO.java" interface="false" size="579" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.RemittanceInformationStructuredBO" sourceFile="RemittanceInformationStructuredBO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.ResultStatusBO" sourceFile="ResultStatusBO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.TransactionDetailsBO" sourceFile="TransactionDetailsBO.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.domain.TransactionStatusBO" sourceFile="TransactionStatusBO.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.service" total_bugs="0" total_types="10" total_size="64">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.CurrencyExchangeRatesService" sourceFile="CurrencyExchangeRatesService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountConfigService" sourceFile="DepositAccountConfigService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountInitService" sourceFile="DepositAccountInitService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountPaymentService" sourceFile="DepositAccountPaymentService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountService" sourceFile="DepositAccountService.java" interface="true" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountServiceBasePackage" sourceFile="DepositAccountServiceBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountServiceConfiguration" sourceFile="DepositAccountServiceConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.DepositAccountTransactionService" sourceFile="DepositAccountTransactionService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.EnableDepositAccountService" sourceFile="EnableDepositAccountService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.TransactionService" sourceFile="TransactionService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.service.domain" total_bugs="0" total_types="4" total_size="91">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.domain.ASPSPConfigData" sourceFile="ASPSPConfigData.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.domain.ASPSPConfigSource" sourceFile="ASPSPConfigSource.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.domain.ClearingAccount" sourceFile="ClearingAccount.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.domain.LedgerAccountModel" sourceFile="LedgerAccountModel.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.service.impl" total_bugs="0" total_types="12" total_size="1044">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.AbstractServiceImpl" sourceFile="AbstractServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.CurrencyExchangeRatesServiceImpl" sourceFile="CurrencyExchangeRatesServiceImpl.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.CurrencyExchangeRatesServiceImpl$1" sourceFile="CurrencyExchangeRatesServiceImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.DepositAccountConfigServiceImpl" sourceFile="DepositAccountConfigServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.DepositAccountInitServiceImpl" sourceFile="DepositAccountInitServiceImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.DepositAccountPaymentServiceImpl" sourceFile="DepositAccountPaymentServiceImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.DepositAccountServiceImpl" sourceFile="DepositAccountServiceImpl.java" interface="false" size="261" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.DepositAccountTransactionServiceImpl" sourceFile="DepositAccountTransactionServiceImpl.java" interface="false" size="178" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.ExecutionTimeHolder" sourceFile="ExecutionTimeHolder.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.PaymentExecutionScheduler" sourceFile="PaymentExecutionScheduler.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.PaymentExecutionService" sourceFile="PaymentExecutionService.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.impl.TransactionServiceImpl" sourceFile="TransactionServiceImpl.java" interface="false" size="148" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.api.service.mappers" total_bugs="0" total_types="10" total_size="1991">
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.DepositAccountMapper" sourceFile="DepositAccountMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.DepositAccountMapperImpl" sourceFile="DepositAccountMapperImpl.java" interface="false" size="186" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.DepositAccountMapperImpl$1" sourceFile="DepositAccountMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.PaymentMapper" sourceFile="PaymentMapper.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.PaymentMapperImpl" sourceFile="PaymentMapperImpl.java" interface="false" size="1684" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.PaymentMapperImpl$1" sourceFile="PaymentMapperImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.PostingMapper" sourceFile="PostingMapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.PostingMapperImpl" sourceFile="PostingMapperImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.SerializeService" sourceFile="SerializeService.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.api.service.mappers.TransactionDetailsMapper" sourceFile="TransactionDetailsMapper.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.db" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.deposit.db.DepositAccountDBBasePackage" sourceFile="DepositAccountDBBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.DepositAccountRepositoryConfiguration" sourceFile="DepositAccountRepositoryConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.EnableDepositAccountRepository" sourceFile="EnableDepositAccountRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.db.domain" total_bugs="3" total_types="15" total_size="1136" priority_2="1" priority_1="2">
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.AccountReference" sourceFile="AccountReference.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.AccountType" sourceFile="AccountType.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.AccountUsage" sourceFile="AccountUsage.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.Address" sourceFile="Address.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.Amount" sourceFile="Amount.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.ChargeBearer" sourceFile="ChargeBearer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.DepositAccount" sourceFile="DepositAccount.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.FrequencyCode" sourceFile="FrequencyCode.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.Payment" sourceFile="Payment.java" interface="false" size="105" bugs="2" priority_1="2"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.PaymentProduct" sourceFile="PaymentProduct.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.PaymentTarget" sourceFile="PaymentTarget.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.PaymentType" sourceFile="PaymentType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.PurposeCode" sourceFile="PurposeCode.java" interface="false" size="579" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.RemittanceInformationStructured" sourceFile="RemittanceInformationStructured.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.domain.TransactionStatus" sourceFile="TransactionStatus.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.deposit.db.repository" total_bugs="4" total_types="3" total_size="16" priority_2="4">
+      <ClassStats class="de.adorsys.ledgers.deposit.db.repository.DepositAccountRepository" sourceFile="DepositAccountRepository.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.repository.PaymentRepository" sourceFile="PaymentRepository.java" interface="true" size="4" bugs="4" priority_2="4"/>
+      <ClassStats class="de.adorsys.ledgers.deposit.db.repository.PaymentTargetRepository" sourceFile="PaymentTargetRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.account" total_bugs="0" total_types="15" total_size="553">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountBalanceTO" sourceFile="AccountBalanceTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountDetailsExtendedTO" sourceFile="AccountDetailsExtendedTO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountDetailsTO" sourceFile="AccountDetailsTO.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountIdentifierTypeTO" sourceFile="AccountIdentifierTypeTO.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountReferenceTO" sourceFile="AccountReferenceTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountReportTO" sourceFile="AccountReportTO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountStatusTO" sourceFile="AccountStatusTO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AccountTypeTO" sourceFile="AccountTypeTO.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.AdditionalAccountInformationTO" sourceFile="AdditionalAccountInformationTO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.BalanceTypeTO" sourceFile="BalanceTypeTO.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.ExchangeRateTO" sourceFile="ExchangeRateTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.FundsConfirmationRequestTO" sourceFile="FundsConfirmationRequestTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.MockBookingDetails" sourceFile="MockBookingDetails.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.TransactionTO" sourceFile="TransactionTO.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.account.UsageTypeTO" sourceFile="UsageTypeTO.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.general" total_bugs="0" total_types="9" total_size="128">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.AddressTO" sourceFile="AddressTO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure" sourceFile="BbanStructure.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure$1" sourceFile="BbanStructure.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure$EntryType" sourceFile="BbanStructure.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure$EntryType$1" sourceFile="BbanStructure.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure$EntryType$2" sourceFile="BbanStructure.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.BbanStructure$EntryType$3" sourceFile="BbanStructure.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.RecoveryPointTO" sourceFile="RecoveryPointTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.general.RevertRequestTO" sourceFile="RevertRequestTO.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.oauth" total_bugs="0" total_types="5" total_size="110">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.oauth.AuthoriseForUserTO" sourceFile="AuthoriseForUserTO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.oauth.GrantTypeTO" sourceFile="GrantTypeTO.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.oauth.OauthCodeResponseTO" sourceFile="OauthCodeResponseTO.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.oauth.OauthServerInfoTO" sourceFile="OauthServerInfoTO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.oauth.ResponseTypeTO" sourceFile="ResponseTypeTO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.payment" total_bugs="0" total_types="12" total_size="1009">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.AmountTO" sourceFile="AmountTO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.ChargeBearerTO" sourceFile="ChargeBearerTO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.ConsentKeyDataTO" sourceFile="ConsentKeyDataTO.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.FrequencyCodeTO" sourceFile="FrequencyCodeTO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.PaymentCoreDataTO" sourceFile="PaymentCoreDataTO.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.PaymentTO" sourceFile="PaymentTO.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.PaymentTargetTO" sourceFile="PaymentTargetTO.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.PaymentTypeTO" sourceFile="PaymentTypeTO.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.PurposeCodeTO" sourceFile="PurposeCodeTO.java" interface="false" size="579" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.RemittanceInformationStructuredTO" sourceFile="RemittanceInformationStructuredTO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.ResultStatusTO" sourceFile="ResultStatusTO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.payment.TransactionStatusTO" sourceFile="TransactionStatusTO.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.sca" total_bugs="0" total_types="16" total_size="470">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.AspspConsentDataSerial" sourceFile="AspspConsentDataSerial.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.AuthCodeDataTO" sourceFile="AuthCodeDataTO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.AuthConfirmationTO" sourceFile="AuthConfirmationTO.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ChallengeDataTO" sourceFile="ChallengeDataTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.GlobalScaResponseTO" sourceFile="GlobalScaResponseTO.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.OpTypeTO" sourceFile="OpTypeTO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.OtpFormatTO" sourceFile="OtpFormatTO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.SCAConsentResponseTO" sourceFile="SCAConsentResponseTO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.SCALoginResponseTO" sourceFile="SCALoginResponseTO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.SCAPaymentResponseTO" sourceFile="SCAPaymentResponseTO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.SCAResponseTO" sourceFile="SCAResponseTO.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ScaDataInfoTO" sourceFile="ScaDataInfoTO.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ScaInfoTO" sourceFile="ScaInfoTO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ScaLoginOprTO" sourceFile="ScaLoginOprTO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ScaStatusTO" sourceFile="ScaStatusTO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.sca.ScaStepTO" sourceFile="ScaStepTO.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.domain.um" total_bugs="0" total_types="16" total_size="490">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AccessTokenTO" sourceFile="AccessTokenTO.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AccessTypeTO" sourceFile="AccessTypeTO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AccountAccessTO" sourceFile="AccountAccessTO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AisAccountAccessInfoTO" sourceFile="AisAccountAccessInfoTO.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AisAccountAccessTypeTO" sourceFile="AisAccountAccessTypeTO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.AisConsentTO" sourceFile="AisConsentTO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.BearerTokenTO" sourceFile="BearerTokenTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.LoginKeyDataTO" sourceFile="LoginKeyDataTO.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.ScaMethodTypeTO" sourceFile="ScaMethodTypeTO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.ScaUserDataTO" sourceFile="ScaUserDataTO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.TokenUsageTO" sourceFile="TokenUsageTO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.UploadedDataTO" sourceFile="UploadedDataTO.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.UserCredentialsTO" sourceFile="UserCredentialsTO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.UserExtendedTO" sourceFile="UserExtendedTO.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.UserRoleTO" sourceFile="UserRoleTO.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.domain.um.UserTO" sourceFile="UserTO.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.exception" total_bugs="0" total_types="3" total_size="60">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.exception.MiddlewareErrorCode" sourceFile="MiddlewareErrorCode.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.exception.MiddlewareModuleException" sourceFile="MiddlewareModuleException.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.exception.MiddlewareModuleException$MiddlewareModuleExceptionBuilder" sourceFile="MiddlewareModuleException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.api.service" total_bugs="0" total_types="15" total_size="115">
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.AppManagementService" sourceFile="AppManagementService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.CurrencyService" sourceFile="CurrencyService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.EmailVerificationService" sourceFile="EmailVerificationService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareAccountManagementService" sourceFile="MiddlewareAccountManagementService.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareAuthConfirmationService" sourceFile="MiddlewareAuthConfirmationService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareOauthService" sourceFile="MiddlewareOauthService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareOnlineBankingService" sourceFile="MiddlewareOnlineBankingService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewarePaymentService" sourceFile="MiddlewarePaymentService.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareRecoveryService" sourceFile="MiddlewareRecoveryService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareResetPasswordService" sourceFile="MiddlewareResetPasswordService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareScaService" sourceFile="MiddlewareScaService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.MiddlewareUserManagementService" sourceFile="MiddlewareUserManagementService.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.ScaChallengeData" sourceFile="ScaChallengeData.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.ScaChallengeDataResolver" sourceFile="ScaChallengeDataResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.api.service.TokenStorageService" sourceFile="TokenStorageService.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.client" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.middleware.client.EnableLedgersMiddlewareRestClient" sourceFile="EnableLedgersMiddlewareRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.LedgersMiddlewareRestClientBasePackage" sourceFile="LedgersMiddlewareRestClientBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.LedgersMiddlewareRestClientConfiguration" sourceFile="LedgersMiddlewareRestClientConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.client.mappers" total_bugs="0" total_types="2" total_size="184">
+      <ClassStats class="de.adorsys.ledgers.middleware.client.mappers.PaymentMapperConfiguration" sourceFile="PaymentMapperConfiguration.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.mappers.PaymentMapperTO" sourceFile="PaymentMapperTO.java" interface="false" size="161" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.client.rest" total_bugs="0" total_types="15" total_size="27">
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.AccountMgmtStaffRestClient" sourceFile="AccountMgmtStaffRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.AccountRestClient" sourceFile="AccountRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.AdminRestClient" sourceFile="AdminRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.AppMgmtRestClient" sourceFile="AppMgmtRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.AuthRequestInterceptor" sourceFile="AuthRequestInterceptor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.ConsentRestClient" sourceFile="ConsentRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.DataRestClient" sourceFile="DataRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.LedgersURL" sourceFile="LedgersURL.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.MockTransactionsStaffRestClient" sourceFile="MockTransactionsStaffRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.OauthRestClient" sourceFile="OauthRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.PaymentRestClient" sourceFile="PaymentRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.ResetPasswordRestClient" sourceFile="ResetPasswordRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.ScaVerificationRestClient" sourceFile="ScaVerificationRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.UserMgmtRestClient" sourceFile="UserMgmtRestClient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.client.rest.UserMgmtStaffRestClient" sourceFile="UserMgmtStaffRestClient.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.EnableLedgersMiddlewareService" sourceFile="EnableLedgersMiddlewareService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.MiddlewareServiceBasePackage" sourceFile="MiddlewareServiceBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.MiddlewareServiceConfiguration" sourceFile="MiddlewareServiceConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.config" total_bugs="0" total_types="4" total_size="58">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.config.CurrencyConfigurationProperties" sourceFile="CurrencyConfigurationProperties.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.config.EmailVerificationProperties" sourceFile="EmailVerificationProperties.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.config.EmailVerificationProperties$EmailTemplate" sourceFile="EmailVerificationProperties.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.config.PaymentProductsConfig" sourceFile="PaymentProductsConfig.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.converter" total_bugs="0" total_types="37" total_size="3194">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccessTokenMapper" sourceFile="AccessTokenMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccessTokenMapperImpl" sourceFile="AccessTokenMapperImpl.java" interface="false" size="167" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccessTokenMapperImpl$1" sourceFile="AccessTokenMapperImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccountDetailsMapper" sourceFile="AccountDetailsMapper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccountDetailsMapperImpl" sourceFile="AccountDetailsMapperImpl.java" interface="false" size="306" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AccountDetailsMapperImpl$1" sourceFile="AccountDetailsMapperImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AdditionalAccountInformationMapper" sourceFile="AdditionalAccountInformationMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AdditionalAccountInformationMapperImpl" sourceFile="AdditionalAccountInformationMapperImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AisConsentBOMapper" sourceFile="AisConsentBOMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AisConsentBOMapperImpl" sourceFile="AisConsentBOMapperImpl.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AisConsentBOMapperImpl$1" sourceFile="AisConsentBOMapperImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AmountMapper" sourceFile="AmountMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AmountMapperImpl" sourceFile="AmountMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AuthCodeDataConverter" sourceFile="AuthCodeDataConverter.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AuthCodeDataConverterImpl" sourceFile="AuthCodeDataConverterImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.AuthCodeDataConverterImpl$1" sourceFile="AuthCodeDataConverterImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.BearerTokenMapper" sourceFile="BearerTokenMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.BearerTokenMapperImpl" sourceFile="BearerTokenMapperImpl.java" interface="false" size="187" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.BearerTokenMapperImpl$1" sourceFile="BearerTokenMapperImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.OauthServerInfoMapper" sourceFile="OauthServerInfoMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.OauthServerInfoMapperImpl" sourceFile="OauthServerInfoMapperImpl.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.OauthServerInfoMapperImpl$1" sourceFile="OauthServerInfoMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.PageMapper" sourceFile="PageMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.PageMapperImpl" sourceFile="PageMapperImpl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.PaymentConverter" sourceFile="PaymentConverter.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.PaymentConverterImpl" sourceFile="PaymentConverterImpl.java" interface="false" size="1650" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.PaymentConverterImpl$1" sourceFile="PaymentConverterImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.RecoveryPointMapperTO" sourceFile="RecoveryPointMapperTO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.RecoveryPointMapperTOImpl" sourceFile="RecoveryPointMapperTOImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.ScaInfoMapper" sourceFile="ScaInfoMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.ScaInfoMapperImpl" sourceFile="ScaInfoMapperImpl.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.ScaInfoMapperImpl$1" sourceFile="ScaInfoMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.ScaResponseConverter" sourceFile="ScaResponseConverter.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.ScaResponseResolver" sourceFile="ScaResponseResolver.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.UserMapper" sourceFile="UserMapper.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.UserMapperImpl" sourceFile="UserMapperImpl.java" interface="false" size="265" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.converter.UserMapperImpl$1" sourceFile="UserMapperImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.policies" total_bugs="0" total_types="3" total_size="107">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.policies.PaymentCancelPolicy" sourceFile="PaymentCancelPolicy.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.policies.PaymentCoreDataPolicy" sourceFile="PaymentCoreDataPolicy.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.policies.PaymentCoreDataPolicyHelper" sourceFile="PaymentCoreDataPolicyHelper.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.sca" total_bugs="0" total_types="10" total_size="97">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.AbstractScaChallengeData" sourceFile="AbstractScaChallengeData.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.AppOtpScaChallengeData" sourceFile="AppOtpScaChallengeData.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.ChallengeDataConfig" sourceFile="ChallengeDataConfig.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.ChallengeDataConfig$1" sourceFile="ChallengeDataConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.ChipOtpScaChallengeData" sourceFile="ChipOtpScaChallengeData.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.EmailScaChallengeData" sourceFile="EmailScaChallengeData.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.MobileScaChallengeData" sourceFile="MobileScaChallengeData.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.PhotoOtpScaChallengeData" sourceFile="PhotoOtpScaChallengeData.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.PushOtpScaChallengeData" sourceFile="PushOtpScaChallengeData.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.sca.SmsOtpScaChallengeData" sourceFile="SmsOtpScaChallengeData.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.service" total_bugs="0" total_types="17" total_size="1355">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.AccessService" sourceFile="AccessService.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.AppManagementServiceImpl" sourceFile="AppManagementServiceImpl.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.CurrencyServiceImpl" sourceFile="CurrencyServiceImpl.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.EmailVerificationServiceImpl" sourceFile="EmailVerificationServiceImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareAccountManagementServiceImpl" sourceFile="MiddlewareAccountManagementServiceImpl.java" interface="false" size="313" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareAuthConfirmationServiceImpl" sourceFile="MiddlewareAuthConfirmationServiceImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareOauthServiceImpl" sourceFile="MiddlewareOauthServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareOnlineBankingServiceImpl" sourceFile="MiddlewareOnlineBankingServiceImpl.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewarePaymentServiceImpl" sourceFile="MiddlewarePaymentServiceImpl.java" interface="false" size="220" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareRecoveryPointServiceImpl" sourceFile="MiddlewareRecoveryPointServiceImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareResetPasswordServiceImpl" sourceFile="MiddlewareResetPasswordServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareScaServiceImpl" sourceFile="MiddlewareScaServiceImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.MiddlewareUserManagementServiceImpl" sourceFile="MiddlewareUserManagementServiceImpl.java" interface="false" size="199" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.SCAUtils" sourceFile="SCAUtils.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.ScaChallengeDataResolverImpl" sourceFile="ScaChallengeDataResolverImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.ScaResponseMessageResolver" sourceFile="ScaResponseMessageResolver.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.TokenStorageServiceImpl" sourceFile="TokenStorageServiceImpl.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.impl.service.upload" total_bugs="0" total_types="6" total_size="173">
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.ExpressionExecutionWrapper" sourceFile="ExpressionExecutionWrapper.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.PaymentGenerationService" sourceFile="PaymentGenerationService.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.UploadBalanceService" sourceFile="UploadBalanceService.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.UploadDepositAccountService" sourceFile="UploadDepositAccountService.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.UploadPaymentService" sourceFile="UploadPaymentService.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.impl.service.upload.UploadUserService" sourceFile="UploadUserService.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.EnableLedgersMiddlewareRest" sourceFile="EnableLedgersMiddlewareRest.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.LedgersMiddlewareRestBasePackage" sourceFile="LedgersMiddlewareRestBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.LedgersMiddlewareRestConfiguration" sourceFile="LedgersMiddlewareRestConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.annotation" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.annotation.MiddlewareResetResource" sourceFile="MiddlewareResetResource.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.annotation.MiddlewareUserResource" sourceFile="MiddlewareUserResource.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.exception" total_bugs="0" total_types="6" total_size="155">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.DepositHttpStatusResolver" sourceFile="DepositHttpStatusResolver.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.ExceptionAdvisor" sourceFile="ExceptionAdvisor.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.MiddlewareHttpStatusResolver" sourceFile="MiddlewareHttpStatusResolver.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.PostingHttpStatusResolver" sourceFile="PostingHttpStatusResolver.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.ScaHttpStatusResolver" sourceFile="ScaHttpStatusResolver.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.exception.UserManagementHttpStatusResolver" sourceFile="UserManagementHttpStatusResolver.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.filter" total_bugs="0" total_types="3" total_size="89">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.filter.MultiReadHttpServletRequest" sourceFile="MultiReadHttpServletRequest.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.filter.MultiReadHttpServletRequest$1" sourceFile="MultiReadHttpServletRequest.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.filter.ValidationFilter" sourceFile="ValidationFilter.java" interface="false" size="57" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.mapper" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.mapper.MockTransactionMapper" sourceFile="MockTransactionMapper.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.mapper.MockTransactionMapperImpl" sourceFile="MockTransactionMapperImpl.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.resource" total_bugs="0" total_types="29" total_size="623">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AccountMgmStaffResource" sourceFile="AccountMgmStaffResource.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AccountMgmStaffResourceAPI" sourceFile="AccountMgmStaffResourceAPI.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AccountResource" sourceFile="AccountResource.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AccountRestAPI" sourceFile="AccountRestAPI.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AdminResource" sourceFile="AdminResource.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AdminResourceAPI" sourceFile="AdminResourceAPI.java" interface="true" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AppMgmtResource" sourceFile="AppMgmtResource.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.AppMgmtRestAPI" sourceFile="AppMgmtRestAPI.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ConsentResource" sourceFile="ConsentResource.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ConsentRestAPI" sourceFile="ConsentRestAPI.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.DataMgmtStaffAPI" sourceFile="DataMgmtStaffAPI.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.DataMgmtStaffResource" sourceFile="DataMgmtStaffResource.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.OauthResources" sourceFile="OauthResources.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.OauthRestApi" sourceFile="OauthRestApi.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.PaymentResource" sourceFile="PaymentResource.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.PaymentRestAPI" sourceFile="PaymentRestAPI.java" interface="true" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.RedirectScaResource" sourceFile="RedirectScaResource.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.RedirectScaRestAPI" sourceFile="RedirectScaRestAPI.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ResetPasswordResource" sourceFile="ResetPasswordResource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ResetPasswordRestAPI" sourceFile="ResetPasswordRestAPI.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ScaVerificationResource" sourceFile="ScaVerificationResource.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.ScaVerificationRestAPI" sourceFile="ScaVerificationRestAPI.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.TransactionsStaffResource" sourceFile="TransactionsStaffResource.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.TransactionsStaffResourceAPI" sourceFile="TransactionsStaffResourceAPI.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.UnprotectedEndpoint" sourceFile="UnprotectedEndpoint.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.UserMgmtResource" sourceFile="UserMgmtResource.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.UserMgmtRestAPI" sourceFile="UserMgmtRestAPI.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.UserMgmtStaffResource" sourceFile="UserMgmtStaffResource.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.resource.UserMgmtStaffResourceAPI" sourceFile="UserMgmtStaffResourceAPI.java" interface="true" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.security" total_bugs="0" total_types="8" total_size="212">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.AccountAccessMethodSecurityExpressionHandler" sourceFile="AccountAccessMethodSecurityExpressionHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.AccountAccessMethodSecurityExpressionRoot" sourceFile="AccountAccessMethodSecurityExpressionRoot.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.JWTAuthenticationFilter" sourceFile="JWTAuthenticationFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.MiddlewareAuthentication" sourceFile="MiddlewareAuthentication.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.ScaInfoHolder" sourceFile="ScaInfoHolder.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.ScaInfoHolderImpl" sourceFile="ScaInfoHolderImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.SecurityExpressionAdapter" sourceFile="SecurityExpressionAdapter.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.security.TokenAuthenticationService" sourceFile="TokenAuthenticationService.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.middleware.rest.utils" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="de.adorsys.ledgers.middleware.rest.utils.Constants" sourceFile="Constants.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.api.domain" total_bugs="0" total_types="16" total_size="507">
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.AccountCategoryBO" sourceFile="AccountCategoryBO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.AccountStmtBO" sourceFile="AccountStmtBO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.BalanceSideBO" sourceFile="BalanceSideBO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.ChartOfAccountBO" sourceFile="ChartOfAccountBO.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.FinancialStmtBO" sourceFile="FinancialStmtBO.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.HashRecordBO" sourceFile="HashRecordBO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.LedgerAccountBO" sourceFile="LedgerAccountBO.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.LedgerBO" sourceFile="LedgerBO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.LedgerStmtBO" sourceFile="LedgerStmtBO.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.NamedBO" sourceFile="NamedBO.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.PostingBO" sourceFile="PostingBO.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.PostingLineBO" sourceFile="PostingLineBO.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.PostingStatusBO" sourceFile="PostingStatusBO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.PostingTraceBO" sourceFile="PostingTraceBO.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.PostingTypeBO" sourceFile="PostingTypeBO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.domain.StmtStatusBO" sourceFile="StmtStatusBO.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.api.service" total_bugs="0" total_types="5" total_size="25">
+      <ClassStats class="de.adorsys.ledgers.postings.api.service.AccountStmtService" sourceFile="AccountStmtService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.service.ChartOfAccountService" sourceFile="ChartOfAccountService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.service.LedgerService" sourceFile="LedgerService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.service.PostingMockService" sourceFile="PostingMockService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.api.service.PostingService" sourceFile="PostingService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.db" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.postings.db.EnablePostingsReporitory" sourceFile="EnablePostingsReporitory.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.PostingsDBBasePackage" sourceFile="PostingsDBBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.PostingsRepositoryConfiguration" sourceFile="PostingsRepositoryConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.db.domain" total_bugs="13" total_types="20" total_size="655" priority_2="12" priority_1="1">
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.AccountCategory" sourceFile="AccountCategory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.AccountStmt" sourceFile="AccountStmt.java" interface="false" size="33" bugs="2" priority_2="2"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.Amount" sourceFile="Amount.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.BalanceSide" sourceFile="BalanceSide.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.ChartOfAccount" sourceFile="ChartOfAccount.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.FinancialStmt" sourceFile="FinancialStmt.java" interface="false" size="33" bugs="2" priority_2="2"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.HashRecord" sourceFile="HashRecord.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.Ledger" sourceFile="Ledger.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.LedgerAccount" sourceFile="LedgerAccount.java" interface="false" size="37" bugs="3" priority_2="3"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.LedgerStmt" sourceFile="LedgerStmt.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.NamedEntity" sourceFile="NamedEntity.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.OpNote" sourceFile="OpNote.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.OperationDetails" sourceFile="OperationDetails.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.Posting" sourceFile="Posting.java" interface="false" size="95" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.PostingLine" sourceFile="PostingLine.java" interface="false" size="82" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.PostingStatus" sourceFile="PostingStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.PostingTrace" sourceFile="PostingTrace.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.PostingType" sourceFile="PostingType.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.domain.StmtStatus" sourceFile="StmtStatus.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.db.repository" total_bugs="4" total_types="12" total_size="28" priority_2="4">
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.AccountStmtRepository" sourceFile="AccountStmtRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.BaseEntityRepository" sourceFile="BaseEntityRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.ChartOfAccountRepository" sourceFile="ChartOfAccountRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.LedgerAccountRepository" sourceFile="LedgerAccountRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.LedgerRepository" sourceFile="LedgerRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.LedgerStmtRepository" sourceFile="LedgerStmtRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.NamedEntityRepository" sourceFile="NamedEntityRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.OpNoteRepository" sourceFile="OpNoteRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.PostingLineRepository" sourceFile="PostingLineRepository.java" interface="true" size="6" bugs="2" priority_2="2"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.PostingRepository" sourceFile="PostingRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.PostingTraceRepository" sourceFile="PostingTraceRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.db.repository.TimeBasedEntityRepository" sourceFile="TimeBasedEntityRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.db.utils" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="de.adorsys.ledgers.postings.db.utils.RecordHashHelper" sourceFile="RecordHashHelper.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.impl" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.postings.impl.EnablePostingService" sourceFile="EnablePostingService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.PostingServiceBasePackage" sourceFile="PostingServiceBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.PostingServiceConfiguration" sourceFile="PostingServiceConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.impl.converter" total_bugs="0" total_types="17" total_size="884">
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.AccountStmtMapper" sourceFile="AccountStmtMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.AccountStmtMapperImpl" sourceFile="AccountStmtMapperImpl.java" interface="false" size="229" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.AccountStmtMapperImpl$1" sourceFile="AccountStmtMapperImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.ChartOfAccountMapper" sourceFile="ChartOfAccountMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.ChartOfAccountMapperImpl" sourceFile="ChartOfAccountMapperImpl.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LedgerAccountMapper" sourceFile="LedgerAccountMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LedgerAccountMapperImpl" sourceFile="LedgerAccountMapperImpl.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LedgerAccountMapperImpl$1" sourceFile="LedgerAccountMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LedgerMapper" sourceFile="LedgerMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LedgerMapperImpl" sourceFile="LedgerMapperImpl.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.LocalDateTimeAttributeConverter" sourceFile="LocalDateTimeAttributeConverter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingLineMapper" sourceFile="PostingLineMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingLineMapperImpl" sourceFile="PostingLineMapperImpl.java" interface="false" size="137" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingLineMapperImpl$1" sourceFile="PostingLineMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingMapper" sourceFile="PostingMapper.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingMapperImpl" sourceFile="PostingMapperImpl.java" interface="false" size="227" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.converter.PostingMapperImpl$1" sourceFile="PostingMapperImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.postings.impl.service" total_bugs="0" total_types="6" total_size="458">
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.AbstractServiceImpl" sourceFile="AbstractServiceImpl.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.AccountStmtServiceImpl" sourceFile="AccountStmtServiceImpl.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.ChartOfAccountServiceImpl" sourceFile="ChartOfAccountServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.LedgerServiceImpl" sourceFile="LedgerServiceImpl.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.PostingServiceImpl" sourceFile="PostingServiceImpl.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.postings.impl.service.PostingsMockServiceImpl" sourceFile="PostingsMockServiceImpl.java" interface="false" size="58" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.rest.config" total_bugs="0" total_types="1" total_size="20">
+      <ClassStats class="de.adorsys.ledgers.rest.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.rest.exception" total_bugs="0" total_types="3" total_size="60">
+      <ClassStats class="de.adorsys.ledgers.rest.exception.ExceptionAdvisor" sourceFile="ExceptionAdvisor.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.rest.exception.NotFoundRestException" sourceFile="NotFoundRestException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.rest.exception.RestException" sourceFile="RestException.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.rest.posting.controller" total_bugs="0" total_types="4" total_size="81">
+      <ClassStats class="de.adorsys.ledgers.rest.posting.controller.ChartOfAccountController" sourceFile="ChartOfAccountController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.rest.posting.controller.HealthController" sourceFile="HealthController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.rest.posting.controller.LedgerController" sourceFile="LedgerController.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.rest.posting.controller.PostingController" sourceFile="PostingController.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.db" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.sca.db.EnableSCARepository" sourceFile="EnableSCARepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.SCABasePackage" sourceFile="SCABasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.SCARepositoryConfiguration" sourceFile="SCARepositoryConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.db.domain" total_bugs="0" total_types="5" total_size="153">
+      <ClassStats class="de.adorsys.ledgers.sca.db.domain.AuthCodeStatus" sourceFile="AuthCodeStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.domain.OpType" sourceFile="OpType.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.domain.RecoveryPointEntity" sourceFile="RecoveryPointEntity.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.domain.SCAOperationEntity" sourceFile="SCAOperationEntity.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.domain.ScaStatus" sourceFile="ScaStatus.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.db.repository" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="de.adorsys.ledgers.sca.db.repository.RecoveryPointRepository" sourceFile="RecoveryPointRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.db.repository.SCAOperationRepository" sourceFile="SCAOperationRepository.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.domain" total_bugs="0" total_types="8" total_size="237">
+      <ClassStats class="de.adorsys.ledgers.sca.domain.AuthCodeDataBO" sourceFile="AuthCodeDataBO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.AuthCodeStatusBO" sourceFile="AuthCodeStatusBO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.OpTypeBO" sourceFile="OpTypeBO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.RecoveryPointBO" sourceFile="RecoveryPointBO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.SCAOperationBO" sourceFile="SCAOperationBO.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.ScaAuthConfirmationBO" sourceFile="ScaAuthConfirmationBO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.ScaStatusBO" sourceFile="ScaStatusBO.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.domain.ScaValidationBO" sourceFile="ScaValidationBO.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.mock" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="de.adorsys.ledgers.sca.mock.MockSmtpServer" sourceFile="MockSmtpServer.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.mock.MockSmtpServer$1" sourceFile="MockSmtpServer.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.service" total_bugs="0" total_types="7" total_size="28">
+      <ClassStats class="de.adorsys.ledgers.sca.service.AuthCodeGenerator" sourceFile="AuthCodeGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.EnableSCAService" sourceFile="EnableSCAService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.RecoveryPointService" sourceFile="RecoveryPointService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.SCAOperationService" sourceFile="SCAOperationService.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.SCASender" sourceFile="SCASender.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.SCAServiceBasePackage" sourceFile="SCAServiceBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.SCAServiceConfiguration" sourceFile="SCAServiceConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.service.impl" total_bugs="0" total_types="4" total_size="361">
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.AuthCodeGeneratorImpl" sourceFile="AuthCodeGeneratorImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.RecoveryPointServiceImpl" sourceFile="RecoveryPointServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.SCAOperationServiceImpl" sourceFile="SCAOperationServiceImpl.java" interface="false" size="319" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.SCAOperationServiceImpl$OperationHashItem" sourceFile="SCAOperationServiceImpl.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.service.impl.mapper" total_bugs="0" total_types="5" total_size="91">
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.mapper.RecoveryPointMapper" sourceFile="RecoveryPointMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.mapper.RecoveryPointMapperImpl" sourceFile="RecoveryPointMapperImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.mapper.SCAOperationMapper" sourceFile="SCAOperationMapper.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.mapper.SCAOperationMapperImpl" sourceFile="SCAOperationMapperImpl.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.mapper.SCAOperationMapperImpl$1" sourceFile="SCAOperationMapperImpl.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.service.impl.sender" total_bugs="0" total_types="8" total_size="91">
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.AppOtpSender" sourceFile="AppOtpSender.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.ChipOtpSender" sourceFile="ChipOtpSender.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.EmailSender" sourceFile="EmailSender.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.MailSCASender" sourceFile="MailSCASender.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.MobileSCASender" sourceFile="MobileSCASender.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.PhotoOtpSender" sourceFile="PhotoOtpSender.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.PushOtpSender" sourceFile="PushOtpSender.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.sca.service.impl.sender.SmsOtpSender" sourceFile="SmsOtpSender.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.sca.service.job" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="de.adorsys.ledgers.sca.service.job.SCAOperationExpirationJob" sourceFile="SCAOperationExpirationJob.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.security" total_bugs="0" total_types="5" total_size="95">
+      <ClassStats class="de.adorsys.ledgers.security.GenerateCode" sourceFile="GenerateCode.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.security.ResetPassword" sourceFile="ResetPassword.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.security.SendCode" sourceFile="SendCode.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.security.UpdatePassword" sourceFile="UpdatePassword.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.security.VerifyCode" sourceFile="VerifyCode.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.api.domain" total_bugs="0" total_types="20" total_size="593">
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccessTokenBO" sourceFile="AccessTokenBO.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccessTypeBO" sourceFile="AccessTypeBO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccountAccessBO" sourceFile="AccountAccessBO.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccountIdentifierTypeBO" sourceFile="AccountIdentifierTypeBO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccountIdentifierTypeBO$1" sourceFile="AccountIdentifierTypeBO.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AccountIdentifierTypeBO$2" sourceFile="AccountIdentifierTypeBO.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AdditionalAccountInfoBO" sourceFile="AdditionalAccountInfoBO.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AisAccountAccessInfoBO" sourceFile="AisAccountAccessInfoBO.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AisAccountAccessTypeBO" sourceFile="AisAccountAccessTypeBO.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.AisConsentBO" sourceFile="AisConsentBO.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.BearerTokenBO" sourceFile="BearerTokenBO.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.EmailVerificationBO" sourceFile="EmailVerificationBO.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.EmailVerificationStatusBO" sourceFile="EmailVerificationStatusBO.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.ScaInfoBO" sourceFile="ScaInfoBO.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.ScaMethodTypeBO" sourceFile="ScaMethodTypeBO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.ScaUserDataBO" sourceFile="ScaUserDataBO.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.TokenUsageBO" sourceFile="TokenUsageBO.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.UserBO" sourceFile="UserBO.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.UserExtendedBO" sourceFile="UserExtendedBO.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.UserRoleBO" sourceFile="UserRoleBO.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.api.domain.oauth" total_bugs="0" total_types="5" total_size="100">
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.oauth.GrantTypeBO" sourceFile="GrantTypeBO.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.oauth.OauthCodeResponseBO" sourceFile="OauthCodeResponseBO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.oauth.OauthServerInfoBO" sourceFile="OauthServerInfoBO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.oauth.OauthTokenResponseBO" sourceFile="OauthTokenResponseBO.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.domain.oauth.ResponseTypeBO" sourceFile="ResponseTypeBO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.api.service" total_bugs="0" total_types="9" total_size="55">
+      <ClassStats class="de.adorsys.ledgers.um.api.service.AuthorizationService" sourceFile="AuthorizationService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.OauthAuthorisationService" sourceFile="OauthAuthorisationService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.ResetPasswordCodeGenerator" sourceFile="ResetPasswordCodeGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.ResetPasswordCodeSender" sourceFile="ResetPasswordCodeSender.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.ResetPasswordCodeVerifier" sourceFile="ResetPasswordCodeVerifier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.ScaUserDataService" sourceFile="ScaUserDataService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.ScaVerificationService" sourceFile="ScaVerificationService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.UpdatePasswordService" sourceFile="UpdatePasswordService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.api.service.UserService" sourceFile="UserService.java" interface="true" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.db" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.um.db.EnableUserManagmentRepository" sourceFile="EnableUserManagmentRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.UserManagementBasePackage" sourceFile="UserManagementBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.UserManagementRepositoryConfiguration" sourceFile="UserManagementRepositoryConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.db.domain" total_bugs="2" total_types="13" total_size="393" priority_2="2">
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.AccessType" sourceFile="AccessType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.AccountAccess" sourceFile="AccountAccess.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.AisAccountAccessType" sourceFile="AisAccountAccessType.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.AisConsentEntity" sourceFile="AisConsentEntity.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.EmailVerificationEntity" sourceFile="EmailVerificationEntity.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.EmailVerificationStatus" sourceFile="EmailVerificationStatus.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.OauthCodeEntity" sourceFile="OauthCodeEntity.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.ResetPasswordEntity" sourceFile="ResetPasswordEntity.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.ResetPasswordStatus" sourceFile="ResetPasswordStatus.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.ScaMethodType" sourceFile="ScaMethodType.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.ScaUserDataEntity" sourceFile="ScaUserDataEntity.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.UserEntity" sourceFile="UserEntity.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.domain.UserRole" sourceFile="UserRole.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.db.repository" total_bugs="5" total_types="7" total_size="31" priority_2="5">
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.AccountAccessRepository" sourceFile="AccountAccessRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.AisConsentRepository" sourceFile="AisConsentRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.EmailVerificationRepository" sourceFile="EmailVerificationRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.OauthCodeRepository" sourceFile="OauthCodeRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.ResetPasswordRepository" sourceFile="ResetPasswordRepository.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.ScaUserDataRepository" sourceFile="ScaUserDataRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.db.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="17" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.impl" total_bugs="0" total_types="3" total_size="7">
+      <ClassStats class="de.adorsys.ledgers.um.impl.EnableUserManagementService" sourceFile="EnableUserManagementService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.UserManagementServiceBasePackage" sourceFile="UserManagementServiceBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.UserManagementServiceConfiguration" sourceFile="UserManagementServiceConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.impl.converter" total_bugs="0" total_types="9" total_size="538">
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.AisConsentMapper" sourceFile="AisConsentMapper.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.AisConsentMapperImpl" sourceFile="AisConsentMapperImpl.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.AisConsentMapperImpl$1" sourceFile="AisConsentMapperImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.EmailVerificationMapper" sourceFile="EmailVerificationMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.EmailVerificationMapperImpl" sourceFile="EmailVerificationMapperImpl.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.EmailVerificationMapperImpl$1" sourceFile="EmailVerificationMapperImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.UserConverter" sourceFile="UserConverter.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.UserConverterImpl" sourceFile="UserConverterImpl.java" interface="false" size="255" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.converter.UserConverterImpl$1" sourceFile="UserConverterImpl.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.impl.service" total_bugs="0" total_types="8" total_size="567">
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.AuthorizationServiceImpl" sourceFile="AuthorizationServiceImpl.java" interface="false" size="157" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.BearerTokenService" sourceFile="BearerTokenService.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.BearerTokenService$1" sourceFile="BearerTokenService.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.HashMacSecretSource" sourceFile="HashMacSecretSource.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.OauthAuthorisationServiceImpl" sourceFile="OauthAuthorisationServiceImpl.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.ScaUserDataServiceImpl" sourceFile="ScaUserDataServiceImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.ScaVerificationServiceImpl" sourceFile="ScaVerificationServiceImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="194" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.impl.service.config" total_bugs="0" total_types="2" total_size="46">
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.config.OauthConfigurationProperties" sourceFile="OauthConfigurationProperties.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.config.OauthConfigurationProperties$OauthLifeTime" sourceFile="OauthConfigurationProperties.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.impl.service.password" total_bugs="0" total_types="5" total_size="101">
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.password.ResetPasswordCodeVerifierImpl" sourceFile="ResetPasswordCodeVerifierImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.password.ResetPasswordEmailCodeGeneratorImpl" sourceFile="ResetPasswordEmailCodeGeneratorImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.password.ResetPasswordEmailCodeSenderImpl" sourceFile="ResetPasswordEmailCodeSenderImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.password.UpdatePasswordServiceImpl" sourceFile="UpdatePasswordServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.impl.service.password.UserMailSender" sourceFile="UserMailSender.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.rest.controller" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="de.adorsys.ledgers.um.rest.controller.UserResource" sourceFile="UserResource.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.um.rest.exception" total_bugs="0" total_types="2" total_size="19">
+      <ClassStats class="de.adorsys.ledgers.um.rest.exception.NotFoundRestException" sourceFile="NotFoundRestException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.um.rest.exception.RestException" sourceFile="RestException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.util" total_bugs="0" total_types="7" total_size="54">
+      <ClassStats class="de.adorsys.ledgers.util.Base16" sourceFile="Base16.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.CloneUtils" sourceFile="CloneUtils.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.EnableUtils" sourceFile="EnableUtils.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.Ids" sourceFile="Ids.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.PasswordEnc" sourceFile="PasswordEnc.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.UtilsBasePackage" sourceFile="UtilsBasePackage.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.UtilsConfiguration" sourceFile="UtilsConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.util.domain" total_bugs="0" total_types="2" total_size="69">
+      <ClassStats class="de.adorsys.ledgers.util.domain.CustomPageImpl" sourceFile="CustomPageImpl.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.domain.CustomPageableImpl" sourceFile="CustomPageableImpl.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.util.exception" total_bugs="0" total_types="12" total_size="242">
+      <ClassStats class="de.adorsys.ledgers.util.exception.DepositErrorCode" sourceFile="DepositErrorCode.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.DepositModuleException" sourceFile="DepositModuleException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.DepositModuleException$DepositModuleExceptionBuilder" sourceFile="DepositModuleException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.PostingErrorCode" sourceFile="PostingErrorCode.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.PostingModuleException" sourceFile="PostingModuleException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.PostingModuleException$PostingModuleExceptionBuilder" sourceFile="PostingModuleException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.SCAErrorCode" sourceFile="SCAErrorCode.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.ScaModuleException" sourceFile="ScaModuleException.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.ScaModuleException$ScaModuleExceptionBuilder" sourceFile="ScaModuleException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.UserManagementErrorCode" sourceFile="UserManagementErrorCode.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.UserManagementModuleException" sourceFile="UserManagementModuleException.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.exception.UserManagementModuleException$UserManagementModuleExceptionBuilder" sourceFile="UserManagementModuleException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.util.hash" total_bugs="0" total_types="5" total_size="42">
+      <ClassStats class="de.adorsys.ledgers.util.hash.BaseHashItem" sourceFile="BaseHashItem.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.hash.HashGenerationException" sourceFile="HashGenerationException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.hash.HashGenerator" sourceFile="HashGenerator.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.hash.HashGeneratorImpl" sourceFile="HashGeneratorImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.hash.HashItem" sourceFile="HashItem.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.adorsys.ledgers.util.tan.encriptor" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="de.adorsys.ledgers.util.tan.encriptor.EncryptorConfiguration" sourceFile="EncryptorConfiguration.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="de.adorsys.ledgers.util.tan.encriptor.TanEncryptor" sourceFile="TanEncryptor.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="800" invocations="4728" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="10624" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="611" invocations="4735" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="10014" standardDeviationMicrosecondsPerInvocation="307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="583" invocations="4734" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="15511" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="494" invocations="4754" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="9256" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="488" invocations="1970" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="60750" standardDeviationMicrosecondsPerInvocation="1597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="472" invocations="4761" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="19602" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="462" invocations="4740" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="29942" standardDeviationMicrosecondsPerInvocation="506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="329" invocations="2670" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="3775" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="308" invocations="746" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="12216" standardDeviationMicrosecondsPerInvocation="977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="306" invocations="746" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="10704" standardDeviationMicrosecondsPerInvocation="910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="188" invocations="5178" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="5080" standardDeviationMicrosecondsPerInvocation="141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="177" invocations="610" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="7377" standardDeviationMicrosecondsPerInvocation="592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="174" invocations="1985" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="28318" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="172" invocations="4735" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="15730" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="166" invocations="610" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="12842" standardDeviationMicrosecondsPerInvocation="1310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="165" invocations="5247" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="25301" standardDeviationMicrosecondsPerInvocation="375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="165" invocations="610" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="4148" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="154" invocations="610" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="4004" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="146" invocations="84103" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="12861" standardDeviationMicrosecondsPerInvocation="45"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="132" invocations="610" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="3972" standardDeviationMicrosecondsPerInvocation="381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="129" invocations="610" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="10638" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="115" invocations="4728" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="4888" standardDeviationMicrosecondsPerInvocation="90"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="108" invocations="980" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="13820" standardDeviationMicrosecondsPerInvocation="466"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="108" invocations="746" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="2847" standardDeviationMicrosecondsPerInvocation="288"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="106" invocations="746" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="20165" standardDeviationMicrosecondsPerInvocation="755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="105" invocations="746" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="9283" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="100" invocations="610" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="7700" standardDeviationMicrosecondsPerInvocation="474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="96" invocations="610" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="10161" standardDeviationMicrosecondsPerInvocation="474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="95" invocations="610" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="5754" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="88" invocations="610" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="3566" standardDeviationMicrosecondsPerInvocation="314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="84" invocations="610" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="2498" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="83" invocations="610" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="4266" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="83" invocations="610" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="3285" standardDeviationMicrosecondsPerInvocation="287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="83" invocations="610" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="4387" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="81" invocations="4509" avgMicrosecondsPerInvocation="18" maxMicrosecondsPerInvocation="1052" standardDeviationMicrosecondsPerInvocation="39"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="79" invocations="610" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="3047" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="79" invocations="746" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="6601" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="78" invocations="610" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="4150" standardDeviationMicrosecondsPerInvocation="246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="74" invocations="610" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2890" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IncompatMask" totalMilliseconds="74" invocations="610" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2665" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SynchronizationOnSharedBuiltinConstant" totalMilliseconds="74" invocations="610" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="3301" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CrossSiteScripting" totalMilliseconds="73" invocations="610" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="3028" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="72" invocations="610" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="5073" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="71" invocations="610" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="3232" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="70" invocations="746" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="5395" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="69" invocations="1563" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="2449" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReadOfInstanceFieldInMethodInvokedByConstructorInSuperclass" totalMilliseconds="69" invocations="610" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="15447" standardDeviationMicrosecondsPerInvocation="643"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

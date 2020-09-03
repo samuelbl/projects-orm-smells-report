@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597093358000" analysisTimestamp="1597093360498" release="">
+  <Project projectName="repositorios/ykameshrao_spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework">
+    <Jar>repositorios/ykameshrao_spring-mvc-angular-js-hibernate-bootstrap-java-single-page-jwt-auth-rest-api-webapp-framework</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="17" end="40" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Class>
+    <Method classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" name="findByCategoryName" signature="(Ljava/lang/String;)Lyourwebproject2/model/entity/Category;" isStatic="false">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="27" end="27" startBytecode="0" endBytecode="92" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="27" end="27" startBytecode="9" endBytecode="9" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="17" end="40" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Class>
+    <Method classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" name="findByCategoryPriority" signature="(Ljava/lang/Integer;)Lyourwebproject2/model/entity/Category;" isStatic="false">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="33" end="33" startBytecode="0" endBytecode="92" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="33" end="33" startBytecode="9" endBytecode="9" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="17" end="40" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Class>
+    <Method classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" name="findSubCategories" signature="(Lyourwebproject2/model/entity/Category;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="39" end="39" startBytecode="0" endBytecode="89" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" start="39" end="39" startBytecode="9" endBytecode="9" sourcefile="CategoryRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/CategoryRepositoryImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="yourwebproject2.model.repository.impl.UserRepositoryImpl">
+      <SourceLine classname="yourwebproject2.model.repository.impl.UserRepositoryImpl" start="17" end="23" sourcefile="UserRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/UserRepositoryImpl.java"/>
+    </Class>
+    <Method classname="yourwebproject2.model.repository.impl.UserRepositoryImpl" name="findByEmail" signature="(Ljava/lang/String;)Lyourwebproject2/model/entity/User;" isStatic="false">
+      <SourceLine classname="yourwebproject2.model.repository.impl.UserRepositoryImpl" start="22" end="22" startBytecode="0" endBytecode="92" sourcefile="UserRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/UserRepositoryImpl.java"/>
+    </Method>
+    <SourceLine classname="yourwebproject2.model.repository.impl.UserRepositoryImpl" start="22" end="22" startBytecode="9" endBytecode="9" sourcefile="UserRepositoryImpl.java" sourcepath="yourwebproject2/model/repository/impl/UserRepositoryImpl.java"/>
+  </BugInstance>
+  <Errors errors="4" missingClasses="53">
+    <Error>
+      <ErrorMessage>Exception analyzing yourwebproject2.model.entity.Job using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing yourwebproject2.model.entity.Job using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing yourwebproject2.model.entity.Category using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing yourwebproject2.model.entity.Category using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>io.jsonwebtoken.Claims</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jws</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtBuilder</MissingClass>
+    <MissingClass>io.jsonwebtoken.JwtParser</MissingClass>
+    <MissingClass>io.jsonwebtoken.Jwts</MissingClass>
+    <MissingClass>io.jsonwebtoken.SignatureAlgorithm</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Hex</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.Validate</MissingClass>
+    <MissingClass>org.apache.commons.lang.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.FlushMode</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.support.ClassPathXmlApplicationContext</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AccountStatusUserDetailsChecker</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetailsService</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UsernameNotFoundException</MissingClass>
+    <MissingClass>org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</MissingClass>
+    <MissingClass>org.springframework.security.crypto.codec.Base64</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.csrf.CsrfToken</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.filter.GenericFilterBean</MissingClass>
+    <MissingClass>org.springframework.web.filter.OncePerRequestFilter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.DispatcherServlet</MissingClass>
+    <MissingClass>org.springframework.web.servlet.ModelAndView</MissingClass>
+    <MissingClass>org.springframework.web.servlet.handler.HandlerInterceptorAdapter</MissingClass>
+    <MissingClass>org.springframework.web.util.WebUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:02:38 +0000" total_classes="68" referenced_classes="160" total_bugs="4" total_size="1366" num_packages="20" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="9.90" clock_seconds="2.84" peak_mbytes="202.27" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="4">
+    <PackageStats package="yourwebproject2.auth" total_bugs="0" total_types="4" total_size="79">
+      <ClassStats class="yourwebproject2.auth.AuthCredentialsMissingException" sourceFile="AuthCredentialsMissingException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="yourwebproject2.auth.AuthenticationFailedException" sourceFile="AuthenticationFailedException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="yourwebproject2.auth.CORSFilter" sourceFile="CORSFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="yourwebproject2.auth.JWTTokenAuthFilter" sourceFile="JWTTokenAuthFilter.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.controller" total_bugs="0" total_types="4" total_size="172">
+      <ClassStats class="yourwebproject2.controller.CategoryController" sourceFile="CategoryController.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="yourwebproject2.controller.ErrorController" sourceFile="ErrorController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="yourwebproject2.controller.JobController" sourceFile="JobController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="yourwebproject2.controller.UserController" sourceFile="UserController.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.core" total_bugs="0" total_types="6" total_size="116">
+      <ClassStats class="yourwebproject2.core.AbstractJobSchedulingWorker" sourceFile="AbstractJobSchedulingWorker.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.JobExecutionThread" sourceFile="JobExecutionThread.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.MailSendingTask" sourceFile="MailSendingTask.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.NewJobSchedulingWorker" sourceFile="NewJobSchedulingWorker.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.RetryJobSchedulingWorker" sourceFile="RetryJobSchedulingWorker.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.YourWebProjectJobCoreDaemon" sourceFile="YourWebProjectJobCoreDaemon.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.core.tool" total_bugs="0" total_types="2" total_size="73">
+      <ClassStats class="yourwebproject2.core.tool.AdminUserTool" sourceFile="AdminUserTool.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="yourwebproject2.core.tool.CategoryTool" sourceFile="CategoryTool.java" interface="false" size="61" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.framework.api" total_bugs="0" total_types="2" total_size="49">
+      <ClassStats class="yourwebproject2.framework.api.APIResponse" sourceFile="APIResponse.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.api.APIResponse$ExceptionAPIResponse" sourceFile="APIResponse.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.framework.controller" total_bugs="0" total_types="1" total_size="22">
+      <ClassStats class="yourwebproject2.framework.controller.BaseController" sourceFile="BaseController.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.framework.data" total_bugs="0" total_types="6" total_size="97">
+      <ClassStats class="yourwebproject2.framework.data.BaseHibernateJPARepository" sourceFile="BaseHibernateJPARepository.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.data.BaseJPARepository" sourceFile="BaseJPARepository.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.data.BaseJPAServiceImpl" sourceFile="BaseJPAServiceImpl.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.data.BaseService" sourceFile="BaseService.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.data.Entity" sourceFile="Entity.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.data.JPAEntity" sourceFile="JPAEntity.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.framework.exception" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="yourwebproject2.framework.exception.EmailNotFoundException" sourceFile="EmailNotFoundException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="yourwebproject2.framework.exception.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.framework.servlet" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="yourwebproject2.framework.servlet.BaseDispatcherServlet" sourceFile="BaseDispatcherServlet.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.interceptor" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="yourwebproject2.interceptor.WebAppExceptionAdvice" sourceFile="WebAppExceptionAdvice.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="yourwebproject2.interceptor.WebAppMetricsInterceptor" sourceFile="WebAppMetricsInterceptor.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.model.dto" total_bugs="0" total_types="3" total_size="103">
+      <ClassStats class="yourwebproject2.model.dto.CategoryDTO" sourceFile="CategoryDTO.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.dto.JobDTO" sourceFile="JobDTO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="51" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.model.entity" total_bugs="0" total_types="7" total_size="195">
+      <ClassStats class="yourwebproject2.model.entity.Category" sourceFile="Category.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.Job" sourceFile="Job.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.Job$Status" sourceFile="Job.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.MailerJob" sourceFile="MailerJob.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.MailerJob$MailType" sourceFile="MailerJob.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.User" sourceFile="User.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.entity.User$Role" sourceFile="User.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.model.entity.helper" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="yourwebproject2.model.entity.helper.CategoryPriorityComparator" sourceFile="CategoryPriorityComparator.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.model.repository" total_bugs="0" total_types="3" total_size="11">
+      <ClassStats class="yourwebproject2.model.repository.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.repository.JobRepository" sourceFile="JobRepository.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.model.repository.impl" total_bugs="4" total_types="3" total_size="63" priority_2="4">
+      <ClassStats class="yourwebproject2.model.repository.impl.CategoryRepositoryImpl" sourceFile="CategoryRepositoryImpl.java" interface="false" size="18" bugs="3" priority_2="3"/>
+      <ClassStats class="yourwebproject2.model.repository.impl.JobRepositoryImpl" sourceFile="JobRepositoryImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="yourwebproject2.model.repository.impl.UserRepositoryImpl" sourceFile="UserRepositoryImpl.java" interface="false" size="9" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.service" total_bugs="0" total_types="4" total_size="18">
+      <ClassStats class="yourwebproject2.service.CategoryService" sourceFile="CategoryService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.JobService" sourceFile="JobService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.MailJobService" sourceFile="MailJobService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.UserService" sourceFile="UserService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.service.impl" total_bugs="0" total_types="4" total_size="104">
+      <ClassStats class="yourwebproject2.service.impl.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.impl.JobServiceImpl" sourceFile="JobServiceImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.impl.MailJobServiceImpl" sourceFile="MailJobServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="yourwebproject2.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.servlet" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="yourwebproject2.servlet.YourWebAppDispatcherServlet" sourceFile="YourWebAppDispatcherServlet.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.unusedspringsecurity" total_bugs="0" total_types="7" total_size="91">
+      <ClassStats class="yourwebproject2.unusedspringsecurity.CSRFHeaderFilter" sourceFile="CSRFHeaderFilter.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.RESTAuthFilter" sourceFile="RESTAuthFilter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.RESTAuthenticationEntryPoint" sourceFile="RESTAuthenticationEntryPoint.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.UserDetailsService" sourceFile="UserDetailsService.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.UserDetailsServiceImpl" sourceFile="UserDetailsServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.UserDetailsServiceImpl$1" sourceFile="UserDetailsServiceImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.UserRole" sourceFile="UserRole.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="yourwebproject2.unusedspringsecurity.token" total_bugs="0" total_types="5" total_size="111">
+      <ClassStats class="yourwebproject2.unusedspringsecurity.token.StatelessAuthenticationFilter" sourceFile="StatelessAuthenticationFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.token.TokenAuthenticationService" sourceFile="TokenAuthenticationService.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.token.TokenHandler" sourceFile="TokenHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.token.TokenUserAuthentication" sourceFile="TokenUserAuthentication.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="yourwebproject2.unusedspringsecurity.token.TokenUserService" sourceFile="TokenUserService.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="361" invocations="916" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="31211" standardDeviationMicrosecondsPerInvocation="1616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="103" invocations="315" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="9843" standardDeviationMicrosecondsPerInvocation="960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="96" invocations="160" avgMicrosecondsPerInvocation="604" maxMicrosecondsPerInvocation="8919" standardDeviationMicrosecondsPerInvocation="1267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="84" invocations="316" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="8135" standardDeviationMicrosecondsPerInvocation="787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="83" invocations="923" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="2814" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="83" invocations="316" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="8689" standardDeviationMicrosecondsPerInvocation="897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="77" invocations="311" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="4038" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="75" invocations="160" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="6005" standardDeviationMicrosecondsPerInvocation="905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="71" invocations="313" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="6079" standardDeviationMicrosecondsPerInvocation="636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="68" invocations="561" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="2127" standardDeviationMicrosecondsPerInvocation="207"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="63" invocations="315" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="8953" standardDeviationMicrosecondsPerInvocation="558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="56" invocations="773" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="5804" standardDeviationMicrosecondsPerInvocation="293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="50" invocations="198" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="4946" standardDeviationMicrosecondsPerInvocation="617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="46" invocations="350" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="23905" standardDeviationMicrosecondsPerInvocation="1276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="46" invocations="251" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="15381" standardDeviationMicrosecondsPerInvocation="988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="160" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="3185" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="30" invocations="68" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="16534" standardDeviationMicrosecondsPerInvocation="2028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="160" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1693" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="160" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="7677" standardDeviationMicrosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="24" invocations="160" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="1948" standardDeviationMicrosecondsPerInvocation="247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="3433" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1259" standardDeviationMicrosecondsPerInvocation="29"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="160" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="3994" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="22" invocations="68" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="3550" standardDeviationMicrosecondsPerInvocation="464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="21" invocations="315" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="1799" standardDeviationMicrosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="68" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="1477" standardDeviationMicrosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="68" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="4227" standardDeviationMicrosecondsPerInvocation="587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="160" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1088" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="15" invocations="68" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="6434" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="15" invocations="6" avgMicrosecondsPerInvocation="2596" maxMicrosecondsPerInvocation="4550" standardDeviationMicrosecondsPerInvocation="1330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="15" invocations="68" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="1668" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="14" invocations="68" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="1357" standardDeviationMicrosecondsPerInvocation="214"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

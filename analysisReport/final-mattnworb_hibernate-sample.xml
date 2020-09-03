@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1596942905000" analysisTimestamp="1596942906779" release="">
+  <Project projectName="repositorios/mattnworb_hibernate-sample">
+    <Jar>repositorios/mattnworb_hibernate-sample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="brown.sample.domain.Employee">
+      <SourceLine classname="brown.sample.domain.Employee" start="12" end="106" sourcefile="Employee.java" sourcepath="brown/sample/domain/Employee.java"/>
+    </Class>
+    <Field classname="brown.sample.domain.Employee" name="company" signature="Lbrown/sample/domain/Company;" isStatic="false">
+      <SourceLine classname="brown.sample.domain.Employee" sourcefile="Employee.java" sourcepath="brown/sample/domain/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="brown.sample.domain.Employee">
+      <SourceLine classname="brown.sample.domain.Employee" start="12" end="106" sourcefile="Employee.java" sourcepath="brown/sample/domain/Employee.java"/>
+    </Class>
+    <Field classname="brown.sample.domain.Employee" name="team" signature="Lbrown/sample/domain/Team;" isStatic="false">
+      <SourceLine classname="brown.sample.domain.Employee" sourcefile="Employee.java" sourcepath="brown/sample/domain/Employee.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>org.springframework.orm.hibernate3.HibernateTemplate</MissingClass>
+    <MissingClass>org.springframework.orm.hibernate3.support.HibernateDaoSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 9 Aug 2020 03:15:05 +0000" total_classes="7" referenced_classes="20" total_bugs="2" total_size="119" num_packages="3" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="3.69" clock_seconds="1.05" peak_mbytes="122.25" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="2">
+    <PackageStats package="brown.sample.dao" total_bugs="0" total_types="2" total_size="4">
+      <ClassStats class="brown.sample.dao.CompanyDao" sourceFile="CompanyDao.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="brown.sample.dao.EmployeeDao" sourceFile="EmployeeDao.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="brown.sample.dao.hibernate" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="brown.sample.dao.hibernate.CompanyDaoImpl" sourceFile="CompanyDaoImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="brown.sample.dao.hibernate.EmployeeDaoImpl" sourceFile="EmployeeDaoImpl.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="brown.sample.domain" total_bugs="2" total_types="3" total_size="105" priority_2="2">
+      <ClassStats class="brown.sample.domain.Company" sourceFile="Company.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="brown.sample.domain.Employee" sourceFile="Employee.java" interface="false" size="53" bugs="2" priority_2="2"/>
+      <ClassStats class="brown.sample.domain.Team" sourceFile="Team.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="155" invocations="347" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="10231" standardDeviationMicrosecondsPerInvocation="1020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="94" invocations="7" avgMicrosecondsPerInvocation="13491" maxMicrosecondsPerInvocation="91975" standardDeviationMicrosecondsPerInvocation="32050"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="48" invocations="352" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="13719" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="42" invocations="20" avgMicrosecondsPerInvocation="2128" maxMicrosecondsPerInvocation="11429" standardDeviationMicrosecondsPerInvocation="3156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="31" invocations="100" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="6289" standardDeviationMicrosecondsPerInvocation="782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="28" invocations="305" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="1204" standardDeviationMicrosecondsPerInvocation="150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="39" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="23957" standardDeviationMicrosecondsPerInvocation="3773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="24" invocations="20" avgMicrosecondsPerInvocation="1246" maxMicrosecondsPerInvocation="5442" standardDeviationMicrosecondsPerInvocation="1708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="41" avgMicrosecondsPerInvocation="589" maxMicrosecondsPerInvocation="14178" standardDeviationMicrosecondsPerInvocation="2199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="20" avgMicrosecondsPerInvocation="894" maxMicrosecondsPerInvocation="9040" standardDeviationMicrosecondsPerInvocation="1968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="17" invocations="37" avgMicrosecondsPerInvocation="461" maxMicrosecondsPerInvocation="6752" standardDeviationMicrosecondsPerInvocation="1157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="20" avgMicrosecondsPerInvocation="844" maxMicrosecondsPerInvocation="6762" standardDeviationMicrosecondsPerInvocation="1515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="20" avgMicrosecondsPerInvocation="750" maxMicrosecondsPerInvocation="4815" standardDeviationMicrosecondsPerInvocation="1334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="14" invocations="37" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="6371" standardDeviationMicrosecondsPerInvocation="1041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="37" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="7577" standardDeviationMicrosecondsPerInvocation="1208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="13" invocations="37" avgMicrosecondsPerInvocation="362" maxMicrosecondsPerInvocation="7425" standardDeviationMicrosecondsPerInvocation="1190"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597090451000" analysisTimestamp="1597090452494" release="">
+  <Project projectName="repositorios/TechPrimers_spring-jpa-hibernate-many-to-one-example">
+    <Jar>repositorios/TechPrimers_spring-jpa-hibernate-many-to-one-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.techprimers.jpa.springjpahibernateexample.model.UsersContact">
+      <SourceLine classname="com.techprimers.jpa.springjpahibernateexample.model.UsersContact" start="19" end="46" sourcefile="UsersContact.java" sourcepath="com/techprimers/jpa/springjpahibernateexample/model/UsersContact.java"/>
+    </Class>
+    <Field classname="com.techprimers.jpa.springjpahibernateexample.model.UsersContact" name="users" signature="Lcom/techprimers/jpa/springjpahibernateexample/model/Users;" isStatic="false">
+      <SourceLine classname="com.techprimers.jpa.springjpahibernateexample.model.UsersContact" sourcefile="UsersContact.java" sourcepath="com/techprimers/jpa/springjpahibernateexample/model/UsersContact.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.techprimers.jpa.springjpahibernateexample.model.UsersLog">
+      <SourceLine classname="com.techprimers.jpa.springjpahibernateexample.model.UsersLog" start="21" end="45" sourcefile="UsersLog.java" sourcepath="com/techprimers/jpa/springjpahibernateexample/model/UsersLog.java"/>
+    </Class>
+    <Field classname="com.techprimers.jpa.springjpahibernateexample.model.UsersLog" name="users" signature="Lcom/techprimers/jpa/springjpahibernateexample/model/Users;" isStatic="false">
+      <SourceLine classname="com.techprimers.jpa.springjpahibernateexample.model.UsersLog" sourcefile="UsersLog.java" sourcepath="com/techprimers/jpa/springjpahibernateexample/model/UsersLog.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:14:11 +0000" total_classes="11" referenced_classes="22" total_bugs="2" total_size="145" num_packages="4" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="3.65" clock_seconds="1.05" peak_mbytes="121.78" alloc_mbytes="3540.00" gc_seconds="0.08" priority_2="2">
+    <PackageStats package="com.techprimers.jpa.springjpahibernateexample" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.SpringJpaHibernateExampleApplication" sourceFile="SpringJpaHibernateExampleApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.SpringJpaHibernateExampleApplicationTests" sourceFile="SpringJpaHibernateExampleApplicationTests.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.techprimers.jpa.springjpahibernateexample.model" total_bugs="2" total_types="3" total_size="72" priority_2="2">
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.model.Users" sourceFile="Users.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.model.UsersContact" sourceFile="UsersContact.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.model.UsersLog" sourceFile="UsersLog.java" interface="false" size="22" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.techprimers.jpa.springjpahibernateexample.repository" total_bugs="0" total_types="3" total_size="4">
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.repository.UsersContactRepository" sourceFile="UsersContactRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.repository.UsersLogRepository" sourceFile="UsersLogRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.repository.UsersRepository" sourceFile="UsersRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.techprimers.jpa.springjpahibernateexample.resource" total_bugs="0" total_types="3" total_size="58">
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.resource.UsersContactResource" sourceFile="UsersContactResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.resource.UsersLogResource" sourceFile="UsersLogResource.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.techprimers.jpa.springjpahibernateexample.resource.UsersResource" sourceFile="UsersResource.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="149" invocations="352" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="12829" standardDeviationMicrosecondsPerInvocation="1032"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="65" invocations="11" avgMicrosecondsPerInvocation="5992" maxMicrosecondsPerInvocation="65371" standardDeviationMicrosecondsPerInvocation="18777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="46" invocations="297" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="18762" standardDeviationMicrosecondsPerInvocation="1094"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="38" invocations="22" avgMicrosecondsPerInvocation="1768" maxMicrosecondsPerInvocation="11434" standardDeviationMicrosecondsPerInvocation="3318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="34" invocations="355" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="565" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="31" invocations="97" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="3375" standardDeviationMicrosecondsPerInvocation="523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="29" invocations="39" avgMicrosecondsPerInvocation="744" maxMicrosecondsPerInvocation="25611" standardDeviationMicrosecondsPerInvocation="4034"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="20" invocations="42" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="11654" standardDeviationMicrosecondsPerInvocation="1798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="19" invocations="22" avgMicrosecondsPerInvocation="873" maxMicrosecondsPerInvocation="6607" standardDeviationMicrosecondsPerInvocation="1532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="17" invocations="38" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="9409" standardDeviationMicrosecondsPerInvocation="1494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="17" invocations="38" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="8483" standardDeviationMicrosecondsPerInvocation="1369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="16" invocations="38" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="5823" standardDeviationMicrosecondsPerInvocation="965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="15" invocations="38" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="9265" standardDeviationMicrosecondsPerInvocation="1470"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="14" invocations="22" avgMicrosecondsPerInvocation="665" maxMicrosecondsPerInvocation="6205" standardDeviationMicrosecondsPerInvocation="1379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="14" invocations="38" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="2817" standardDeviationMicrosecondsPerInvocation="558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="13" invocations="22" avgMicrosecondsPerInvocation="624" maxMicrosecondsPerInvocation="5488" standardDeviationMicrosecondsPerInvocation="1340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="13" invocations="22" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="7524" standardDeviationMicrosecondsPerInvocation="1612"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

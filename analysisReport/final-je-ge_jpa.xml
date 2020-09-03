@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597105385000" analysisTimestamp="1597105387266" release="">
+  <Project projectName="repositorios/je-ge_jpa">
+    <Jar>repositorios/je-ge_jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.jege.jpa.many2one.Product">
+      <SourceLine classname="com.jege.jpa.many2one.Product" start="27" end="61" sourcefile="Product.java" sourcepath="com/jege/jpa/many2one/Product.java"/>
+    </Class>
+    <Field classname="com.jege.jpa.many2one.Product" name="type" signature="Lcom/jege/jpa/many2one/ProductType;" isStatic="false">
+      <SourceLine classname="com.jege.jpa.many2one.Product" sourcefile="Product.java" sourcepath="com/jege/jpa/many2one/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.jege.jpa.one2many.Product">
+      <SourceLine classname="com.jege.jpa.one2many.Product" start="28" end="63" sourcefile="Product.java" sourcepath="com/jege/jpa/one2many/Product.java"/>
+    </Class>
+    <Field classname="com.jege.jpa.one2many.Product" name="type" signature="Lcom/jege/jpa/one2many/ProductType;" isStatic="false">
+      <SourceLine classname="com.jege.jpa.one2many.Product" sourcefile="Product.java" sourcepath="com/jege/jpa/one2many/Product.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 00:23:05 +0000" total_classes="20" referenced_classes="38" total_bugs="2" total_size="516" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.94" clock_seconds="1.42" peak_mbytes="125.09" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="2">
+    <PackageStats package="com.jege.jpa" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="com.jege.jpa.Employee" sourceFile="Employee.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.composite" total_bugs="0" total_types="2" total_size="73">
+      <ClassStats class="com.jege.jpa.composite.Airline" sourceFile="Airline.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.jege.jpa.composite.Airline$AirlinePK" sourceFile="Airline.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.embeddable" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.jege.jpa.embeddable.Address" sourceFile="Address.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.jege.jpa.embeddable.Employee" sourceFile="Employee.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.embedded" total_bugs="0" total_types="2" total_size="77">
+      <ClassStats class="com.jege.jpa.embedded.Airline" sourceFile="Airline.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.jege.jpa.embedded.AirlinePK" sourceFile="AirlinePK.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.extend" total_bugs="0" total_types="3" total_size="33">
+      <ClassStats class="com.jege.jpa.extend.Person" sourceFile="Person.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.jege.jpa.extend.Student" sourceFile="Student.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.jege.jpa.extend.Teacher" sourceFile="Teacher.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.many2many" total_bugs="0" total_types="2" total_size="58">
+      <ClassStats class="com.jege.jpa.many2many.Student" sourceFile="Student.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.jege.jpa.many2many.Teacher" sourceFile="Teacher.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.many2one" total_bugs="1" total_types="2" total_size="46" priority_2="1">
+      <ClassStats class="com.jege.jpa.many2one.Product" sourceFile="Product.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.jege.jpa.many2one.ProductType" sourceFile="ProductType.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.one2many" total_bugs="1" total_types="2" total_size="53" priority_2="1">
+      <ClassStats class="com.jege.jpa.one2many.Product" sourceFile="Product.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.jege.jpa.one2many.ProductType" sourceFile="ProductType.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.one2one" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="com.jege.jpa.one2one.IdCard" sourceFile="IdCard.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.jege.jpa.one2one.Person" sourceFile="Person.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.primary" total_bugs="0" total_types="1" total_size="42">
+      <ClassStats class="com.jege.jpa.primary.User" sourceFile="User.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.jege.jpa.single.table" total_bugs="0" total_types="1" total_size="29">
+      <ClassStats class="com.jege.jpa.single.table.User" sourceFile="User.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="147" invocations="420" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="10356" standardDeviationMicrosecondsPerInvocation="764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="38" avgMicrosecondsPerInvocation="1526" maxMicrosecondsPerInvocation="12622" standardDeviationMicrosecondsPerInvocation="2680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="48" invocations="246" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="4167" standardDeviationMicrosecondsPerInvocation="442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="355" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="20781" standardDeviationMicrosecondsPerInvocation="1105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="43" invocations="38" avgMicrosecondsPerInvocation="1133" maxMicrosecondsPerInvocation="21786" standardDeviationMicrosecondsPerInvocation="3590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="424" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="471" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="150" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="24145" standardDeviationMicrosecondsPerInvocation="1960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="32" invocations="38" avgMicrosecondsPerInvocation="858" maxMicrosecondsPerInvocation="4509" standardDeviationMicrosecondsPerInvocation="1179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="30" invocations="150" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="4681" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="74" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="14151" standardDeviationMicrosecondsPerInvocation="1662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="28" invocations="150" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="9196" standardDeviationMicrosecondsPerInvocation="756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="150" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="8662" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="28" invocations="150" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="8644" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="23" invocations="150" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="1597" standardDeviationMicrosecondsPerInvocation="242"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="150" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="1712" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="38" avgMicrosecondsPerInvocation="529" maxMicrosecondsPerInvocation="9676" standardDeviationMicrosecondsPerInvocation="1573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="38" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="4233" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="38" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="2307" standardDeviationMicrosecondsPerInvocation="516"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="12" invocations="38" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="4570" standardDeviationMicrosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="38" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="4707" standardDeviationMicrosecondsPerInvocation="794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="11" invocations="20" avgMicrosecondsPerInvocation="590" maxMicrosecondsPerInvocation="3946" standardDeviationMicrosecondsPerInvocation="792"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

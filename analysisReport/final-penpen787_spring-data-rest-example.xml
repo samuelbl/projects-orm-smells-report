@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597092084000" analysisTimestamp="1597092085793" release="">
+  <Project projectName="repositorios/penpen787_spring-data-rest-example">
+    <Jar>repositorios/penpen787_spring-data-rest-example</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.khjeon.domain.Comment">
+      <SourceLine classname="com.khjeon.domain.Comment" start="14" end="79" sourcefile="Comment.java" sourcepath="com/khjeon/domain/Comment.java"/>
+    </Class>
+    <Field classname="com.khjeon.domain.Comment" name="article" signature="Lcom/khjeon/domain/Article;" isStatic="false">
+      <SourceLine classname="com.khjeon.domain.Comment" sourcefile="Comment.java" sourcepath="com/khjeon/domain/Comment.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 20:41:24 +0000" total_classes="4" referenced_classes="15" total_bugs="1" total_size="82" num_packages="2" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="3.60" clock_seconds="1.23" peak_mbytes="121.39" alloc_mbytes="3540.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="com.khjeon.domain" total_bugs="1" total_types="2" total_size="80" priority_2="1">
+      <ClassStats class="com.khjeon.domain.Article" sourceFile="Article.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.khjeon.domain.Comment" sourceFile="Comment.java" interface="false" size="40" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.khjeon.repository" total_bugs="0" total_types="2" total_size="2">
+      <ClassStats class="com.khjeon.repository.ArticleRepository" sourceFile="ArticleRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.khjeon.repository.CommentRepository" sourceFile="CommentRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="241" invocations="339" avgMicrosecondsPerInvocation="712" maxMicrosecondsPerInvocation="27354" standardDeviationMicrosecondsPerInvocation="2447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="81" invocations="26" avgMicrosecondsPerInvocation="3127" maxMicrosecondsPerInvocation="79894" standardDeviationMicrosecondsPerInvocation="15353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="15" avgMicrosecondsPerInvocation="4251" maxMicrosecondsPerInvocation="24356" standardDeviationMicrosecondsPerInvocation="6554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="48" invocations="341" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="4540" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="299" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="6763" standardDeviationMicrosecondsPerInvocation="434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="37" invocations="86" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="9091" standardDeviationMicrosecondsPerInvocation="1080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="31" avgMicrosecondsPerInvocation="1009" maxMicrosecondsPerInvocation="17588" standardDeviationMicrosecondsPerInvocation="3265"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="27" invocations="15" avgMicrosecondsPerInvocation="1856" maxMicrosecondsPerInvocation="7296" standardDeviationMicrosecondsPerInvocation="2345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="15" avgMicrosecondsPerInvocation="1154" maxMicrosecondsPerInvocation="6529" standardDeviationMicrosecondsPerInvocation="1679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="15" avgMicrosecondsPerInvocation="1144" maxMicrosecondsPerInvocation="10073" standardDeviationMicrosecondsPerInvocation="2465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="15" avgMicrosecondsPerInvocation="1082" maxMicrosecondsPerInvocation="5427" standardDeviationMicrosecondsPerInvocation="1689"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

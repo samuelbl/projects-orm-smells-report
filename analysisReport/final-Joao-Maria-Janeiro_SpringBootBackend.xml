@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597093502000" analysisTimestamp="1597093504012" release="">
+  <Project projectName="repositorios/Joao-Maria-Janeiro_SpringBootBackend">
+    <Jar>repositorios/Joao-Maria-Janeiro_SpringBootBackend</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.model.Cart">
+      <SourceLine classname="com.sap.intern.ecommerce.model.Cart" start="36" end="104" sourcefile="Cart.java" sourcepath="com/sap/intern/ecommerce/model/Cart.java"/>
+    </Class>
+    <Field classname="com.sap.intern.ecommerce.model.Cart" name="customer" signature="Lcom/sap/intern/ecommerce/model/Customer;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.model.Cart" sourcefile="Cart.java" sourcepath="com/sap/intern/ecommerce/model/Cart.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.model.LoginSession">
+      <SourceLine classname="com.sap.intern.ecommerce.model.LoginSession" start="10" end="68" sourcefile="LoginSession.java" sourcepath="com/sap/intern/ecommerce/model/LoginSession.java"/>
+    </Class>
+    <Field classname="com.sap.intern.ecommerce.model.LoginSession" name="user" signature="Lcom/sap/intern/ecommerce/model/User;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.model.LoginSession" sourcefile="LoginSession.java" sourcepath="com/sap/intern/ecommerce/model/LoginSession.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="ONETOMANYCOLLECTIONS_SMELL" priority="1" rank="1" abbrev="ONETOMANYCOLLECTIONS" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.model.Product">
+      <SourceLine classname="com.sap.intern.ecommerce.model.Product" start="9" end="60" sourcefile="Product.java" sourcepath="com/sap/intern/ecommerce/model/Product.java"/>
+    </Class>
+    <Field classname="com.sap.intern.ecommerce.model.Product" name="prices" signature="Ljava/util/Collection;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.model.Product" sourcefile="Product.java" sourcepath="com/sap/intern/ecommerce/model/Product.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.model.User">
+      <SourceLine classname="com.sap.intern.ecommerce.model.User" start="28" end="91" sourcefile="User.java" sourcepath="com/sap/intern/ecommerce/model/User.java"/>
+    </Class>
+    <Field classname="com.sap.intern.ecommerce.model.User" name="type" signature="Lcom/sap/intern/ecommerce/model/UserType;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.model.User" sourcefile="User.java" sourcepath="com/sap/intern/ecommerce/model/User.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.repository.CartRepository">
+      <SourceLine classname="com.sap.intern.ecommerce.repository.CartRepository" sourcefile="CartRepository.java" sourcepath="com/sap/intern/ecommerce/repository/CartRepository.java"/>
+    </Class>
+    <Method classname="com.sap.intern.ecommerce.repository.CartRepository" name="findAllCartsByCustomer" signature="(Ljava/lang/Long;)Ljava/lang/Iterable;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.repository.CartRepository" sourcefile="CartRepository.java" sourcepath="com/sap/intern/ecommerce/repository/CartRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.sap.intern.ecommerce.repository.CartRepository">
+      <SourceLine classname="com.sap.intern.ecommerce.repository.CartRepository" sourcefile="CartRepository.java" sourcepath="com/sap/intern/ecommerce/repository/CartRepository.java"/>
+    </Class>
+    <Method classname="com.sap.intern.ecommerce.repository.CartRepository" name="findByCustomerByActiveCart" signature="(Ljava/lang/Long;)Lcom/sap/intern/ecommerce/model/Cart;" isStatic="false">
+      <SourceLine classname="com.sap.intern.ecommerce.repository.CartRepository" sourcefile="CartRepository.java" sourcepath="com/sap/intern/ecommerce/repository/CartRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap$Builder</MissingClass>
+    <MissingClass>com.google.common.collect.Lists</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.builder.ToStringBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.tuple.Pair</MissingClass>
+    <MissingClass>org.modelmapper.ModelMapper</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.core.convert.converter.Converter</MissingClass>
+    <MissingClass>org.springframework.data.domain.Page</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.repository.CrudRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:05:02 +0000" total_classes="80" referenced_classes="156" total_bugs="6" total_size="1318" num_packages="13" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="8.67" clock_seconds="2.42" peak_mbytes="236.15" alloc_mbytes="3540.00" gc_seconds="0.10" priority_2="5" priority_1="1">
+    <PackageStats package="com.sap.intern.ecommerce" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.sap.intern.ecommerce.ECommerceBackendApplication" sourceFile="ECommerceBackendApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.bootstrap" total_bugs="0" total_types="3" total_size="75">
+      <ClassStats class="com.sap.intern.ecommerce.bootstrap.ImportUserData" sourceFile="ImportUserData.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.bootstrap.ImportUserDataSample" sourceFile="ImportUserDataSample.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.bootstrap.InitializeUsers" sourceFile="InitializeUsers.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.controller" total_bugs="0" total_types="5" total_size="83">
+      <ClassStats class="com.sap.intern.ecommerce.controller.CartController" sourceFile="CartController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.controller.CustomerController" sourceFile="CustomerController.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.controller.LogOutController" sourceFile="LogOutController.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.controller.LoginController" sourceFile="LoginController.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.controller.ProductController" sourceFile="ProductController.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.converter" total_bugs="0" total_types="12" total_size="106">
+      <ClassStats class="com.sap.intern.ecommerce.converter.AbstractConverter" sourceFile="AbstractConverter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.CartConverter" sourceFile="CartConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.CustomerConverter" sourceFile="CustomerConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.LoginSessionCoverter" sourceFile="LoginSessionCoverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.PriceConverter" sourceFile="PriceConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.ProductConverter" sourceFile="ProductConverter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.ReverseCartConverter" sourceFile="ReverseCartConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.ReverseCustomerConverter" sourceFile="ReverseCustomerConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.ReversePriceConverter" sourceFile="ReversePriceConverter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.ReverseProductConverter" sourceFile="ReverseProductConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.UserConverter" sourceFile="UserConverter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.converter.UserTypeConverter" sourceFile="UserTypeConverter.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.dto" total_bugs="0" total_types="10" total_size="295">
+      <ClassStats class="com.sap.intern.ecommerce.dto.CartDTO" sourceFile="CartDTO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.CustomerDTO" sourceFile="CustomerDTO.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.IDRequest" sourceFile="IDRequest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.LoginSessionDTO" sourceFile="LoginSessionDTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.PageDTO" sourceFile="PageDTO.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.PriceDTO" sourceFile="PriceDTO.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.ProductDTO" sourceFile="ProductDTO.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.ProductGetDTO" sourceFile="ProductGetDTO.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.UserDTO" sourceFile="UserDTO.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.dto.UserTypeDTO" sourceFile="UserTypeDTO.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.exception" total_bugs="0" total_types="3" total_size="45">
+      <ClassStats class="com.sap.intern.ecommerce.exception.AuthenticationException" sourceFile="AuthenticationException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.exception.InternalErrorException" sourceFile="InternalErrorException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.exception.NotFoundException" sourceFile="NotFoundException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.facade" total_bugs="0" total_types="7" total_size="27">
+      <ClassStats class="com.sap.intern.ecommerce.facade.AuthorizationFacade" sourceFile="AuthorizationFacade.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.CartFacade" sourceFile="CartFacade.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.CustomerFacade" sourceFile="CustomerFacade.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.LoginFacade" sourceFile="LoginFacade.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.ProductFacade" sourceFile="ProductFacade.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.UserFacade" sourceFile="UserFacade.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.UserTypeFacade" sourceFile="UserTypeFacade.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.facade.impl" total_bugs="0" total_types="7" total_size="217">
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.AuthorizationFacadeImpl" sourceFile="AuthorizationFacadeImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.CartFacadeImpl" sourceFile="CartFacadeImpl.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.CustomerFacadeImpl" sourceFile="CustomerFacadeImpl.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.LoginFacadeImpl" sourceFile="LoginFacadeImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.ProductFacadeImpl" sourceFile="ProductFacadeImpl.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.UserFacadeImpl" sourceFile="UserFacadeImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.facade.impl.UserTypeFacadeImpl" sourceFile="UserTypeFacadeImpl.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.model" total_bugs="4" total_types="9" total_size="260" priority_2="3" priority_1="1">
+      <ClassStats class="com.sap.intern.ecommerce.model.AuthRole" sourceFile="AuthRole.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.AuthUser" sourceFile="AuthUser.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.Cart" sourceFile="Cart.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.Customer" sourceFile="Customer.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.LoginSession" sourceFile="LoginSession.java" interface="false" size="31" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.Price" sourceFile="Price.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.Product" sourceFile="Product.java" interface="false" size="28" bugs="1" priority_1="1"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.User" sourceFile="User.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.sap.intern.ecommerce.model.UserType" sourceFile="UserType.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.repository" total_bugs="2" total_types="6" total_size="13" priority_2="2">
+      <ClassStats class="com.sap.intern.ecommerce.repository.CartRepository" sourceFile="CartRepository.java" interface="true" size="3" bugs="2" priority_2="2"/>
+      <ClassStats class="com.sap.intern.ecommerce.repository.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.repository.LoginSessionsRepository" sourceFile="LoginSessionsRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.repository.ProductRepository" sourceFile="ProductRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.repository.UserTypeRepository" sourceFile="UserTypeRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.service" total_bugs="0" total_types="7" total_size="26">
+      <ClassStats class="com.sap.intern.ecommerce.service.AuthorizationService" sourceFile="AuthorizationService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.CartService" sourceFile="CartService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.CustomerService" sourceFile="CustomerService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.LoginService" sourceFile="LoginService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.ProductService" sourceFile="ProductService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.UserService" sourceFile="UserService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.UserTypeService" sourceFile="UserTypeService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.service.impl" total_bugs="0" total_types="8" total_size="136">
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.AuthorizationMap" sourceFile="AuthorizationMap.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.AuthorizationServiceImpl" sourceFile="AuthorizationServiceImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.CartServiceImpl" sourceFile="CartServiceImpl.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.CustomerserviceImpl" sourceFile="CustomerserviceImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.LoginServiceImpl" sourceFile="LoginServiceImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.ProductServiceImpl" sourceFile="ProductServiceImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.service.impl.UserTypeServiceImpl" sourceFile="UserTypeServiceImpl.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.sap.intern.ecommerce.utils" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="com.sap.intern.ecommerce.utils.AuthorizationUtils" sourceFile="AuthorizationUtils.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.sap.intern.ecommerce.utils.Profiles" sourceFile="Profiles.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="221" invocations="805" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="10237" standardDeviationMicrosecondsPerInvocation="591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="91" invocations="305" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="14412" standardDeviationMicrosecondsPerInvocation="902"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="87" invocations="317" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="8233" standardDeviationMicrosecondsPerInvocation="613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="78" invocations="317" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="7830" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="78" invocations="156" avgMicrosecondsPerInvocation="502" maxMicrosecondsPerInvocation="7597" standardDeviationMicrosecondsPerInvocation="1175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="67" invocations="156" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="6067" standardDeviationMicrosecondsPerInvocation="933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="66" invocations="317" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="4467" standardDeviationMicrosecondsPerInvocation="371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="811" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="908" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="62" invocations="317" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="10152" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="61" invocations="317" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="8554" standardDeviationMicrosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="59" invocations="695" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="13209" standardDeviationMicrosecondsPerInvocation="515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="220" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="18016" standardDeviationMicrosecondsPerInvocation="1236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="47" invocations="365" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="23939" standardDeviationMicrosecondsPerInvocation="1253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="43" invocations="210" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="3868" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="489" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="3854" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="156" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="2815" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="3765" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1306" standardDeviationMicrosecondsPerInvocation="29"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="25" invocations="156" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="5718" standardDeviationMicrosecondsPerInvocation="511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="156" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="4324" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="156" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="6794" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="23" invocations="80" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="11572" standardDeviationMicrosecondsPerInvocation="1448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="80" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="2289" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="22" invocations="317" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="1641" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="156" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="1278" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="80" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="1618" standardDeviationMicrosecondsPerInvocation="283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="80" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="4570" standardDeviationMicrosecondsPerInvocation="543"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="80" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="5936" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="80" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="2555" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="80" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="4855" standardDeviationMicrosecondsPerInvocation="771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="156" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="2606" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="12" invocations="80" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="955" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="12" invocations="80" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="887" standardDeviationMicrosecondsPerInvocation="173"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597097728000" analysisTimestamp="1597097729442" release="">
+  <Project projectName="repositorios/Jakubas_GeneralLedger">
+    <Jar>repositorios/Jakubas_GeneralLedger</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="my.generalledger.domain.ledger.Transaction">
+      <SourceLine classname="my.generalledger.domain.ledger.Transaction" start="39" end="96" sourcefile="Transaction.java" sourcepath="my/generalledger/domain/ledger/Transaction.java"/>
+    </Class>
+    <Field classname="my.generalledger.domain.ledger.Transaction" name="creditAccount" signature="Lmy/generalledger/domain/ledger/LedgerAccount;" isStatic="false">
+      <SourceLine classname="my.generalledger.domain.ledger.Transaction" sourcefile="Transaction.java" sourcepath="my/generalledger/domain/ledger/Transaction.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="my.generalledger.domain.ledger.Transaction">
+      <SourceLine classname="my.generalledger.domain.ledger.Transaction" start="39" end="96" sourcefile="Transaction.java" sourcepath="my/generalledger/domain/ledger/Transaction.java"/>
+    </Class>
+    <Field classname="my.generalledger.domain.ledger.Transaction" name="debitAccount" signature="Lmy/generalledger/domain/ledger/LedgerAccount;" isStatic="false">
+      <SourceLine classname="my.generalledger.domain.ledger.Transaction" sourcefile="Transaction.java" sourcepath="my/generalledger/domain/ledger/Transaction.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>org.hibernate.SQLQuery</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.web.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.support.RedirectAttributes</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 22:15:28 +0000" total_classes="18" referenced_classes="46" total_bugs="2" total_size="432" num_packages="5" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.18" clock_seconds="1.47" peak_mbytes="126.67" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="2">
+    <PackageStats package="my.generalledger" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="my.generalledger.Application" sourceFile="Application.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="my.generalledger.controller" total_bugs="0" total_types="5" total_size="127">
+      <ClassStats class="my.generalledger.controller.AccountController" sourceFile="AccountController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="my.generalledger.controller.LedgerController" sourceFile="LedgerController.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="my.generalledger.controller.TransactionController" sourceFile="TransactionController.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="my.generalledger.controller.TrialBalanceController" sourceFile="TrialBalanceController.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="my.generalledger.controller.Utils" sourceFile="Utils.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="my.generalledger.dao.ledger" total_bugs="0" total_types="4" total_size="89">
+      <ClassStats class="my.generalledger.dao.ledger.LedgerAccountDAO" sourceFile="LedgerAccountDAO.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="my.generalledger.dao.ledger.LedgerAccountDAOImpl" sourceFile="LedgerAccountDAOImpl.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="my.generalledger.dao.ledger.TransactionDAO" sourceFile="TransactionDAO.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="my.generalledger.dao.ledger.TransactionDAOImpl" sourceFile="TransactionDAOImpl.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="my.generalledger.domain.ledger" total_bugs="2" total_types="3" total_size="93" priority_2="2">
+      <ClassStats class="my.generalledger.domain.ledger.LedgerAccount" sourceFile="LedgerAccount.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="my.generalledger.domain.ledger.LedgerAccount$Type" sourceFile="LedgerAccount.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="my.generalledger.domain.ledger.Transaction" sourceFile="Transaction.java" interface="false" size="47" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="my.generalledger.service.ledger" total_bugs="0" total_types="5" total_size="115">
+      <ClassStats class="my.generalledger.service.ledger.LedgerAccountService" sourceFile="LedgerAccountService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="my.generalledger.service.ledger.LedgerAccountServiceImpl" sourceFile="LedgerAccountServiceImpl.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="my.generalledger.service.ledger.TransactionService" sourceFile="TransactionService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="my.generalledger.service.ledger.TransactionServiceImpl" sourceFile="TransactionServiceImpl.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="my.generalledger.service.ledger.TrialBalance" sourceFile="TrialBalance.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="191" invocations="440" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="16233" standardDeviationMicrosecondsPerInvocation="1261"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="46" avgMicrosecondsPerInvocation="1218" maxMicrosecondsPerInvocation="12704" standardDeviationMicrosecondsPerInvocation="2347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="45" invocations="46" avgMicrosecondsPerInvocation="994" maxMicrosecondsPerInvocation="5446" standardDeviationMicrosecondsPerInvocation="1525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="183" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="3659" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="41" invocations="446" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="526" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="36" invocations="93" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="8597" standardDeviationMicrosecondsPerInvocation="928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="33" invocations="371" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="992" standardDeviationMicrosecondsPerInvocation="135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="33" invocations="93" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="2028" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="94" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="9122" standardDeviationMicrosecondsPerInvocation="963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="119" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="22414" standardDeviationMicrosecondsPerInvocation="2048"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="81" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="14380" standardDeviationMicrosecondsPerInvocation="1627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="29" invocations="94" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="9357" standardDeviationMicrosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="93" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="8680" standardDeviationMicrosecondsPerInvocation="896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="26" invocations="93" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="3844" standardDeviationMicrosecondsPerInvocation="480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="46" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="7319" standardDeviationMicrosecondsPerInvocation="1149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="46" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="9053" standardDeviationMicrosecondsPerInvocation="1334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="46" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="3945" standardDeviationMicrosecondsPerInvocation="867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="46" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="5031" standardDeviationMicrosecondsPerInvocation="838"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="73" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="842" standardDeviationMicrosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="46" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="2651" standardDeviationMicrosecondsPerInvocation="491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="46" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="2167" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="18" avgMicrosecondsPerInvocation="641" maxMicrosecondsPerInvocation="6681" standardDeviationMicrosecondsPerInvocation="1483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="11" invocations="1202" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="1265" standardDeviationMicrosecondsPerInvocation="48"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

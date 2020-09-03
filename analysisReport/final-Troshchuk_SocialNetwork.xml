@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595993844000" analysisTimestamp="1595993845467" release="">
+  <Project projectName="repositorios/Troshchuk_SocialNetwork">
+    <Jar>repositorios/Troshchuk_SocialNetwork</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="15" end="58" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" name="selectAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="38" end="48" startBytecode="0" endBytecode="223" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="41" end="41" startBytecode="12" endBytecode="12" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+    <String value="Method: selectAll. Fields with EAGER without Join Fetch: user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="15" end="58" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" name="selectAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="38" end="48" startBytecode="0" endBytecode="223" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" start="41" end="41" startBytecode="12" endBytecode="12" sourcefile="AdministratorDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/AdministratorDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="15" end="68" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" name="selectAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="39" end="51" startBytecode="0" endBytecode="234" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="42" end="42" startBytecode="12" endBytecode="12" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+    <String value="Method: selectAll. Fields with EAGER without Join Fetch: user, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="15" end="68" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" name="selectAll" signature="()Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="39" end="51" startBytecode="0" endBytecode="234" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" start="42" end="42" startBytecode="12" endBytecode="12" sourcefile="BackOfficeAdminDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/BackOfficeAdminDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="17" end="118" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" name="selectByInterest" signature="(Ljava/lang/String;)Lcom/bionic/socialNetwork/models/Interest;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="55" end="73" startBytecode="0" endBytecode="341" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="59" end="59" startBytecode="19" endBytecode="19" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    <String value="Method: selectByInterest. Fields with EAGER without Join Fetch: users, "/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="17" end="118" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" name="selectByUser" signature="(Lcom/bionic/socialNetwork/models/User;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="79" end="91" startBytecode="0" endBytecode="272" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="84" end="84" startBytecode="19" endBytecode="19" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    <String value="Method: selectByUser. Fields with EAGER without Join Fetch: users, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="17" end="118" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" name="selectByInterest" signature="(Ljava/lang/String;)Lcom/bionic/socialNetwork/models/Interest;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="55" end="73" startBytecode="0" endBytecode="341" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="59" end="59" startBytecode="19" endBytecode="19" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="17" end="118" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" name="selectByUser" signature="(Lcom/bionic/socialNetwork/models/User;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="79" end="91" startBytecode="0" endBytecode="272" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" start="84" end="84" startBytecode="19" endBytecode="19" sourcefile="InterestDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/InterestDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="N1JOINFETCH_SMELL" priority="2" rank="2" abbrev="N1JOINFETCH" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="26" end="327" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" name="selectByLogin" signature="(Ljava/lang/String;)Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="57" end="67" startBytecode="0" endBytecode="227" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="59" end="59" startBytecode="17" endBytecode="17" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    <String value="Method: selectByLogin. Fields with EAGER without Join Fetch: password, "/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="26" end="327" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" name="isFollowing" signature="(JJ)Z" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="257" end="266" startBytecode="0" endBytecode="192" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="259" end="259" startBytecode="19" endBytecode="19" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="26" end="327" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" name="isGroupFollowing" signature="(JJ)Z" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="318" end="327" startBytecode="0" endBytecode="192" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="320" end="320" startBytecode="19" endBytecode="19" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="26" end="327" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Class>
+    <Method classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" name="selectByLogin" signature="(Ljava/lang/String;)Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="57" end="67" startBytecode="0" endBytecode="227" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+    </Method>
+    <SourceLine classname="com.bionic.socialNetwork.dao.impl.UserDaoImpl" start="59" end="59" startBytecode="17" endBytecode="17" sourcefile="UserDaoImpl.java" sourcepath="com/bionic/socialNetwork/dao/impl/UserDaoImpl.java"/>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.Administrator">
+      <SourceLine classname="com.bionic.socialNetwork.models.Administrator" start="20" end="43" sourcefile="Administrator.java" sourcepath="com/bionic/socialNetwork/models/Administrator.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.Administrator" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.Administrator" sourcefile="Administrator.java" sourcepath="com/bionic/socialNetwork/models/Administrator.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.BackOfficeAdmin">
+      <SourceLine classname="com.bionic.socialNetwork.models.BackOfficeAdmin" start="19" end="42" sourcefile="BackOfficeAdmin.java" sourcepath="com/bionic/socialNetwork/models/BackOfficeAdmin.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.BackOfficeAdmin" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.BackOfficeAdmin" sourcefile="BackOfficeAdmin.java" sourcepath="com/bionic/socialNetwork/models/BackOfficeAdmin.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.Group">
+      <SourceLine classname="com.bionic.socialNetwork.models.Group" start="33" end="101" sourcefile="Group.java" sourcepath="com/bionic/socialNetwork/models/Group.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.Group" name="author" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.Group" sourcefile="Group.java" sourcepath="com/bionic/socialNetwork/models/Group.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.GroupPost">
+      <SourceLine classname="com.bionic.socialNetwork.models.GroupPost" start="36" end="86" sourcefile="GroupPost.java" sourcepath="com/bionic/socialNetwork/models/GroupPost.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.GroupPost" name="group" signature="Lcom/bionic/socialNetwork/models/Group;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.GroupPost" sourcefile="GroupPost.java" sourcepath="com/bionic/socialNetwork/models/GroupPost.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.GroupPost">
+      <SourceLine classname="com.bionic.socialNetwork.models.GroupPost" start="36" end="86" sourcefile="GroupPost.java" sourcepath="com/bionic/socialNetwork/models/GroupPost.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.GroupPost" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.GroupPost" sourcefile="GroupPost.java" sourcepath="com/bionic/socialNetwork/models/GroupPost.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.Interest">
+      <SourceLine classname="com.bionic.socialNetwork.models.Interest" start="34" end="76" sourcefile="Interest.java" sourcepath="com/bionic/socialNetwork/models/Interest.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.Interest" name="users" signature="Ljava/util/Set;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.Interest" sourcefile="Interest.java" sourcepath="com/bionic/socialNetwork/models/Interest.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.Password">
+      <SourceLine classname="com.bionic.socialNetwork.models.Password" start="24" end="46" sourcefile="Password.java" sourcepath="com/bionic/socialNetwork/models/Password.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.Password" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.Password" sourcefile="Password.java" sourcepath="com/bionic/socialNetwork/models/Password.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.Post">
+      <SourceLine classname="com.bionic.socialNetwork.models.Post" start="32" end="73" sourcefile="Post.java" sourcepath="com/bionic/socialNetwork/models/Post.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.Post" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.Post" sourcefile="Post.java" sourcepath="com/bionic/socialNetwork/models/Post.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.PrivateMessage">
+      <SourceLine classname="com.bionic.socialNetwork.models.PrivateMessage" start="37" end="95" sourcefile="PrivateMessage.java" sourcepath="com/bionic/socialNetwork/models/PrivateMessage.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.PrivateMessage" name="receiverUser" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.PrivateMessage" sourcefile="PrivateMessage.java" sourcepath="com/bionic/socialNetwork/models/PrivateMessage.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.PrivateMessage">
+      <SourceLine classname="com.bionic.socialNetwork.models.PrivateMessage" start="37" end="95" sourcefile="PrivateMessage.java" sourcepath="com/bionic/socialNetwork/models/PrivateMessage.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.PrivateMessage" name="sentUser" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.PrivateMessage" sourcefile="PrivateMessage.java" sourcepath="com/bionic/socialNetwork/models/PrivateMessage.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.SessionUser">
+      <SourceLine classname="com.bionic.socialNetwork.models.SessionUser" start="24" end="56" sourcefile="SessionUser.java" sourcepath="com/bionic/socialNetwork/models/SessionUser.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.SessionUser" name="user" signature="Lcom/bionic/socialNetwork/models/User;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.SessionUser" sourcefile="SessionUser.java" sourcepath="com/bionic/socialNetwork/models/SessionUser.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="com.bionic.socialNetwork.models.User">
+      <SourceLine classname="com.bionic.socialNetwork.models.User" start="37" end="219" sourcefile="User.java" sourcepath="com/bionic/socialNetwork/models/User.java"/>
+    </Class>
+    <Field classname="com.bionic.socialNetwork.models.User" name="password" signature="Lcom/bionic/socialNetwork/models/Password;" isStatic="false">
+      <SourceLine classname="com.bionic.socialNetwork.models.User" sourcefile="User.java" sourcepath="com/bionic/socialNetwork/models/User.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>com.sun.jersey.core.header.FormDataContentDisposition</MissingClass>
+    <MissingClass>com.sun.jersey.spi.container.ContainerRequest</MissingClass>
+    <MissingClass>com.sun.jersey.spi.container.ContainerRequestFilter</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.ws.rs.core.Cookie</MissingClass>
+    <MissingClass>javax.ws.rs.core.HttpHeaders</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.RandomStringUtils</MissingClass>
+    <MissingClass>org.apache.logging.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.logging.log4j.Logger</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.SQLQuery</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.Transaction</MissingClass>
+    <MissingClass>org.hibernate.boot.registry.StandardServiceRegistryBuilder</MissingClass>
+    <MissingClass>org.hibernate.cfg.Configuration</MissingClass>
+    <MissingClass>org.hibernate.criterion.Order</MissingClass>
+    <MissingClass>org.hibernate.criterion.Projections</MissingClass>
+    <MissingClass>org.hibernate.criterion.Restrictions</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 03:37:24 +0000" total_classes="70" referenced_classes="112" total_bugs="24" total_size="2233" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="11.62" clock_seconds="3.29" peak_mbytes="308.65" alloc_mbytes="3540.00" gc_seconds="0.14" priority_2="23" priority_1="1">
+    <PackageStats package="com.bionic.socialNetwork.dao" total_bugs="0" total_types="11" total_size="77">
+      <ClassStats class="com.bionic.socialNetwork.dao.AdministratorDao" sourceFile="AdministratorDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.BackOfficeAdminDao" sourceFile="BackOfficeAdminDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.GroupDao" sourceFile="GroupDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.GroupPostDao" sourceFile="GroupPostDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.InterestDao" sourceFile="InterestDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.InviteDao" sourceFile="InviteDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.PasswordDao" sourceFile="PasswordDao.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.PostDao" sourceFile="PostDao.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.PrivateMessageDao" sourceFile="PrivateMessageDao.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.SessionUserDao" sourceFile="SessionUserDao.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.UserDao" sourceFile="UserDao.java" interface="true" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.dao.impl" total_bugs="12" total_types="11" total_size="642" priority_2="12">
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.AdministratorDaoImpl" sourceFile="AdministratorDaoImpl.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.BackOfficeAdminDaoImpl" sourceFile="BackOfficeAdminDaoImpl.java" interface="false" size="37" bugs="2" priority_2="2"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.GroupDaoImpl" sourceFile="GroupDaoImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.GroupPostDaoImpl" sourceFile="GroupPostDaoImpl.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.InterestDaoImpl" sourceFile="InterestDaoImpl.java" interface="false" size="67" bugs="4" priority_2="4"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.InviteDaoImpl" sourceFile="InviteDaoImpl.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.PasswordDaoImpl" sourceFile="PasswordDaoImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.PostDaoImpl" sourceFile="PostDaoImpl.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.PrivateMessageDaoImpl" sourceFile="PrivateMessageDaoImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.SessionUserDaoImpl" sourceFile="SessionUserDaoImpl.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.dao.impl.UserDaoImpl" sourceFile="UserDaoImpl.java" interface="false" size="195" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.logic" total_bugs="0" total_types="12" total_size="542">
+      <ClassStats class="com.bionic.socialNetwork.logic.AdminLogic" sourceFile="AdminLogic.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.CreateGroupLogic" sourceFile="CreateGroupLogic.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.EditUserProfileLogic" sourceFile="EditUserProfileLogic.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.FollowingLogic" sourceFile="FollowingLogic.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.GroupLogic" sourceFile="GroupLogic.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.LoginLogic" sourceFile="LoginLogic.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.PrivateMessageLogic" sourceFile="PrivateMessageLogic.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.RegistrationLogic" sourceFile="RegistrationLogic.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.Responses" sourceFile="Responses.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.SessionLogic" sourceFile="SessionLogic.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.UserAvatarLogic" sourceFile="UserAvatarLogic.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.UserLogic" sourceFile="UserLogic.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.logic.lists" total_bugs="0" total_types="11" total_size="302">
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.FollowingUsersList" sourceFile="FollowingUsersList.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.GroupList" sourceFile="GroupList.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.GroupPostList" sourceFile="GroupPostList.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.InterestList" sourceFile="InterestList.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.NewsList" sourceFile="NewsList.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.PostsList" sourceFile="PostsList.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.ReceivedMessageList" sourceFile="ReceivedMessageList.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.SentMessageList" sourceFile="SentMessageList.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.UserGroupsList" sourceFile="UserGroupsList.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.UserGroupsListByName" sourceFile="UserGroupsListByName.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.logic.lists.UserList" sourceFile="UserList.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.models" total_bugs="12" total_types="11" total_size="415" priority_2="11" priority_1="1">
+      <ClassStats class="com.bionic.socialNetwork.models.Administrator" sourceFile="Administrator.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.BackOfficeAdmin" sourceFile="BackOfficeAdmin.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.Group" sourceFile="Group.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.GroupPost" sourceFile="GroupPost.java" interface="false" size="41" bugs="2" priority_2="2"/>
+      <ClassStats class="com.bionic.socialNetwork.models.Interest" sourceFile="Interest.java" interface="false" size="30" bugs="1" priority_1="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.Invite" sourceFile="Invite.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.models.Password" sourceFile="Password.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.Post" sourceFile="Post.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.PrivateMessage" sourceFile="PrivateMessage.java" interface="false" size="47" bugs="2" priority_2="2"/>
+      <ClassStats class="com.bionic.socialNetwork.models.SessionUser" sourceFile="SessionUser.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="com.bionic.socialNetwork.models.User" sourceFile="User.java" interface="false" size="108" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.rest" total_bugs="0" total_types="12" total_size="207">
+      <ClassStats class="com.bionic.socialNetwork.rest.AdminController" sourceFile="AdminController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.CreateGroupController" sourceFile="CreateGroupController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.EditController" sourceFile="EditController.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.FollowingController" sourceFile="FollowingController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.GroupController" sourceFile="GroupController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.GroupsController" sourceFile="GroupsController.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.IndexController" sourceFile="IndexController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.InterestsController" sourceFile="InterestsController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.NewsController" sourceFile="NewsController.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.PrivateMessageController" sourceFile="PrivateMessageController.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.UserController" sourceFile="UserController.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="com.bionic.socialNetwork.rest.WorkerController" sourceFile="WorkerController.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.rest.filters" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="com.bionic.socialNetwork.rest.filters.AccessFilter" sourceFile="AccessFilter.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bionic.socialNetwork.util" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="com.bionic.socialNetwork.util.HibernateUtil" sourceFile="HibernateUtil.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="265" invocations="703" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="22764" standardDeviationMicrosecondsPerInvocation="1120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="124" invocations="379" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="8884" standardDeviationMicrosecondsPerInvocation="793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="124" invocations="689" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="8104" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="118" invocations="377" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="6755" standardDeviationMicrosecondsPerInvocation="570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="116" invocations="377" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="9217" standardDeviationMicrosecondsPerInvocation="851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="115" invocations="112" avgMicrosecondsPerInvocation="1034" maxMicrosecondsPerInvocation="10934" standardDeviationMicrosecondsPerInvocation="2069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="115" invocations="377" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="3250" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="94" invocations="377" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="4914" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="87" invocations="112" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="9183" standardDeviationMicrosecondsPerInvocation="1419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="83" invocations="380" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="9530" standardDeviationMicrosecondsPerInvocation="592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="74" invocations="253" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="4914" standardDeviationMicrosecondsPerInvocation="518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="63" invocations="706" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="555" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="62" invocations="443" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="26844" standardDeviationMicrosecondsPerInvocation="1292"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="45" invocations="158" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="13908" standardDeviationMicrosecondsPerInvocation="1170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="43" invocations="112" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="5883" standardDeviationMicrosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="41" invocations="613" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="2074" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="33" invocations="112" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="2736" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="112" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="5544" standardDeviationMicrosecondsPerInvocation="808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="31" invocations="4988" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="1098" standardDeviationMicrosecondsPerInvocation="28"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="29" invocations="70" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="2989" standardDeviationMicrosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="28" invocations="70" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="3849" standardDeviationMicrosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="28" invocations="377" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="2919" standardDeviationMicrosecondsPerInvocation="193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="27" invocations="112" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="6411" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="26" invocations="70" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="2758" standardDeviationMicrosecondsPerInvocation="544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="112" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="3514" standardDeviationMicrosecondsPerInvocation="467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="24" invocations="112" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="2728" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="103" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="4158" standardDeviationMicrosecondsPerInvocation="424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="70" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="2842" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="22" invocations="112" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="9686" standardDeviationMicrosecondsPerInvocation="1033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="21" invocations="112" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="8206" standardDeviationMicrosecondsPerInvocation="814"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="70" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="1195" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="20" invocations="70" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="4164" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUnsatisfiedObligation" totalMilliseconds="20" invocations="70" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="4675" standardDeviationMicrosecondsPerInvocation="614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="19" invocations="70" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="1438" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="18" invocations="377" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1358" standardDeviationMicrosecondsPerInvocation="104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="18" invocations="70" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="4335" standardDeviationMicrosecondsPerInvocation="549"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

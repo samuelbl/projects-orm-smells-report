@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597114822000" analysisTimestamp="1597114823860" release="">
+  <Project projectName="repositorios/sheepmen_Spring-Boot-Blog">
+    <Jar>repositorios/sheepmen_Spring-Boot-Blog</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="1" rank="1" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cn.sheep3.entity.Post">
+      <SourceLine classname="cn.sheep3.entity.Post" start="17" end="118" sourcefile="Post.java" sourcepath="cn/sheep3/entity/Post.java"/>
+    </Class>
+    <Field classname="cn.sheep3.entity.Post" name="tags" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="cn.sheep3.entity.Post" sourcefile="Post.java" sourcepath="cn/sheep3/entity/Post.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="cn.sheep3.entity.Post">
+      <SourceLine classname="cn.sheep3.entity.Post" start="17" end="118" sourcefile="Post.java" sourcepath="cn/sheep3/entity/Post.java"/>
+    </Class>
+    <Field classname="cn.sheep3.entity.Post" name="user" signature="Lcn/sheep3/entity/User;" isStatic="false">
+      <SourceLine classname="cn.sheep3.entity.Post" sourcefile="Post.java" sourcepath="cn/sheep3/entity/Post.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>net.sf.ehcache.CacheManager</MissingClass>
+    <MissingClass>org.apache.commons.collections.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections.map.HashedMap</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.joda.time.DateTime</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer</MissingClass>
+    <MissingClass>org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer</MissingClass>
+    <MissingClass>org.springframework.boot.context.embedded.ErrorPage</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheCacheManager</MissingClass>
+    <MissingClass>org.springframework.cache.ehcache.EhCacheManagerFactoryBean</MissingClass>
+    <MissingClass>org.springframework.core.io.ClassPathResource</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Persistable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationProvider</MissingClass>
+    <MissingClass>org.springframework.security.authentication.BadCredentialsException</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.CsrfConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 11 Aug 2020 03:00:22 +0000" total_classes="37" referenced_classes="84" total_bugs="2" total_size="722" num_packages="11" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="7.40" clock_seconds="2.06" peak_mbytes="196.07" alloc_mbytes="3540.00" gc_seconds="0.11" priority_2="1" priority_1="1">
+    <PackageStats package="cn.sheep3" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="cn.sheep3.BlogApplication" sourceFile="BlogApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.aspect" total_bugs="0" total_types="1" total_size="36">
+      <ClassStats class="cn.sheep3.aspect.LogAspect" sourceFile="LogAspect.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.config" total_bugs="0" total_types="8" total_size="76">
+      <ClassStats class="cn.sheep3.config.CacheConfiguration" sourceFile="CacheConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.Constant" sourceFile="Constant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.ErrorPageConfig" sourceFile="ErrorPageConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.ErrorPageConfig$1" sourceFile="ErrorPageConfig.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.ErrorPageConfig$MyCustomizer" sourceFile="ErrorPageConfig.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.InItAdmin" sourceFile="InItAdmin.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.JpaConfig" sourceFile="JpaConfig.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="cn.sheep3.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.controller" total_bugs="0" total_types="4" total_size="119">
+      <ClassStats class="cn.sheep3.controller.HomeController" sourceFile="HomeController.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="cn.sheep3.controller.PostController" sourceFile="PostController.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="cn.sheep3.controller.SetController" sourceFile="SetController.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="cn.sheep3.controller.UserController" sourceFile="UserController.java" interface="false" size="48" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.entity" total_bugs="2" total_types="5" total_size="167" priority_2="1" priority_1="1">
+      <ClassStats class="cn.sheep3.entity.BaseEntity" sourceFile="BaseEntity.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="cn.sheep3.entity.Post" sourceFile="Post.java" interface="false" size="54" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="cn.sheep3.entity.Tag" sourceFile="Tag.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="cn.sheep3.entity.User" sourceFile="User.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="cn.sheep3.entity.User$UserStatus" sourceFile="User.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.exception" total_bugs="0" total_types="2" total_size="8">
+      <ClassStats class="cn.sheep3.exception.PostInputException" sourceFile="PostInputException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="cn.sheep3.exception.UserException" sourceFile="UserException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.model" total_bugs="0" total_types="1" total_size="28">
+      <ClassStats class="cn.sheep3.model.Message" sourceFile="Message.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.model.status" total_bugs="0" total_types="4" total_size="69">
+      <ClassStats class="cn.sheep3.model.status.CodeStatus" sourceFile="CodeStatus.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cn.sheep3.model.status.PostLock" sourceFile="PostLock.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="cn.sheep3.model.status.PostStatus" sourceFile="PostStatus.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cn.sheep3.model.status.PostType" sourceFile="PostType.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.repository" total_bugs="0" total_types="3" total_size="8">
+      <ClassStats class="cn.sheep3.repository.PostRepository" sourceFile="PostRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="cn.sheep3.repository.TagRepository" sourceFile="TagRepository.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.sheep3.repository.UserRepository" sourceFile="UserRepository.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.service" total_bugs="0" total_types="6" total_size="150">
+      <ClassStats class="cn.sheep3.service.PostService" sourceFile="PostService.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="cn.sheep3.service.PostServiceImpl" sourceFile="PostServiceImpl.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="cn.sheep3.service.TagService" sourceFile="TagService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="cn.sheep3.service.TagServiceImpl" sourceFile="TagServiceImpl.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="cn.sheep3.service.UserService" sourceFile="UserService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="cn.sheep3.service.UserServiceImpl" sourceFile="UserServiceImpl.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.sheep3.util" total_bugs="0" total_types="2" total_size="55">
+      <ClassStats class="cn.sheep3.util.MyAuthenticationProvider" sourceFile="MyAuthenticationProvider.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="cn.sheep3.util.PassWordUtil" sourceFile="PassWordUtil.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="229" invocations="655" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="21811" standardDeviationMicrosecondsPerInvocation="1121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="73" invocations="186" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="7032" standardDeviationMicrosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="71" invocations="84" avgMicrosecondsPerInvocation="851" maxMicrosecondsPerInvocation="13512" standardDeviationMicrosecondsPerInvocation="2066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="67" invocations="184" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="2773" standardDeviationMicrosecondsPerInvocation="542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="64" invocations="189" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="8720" standardDeviationMicrosecondsPerInvocation="748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="59" invocations="186" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="10015" standardDeviationMicrosecondsPerInvocation="912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="54" invocations="189" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="9653" standardDeviationMicrosecondsPerInvocation="781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="53" invocations="329" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="4545" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="663" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="477" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="51" invocations="185" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="2881" standardDeviationMicrosecondsPerInvocation="419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="49" invocations="84" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="9987" standardDeviationMicrosecondsPerInvocation="1317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="45" invocations="207" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="25952" standardDeviationMicrosecondsPerInvocation="1802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="43" invocations="511" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="1753" standardDeviationMicrosecondsPerInvocation="162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="38" invocations="122" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="2095" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="148" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="12239" standardDeviationMicrosecondsPerInvocation="1041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="84" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="7426" standardDeviationMicrosecondsPerInvocation="886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="84" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="9089" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="20" invocations="2218" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="988" standardDeviationMicrosecondsPerInvocation="34"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="84" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="3712" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="18" invocations="186" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="1655" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="84" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="3066" standardDeviationMicrosecondsPerInvocation="403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="84" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="2165" standardDeviationMicrosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="37" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="6774" standardDeviationMicrosecondsPerInvocation="1100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="84" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="5184" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="37" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="4444" standardDeviationMicrosecondsPerInvocation="758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="13" invocations="37" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="1190" standardDeviationMicrosecondsPerInvocation="368"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

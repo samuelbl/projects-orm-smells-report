@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597096327000" analysisTimestamp="1597096328658" release="">
+  <Project projectName="repositorios/agoncal_agoncal-sample-jpa">
+    <Jar>repositorios/agoncal_agoncal-sample-jpa</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.sample.loadScriptSource.Book">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" start="13" end="212" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Class>
+    <Field classname="org.agoncal.sample.loadScriptSource.Book" name="author" signature="Lorg/agoncal/sample/loadScriptSource/Author;" isStatic="false">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.sample.loadScriptSource.Book">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" start="13" end="212" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Class>
+    <Field classname="org.agoncal.sample.loadScriptSource.Book" name="category" signature="Lorg/agoncal/sample/loadScriptSource/Category;" isStatic="false">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.sample.loadScriptSource.Book">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" start="13" end="212" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Class>
+    <Field classname="org.agoncal.sample.loadScriptSource.Book" name="publisher" signature="Lorg/agoncal/sample/loadScriptSource/Publisher;" isStatic="false">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.Book" sourcefile="Book.java" sourcepath="org/agoncal/sample/loadScriptSource/Book.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.sample.loadScriptSource.CD">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.CD" start="15" end="165" sourcefile="CD.java" sourcepath="org/agoncal/sample/loadScriptSource/CD.java"/>
+    </Class>
+    <Field classname="org.agoncal.sample.loadScriptSource.CD" name="genre" signature="Lorg/agoncal/sample/loadScriptSource/Genre;" isStatic="false">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.CD" sourcefile="CD.java" sourcepath="org/agoncal/sample/loadScriptSource/CD.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="org.agoncal.sample.loadScriptSource.CD">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.CD" start="15" end="165" sourcefile="CD.java" sourcepath="org/agoncal/sample/loadScriptSource/CD.java"/>
+    </Class>
+    <Field classname="org.agoncal.sample.loadScriptSource.CD" name="label" signature="Lorg/agoncal/sample/loadScriptSource/MajorLabel;" isStatic="false">
+      <SourceLine classname="org.agoncal.sample.loadScriptSource.CD" sourcefile="CD.java" sourcepath="org/agoncal/sample/loadScriptSource/CD.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>javax.persistence.Persistence</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 21:52:07 +0000" total_classes="11" referenced_classes="40" total_bugs="5" total_size="616" num_packages="2" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="5.18" clock_seconds="1.47" peak_mbytes="190.18" alloc_mbytes="3540.00" gc_seconds="0.06" priority_2="5">
+    <PackageStats package="org.agoncal.sample.jpa.querystring" total_bugs="0" total_types="1" total_size="81">
+      <ClassStats class="org.agoncal.sample.jpa.querystring.Book" sourceFile="Book.java" interface="false" size="81" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.agoncal.sample.loadScriptSource" total_bugs="5" total_types="10" total_size="535" priority_2="5">
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Author" sourceFile="Author.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Book" sourceFile="Book.java" interface="false" size="111" bugs="3" priority_2="3"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.CD" sourceFile="CD.java" interface="false" size="84" bugs="2" priority_2="2"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Category" sourceFile="Category.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Genre" sourceFile="Genre.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Language" sourceFile="Language.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Main" sourceFile="Main.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.MajorLabel" sourceFile="MajorLabel.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Musician" sourceFile="Musician.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.agoncal.sample.loadScriptSource.Publisher" sourceFile="Publisher.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="187" invocations="418" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="17653" standardDeviationMicrosecondsPerInvocation="1202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="53" invocations="40" avgMicrosecondsPerInvocation="1329" maxMicrosecondsPerInvocation="12184" standardDeviationMicrosecondsPerInvocation="2650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="45" invocations="157" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="5301" standardDeviationMicrosecondsPerInvocation="705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="422" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="2624" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="302" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="2602" standardDeviationMicrosecondsPerInvocation="276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="38" invocations="157" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="4430" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="367" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="1846" standardDeviationMicrosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="37" invocations="157" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="7609" standardDeviationMicrosecondsPerInvocation="715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="34" invocations="157" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="7729" standardDeviationMicrosecondsPerInvocation="714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="40" avgMicrosecondsPerInvocation="869" maxMicrosecondsPerInvocation="9337" standardDeviationMicrosecondsPerInvocation="1648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="3892" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="33" invocations="157" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="22322" standardDeviationMicrosecondsPerInvocation="1771"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="157" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="7802" standardDeviationMicrosecondsPerInvocation="662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="65" avgMicrosecondsPerInvocation="481" maxMicrosecondsPerInvocation="15051" standardDeviationMicrosecondsPerInvocation="1885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="40" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="7863" standardDeviationMicrosecondsPerInvocation="1351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="40" avgMicrosecondsPerInvocation="519" maxMicrosecondsPerInvocation="8708" standardDeviationMicrosecondsPerInvocation="1419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="40" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="3765" standardDeviationMicrosecondsPerInvocation="888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="16" invocations="42" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="2171" standardDeviationMicrosecondsPerInvocation="475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="11" avgMicrosecondsPerInvocation="1285" maxMicrosecondsPerInvocation="2633" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="40" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="2448" standardDeviationMicrosecondsPerInvocation="586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="1356" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="1089" standardDeviationMicrosecondsPerInvocation="43"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="40" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="6074" standardDeviationMicrosecondsPerInvocation="952"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

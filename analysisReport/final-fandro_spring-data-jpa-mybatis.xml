@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1597103954000" analysisTimestamp="1597103955286" release="">
+  <Project projectName="repositorios/fandro_spring-data-jpa-mybatis">
+    <Jar>repositorios/fandro_spring-data-jpa-mybatis</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.yougou.dao.jpa.CategoryRepository">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Class>
+    <Method classname="com.yougou.dao.jpa.CategoryRepository" name="getMaxIdCategory" signature="()Lcom/yougou/domain/Category;" isStatic="false">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.yougou.dao.jpa.CategoryRepository">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Class>
+    <Method classname="com.yougou.dao.jpa.CategoryRepository" name="testQueryAnnotationLikeParam" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.yougou.dao.jpa.CategoryRepository">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Class>
+    <Method classname="com.yougou.dao.jpa.CategoryRepository" name="testQueryAnnotationLikeParam2" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.yougou.dao.jpa.CategoryRepository">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Class>
+    <Method classname="com.yougou.dao.jpa.CategoryRepository" name="testQueryAnnotationParams1" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PROJECTION_SMELL" priority="2" rank="2" abbrev="PROJECTION" category="ORM_Code_Smell">
+    <Class classname="com.yougou.dao.jpa.CategoryRepository">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Class>
+    <Method classname="com.yougou.dao.jpa.CategoryRepository" name="testQueryAnnotationParams2" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.yougou.dao.jpa.CategoryRepository" sourcefile="CategoryRepository.java" sourcepath="com/yougou/dao/jpa/CategoryRepository.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="2" missingClasses="38">
+    <Error>
+      <ErrorMessage>Exception analyzing com.yougou.domain.Manager using detector com.ufpe.badsmells.collects.CollectEagerAtributes</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.addListClass(CollectEagerAtributes.java:62)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.detectEager(CollectEagerAtributes.java:45)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.collects.CollectEagerAtributes.visitAnnotation(CollectEagerAtributes.java:38)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <Error>
+      <ErrorMessage>Exception analyzing com.yougou.domain.Manager using detector com.ufpe.badsmells.EagerDetector</ErrorMessage>
+      <Exception>java.lang.IllegalStateException: getFieldName called while not visiting field</Exception>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.getFieldName(PreorderVisitor.java:698)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FieldAnnotation.fromVisitedField(FieldAnnotation.java:131)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.BugInstance.addField(BugInstance.java:1161)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.badSmellReport(EagerDetector.java:46)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.detectEager(EagerDetector.java:39)</StackTrace>
+      <StackTrace>com.ufpe.badsmells.EagerDetector.visitAnnotation(EagerDetector.java:32)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.AnnotationVisitor.visitAnnotation(AnnotationVisitor.java:303)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.Annotations.accept(Annotations.java:73)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.doVisitMethod(PreorderVisitor.java:315)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.visitclass.PreorderVisitor.visitJavaClass(PreorderVisitor.java:397)</StackTrace>
+      <StackTrace>org.apache.bcel.classfile.JavaClass.accept(JavaClass.java:213)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.bcel.AnnotationDetector.visitClassContext(AnnotationDetector.java:39)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.DetectorToDetector2Adapter.visitClass(DetectorToDetector2Adapter.java:76)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.lambda$null$1(FindBugs2.java:1108)</StackTrace>
+      <StackTrace>java.util.concurrent.FutureTask.run(FutureTask.java:266)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.CurrentThreadExecutorService.execute(CurrentThreadExecutorService.java:86)</StackTrace>
+      <StackTrace>java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:238)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.analyzeApplication(FindBugs2.java:1118)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.execute(FindBugs2.java:309)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs.runMain(FindBugs.java:395)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.FindBugs2.main(FindBugs2.java:1231)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.launch(LaunchAppropriateUI.java:106)</StackTrace>
+      <StackTrace>edu.umd.cs.findbugs.LaunchAppropriateUI.main(LaunchAppropriateUI.java:198)</StackTrace>
+    </Error>
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.persistence.Query</MissingClass>
+    <MissingClass>javax.persistence.TypedQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaBuilder$In</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaDelete</MissingClass>
+    <MissingClass>javax.persistence.criteria.CriteriaQuery</MissingClass>
+    <MissingClass>javax.persistence.criteria.Path</MissingClass>
+    <MissingClass>javax.persistence.criteria.Root</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.binding.MapperMethod$ParamMap</MissingClass>
+    <MissingClass>org.apache.ibatis.executor.parameter.ParameterHandler</MissingClass>
+    <MissingClass>org.apache.ibatis.executor.statement.StatementHandler</MissingClass>
+    <MissingClass>org.apache.ibatis.mapping.BoundSql</MissingClass>
+    <MissingClass>org.apache.ibatis.plugin.Interceptor</MissingClass>
+    <MissingClass>org.apache.ibatis.plugin.Invocation</MissingClass>
+    <MissingClass>org.apache.ibatis.plugin.Plugin</MissingClass>
+    <MissingClass>org.apache.ibatis.reflection.DefaultReflectorFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.reflection.MetaObject</MissingClass>
+    <MissingClass>org.apache.ibatis.reflection.factory.DefaultObjectFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.reflection.wrapper.DefaultObjectWrapperFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.session.Configuration</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSession</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSessionFactory</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSessionFactoryBuilder</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageImpl</MissingClass>
+    <MissingClass>org.springframework.data.domain.PageRequest</MissingClass>
+    <MissingClass>org.springframework.data.domain.Pageable</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort</MissingClass>
+    <MissingClass>org.springframework.data.domain.Sort$Direction</MissingClass>
+    <MissingClass>org.springframework.data.jpa.domain.Specification</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaRepositoryFactory</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.support.SimpleJpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.PagingAndSortingRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.core.RepositoryInformation</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 10 Aug 2020 23:59:14 +0000" total_classes="33" referenced_classes="69" total_bugs="5" total_size="577" num_packages="8" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="6.14" clock_seconds="2.01" peak_mbytes="191.96" alloc_mbytes="3540.00" gc_seconds="0.08" priority_2="5">
+    <PackageStats package="com.yougou.dao.jpa" total_bugs="5" total_types="4" total_size="21" priority_2="5">
+      <ClassStats class="com.yougou.dao.jpa.CategoryRepository" sourceFile="CategoryRepository.java" interface="true" size="12" bugs="5" priority_2="5"/>
+      <ClassStats class="com.yougou.dao.jpa.CustomerRepository" sourceFile="CustomerRepository.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.yougou.dao.jpa.CustomerRepositoryCustom" sourceFile="CustomerRepositoryCustom.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.yougou.dao.jpa.CustomerRepositoryImpl" sourceFile="CustomerRepositoryImpl.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.dao.jpa.base" total_bugs="0" total_types="4" total_size="101">
+      <ClassStats class="com.yougou.dao.jpa.base.BaseRepository" sourceFile="BaseRepository.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="com.yougou.dao.jpa.base.BaseRepositoryFactoryBean" sourceFile="BaseRepositoryFactoryBean.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.yougou.dao.jpa.base.BaseRepositoryFactoryBean$BaseRepositoryFactory" sourceFile="BaseRepositoryFactoryBean.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.yougou.dao.jpa.base.BaseRepositoryImpl" sourceFile="BaseRepositoryImpl.java" interface="false" size="68" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.dao.mapper" total_bugs="0" total_types="6" total_size="15">
+      <ClassStats class="com.yougou.dao.mapper.CategoryMapper" sourceFile="CategoryMapper.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="com.yougou.dao.mapper.CustomerMapper" sourceFile="CustomerMapper.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="com.yougou.dao.mapper.DepartmentMapper" sourceFile="DepartmentMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.yougou.dao.mapper.ItemMapper" sourceFile="ItemMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.yougou.dao.mapper.ManagerMapper" sourceFile="ManagerMapper.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.yougou.dao.mapper.OrderMapper" sourceFile="OrderMapper.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.domain" total_bugs="0" total_types="6" total_size="187">
+      <ClassStats class="com.yougou.domain.Category" sourceFile="Category.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.yougou.domain.Customer" sourceFile="Customer.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="com.yougou.domain.Department" sourceFile="Department.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.yougou.domain.Item" sourceFile="Item.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.yougou.domain.Manager" sourceFile="Manager.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.yougou.domain.Order" sourceFile="Order.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.expands.mybatis.dialect" total_bugs="0" total_types="5" total_size="84">
+      <ClassStats class="com.yougou.expands.mybatis.dialect.Dialect" sourceFile="Dialect.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.dialect.Dialect$Type" sourceFile="Dialect.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.dialect.MySql5Dialect" sourceFile="MySql5Dialect.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.dialect.OracleDialect" sourceFile="OracleDialect.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.dialect.SQLServer2005Dialect" sourceFile="SQLServer2005Dialect.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.expands.mybatis.plugins" total_bugs="0" total_types="4" total_size="114">
+      <ClassStats class="com.yougou.expands.mybatis.plugins.PaginationResultSetInterceptor" sourceFile="PaginationResultSetInterceptor.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.plugins.PaginationResultSetInterceptor$1" sourceFile="PaginationResultSetInterceptor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.plugins.PaginationStatementInterceptor" sourceFile="PaginationStatementInterceptor.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.yougou.expands.mybatis.plugins.PaginationStatementInterceptor$1" sourceFile="PaginationStatementInterceptor.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.service" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.yougou.service.CategoryService" sourceFile="CategoryService.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.yougou.service.impl" total_bugs="0" total_types="3" total_size="49">
+      <ClassStats class="com.yougou.service.impl.CategoryServiceImpl" sourceFile="CategoryServiceImpl.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="com.yougou.service.impl.CategoryServiceImpl$1" sourceFile="CategoryServiceImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.yougou.service.impl.CategoryServiceImpl$2" sourceFile="CategoryServiceImpl.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="178" invocations="508" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="9442" standardDeviationMicrosecondsPerInvocation="760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="78" invocations="124" avgMicrosecondsPerInvocation="629" maxMicrosecondsPerInvocation="6568" standardDeviationMicrosecondsPerInvocation="1298"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="72" invocations="124" avgMicrosecondsPerInvocation="581" maxMicrosecondsPerInvocation="12141" standardDeviationMicrosecondsPerInvocation="1728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="58" invocations="167" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="24094" standardDeviationMicrosecondsPerInvocation="2063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="55" invocations="125" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="8725" standardDeviationMicrosecondsPerInvocation="1174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="69" avgMicrosecondsPerInvocation="766" maxMicrosecondsPerInvocation="10147" standardDeviationMicrosecondsPerInvocation="1672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="50" invocations="125" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="9570" standardDeviationMicrosecondsPerInvocation="1110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="49" invocations="123" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="9290" standardDeviationMicrosecondsPerInvocation="1160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="48" invocations="513" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="6219" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="43" invocations="69" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="4220" standardDeviationMicrosecondsPerInvocation="974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="124" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="10146" standardDeviationMicrosecondsPerInvocation="989"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="219" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="3112" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="392" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1627" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="127" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="14336" standardDeviationMicrosecondsPerInvocation="1290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="29" invocations="66" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="6169" standardDeviationMicrosecondsPerInvocation="961"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="69" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="4631" standardDeviationMicrosecondsPerInvocation="886"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteSuppressedWarnings" totalMilliseconds="25" invocations="69" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="20869" standardDeviationMicrosecondsPerInvocation="2487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="33" avgMicrosecondsPerInvocation="736" maxMicrosecondsPerInvocation="13642" standardDeviationMicrosecondsPerInvocation="2365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="33" avgMicrosecondsPerInvocation="567" maxMicrosecondsPerInvocation="10303" standardDeviationMicrosecondsPerInvocation="2199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="69" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="2724" standardDeviationMicrosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="69" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="6129" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="69" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="3667" standardDeviationMicrosecondsPerInvocation="690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="16" invocations="124" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="6821" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.WrongMapIterator" totalMilliseconds="16" invocations="33" avgMicrosecondsPerInvocation="507" maxMicrosecondsPerInvocation="16293" standardDeviationMicrosecondsPerInvocation="2790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="69" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="5141" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="1542" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="1247" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ReturnPathTypeDataflowFactory" totalMilliseconds="16" invocations="2" avgMicrosecondsPerInvocation="8137" maxMicrosecondsPerInvocation="14227" standardDeviationMicrosecondsPerInvocation="6090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="69" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="2163" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="14" invocations="167" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="11556" standardDeviationMicrosecondsPerInvocation="892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="14" invocations="33" avgMicrosecondsPerInvocation="435" maxMicrosecondsPerInvocation="10038" standardDeviationMicrosecondsPerInvocation="1708"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

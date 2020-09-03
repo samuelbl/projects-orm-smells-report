@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.2" sequence="0" timestamp="1595994372000" analysisTimestamp="1595994373685" release="">
+  <Project projectName="repositorios/ignacioSuay_hibernate-envers-sample">
+    <Jar>repositorios/ignacioSuay_hibernate-envers-sample</Jar>
+    <Jar>-quiet</Jar>
+    <Plugin id="com.ufpe.badsmells.badsmells-orm-detector" enabled="true"/>
+  </Project>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="sample.data.jpa.domain.Hotel">
+      <SourceLine classname="sample.data.jpa.domain.Hotel" start="60" end="81" sourcefile="Hotel.java" sourcepath="sample/data/jpa/domain/Hotel.java"/>
+    </Class>
+    <Field classname="sample.data.jpa.domain.Hotel" name="city" signature="Lsample/data/jpa/domain/City;" isStatic="false">
+      <SourceLine classname="sample.data.jpa.domain.Hotel" sourcefile="Hotel.java" sourcepath="sample/data/jpa/domain/Hotel.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EAGER_SMELL" priority="2" rank="2" abbrev="EAGER" category="ORM_Code_Smell">
+    <Class classname="sample.data.jpa.domain.Review">
+      <SourceLine classname="sample.data.jpa.domain.Review" start="69" end="130" sourcefile="Review.java" sourcepath="sample/data/jpa/domain/Review.java"/>
+    </Class>
+    <Field classname="sample.data.jpa.domain.Review" name="hotel" signature="Lsample/data/jpa/domain/Hotel;" isStatic="false">
+      <SourceLine classname="sample.data.jpa.domain.Review" sourcefile="Review.java" sourcepath="sample/data/jpa/domain/Review.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>javax.persistence.EntityManager</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletRegistration$Dynamic</MissingClass>
+    <MissingClass>org.h2.server.web.WebServlet</MissingClass>
+    <MissingClass>org.hibernate.envers.AuditReader</MissingClass>
+    <MissingClass>org.hibernate.envers.AuditReaderFactory</MissingClass>
+    <MissingClass>org.hibernate.envers.DefaultRevisionEntity</MissingClass>
+    <MissingClass>org.hibernate.envers.RevisionListener</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.context.embedded.ServletContextInitializer</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.data.repository.Repository</MissingClass>
+    <MissingClass>org.springframework.orm.jpa.JpaTransactionManager</MissingClass>
+    <MissingClass>org.springframework.transaction.PlatformTransactionManager</MissingClass>
+    <MissingClass>org.springframework.transaction.support.DefaultTransactionDefinition</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 29 Jul 2020 03:46:12 +0000" total_classes="26" referenced_classes="58" total_bugs="2" total_size="410" num_packages="6" java_version="1.8.0_262" vm_version="25.262-b10" cpu_seconds="4.85" clock_seconds="1.37" peak_mbytes="190.21" alloc_mbytes="3540.00" gc_seconds="0.07" priority_2="2">
+    <PackageStats package="sample.data.jpa" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="sample.data.jpa.SampleDataJpaApplication" sourceFile="SampleDataJpaApplication.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="sample.data.jpa.config" total_bugs="0" total_types="4" total_size="38">
+      <ClassStats class="sample.data.jpa.config.PersistenceConfig" sourceFile="PersistenceConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="sample.data.jpa.config.Transactor" sourceFile="Transactor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="sample.data.jpa.config.UnitOfWork" sourceFile="UnitOfWork.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="sample.data.jpa.config.WebConfigurer" sourceFile="WebConfigurer.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="sample.data.jpa.domain" total_bugs="2" total_types="8" total_size="211" priority_2="2">
+      <ClassStats class="sample.data.jpa.domain.City" sourceFile="City.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="sample.data.jpa.domain.Hotel" sourceFile="Hotel.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="sample.data.jpa.domain.HotelSummary" sourceFile="HotelSummary.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="sample.data.jpa.domain.Rating" sourceFile="Rating.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="sample.data.jpa.domain.RatingCount" sourceFile="RatingCount.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="sample.data.jpa.domain.Review" sourceFile="Review.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="sample.data.jpa.domain.ReviewDetails" sourceFile="ReviewDetails.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="sample.data.jpa.domain.TripType" sourceFile="TripType.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="sample.data.jpa.revision" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="sample.data.jpa.revision.UserRevEntity" sourceFile="UserRevEntity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="sample.data.jpa.revision.UserRevisionListener" sourceFile="UserRevisionListener.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="sample.data.jpa.service" total_bugs="0" total_types="10" total_size="108">
+      <ClassStats class="sample.data.jpa.service.CityRepository" sourceFile="CityRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.CitySearchCriteria" sourceFile="CitySearchCriteria.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.CityService" sourceFile="CityService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.CityServiceImpl" sourceFile="CityServiceImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.HotelRepository" sourceFile="HotelRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.HotelService" sourceFile="HotelService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.HotelServiceImpl" sourceFile="HotelServiceImpl.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.HotelServiceImpl$ReviewsSummaryImpl" sourceFile="HotelServiceImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.ReviewRepository" sourceFile="ReviewRepository.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="sample.data.jpa.service.ReviewsSummary" sourceFile="ReviewsSummary.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="sample.data.jpa.web" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="sample.data.jpa.web.SampleController" sourceFile="SampleController.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="170" invocations="455" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="10778" standardDeviationMicrosecondsPerInvocation="842"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="58" avgMicrosecondsPerInvocation="965" maxMicrosecondsPerInvocation="11772" standardDeviationMicrosecondsPerInvocation="2188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="39" invocations="364" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1718" standardDeviationMicrosecondsPerInvocation="196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="39" invocations="459" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="479" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="37" invocations="199" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="3148" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="32" invocations="58" avgMicrosecondsPerInvocation="552" maxMicrosecondsPerInvocation="4594" standardDeviationMicrosecondsPerInvocation="975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="115" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="22733" standardDeviationMicrosecondsPerInvocation="2105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="31" invocations="58" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="18631" standardDeviationMicrosecondsPerInvocation="2424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="30" invocations="95" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="5980" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="97" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="12485" standardDeviationMicrosecondsPerInvocation="1302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="28" invocations="95" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="1944" standardDeviationMicrosecondsPerInvocation="420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="26" invocations="95" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="7575" standardDeviationMicrosecondsPerInvocation="812"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="24" invocations="95" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="8156" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="24" invocations="95" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="8025" standardDeviationMicrosecondsPerInvocation="824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="58" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="6843" standardDeviationMicrosecondsPerInvocation="1069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="58" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="6013" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="95" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="3686" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="58" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="7693" standardDeviationMicrosecondsPerInvocation="1035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="58" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="2402" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="58" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="4683" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="11" invocations="52" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="1029" standardDeviationMicrosecondsPerInvocation="218"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
